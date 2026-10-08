@@ -121,10 +121,11 @@ The full table with event times is in [`out/validate.txt`](out/validate.txt).
 
 ## The port, and the oracle
 
-A C++/CUDA port, `sinksim`, is in progress: one CUDA block per simulation, thousands of sinkings per minute, for
-calibration sweeps and a tree search over the watertight doors, the pumps and counter-flooding. The question it is
-built to answer is whether any policy could have kept her afloat until Carpathia arrived, about 4 h 20 min after the
-impact, against the 2 h 37 min of the baseline. [`PORTING.md`](PORTING.md) is the kernel plan; [`HANDOFF.md`](HANDOFF.md)
+The C++/CUDA port, [sinksim](https://github.com/bochen2029-pixel/sinksim), reproduces this model bit for bit at
+every step of the 1912 run and runs batches of sinkings on the GPU, one CUDA block per simulation, for calibration
+sweeps and a tree search over the watertight doors, the pumps and counter-flooding. The question it is built to
+answer is whether any policy could have kept her afloat until Carpathia arrived, about 4 h 20 min after the impact,
+against the 2 h 37 min of the baseline. [`PORTING.md`](PORTING.md) is the kernel plan; [`HANDOFF.md`](HANDOFF.md)
 is the order of work, the invariants that are easy to lose in a port, the physics still missing, and the parameters
 the author is least sure of. [`CLAUDE.md`](CLAUDE.md) holds the frames and rules a working session starts from.
 
