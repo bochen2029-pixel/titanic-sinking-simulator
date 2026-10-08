@@ -13,5 +13,14 @@ third_party/
 node_modules/
 out/titanic_local.html
 out/*.png
+.wrangler/
 .vs/
 .vscode/
+
+# device-test captures: keep only the ones the docs show
+docs/site/*
+!docs/site/v1-iphone-run.png
+!docs/site/v2-iphone-run.png
+!docs/site/v2-iphone-damage.png
+!docs/site/v2-desktop-run.png
+!docs/site/v2-ipad-run.png

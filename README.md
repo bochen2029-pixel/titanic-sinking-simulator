@@ -23,6 +23,8 @@ bulkhead tops.*
   forty minutes in under three minutes). Quarter, profile, below and plan cameras; X-ray hull, column proxies and a
   follow camera. The Damage and Bulkheads tabs edit the scenario, the hole tool adds openings where you tap the hull,
   and the Evidence tab plots the run against the eyewitness reconstruction. Rebuild the page with `node tools/build.js`.
+  That file is viewer version 1; the website build below is version 2, with a phone layout and no third-party
+  requests, and it is the one to host.
 - **Headless.** Node 18 or later, nothing to install:
 
 | command | what it does |
@@ -36,6 +38,39 @@ bulkhead tops.*
 | `node tools/shot.js 1400 860 4000 shot.png` | screenshot and drive the viewer with Playwright |
 
 The same commands exist as npm scripts (`npm run titanic`, `npm run validate`, ...).
+
+## The website build
+
+`dist/` is a static site ready for Cloudflare Pages or any static host: the same model and viewer, packaged as
+version 2 with a proper document, a phone layout, vendored three.js and fonts, strict headers and an installable
+manifest. `CHANGELOG.md` lists what the review of version 1 found and what changed.
+
+```bash
+npm ci                   # Playwright, wrangler, three.js r128 and the fonts are dev dependencies
+npm run build:site       # assembles dist/ (content-hashed assets, version.json)
+npm run serve            # http://127.0.0.1:8080/ for a local look
+npm run test:site        # desktop, iPhone, Pixel and iPad through Playwright; screenshots in docs/site/
+npm run pages:dev        # the build under Cloudflare's local Pages runtime
+```
+
+Deploying on Cloudflare Pages: connect the repository in the dashboard with build command
+`npm ci && npm run build:site` and output directory `dist`, or push a build by hand with
+`npm run pages:deploy` after `npx wrangler login`. No domain is needed to start; Pages gives a `*.pages.dev`
+address, and a custom domain attaches later. Set `SITE_ORIGIN=https://your.domain/` at build time so the social
+preview image has an absolute URL.
+
+<table>
+<tr>
+<td width="34%"><img alt="The site on a phone: full-height stage with the readouts on top and the control panel collapsed to a tab bar" src="docs/site/v2-iphone-run.png"></td>
+<td width="34%"><img alt="The site on a phone after tapping the hull with the hole tool" src="docs/site/v2-iphone-damage.png"></td>
+<td width="32%"><img alt="Version 1 on the same phone: a desktop layout squeezed to a 980-pixel page" src="docs/site/v1-iphone-run.png"></td>
+</tr>
+<tr>
+<td><em>Version 2 on an iPhone: the panel is a bottom sheet.</em></td>
+<td><em>A tap on the starboard shell adds a hole; the forecast recomputes.</em></td>
+<td><em>Version 1 on the same phone, for comparison.</em></td>
+</tr>
+</table>
 
 ## What the model does
 
@@ -142,10 +177,12 @@ that reproduces Node's `Math.*` bit for bit in C++, are in the companion reposit
 ```
 core/core.js        the flooding core: hull, columns, nodes, connections, step, rigid body, events, snapshots
 core/scenarios.js   damage presets (1912, four and five compartments, Olympic-Hawke, Britannic) and the eyewitness data
-web/                the three.js viewer (app.js) and its page template
-tools/              headless runs, validation, cases, calibration, hull fit, golden trace, build, screenshots
-out/                the built viewer page, the golden trace, validation results, calibration log
-docs/               screenshots
+web/                viewer version 1 (app.js) and its page template, built into out/titanic.html
+site/               viewer version 2: page template, stylesheet, app, worker glue, icons, Cloudflare headers
+dist/               the built website (npm run build:site)
+tools/              headless runs, validation, cases, calibration, hull fit, golden trace, builds, site tests, screenshots
+out/                the version 1 page, the golden trace, validation results, calibration log
+docs/               screenshots; docs/site/ holds the device-test captures
 PORTING.md          how the core maps onto C++/CUDA, and the golden tests a port must pass
 HANDOFF.md          order of work, invariants, physics gaps, uncertain parameters, the Carpathia question
 CLAUDE.md           conventions and rules for working sessions

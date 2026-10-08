@@ -1,6 +1,6 @@
 {
   "name": "titanic-sinking-simulator",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Flooding and sinking simulator of RMS Titanic: a deterministic column-based hydrostatics core in plain JavaScript, calibrated to the 1912 eyewitness timeline, with a three.js viewer",
   "license": "MIT",
   "private": true,
@@ -15,10 +15,24 @@
     "golden": "node tools/golden.js",
     "calibrate": "node tools/calibrate.js 45",
     "fit-hull": "node tools/fit_hull.js",
-    "build": "node tools/build.js"
+    "build": "node tools/build.js",
+    "build:site": "node tools/build_site.js",
+    "test:site": "node tools/site_test.js dist index.html docs/site v2",
+    "assets": "node tools/make_assets.js",
+    "serve": "node tools/serve.js dist 8080",
+    "pages:dev": "wrangler pages dev dist",
+    "pages:deploy": "wrangler pages deploy dist --project-name titanic-sinking-simulator"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/bochen2029-pixel/titanic-sinking-simulator.git"
+  },
+  "devDependencies": {
+    "@fontsource/cormorant-garamond": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/ibm-plex-sans-condensed": "^5.3.0",
+    "playwright": "^1.64.0",
+    "three": "^0.128.0",
+    "wrangler": "^4.149.0"
   }
 }
