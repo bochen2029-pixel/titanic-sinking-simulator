@@ -1,7 +1,7 @@
 const C = require('../core/core.js');
 const SC = require('../core/scenarios.js');
 const ship = C.buildShip();
-const area = process.argv[2] ? +process.argv[2] : undefined;   // default: the calibrated opening (scenarios.js)
+const area = process.argv[2] ? +process.argv[2] : SC.CALIBRATED_AREA;   // default: the calibrated 0.7506 m2
 const params = process.argv[3] ? JSON.parse(process.argv[3]) : {};
 const scen = SC.PRESETS.titanic.build({ areaTitanic: area });
 const sim = C.createSim(ship, params, scen);
