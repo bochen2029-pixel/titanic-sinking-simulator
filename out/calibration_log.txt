@@ -1,0 +1,33 @@
+#1 J=24.23 area=0.746 wMul=0.551 aDown=1.15 fOpen=0.0100 Tf=157.5
+#32 J=17.23 area=0.742 wMul=0.917 aDown=0.780 fOpen=0.00991 Tf=158.5
+#33 J=13.33 area=0.739 wMul=1.18 aDown=0.475 fOpen=0.00987 Tf=158.8
+#34 J=12.57 area=0.746 wMul=0.981 aDown=0.667 fOpen=0.00995 Tf=157.7
+#36 J=12.03 area=0.747 wMul=1.18 aDown=0.457 fOpen=0.0100 Tf=157.1
+#37 J=11.34 area=0.749 wMul=1.56 aDown=0.259 fOpen=0.0101 Tf=157.1
+#47 J=10.75 area=0.750 wMul=1.12 aDown=0.291 fOpen=0.0101 Tf=156.6
+#77 J=10.74 area=0.750 wMul=1.23 aDown=0.285 fOpen=0.0101 Tf=156.6
+#78 J=10.73 area=0.751 wMul=1.17 aDown=0.277 fOpen=0.0101 Tf=156.5
+#80 J=10.73 area=0.751 wMul=1.10 aDown=0.277 fOpen=0.0101 Tf=156.6
+#86 J=10.73 area=0.751 wMul=1.18 aDown=0.277 fOpen=0.0101 Tf=156.5
+#88 J=10.72 area=0.751 wMul=1.08 aDown=0.274 fOpen=0.0101 Tf=156.5
+#89 J=10.72 area=0.752 wMul=1.01 aDown=0.268 fOpen=0.0101 Tf=156.4
+
+BEST {"area":0.7506,"params":{"wMul":1.182,"aDown":0.2769,"fOpen":0.01008}}
+trim            15 obs    0.8 model    0.79
+trim            30 obs    1.8 model    1.65
+trim            45 obs    2.6 model    2.39
+trim            75 obs    3.2 model    3.53
+trim           100 obs      4 model    4.15
+trim           130 obs    5.5 model    4.98
+trim           155 obs     10 model    9.59
+founder          - obs    160 model  156.53
+list            10 obs      5 model   -3.34
+list            85 obs      2 model   -3.31
+list           100 obs      0 model   -5.50
+list           130 obs    -10 model   -3.53
+list           145 obs    -15 model   -5.70
+event:well       - obs    130 model  123.85
+event:bridge     - obs    155 model  153.92
+event:overF      - obs     75 model   76.22
+J 10.726
+evals 89

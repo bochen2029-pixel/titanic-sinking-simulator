@@ -1,0 +1,308 @@
+<title>Titanic Sinking Simulator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@400;500;600&display=swap">
+<style>
+/* Layout: one-screen instrument. 3D stage with HUD and a damage-diagram strip; controls docked right, stacked below on phones. Deliberately dark: a night sea and a forensic reconstruction. */
+:root {
+  color-scheme: dark;
+  --abyss: #05090f;
+  --deep: #08111b;
+  --panel: #0b1520;
+  --panel-2: #0f1c2a;
+  --line: #1a2a3b;
+  --line-2: #27405a;
+  --ink: #dbe6ef;
+  --ink-2: #a8bbcb;
+  --muted: #7187a0;
+  --water: #3cc3ff;
+  --brass: #e0b15a;
+  --signal: #ff5d3d;
+  --ok: #5fd39a;
+  --warn: #ffb547;
+  --crit: #ff6b6b;
+  --chart-model: #2196d2;
+  --chart-obs: #bd8a30;
+  --chart-surface: #0c1622;
+  --f-display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --f-ui: "IBM Plex Sans Condensed", "Roboto Condensed", "Arial Narrow", system-ui, sans-serif;
+  --f-num: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+html, body { height: 100%; }
+body { margin: 0; background: var(--abyss); color: var(--ink); font: 14px/1.45 var(--f-ui); -webkit-font-smoothing: antialiased; }
+button, input, select { font: inherit; color: inherit; }
+#app { height: 100%; display: grid; grid-template-columns: minmax(0, 1fr) 384px; }
+#stage { position: relative; min-width: 0; min-height: 0; overflow: hidden; background: radial-gradient(ellipse at 50% 40%, #0c1826 0%, var(--abyss) 70%); }
+#gl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; cursor: grab; }
+#gl.tool-hole, #gl.tool-scrape { cursor: crosshair; }
+#panel { min-width: 0; height: 100%; overflow-y: auto; background: var(--panel); border-left: 1px solid var(--line); display: flex; flex-direction: column; }
+
+/* HUD */
+.hud { position: absolute; left: 12px; top: 12px; right: 12px; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; pointer-events: none; }
+.hud > * { pointer-events: auto; }
+.readout { background: rgba(6, 12, 20, 0.78); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px 10px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); min-width: 0; max-width: 520px; }
+.ship-name { font: italic 600 20px/1 var(--f-display); letter-spacing: 0.02em; color: var(--ink); display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.ship-name small { font: 500 11px/1 var(--f-ui); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.clock { display: flex; align-items: baseline; gap: 10px; margin-top: 8px; flex-wrap: wrap; }
+.clock .ship-time { font: 500 26px/1 var(--f-num); letter-spacing: -0.01em; }
+.clock .elapsed { font: 400 13px/1 var(--f-num); color: var(--ink-2); }
+.pill { display: inline-flex; align-items: center; gap: 6px; font: 600 11px/1 var(--f-ui); letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 8px; border-radius: 999px; border: 1px solid currentColor; }
+.pill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.pill.ok { color: var(--ok); } .pill.warn { color: var(--warn); } .pill.crit { color: var(--crit); } .pill.idle { color: var(--muted); }
+.stats { display: grid; grid-template-columns: repeat(5, auto); gap: 4px 16px; margin-top: 10px; }
+.stat { min-width: 0; }
+.stat .k { font: 500 10.5px/1.2 var(--f-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); }
+.stat .v { font: 500 14px/1.3 var(--f-num); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.forecast-line { margin-top: 8px; font-size: 12.5px; color: var(--ink-2); }
+.forecast-line b { color: var(--ink); font-weight: 600; }
+.views { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
+.seg { display: inline-flex; background: rgba(6, 12, 20, 0.78); border: 1px solid var(--line); border-radius: 6px; padding: 2px; gap: 2px; }
+.seg button { border: 0; background: transparent; padding: 6px 9px; border-radius: 4px; cursor: pointer; font-size: 12.5px; color: var(--ink-2); white-space: nowrap; }
+.seg button[aria-pressed="true"] { background: var(--line-2); color: var(--ink); }
+.seg button:hover { color: var(--ink); }
+.seg button:focus-visible, .btn:focus-visible, .tab:focus-visible, .card:focus-visible, input:focus-visible, .chip:focus-visible { outline: 2px solid var(--water); outline-offset: 2px; }
+
+.strip { position: absolute; left: 12px; right: 12px; bottom: 12px; background: rgba(6, 12, 20, 0.82); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px 4px; }
+.strip canvas { display: block; width: 100%; height: 96px; }
+.strip .cap { display: flex; justify-content: space-between; gap: 8px; font-size: 11px; color: var(--muted); letter-spacing: 0.04em; }
+.toast { position: absolute; left: 50%; bottom: 140px; transform: translateX(-50%); background: rgba(6, 12, 20, 0.92); border: 1px solid var(--line-2); border-radius: 6px; padding: 8px 12px; font-size: 13px; max-width: min(520px, calc(100% - 32px)); text-align: center; opacity: 0; transition: opacity .25s; pointer-events: none; }
+.toast.on { opacity: 1; }
+
+/* Panel */
+.tabs { position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: repeat(4, 1fr); background: var(--panel); border-bottom: 1px solid var(--line); }
+.tab { border: 0; background: transparent; padding: 13px 4px 11px; cursor: pointer; color: var(--muted); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 12px; border-bottom: 2px solid transparent; }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--water); }
+.pane { padding: 16px; display: flex; flex-direction: column; gap: 18px; }
+.pane[hidden] { display: none !important; }
+.sec h3 { margin: 0 0 8px; font: 600 11.5px/1.2 var(--f-ui); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.sec p { margin: 0; color: var(--ink-2); max-width: 62ch; }
+.cards { display: grid; gap: 6px; }
+.card { text-align: left; border: 1px solid var(--line); background: var(--panel-2); border-radius: 6px; padding: 9px 11px; cursor: pointer; display: grid; gap: 3px; }
+.card:hover { border-color: var(--line-2); }
+.card[aria-checked="true"] { border-color: var(--water); box-shadow: inset 3px 0 0 var(--water); }
+.card b { font-weight: 600; font-size: 14px; }
+.card span { color: var(--ink-2); font-size: 12.5px; }
+.row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.btn { border: 1px solid var(--line-2); background: var(--panel-2); border-radius: 6px; padding: 8px 12px; cursor: pointer; font-weight: 500; }
+.btn:hover { border-color: var(--water); }
+.btn.primary { background: #123a55; border-color: #1f6a96; }
+.btn.danger:hover { border-color: var(--signal); }
+.seg.wide { width: 100%; }
+.seg.wide button { flex: 1; }
+.hint { font-size: 12.5px; color: var(--muted); }
+.check { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; color: var(--ink-2); }
+.check input { margin-top: 3px; accent-color: var(--water); flex: none; }
+.check span { min-width: 0; }
+.slider { width: 100%; accent-color: var(--water); }
+.kv { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; }
+.kv .v { font-family: var(--f-num); font-variant-numeric: tabular-nums; }
+table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+th { text-align: left; font: 600 10.5px/1.2 var(--f-ui); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding: 6px 4px; border-bottom: 1px solid var(--line); }
+td { padding: 6px 4px; border-bottom: 1px solid var(--line); vertical-align: top; }
+td.num { font-family: var(--f-num); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+th.num { text-align: right; }
+.tablewrap { overflow-x: auto; }
+.chip { border: 1px solid var(--line-2); background: transparent; border-radius: 999px; padding: 3px 9px; cursor: pointer; font-size: 12px; }
+.chip[aria-pressed="true"] { background: #123a55; border-color: #1f6a96; }
+.x { border: 0; background: transparent; color: var(--muted); cursor: pointer; font-size: 16px; line-height: 1; padding: 2px 6px; }
+.x:hover { color: var(--signal); }
+.tag { font: 500 11px/1 var(--f-num); padding: 2px 5px; border-radius: 3px; border: 1px solid var(--line-2); color: var(--ink-2); }
+.tag.e { color: var(--brass); border-color: #6a5326; } .tag.d { color: #8fd3c9; border-color: #2c5a55; } .tag.b { color: var(--ink); border-color: var(--line-2); }
+.chart { position: relative; }
+.chart canvas { width: 100%; height: 170px; display: block; }
+.chart .tip { position: absolute; pointer-events: none; background: rgba(6, 12, 20, 0.95); border: 1px solid var(--line-2); border-radius: 5px; padding: 6px 8px; font-size: 12px; min-width: 120px; display: none; }
+.chart .tip .val { font: 500 13px/1.3 var(--f-num); }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--ink-2); margin: 2px 0 6px; }
+.legend i { display: inline-block; vertical-align: middle; margin-right: 6px; }
+.legend i.line { width: 16px; height: 2px; border-radius: 2px; }
+.legend i.dash { width: 16px; height: 0; border-top: 2px dashed; }
+.legend i.dot { width: 8px; height: 8px; border-radius: 50%; }
+.foot { padding: 14px 16px 22px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); margin-top: auto; }
+.foot a { color: var(--ink-2); }
+
+@media (max-width: 900px) {
+  #app { grid-template-columns: 1fr; grid-template-rows: 60vh auto; grid-template-rows: 60svh auto; height: auto; min-height: 100%; }
+  #panel { height: auto; overflow: visible; border-left: 0; border-top: 1px solid var(--line); }
+  .stats { grid-template-columns: repeat(3, auto); gap: 2px 12px; }
+  .stat.opt { display: none; }
+  .clock .ship-time { font-size: 21px; }
+  .readout { padding: 8px 10px; }
+  .strip canvas { height: 64px; }
+  #stripNote, .strip .cap .long { display: none; }
+  .toast { bottom: 100px; }
+  .views .seg button { padding: 5px 7px; font-size: 12px; }
+}
+@media (max-width: 520px) {
+  #app { grid-template-rows: 66vh auto; grid-template-rows: 66svh auto; }
+  .hud { flex-direction: column; align-items: stretch; gap: 8px; }
+  .views { flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: center; gap: 6px; overflow-x: auto; }
+  .views .seg button { padding: 5px 6px; font-size: 11.5px; }
+  .forecast-line { display: none; }
+  .ship-name { font-size: 17px; }
+}
+@media (prefers-reduced-motion: reduce) { .toast { transition: none; } }
+</style>
+
+<div id="app">
+  <div id="stage">
+    <canvas id="gl" aria-label="3D view of the ship; drag to orbit, pinch or scroll to zoom"></canvas>
+    <div class="hud">
+      <div class="readout" id="readout">
+        <div class="ship-name"><span id="scenName">RMS Titanic</span><small id="scenSub">14 April 1912</small> <span class="pill idle" id="status">Ready</span></div>
+        <div class="clock"><span class="ship-time" id="shipTime">11:40 pm</span><span class="elapsed" id="elapsed">T+0:00:00</span></div>
+        <div class="stats">
+          <div class="stat"><div class="k">Trim</div><div class="v" id="sTrim">0.0°</div></div>
+          <div class="stat"><div class="k">List</div><div class="v" id="sList">0.0°</div></div>
+          <div class="stat"><div class="k">Water</div><div class="v" id="sWater">0 t</div></div>
+          <div class="stat opt"><div class="k">Inflow</div><div class="v" id="sIn">0 t/min</div></div>
+          <div class="stat opt"><div class="k">Draft fwd/aft</div><div class="v" id="sDraft">–</div></div>
+        </div>
+        <div class="forecast-line" id="fcLine">Forecasting…</div>
+      </div>
+      <div class="views">
+        <div class="seg" role="group" aria-label="Camera">
+          <button data-view="quarter" aria-pressed="true">Quarter</button>
+          <button data-view="profile" aria-pressed="false">Profile</button>
+          <button data-view="below" aria-pressed="false">Below</button>
+          <button data-view="plan" aria-pressed="false">Plan</button>
+        </div>
+        <div class="seg" role="group" aria-label="Display">
+          <button id="bXray" aria-pressed="true">X-ray</button>
+          <button id="bCols" aria-pressed="false">Columns</button>
+          <button id="bFollow" aria-pressed="true">Follow</button>
+        </div>
+      </div>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="strip">
+      <canvas id="profile" aria-label="Damage diagram: compartments, flood water and the sea surface in the ship's frame"></canvas>
+      <div class="cap"><span><span class="long">Damage diagram, ship's frame · </span>bulkhead tops: <span style="color:var(--brass)">E deck</span> / <span style="color:#8fd3c9">D deck</span></span><span id="stripNote">sea surface shown as the cyan line</span></div>
+    </div>
+  </div>
+
+  <aside id="panel">
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-tab="run">Run</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="damage">Damage</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="doors">Bulkheads</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="evidence">Evidence</button>
+    </div>
+
+    <section class="pane" data-pane="run">
+      <div class="sec">
+        <h3>Scenario</h3>
+        <div class="cards" id="scenCards" role="radiogroup" aria-label="Scenario"></div>
+      </div>
+      <div class="sec">
+        <h3>Time</h3>
+        <div class="row" style="margin-bottom:8px">
+          <button class="btn primary" id="bPlay">Pause</button>
+          <button class="btn" id="bReset">Restart from collision</button>
+        </div>
+        <div class="seg wide" role="group" aria-label="Speed" id="speedSeg">
+          <button data-speed="1" aria-pressed="false">1×</button>
+          <button data-speed="10" aria-pressed="false">10×</button>
+          <button data-speed="60" aria-pressed="true">60×</button>
+          <button data-speed="240" aria-pressed="false">240×</button>
+          <button data-speed="900" aria-pressed="false">900×</button>
+        </div>
+        <p class="hint" style="margin-top:6px">60× plays the 2 h 40 min sinking in under three minutes.</p>
+      </div>
+      <div class="sec">
+        <h3>Forecast</h3>
+        <p id="fcText">The headless core runs this exact state ahead to the end in a background thread.</p>
+      </div>
+      <div class="sec">
+        <h3>Log</h3>
+        <div class="tablewrap"><table><thead><tr><th>Time</th><th>Event</th></tr></thead><tbody id="logBody"></tbody></table></div>
+      </div>
+    </section>
+
+    <section class="pane" data-pane="damage" hidden>
+      <div class="sec">
+        <h3>Tool</h3>
+        <div class="seg wide" role="group" aria-label="Pointer tool" id="toolSeg">
+          <button data-tool="look" aria-pressed="true">Look</button>
+          <button data-tool="hole" aria-pressed="false">Punch hole</button>
+          <button data-tool="scrape" aria-pressed="false">Scrape</button>
+        </div>
+        <p class="hint" style="margin-top:6px" id="toolHint">Pick a tool, then tap the hull below the waterline. Scrape drags a line of punctures, like the iceberg did.</p>
+      </div>
+      <div class="sec">
+        <h3>Hole size</h3>
+        <input type="range" class="slider" id="holeSize" min="0" max="100" value="21" aria-label="Hole size">
+        <div class="kv"><span id="holeLabel">A4 sheet</span><span class="v" id="holeVal">0.062 m²</span></div>
+      </div>
+      <div class="sec">
+        <h3>Openings</h3>
+        <div class="kv" style="margin-bottom:6px"><span>Total area</span><span class="v" id="totArea">0</span></div>
+        <div class="tablewrap"><table><thead><tr><th>Compartment</th><th>Side</th><th class="num">Depth</th><th class="num">Area</th><th class="num">t/min</th><th></th></tr></thead><tbody id="holeBody"></tbody></table></div>
+        <div class="row" style="margin-top:8px"><button class="btn danger" id="bClear">Remove all openings</button></div>
+      </div>
+      <div class="sec">
+        <h3>Before the collision</h3>
+        <label class="check"><input type="checkbox" id="coal" checked> <span>2° list to port from emptied starboard coal bunkers (applies on restart)</span></label>
+      </div>
+    </section>
+
+    <section class="pane" data-pane="doors" hidden>
+      <div class="sec">
+        <h3>Watertight doors</h3>
+        <div class="row"><button class="btn" id="bDoorsClose">Close all from the bridge</button><button class="btn" id="bDoorsOpen">Open all</button></div>
+        <p class="hint" style="margin-top:6px">Murdoch closed the doors right after the collision. Open them and water spreads aft low in the ship instead of tipping the bow.</p>
+      </div>
+      <div class="sec">
+        <h3>Bulkhead height</h3>
+        <div class="seg wide" role="group" aria-label="Bulkhead height" id="bhSeg">
+          <button data-bh="built" aria-pressed="true">As built</button>
+          <button data-bh="D" aria-pressed="false">All to D deck</button>
+          <button data-bh="B" aria-pressed="false">All to B deck</button>
+        </div>
+      </div>
+      <div class="sec">
+        <h3>The fifteen bulkheads</h3>
+        <div class="tablewrap"><table><thead><tr><th>Bhd</th><th>Between</th><th>Top</th><th>Doors</th><th class="num">Water over</th></tr></thead><tbody id="bhBody"></tbody></table></div>
+      </div>
+    </section>
+
+    <section class="pane" data-pane="evidence" hidden>
+      <div class="sec">
+        <h3>Trim by the head</h3>
+        <div class="legend"><span><i class="line" style="background:var(--chart-model)"></i>This run</span><span><i class="dash" style="border-color:var(--chart-model)"></i>Forecast</span><span><i class="dot" style="background:var(--chart-obs)"></i>Eyewitness reconstruction (Halpern 2023)</span></div>
+        <div class="chart" id="chTrim"><canvas></canvas><div class="tip"></div></div>
+      </div>
+      <div class="sec">
+        <h3>List (port negative)</h3>
+        <div class="chart" id="chList"><canvas></canvas><div class="tip"></div></div>
+      </div>
+      <div class="sec">
+        <h3>Flood water</h3>
+        <div class="chart" id="chWater"><canvas></canvas><div class="tip"></div></div>
+        <p class="hint" style="margin-top:6px">Gold point: Wilding's 16,000 tons at 40 minutes, the basis of his "12 square feet". The eyewitness timeline fits a smaller opening.</p>
+      </div>
+      <div class="sec">
+        <h3>Timeline check, Titanic run</h3>
+        <div class="tablewrap"><table><thead><tr><th>Event</th><th class="num">Witnessed</th><th class="num">Model</th></tr></thead><tbody id="evBody"></tbody></table></div>
+      </div>
+      <div class="sec">
+        <h3>Cases the fit never saw</h3>
+        <div class="tablewrap"><table><thead><tr><th>Case</th><th>Record</th><th>Model</th></tr></thead><tbody id="valBody"></tbody></table></div>
+      </div>
+      <div class="sec">
+        <h3>How it works</h3>
+        <p>The hull is a parametric fit to Harland &amp; Wolff's hydrostatics (displacement, waterplane, KB, BM within about 1%), cut into 4,400 vertical columns. Every step integrates buoyancy and flood water over those columns at the ship's actual attitude. Sixteen compartments, split port and starboard and above and below E deck, exchange water through holes, doors and the open E deck using orifice and weir laws. Heave, pitch and roll are integrated as a damped rigid body. Four flow parameters were fitted to the eyewitness timeline; everything in the table above is a prediction.</p>
+      </div>
+      <div class="sec">
+        <h3>What it leaves out</h3>
+        <p>Hull girder failure (she broke at about 2:17), pumps, air trapped in compartments, the superstructure's buoyancy, and whatever drove the 10–15° port list witnesses saw: the model only reaches about 6° until the final plunge.</p>
+      </div>
+    </section>
+    <div class="foot">Sources: British Wreck Commissioner's report (compartment lengths, bulkhead decks); Halpern, <i>A Matter of Stability and Trim</i> and <i>Lifeboats, Launch Times, List and Trim</i> (2023); Wilding's evidence; Hackett &amp; Bedford (RINA 1996).</div>
+  </aside>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script id="core-src">/*@@CORE@@*/</script>
+<script id="scen-src">/*@@SCEN@@*/</script>
+<script id="val-data" type="application/json">/*@@VAL@@*/</script>
+<script>/*@@APP@@*/</script>

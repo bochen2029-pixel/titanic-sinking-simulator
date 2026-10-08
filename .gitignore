@@ -1,0 +1,17 @@
+# handoff drops and working copies kept beside the repo, not part of it
+*.zip
+titanic-sim (1)/
+titanic-sim (2)/
+_archive/
+
+# companion repositories and machine-local installs that live in this folder
+sinksim/
+v8math/
+third_party/
+
+# local tooling and screenshot scratch
+node_modules/
+out/titanic_local.html
+out/*.png
+.vs/
+.vscode/
