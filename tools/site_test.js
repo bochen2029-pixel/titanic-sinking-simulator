@@ -61,6 +61,12 @@ const PROFILES = [
       checks.noHorizontalOverflow = info.overflowX <= 1;
       checks.device = info.device;
       checks.inner = info.inner.join('x');
+      // the stage must not run under the bottom sheet: the damage strip ends above the panel
+      checks.stripClearOfPanel = await page.evaluate(() => {
+        const s = document.querySelector('.strip').getBoundingClientRect(), p = document.getElementById('panel').getBoundingClientRect();
+        const phone = document.documentElement.dataset.device === 'phone';
+        return phone ? s.bottom <= p.top + 1 && p.bottom <= window.innerHeight + 1 : true;
+      });
       // the forecast should arrive within a few seconds (worker or main-thread fallback)
       const fc = await page.waitForFunction(() => { const el = document.getElementById('fcLine'); return el && !/Forecasting/.test(el.textContent); }, null, { timeout: 15000 }).then(() => true).catch(() => false);
       checks.forecastArrived = fc;

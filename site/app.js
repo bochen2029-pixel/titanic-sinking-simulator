@@ -31,6 +31,15 @@
     if (rootEl.dataset.device !== d) rootEl.dataset.device = d;
     return d;
   }
+  // the visible viewport height in pixels: on Android the address bar makes 100vh taller than the
+  // screen that is actually visible, so the stage would run under the bottom sheet (seen on a real phone)
+  function setViewportVar() {
+    const h = (window.visualViewport && window.visualViewport.height) || window.innerHeight;
+    if (h > 0) rootEl.style.setProperty('--app-h', Math.round(h) + 'px');
+  }
+  setViewportVar();
+  window.addEventListener('resize', setViewportVar);
+  if (window.visualViewport) window.visualViewport.addEventListener('resize', setViewportVar);
   classifyDevice();
   const isPhone = () => rootEl.dataset.device === 'phone';
 

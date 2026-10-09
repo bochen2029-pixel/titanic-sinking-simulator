@@ -1,8 +1,8 @@
 {
   "version": "0.2.0",
-  "built": "2026-10-08T19:59:54.769Z",
-  "builtFromCommit": "41d00b9",
-  "app": "app.f4b382253b.js",
+  "built": "2026-10-09T00:49:06.213Z",
+  "builtFromCommit": "160474f",
+  "app": "app.434567ea81.js",
   "worker": "forecast-worker.7a019ed9c7.js",
-  "styles": "styles.e7be2f354e.css"
+  "styles": "styles.c8b95dd395.css"
 }
