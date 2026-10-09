@@ -1,0 +1,13 @@
+# Cloudflare: the built site (dist/) served as a static-assets Worker, which is what Cloudflare Pages
+# has become. `npm run build:site && npm run deploy` publishes it; dist/_headers and dist/404.html apply.
+# No custom domain yet: it answers on <name>.<account subdomain>.workers.dev until a domain is attached
+# (then add a routes block here; routes are authoritative, so never remove a line to "disable" one).
+name = "titanic-sinking-simulator"
+compatibility_date = "2026-10-01"
+account_id = "e13b1f08e91348c714d04252a43e3a74"
+workers_dev = true
+
+[assets]
+directory = "./dist"
+html_handling = "auto-trailing-slash"
+not_found_handling = "404-page"

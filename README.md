@@ -53,11 +53,13 @@ npm run test:site        # desktop, iPhone, Pixel and iPad through Playwright; s
 npm run pages:dev        # the build under Cloudflare's local Pages runtime
 ```
 
-Deploying on Cloudflare Pages: connect the repository in the dashboard with build command
-`npm ci && npm run build:site` and output directory `dist`, or push a build by hand with
-`npm run pages:deploy` after `npx wrangler login`. No domain is needed to start; Pages gives a `*.pages.dev`
-address, and a custom domain attaches later. Set `SITE_ORIGIN=https://your.domain/` at build time so the social
-preview image has an absolute URL.
+**Live:** https://titanic-sinking-simulator.bochen2029.workers.dev
+
+Deploying on Cloudflare: `npm run deploy` publishes `dist/` as a static-assets Worker (`wrangler.toml`; this is
+what Cloudflare Pages has become), after `npx wrangler login` once. No domain is needed to start; the site answers
+on the account's `workers.dev` subdomain, and a custom domain attaches later with a `routes` block in
+`wrangler.toml`. `dist/_headers` and `dist/404.html` apply as they would on Pages. Set
+`SITE_ORIGIN=https://your.domain/` at build time so the social preview image has an absolute URL.
 
 <table>
 <tr>

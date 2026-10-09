@@ -21,7 +21,7 @@
     "assets": "node tools/make_assets.js",
     "serve": "node tools/serve.js dist 8080",
     "pages:dev": "wrangler pages dev dist",
-    "pages:deploy": "wrangler pages deploy dist --project-name titanic-sinking-simulator"
+    "deploy": "wrangler deploy"
   },
   "repository": {
     "type": "git",
