@@ -61,13 +61,13 @@ console.log('wrote site/icons/icon.svg, favicon.svg');
     await page.screenshot({ path: path.join(iconDir, name), omitBackground: true });
     console.log('wrote site/icons/' + name);
   }
-  // social image: the 149-minute viewer capture with a title band, 1200 x 630
-  const shot = fs.readFileSync(path.join(root, 'docs', 'viewer-149min.png')).toString('base64');
+  // social image: the guide's own capture of 2:09 am on the 1912 damage (tools/guide_shots.js), with a title band, 1200 x 630
+  const shot = fs.readFileSync(path.join(root, 'docs', 'guide', 'img', 'preset-0209.jpg')).toString('base64');
   await page.setViewportSize({ width: 1200, height: 630 });
-  await page.setContent(`<!doctype html><html><body style="margin:0;width:1200px;height:630px;background:#05090f url(data:image/png;base64,${shot}) center/cover no-repeat;position:relative;font-family:Georgia,serif">
+  await page.setContent(`<!doctype html><html><body style="margin:0;width:1200px;height:630px;background:#05090f url(data:image/jpeg;base64,${shot}) top center/cover no-repeat;position:relative;font-family:Georgia,serif">
     <div style="position:absolute;left:0;right:0;bottom:0;padding:26px 40px 30px;background:linear-gradient(transparent, rgba(5,9,15,0.92) 40%);color:#dbe6ef">
       <div style="font:italic 600 44px/1 'Cormorant Garamond',Georgia,serif">Titanic Sinking Simulator</div>
-      <div style="font:400 20px/1.3 system-ui,sans-serif;color:#a8bbcb;margin-top:10px">A flooding model that computes the sinking instead of animating it. 4,408 hull columns, 64 spaces, 290 flow paths, calibrated to the 1912 timeline.</div>
+      <div style="font:400 20px/1.3 system-ui,sans-serif;color:#a8bbcb;margin-top:10px">A flooding model that computes the sinking instead of animating it. 4,852 hull columns, 64 spaces, 485 flow paths, calibrated to the 1912 timeline.</div>
     </div></body></html>`);
   await page.waitForTimeout(300);
   await page.screenshot({ path: path.join(root, 'site', 'og.png') });

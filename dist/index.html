@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Titanic Sinking Simulator</title>
-<meta name="description" content="A flooding model of RMS Titanic that computes the sinking instead of animating it: 4,408 hull columns, 64 spaces, 290 flow paths, calibrated to the 1912 eyewitness timeline. Take the bridge and meet the ice, or punch holes, open doors, raise bulkheads, and watch the forecast.">
+<meta name="description" content="A flooding model of RMS Titanic that computes the sinking instead of animating it: 4,852 hull columns, 64 spaces, 485 flow paths, calibrated to the 1912 eyewitness timeline. Take the bridge and meet the ice, or punch holes, open doors, raise bulkheads, and watch the forecast.">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#05090f">
 <meta name="application-name" content="Titanic Sinking Simulator">
@@ -14,7 +14,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Titanic Sinking Simulator">
-<meta property="og:description" content="A flooding model that computes the sinking instead of animating it. 4,408 hull columns, 64 spaces, 290 flow paths, calibrated to the 1912 eyewitness timeline.">
+<meta property="og:description" content="A flooding model that computes the sinking instead of animating it. 4,852 hull columns, 64 spaces, 485 flow paths, calibrated to the 1912 eyewitness timeline.">
 <meta property="og:url" content="https://bochen.xyz/titanic/">
 <meta property="og:image" content="https://bochen.xyz/titanic/og.png">
 <meta property="og:image:width" content="1200">
@@ -340,7 +340,7 @@
       <div class="sec">
         <h3>How it works</h3>
         <!-- "four thousand" and "thirty" are out/kept_1912.json's counts (waves n1 + n2 = 4,000 tried; 30 members kept): change them with the kept set -->
-        <p>The hull is a parametric fit to Harland &amp; Wolff's hydrostatics (displacement, waterplane, KB, BM within about 1%), cut into 4,400 vertical columns. Every step integrates buoyancy and flood water over those columns at the ship's actual attitude. Sixteen compartments, split port and starboard and above and below E deck, exchange water through holes, doors and the open E deck using orifice and weir laws. Heave, pitch and roll are integrated as a damped rigid body. Its uncertain inputs (the opening's size, the flow laws, the pumps, the bunker and more) are calibrated by a history match against the 1912 record: of four thousand versions tried, thirty that pass the record's tests are kept, and one of them is the default. A count such as "k of 30" in this tab is over those thirty. They sample what the record does not rule out, and are not the whole of it. So the timeline table above is not a blind prediction: some of its rows helped fit the model, and the observation ledger in this tab says which.</p>
+        <p>The hull is a parametric fit to Harland &amp; Wolff's hydrostatics (displacement, waterplane, KB, BM within about 1%), cut into 4,852 vertical columns. Every step integrates buoyancy and flood water over those columns at the ship's actual attitude. Sixteen compartments, split port and starboard and above and below E deck, exchange water through holes, doors and the open E deck using orifice and weir laws. Heave, pitch and roll are integrated as a damped rigid body. Its uncertain inputs (the opening's size, the flow laws, the pumps, the bunker and more) are calibrated by a history match against the 1912 record: of four thousand versions tried, thirty that pass the record's tests are kept, and one of them is the default. A count such as "k of 30" in this tab is over those thirty. They sample what the record does not rule out, and are not the whole of it. So the timeline table above is not a blind prediction: some of its rows helped fit the model, and the observation ledger in this tab says which.</p>
       </div>
       <div class="sec">
         <h3>What it leaves out, and where it misses</h3>

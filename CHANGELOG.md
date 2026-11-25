@@ -37,6 +37,23 @@ loop, unfinished, and still changing. What someone meets:
 
 The entries below are the record of how it was built, join by join, newest first.
 
+### After the release (text only: two counts left from October put right), 2026-11-24
+
+The README, the page's head and its Evidence tab, the guide's chapters 1 and 10 and the social image still gave
+October's counts: 4,408 columns (the tab said 4,400) and 290 water paths. By `C.buildShip()` and the 1912 preset they
+are 4,852 columns, and 485 paths on the 1912 damage: 469 in the undamaged ship, and its sixteen holes. 199 of them are
+her windows, her side's openings and the grand staircases' doors and domes, which the sentences now name.
+
+- No code of the model, the page or the app changes. The page's bundles keep their names and their bytes, so the
+  program in the released zip is still this repository's. The zip's own copy of the page keeps the old figures in its
+  head and its Evidence tab until the next package.
+- The social image (`og.png`) is made from the guide's current capture of 2:09 am, with the counts put right. It was
+  October's viewer, whose card still said "about 8 sq ft in all".
+- User Guide 1.14.1 is edition 1.14 with the two counts put right. No picture was retaken: the page they were taken
+  from is the same build.
+- BACKLOG: NH13's R2 and R3, and section 3, say what was published.
+- Left for the next build: a comment in `site/parts/55_girder.js` still says 4,408 columns. It is in the app's bundle.
+
 ### Join 24 (candidate 2 of 0.3.0: the public words checked, a newcomer's first ten minutes, the bridge's fixes), 2026-11-24
 
 Joined on one branch from main `1d3bf1c` and tested by one full gate, on Bo's standing word: 13:21 to 14:19 CST, 81

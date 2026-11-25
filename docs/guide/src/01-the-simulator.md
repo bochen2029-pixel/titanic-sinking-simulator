@@ -13,7 +13,8 @@ progress: the simulator is playable in its core loop, and it will change.
 :::
 
 :::note This edition
-Since edition 1.13, the page says more plainly what is the model's and what is the record's: the {{Evidence}} tab's
+Edition 1.14.1 is edition 1.14 with two counts left from October put right: her columns and her water paths. Since
+edition 1.13, the page says more plainly what is the model's and what is the record's: the {{Evidence}} tab's
 tables give the record in its own words, each witness's row its source in plain words, and its last section says
 where the model misses. In the desktop app a man who went away in a boat leaves the bridge when the model lowers her.
 A phone's first screen says where to begin, a room picked under her rooms comes into view with the credit for the deck
@@ -33,8 +34,9 @@ the same model runs without it, in Node, for the tests (chapter @@ch.reference@@
 ## What it models
 
 - **Flooding.** Sixteen watertight compartments, each split port and starboard and above and below E deck: 64 spaces,
-  joined by 290 water paths. The paths are the holes in her shell, the watertight doors, the openings in the decks and
-  the tops of the bulkheads.
+  joined by 485 water paths on the 1912 damage. The paths are the holes in her shell, the watertight doors, the
+  openings in the decks, the tops of the bulkheads, and her windows, her side's openings and the grand staircases'
+  doors and domes, which hold until the sea breaks them in.
 - **How she floats.** Her rise and fall, her trim and her list, as one rigid body, starting from her drafts on the night.
 - **How she handles.** Her turning and her stopping, fitted to the trial record of the three sister ships.
 - **The iceberg.** A body of ice she can miss, graze, dent or run her stem into. The contact makes the damage. No hole

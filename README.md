@@ -117,8 +117,9 @@ has not yet been tried.
 The model works, a quarter of a second at a time:
 
 - **Flooding** through 64 spaces (16 watertight compartments, each split port and starboard, above and below E deck),
-  joined by 290 water paths: the holes in her shell, the watertight doors, the openings in her decks and the tops of
-  her bulkheads.
+  joined by 485 water paths on the 1912 damage: the holes in her shell, the watertight doors, the openings in her
+  decks, the tops of her bulkheads, and her windows, her side's openings and the grand staircases' doors and domes,
+  which hold until the sea breaks them in.
 - **How she floats:** her rise and fall, her trim and her list, as one rigid body, from her drafts on the night.
 - **How she handles:** her turning and her stopping, fitted to the trial record of the three sister ships.
 - **The iceberg:** a body of ice she can miss, graze, dent or run her stem into. The contact makes the damage; no

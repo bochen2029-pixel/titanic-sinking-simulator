@@ -435,7 +435,7 @@ function row(ok, what, value) { rows.push(ok); if (!ok) fails++; console.log((ok
       await xray(true);
       await view('profile');
       await resume();
-      // (read once a second of her time: the moment over her 4,408 columns is not free)
+      // (read once a second of her time: the moment over her 4,852 columns is not free)
       await holdAt(`sim.night.tTouch >= 0 && sim.night.k % 4 === 0 && TitanicGirder.zone(TitanicGirder.moment(sim).gov.M) === 'within'`, 'the hull gauge in the range');
       await tick(110);                                                   // the camera settles; the gauge reads four times a second
       await hideToast();

@@ -11,7 +11,7 @@ had to be guessed the code says so. This chapter says which is which.
 
 ## Flooding
 
-Her hull is a shape fitted to the builder's hydrostatics, cut into 4,408 vertical columns. Every quarter of a second the
+Her hull is a shape fitted to the builder's hydrostatics, cut into 4,852 vertical columns. Every quarter of a second the
 model adds up her buoyancy and the water in her over those columns, at the pose she has at that moment, and moves her
 as one rigid body in rise, trim and list. Water moves between the 64 spaces and the sea through orifice and weir laws:
 through holes, doors and deck openings, and over the tops of the bulkheads. The two halves of an open space share one
