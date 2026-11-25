@@ -1,0 +1,32 @@
+particulars: CB 0.666  k=2d/L 0.0759  m' 0.1450  my' 0.1484  Jz' 0.00952  Iz' 0.00906
+linear derivatives: Yv -0.2207  YR 0.0420  Nv -0.0759  NR -0.0352
+course-stability index C = Yv(NR - m'xG') - Nv(YR - m' - mx') = -8.736e-4 (unstable)
+propeller fit: wing K_T(0) 0.531  centre K_T(0) 0.323  hull drag c 11196 kg/m
+
+case                                                 t(22.5deg) x(22.5)  advance transfer tactical  steadyDia  U_end  drift  turnRate  heelMax heelEnd
+targets (from memory, to be confirmed by the research note): trial circle about 3,850 ft diameter, advance about 2,100 ft at 20.5 kn;
+         Olympic 1912: two points (22.5 deg) in about 37 s at about 21.5 kn
+X'_vr: sourced formula (run 2)  X'_vr = -0.1511  m'_y + X'_vr = -0.0027
+YM 20.5 kn, 40 deg, AR 37, no CN cap                    48.5 s  1617 ft   2758 ft  1195 ft  2519 ft    2270 ft  13.0 kn  10.3°  66.5°/min    7.8°    5.5°  heel at 22.5°: 5.62°
+YM 20.5 kn, 40 deg, AR 37, CN <= 1.3                    52.8 s  1762 ft   2931 ft  1239 ft  2561 ft    2270 ft  13.0 kn  10.3°  66.5°/min    7.8°    5.5°  heel at 22.5°: 5.24°
+YM 20.5 kn, 35 deg, AR 37, CN <= 1.3                    51.8 s  1733 ft   2981 ft  1338 ft  2818 ft    2543 ft  13.7 kn  10.1°  62.7°/min    7.4°    5.4°  heel at 22.5°: 5.35°
+YM 21.5 kn, 40 deg, AR 37, CN <= 1.3                    50.5 s  1769 ft   2936 ft  1234 ft  2561 ft    2270 ft  13.6 kn  10.3°  69.7°/min    8.6°    6.0°  heel at 22.5°: 5.78°
+YM 21.5 kn, 40 deg, AR 37, CN<=1.3, centre screw stopped    62.0 s  2107 ft   3518 ft  1547 ft  3222 ft    3072 ft  13.4 kn   9.6°  50.5°/min    6.2°    4.3°  heel at 22.5°: 4.41°
+YM 20.5 kn, 40 deg, AR 45, CN <= 1.3                    48.3 s  1609 ft   2706 ft  1142 ft  2412 ft    2168 ft  12.8 kn  10.4°  68.3°/min    8.1°    5.5°  heel at 22.5°: 5.74°
+YM 10 kn, 40 deg, AR 37, CN <= 1.3                     104.5 s  1696 ft   2868 ft  1237 ft  2561 ft    2270 ft   6.3 kn  10.3°  32.4°/min    1.9°    1.3°  heel at 22.5°: 1.24°
+KJ 20.5 kn, 40 deg, AR 37, no CN cap                    57.5 s  1898 ft   4100 ft  2659 ft  5933 ft    5811 ft  15.4 kn   7.5°  30.7°/min    3.9°    3.0°  heel at 22.5°: 3.80°
+KJ 20.5 kn, 40 deg, AR 37, CN <= 1.3                    63.0 s  2086 ft   4422 ft  2882 ft  6377 ft    6252 ft  15.9 kn   7.0°  29.4°/min    3.7°    3.0°  heel at 22.5°: 3.55°
+KJ 20.5 kn, 35 deg, AR 37, CN <= 1.3                    61.5 s  2043 ft   4350 ft  2843 ft  6304 ft    6181 ft  16.1 kn   7.1°  30.2°/min    3.8°    3.1°  heel at 22.5°: 3.70°
+KJ 21.5 kn, 40 deg, AR 37, CN <= 1.3                    60.3 s  2093 ft   4429 ft  2884 ft  6378 ft    6252 ft  16.6 kn   7.0°  30.9°/min    4.0°    3.3°  heel at 22.5°: 3.91°
+KJ 21.5 kn, 40 deg, AR 37, CN<=1.3, centre screw stopped    74.0 s  2483 ft   5215 ft  3540 ft  7773 ft    7769 ft  15.7 kn   5.7°  23.5°/min    3.1°    2.4°  heel at 22.5°: 3.02°
+KJ 20.5 kn, 40 deg, AR 45, CN <= 1.3                    57.8 s  1908 ft   4053 ft  2571 ft  5749 ft    5619 ft  15.1 kn   7.7°  31.2°/min    3.9°    3.0°  heel at 22.5°: 3.82°
+KJ 10 kn, 40 deg, AR 37, CN <= 1.3                     125.8 s  2023 ft   4360 ft  2884 ft  6377 ft    6252 ft   7.7 kn   7.0°  14.4°/min    0.9°    0.7°  heel at 22.5°: 0.84°
+YU 20.5 kn, 40 deg, AR 37, no CN cap                    53.0 s  1759 ft   3421 ft  1969 ft  4329 ft    4127 ft  15.0 kn   8.1°  42.2°/min    5.1°    4.0°  heel at 22.5°: 4.68°
+YU 20.5 kn, 40 deg, AR 37, CN <= 1.3                    58.0 s  1929 ft   3674 ft  2082 ft  4483 ft    4225 ft  15.1 kn   7.9°  41.6°/min    4.9°    4.0°  heel at 22.5°: 4.32°
+YU 20.5 kn, 35 deg, AR 37, CN <= 1.3                    56.8 s  1893 ft   3676 ft  2165 ft  4726 ft    4530 ft  15.8 kn   7.5°  40.5°/min    4.9°    4.1°  heel at 22.5°: 4.49°
+YU 21.5 kn, 40 deg, AR 37, CN <= 1.3                    55.5 s  1937 ft   3680 ft  2078 ft  4483 ft    4225 ft  15.9 kn   7.9°  43.6°/min    5.4°    4.4°  heel at 22.5°: 4.76°
+YU 21.5 kn, 40 deg, AR 37, CN<=1.3, centre screw stopped    68.8 s  2320 ft   4429 ft  2653 ft  5741 ft    5684 ft  15.4 kn   6.3°  31.4°/min    3.9°    3.1°  heel at 22.5°: 3.60°
+YU 20.5 kn, 40 deg, AR 45, CN <= 1.3                    53.0 s  1760 ft   3353 ft  1872 ft  4110 ft    3885 ft  14.6 kn   8.4°  43.7°/min    5.3°    4.1°  heel at 22.5°: 4.75°
+YU 10 kn, 40 deg, AR 37, CN <= 1.3                     115.5 s  1867 ft   3612 ft  2082 ft  4482 ft    4225 ft   7.4 kn   7.9°  20.3°/min    1.2°    1.0°  heel at 22.5°: 1.02°
+
+Euler dt 0.25 s against dt 0.01 s: tactical diameter 780.72 vs 780.62 m; advance 893.40 vs 894.67 m; t(22.5 deg) 52.75 vs 52.83 s

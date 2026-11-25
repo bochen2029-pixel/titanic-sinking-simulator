@@ -1,0 +1,75 @@
+{"cmd":"units.convert","args":{"value":"22.5 kn","to":"m/s"}}
+{"cmd":"units.convert","args":{"value":"21.5 kn","to":"m/s"}}
+{"cmd":"units.convert","args":{"value":"20.5 kn","to":"m/s"}}
+{"cmd":"units.convert","args":{"value":"850 ft","to":"m"}}
+{"cmd":"units.convert","args":{"value":"92.5 ft","to":"m"}}
+{"cmd":"units.convert","args":{"value":"3850 ft","to":"m"}}
+{"cmd":"units.convert","args":{"value":"2100 ft","to":"m"}}
+{"cmd":"units.convert","args":{"value":"850 yd","to":"m"}}
+{"cmd":"units.convert","args":{"value":"117174400 lb","to":"t"}}
+{"cmd":"units.convert","args":{"value":"8250000 ft*lbf/s","to":"kW"}}
+{"cmd":"units.convert","args":{"value":"8800000 ft*lbf/s","to":"kW"}}
+{"cmd":"units.convert","args":{"value":"75 rpm","to":"rad/s","digits":12}}
+{"cmd":"units.convert","args":{"value":"23.5 ft","to":"m"}}
+{"cmd":"units.convert","args":{"value":"16.5 ft","to":"m"}}
+{"cmd":"num.eval","args":{"expr":"(V*1852/3600)^2/(2*g)","vars":{"V":"22.5","g":"9.81"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"(V*1852/3600)^2/(2*g)","vars":{"V":"10","g":"9.81"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"(V*1852/3600)^2/(2*g)","vars":{"V":"5","g":"9.81"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"(V*1852/3600)/sqrt(g*L)","vars":{"V":"22.5","g":"9.81","L":"259.08"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"2*pi*(V*1852/3600)^2/g","vars":{"V":"22.5","g":"9.81"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"exp(-g*h/(V*1852/3600)^2)","vars":{"V":"22.5","g":"9.81","h":"7"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"sqrt(2*g*h)","vars":{"g":"9.81","h":"7"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"(V*1852/3600)/sqrt(2*g*h)","vars":{"V":"22.5","g":"9.81","h":"7"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":{"let":[["ec","sqrt(1 - 1/f^2)"],["a0","2*(1 - ec^2)/ec^3*(log((1 + ec)/(1 - ec))/2 - ec)"]],"expr":"a0/(2 - a0)"},"vars":{"f":"9.85"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":{"let":[["ec","sqrt(1 - 1/f^2)"],["a0","2*(1 - ec^2)/ec^3*(log((1 + ec)/(1 - ec))/2 - ec)"]],"expr":"1 - (1 + a0/(2 - a0))^2"},"vars":{"f":"9.85"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"M/(2*c)*log(1 + c*(V*1852/3600)^2/T)","vars":{"M":"50490000","c":"17306","T":"2200000","V":"20"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"M/sqrt(c*T)*atan((V*1852/3600)*sqrt(c/T))","vars":{"M":"50490000","c":"17306","T":"2200000","V":"20"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"(M/c)*(1/(V1*1852/3600) - 1/(V0*1852/3600))","vars":{"M":"50490000","c":"11196","V0":"22.5","V1":"10"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"(M/c)*log(V0/V1)","vars":{"M":"50490000","c":"11196","V0":"22.5","V1":"10"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"atan(((f*V*1852/3600)^2/(g*R))*(KG - d/2)/GM)*180/pi","vars":{"f":"0.6","V":"20.5","g":"9.81","R":"586.74","KG":"10.80","d":"9.83","GM":"0.80"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"atan((f*V*1852/3600)^2/(g*R))*180/pi","vars":{"f":"0.6","V":"20.5","g":"9.81","R":"586.74"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"(W*1000/60)*(V*1852/3600)","vars":{"W":"324","V":"22.5"},"digits":8}}
+{"cmd":"check.units","args":{"expr":"Cp*U^2/(2*g)","vars":{"Cp":"1","U":"m/s","g":"m/s^2"},"expect":"m"}}
+{"cmd":"check.units","args":{"expr":"Cd*A*sqrt(2*g*(h + Cp*U^2/(2*g)))","vars":{"Cd":"1","A":"m^2","g":"m/s^2","h":"m","Cp":"1","U":"m/s"},"expect":"m^3/s"}}
+{"cmd":"check.units","args":{"expr":"rho*n^2*D^4*KT","vars":{"rho":"kg/m^3","n":"1/s","D":"m","KT":"1"},"expect":"N"}}
+{"cmd":"check.units","args":{"expr":"rho*AR*UR^2*fa/2","vars":{"rho":"kg/m^3","AR":"m^2","UR":"m/s","fa":"1"},"expect":"N"}}
+{"cmd":"check.units","args":{"expr":"rho*L*d*U^2*Yv/2","vars":{"rho":"kg/m^3","L":"m","d":"m","U":"m/s","Yv":"1"},"expect":"N"}}
+{"cmd":"check.units","args":{"expr":"rho*L^2*d*U^2*Nv/2","vars":{"rho":"kg/m^3","L":"m","d":"m","U":"m/s","Nv":"1"},"expect":"N*m"}}
+{"cmd":"check.units","args":{"expr":"m*u*r*(KG - d/2)","vars":{"m":"kg","u":"m/s","r":"1/s","KG":"m","d":"m"},"expect":"N*m"}}
+{"cmd":"check.units","args":{"expr":"rho*Q*U","vars":{"rho":"kg/m^3","Q":"m^3/s","U":"m/s"},"expect":"N"}}
+{"cmd":"check.units","args":{"expr":"rho*CD*d*(v + x*r)^2*dx/2","vars":{"rho":"kg/m^3","CD":"1","d":"m","v":"m/s","x":"m","r":"1/s","dx":"m"},"expect":"N"}}
+{"cmd":"check.units","args":{"expr":"sqrt(g*k*tanh(k*h))","vars":{"g":"m/s^2","k":"1/m","h":"m"},"expect":"1/s"}}
+{"cmd":"check.units","args":{"expr":"rho*n*D^4*KT","vars":{"rho":"kg/m^3","n":"1/s","D":"m","KT":"1"},"expect":"N"}}
+{"cmd":"root.real","args":{"f":"(1 - t)*(2*rho*Dw^4*aw*(n^2 - n*u*(1 - ww)/(Dw*J0)) - rho*Cl*Ac*((1 - wc)*u)^2/2) - c*u^2","var":"u","lo":"0.1","hi":"13","vars":{"t":"0.15","rho":"1025","Dw":"7.16","aw":"0.531","n":"5/6","ww":"0.15","J0":"1.48","Cl":"0.6","Ac":"19.871","wc":"0.30","c":"11196"}}}
+{"cmd":"root.real","args":{"f":"Yv0*(1 + 2*t/3)*(Nr0*(1 + 0.3*t) - mxG) - Nv0*(1 - a*t)*Yrm0*(1 + 0.8*t)","var":"t","lo":"-0.6","hi":"0.6","vars":{"Yv0":"-0.2207","Nr0":"-0.0352","mxG":"-0.001791","Nv0":"-0.0759","a":"0.7851","Yrm0":"-0.1087"}}}
+{"cmd":"units.convert","args":{"value":"3000 ft","to":"m"}}
+{"cmd":"units.convert","args":{"value":"0.2 nmi","to":"m"}}
+{"cmd":"units.convert","args":{"value":"401.63 ft^2","to":"m^2"}}
+{"cmd":"units.convert","args":{"value":"17 ft","to":"m"}}
+{"cmd":"units.convert","args":{"value":"35 ft","to":"m"}}
+{"cmd":"units.convert","args":{"value":"369600 lbf","to":"MN"}}
+{"cmd":"num.eval","args":{"expr":"R*4.4482216152605/(V*1852/3600)^2","vars":{"R":"369600","V":"21"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"(R*4.4482216152605/(V*1852/3600)^2)*(D1/D0)^(2/3)","vars":{"R":"369600","V":"21","D1":"49020.667","D0":"53850"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"A/(L*T)","vars":{"A":"401.63","L":"850","T":"34.5"},"digits":6}}
+{"cmd":"num.eval","args":{"expr":"M/(2*c)*log(1 + c*(V*1852/3600)^2/T)","vars":{"M":"50490000","c":"19716","T":"2200000","V":"18"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"M/sqrt(c*T)*atan((V*1852/3600)*sqrt(c/T))","vars":{"M":"50490000","c":"19716","T":"2200000","V":"18"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"M/(2*c)*log(1 + c*(V*1852/3600)^2/T)","vars":{"M":"50490000","c":"19716","T":"2200000","V":"20"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"M/sqrt(c*T)*atan((V*1852/3600)*sqrt(c/T))","vars":{"M":"50490000","c":"19716","T":"2200000","V":"20"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"(M/c)*(1/(V1*1852/3600) - 1/(V0*1852/3600))","vars":{"M":"50490000","c":"13232","V0":"22.5","V1":"10"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"(M/c)*log(V0/V1)","vars":{"M":"50490000","c":"13232","V0":"22.5","V1":"10"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"atan(((V*1852/3600)^2/(g*R))*(KG - d/2)/GM)*180/pi","vars":{"V":"17.1","g":"9.81","R":"586.74","KG":"10.80","d":"9.83","GM":"0.80"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":"22.5/37","digits":6}}
+{"cmd":"num.eval","args":{"expr":"2*(22.5*pi/180)/37^2","digits":8}}
+{"cmd":"num.eval","args":{"expr":"(V*1852/3600)*t","vars":{"V":"21.5","t":"37"},"digits":8}}
+{"cmd":"num.eval","args":{"expr":{"let":[["hd","(V*1852/3600)^2/(2*g)"],["r","hd/(h + hd)"]],"expr":"(1 - (58/63)*r)/sqrt(1 - r)"},"vars":{"V":"5","g":"9.81","h":"7"},"digits":6}}
+{"cmd":"num.eval","args":{"expr":{"let":[["hd","(V*1852/3600)^2/(2*g)"],["r","hd/(h + hd)"]],"expr":"(1 - (58/63)*r)/sqrt(1 - r)"},"vars":{"V":"10","g":"9.81","h":"7"},"digits":6}}
+{"cmd":"num.eval","args":{"expr":{"let":[["hd","(V*1852/3600)^2/(2*g)"],["r","hd/(h + hd)"]],"expr":"(1 - (58/63)*r)/sqrt(1 - r)"},"vars":{"V":"22.5","g":"9.81","h":"7"},"digits":6}}
+{"cmd":"num.eval","args":{"expr":"m*(V*1852/3600)^2/2/1e9","vars":{"m":"49020667","V":"21"},"digits":6}}
+{"cmd":"num.eval","args":{"expr":"m*(V*1852/3600)^2/2/1e9","vars":{"m":"49020667","V":"22.5"},"digits":6}}
+{"cmd":"units.convert","args":{"value":"2627968000 ft*lbf","to":"GJ"}}
+{"cmd":"units.convert","args":{"value":"2346400000 ft*lbf","to":"GJ"}}
+{"cmd":"num.eval","args":{"expr":"atan((V*1852/3600)^2/(g*R))*180/pi","vars":{"V":"17.1","g":"9.81","R":"586.74"},"digits":6}}
+{"cmd":"num.eval","args":{"expr":"1 - 0.675*(1 - 0.769*x)^1.258","vars":{"x":"1"},"digits":6}}
+{"cmd":"num.eval","args":{"expr":"1 - 0.675*(1 - 0.769*x)^1.258","vars":{"x":"1/2"},"digits":6}}
+{"cmd":"num.eval","args":{"expr":"1 - 0.675*(1 - 0.769*x)^1.258","vars":{"x":"0"},"digits":6}}
+{"cmd":"check.units","args":{"expr":"(1 - (58/63)*r)/sqrt(1 - r)","vars":{"r":"1"},"expect":"1"}}

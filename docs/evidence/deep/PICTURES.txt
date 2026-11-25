@@ -1,0 +1,16 @@
+docs/evidence/deep/deep_column.png
+  the Column view in the Night look 100 s after the flag: the sea from the surface to the bed, the two pieces near 1 km, the strip at the right
+docs/evidence/deep/deep_bow_xray.png
+  Bow down in the X-ray look, 100 s after the flag: the bow cut at x -23 (its torn end flat), the stern above it, specks in the water; readouts and strip
+docs/evidence/deep/deep_bow_night.png
+  Bow down in the Night look: the bow lit by the lamp 150 m off her (appearance), black water, specks; the stern above
+docs/evidence/deep/deep_bed_near.png
+  the Bed view in the Night look, the bow 100 m above the bed: the lamp on her, the 50 m net coming up out of the dark
+docs/evidence/deep/deep_bow_rest_tops.png
+  the bow at rest, close to, in the solid look (laid upright by the test feed): no funnel on it, only the black of their bases; the foremast laid back across the well deck onto the bridge's front, its crow's nest on it (Ballard 1987, p. 204; how and when it is laid are the page's bets)
+docs/evidence/deep/deep_bow_rest.png
+  the 1912 watch at rest, Bow down: the model's bow and the survey's outline of it in one picture, the words clear of each other; the strip, the Bridge. The gap is the model's answer: where its pieces fell, and her heading at the flag, which is the motion's (the survey is laid by true bearings; QC B-5 puts about half the gap on the heading)
+docs/evidence/deep/deep_rest_watch.png
+  the 1912 watch on the bed (X-ray, from above): the two pieces where the engine laid them, the survey's outlines of the bow, the stern and the boiler field laid from the point under the break, their words inside the picture and clear of each other (a word with no clear line laid where it overlaps least, marked), the 50 and 500 m nets; the Bridge, the strip
+docs/evidence/deep/deep_phone_rest.png
+  a phone (390 x 780): the 1912 watch on the bed, the Foundered card with its two new lines (when each piece came to rest, how deep, how far from where she broke), the strip at the right edge clear of the readouts, the card and the Bridge

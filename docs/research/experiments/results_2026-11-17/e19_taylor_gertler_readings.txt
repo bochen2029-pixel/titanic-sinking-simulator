@@ -1,0 +1,18 @@
+e19: Gertler (1954), B/H 3.00, Cp 0.68, low-speed chart (DTIC_AD0224171, leaf n195), read by pixel scan; C_R x 10^-3
+  Fn      vol 1.0   vol 2.0   vol 3.0   vol 2.75 (this hull)
+  0.149   0.345     0.405     0.460     0.446
+  0.156   0.349     0.406     0.460     0.447
+  0.184   0.348     0.406     0.465     0.450
+  0.226   0.367     0.611     0.778     0.737
+
+  C_R,3D x 10^-3 (less the 2D-to-3D correction): 8.2 kn 0.186 (held from Fn 0.149); 15.3 kn 0.220; 18 kn 0.230; 22.15 kn 0.526
+  Holtrop's equivalent, from the note: 8.2 kn about 0.172; 15.3 kn about 0.25; 18 kn 0.375; 22.15 kn about 0.692
+
+The note's rules (in C_R,3D; its linear speed formulas, as-built screws):
+  60 rpm <= 18.0 kn needs C_R(18) >= 0.933 C_R(22.15) - 0.153 = 0.338: 0.230 -> FAIL; 60 rpm 18.19 kn (Holtrop 18.20)
+  Slow 30 >= 8.2 kn needs C_R(22.15) >= 0.434 + 1.133 C_R(8.2) = 0.645: 0.526 -> FAIL; Slow 8.10 kn (Holtrop 8.25)
+  Half 50 >= 14.9 kn needs C_R(22.15) >= 0.129 + 1.037 C_R(15.3) = 0.357: 0.526 -> pass; Half 15.16 kn (Holtrop 15.31)
+
+Verdict (the note's rule: replace Holtrop only if the period curve meets all three): KEEP Holtrop's shape. The period curve
+fails the 60-rpm rule as Holtrop does and gives the same 18.2 kn there, an independent confirmation that the shape is not
+what keeps 60 rpm over the consensus's band; and it loses Slow ahead (8.10 kn) where Holtrop is in.

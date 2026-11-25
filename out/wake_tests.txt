@@ -1,0 +1,64 @@
+1. MICHELL'S INTEGRAL AS CODED, on Wigley's parabolic hull (L/B 10, B/T 1.6)
+PASS Cw x 1000 at Froude 0.25, 0.316 and 0.45 (Rw / (0.5 rho U^2 S), S 0.1488 L^2)                            1.064, 1.831, 4.153                                          Peri's 1.064, 1.831, 4.154, each within 0.1 % (research note R8, 2.1)
+
+2 to 4, 6. STRAIGHT AT 22.5 kn FOR 300 s in a plain periodic box of 512 x 512 cells of 8 m (thin-ship's own heights, unscaled)
+PASS 2  the energy her hull leaves on the sea a second, over her speed (150 to 300 s)                         1027.6 kN                                                    Michell's integral for the same waves (longer than 18.8 m): 1028.1 kN, within 1 %
+PASS    the work the library meters on her hull's push, over her speed                                        1027.6 kN                                                    the same energy, within 0.5 %
+PASS 3  the transverse waves on her track, 250 to 1,500 m astern: 15 of them                                  85.77 m apart                                                2 pi U^2 / g = 85.81 m, within 0.5 %
+PASS    their height, crest to trough, 300, 600 and 1,000 m astern                                            2.29, 1.47, 1.12 m                                           the far-field law from Michell's |A| astern: 1.73, 1.32, 1.06 m; met as distance grows (within 10 % at 1,000 m)
+PASS 4  the wedge's edge from her stem, 600, 1,000 and 1,400 m astern                                         21.4, 20.9, 20.2 deg                                         Kelvin's 19.47 deg, approached from outside: falling, never below, within 1.5 deg at 1,400 m
+PASS 6  port against starboard, at 1625 pairs of places                                                       they differ by at most 5.6e-13 of the highest wave           mirror images to rounding (under 1e-9)
+
+5. THE SCALE: the page's wake carries off what Holtrop's method spends on waves
+PASS 5  the scale baked into the library at 14, 18 and 22.5 kn                                                0.2677, 0.4309, 0.5730                                       sqrt(Rw Holtrop / Rw Michell) from these sources: 0.2677, 0.4309, 0.5730, to 6 figures
+PASS    so her waves at 22.5 kn carry off                                                                     4.18 MW (361.2 kN)                                           Holtrop's wave resistance at her speed: 4.18 MW (361.2 kN; 19.4 % of the motion model's resistance), within 0.01 %
+PASS    between the table's speeds (18.125, 21.625, 22.375 kn) the table read by line                         0.44, -0.36, 0.15 % off                                      within 1 % above 18 kn (below 14 kn the table is coarse against her humps and hollows, and her waves are a few kW)
+PASS    the page's two windows together, following her with their edges tapered: her hull's work on them over her speed 352.2 kN                                                     the scale squared times Michell for the two windows' waves, 352.5 kN, within 2 %: nothing comes back to her
+PASS    and of Holtrop's wave resistance that is                                                              97.5 %                                                       all but the waves shorter than 9.4 m, which the fine window cannot hold: over 95 %
+
+7. HARD-A-STARBOARD (her head to port) AT 40 s, HELD TO 300 s, in the plain box
+   steady in the turn (the motion model's): 15.6 kn, turning 0.78 deg/s; the water meets her stem 6.2 deg on the inside bow and her stern 18.3 deg on the outside
+PASS 7  the sea 60 to 260 m either side of her track, 300 to 700 m back: rms height outside the turn over inside 0.337 m over 0.134 m: 2.52                                   over 1.5: a turning hull throws its wake outward
+PASS    the same with her sideways motion left out of the forcing (the same track)                            0.312 m over 0.130 m: 2.39                                   over 1.5 too: the lopsidedness is the curve of her track (her wake is crowded inside the circle and spread outside it)
+PASS    the wave energy on the sea at 300 s, with her sideways motion and without                             2.19 GJ and 1.32 GJ                                          more with it, by over a third: her drift and her swing make waves of their own, on both sides
+
+8. THE EDGES: the same band in a window twice the size, both following her straight at 22.5 kn
+PASS 8  the fine window (1024 m; 66 m of it untapered ahead of her stem) against one of 2048 m: in her wake, within 150 m of her track they differ by 1.00 % (rms, of an rms height of 0.145 m, at 3724 places) under 2 %: what leaves a window does not come back
+PASS    anywhere in its untapered 800 m square                                                                by 5.0 mm rms, 3.4 % of the wake's rms height                under 5 % of it (far abeam, outside her wedge, there is next to nothing to compare with: 117 mm rms over the whole square)
+PASS    the wide window (3072 m; 150 m ahead of her stem) against one of 6144 m: in her wake, within 450 m of her track they differ by 1.14 % (rms, of 0.285 m, at 1716 places)      under 2 %
+PASS    anywhere in its untapered 2400 m square                                                               by 3.1 mm rms, 1.1 % of the wake's rms height                under 5 % of it
+
+9. THE WHITE WATER'S CAUSES (the wake as the page runs it: two windows, the scale, the record of her motion)
+   at 22.5 kn: 16336 m2 of sea white from breaking and the bow's sheets, 17232 m2 from the races (in the fine window; foam over 0.3)
+PASS 9  foam made a second where the sea is too steep to stand: at 14 kn against 22.5 kn                      0.01 against 47.56: 0.0 %                                    under 5 %: her waves' energy falls from 4.2 MW to 0.09, and the feathers go with it; no rule about speed is in the law
+PASS    the bow's sheet by the bow-wave relation: its strength at 22.5, 18, 10 and 5 kn                       1.00, 0.72, 0.28, 0.00                                       1 at 22.5 kn, falling with speed; nought below the speed at which her bow wave stops overturning (about 6 kn for her waterline's 15.8 deg)
+PASS    the white road's width 150, 400 and 1,000 m astern of her (the races' foam over a tenth of its strength on her track) 40, 48, 68 m                                                 half the measured width of a ship's bubble wake, 1.9 B^0.8 x^0.2, and not less than her races' span (research note R9): 37, 46, 55 m; each within a factor of 1.5 (the spreading is set from that law)
+PASS    "Stop" from Full ahead: foam made a second in the races 40 to 60 s after the order, against before it 3.88 against 49.75: 7.8 %, at 17.0 kn                        under 15 % while she still makes over 15 kn: the white road is her screws', and stops with them (what is left is her hull's own wake)
+PASS    "Full astern" from Full ahead: foam made a second in the races 60 to 80 s after the order             23.52 (before it 49.75), her wing shafts at -75 rpm, thrust -3.67 MN, at 12.5 kn made again, by shafts turning astern, along her quarters ahead of the screws
+
+10 to 12. A FIELD LET GO AND MADE AGAIN; HER HULL IN THE PICTURE; THE SAME RECORD, THE SAME BYTES
+PASS 10 time ran too fast to follow from 40 to 120 s and the field was made again from her record: the sea round her at 150 s, on a straight course differs by 0.6 % (rms, at 1352 places) from the field that followed her all the way under 2 %: the wake is her record's, not the history of the page
+PASS    the same through a hard-over turn (the helm put over at 20 s)                                         differs by 1.7 %                                             under 6 %: the fine window is made again from her last 135 s only, and in a turn some older short waves are still about her
+PASS    its white water in the turn: the races' and the breakers' foam on the fine grid                       1077 and 776 against 1088 and 808                            the races within 10 %, the breakers within 20 % (made again at 1 s steps over the last 30 s)
+PASS 11 her hull in the picture: water 3 m off her plating amidships is read in the field                     9.67 m off her centre line (and back: 3.000 m off her plating) sqrt((b + 3)^2 - b^2) = 9.67 m for her half-breadth of 14.10 m
+PASS    the white water along her sides at 22.5 kn (foam over 0.25, from 50 m abaft her stem to 100 m abaft amidships) 407 cells, none farther than 10.6 m off her plating          a band along her plating (within 15 m), left there by her bow's sheets with nothing carrying it
+PASS 12 the same record fed to another wake                                                                   the three textures are the same bytes                        the same bytes: nothing in it but her motion (262144 + 262144 + 65536)
+
+13. THE RECORD CUT BACK WHILE THE PLAYER IS PAUSED INSIDE A SAMPLE (joint gate 2 of 2026-11-20: systems_site)
+PASS 13 the record cut back while the player is paused inside a sample (a short record; a few pieces of work a step) 900 samples, cut back 7 times, no error                      no error (before the fix of 2026-11-20 it threw "reading 'X'" in centreOf)
+PASS    the record bounded with nobody running the player (the switch off, a phone), and with a player left inside a sample at most 240 and 360 samples kept, cut 7 and 3 times          never over twice what it keeps (240), and never over three times when a player is left inside a sample
+
+14. THE SEA AGAINST HER SIDES (the library's alongside: what her drawn waterline follows, site/parts/26_wake_seams.js)
+PASS 14 her bow wave against her plating at 22.5 kn (the law: Noblesse and others 2008, eq. 4.1, her stem at 21 deg) 5.67 m, 8 m abaft her stem (the field alone 1.26 m; the law's factor 6.95) the law's crest, 5.67 m, to 1 %, within 20 m of the stem (the fixed factor 3.5 before it drew 3.06 m)
+PASS    the law at 10, 14, 18 and 22.5 kn: her drawn crest against the law's (the factor)                     0.73/1.35 m (12.0), 3.16/3.16 m (9.5), 4.07/4.07 m (8.2), 5.67/5.67 m (7.0) each to 1 %, or the factor at its cap of 12 (her field too small to carry it): the crest growing as u^2 / (1 + F_D)
+PASS    the law on K6's two benchmark hulls at her length: the drawn crest against the tank's                 the Series 60 at Fn 0.22 1.73 against 1.72 m; Wigley's hull at Fn 0.25 3.60 against 3.55 m within a sixth: the relation on a 7 and an 11.3 degree bow (Kim and Jenkins 1981; Kajitani and others 1983; tools/s60_compare.js, tools/wigley_compare.js)
+PASS    port against starboard on a straight course                                                           they differ by at most 1.9e-6 m                              the same to rounding (under 1e-5 m)
+PASS    the crests along her side at 22.5 kn: 2 of them                                                       84 m apart on average                                        2 pi U^2 / g = 86 m, within 15 %: her own transverse waves along her
+PASS    the crests along her side at 18 kn: 3 of them                                                         56 m apart on average                                        2 pi U^2 / g = 55 m, within 15 %: her own transverse waves along her
+PASS    hard-a-starboard (her head to port) at 5 s, at 60 s: port minus starboard along her                   0.51 m rms (port 0.51, starboard 0.87)                       over 0.1 m: a turning hull meets the water differently on each side
+PASS    a wake with no sea yet                                                                                the sea against her at most 0.000 m                          nought everywhere: the page's still waterline
+PASS    the sea against her plating between refreshes, once the fine window has moved on after her (32 m)     it changed by at most 0.000000 m                             not at all: it is the last refresh's, read where its windows stood then (the join 6 gate's 1.2 m, 2026-11-20)
+
+15. ANOTHER HULL AND ANOTHER GAIN (createWake's o.hull and o.scale, the seams for K6's benchmark hull)
+PASS 15 her own hull given as another (o.hull), at 22.5 kn after 60 s: both windows' heights                  131072 of 131072 the same                                    every one, to the bit: the seam changes nothing for her
+PASS    her gain doubled (o.scale)                                                                            every height doubled, to 0.0e+0 of the highest               within 1e-6 of it: the field is linear in its gain, and the seam is the only gain the player uses

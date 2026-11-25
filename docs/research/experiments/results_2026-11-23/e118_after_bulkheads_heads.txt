@@ -1,0 +1,71 @@
+e118: the after watertight bulkheads' heads at collapse from their scantlings (Z1's ask, G12's way up); mild steel 262 MPa; stiffeners 29.875 in apart [read]
+
+1. THE RULE'S MARGIN: Table 10's bracketed stiffeners in plastic collapse under a head over the floor, against the head their row was sized for (the bulkhead deck's)
+   entry                                          design head (m)   span (m)   Mp mid + ends (kN m)   collapse head (m)   margin
+   24 to 26 ft deep, span 25 to 26 ft (e104's)              7.62       7.80                   413               10.88    1.427
+   30 to 32 ft deep, span 25 to 26 ft                       9.45       7.77                   572               13.68    1.448
+   36 to 38 ft deep, span 26 to 27 ft                      11.28       8.08                   670               14.66    1.300
+   the rule's margin: 1.300 to 1.448 (collapse over the head to the bulkhead deck)
+
+2. TO 5. THE AFTER BULKHEADS (the model's own bulkheads, decks and floor). Each head is m of water: upright, over the floor (a triangle);
+   standing, uniform over the span (the bulkhead nearly level). Hers is 1.75 to 2.0 times the rule-sized stiffener; loaded from the stiffeners' side, 0.6 to 0.8 of it
+   K at x -27.13 (boiler room 1 | the reciprocating engine room): the floor 1.98 m, D deck 16.62 m, so 14.64 m (48.0 ft) deep; its doors [["low",1],["E",2]]
+     the lowest stiffener to G deck, the wings                      span 6.87 m: upright 30.8 to 39.0 m over the floor (from the stiffeners' side 18.5 to 31.2); standing 27.5 to 35.8 m uniform (16.5 to 28.6)
+       its moments M_p,mid + M_p,end 1235.212 to 1607.044 kN m (the band's ends; standing = 8 (M_p,mid + M_p,end) / (rho g s L^2), exactly the spec's p_s below)
+     the lowest stiffener to F deck, the centre past the casings    span 9.30 m: upright 29.9 to 37.8 m over the floor (from the stiffeners' side 17.9 to 30.2); standing 25.4 to 33.3 m uniform (15.2 to 26.7)
+       its moments M_p,mid + M_p,end 2094.762 to 2752.349 kN m (the band's ends; standing = 8 (M_p,mid + M_p,end) / (rho g s L^2), exactly the spec's p_s below)
+   L at x -48.16 (the reciprocating engine room | the turbine room): the floor 1.98 m, D deck 16.80 m, so 14.82 m (48.6 ft) deep; its doors [["low",1],["E",2]]
+     the lowest stiffener to G deck, the wings                      span 7.04 m: upright 31.1 to 39.4 m over the floor (from the stiffeners' side 18.7 to 31.5); standing 27.7 to 36.1 m uniform (16.6 to 28.9)
+       its moments M_p,mid + M_p,end 1312.596 to 1708.329 kN m (the band's ends; standing = 8 (M_p,mid + M_p,end) / (rho g s L^2), exactly the spec's p_s below)
+     the lowest stiffener to F deck, the centre past the casings    span 9.48 m: upright 30.2 to 38.2 m over the floor (from the stiffeners' side 18.1 to 30.6); standing 25.6 to 33.7 m uniform (15.4 to 26.9)
+       its moments M_p,mid + M_p,end 2198.105 to 2888.945 kN m (the band's ends; standing = 8 (M_p,mid + M_p,end) / (rho g s L^2), exactly the spec's p_s below)
+   M at x -65.53 (the turbine room | the provision stores (zone 12)): the floor 1.60 m, D deck 17.02 m, so 15.42 m (50.6 ft) deep; its doors [["low",1],["F",1],["E",2]]
+     the lowest stiffener to the orlop (aft of M)                   span 5.21 m: upright 33.1 to 42.1 m over the floor (from the stiffeners' side 19.9 to 33.7); standing 30.7 to 39.7 m uniform (18.4 to 31.7)
+       its moments M_p,mid + M_p,end 795.154 to 1027.405 kN m (the band's ends; standing = 8 (M_p,mid + M_p,end) / (rho g s L^2), exactly the spec's p_s below)
+   N at x -84.73 (zone 12 | zone 13 (the refrigerated cargo)): the floor 1.60 m, D deck 17.35 m, so 15.75 m (51.7 ft) deep; its doors [["low",1],["G",1],["F",1],["E",2]]
+     the lowest stiffener to the orlop                              span 5.54 m: upright 33.8 to 42.9 m over the floor (from the stiffeners' side 20.3 to 34.3); standing 31.2 to 40.3 m uniform (18.7 to 32.2)
+       its moments M_p,mid + M_p,end 911.518 to 1178.566 kN m (the band's ends; standing = 8 (M_p,mid + M_p,end) / (rho g s L^2), exactly the spec's p_s below)
+   O at x -101.19 (zone 13 | zone 14 (the hold between O and P)): the floor 1.60 m, D deck 17.69 m, so 16.09 m (52.8 ft) deep; its doors [["low",1],["E",1]]
+     the lowest stiffener to the orlop                              span 5.88 m: upright 34.4 to 43.7 m over the floor (from the stiffeners' side 20.7 to 35.0); standing 31.7 to 41.0 m uniform (19.0 to 32.8)
+       its moments M_p,mid + M_p,end 1045.358 to 1352.572 kN m (the band's ends; standing = 8 (M_p,mid + M_p,end) / (rho g s L^2), exactly the spec's p_s below)
+
+5. THE PLATING between stiffeners, a strip clamped at them, its bending only (a lower bound; past it a membrane, until its seams' rivets go):
+   0.56 in, on the floor [read, bulkhead D]: 36.6 m of head over it; 0.30 in, between E and F decks [read]: 10.5 m. Standing, with the whole bulkhead under one pressure, the thin top strakes bend first: 10.5 m uniform
+
+6. AGAINST BO'S SUBMARINE SPEC (SPEC-phys.md lines 1112-1153, REQ-STRUCT-020): its three capacities on her panels, m of water (uniform)
+   bulkhead   panel                                   aspect   a/h    (a) Wood, clamped   (c) Greenspon, set 0.10 (0.13-0.23)   (b) the stiffener: section 4's standing band
+   K          the floor's, 0.56 in, to the lowest deck   9.0    53          41.6       494 (642-1136)                     27.5 to 35.8; k_s 1 to 3: 27.5 to 107
+   K          the top's, 0.30 in, E to D deck            3.6   100          14.4       281 (366-647)                      
+   L          the floor's, 0.56 in, to the lowest deck   9.3    53          41.5       494 (642-1135)                     27.7 to 36.1; k_s 1 to 3: 27.7 to 108
+   L          the top's, 0.30 in, E to D deck            3.6   100          14.4       281 (366-647)                      
+   M          the floor's, 0.56 in, to the lowest deck   6.9    53          43.3       498 (648-1146)                     30.7 to 39.7; k_s 1 to 3: 30.7 to 119
+   M          the top's, 0.30 in, E to D deck            3.6   100          14.4       281 (366-647)                      
+   N          the floor's, 0.56 in, to the lowest deck   7.3    53          42.9       497 (646-1144)                     31.2 to 40.3; k_s 1 to 3: 31.2 to 121
+   N          the top's, 0.30 in, E to D deck            3.6   100          14.4       281 (366-647)                      
+   O          the floor's, 0.56 in, to the lowest deck   7.8    53          42.5       496 (645-1141)                     31.7 to 41.0; k_s 1 to 3: 31.7 to 123
+   O          the top's, 0.30 in, E to D deck            3.6   100          14.4       281 (366-647)                      
+   Her panels lie outside Greenspon's validation on both counts: aspect 3.6 to 12.5 against 1.55, a/h 53 and 100 against 110 to 432. And they are riveted: the membrane tension his
+   formula needs would have to cross the seams and the stiffeners' heel rivets, whose strength it does not hold. So his rupture loads (hundreds of m) say only that the plate itself
+   does not open first. Its opening rule, min(k_s p_s, P_f), then reduces to k_s times the stiffener's three-hinge pressure, with k_s a bet the spec makes for welded panels.
+
+THE BANDS FOR THE FALL (m of water; the lowest stiffener governs; the low end from the stiffeners' side, the high end from the plating's side):
+   K: upright 17.9 to 39.0 over the floor; standing 15.2 to 35.8 uniform, and the top strakes' bending at 10.5 (a lower bound)
+   L: upright 18.1 to 39.4 over the floor; standing 15.4 to 36.1 uniform, and the top strakes' bending at 10.5 (a lower bound)
+   M: upright 19.9 to 42.1 over the floor; standing 18.4 to 39.7 uniform, and the top strakes' bending at 10.5 (a lower bound)
+   N: upright 20.3 to 42.9 over the floor; standing 18.7 to 40.3 uniform, and the top strakes' bending at 10.5 (a lower bound)
+   O: upright 20.7 to 43.7 over the floor; standing 19.0 to 41.0 uniform, and the top strakes' bending at 10.5 (a lower bound)
+
+7. EACH AFTER BULKHEAD'S OWN NATURAL PERIOD T_b (s): the lowest stiffener with its plating, all in phase; clamped to simply supported; no face wetted, one, both
+   the added-mass integral's checks: a unit square piston gives 2.972873 against 2.973210 exactly (n 2,000); her longest panel (L, 9.48 m) at n 600 against 1,200: -0.0150 %
+   bulkhead, span          B (m)   section (d x bf x t, in)               I (cm4)   steel (kg/m)   water per face (kg/m)   T dry          T one face     T both faces   1 + T/(pi t_r): t_r 0.3 s / 3.4 s (one face)
+   K, 6.87 m to G            28.2   14.7x4.9x0.86 to 16.2x5.4x0.94     42905-59364      166-183           3543-4055   0.016-0.041   0.072-0.207    0.100-0.290     1.08-1.22 / 1.007-1.019
+   K, 9.30 m to F            28.2   18.0x6.0x1.05 to 20.2x6.7x1.18    84159-122056      207-238           4361-4966   0.023-0.060   0.102-0.300    0.142-0.420     1.11-1.32 / 1.010-1.028
+   L, 7.04 m to G            27.2   15.0x5.0x0.87 to 16.6x5.5x0.97     46178-64237      169-188           3568-4080   0.016-0.042   0.073-0.211    0.102-0.295     1.08-1.22 / 1.007-1.020
+   L, 9.48 m to F            27.9   18.4x6.1x1.07 to 20.6x6.9x1.20    89976-130418      212-245           4401-5009   0.024-0.061   0.103-0.303    0.143-0.424     1.11-1.32 / 1.010-1.028
+   M, 5.21 m to the orlop    21.8   12.6x4.2x0.73 to 13.7x4.6x0.80     25556-34463      144-156           2706-3097   0.011-0.029   0.047-0.135    0.066-0.189     1.05-1.14 / 1.004-1.013
+   N, 5.54 m to the orlop    16.5   13.2x4.4x0.77 to 14.4x4.8x0.84     29944-40531      150-163           2584-2941   0.012-0.030   0.048-0.138    0.067-0.193     1.05-1.15 / 1.005-1.013
+   O, 5.88 m to the orlop    11.2   13.8x4.6x0.81 to 15.2x5.1x0.88     35179-47878      157-171           2346-2648   0.013-0.032   0.048-0.137    0.067-0.191     1.05-1.15 / 1.005-1.013
+   so T_b runs from 0.011 s (dry, the stiffest) to 0.303 s with one face wetted and 0.424 s with both (the longest: L to F deck, the centre past the casings).
+   One wetted face adds 13.7 to 24.5 times her steel's mass per metre: the water, not the steel, sets T_b once a face is wet.
+   Against the air's rise of 3.4 s the steel's own factor is at most 1.028 (one face) and 1.040 (both); against 0.3 s (a neighbour's boundary gone whole) at most 1.32 and 1.45.
+   Both ride on the AIR's overshoot, which is the larger factor (the note v1.2, section 8).

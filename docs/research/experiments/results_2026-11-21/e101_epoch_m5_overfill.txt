@@ -1,0 +1,8 @@
+e101 (the epoch, M5): the virtual over-fill (vol past nodeVmax, a pocket past its cap), counted as water aboard
+  the 1912 preset: the largest total 14926.18 m3 at T 158.3; at the end 14926.18 m3
+      then: space 17 (zone 4) 763.48; space 19 (zone 4) 763.48; space 21 (zone 5) 735.50; space 23 (zone 5) 735.50; space 13 (zone 3) 716.27; space 15 (zone 3) 716.27
+      every 15 min: T 0 0.0, T 15 2.1, T 30 8.4, T 45 11.3, T 60 8.1, T 75 26.1, T 90 43.8, T 105 68.6, T 120 114.2, T 135 136.6, T 150 231.4
+  the 1912 watch: the largest total 14882.15 m3 at T 159.0; at the end 14882.15 m3
+      then: space 17 (zone 4) 761.26; space 19 (zone 4) 761.26; space 21 (zone 5) 733.02; space 23 (zone 5) 733.02; space 13 (zone 3) 714.37; space 15 (zone 3) 714.37
+      every 15 min: T 0 0.0, T 15 0.0, T 30 8.5, T 45 11.4, T 60 8.3, T 75 29.4, T 90 38.5, T 105 60.0, T 120 100.3, T 135 143.9, T 150 215.2
+(2026-11-21T10:04:58.582Z)

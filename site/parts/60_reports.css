@@ -1,0 +1,48 @@
+/* Reports to the bridge (site/parts/60_reports.js): the feed and the orders on the Run tab; the bridge's view, which
+   covers the readouts nobody on the bridge had and shows what was reported in their place (html.rp-bridge). */
+.rp-orders { display: grid; gap: 6px; margin-top: 10px; }
+.rp-cap { font: 600 10.5px/1.2 var(--f-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); }
+.rp-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.rp-row .btn { padding: 6px 10px; }
+.rp-out { min-height: 1.3em; margin: 0; }
+.rp-feed { list-style: none; margin: 10px 0 0; padding: 0; max-height: 360px; overflow-y: auto; border-top: 1px solid var(--line); }
+.rp-feed li { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 1px 8px; padding: 6px 2px; border-bottom: 1px solid var(--line); font-size: 12.5px; line-height: 1.4; }
+.rp-feed .rp-t { font: 500 12px/1.45 var(--f-num); color: var(--ink-2); grid-row: span 2; white-space: nowrap; }
+.rp-feed .rp-who { color: var(--muted); font-size: 11.5px; }
+.rp-feed .rp-w { color: var(--ink); }
+.rp-feed li.rp-routine .rp-w, .rp-feed li.rp-routine .rp-t { color: var(--muted); }
+
+/* the bridge's view: its own pieces hidden until it is on; then the page's readouts covered */
+.rp-k, .rp-pill, .rp-strip, #rpCap, .rp-wtext, .rp-toast, #readout .rp-line { display: none; }
+html.rp-bridge .stats > .stat:not(.rp-k), html.rp-bridge #status, html.rp-bridge #fcLine, html.rp-bridge .strip > .cap:not(#rpCap),
+html.rp-bridge #watchText, html.rp-bridge #debrief, html.rp-bridge .rp-cover, html.rp-bridge #toast { display: none !important; }
+html.rp-bridge #profile { visibility: hidden; }
+html.rp-bridge .rp-k, html.rp-bridge #readout .rp-line, html.rp-bridge .rp-wtext, html.rp-bridge .rp-toast { display: block; }
+html[data-device="phone"] #stage.watch #readout .rp-line { display: none; }   /* a phone's watch has no room for it (styles.css) */
+html.rp-bridge .rp-pill { display: inline-flex; }
+html.rp-bridge .rp-strip, html.rp-bridge #rpCap { display: flex; }
+.rp-k .v { font: 500 13px/1.25 var(--f-ui); white-space: normal; max-width: 14em; }
+.rp-wtext { margin: 0; color: var(--ink-2); max-width: 62ch; }
+/* the compartments as reported, over the damage diagram (stern to bow, each as long as the compartment) [appearance] */
+.rp-strip { position: absolute; left: 8px; right: 8px; top: 6px; height: 96px; gap: 2px; }
+.rp-cell { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 3px; border: 1px solid var(--line-2); border-radius: 3px; background: rgba(15, 28, 42, 0.92); overflow: hidden; }
+.rp-cell b { font: 600 10px/1 var(--f-ui); color: var(--ink-2); }
+.rp-cell span { font: 500 9.5px/1 var(--f-num); color: var(--muted); }
+.rp-cell[data-state="dry"] { border-color: #2f6b52; }
+.rp-cell[data-state="dry"] span { color: var(--ok); }
+.rp-cell[data-state="water"] { border-color: var(--warn); background: rgba(255, 181, 71, 0.16); }
+.rp-cell[data-state="water"] span { color: var(--warn); }
+.rp-cell[data-state="lost"] { border-color: var(--crit); background: rgba(255, 107, 107, 0.24); }
+.rp-cell[data-state="lost"] span, .rp-cell[data-state="lost"] b { color: var(--crit); }
+#rpCap { justify-content: space-between; gap: 8px; }
+.rp-legend { display: inline-flex; align-items: center; gap: 4px; }
+.rp-legend i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; border: 1px solid var(--line-2); margin-left: 6px; }
+.rp-legend i[data-state="dry"] { border-color: var(--ok); }
+.rp-legend i[data-state="water"] { border-color: var(--warn); background: rgba(255, 181, 71, 0.4); }
+.rp-legend i[data-state="lost"] { border-color: var(--crit); background: rgba(255, 107, 107, 0.5); }
+/* as the damage diagram under it: compact on a narrow stage (C-4: by the stage's own width, not the window's) */
+@container stage (max-width: 900px) { .rp-strip { height: 64px; } .rp-cell b { font-size: 9px; } .rp-legend { display: none; } }
+html[data-device="phone"] .rp-strip { height: 56px; left: 8px; right: 8px; }
+html[data-device="phone"] .rp-cell span { font-size: 8.5px; }
+html[data-device="phone"] .rp-row .btn { min-height: 40px; flex: 1 1 auto; }
+html[data-device="phone"] .rp-k .v { font-size: 12px; }

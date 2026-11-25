@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>@@TITLE@@</title>
+<meta name="generator" content="tools/build_guide.js from docs/guide/src and docs/guide/template">
+<style>
+@@CSS@@
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="kick">RMS Titanic · 14 April 1912</div>
+    <h1>The Watch</h1>
+    <div class="sub">A flooding and ship-handling simulator<br>User Guide</div>
+    <div class="line"></div>
+    <div class="meta">Edition @@edition@@ · @@date@@<br>
+      For the website build @@site.version@@ (app @@site.app@@)<br>
+      @@REPO_LINE@@</div>
+  </div>
+  <svg viewBox="0 0 700 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M40 78 L612 78 L655 52 L600 52 L585 60 L120 60 L60 66 Z" fill="none" stroke="#d8c29a" stroke-width="1.4"/>
+    <path d="M150 60 L150 44 L520 44 L520 60" fill="none" stroke="#d8c29a" stroke-width="1"/>
+    <g fill="none" stroke="#d8c29a" stroke-width="1.1">
+      <path d="M215 44 L219 14 L235 14 L231 44"/><path d="M300 44 L304 14 L320 14 L316 44"/>
+      <path d="M385 44 L389 14 L405 14 L401 44"/><path d="M470 44 L474 14 L490 14 L486 44"/>
+    </g>
+    <path d="M110 60 L104 8 M600 52 L606 4" stroke="#d8c29a" stroke-width=".8"/>
+    <path d="M0 92 Q60 86 120 92 T240 92 T360 92 T480 92 T600 92 T720 92" fill="none" stroke="#5e88a8" stroke-width="1"/>
+    <path d="M0 104 Q60 98 120 104 T240 104 T360 104 T480 104 T600 104 T720 104" fill="none" stroke="#3f6684" stroke-width=".8"/>
+  </svg>
+  <div class="foot"><span>titanic-sinking-simulator · MIT licence</span><span>Pictures and figures taken from the build itself</span></div>
+</section>
+
+<section class="contents" id="contents">
+  <div class="eyebrow">Contents</div>
+  <h2>What is in this guide</h2>
+  <hr class="rule">
+  <ol class="toc">
+@@CONTENTS@@
+  </ol>
+  <aside class="box"><b class="lab">How this guide is made</b>
+  <p>The chapters are Markdown files kept with the simulator's code. A script builds this document from them, takes its
+  pictures from the website build through the page's own controls, and pulls the tables of results from the
+  repository's own test output, so the guide changes when the simulator does. Names in
+  <span class="chip">rounded boxes</span> are the labels of controls on the screen; <kbd>A</kbd> is a key.</p></aside>
+</section>
+
+@@CHAPTERS@@
+
+<script type="application/json" id="guide-build">@@BUILD@@</script>
+</body>
+</html>

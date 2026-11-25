@@ -1,0 +1,62 @@
+SHIP: unified hull form; cross-flow regressions give C_D 0.290 C_rY 3.72 C_rN 1.66 ; rudder 37.31 m2
+
+1. FIT to the trial record: two numbers (rudder inflow factor, cross-flow drag factor) against two measurements
+   targets: two points in 37 s from the order at 21.5 kn (Olympic 1912); tactical diameter 3,850 ft = 1,173.5 m (Titanic trials)
+   rudder rate   inflow x   C_D x    t(2 pts)   tactical   | NOT fitted:  advance   speed ratio  steady rate   heel   | centre screw stopped: t(2 pts)  tactical
+   2.5 deg/s       1.75      3.5     37.0 s     1178 m                   813 m        0.63    0.67 deg/s  3.3 deg                          46.5 s    1724 m
+   4 deg/s         1.60      2.7     37.0 s     1177 m                   816 m        0.66    0.69 deg/s  3.5 deg                          47.0 s    1686 m
+   8 deg/s         1.55      2.5     36.8 s     1185 m                   815 m        0.67    0.69 deg/s  3.6 deg                          46.8 s    1685 m
+   record, not fitted: advance about 640 m (Wilding) or 774 m (Halpern's model); speed ratio 0.76 and 0.86 deg/s (Halpern's model); heel about 5.4 deg (Hackett and Bedford)
+   the encounter runs below use the 4 deg/s fit: inflow x 1.60 , C_D x 2.7
+   circle at    11 kn: tactical 1176 m, advance 806 m   (Wilding: speed changes the circle "only by a very small amount")
+   circle at  19.5 kn: tactical 1177 m, advance 816 m   (Wilding: speed changes the circle "only by a very small amount")
+   circle at 21.75 kn: tactical 1177 m, advance 818 m   (Wilding: speed changes the circle "only by a very small amount")
+
+2. THE MAP: what happens, by how far off the ice is when the helm order comes (rows) and how far the ice reaches to port of the track (columns)
+   helm hard-a-starboard (turn to port), engines untouched, 22.5 kn. M = miss (clearance m), H = head-on, numbers = starboard side contact from x to x (m from amidships, + forward)
+   order at                 -12 m       -8 m       -4 m        0 m        4 m        8 m       12 m       16 m       20 m       24 m       30 m
+   150 m (13 s)               M 2-118..-129 P-78..-129 P-17..-129 P    23..-85    57..-64    92..-56 127..-64 P 127..-71 P 127..-84 P          H
+   200 m (17 s)              M 12        M 9        M 5        M 1-105..-129 P-58..-129 P   -8..-127    30..-78    61..-61    97..-56 127..-68 P
+   250 m (22 s)              M 26       M 22       M 18       M 14       M 10        M 6        M 3-121..-129 P-88..-129 P-30..-129 P    23..-83
+   290 m (25 s)              M 38       M 35       M 31       M 27       M 23       M 20       M 16       M 12        M 8        M 5-122..-129 P
+   350 m (30 s)              M 61       M 57       M 54       M 50       M 46       M 43       M 39       M 36       M 32       M 28       M 23
+   430 m (37 s)              M 99       M 95       M 91       M 87       M 84       M 80       M 76       M 73       M 70       M 66       M 61
+   500 m (43 s)       M 1000000000      M 140      M 136      M 132      M 128      M 124      M 120      M 116      M 112      M 108      M 102
+   600 m (52 s)       M 1000000000M 1000000000M 1000000000M 1000000000M 1000000000M 1000000000M 1000000000M 1000000000M 1000000000M 1000000000M 1000000000
+
+3. THE 1912 ENCOUNTER, found by the damage: which geometry gives starboard contact from the forepeak (x 124) to boiler room 5 (x 53)?
+   best match: helm order 200 m (17.3 s) from the ice; the ice reaches 27 m to port of the track; helm reversed 2 s after the first touch
+   contact on the starboard side from x 127 to x -42 (170 m of hull) for 16.1 s; heading had swung 9.5 deg at the first touch; speed 21.0 kn
+   deepest overlap with the ice 3.72 m; peak contact force 23.51 MN = 2.36 thousand tons-force; as a sideways push on the bow (effective mass 29,600 t): 0.081 g
+   damage constant: 0.7506 m2 / 420.6 m2 of overlap-length = 1.785e-3 m2 of opening per metre of hull per metre of overlap beyond 0.2 m
+   openings generated: 166  total 0.7506 m2
+   share by compartment   forepeak   hold 1   hold 2   hold 3   boiler 6   boiler 5   boiler 4
+   generated                  1 %      5 %      8 %     11 %     12 %     14 %     14 %
+   reconstructed (H&B)        4 %     13 %     21 %     24 %     32 %      6 %      0 %
+   flooding core, the hand-made 1912 preset    founders at 157.3 min  water 67887 t
+   flooding core, the generated 1912 damage    founders at 151.2 min  water 79373 t
+
+4. WHAT IF: the same ice, the same damage constant, a different watch
+   case                                   outcome                           opening   compartments open        flooding core
+   as it happened (the match above)       stbd 127..-42, 23.5 MN            0.75 m2   FP H1 H2 H3 BR6 BR5 BR4 BR3 BR2 BR1 RE founders at 151 min
+   the order 5 s sooner                   stbd -26..-129 port -128..-129, 14.6 MN0.28 m2   RE TE EL T1 T2 AP        founders at 322 min
+   the order 10 s sooner                  miss by 11.5 m                       0 
+   the order 20 s sooner                  miss by 64.3 m                       0 
+   the order 5 s later                    stbd 127..90 port 127..107, 92.0 MN0.61 m2   FP H1 H2                 AFLOAT, 0.9 deg by the head
+   the order 10 s later                   HEAD-ON at 22.2 kn, bow crushed 27 m (crush)  FP H1                    AFLOAT, 0.2 deg by the head
+   no helm order at all                   HEAD-ON at 22.5 kn, bow crushed 27 m (crush)  FP H1                    AFLOAT, 0.2 deg by the head
+   helm held hard over, never reversed    stbd 127..-63, 23.2 MN            0.85 m2   FP H1 H2 H3 BR6 BR5 BR4 BR3 BR2 BR1 RE TE founders at 150 min
+   helm reversed 2 s after the touch      stbd 127..-42, 23.5 MN            0.75 m2   FP H1 H2 H3 BR6 BR5 BR4 BR3 BR2 BR1 RE founders at 151 min
+   engines stopped with the helm order    stbd 127..-44 port 127..111, 57.0 MN0.54 m2   FP H1 H2 H3 BR4 BR3 BR2 BR1 RE AFLOAT, 3.0 deg by the head
+   at 15 kn, same distance                stbd 105..-27, 14.3 MN            0.35 m2   H2 H3 BR6 BR5 BR4 BR3 BR2 BR1 founders at 304 min
+   at 10 kn, same distance                stbd 92..2, 9.1 MN                0.16 m2   H2 H3 BR6 BR5 BR4 BR3    founders at 689 min
+   turned the other way (to starboard)    HEAD-ON at 21.2 kn, bow crushed 24 m (crush)  FP H1                    AFLOAT, 0.2 deg by the head
+
+5. HOW MUCH THE BETS MATTER: the 1912 match re-run with the ice stiffer or softer, the spur larger or smaller (damage constant re-fitted each time)
+   as above               contact x  127 to  -42  overlap 3.72 m  force  23.5 MN  split 1/5/8/11/12/14/14   founders at 151 min
+   ice 3 times stiffer    contact x  127 to  -33  overlap 1.73 m  force  23.4 MN  split 2/10/13/12/9/11/13   founders at 143 min
+   ice 3 times softer     contact x  127 to  -64  overlap 7.59 m  force  21.4 MN  split 1/2/5/7/9/12/13   founders at 192 min
+   spur radius 20 m       contact x  127 to  -47  overlap 4.55 m  force  26.4 MN  split 14/11/9/8/7/9/10   founders at 164 min
+   spur radius 80 m       contact x   40 to  -61  overlap 4.34 m  force  39.5 MN  split 0/0/0/0/0/0/8   founders at 341 min
+   no friction            contact x  127 to  -43  overlap 3.75 m  force  23.7 MN  split 1/5/8/11/12/14/14   founders at 153 min
+   friction 0.3           contact x  127 to  -39  overlap 3.64 m  force  23.8 MN  split 1/5/9/12/13/15/14   founders at 147 min

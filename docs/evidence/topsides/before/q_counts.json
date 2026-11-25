@@ -1,0 +1,54 @@
+{
+ "sternq_xray": {
+  "all": {
+   "calls": 195,
+   "tris": 73626,
+   "lines": 2015,
+   "points": 1981
+  },
+  "off": {
+   "calls": 169,
+   "tris": 72594,
+   "lines": 1719
+  }
+ },
+ "sternqclose_xray": {
+  "all": {
+   "calls": 195,
+   "tris": 73626,
+   "lines": 2015,
+   "points": 1981
+  },
+  "off": {
+   "calls": 169,
+   "tris": 72594,
+   "lines": 1719
+  }
+ },
+ "sternq_solid": {
+  "all": {
+   "calls": 48,
+   "tris": 69838,
+   "lines": 0,
+   "points": 1981
+  },
+  "off": {
+   "calls": 32,
+   "tris": 68806,
+   "lines": 0
+  }
+ },
+ "sternqclose_solid": {
+  "all": {
+   "calls": 48,
+   "tris": 69838,
+   "lines": 0,
+   "points": 1981
+  },
+  "off": {
+   "calls": 32,
+   "tris": 68806,
+   "lines": 0
+  }
+ }
+}

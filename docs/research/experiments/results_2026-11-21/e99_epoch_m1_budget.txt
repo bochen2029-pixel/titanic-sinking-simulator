@@ -1,0 +1,11 @@
+e99 (the epoch, M1): the 1912 preset at the landed flow numbers (wMul 1.1, aDown 0.2786, fOpen 0.02087) and these openings, read by the ledger
+  opening 0.8196 m2 (8.82 sq ft; Cd x A 0.492): founders at T 158.28; fit rows in range 6 of 10
+      symons_hatch1 in (late -4.9) model 0.84; robinson_mail_stairs in (late 0.0) model -1.52; poingdestre_quarters out (late 11.4) model -0.20; weeks_halpern_tonnage out (late 14.9) model 11256.09
+  opening 0.9000 m2 (9.69 sq ft; Cd x A 0.540): founders at T 145.92; fit rows in range 4 of 10
+      symons_hatch1 in (late -5.8) model 1.08; robinson_mail_stairs in (late 0.0) model -1.24; poingdestre_quarters out (late 6.5) model 0.19; weeks_halpern_tonnage out (late 9.6) model 11993.56
+  opening 1.0000 m2 (10.76 sq ft; Cd x A 0.600): founders at T 133.22; fit rows in range 3 of 10
+      symons_hatch1 in (late -6.7) model 1.37; robinson_mail_stairs in (late 0.0) model -0.90; poingdestre_quarters out (late 1.2) model 0.64; weeks_halpern_tonnage out (late 4.2) model 12837.68
+  opening 1.1000 m2 (11.84 sq ft; Cd x A 0.660): founders at T 122.94; fit rows in range 4 of 10
+      symons_hatch1 in (late -7.4) model 1.66; robinson_mail_stairs in (late -0.1) model -0.58; poingdestre_quarters in (late 0.0) model 1.30; weeks_halpern_tonnage out (late -0.3) model 13777.43
+(Ledger rows are CHECKs; "late" is minutes outside the row's window, + late. Nothing here is fitted.)
+(2026-11-21T10:05:04.908Z)

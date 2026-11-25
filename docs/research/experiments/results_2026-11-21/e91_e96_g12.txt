@@ -1,0 +1,174 @@
+e91 to e96 (G12), run 2026-11-20 23:50 CST on 7966a23, one at a time at BelowNormal priority
+
+==== e91_g12_handover_landings (exit 0, 23:51:31)
+e91 (G12) on C:\code\titanic-sinking-simulator-main\.claude\worktrees\b1b2-strength-85bc79 at 7966a23: where the pieces lie, by hand-over (the wreck: both upright, R5 1.1)
+  lies: upright within 30 deg of roll, UPSIDE DOWN past 150; roll and pitch of the piece at rest (deg; roll + to starboard, the core's sign)
+
+hand-over                         when                                 trim    list   pitch rate  roll rate  heave     piece  lies (pitch, roll)           from the break               under    strikes          joint
+watch, the flag (H1)              T 157.03 after the touch, step 37928  68.9   -80.2      1.02       0.00    -1.40   bow   UPSIDE DOWN (2.1, -178.7)    1504 m (1085, 1042)          +0.0 s   +4.88 min 8.27   -
+                                                                                                                     stern upright (1.5, -0.8)          136 m (131, -37)             +27.5 s  +7.72 min 8.89   
+watch, the onset, cut clean       T 154.74 after the touch, step 37378   9.4    -2.9      0.03      -0.08    -0.03   bow   upright (0.3, -1.1)          1485 m (1482, -88)           +15.5 s  +6.91 min 8.88   -
+                                                                                                                     stern upright (1.1, -0.7)          115 m (-115, 0)              +48.3 s  +7.97 min 8.92   
+watch, the onset, joined          T 154.74 after the touch, step 37378   9.4    -2.9      0.03      -0.08    -0.03   bow   upright (0.3, -1.1)          1381 m (1373, -148)          +26.3 s  +7.25 min 8.88   let go +25.2 s by shear at 49.4 deg
+                                                                                                                     stern upright (1.1, -0.7)          34 m (-34, -3)               +46.3 s  +7.95 min 8.92   
+preset, the flag (H1)             T 157.33 after the damage             68.9   -80.2      1.02       0.00    -1.41   bow   upright (0.5, -1.0)          1448 m (1195, 818)           +0.0 s   +4.74 min 8.94   -
+                                                                                                                     stern UPSIDE DOWN (-2.1, -179.4)   178 m (166, -64)             +18.0 s  +8.40 min 8.18   
+preset, the onset, cut clean      T 155.07 after the damage              9.4    -4.0      0.04      -0.14    -0.03   bow   upright (0.8, -1.1)          1479 m (1477, -84)           +15.5 s  +6.97 min 8.88   -
+                                                                                                                     stern upright (1.7, -0.7)          122 m (-122, 0)              +48.5 s  +7.98 min 8.92   
+preset, the onset, joined         T 155.07 after the damage              9.4    -4.0      0.04      -0.14    -0.03   bow   upright (0.8, -1.1)          1376 m (1364, -177)          +26.3 s  +7.29 min 8.88   let go +25.3 s by shear at 49.4 deg
+                                                                                                                     stern upright (1.7, -0.7)          37 m (-37, -4)               +46.0 s  +7.95 min 8.92   
+  rates: pitch and roll in deg/s, heave in m/s (up +); the flag's trim is by rule (pitch over 1.2 rad); the list there is the core's clamp when it reads -80.2
+
+THE WATCH'S READERS AT EACH HAND-OVER (the next step tells each reader she is gone: N.over)
+  the onset T 154.74 after the touch, step 37378 people aboard 0, in boats 710 (boats away 19), in the water 1491; the wireless silent (she has gone)
+  the flag  T 157.03 after the touch, step 37928 people aboard 0, in boats 710 (boats away 19), in the water 1491; the wireless silent (she has gone)
+  minutes afloat after the touch (Carpathia's score): the flag T 157.03, the onset T 154.74: 2.29 min apart
+
+(e91 took 39 s)
+
+==== e92_g12_landing_robustness (exit 0, 23:54:04)
+e92 (G12) on C:\code\titanic-sinking-simulator-main\.claude\worktrees\b1b2-strength-85bc79 at 7966a23: how the pieces lie under Z1's perturbations at the hand-over
+  each cell: the bow / the stern, U upright (roll within 30 deg), X upside down (past 150), S on her side; then the two rolls (deg)
+  perturbation              watch, flag               watch, onset clean        watch, onset joined       preset, flag              preset, onset clean       preset, onset joined      
+  none                      X/U -179, -1              U/U -1, -1                U/U -1, -1                U/X -1, -179              U/U -1, -1                U/U -1, -1                
+  trim +1 deg               X/U -179, -1              U/U -1, -1                U/U -1, -1                U/U 0, -1                 U/U -1, -1                U/U -1, -1                
+  trim -1 deg               X/U -179, -1              U/U -1, -1                U/U -1, -1                U/U -1, -1                U/U -1, -1                U/U -1, -1                
+  list +1 deg               X/U -179, -1              U/U -1, -1                U/U -1, -1                U/X -1, -179              U/U -1, -1                U/U -1, -1                
+  list -1 deg               X/U -179, -1              U/U -1, -1                U/U -1, -1                U/X -1, -179              U/U -1, -1                U/U -1, -1                
+  pitch rate x0.8           X/U -179, -1              U/U -1, -1                U/U -1, -1                U/X -1, -179              U/U -1, -1                U/U -1, -1                
+  pitch rate x1.2           X/U -179, -1              U/U -1, -1                U/U -1, -1                U/X -1, -179              U/U -1, -1                U/U -1, -1                
+  roll rate x0.8            X/U -179, -1              U/U -1, -1                U/U -1, -1                U/X -1, -179              U/U -1, -1                U/U -1, -1                
+  roll rate x1.2            X/U -179, -1              U/U -1, -1                U/U -1, -1                U/X -1, -179              U/U -1, -1                U/U -1, -1                
+  heave rate x0.8           X/U -179, -1              U/U -1, -1                U/U -1, -1                X/U -180, -1              U/U -1, -1                U/U -1, -1                
+  heave rate x1.16          X/U -178, -1              U/U -1, -1                U/U -1, -1                U/X -0, -179              U/U -1, -1                U/U -1, -1                
+  heave rate x1.17          U/U 0, -1                 U/U -1, -1                U/U -1, -1                U/X -0, -179              U/U -1, -1                U/U -1, -1                
+  heave rate x1.18          U/U -0, -1                U/U -1, -1                U/U -1, -1                U/X -0, -179              U/U -1, -1                U/U -1, -1                
+  heave rate x1.2           U/U -1, -1                U/U -1, -1                U/U -1, -1                U/X -0, -179              U/U -1, -1                U/U -1, -1                
+  last-bit noise, seed 1    X/U -179, -1              U/U -1, -1                U/U -1, -1                U/X -1, -179              U/U -1, -1                U/U -1, -1                
+  last-bit noise, seed 2    X/U -179, -1              U/U -1, -1                U/U -1, -1                U/X -1, -179              U/U -1, -1                U/U -1, -1                
+  last-bit noise, seed 3    X/U -179, -1              U/U -1, -1                U/U -1, -1                U/X -1, -179              U/U -1, -1                U/U -1, -1                
+  last-bit noise, seed 4    X/U -179, -1              U/U -1, -1                U/U -1, -1                U/X -1, -179              U/U -1, -1                U/U -1, -1                
+
+  upright of 18:       bow 3, stern 18, both 3   bow 18, stern 18, both 18 bow 18, stern 18, both 18 bow 17, stern 3, both 2   bow 18, stern 18, both 18 bow 18, stern 18, both 18 
+  (? after a letter: not yet at rest when the fall stopped, 30 minutes of its clock)
+(e92 took 154 s)
+
+==== e93_g12_roll_held (exit 0, 23:55:57)
+e93 (G12, Z9) on C:\code\titanic-sinking-simulator-main\.claude\worktrees\b1b2-strength-85bc79 at 7966a23: her last minutes, as they are and with her list held from B2's onset; the flag's hand-over from each
+  watch, as it is: the onset at T 154.74; the flag at T 157.03 (trim 68.9, list -80.2)
+    T, trim, list from the onset, every 10 s: 154.74 9.4/-2.9  154.91 9.8/-3.7  155.07 10.2/-4.3  155.24 10.8/-5.2  155.41 11.8/-5.7  155.57 13.0/-6.1  155.74 14.6/-7.2  155.91 16.8/-10.3  156.07 20.3/-18.6  156.24 25.3/-33.9  156.41 32.0/-57.4  156.57 40.4/-80.2  156.74 50.1/-80.2  156.91 60.9/-80.2
+  watch, list held from the onset: the onset at T 154.74; the flag at T 157.01 (trim 68.9, list -2.9)
+    T, trim, list from the onset, every 10 s: 154.74 9.4/-2.9  154.91 9.8/-2.9  155.07 10.2/-2.9  155.24 10.9/-2.9  155.41 11.8/-2.9  155.57 13.0/-2.9  155.74 14.6/-2.9  155.91 16.9/-2.9  156.07 20.4/-2.9  156.24 25.5/-2.9  156.41 32.2/-2.9  156.57 40.8/-2.9  156.74 51.0/-2.9  156.91 62.0/-2.9
+  preset, as it is: the onset at T 155.07; the flag at T 157.33 (trim 68.9, list -80.2)
+    T, trim, list from the onset, every 10 s: 155.07 9.4/-4.0  155.24 9.8/-5.4  155.41 10.3/-6.7  155.57 10.9/-7.9  155.74 11.9/-8.6  155.91 13.2/-9.7  156.07 14.9/-12.4  156.24 17.3/-18.8  156.41 21.1/-32.5  156.57 26.4/-52.7  156.74 33.5/-80.2  156.91 42.2/-80.2  157.07 52.3/-80.2  157.24 63.4/-80.2
+  preset, list held from the onset: the onset at T 155.07; the flag at T 157.33 (trim 69.0, list -4.0)
+    T, trim, list from the onset, every 10 s: 155.07 9.4/-4.0  155.24 9.8/-4.0  155.41 10.3/-4.0  155.57 11.0/-4.0  155.74 12.0/-4.0  155.91 13.2/-4.0  156.07 14.9/-4.0  156.24 17.2/-4.0  156.41 20.9/-4.0  156.57 26.1/-4.0  156.74 33.0/-4.0  156.91 41.7/-4.0  157.07 51.9/-4.0  157.24 63.0/-4.0
+
+THE FLAG'S HAND-OVER FROM EACH, under e92's perturbations (U upright, X upside down, S on her side; the bow / the stern; their rolls)
+  perturbation              watch, as it is                     watch, list held from the onset     preset, as it is                    preset, list held from the onset    
+  none                      X/U -179, -1                        U/U -1, -1                          U/X -1, -179                        U/X -1, -179                        
+  trim +1 deg               X/U -179, -1                        U/U -1, -1                          U/U 0, -1                           U/X -1, -179                        
+  trim -1 deg               X/U -179, -1                        U/U -1, -1                          U/U -1, -1                          U/X -1, -179                        
+  list +1 deg               X/U -179, -1                        U/U -1, -1                          U/X -1, -179                        U/X -1, -179                        
+  list -1 deg               X/U -179, -1                        U/X -1, -179                        U/X -1, -179                        U/X -1, -179                        
+  pitch rate x0.8           X/U -179, -1                        U/X -1, -179                        U/X -1, -179                        U/X -1, -179                        
+  pitch rate x1.2           X/U -179, -1                        U/U -1, -1                          U/X -1, -179                        U/X -1, -179                        
+  roll rate x0.8            X/U -179, -1                        U/U -1, -1                          U/X -1, -179                        U/X -1, -179                        
+  roll rate x1.2            X/U -179, -1                        U/U -1, -1                          U/X -1, -179                        U/X -1, -179                        
+  heave rate x0.8           X/U -179, -1                        U/U -1, -1                          X/U -180, -1                        U/X -0, -179                        
+  heave rate x1.16          X/U -178, -1                        U/U -1, -1                          U/X -0, -179                        U/X -1, -179                        
+  heave rate x1.17          U/U 0, -1                           U/U -1, -1                          U/X -0, -179                        U/X -1, -179                        
+  heave rate x1.18          U/U -0, -1                          U/U -1, -1                          U/X -0, -179                        U/X -1, -179                        
+  heave rate x1.2           U/U -1, -1                          U/U -1, -1                          U/X -0, -179                        U/X -1, -179                        
+  last-bit noise, seed 1    X/U -179, -1                        U/U -1, -1                          U/X -1, -179                        U/X -1, -179                        
+  last-bit noise, seed 2    X/U -179, -1                        U/U -1, -1                          U/X -1, -179                        U/X -1, -179                        
+  last-bit noise, seed 3    X/U -179, -1                        U/U -1, -1                          U/X -1, -179                        U/X -1, -179                        
+  last-bit noise, seed 4    X/U -179, -1                        U/U -1, -1                          U/X -1, -179                        U/X -1, -179                        
+
+  upright of 18:       bow 3, stern 18, both 3             bow 18, stern 16, both 16           bow 17, stern 3, both 2             bow 18, stern 0, both 0             
+(e93 took 113 s)
+
+==== e94_g12_handover_moment (exit 0, 23:57:18)
+e94 (G12) on C:\code\titanic-sinking-simulator-main\.claude\worktrees\b1b2-strength-85bc79 at 7966a23: the 1912 watch let go at moments of her last minutes, cut clean at B2's station and at the flag rule's
+  each cell: the bow / the stern, U upright, X upside down, S on her side; their rolls on the bed (deg)
+  as the core has her (the roll to its clamp):
+    T after the touch   trim   list    cut at B2's x -10.93    cut at the flag rule's x -23.00
+      154.74         9.4   -2.9    U/U (-1, -1)              U/U (-1, -1)
+      154.99        10.0   -4.0    U/U (-1, -1)              U/U (-1, -1)
+      155.24        10.8   -5.2    U/U (-1, -1)              U/U (-1, -1)
+      155.49        12.3   -5.9    X/U (-178, -1)            X/U (-179, -1)
+      155.74        14.6   -7.2    U/U (-1, -1)              X/U (-179, -1)
+      155.99        18.3  -13.6    U/U (-1, -1)              X/U (-179, -1)
+      156.24        25.3  -33.9    U/U (-1, -1)              X/U (-179, -1)
+      156.49        36.0  -73.0    U/U (-1, -1)              U/U (-1, -1)
+      156.74        50.1  -80.2    U/X (-1, -179)            U/X (-1, -179)
+      156.99        66.3  -80.2    U/U (-1, -1)              X/U (-179, -1)
+      157.03 flag   68.9  -80.2    U/U (-1, -1)              X/U (-179, -1)
+  her list held from the onset:
+    T after the touch   trim   list    cut at B2's x -10.93    cut at the flag rule's x -23.00
+      154.74         9.4   -2.9    U/U (-1, -1)              U/U (-1, -1)
+      154.99        10.0   -2.9    U/U (-1, -1)              U/U (-1, -1)
+      155.24        10.9   -2.9    U/U (-1, -1)              U/U (-1, -1)
+      155.49        12.4   -2.9    U/U (-1, -1)              U/U (-1, -1)
+      155.74        14.6   -2.9    U/U (-1, -1)              X/U (-179, -1)
+      155.99        18.4   -2.9    U/U (-1, -1)              X/U (-179, -1)
+      156.24        25.5   -2.9    U/U (-1, -1)              X/U (-179, -1)
+      156.49        36.3   -2.9    U/U (-1, -1)              U/U (-1, -1)
+      156.74        51.0   -2.9    U/U (-1, -1)              U/U (-1, -1)
+      156.99        67.6   -2.9    U/X (-1, -179)            U/U (-1, -1)
+      157.01 flag   68.9   -2.9    U/X (-1, -179)            U/U (-1, -1)
+(e94 took 81 s)
+
+==== e95_g12_hull_ends_onset (exit 0, 23:57:46)
+e95 (G12, G14) on C:\code\titanic-sinking-simulator-main\.claude\worktrees\b1b2-strength-85bc79 at 7966a23: R3's restored hull ends as buoyancy on the gauge, along the 1912 watch's own path (first order)
+  the restored volume between E and B decks, both sides, by R3's rule here: aft 2176 m3, forward 1519 m3 (R3: about 2,300 and 1,700)
+  every 30 s from T 150: 
+    150.00 trim 6.8: submerged dry aft 0, fwd 1519 m3; where its space is dry aft 0, fwd 0; at x -10.93 the gauge 4.204 GN m, with the dry bound 3.937
+    150.50 trim 7.0: submerged dry aft 0, fwd 1519 m3; where its space is dry aft 0, fwd 0; at x -10.93 the gauge 4.255 GN m, with the dry bound 3.988
+    151.00 trim 7.1: submerged dry aft 0, fwd 1519 m3; where its space is dry aft 0, fwd 0; at x -10.93 the gauge 4.284 GN m, with the dry bound 4.017
+    151.50 trim 7.2: submerged dry aft 0, fwd 1519 m3; where its space is dry aft 0, fwd 0; at x -10.93 the gauge 4.309 GN m, with the dry bound 4.042
+    152.00 trim 7.3: submerged dry aft 0, fwd 1519 m3; where its space is dry aft 0, fwd 0; at x -10.93 the gauge 4.334 GN m, with the dry bound 4.067
+    152.50 trim 7.5: submerged dry aft 0, fwd 1519 m3; where its space is dry aft 0, fwd 0; at x -10.93 the gauge 4.381 GN m, with the dry bound 4.113
+    153.00 trim 7.6: submerged dry aft 0, fwd 1519 m3; where its space is dry aft 0, fwd 0; at x -10.93 the gauge 4.427 GN m, with the dry bound 4.159
+    153.50 trim 7.9: submerged dry aft 0, fwd 1519 m3; where its space is dry aft 0, fwd 0; at x -10.93 the gauge 4.514 GN m, with the dry bound 4.246
+    154.00 trim 8.4: submerged dry aft 0, fwd 1519 m3; where its space is dry aft 0, fwd 0; at x -10.93 the gauge 4.631 GN m, with the dry bound 4.362
+    154.50 trim 9.0: submerged dry aft 0, fwd 1519 m3; where its space is dry aft 0, fwd 0; at x -10.93 the gauge 4.773 GN m, with the dry bound 4.503
+    155.00 trim 10.0: submerged dry aft 0, fwd 1519 m3; where its space is dry aft 0, fwd 0; at x -10.93 the gauge 5.033 GN m, with the dry bound 4.761
+    155.50 trim 12.4: submerged dry aft 0, fwd 1519 m3; where its space is dry aft 0, fwd 0; at x -10.93 the gauge 5.550 GN m, with the dry bound 5.275
+    156.00 trim 18.6: submerged dry aft 0, fwd 1519 m3; where its space is dry aft 0, fwd 0; at x -10.93 the gauge 6.031 GN m, with the dry bound 5.750
+    156.50 trim 36.6: submerged dry aft 0, fwd 1519 m3; where its space is dry aft 0, fwd 0; at x -10.93 the gauge 4.650 GN m, with the dry bound 4.418
+    157.00 trim 67.1: submerged dry aft 35, fwd 1519 m3; where its space is dry aft 0, fwd 0; at x -10.93 the gauge 1.377 GN m, with the dry bound 1.258
+  B2's onset, the first step where (M/Mu)^2 + (V/Vu)^2 reaches 1 at any station:
+    as the model is                                               T 154.74, step 37378, x -10.93 (boiler room 2), M 4.870 of 4.939 GN m, trim 9.4, list -2.9
+    (a) the restored volume dry wherever under water              T 155.15, step 37477, x -10.93 (boiler room 2), M 4.868 of 4.939 GN m, trim 10.5, list -4.7
+    (b) only where its compartment's space above E deck is dry    T 154.74, step 37378, x -10.93 (boiler room 2), M 4.870 of 4.939 GN m, trim 9.4, list -2.9
+(e95 took 28 s)
+
+==== e96_g12_cut_station (exit 0, 00:05:33)
+e96 (G12) on C:\code\titanic-sinking-simulator-main\.claude\worktrees\b1b2-strength-85bc79 at 7966a23, part 1: the 1912 watch at B2's onset (154.74 after the touch, trim 9.4, list -2.9), cut clean at each station, under 10 of Z1's perturbations
+  each cell: the bow / the stern, U upright, X upside down, S on her side (the record's band x -16 to -27; B2's station x -10.93)
+  x of the cut  none            trim +1 deg     trim -1 deg     list +1 deg     list -1 deg     roll rate x1.2  heave rate x0.8 heave rate x1.2 noise 1         noise 2           both upright
+  -27.00        U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U               10 of 10
+  -25.00        U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U               10 of 10
+  -23.00        U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U               10 of 10
+  -21.00        U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U               10 of 10
+  -19.00        U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U               10 of 10
+  -17.00        U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U               10 of 10
+  -15.00        U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U               10 of 10
+  -13.00        U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U               10 of 10
+  -10.93 (B2)   U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U               10 of 10
+  -9.00         U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U               10 of 10
+  -7.00         U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U             U/U               10 of 10
+  both upright in 110 of 110
+
+e96, part 2: the 1912 watch from B2's onset (x -10.93) on, every half minute, cut clean at each station, under 6 of Z1's perturbations (none, trim +1 deg, trim -1 deg, list +1 deg, list -1 deg, heave rate x1.2)
+  each cell: how many of the 6 land both pieces upright; then which piece turned over when one did (b the bow, s the stern)
+  moment                        x -27.00     x -23.00     x -19.00     x -15.00     x -10.93 B2  x -7.00      
+  T 154.74, trim 9.4, list -2.9 6            6            6            6            6            6            
+  T 155.24, trim 10.8, list -5.25 (b)        5 (b)        6            6            6            6            
+  T 155.74, trim 14.6, list -7.20 (b)        0 (b)        6            3 (b)        6            6            
+  T 156.24, trim 25.3, list -33.93 (b)        1 (b)        4 (b)        6            6            6            
+  T 156.74, trim 50.1, list -80.20 (bs)       3 (s)        0 (bs)       0 (s)        0 (s)        0 (sb)       
+(e96 took 467 s)
+
+done 00:05:33

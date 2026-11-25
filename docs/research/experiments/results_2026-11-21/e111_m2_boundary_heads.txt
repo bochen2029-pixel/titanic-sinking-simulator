@@ -1,0 +1,13 @@
+the 1912 preset at its flag (T 158.30 min), K.air 'spaces', K.fail 'boundaries'
+run | bow: m (along, across), way up, strikes | stern: m (along, across), way up, under, strikes | reports (at the hand-over; after the stern is under, the first) | failures with air by kind (bow; stern) | CPU s
+the bets           | 1199 (1197, 56), upright, +6.21 min | 162 (-153, -54), upright, under +88.0 s, +8.60 min | 21 (14; 0) | bulkhead 1, deck 7, shell 1; deck 6, joiner 10, bulkhead 6, shell 3 | 139
+shell 20           | 1199 (1197, 56), upright, +6.21 min | 182 (-165, 77), upright, under +39.5 s, +7.86 min | 21 (15; 0) | bulkhead 1, deck 7, shell 1; deck 5, shell 5, joiner 10, bulkhead 4 | 148
+shell 60           | 1210 (1208, 67), upright, +6.19 min | 202 (95, 178), upright, under +123.0 s, +9.42 min | 21 (14; 2, +17.8 s after) | bulkhead 1, deck 7; deck 7, joiner 10, bulkhead 6, shell 2 | 124
+bulkhead 8         | 1195 (1182, -181), upright, +6.19 min | 171 (133, -108), upside down, under +126.0 s, +10.04 min | 21 (14; 2, +0.9 s after) | bulkhead 2, deck 6, shell 1; deck 5, joiner 10, bulkhead 8, shell 2 | 141
+bulkhead 30        | 1218 (1208, 153), upright, +6.20 min | 213 (-85, -196), upright, under +115.0 s, +9.04 min | 22 (14; 2, +0.2 s after) | deck 8; deck 9, joiner 10, shell 2, bulkhead 3 | 100
+deck from below 2  | 1209 (1207, 60), upright, +6.18 min | 162 (-153, -54), upright, under +88.0 s, +8.60 min | 21 (14; 0) | bulkhead 1, deck 7, shell 1; deck 6, joiner 10, bulkhead 6, shell 3 | 130
+deck from below 10 | 1199 (1197, 56), upright, +6.21 min | 162 (-153, -54), upright, under +88.0 s, +8.60 min | 21 (14; 0) | bulkhead 1, deck 7, shell 1; deck 6, joiner 10, bulkhead 6, shell 3 | 128
+deck from above 8  | 1218 (1208, 153), upright, +6.20 min | 186 (-29, -184), upright, under +83.3 s, +8.65 min | 21 (15; 1, +12.5 s after) | deck 8; deck 9, joiner 10, bulkhead 4, shell 2 | 106
+deck from above 30 | 1189 (1177, -168), upright, +6.18 min | 198 (194, -42), upright, under +97.3 s, +8.91 min | 22 (13; 2, +0.4 s after) | bulkhead 2, deck 6, shell 1; deck 6, joiner 9, bulkhead 6, shell 3 | 134
+joiner 1           | 1199 (1197, 56), upright, +6.21 min | 152 (-122, -91), upright, under +82.5 s, +8.49 min | 22 (14; 1, +8.0 s after) | bulkhead 1, deck 7, shell 1; deck 5, joiner 10, bulkhead 6, shell 4 | 125
+joiner 3.5         | 1199 (1197, 56), upright, +6.21 min | 179 (138, -115), upright, under +84.8 s, +8.44 min | 24 (14; 2, +4.7 s after) | bulkhead 1, deck 7, shell 1; deck 6, joiner 9, bulkhead 6, shell 4 | 127

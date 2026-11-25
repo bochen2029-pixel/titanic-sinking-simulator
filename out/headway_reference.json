@@ -1,0 +1,39 @@
+{
+ "made": "2026-11-23T16:40:02.200Z",
+ "note": "headway runs before M1; tools/astern_tests.js",
+ "runs": {
+  "full ahead, hard to port, 10 min": {
+   "digest": "2e373b5fba9844de1f401b0338fac83d84b3c831f1f2f0bbfc5c67c22ac219e0",
+   "uMin": 7.832108217805289
+  },
+  "full ahead, hard to starboard, 10 min": {
+   "digest": "436330098664c06cc2507da876a06b32112465a1e6457d0a25caf14383489cfe",
+   "uMin": 7.832108217805289
+  },
+  "half ahead, 20 deg port then starboard": {
+   "digest": "8fe5f7035b3592947e65340ad94277c9bf909a3af86794fb4d8ce277a51e8bbd",
+   "uMin": 6.547960198686801
+  },
+  "slow ahead, zigzag 10/10": {
+   "digest": "35c37030735cc74ae3c600f963783b3c9f38298e353827dbfb4063bbbae25234",
+   "uMin": 4.084292367390152
+  },
+  "crash stop from 22.5 kn to the moment she stops": {
+   "digest": "e8211030ffca77b0fc9fc55a41d07ed33af03101ba3141d6ae69b9db59ed40cb",
+   "uMin": 0,
+   "steps": 774
+  },
+  "from Half ahead: port screw ahead, starboard astern, 5 min": {
+   "digest": "c392c718f1625ec3b45dfd8b52d01e2cfa4271aeb9e2a25d4c73980f866427a3",
+   "uMin": 3.8931323019567494
+  },
+  "the 1912 watch, auto, 387 steps": {
+   "digest": "f4b90cc1",
+   "uMin": 9.527248360860167
+  },
+  "night 7, auto, 700 steps": {
+   "digest": "04f2c92b",
+   "uMin": 7.397255059387255
+  }
+ }
+}

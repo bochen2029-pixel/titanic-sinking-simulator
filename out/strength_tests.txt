@@ -1,0 +1,244 @@
+THE SECTION AMIDSHIPS (x 0, boiler room 2; core/readers/section.js): elements by kind, port and starboard together
+  kind        n   area m2  centroid m  t in      tension MPa  compression MPa (law)   source
+  keel plate                1    0.0697       0.00   1.500          153      153 (buckle)   flat keel plate 1 1/2 in (Walker; Layton) [read], 1.2 in at the ends (24/20, Layton) [read]; one strake wide [bet]; lapped butts limit it in compression (the panel) [read]
+  bottom shell              4    0.4541       0.00   1.000          153      153 (buckle)   bottom 1 in amidships (Mengot) [read]; lapped quadruple-riveted butts limit it in compression [search summary; the panel's argument]; frames 36 in [read]
+  bilge                     6    0.2184       0.70   1.000          153      153 (buckle)   bottom 1 in amidships (Mengot) [read]; lapped quadruple-riveted butts limit it in compression [search summary; the panel's argument]; frames 36 in [read]
+  bilge strake doubling     4    0.0929       2.15   1.000          153      153 (buckle)   the bilge strake doubled [read], over two-fifths of her length [read]; 1 in, one strake [bet]
+  side shell               28    0.9174      10.91   1.000          153      166 (buckle)   side 1 in amidships (Wilding) [read]; double-strapped butts [search summary]; frames 36 in [read]; a deck's height between supports [derived]
+  side shell                5    0.1291      21.21   1.000          153      238 (buckle)   side 1 in amidships (Wilding) [read]; double-strapped butts [search summary]; frames 36 in [read]; a deck's height between supports [derived]
+  sheer strake doubling     5    0.1291      21.21   1.000          153      238 (buckle)   sheer strake doubled 1 in over its top 100 in [read]; over x -77.7 to +77.7 [bet]; its 0.9 in angle [read], 6 x 6 in [bet]
+  keel bar                  1    0.0377       0.00   3.000          153       262 (yield)   keel bar, a flat bar 19 1/2 x 3 in (Walker 1912; Mengot) [read]
+  tank top                  1    0.5019       1.60   0.750          110      110 (buckle)   tank top 0.75 in (the panel's model) [search summary]; about 0.5 in by Mengot [read], a what-if; 63 in; 78 in under the reciprocating engines [read]; from frame 25A [read] to bulkhead L [bet]; triple-riveted butts (the panel) [search summary]
+  margin plate              1    0.0335       1.27   1.000          153      248 (buckle)   the margin plate, continuous, nearly vertical (Halpern) [read]; 1 in (the panel's model) [search summary]; at the tank top's edge [bet]
+  centre keelson            1    0.0406       0.80   1.000          153      194 (buckle)   centre keelson, B to O [read]; 1 in (the panel's model) [search summary]
+  side girder               4    0.3252       0.80   1.000           73      194 (buckle)   four side girders a side (the panel) [search summary]; 1 in (the panel's model) [search summary]
+  C deck edge strake        1    0.1659      19.74   1.786          153      238 (buckle)   doubled 1 in edge strake, 3/4 in across the rest, 1 in beside the uptakes (Mengot) [read]; strake widths one plate [bet]; C deck B's pattern x FIT.cDeck [fitted] (C x 0.893); beams on every frame, four lines of girders (Walker) [read]
+  C deck plating            1    0.4168      19.79   0.670          153       68 (buckle)   doubled 1 in edge strake, 3/4 in across the rest, 1 in beside the uptakes (Mengot) [read]; strake widths one plate [bet]; C deck B's pattern x FIT.cDeck [fitted] (C x 0.893); beams on every frame, four lines of girders (Walker) [read]
+  B deck edge strake        1    0.1858      22.48   2.000          153      243 (buckle)   doubled 1 in edge strake, 3/4 in across the rest, 1 in beside the uptakes (Mengot) [read]; strake widths one plate [bet]; C deck B's pattern x FIT.cDeck [fitted]; beams on every frame, four lines of girders (Walker) [read]
+  B deck plating            1    0.4646      22.53   0.750          153       86 (buckle)   doubled 1 in edge strake, 3/4 in across the rest, 1 in beside the uptakes (Mengot) [read]; strake widths one plate [bet]; C deck B's pattern x FIT.cDeck [fitted]; beams on every frame, four lines of girders (Walker) [read]
+  sheer strake angle        1    0.0129      22.40   0.900          153       262 (yield)   sheer strake doubled 1 in over its top 100 in [read]; over x -77.7 to +77.7 [bet]; its 0.9 in angle [read], 6 x 6 in [bet]
+  joints in tension (on the gross area): quadruple-riveted or double-strapped 153.4 MPa (Paik et al.'s 0.626 x 245) [read]; triple 110.0 MPa and double 73.4 MPa (the panel's 42 and 28 %) [search summary]; yield 262 MPa [read: NIST, the lower]
+  deck openings across her: first funnel's uptakes 6.10 m over x 47.4 to 61.1 (BC) 20 x 45 ft [read]; over bulkhead E [derived]; second funnel's uptakes 6.10 m over x 12.6 to 26.4 (BC) 20 x 45 ft [read]; over bulkhead G [derived]; third funnel's uptakes 6.10 m over x -23.0 to -9.3 (BC) 20 x 45 ft [read]; over bulkhead J [derived]; engine room opening 6.10 m over x -41.3 to -34.0 (BC) 24 x 20 ft as completed [read]; centred in its room [bet]; turbine room opening 5.49 m over x -59.9 to -53.8 (BC) 18 x 20 ft as completed [read]; centred in its room [bet]; forward grand staircase 4.88 m over x 29.0 to 39.0 (BC) 16 ft wide [read]; 297 to 330 ft from the FP [derived]
+  out of the section: D, E and F decks: not continuously riveted (Mengot) [read]: out; a what-if puts them in at 1/2 in [bet]; the superstructure above B deck (1/4 in on light studs, two expansion joints) [read]
+
+THE ELASTIC SECTION AMIDSHIPS against the Marine Forensics Panel's: neutral axis 10.109 m (398 in); Z 30.48 m3 at B deck; Z 36.54 m3 at the keel; I 369.4 m4; its deck 22.23 m up [search summary; SI derived]
+  as found (C deck as B):           area 4.265 m2; neutral axis 10.506 m (+0.40); I 373.2 m4; Z 31.04 m3 at the strength deck (22.53 m; +1.8 %); Z 35.52 m3 at the keel (-2.8 %)
+  fitted (C deck x 0.893):          area 4.196 m2; neutral axis 10.352 m (+0.24); I 367.1 m4; Z 30.14 m3 at the strength deck (22.53 m; -1.1 %); Z 35.46 m3 at the keel (-3.0 %)
+  the fit: C deck's plating as a share of B's, least squares on the three relative errors, bounds 0.5 to 1.5 set beforehand: 0.8933 (the library: 0.893); it makes these three rows a fit with one parameter, two figures left to check
+
+SMITH'S CURVE AMIDSHIPS: the moment against curvature (in yield curvatures, ky = 1.039e-4 1/m), and the elements gone (past their peak) at each
+  hogging:   k/ky   M GN m   neutral axis m   gone
+              0.00    0.000           10.35   "
+              0.20    1.579           10.35   "
+              0.40    3.158           10.35   "
+              0.60    4.688           10.35   tank top
+              0.80    5.232           10.38   keel plate, bottom shell, bilge, bilge strake doubling, tank top
+              1.00    5.216           10.94   keel plate, bottom shell, bilge, bilge strake doubling, side shell, tank top, centre keelson, side girder 1, side girder 2, side girder 3, side girder 4
+              1.20    4.763           13.73   keel plate, bottom shell, bilge, bilge strake doubling, side shell, tank top, margin plate, centre keelson, side girder 1, side girder 2, side girder 3, side girder 4
+              1.40    4.415           15.04   "
+              1.60    4.136           15.93   "
+              1.80    3.904           16.61   "
+              2.00    3.709           17.14   "
+              2.20    3.542           17.56   "
+              2.40    3.398           17.90   "
+              2.60    3.272           18.17   "
+              3.20    0.144            1.05   side shell, sheer strake doubling, C deck edge strake, C deck plating, B deck edge strake, B deck plating, sheer strake angle
+              3.80    0.132            0.98   "
+              4.40    0.128            0.94   "
+              5.00    0.131            0.91   "
+              5.60    0.134            0.89   "
+  hogging: Mu 5.308 GN m at k/ky 0.954, the neutral axis then at 10.26 m; the first to fail: tank top (in compression, at 1.60 m); gone at the peak: keel plate, bottom shell, bilge, bilge strake doubling, tank top
+  sagging:   k/ky   M GN m   neutral axis m   gone
+              0.00    0.000           10.35   "
+              0.20    1.579           10.35   "
+              0.40    2.836            9.58   C deck plating, B deck plating
+              0.60    3.605            8.79   "
+              0.80    4.397            8.57   side shell, sheer strake doubling, C deck plating, B deck plating
+              1.00    4.423            7.74   side shell, sheer strake doubling, C deck edge strake, C deck plating, B deck edge strake, B deck plating
+              1.20    4.054            6.11   "
+              1.40    3.758            5.09   "
+              1.60    3.519            4.42   "
+              1.80    3.320            3.92   "
+              2.00    3.149            3.52   "
+              2.20    3.003            3.20   "
+              2.40    2.877            2.93   "
+              2.60    2.765            2.71   "
+              3.20    2.502            2.25   "
+              3.80    2.307            1.97   "
+              4.40    2.156            1.80   "
+              5.00    2.035            1.68   "
+              5.60    1.935            1.59   bilge strake doubling, side shell, sheer strake doubling, C deck edge strake, C deck plating, B deck edge strake, B deck plating
+  sagging: Mu 4.522 GN m at k/ky 0.925, the neutral axis then at 8.31 m; the first to fail: B deck plating (in compression, at 22.53 m); gone at the peak: side shell, sheer strake doubling, C deck plating, B deck edge strake, B deck plating
+  which side fails first amidships: hogging the bottom side (tank top, in compression); sagging the deck side (B deck plating, in compression)
+
+WHAT THE CHOICES DO TO THE ULTIMATE MOMENT AMIDSHIPS (what-ifs; none is used): the library hog 5.307, sag 4.522 GN m
+  each stronger (the monotonicity row below uses these):
+    the yield 280 MPa: hog 5.314, sag 4.666 (first tank top)
+    the joints at Stoney's period strengths (quadruple 75 % of 430 MPa, double 60 %): hog 6.123, sag 4.581 (first tank top)
+    the plates' edges held from turning (k x 4): hog 5.307, sag 5.153 (first tank top)
+  and others:
+    the section as found, C deck as B (not fitted): hog 5.384, sag 4.701 (first tank top); neutral axis 10.51 m, Z 31.0 and 35.5 m3
+    D, E and F decks in at 1/2 in, double-riveted: hog 5.353, sag 4.666 (first tank top); neutral axis 11.07 m, Z 33.4 and 34.6 m3
+    the tank top 1/2 in (Mengot: about half the shell): hog 4.866, sag 4.428 (first tank top); neutral axis 10.72 m, Z 29.9 and 33.0 m3
+    her yield 245 MPa (Paik et al.'s base): hog 5.286, sag 4.359 (first tank top); neutral axis 10.35 m, Z 30.1 and 35.5 m3
+
+THE ONSET ON THE 1912 DAMAGE PRESET (core/scenarios.js "titanic"): the first step where (M/Mu)^2 + (V/Vu)^2 reaches 1 somewhere along her
+  as the model is (list free):  T 159.41 min (2:19:25 am), step 38258; x -10.93 m, boiler room 2; hogging 4.880 of 4.939 GN m; shear 18.4 of 120 MN; (M/Mu)^2 + (V/Vu)^2 = 1.0001; trim 7.01 deg, list 5.0 deg to port
+  what-if, her list held:       T 164.77 min (2:24:46 am), step 39544; x -10.93 m, boiler room 2; hogging 4.875 of 4.939 GN m; shear 19.2 of 120 MN; (M/Mu)^2 + (V/Vu)^2 = 1.0000; trim 6.88 deg, list 1.6 deg to port
+  the record: the break at x -16 to -27 m (boiler room 1, between the third and fourth funnels), T 155 to 159.7 min (2:15 to 2:19:40 am), trim 10 to 17 deg, list about 10 deg to port (Mengot) [the girder note, 1.3, 9c, 9d]
+    its time is the witnesses' (the mainline's ruling, 2026-11-24): Joughin's watch read 2:15 with her lights still burning (BI 6359-6363); she was gone at 2:20 (the Report; Pitman's own watch, US Inquiry, Day 4),
+    less the stern's shortest stand, 20 s (Etches), with the lights going out at about 2:17 its centre. It was T 157 to 158.6: the model's own event list and a computed collapse, not observations
+  NOTE: as the model is, at that moment she is lying 5.0 degrees over to port (the record: about 10 to port)
+
+HER STRENGTH ALONG HER LENGTH (every 10 m, and the break band's named stations), with the demand at the onset (the 1912 preset, list free, T 159.41)
+      x m  where                           Mu hog   Mu sag   Vu MN   Z deck  Z keel   first to fail, hogging              | at the onset: M GN m   V MN   (M/Mu)^2+(V/Vu)^2
+   -130.0  after peak                      0.512    0.566      39      6.0     2.9   side shell (bottom side, compression)|               0.028     7.3       0.038
+   -120.0  after peak                      1.251    1.469      72     15.7     7.4   bilge (bottom side, compression)  |               0.152    18.2       0.078
+   -110.0  shaft tunnel / cargo            1.933    1.934      75     18.9    11.9   tank top (bottom side, compression)|               0.378    27.8       0.174
+   -100.0  shaft tunnel / refrigerated cargo  2.080    1.362      70     12.2    13.1   tank top (bottom side, compression)|               0.697    37.1       0.394
+    -90.0  shaft tunnel / refrigerated cargo  3.279    2.530      82     22.2    19.6   tank top (bottom side, compression)|               1.114    47.1       0.442
+    -80.0  electric engine room            3.778    2.548      85     23.1    23.0   tank top (bottom side, compression)|               1.614    54.0       0.586
+    -70.0  electric engine room            4.150    3.431      99     28.7    25.6   tank top (bottom side, compression)|               2.160    57.0       0.601
+    -60.0  turbine engine room             4.405    3.692     103     29.2    27.6   tank top (bottom side, compression)|               2.718    57.3       0.691
+    -50.0  turbine engine room             4.954    4.237     115     29.8    31.2   tank top (bottom side, compression)|               3.266    54.4       0.657
+    -40.0  reciprocating engine room       4.811    4.324     119     26.5    33.6   tank top (bottom side, compression)|               3.764    50.8       0.795
+    -30.0  reciprocating engine room       5.371    4.516     119     30.1    35.6   tank top (bottom side, compression)|               4.256    49.5       0.802
+    -27.1  bulkhead K                      5.382    4.528     119     30.1    36.0   tank top (bottom side, compression)|               4.385    44.1       0.801
+    -25.1  boiler room 1                   5.389    4.536     120     30.2    36.3   tank top (bottom side, compression)|               4.468    41.3       0.807
+    -22.4  boiler room 1                   4.957    4.585     120     27.3    36.0   tank top (bottom side, compression)|               4.571    37.5       0.948
+    -20.0  boiler room 1                   4.948    4.572     120     27.3    35.0   tank top (bottom side, compression)|               4.653    33.9       0.964
+    -16.2  bulkhead J                      4.943    4.568     120     27.3    35.0   tank top (bottom side, compression)|               4.767    27.7       0.983
+    -10.0  boiler room 2                   4.938    4.563     120     27.3    35.0   tank top (bottom side, compression)|               4.896    16.6       1.002
+      0.0  boiler room 2                   5.307    4.522     120     30.1    35.5   tank top (bottom side, compression)|               4.951    -4.0       0.871
+     10.0  boiler room 3                   5.300    4.520     120     30.2    35.3   tank top (bottom side, compression)|               4.793   -25.8       0.865
+     20.0  boiler room 4                   4.919    4.542     119     27.3    34.2   tank top (bottom side, compression)|               4.429   -45.9       0.958
+     30.0  boiler room 4                   4.905    4.375     120     27.4    33.4   tank top (bottom side, compression)|               3.912   -58.0       0.871
+     40.0  boiler room 5                   5.157    4.438     120     30.3    33.0   tank top (bottom side, compression)|               3.295   -63.4       0.686
+     50.0  boiler room 5                   4.802    4.281     117     27.2    31.0   tank top (bottom side, compression)|               2.690   -58.9       0.565
+     60.0  boiler room 6                   4.376    3.764     105     26.7    27.8   tank top (bottom side, compression)|               2.131   -54.8       0.512
+     70.0  boiler room 6                   4.281    3.530     101     29.2    26.4   tank top (bottom side, compression)|               1.613   -50.8       0.393
+     80.0  No. 3 hold                      2.405    1.494      78     13.6    19.6   side shell (deck side, tension)   |               1.120   -46.1       0.569
+     90.0  No. 2 hold                      2.297    1.519      76     13.0    16.8   tank top (bottom side, compression)|               0.699   -36.5       0.322
+    100.0  No. 2 hold                      2.893    2.480      83     20.0    16.8   tank top (bottom side, compression)|               0.380   -26.3       0.117
+    110.0  No. 1 hold                      2.087    1.953      80     16.2    12.1   tank top (bottom side, compression)|               0.162   -16.1       0.047
+    120.0  forepeak                        1.298    1.354      77     10.2     6.7   keel plate (bottom side, compression)|               0.040    -7.3       0.010
+    130.0  forepeak                        0.019    0.017       9      0.1     0.2   side shell (deck side, tension)   |               0.000     0.3       0.001
+  the weakest station in hogging between x -60 and +60: x -59.74 (turbine engine room), 4.311 GN m; in the break band (K to J): x -16.15 (bulkhead J), 4.943 GN m
+
+  every station at the onset's step (check with { all: true }): 126 stations; the five nearest to failing: x -10.93 1.000, x -13.54 0.993, x -16.15 0.983, x -16.15 0.983, x -16.50 0.982; at or past 1 (found.over): -10.93
+
+THE HINGE (core/readers/section.js hinge(): stage B4's law from B1's falling branch) at the onset's station, x -10.93 (boiler room 2), hog; Lh 20.0 m [bet: about the girder's depth]
+  theta: the angle between the two parts, positive as the side that failed opens, about her own y axis through (x, zNA). Release (the free body's): when the force across the joint passes Nt (tension) or Vs (shear)
+   theta deg      M GN m   dM/dtheta GN m/rad   torn c  past c   W MJ   zNA m   Nt MN   Vs MN   open m2: port below, above, stbd below, above
+     0.000       4.939             -9294.0    0.000   0.284    0.00    8.77     569     120   0.00, 0.00, 0.00, 0.00
+     0.005       4.140             -8961.5    0.000   0.482    0.39    7.05     569     120   0.00, 0.00, 0.00, 0.00
+     0.010       1.744             -8861.3    0.160   0.657    0.64    4.11     470     113   0.00, 0.00, 0.00, 0.00
+     0.020       0.883              -869.1    0.339   0.687    0.85    2.89     360      94   0.00, 0.02, 0.00, 0.02
+     0.050       0.563              -407.3    0.389   0.722    1.22    2.17     329      76   0.00, 0.11, 0.00, 0.11
+     0.100       0.328              -163.6    0.438   0.758    1.59    1.60     299      58   0.01, 0.30, 0.01, 0.30
+     0.200       0.178               -48.7    0.483   0.793    2.00    1.18     271      43   0.09, 0.67, 0.09, 0.67
+     0.500       0.131                 1.1    0.527   0.826    2.73    0.91     244      27   0.45, 1.76, 0.45, 1.76
+     1.000       0.131                -2.0    0.555   0.856    3.92    0.68     227      20   1.17, 3.60, 1.17, 3.60
+     2.000       0.130                 0.0    0.555   0.856    6.18    0.66     227      20   2.60, 7.24, 2.60, 7.24  (past the curve: the parts turning as rigid bodies)
+     5.000       0.130                 0.0    0.555   0.856   12.98    0.66     227      20   6.86, 18.13, 6.86, 18.13  (past the curve: the parts turning as rigid bodies)
+    10.000       0.130                 0.0    0.555   0.856   24.30    0.66     227      20   13.97, 36.29, 13.97, 36.29  (past the curve: the parts turning as rigid bodies)
+    20.000       0.130                 0.0    0.555   0.856   46.95    0.66     227      20   28.19, 72.62, 28.19, 72.62  (past the curve: the parts turning as rigid bodies)
+  the tear's top: c reaches 0.555 at theta 0.833 deg; past that only the ligament holds, 227 MN in tension (23102 t) and 20 MN in shear (2073 t); the work to there 3.53 MJ
+  after its peak the moment is monotone but for a rise of 0.24 MN m (0.0048 % of Mu) in its residual tail
+  what-ifs on Lh: a web frame's spacing in the boiler rooms, 9 ft (Lh 2.74 m): the tear's top at 0.114 deg, the work to there 0.48 MJ; a frame's spacing, 36 in (Lh 0.91 m): the tear's top at 0.038 deg, the work to there 0.16 MJ
+  the joint's shear at the onset, from the gauge: 18.4 MN; the ligament's shear falls below it nowhere on the curve (to 1.04 deg) [information: the free body carries the joint's real force]
+  the joint's slope: before it yields k0 = E I / Lh of the intact section, 3576 GN m/rad; on unloading ku = E I / Lh of what still holds, 10.68 GN m/rad at the tear's top, where springing back from its 0.137 GN m to nothing takes 0.735 deg of the tear's 0.833 [derived; bet: unloading elastic at E]
+  the tear by height (each space's span, m above the keel, port as starboard; E deck at 13.81 m): 0.02 deg below none, above 19.30 to 22.49; 0.10 deg below 11.40 to 13.50, above 13.81 to 22.49; 0.50 deg below 4.40 to 13.50, above 13.81 to 22.49; 1.00 deg below 2.60 to 13.50, above 13.81 to 22.49
+  the tear on unloading (m2 a side, below E deck/above): from 0.10 deg 0.01/0.30, sprung back 0.104 deg to no load 0.00/0.00; from 0.83 deg 0.92/2.98, sprung back 0.735 deg to no load 0.02/0.34; from 1.00 deg 1.17/3.60, sprung back 0.704 deg to no load 0.23/1.07; from 10.00 deg 13.97/36.29, sprung back 0.696 deg to no load 13.01/33.79 [derived: each torn strip's gap closes by its height above the centroid of what holds, 0.85 m at the tear's top]
+  rough, for a CHECK column [derived]: across her the ligament's flats (keel plate, bottom shell, tank top) in their own plane, each at the least of shear yield and its joint over sqrt 3, 78.3 MN (an upper bound: the bottom is past its peak in compression), against about 1.61 MN of the onset's shear across her list; in torsion the double bottom's cell (Bredt: twice its 42.2 m2 times the weakest wall's shear flow, 1.21 MN/m) 102 MN m
+
+A STRONGER HULL NEVER BREAKS SOONER (every strength scaled; the 1912 preset, list free; the reader's schedule)
+  scale   onset T   clock         step     x m    where                       trim   list   M/Mu
+   0.80     92.12   1:12:07 am   22108   13.72    boiler room 3               3.69    4.1  0.989
+   0.90    157.74   2:17:45 am   37858  -10.93    boiler room 2               5.99   13.7  0.991
+   1.00    159.41   2:19:25 am   38258  -10.93    boiler room 2               7.01    5.0  0.988
+   1.05    161.53   2:21:32 am   38766  -10.93    boiler room 2               8.16    7.2  0.991
+   1.10    162.35   2:22:21 am   38963  -10.93    boiler room 2               9.23   11.2  0.993
+   1.20   none: founders at T 165.70, closest r 0.988
+   1.30   none: founders at T 165.70, closest r 0.850
+
+THE 1912 WATCH (core/night.js, its reconstructed orders, to the flag; the reader's state sim.onset): T from the touch. The default watch (D98) hands her to the fall here
+  T 156.46 min (2:16:28 am), step 37792; x -10.93 m, boiler room 2; hogging 4.877 of 4.939 GN m; trim 6.93 deg, list 3.8 deg; exact true; 1879 looks in 39473 steps
+  she would break at x -10.9 m (boiler room 2), hogging, 4.9 of 4.9 GN m
+
+HER HULL'S ENDS (C3, the switch on against off): her strength at her ends, as section.js finds it with the plans' side
+      x m  where                           Mu hog off / on      Mu sag off / on     Vu MN off / on
+   -130.0  after peak                         0.405 / 0.512        0.461 / 0.566         39.0 / 39.0
+   -120.0  after peak                         1.178 / 1.251        1.371 / 1.469         72.3 / 72.3
+   -110.0  shaft tunnel / cargo               1.879 / 1.933        1.852 / 1.934         75.5 / 75.5
+   -100.0  shaft tunnel / refrigerated cargo     1.919 / 2.080        1.271 / 1.362         69.9 / 69.9
+    -90.0  shaft tunnel / refrigerated cargo     3.244 / 3.279        2.458 / 2.530         82.4 / 82.4
+    -80.0  electric engine room               3.760 / 3.778        2.510 / 2.548         85.0 / 85.0
+    -70.0  electric engine room               4.148 / 4.150        3.429 / 3.431         99.2 / 99.2
+     70.0  boiler room 6                      4.249 / 4.281        3.514 / 3.530       101.4 / 101.4
+     80.0  No. 3 hold                         2.217 / 2.405        1.422 / 1.494         77.8 / 77.8
+     90.0  No. 2 hold                         2.057 / 2.297        1.412 / 1.519         76.1 / 76.1
+    100.0  No. 2 hold                         2.774 / 2.893        2.304 / 2.480         83.0 / 83.0
+    110.0  No. 1 hold                         1.999 / 2.087        1.850 / 1.953         80.0 / 80.0
+    120.0  forepeak                           1.239 / 1.298        1.281 / 1.354         77.4 / 77.4
+  the onset on the preset: off T 139.72, x -10.93 (boiler room 2), 4.868 of 4.939 GN m, trim 6.7; the flag 147.82; on T 159.41, x -10.93 (boiler room 2), 4.880 of 4.939 GN m, trim 7.0; the flag 165.70
+  the onset on the watch:  off T 136.71, x -10.93 (boiler room 2), 4.865 of 4.939 GN m, trim 6.6; the flag 145.82; on T 156.46, x -10.93 (boiler room 2), 4.877 of 4.939 GN m, trim 6.9; the flag 163.47
+
+B4'S JOINT FROM THE ONSET ACROSS THE KEPT SET (gate 3: tools/joint_kept.js, out/joint_kept_1912.json; the default watch to each onset, then the fall with the joint; its air: the spaces, D113, each to 90 s)
+~ the table's core a698c21b1be7, this tree's a698c21b1be7
+  the landed member: onset T 156.46 at x -10.93; she parts at the surface 1.34 s after its onset, by shear at 0.90 deg (yielded 0.03 s after; rN -0.066, rV 1.010)
+  the kept set (30 members): an onset in 30; she parts at the surface in 30 of 30 (1.25 to 4.69 s after, median 2.06; at 0.69 to 21.63 deg); does not in 0 (holds through the 90 s window 0, 0 let go only at the bed, 0 held to rest); by shear 30, by tension 0
+  gate 4, the ligament's what-ifs on the landed member (what still holds at the tear's top; how it ends):
+    as built (the default)                        Vs  20.34 MN, Nt  226.6 MN, Lh 20.00 m: parts at the surface 1.34 s after its onset, by shear at 0.90 deg (yielded 0.03 s after; rN -0.066, rV 1.010)
+    side girders five a side (Halpern) [read]     Vs  23.78 MN, Nt  232.6 MN, Lh 20.00 m: HOLDS through the window, 90 s (never yielded; the most while it held rV 0.161; its peak 0.9846 of Mu: to part, the ligament n/a % weaker or n/a t more water n/a m aft)
+    side girders 3/4 in (Britannic's) [read]      Vs  17.13 MN, Nt  220.7 MN, Lh 20.00 m: parts at the surface 1.88 s after its onset, by shear at 0.78 deg (yielded 0.03 s after; rN 0.046, rV 1.001)
+    the joints at Stoney's period strengths       Vs 195.17 MN, Nt 1169.0 MN, Lh 20.00 m: HOLDS through the window, 90 s (never yielded; the most while it held rV 0.100; its peak 0.8135 of Mu: to part, the ligament n/a % weaker or n/a t more water n/a m aft)
+    Lh a web frame's spacing, 9 ft                Vs  20.34 MN, Nt  226.6 MN, Lh  2.74 m: parts at the surface 0.50 s after its onset, by shear at 0.12 deg (yielded 0.03 s after; rN -0.096, rV 1.008)
+    Lh a frame's spacing, 36 in                   Vs  20.34 MN, Nt  226.6 MN, Lh  0.91 m: parts at the surface 0.31 s after its onset, by shear at 0.05 deg (yielded 0.03 s after; rN -0.064, rV 1.029)
+    the joints' parting strains halved [bet]      Vs  20.34 MN, Nt  151.2 MN, Lh 20.00 m: parts at the surface 0.78 s after its onset, by shear at 0.62 deg (yielded 0.03 s after; rN -0.094, rV 1.046)
+    the joints' parting strains doubled [bet]     Vs  21.45 MN, Nt  234.5 MN, Lh 20.00 m: HOLDS through the window, 90 s (never yielded; the most while it held rV 0.161; its peak 0.9740 of Mu: to part, the ligament n/a % weaker or n/a t more water n/a m aft)
+
+PASS the section amidships (C deck fitted): its elastic modulus at B deck is the panel's                              30.14 m3 (-1.1 %); as found 31.04                                                30.5 m3 (1.86e6 in3), within 5 %
+PASS   ... and at the keel                                                                                            35.46 m3 (-3.0 %); as found 35.52                                                36.5 m3 (2.23e6 in3), within 5 %
+PASS   ... and its neutral axis                                                                                       10.352 m above the keel (+0.24 m); as found 10.506                               10.11 m (398 in), within 0.3 m
+PASS   ... and the library's fitted figure is this refit's                                                            C deck x 0.8933, inside its bounds                                               FIT.cDeck 0.893, to 0.001; bounds 0.5 to 1.5
+PASS THE FINDING: the ultimate hogging moment amidships, untuned, lies in the studies' range                          5.308 GN m (sagging 4.522); the first to fail: tank top                          4.0 to 5.4 GN m (the girder note, 9b); nothing in the section was set to land in it
+PASS   ... and the curve falls past its peak (the falling branch, kept for the hinge of stage B4)                     at 6.0 ky: 0.137 GN m hogging, 1.877 sagging                                     below the peak in both senses
+PASS raising every element's strength never lowers the ultimate moment (x 1 to 2, seven stations, both senses; and each strength alone) never lower                                                                      never lower
+OUT  the 1912 preset's onset: where                                                                                   free: x -10.93 (boiler room 2); list held: x -10.93 (boiler room 2)              the record: x -16 to -27 m (the girder note, 9c)
+in     ... when                                                                                                       free: T 159.41 (2:19:25 am); list held: T 164.77 (2:24:46 am)                    the record: T 155 to 159.7 min (the witnesses)
+OUT    ... at what trim                                                                                               free: 7.01 deg, list 5.0 deg; list held: 6.88 deg, list 1.6 deg                  the record: 10 to 17 deg by the head (list about 10 to port)
+OUT    ... and the same three with her list held (a what-if)                                                          x -10.93, T 164.77, trim 6.88                                                    the record's three bands
+PASS the reader's schedule finds the step that looking every step finds (free and list held)                          free: step 38258 in 1860 looks (step 38258, exact true); held: 39544 in 2234 looks (step 39544) the same step, marked exact; looking every step 38258 and 39544 times
+PASS   ... because up to the onset, u = sqrt(r) never grows faster in a step than the schedule allows (RATE)          the fastest up to the onset: 0.00034 a step free, 0.00016 held; after it (not used by the schedule) 0.00063 and 0.00078 under RATE 0.01 [stated]
+PASS the onset breaks nothing: the 1912 preset looked at every step to its end is the same bits as without            state 4b9550a4f161aa16 (onset found at step 38258); founders 165.70 min; events 28 without: 4b9550a4f161aa16, 165.70 min, 28 events
+PASS a hull stronger than any load (every strength x 10) has no onset, and its run is to the bit of today's           no onset (closest 0.0188); the trace identical to out/golden_titanic.json; state 4b9550a4f161aa16 none; the tracked golden trace (tools/golden.js), and the bare run's state 4b9550a4f161aa16
+PASS every station's ratio at the onset's step: the worst is the onset's own, and found.over holds it                 126 stations; the largest 1.0001 at x -10.93; found.over -10.93                  the largest = the onset's r (1.0001) at its station; its station first in found.over
+PASS the hinge starts where the onset is: M(0) is the station's Mu, Vs(0) its Vu, nothing torn and nothing open       M(0) 4.939 of Mu 4.939; Vs(0) 119.66 of Vu 119.66 MN; c(0) 0.000; open(0) 0.000/0.000/0.000/0.000 equal to 1e-9; c 0; open 0
+PASS   ... the joint never carries more than Mu; the tear, the work and the openings only grow; the ligament only shrinks max M 4.939; c and past c in [0, 1] true; ordered true                           max M = Mu; all ordered along theta
+PASS   ... at(theta) gives the curve at its own points                                                                equal at every seventh point                                                     equal
+PASS   ... its angle is the curvature spread over Lh: half the hinge, half the angle, the same moments                the tear's top at 0.4167 deg with Lh 10.0 m against 0.8334 with 20.0             exactly half; M the same at each point
+PASS   ... a stronger hull tears later and takes more work                                                            every strength x 1.25: Mu 6.124, the tear's top at 0.938 deg, work 4.66 MJ       against 4.939, 0.833 deg, 3.53 MJ: none lower
+PASS   ... and the work it takes is the curve's, not its grid's: twice the steps                                      3.531 MJ to the tear's top with 800 steps                                        3.530 MJ with 400; within 2 %
+PASS   ... its slope on unloading: k0 the intact section's E I / Lh; ku starts there with nothing torn and only falls as the tear grows; half the hinge, twice the slope k0 3575.7, ku(0) 3575.7, at the tear's top 10.68 GN m/rad; never rising true; with Lh 10.0 m 21.36 k0 = ku(0) = E I(the elastic section) / Lh; falling; twice
+PASS   ... the tear by height: each space's span on its own side of E deck, only widening, and there wherever that space opens to the sea 1402 spans over 365 points; at 1 deg below 2.60 to 13.50, above 13.81 to 22.49 m ordered; E deck at 13.81 m between them
+PASS   ... unloading: at its start the line is at(theta) itself; on it the moment falls by ku a radian, the openings only close and never past contact; closeRate is their first rate equal at the start; ordered true; closeRate against a finite difference within 4.6e-10 equal; ordered; within 1e-6
+PASS raising the capacity never makes the onset earlier (x 0.8 to 1.3)                                                0.8: T 92.12; 0.9: T 157.74; 1: T 159.41; 1.05: T 161.53; 1.1: T 162.35; 1.2: none; 1.3: none later or the same, step by step
+PASS the four forward compartments open (Wilding: she floats): no onset                                               none; afloat at 480 min; closest (M/Mu)^2 + (V/Vu)^2 0.728 at x 78.5 (No. 3 hold, hogging) at 454 min none, afloat
+PASS the 1912 watch (to the flag, D98's what-if) with the onset reader attached: the model's own fingerprint, and no event of its own fingerprint 0fdcf0ad at step 39473; 74 events; the reader attached, 1879 looks   the same watch without any reader: 0fdcf0ad at step 39473, 74 events, the same list
+OUT  the 1912 watch's onset against the preset's                                                                      T 156.46, x -10.93, trim 6.93                                                    the preset: T 159.41, x -10.93, trim 7.01; the same station, within a minute
+PASS the onset as the watch's own check (D76 b), the default since D98: a 'flag' watch carries none; the default watch is an onset watch and finds it with its readers and without, on the same step, the reader mirroring the night flag: sim.night.onset none; default: handover onset, the check carried; readers on: over at step 37792, found k 37792, x -10.93; readers off: over at step 37792, found k 37792, x -10.93; the reader's state the night's: true none; onset, carried; the same step and every field of found; the same object
+PASS   ... its forecast, a copy without the readers taken five minutes before, ends on the onset's step (over, at the onset's time), not at the flag over true at step 37792, overT 9448.00 s; foundered false                        over at step 37792, overT 9448.00 s; not foundered
+in   what the reader costs a step on the 1912 preset (the schedule against looking every step)                        1860 looks in 39769 steps                                                        under one look in ten steps
+PASS a watch begun after the onset finds it at its first look and marks it not the first step (exact false)           found at step 38358, exact false, looked before at -1                            found at step 38358, exact false (the onset was at 38258)
+PASS C3 (on since D4): the ship with hullEnds 0 has the sections it had when the switch came in: section.js's elements at 75 stations (every 10 m, the band, every read frame), hashed 414c86ea81ca884c (the default ship's 0dcc8bec1fbd433b)                           414c86ea81ca884c, frozen at the switch's commit (refrozen with the model's pow, B1/e107)
+PASS   ... with hullEnds 1, the sections within 31.5 m of amidships are the same to the bit (12 stations, the onset's and the fit's among them): the fit, the panel's section and the hinge stand none moved                                                                       none
+PASS   ... and its decks take the plans' side: at every frame where C deck or B deck was read, that deck's plating spans the reading (or the fitted form's side where that is the wider) 61 decks read; worst 4.0e-5 m (C 150F)                                           within 1e-4 m
+in     ... what the restored ends do to the onset (said, not judged: the rung; it moves with the landing's refit)     preset: 139.72 to 159.41 min; watch: 136.71 to 156.46 min; the station the same  the G14 note, first order: at most 0.42 min later, the same station; along its own path, more
+in   B4 gate 4: the as-built ligament and its sourced alternatives (girders, joints, the hinge's length) each counted from the landed member's onset under the table's air, their senses and ends printed, none picked as built: parts, shear at 1.34 s; the 7 alternatives: 4 part at the surface, 3 hold; senses seen: shear every one counted (a joint built and followed)
+in   B4 gate 3: the kept set's table is of this tree's core (when it is not, run tools/joint_kept.js again)           this tree's                                                                      this tree's
+in   B4 gate 3: every onset ends one of two ways under the spaces (D113), k of N each (no end and no sense picked): parts at the surface, its time, angle and sense printed, or holds, its margin to Mu printed at the surface 30, not 0 of 30; released at 0.69 to 21.63 deg, +1.25 to +4.69 s; by shear 30, by tension 0; the air: spaces the two ends add up; judged under the spaces
+~ cost: check() 0.940 ms a call (CPU); on the 1912 preset the schedule looks 1860 times in 39769 steps: about 0.0440 ms a step; the strength along her, computed once for a ship: 125 ms
+~ (209 s)
+
+PASS: every MUST row (30); CHECK rows in range: 6 of 10

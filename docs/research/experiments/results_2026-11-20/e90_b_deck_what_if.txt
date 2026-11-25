@@ -1,0 +1,28 @@
+e90 (G6b) on C:\temp\titanic-wt-split: validate.js's bulkheads-to-B-deck what-if, the 1912 damage with every bulkhead to B deck
+  the preset's split (the water held), today's numbers, 0.7506 m2   afloat to 8.00 h; trim 8.53, list -1.08; boiler room 4 holds 31 m3
+  the preset's split, A's numbers, 0.83983 m2                       afloat to 8.00 h; trim 9.11, list -1.71; boiler room 4 holds 1748 m3
+  Hackett and Bedford's split, today's numbers, 0.7506 m2           afloat to 8.00 h; trim 8.53, list -1.05; boiler room 4 holds 29 m3
+  Hackett and Bedford's split, today's numbers, 0.83983 m2          afloat to 8.00 h; trim 8.53, list -1.07; boiler room 4 holds 29 m3
+  Hackett and Bedford's split, A's numbers, 0.7506 m2               FOUNDERS at 6.49 h; trim 68.81, list -80.21; boiler room 4 holds 10888 m3
+  Hackett and Bedford's split, A's numbers, 0.83983 m2 (A)          FOUNDERS at 5.98 h; trim 68.83, list -80.21; boiler room 4 holds 10866 m3
+    the same without the bunker (bunker 0)                          FOUNDERS at 5.40 h; trim 68.88, list -80.21; boiler room 4 holds 10870 m3
+    the same, wMul 1.397 alone                                      FOUNDERS at 6.07 h; trim 68.87, list -80.21; boiler room 4 holds 11876 m3
+    the same, aDown 0.1545 alone                                    FOUNDERS at 6.12 h; trim 68.90, list -80.21; boiler room 4 holds 10848 m3
+    the same, fOpen 0.01278 alone                                   afloat to 8.00 h; trim 8.53, list -1.07; boiler room 4 holds 28 m3
+  A-kept (e89): 0.79554 m2, wMul 1.1, aDown 0.24, fOpen 0.01879     afloat to 8.00 h; trim 8.53, list -1.05; boiler room 4 holds 32 m3
+
+  Hackett and Bedford's split at 0.83983 m2, fOpen 0.01278: the what-if over wMul and aDown
+    wMul 1.036, aDown 0.2815: afloat to 8.00 h; trim 8.53, list -1.07; boiler room 4 holds 28 m3
+    wMul 1.036, aDown 0.2400: afloat to 8.00 h; trim 8.53, list -1.08; boiler room 4 holds 31 m3
+    wMul 1.036, aDown 0.2000: afloat to 8.00 h; trim 8.53, list -1.07; boiler room 4 holds 33 m3
+    wMul 1.100, aDown 0.2815: afloat to 8.00 h; trim 8.53, list -1.05; boiler room 4 holds 29 m3
+    wMul 1.100, aDown 0.2400: afloat to 8.00 h; trim 8.53, list -1.06; boiler room 4 holds 30 m3
+    wMul 1.100, aDown 0.2000: FOUNDERS at 7.16 h; trim 68.82, list -80.21; boiler room 4 holds 11418 m3
+    wMul 1.150, aDown 0.2815: afloat to 8.00 h; trim 8.53, list -1.06; boiler room 4 holds 30 m3
+    wMul 1.150, aDown 0.2400: afloat to 8.00 h; trim 8.53, list -1.05; boiler room 4 holds 32 m3
+    wMul 1.150, aDown 0.2000: FOUNDERS at 6.72 h; trim 68.88, list -80.21; boiler room 4 holds 11393 m3
+    wMul 1.250, aDown 0.2815: afloat to 8.00 h; trim 9.33, list -1.57; boiler room 4 holds 2394 m3
+    wMul 1.250, aDown 0.2400: afloat to 8.00 h; trim 8.53, list -1.06; boiler room 4 holds 34 m3
+    wMul 1.250, aDown 0.2000: FOUNDERS at 6.15 h; trim 68.81, list -80.21; boiler room 4 holds 11359 m3
+
+(2026-11-21T02:19:52.620Z)

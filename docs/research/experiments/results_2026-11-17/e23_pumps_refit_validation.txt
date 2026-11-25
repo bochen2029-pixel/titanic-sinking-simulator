@@ -1,0 +1,14 @@
+e23: the validation cases under the committed flow parameters and under the refit with the pumps
+  case                                          committed                     refit
+  Titanic 1912, pumps as worked                 founders 159.9 min            founders 156.9 min
+  Titanic 1912, no pumps                        founders 157.3 min            founders 154.5 min
+  Four forward compartments (Wilding: floats)   afloat, trim 2.0 deg          afloat, trim 2.0 deg
+  Five forward compartments (Wilding: sinks)    founders 134.9 min            founders 132.5 min
+  Olympic-Hawke 1911 (returned to port)         afloat, trim -0.7 deg         afloat, trim -0.7 deg
+  Britannic 1916 (sank in about 55 min)         founders 50.8 min             founders 50.2 min
+  Britannic, portholes shut                     afloat, trim 8.8 deg          afloat, trim 8.8 deg
+  Titanic damage without the BR5 seam           founders 192.4 min            founders 189.1 min
+  Titanic damage stopping at hold 3             afloat, trim 2.0 deg          afloat, trim 2.0 deg
+  Titanic damage, bulkheads to D deck           founders 171.5 min            founders 166.8 min
+  Titanic damage, bulkheads to B deck           afloat, trim 8.1 deg          afloat, trim 8.1 deg
+  Titanic damage, doors left open               founders 182.6 min            founders 179.9 min

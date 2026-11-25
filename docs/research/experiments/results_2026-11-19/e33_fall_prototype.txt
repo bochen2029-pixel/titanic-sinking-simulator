@@ -1,0 +1,72 @@
+== BODIES (wholly flooded; the model's slices and the girder's weights)
+whole  moving mass t 159845 (structure 49021) | weight in water t 31076 | added mass across t 126560 | centre of mass x -3.4 | plan m2 6090 | closed-form flat fall m/s 9.83 | largest section m2 624
+bow    moving mass t 94181 (structure 29082) | weight in water t 18239 | added mass across t 72333 | centre of mass x 40.7 | plan m2 3463 | closed-form flat fall m/s 9.99 | largest section m2 624
+stern  moving mass t 65664 (structure 19938) | weight in water t 12837 | added mass across t 54227 | centre of mass x -66.7 | plan m2 2627 | closed-form flat fall m/s 9.62 | largest section m2 624
+whole  weight in water acts at x -2.7 ; the plan's middle x -6.4 ; lever 3.7 m (+ = the forward end heavy)
+bow    weight in water acts at x 43.5 ; the plan's middle x 42.0 ; lever 1.4 m (+ = the forward end heavy)
+stern  weight in water acts at x -68.2 ; the plan's middle x -70.3 ; lever 2.1 m (+ = the forward end heavy)
+
+== CHECK: a flat release reaches the closed form
+bow flat from rest: speed at 1,500 m 9.81 m/s, angle -0.5 deg, drift 249 m
+stern flat from rest: speed at 1,500 m 9.62 m/s, angle -0.0 deg, drift 59 m
+
+== THE BOW (x > -23), wholly flooded, let go nose down
+bow, 10 deg nose down, 2 m/s along her         to the bed  6.57 min | along her heading    674 m | arrives   9.7 m/s (down 9.6, along 1.4) at    -0 deg | fastest 11.6 m/s | below 600 m her angle ran -3 to 1
+bow, 20 deg nose down, 2 m/s along her         to the bed  6.55 min | along her heading    783 m | arrives   9.7 m/s (down 9.6, along 1.4) at    -0 deg | fastest 13.9 m/s | below 600 m her angle ran -4 to 2
+bow, 30 deg nose down, 2 m/s along her         to the bed  6.51 min | along her heading    902 m | arrives   9.7 m/s (down 9.6, along 1.4) at    -0 deg | fastest 16.9 m/s | below 600 m her angle ran -5 to 12
+bow, 45 deg nose down, 2 m/s along her         to the bed  6.37 min | along her heading   1094 m | arrives   9.7 m/s (down 9.6, along 1.4) at    -0 deg | fastest 21.7 m/s | below 600 m her angle ran -6 to 21
+bow, 60 deg nose down, 2 m/s along her         to the bed  6.07 min | along her heading   1287 m | arrives   9.7 m/s (down 9.6, along 1.4) at    -0 deg | fastest 26.8 m/s | below 600 m her angle ran -30 to 23
+  the same at 20 deg, coefficient by coefficient:
+  bow 20 deg, cross-flow drag 0.8              to the bed  5.90 min | along her heading    655 m | arrives  10.8 m/s (down 10.7, along 1.2) at    -0 deg | fastest 14.1 m/s | below 600 m her angle ran -3 to 2
+  bow 20 deg, cross-flow drag 1.4              to the bed  7.69 min | along her heading   1041 m | arrives   8.3 m/s (down 8.1, along 1.6) at    -0 deg | fastest 14.0 m/s | below 600 m her angle ran -5 to 3
+  bow 20 deg, no lift at the blunt end         to the bed  6.33 min | along her heading    194 m | arrives   9.9 m/s (down 9.9, along 0.4) at    -0 deg | fastest 10.9 m/s | below 600 m her angle ran -1 to 2
+  bow 20 deg, added mass across x 1.0          to the bed  6.53 min | along her heading    933 m | arrives   9.8 m/s (down 9.6, along 1.7) at    -0 deg | fastest 14.6 m/s | below 600 m her angle ran -5 to 9
+  bow 20 deg, added mass across x 1.5          to the bed  6.58 min | along her heading    644 m | arrives   9.7 m/s (down 9.6, along 1.0) at    -0 deg | fastest 13.2 m/s | below 600 m her angle ran -3 to 2
+  bow 20 deg, nose drag 0.2                    to the bed  6.56 min | along her heading    813 m | arrives   9.7 m/s (down 9.6, along 1.4) at    -0 deg | fastest 14.4 m/s | below 600 m her angle ran -5 to 2
+  bow 20 deg, nose drag 0.8 (torn decks)       to the bed  6.54 min | along her heading    718 m | arrives   9.7 m/s (down 9.6, along 1.3) at    -0 deg | fastest 12.9 m/s | below 600 m her angle ran -3 to 3
+
+== THE STERN (x < -23), wholly flooded (its air gone), let go with its broken end down
+stern, broken end 85 deg down                  to the bed  6.42 min | along her heading    116 m | arrives   9.5 m/s (down 9.5, along 0.5) at    -0 deg | fastest 15.9 m/s | below 600 m her angle ran -11 to 2
+stern, broken end 70 deg down                  to the bed  6.48 min | along her heading    139 m | arrives   9.5 m/s (down 9.5, along 0.5) at    -0 deg | fastest 13.3 m/s | below 600 m her angle ran -2 to 2
+stern, broken end 45 deg down                  to the bed  6.53 min | along her heading    167 m | arrives   9.5 m/s (down 9.5, along 0.5) at    -0 deg | fastest 10.3 m/s | below 600 m her angle ran -2 to 1
+stern, broken end 20 deg down                  to the bed  6.56 min | along her heading    190 m | arrives   9.5 m/s (down 9.5, along 0.5) at    -0 deg | fastest 9.7 m/s | below 600 m her angle ran -1 to 0
+  with air kept (m3 at the surface, at x -90), 70 deg:
+  stern 70 deg, air 2000 m3                    to the bed  6.49 min | along her heading    145 m | arrives   9.5 m/s (down 9.5, along 0.5) at    -0 deg | fastest 13.2 m/s | below 600 m her angle ran -2 to 2
+  stern 70 deg, air 6000 m3                    to the bed  6.50 min | along her heading    155 m | arrives   9.5 m/s (down 9.5, along 0.5) at    -0 deg | fastest 13.2 m/s | below 600 m her angle ran -2 to 3
+  stern 70 deg, air 11000 m3                   to the bed  6.52 min | along her heading    166 m | arrives   9.5 m/s (down 9.5, along 0.5) at    -0 deg | fastest 13.1 m/s | below 600 m her angle ran -3 to 3
+
+== ONE PIECE (the model's pose at the founder flag: 69 deg by the head, sinking 1.2 m/s)
+whole, no air                                  to the bed  6.01 min | along her heading    517 m | arrives   9.8 m/s (down 9.7, along 1.0) at    -0 deg | fastest 24.1 m/s | below 600 m her angle ran -11 to 25
+whole, 53,113 m3 of air aft, all kept          to the bed 60.00 min | along her heading  -5176 m | arrives  27.0 m/s (down -24.6, along 11.0) at  -141 deg | fastest 35.7 m/s | below 600 m her angle ran 1000000000 to -1000000000
+whole, 20,000 m3 of air aft kept               to the bed  5.88 min | along her heading    569 m | arrives   9.8 m/s (down 9.7, along 1.0) at     0 deg | fastest 29.1 m/s | below 600 m her angle ran -17 to 28
+
+== THE BOW AT 20 DEG, every 30 s: t s, depth m, along m, angle deg, u m/s, w m/s
+          0    30.0     0.0   -20.0     2.0     0.0
+         30   287.4   204.7    -2.8     9.9    -8.2
+         60   549.5   342.2     7.8    -1.7    -9.9
+         90   844.5   371.6    -2.1     2.7    -9.5
+        120  1131.5   429.1     1.8     0.7    -9.8
+        150  1425.5   456.4    -1.0     1.4    -9.7
+        180  1715.2   500.1     0.2     1.4    -9.7
+        210  2005.9   538.7    -0.0     1.2    -9.7
+        240  2296.5   577.3    -0.2     1.4    -9.7
+        270  2586.3   617.9     0.0     1.3    -9.7
+        300  2876.0   657.2    -0.1     1.3    -9.6
+        330  3165.3   697.5    -0.1     1.4    -9.6
+        360  3454.3   737.8    -0.1     1.4    -9.6
+        390  3742.9   778.3    -0.1     1.4    -9.6
+
+== THE STERN AT 70 DEG, every 30 s
+          0    60.0     0.0   -70.0     1.0     0.0
+         30   344.4    18.3    11.4    -6.3    -8.2
+         60   620.4   -24.6     2.2    -0.3    -9.6
+         90   908.9   -13.9     0.4     0.3    -9.6
+        120  1197.7     1.4    -0.1     0.5    -9.6
+        150  1486.1    17.0    -0.1     0.5    -9.6
+        180  1773.8    32.4    -0.0     0.5    -9.6
+        210  2061.7    47.9    -0.0     0.5    -9.6
+        240  2349.4    63.3    -0.0     0.5    -9.6
+        270  2636.7    78.6    -0.0     0.5    -9.6
+        300  2923.8    93.9    -0.0     0.5    -9.6
+        330  3210.5   109.2    -0.0     0.5    -9.6
+        360  3497.0   124.5    -0.0     0.5    -9.5

@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RMS Titanic: The Watch. User Guide, v1</title>
+<style>
+  :root {
+    --navy: #0b1f33; --navy2: #13304d; --ink: #1d2733; --muted: #5b6878; --rule: #d9dee5;
+    --brass: #b08d57; --brass2: #d8c29a; --ivory: #fbf8f2; --sea: #2c6e91; --ok: #2f7d4f; --warn: #b7791f; --crit: #a33a30;
+  }
+  @page { size: Letter; margin: 0.8in 0.85in 0.85in 0.85in; }
+  @page :first { margin: 0; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html, body { margin: 0; padding: 0; background: #fff; color: var(--ink); }
+  body { font: 10.4pt/1.55 "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+  h1, h2, h3, .serif { font-family: Georgia, "Cambria", "Times New Roman", serif; font-weight: normal; color: var(--navy); }
+  h2 { font-size: 22pt; line-height: 1.15; margin: 0 0 4pt; }
+  h3 { font-size: 13.5pt; margin: 18pt 0 6pt; color: var(--navy2); }
+  h4 { font: 600 9pt/1.3 "Segoe UI", Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--brass); margin: 14pt 0 4pt; }
+  p { margin: 0 0 7pt; }
+  a { color: var(--sea); text-decoration: none; }
+  code, kbd { font: 9pt Consolas, "Cascadia Mono", monospace; }
+  kbd { display: inline-block; min-width: 1.5em; text-align: center; padding: 0 4pt; border: 1px solid #b9c2cd; border-bottom-width: 2px; border-radius: 3px; background: #f6f8fa; color: var(--navy); }
+  ul, ol { margin: 0 0 8pt; padding-left: 16pt; } li { margin: 2pt 0; }
+  .chapter { page-break-before: always; }
+  .eyebrow { font: 600 8.5pt/1 "Segoe UI", Arial, sans-serif; letter-spacing: .18em; text-transform: uppercase; color: var(--brass); margin-bottom: 6pt; }
+  .lede { font-size: 11.5pt; color: var(--muted); margin-bottom: 12pt; }
+  .rule { height: 2px; background: linear-gradient(90deg, var(--brass), rgba(176,141,87,0)); margin: 6pt 0 14pt; border: 0; }
+  table { width: 100%; border-collapse: collapse; margin: 6pt 0 10pt; font-size: 9.6pt; page-break-inside: avoid; }
+  th { text-align: left; font: 600 8.5pt "Segoe UI", Arial, sans-serif; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); border-bottom: 1.5px solid var(--navy); padding: 4pt 6pt; }
+  td { border-bottom: 1px solid var(--rule); padding: 4.5pt 6pt; vertical-align: top; }
+  td:first-child { font-weight: 600; color: var(--navy); white-space: nowrap; }
+  .box { border-left: 3px solid var(--brass); background: var(--ivory); padding: 8pt 11pt; margin: 8pt 0 10pt; page-break-inside: avoid; }
+  .box.tip { border-color: var(--sea); background: #f2f7fa; }
+  .box b.lab { font: 600 8pt "Segoe UI", Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 2pt; }
+  .box.tip b.lab { color: var(--sea); }
+  figure { margin: 8pt 0 12pt; page-break-inside: avoid; }
+  figure img { width: 100%; border: 1px solid var(--rule); border-radius: 3px; display: block; }
+  figure.half img { width: 62%; margin: 0 auto; }
+  figcaption { font-size: 8.8pt; color: var(--muted); margin-top: 4pt; font-style: italic; }
+  .two { display: flex; gap: 14pt; } .two > div { flex: 1; }
+  .steps { counter-reset: s; list-style: none; padding: 0; }
+  .steps li { counter-increment: s; position: relative; padding: 0 0 6pt 30pt; margin: 0 0 4pt; }
+  .steps li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 20pt; height: 20pt; border-radius: 50%; background: var(--navy); color: #fff; font: 600 9.5pt/20pt Georgia, serif; text-align: center; }
+  .chip { display: inline-block; font: 600 8.5pt "Segoe UI", Arial, sans-serif; padding: 0 6pt; border-radius: 9pt; border: 1px solid #c8d1db; color: var(--navy); background: #f4f6f9; }
+  .dot { display: inline-block; width: 8pt; height: 8pt; border-radius: 50%; margin-right: 4pt; vertical-align: middle; }
+  /* cover */
+  .cover { width: 8.5in; height: 11in; background: radial-gradient(ellipse at 70% 15%, #1d4467 0%, var(--navy) 55%, #06121e 100%); color: #f3efe6; position: relative; overflow: hidden; }
+  .cover .frame { position: absolute; inset: 0.55in; border: 1px solid rgba(216,194,154,.45); }
+  .cover .inner { position: absolute; left: 1.1in; right: 1.1in; top: 2.3in; }
+  .cover .kick { font: 600 9pt/1 "Segoe UI", Arial, sans-serif; letter-spacing: .32em; text-transform: uppercase; color: var(--brass2); }
+  .cover h1 { font-size: 46pt; line-height: 1.02; color: #fbf6ea; margin: 18pt 0 10pt; }
+  .cover .sub { font-family: Georgia, serif; font-size: 16pt; color: #d7cfbf; font-style: italic; }
+  .cover .line { width: 1.6in; height: 2px; background: var(--brass); margin: 26pt 0 20pt; }
+  .cover .meta { font-size: 10pt; color: #b9c3cf; line-height: 1.7; }
+  .cover .foot { position: absolute; left: 1.1in; right: 1.1in; bottom: 1.05in; font-size: 8.8pt; color: #8fa0b2; border-top: 1px solid rgba(216,194,154,.3); padding-top: 9pt; display: flex; justify-content: space-between; }
+  .cover svg { position: absolute; right: -0.4in; bottom: 2.15in; width: 7.2in; opacity: .9; }
+  /* contents */
+  .toc { list-style: none; padding: 0; margin: 10pt 0 0; }
+  .toc li { display: flex; align-items: baseline; padding: 6pt 0; border-bottom: 1px solid var(--rule); }
+  .toc .n { font-family: Georgia, serif; color: var(--brass); width: 28pt; font-size: 13pt; }
+  .toc .t { font-family: Georgia, serif; font-size: 12.5pt; color: var(--navy); }
+  .toc .d { margin-left: auto; color: var(--muted); font-size: 9pt; text-align: right; max-width: 3.2in; }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ COVER -->
+<section class="cover">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="kick">RMS Titanic · 14 April 1912</div>
+    <h1>The Watch</h1>
+    <div class="sub">A flooding and ship-handling simulator. User Guide</div>
+    <div class="line"></div>
+    <div class="meta">First version (v1) · 17 November 2026<br>For the build at commit 2ec58b5</div>
+  </div>
+  <svg viewBox="0 0 700 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M40 78 L612 78 L655 52 L600 52 L585 60 L120 60 L60 66 Z" fill="none" stroke="#d8c29a" stroke-width="1.4"/>
+    <path d="M150 60 L150 44 L520 44 L520 60" fill="none" stroke="#d8c29a" stroke-width="1"/>
+    <g fill="none" stroke="#d8c29a" stroke-width="1.1">
+      <path d="M215 44 L219 14 L235 14 L231 44"/><path d="M300 44 L304 14 L320 14 L316 44"/>
+      <path d="M385 44 L389 14 L405 14 L401 44"/><path d="M470 44 L474 14 L490 14 L486 44"/>
+    </g>
+    <path d="M110 60 L104 8 M600 52 L606 4" stroke="#d8c29a" stroke-width=".8"/>
+    <path d="M0 92 Q60 86 120 92 T240 92 T360 92 T480 92 T600 92 T720 92" fill="none" stroke="#5e88a8" stroke-width="1"/>
+    <path d="M0 104 Q60 98 120 104 T240 104 T360 104 T480 104 T600 104 T720 104" fill="none" stroke="#3f6684" stroke-width=".8"/>
+  </svg>
+  <div class="foot"><span>titanic-sinking-simulator · MIT licence</span><span>Draft for review</span></div>
+</section>
+
+<!-- ============================================================ CONTENTS -->
+<section class="chapter">
+  <div class="eyebrow">Contents</div>
+  <h2>What is in this guide</h2>
+  <hr class="rule">
+  <ol class="toc">
+    <li><span class="n">1</span><span class="t">The simulator in one page</span><span class="d">what it is, what it models, what it does not</span></li>
+    <li><span class="n">2</span><span class="t">Quick start: your first watch</span><span class="d">eight steps from opening the page to the forecast</span></li>
+    <li><span class="n">3</span><span class="t">The screen</span><span class="d">readouts, the 3D view, the panel, the damage diagram</span></li>
+    <li><span class="n">4</span><span class="t">The Bridge: wheel and telegraph</span><span class="d">1912 helm orders, engine orders, keys</span></li>
+    <li><span class="n">5</span><span class="t">Playing a watch</span><span class="d">the bells, the outcomes, the forecast, replays and seeds</span></li>
+    <li><span class="n">6</span><span class="t">Scenarios and what-ifs</span><span class="d">damage presets, the hole tool, bulkheads and doors</span></li>
+    <li><span class="n">7</span><span class="t">Her systems</span><span class="d">coal to steam to screws, lights, doors and pumps</span></li>
+    <li><span class="n">8</span><span class="t">The evidence</span><span class="d">the run against the eyewitness record</span></li>
+    <li><span class="n">9</span><span class="t">How the model works, briefly</span><span class="d">the physics, the calibration, the honest limits</span></li>
+    <li><span class="n">10</span><span class="t">Reference</span><span class="d">keys, glossary, running it yourself</span></li>
+  </ol>
+  <div class="box" style="margin-top:22pt"><b class="lab">About this draft</b>
+  This is the first version of the guide. The screenshots come from the simulator's own test runs and may predate small
+  changes to the panel (the Systems tab's Pumps row, for example). Names of buttons and tabs are as they appear in the
+  current build.</div>
+</section>
+
+<!-- ============================================================ 1 -->
+<section class="chapter">
+  <div class="eyebrow">Chapter 1</div>
+  <h2>The simulator in one page</h2>
+  <hr class="rule">
+  <p class="lede">You stand the watch on the bridge of RMS Titanic at 11:39 pm on 14 April 1912. She makes 22½ knots on a
+  course of 266°. Somewhere ahead is ice. What you order, and when, decides what the ice does to her, and the flooding
+  model then decides whether and how she sinks.</p>
+  <h4>What it models</h4>
+  <ul>
+    <li><b>Flooding</b> through 16 watertight compartments, each split port and starboard and above and below E deck:
+      64 spaces joined by 290 water paths (hull openings, doors, deck openings, the tops of the bulkheads).</li>
+    <li><b>Her pose</b>: heave, trim and list as a damped rigid body, from the drafts of the night.</li>
+    <li><b>Handling</b>: her turning and stopping, fitted to the trial record of the three sister ships.</li>
+    <li><b>The iceberg</b>: a body of ice she can strike, graze, dent or crush her bow against. The damage is made by the
+      contact, not painted on.</li>
+    <li><b>Her machinery</b>: coal, fires in six boiler rooms, steam, two engines and a turbine, steering engines,
+      dynamos, watertight doors and bilge pumps, each failing when water reaches it.</li>
+  </ul>
+  <h4>What it is calibrated to</h4>
+  <p>The flooding is fitted to an eyewitness-derived timeline of her trim (Halpern, 2023) and her foundering about
+  160 minutes after the collision. The reconstructed 1912 watch founders about 157 minutes after the touch. Cases the
+  fit never saw (four or five compartments open, the Hawke collision of 1911, Britannic in 1916) are kept as checks.</p>
+  <div class="box"><b class="lab">Read outcomes as estimates</b>
+  Several inputs are informed guesses with a physical meaning: the strength of the plating, the berg's mass, the force
+  at which a bow crushes, some of the engineers' practice. The model labels each of them in its code. A night's outcome
+  is a well-founded estimate, not a verdict.</div>
+  <h4>What it does not do</h4>
+  <ul>
+    <li>No break-up of the hull girder: her last minute is a plunge, not the break at about 2:17.</li>
+    <li>No trapped air, and no buoyancy from the superstructure above B deck.</li>
+    <li>Most damage presets lie stopped and unpumped; only the 1912 run and a played watch work the pumps.</li>
+  </ul>
+</section>
+
+<!-- ============================================================ 2 -->
+<section class="chapter">
+  <div class="eyebrow">Chapter 2</div>
+  <h2>Quick start: your first watch</h2>
+  <hr class="rule">
+  <p class="lede">Ten minutes from opening the page to your first forecast.</p>
+  <ol class="steps">
+    <li><b>Open the simulator.</b> It opens on <i>The watch, 14 April 1912</i>, with the Bridge on the stage. Before the
+      bells nothing is in sight, and the clock runs at real time.</li>
+    <li><b>Turn the sound on</b> (Run tab) if you want the lookout's bell, the telegraph's gong and the engines' beat. Sound
+      starts after your first click or key, as browsers require.</li>
+    <li><b>Wait for the bells.</b> Three bells from the crow's nest: "Iceberg right ahead!" The banner reads
+      <span class="chip">ICE AHEAD</span> and the Lookout readout gives the range.</li>
+    <li><b>Give your order.</b> Put the wheel over (<span class="chip">Hard to port</span> or
+      <span class="chip">Hard to starboard</span>, or keys <kbd>A</kbd> / <kbd>D</kbd>) and ring the telegraph (<kbd>↑</kbd>
+      <kbd>↓</kbd>). The time from the bells to your first order is your reaction time.</li>
+    <li><b>Watch her answer.</b> A ship of 46,000 tons turns slowly: she needs way on her for the rudder to bite, and the
+      first seconds go to the helm going over.</li>
+    <li><b>Read the outcome.</b> She clears the ice, is dented, has seams opened along her side, or runs her stem into it.</li>
+    <li><b>Read the forecast.</b> After the ice the core forecasts the sinking ("Founders at …") and lists how other
+      reaction times would have fared on the same night.</li>
+    <li><b>Try again.</b> <span class="chip">This night again</span> repeats the same berg; <span class="chip">Another night</span>
+      draws a new one; <span class="chip">Watch the 1912 orders</span> plays the reconstructed orders of the night.</li>
+  </ol>
+  <div class="box tip"><b class="lab">Tip</b>
+  On the 1912 night the order came about 20 seconds after the bells, and she was holed along the starboard side. An
+  order within about 15 seconds clears the berg; much later, and she strikes stem first.</div>
+  <figure class="half"><img src="../site/v3-watch-bells.png" alt="The watch at the bells"><figcaption>The watch at the bells: the readouts, the
+  view from astern, the Bridge panel and the damage diagram.</figcaption></figure>
+</section>
+
+<!-- ============================================================ 3 -->
+<section class="chapter">
+  <div class="eyebrow">Chapter 3</div>
+  <h2>The screen</h2>
+  <hr class="rule">
+  <figure><img src="../site/v3-watch-bridge.png" alt="The full screen with the Bridge"><figcaption>The screen on a
+  watch: readouts top left, view controls top right, the Bridge bottom left, the panel on the right, the damage diagram
+  below.</figcaption></figure>
+  <h4>Readouts (top left)</h4>
+  <table>
+    <tr><th>Readout</th><th>What it shows</th></tr>
+    <tr><td>Clock</td><td>Ship's time, with seconds since the bells on a watch.</td></tr>
+    <tr><td>Trim · List</td><td>Degrees by the bow or stern, and to port or starboard.</td></tr>
+    <tr><td>Water · Inflow</td><td>Tons of sea water aboard, and tons a minute coming in.</td></tr>
+    <tr><td>Draft fwd / aft</td><td>Metres at the bow and the stern.</td></tr>
+  </table>
+  <h4>The view (top right)</h4>
+  <table>
+    <tr><th>Control</th><th>Effect</th></tr>
+    <tr><td>Quarter · Profile · Below · Plan · Astern</td><td>Camera positions around and under the ship.</td></tr>
+    <tr><td>Bridge</td><td>From her bridge, looking ahead: what the officer of the watch saw.</td></tr>
+    <tr><td>Screws</td><td>Under the stern: the three screws turning with their shafts, and the rudder.</td></tr>
+    <tr><td>X-ray · Columns</td><td>See-through hull showing the water in each space; water columns by compartment.</td></tr>
+    <tr><td>Follow · Lights</td><td>Keep the camera on her; show her lights (they fail when her dynamos do).</td></tr>
+  </table>
+  <h4>The panel (right)</h4>
+  <p>Five tabs: <b>Run</b> (the watch, scenarios, time, forecast, log), <b>Damage</b> (the hole tool and openings),
+  <b>Bulkheads</b> (doors and bulkhead heights), <b>Systems</b> (her machinery) and <b>Evidence</b> (the run against
+  the record). Chapters 5 to 8 take them in turn.</p>
+  <h4>The damage diagram (bottom)</h4>
+  <p>Her profile in the ship's frame: the fifteen bulkheads lettered A to P, the compartments from the forepeak (FP)
+  through the holds (H1 to H3), the six boiler rooms (BR6 to BR1), the engine, turbine and electric rooms, to the
+  after peak. Water fills each compartment as it comes in; the cyan line is the sea surface.</p>
+</section>
+
+<!-- ============================================================ 4 -->
+<section class="chapter">
+  <div class="eyebrow">Chapter 4</div>
+  <h2>The Bridge: wheel and telegraph</h2>
+  <hr class="rule">
+  <p class="lede">Two controls ran the ship in 1912: the wheel, through the steering engines, and the engine-order
+  telegraph to the engine room. The Bridge panel gives you both.</p>
+  <h4>The wheel, and the 1912 orders</h4>
+  <p>In 1912 helm orders were given as tiller orders, the reverse of today's. "Hard-a-starboard" put the tiller to
+  starboard, the rudder to port, and swung her head to <b>port</b>. Each button says both:</p>
+  <table>
+    <tr><th>Button</th><th>The 1912 order</th><th>Her head goes</th></tr>
+    <tr><td>Hard to port</td><td>"hard-a-starboard"</td><td>to port</td></tr>
+    <tr><td>Hard to starboard</td><td>"hard-a-port"</td><td>to starboard</td></tr>
+    <tr><td>Midships</td><td>"midships"</td><td>rudder centred</td></tr>
+  </table>
+  <p>The slider sets any angle between; the rudder dial shows where it is. The steering engines move it at a few degrees
+  a second, and they need steam.</p>
+  <h4>The engine-order telegraph</h4>
+  <p>Seven positions, Full, Half and Slow astern, Stop, and Slow, Half and Full ahead: about 75, 50 and 30 revolutions
+  a minute. The two reciprocating engines drive the wing screws; their exhaust drives the turbine and the centre screw,
+  ahead only, and only at Half or Full with both engines above 40 rpm. Reversing an engine takes time: it runs down,
+  the valve gear is reversed, and it comes up astern.</p>
+  <h4>Keys</h4>
+  <table>
+    <tr><th>Key</th><th>Order</th></tr>
+    <tr><td><kbd>A</kbd> · <kbd>D</kbd></td><td>Hard to port · hard to starboard</td></tr>
+    <tr><td><kbd>S</kbd></td><td>Midships</td></tr>
+    <tr><td><kbd>←</kbd> · <kbd>→</kbd></td><td>The wheel five degrees to port · to starboard</td></tr>
+    <tr><td><kbd>↑</kbd> · <kbd>↓</kbd></td><td>The telegraph one step ahead · astern</td></tr>
+  </table>
+  <div class="box tip"><b class="lab">Seamanship in the model</b>
+  The rudder works only on water moving past it: stopped, she will not turn however hard you put it over, and going
+  astern the rudder works the other way, weakly. The faster she goes the faster she turns, but the further she runs
+  while turning.</div>
+  <div class="two">
+    <figure><img src="../site/v3-screws.png" alt="The stern gear"><figcaption>The Screws view: the wing screws turn
+    outward going ahead; the centre screw sits in its aperture before the rudder.</figcaption></figure>
+    <figure><img src="../site/v3-engines.png" alt="The engines"><figcaption>The engines, drawn from the model's
+    revolutions.</figcaption></figure>
+  </div>
+</section>
+
+<!-- ============================================================ 5 -->
+<section class="chapter">
+  <div class="eyebrow">Chapter 5</div>
+  <h2>Playing a watch</h2>
+  <hr class="rule">
+  <h4>The bells and your reaction time</h4>
+  <p>The lookout rings three bells when he sees the ice. On the 1912 night that was about 500 yards off. Your reaction
+  time runs from the bells to your first order. An order given before the bells counts as <i>hindsight</i>: it is
+  logged, but it is not a reaction.</p>
+  <h4>The four outcomes</h4>
+  <table>
+    <tr><th>Outcome</th><th>What happened</th></tr>
+    <tr><td><span class="dot" style="background:var(--ok)"></span>Clear</td><td>She passed the ice, and the readout says how far off her side it went.</td></tr>
+    <tr><td><span class="dot" style="background:#7c8a99"></span>Dented</td><td>She touched; plates dented, but no seam opened. No water.</td></tr>
+    <tr><td><span class="dot" style="background:var(--warn)"></span>Holed</td><td>Seams opened along her side, compartment by compartment: the 1912 kind of damage.</td></tr>
+    <tr><td><span class="dot" style="background:var(--crit)"></span>Stem into the ice</td><td>She struck head-on: the bow crushes and its compartments open. Wilding told the inquiry she would have come in with her bow crushed 80 to 100 feet.</td></tr>
+  </table>
+  <div class="two">
+    <figure><img src="../site/v3-watch-clear.png" alt="Clear of the ice"><figcaption>Clear: an early order.</figcaption></figure>
+    <figure><img src="../site/v3-watch-holed.png" alt="Holed"><figcaption>Holed along the starboard side.</figcaption></figure>
+  </div>
+  <h4>After the ice: the forecast</h4>
+  <p>Once the encounter is over, the core forecasts the sinking from the state of the moment: "Founders at 2:16 am,
+  2 h 37 min after the damage", or that she floats. The clock is then free, and you can let time run faster. The table
+  of other watches shows the same night with the order given at other times after the bells.</p>
+  <h4>Nights, seeds and levels</h4>
+  <ul>
+    <li><b>A night is its seed and its orders.</b> Every order is logged with the step it was given at, so
+      <span class="chip">Replay my watch</span> plays it again exactly. The address bar carries the night
+      (for example <code>#night=1912</code>), so a link reproduces it.</li>
+    <li><b>Another night</b> draws a berg from a seed: its size, its place relative to her track, and the range at which
+      it is seen. Type a seed in <i>Night (seed)</i> and press <span class="chip">Go</span> to choose one.</li>
+    <li><b>The ice on a drawn night</b> sets how hard the nights are: <i>Seen early</i>, <i>Any night</i> (the default),
+      or <i>Like 1912</i>, seen late and near her track.</li>
+    <li><b>Her speed</b> (22½, 18, 15, 10 knots) sets the speed she is making when the watch begins.</li>
+  </ul>
+  <div class="box"><b class="lab">How hard is it?</b>
+  Over 200 drawn nights on the default level, with the 1912 drill (helm hard over, reversed at the touch), an order at
+  the bells clears the ice 96 % of the time; at 20½ seconds, 49 %. With no order at all she strikes on 72 % of nights,
+  and stem-first on 44 %.</div>
+</section>
+
+<!-- ============================================================ 6 -->
+<section class="chapter">
+  <div class="eyebrow">Chapter 6</div>
+  <h2>Scenarios and what-ifs</h2>
+  <hr class="rule">
+  <p class="lede">Besides the watch, the Run tab's <i>Scenario</i> cards load damage cases that start at the collision,
+  with the ship stopped. They are the cases the flooding model was built and checked on.</p>
+  <table>
+    <tr><th>Scenario</th><th>What it is</th><th>In the model</th></tr>
+    <tr><td>Titanic, 14 April 1912</td><td>The iceberg damage along the starboard bow: six compartments holed, about 8 sq ft in all; doors closed; boiler rooms 5 and 4 pumped as they were</td><td>Founders at 2:16 am</td></tr>
+    <tr><td>Four forward compartments</td><td>Forepeak and holds 1 to 3 open. Wilding: she would have floated</td><td>Floats, 2° by the head</td></tr>
+    <tr><td>Five forward compartments</td><td>Add boiler room 6</td><td>Founders</td></tr>
+    <tr><td>Olympic and HMS Hawke, 1911</td><td>Rammed near the stern; two after compartments flooded</td><td>Floats; she reached port</td></tr>
+    <tr><td>Britannic, 1916 (approx.)</td><td>A mine on the starboard bow; failed doors; open portholes</td><td>Founders in about 50 min (record: about 55)</td></tr>
+    <tr><td>Undamaged hull</td><td>No damage: make your own with the hole tool</td><td>Floats</td></tr>
+  </table>
+  <h4>The Damage tab</h4>
+  <p>Choose the hole tool and a hole size, then tap the hull below the waterline to open it. Every opening is listed,
+  and <span class="chip">Remove all openings</span> clears them. <i>Before the collision</i> holds the settings that
+  apply from the start.</p>
+  <h4>The Bulkheads tab</h4>
+  <p>The watertight doors (<span class="chip">Close all from the bridge</span>, <span class="chip">Open all</span>), the
+  height of the bulkheads, and the table of the fifteen bulkheads: between which compartments each stands, its top
+  deck, its doors, and the water over it. Raising the bulkheads is the classic what-if: to D deck it buys minutes; to B
+  deck she floats in this model (Wilding thought she would still sink).</p>
+  <div class="box tip"><b class="lab">What-if</b>
+  Open the 1912 damage, then leave the watertight doors open: in this model she sinks <i>later</i>, about 2 h 59 min,
+  because the water spreads aft low down instead of tipping the bow.</div>
+  <figure class="half"><img src="../site/v3-watch-stem.png" alt="A stem strike"><figcaption>A stem strike: the bow
+  crushed in, the forward compartments open to the sea.</figcaption></figure>
+</section>
+
+<!-- ============================================================ 7 -->
+<section class="chapter">
+  <div class="eyebrow">Chapter 7</div>
+  <h2>Her systems</h2>
+  <hr class="rule">
+  <p class="lede">Her machinery needs each other, so failures cascade. The Systems tab shows each link and its state:
+  <span style="color:var(--ok)">working</span>, <span style="color:var(--warn)">short</span>, or
+  <span style="color:var(--crit)">failed</span>.</p>
+  <table>
+    <tr><th>Link</th><th>Needs</th><th>Fails when</th></tr>
+    <tr><td>Coal · Fires</td><td>Coal in the bunkers</td><td>Water reaches a boiler room's furnaces; the bunkers run dry; the fires are drawn</td></tr>
+    <tr><td>Steam</td><td>Fires</td><td>Pressure falls as fewer fires burn than she uses</td></tr>
+    <tr><td>Engines · Turbine</td><td>Steam; a dry engine room</td><td>Water at the crankshafts; the turbine room flooded</td></tr>
+    <tr><td>Screws · Way</td><td>Engines; water round the screws</td><td>Her stern rises and lifts them out</td></tr>
+    <tr><td>Steering</td><td>Steam; way on her</td><td>No steam: the rudder stays where it is</td></tr>
+    <tr><td>Dynamos</td><td>Steam; a dry dynamo flat</td><td>She goes dark; the emergency dynamos on D deck keep a little light</td></tr>
+    <tr><td>Doors</td><td>Current, to drop them from the bridge</td><td>In the dark only their floats and levers drop them</td></tr>
+    <tr><td>Pumps</td><td>Steam (no current)</td><td>Their own room floods; the steam fails</td></tr>
+  </table>
+  <h4>Orders to the stokehold and engine room</h4>
+  <ul>
+    <li><b>Draw the fires</b> in one boiler room or all of them. The steam already raised carries the load a while, then
+      the engines stop, then the dynamos, then the steering gear. On a watch the order goes in the log.</li>
+    <li><b>Coal in her bunkers</b> (<i>As loaded</i>, <i>2 h left</i>, <i>15 min left</i>) applies on restart and to the
+      next watch.</li>
+  </ul>
+  <h4>The pumps</h4>
+  <p>Her steam bilge pumps could put about 1,700 tons an hour overboard. On a watch the engineers put a room's own pumps
+  on it about five minutes after water comes in, and lead pumps from dry rooms to it through the bilge main half an hour
+  later. A pump stops when its own room floods. Against the 1912 damage they buy about two and a half minutes. Against
+  a small leak they can hold a room dry.</p>
+  <div class="box"><b class="lab">Blowing off</b>
+  When the engines stop with every fire lit, the safety valves lift: steam roars from the escape pipes on her funnels
+  until the stokers bank the fires, within the hour. With sound on, you hear it.</div>
+  <figure class="half"><img src="../site/v3-lights-ahead.png" alt="Her lights"><figcaption>Her navigation lights, by
+  the rules of 1910; they go out with her dynamos.</figcaption></figure>
+</section>
+
+<!-- ============================================================ 8 -->
+<section class="chapter">
+  <div class="eyebrow">Chapter 8</div>
+  <h2>The evidence</h2>
+  <hr class="rule">
+  <p class="lede">The Evidence tab plots the run against the record: her trim by the head, her list, and the flood water
+  aboard. The gold curve is the eyewitness reconstruction; the blue is the run; the dashed line is the forecast to the
+  end.</p>
+  <figure><img src="../viewer-evidence.png" alt="The Evidence tab"><figcaption>The Evidence tab during the 1912 run.</figcaption></figure>
+  <h4>The timeline check</h4>
+  <table>
+    <tr><th>Moment</th><th>Witnessed</th><th>Model</th></tr>
+    <tr><td>Trim at 12:10 · 12:55 · 1:20 · 2:15</td><td>1.8° · 3.2° · 4.0° · 10°</td><td>1.6° · 3.5° · 4.1° · 10.1°</td></tr>
+    <tr><td>Water over bulkhead F</td><td>12:55</td><td>12:56</td></tr>
+    <tr><td>Bridge under</td><td>2:15</td><td>2:14</td></tr>
+    <tr><td>Foundered</td><td>2:20 (the break about 2:17)</td><td>2:17</td></tr>
+  </table>
+  <p>The tab also lists <i>Cases the fit never saw</i>, says <i>How it works</i>, and names <i>What it leaves out</i>.</p>
+  <div class="box"><b class="lab">The list</b>
+  The model gets a small port list, the coal list of the evening amplified by free surfaces, but not the starboard list
+  seen just after the collision or the heavy port list late in the sinking. The candidates are worked out in the
+  project's notes.</div>
+</section>
+
+<!-- ============================================================ 9 -->
+<section class="chapter">
+  <div class="eyebrow">Chapter 9</div>
+  <h2>How the model works, briefly</h2>
+  <hr class="rule">
+  <h4>Flooding</h4>
+  <p>Water moves between the 64 spaces and the sea through orifice and weir laws, with a free surface shared by the two
+  halves of an open space. Her pose follows from the water's weight and where it lies. Four numbers were fitted to the
+  record: the aggregate opening (0.75 m², about 8 sq ft, spread over six compartments by Hackett and Bedford's flooded
+  capacities), and three widths and areas for the paths along and through E deck. The fit includes the pumps as they
+  were worked on the night.</p>
+  <h4>Handling</h4>
+  <p>A standard manoeuvring model (MMG) with her hull, three screws and rudder. Four numbers are fitted to a consensus of
+  the trial record of Olympic, Titanic and Britannic: the two points of turn in about 37 seconds, the tactical diameter,
+  and the stop from 60 revolutions. The resistance follows Holtrop's method; the screws going astern follow the
+  Wageningen B-series' four-quadrant data. The screws' positions were measured on the builder's side plan of 1911.</p>
+  <h4>The iceberg</h4>
+  <p>The berg is a free body of ice. Where her side presses into it, plating dents against the ice's crushing pressure,
+  and riveted seams open beyond a set dent. The opened area is fitted so that the reconstructed 1912 watch makes the
+  same opening as the calibrated damage. Head-on, the bow crushes at a force rising with the depth crushed, from
+  section-based crushing laws for her bow.</p>
+  <h4>Determinism</h4>
+  <p>The core is deterministic: a fixed step of a quarter second and fixed-order sums. A night replays bit for bit on
+  the same JavaScript engine. Two engines agree to many digits but not to the last bit, because library functions
+  such as <code>Math.pow</code> differ.</p>
+  <div class="box"><b class="lab">Where it is least certain</b>
+  The ice's crushing pressure at large contact areas, the berg's mass, the plating's strength, and the 1912 point
+  itself, which grazes the edge of a stem strike: a metre either way changes the damage a good deal.</div>
+</section>
+
+<!-- ============================================================ 10 -->
+<section class="chapter">
+  <div class="eyebrow">Chapter 10</div>
+  <h2>Reference</h2>
+  <hr class="rule">
+  <h4>Running it yourself</h4>
+  <p>The built site is in the project's <code>dist/</code> folder: serve it with any static web server and open it in
+  Edge, Chrome or another current browser. Rebuild it from the sources with <code>node tools/build_site.js</code> (no
+  installation needed). The headless tools run the same models without the browser:</p>
+  <table>
+    <tr><th>Command</th><th>What it does</th></tr>
+    <tr><td><code>node tools/night_run.js 1912 auto sink</code></td><td>The 1912 watch on its orders, then the sinking</td></tr>
+    <tr><td><code>node tools/night_sweep.js 200</code></td><td>How hard the drawn nights are, 200 of them</td></tr>
+    <tr><td><code>node tools/validate.js</code></td><td>The validation table</td></tr>
+    <tr><td><code>node tools/systems_tests.js</code></td><td>Each system made to fail, and what follows</td></tr>
+  </table>
+  <h4>Glossary</h4>
+  <table>
+    <tr><th>Term</th><th>Meaning</th></tr>
+    <tr><td>Trim · List</td><td>Her tilt fore and aft (by the head is positive) · from side to side</td></tr>
+    <tr><td>Bulkhead</td><td>A watertight wall across the hull; fifteen, lettered A (forward) to P</td></tr>
+    <tr><td>Compartment</td><td>The space between two bulkheads: FP, H1 to H3, BR6 to BR1, the engine rooms, the after holds</td></tr>
+    <tr><td>Way</td><td>Her motion through the water; a rudder needs it</td></tr>
+    <tr><td>Telegraph</td><td>The bridge's dial for engine orders, rung to the engine room</td></tr>
+    <tr><td>Wing screws</td><td>The two outer propellers, on the reciprocating engines; the centre screw is on the turbine</td></tr>
+    <tr><td>Seed</td><td>The number a drawn night is made from; the same seed gives the same night</td></tr>
+  </table>
+  <h4>Sources</h4>
+  <p>The British and American inquiries of 1912; Halpern's eyewitness reconstruction (2023) and articles; Hackett and
+  Bedford (1996); the trial record of the three sisters; The Shipbuilder and Engineering (1911); the Wageningen
+  B-series (MARIN, via Roddy, Hess and Faller, 2006). Each number in the model names its source, or says it is a guess,
+  in the project's research notes.</p>
+  <div class="box" style="margin-top:16pt"><b class="lab">Colophon</b>
+  User Guide v1, 17 November 2026: a first draft for review. Built from the project's own documentation and test runs.</div>
+</section>
+
+</body>
+</html>

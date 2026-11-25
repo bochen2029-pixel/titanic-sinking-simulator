@@ -1,0 +1,82 @@
+e120: the after watertight doors on the 1912 watch (member C, the landed model), 2026-11-24T07:26:51.157Z
+raised by hand (logged orders through Night.door): G, H, J, K at T+30; L, M, N, O at T+62
+
+== 0. as recorded (every door shut), to her hand-over (the default)
+   her end T+156.46 (she breaks: the onset), step 37792, fingerprint 0ae90224; 0 door orders logged; pumped 896 t
+   the onset: T+156.46 at x -10.93 m (hogging)
+   at her end: trim 6.93 deg by the head, list -3.80 deg (+ starboard)
+   doors open at her end: none
+   water in the rooms from the one the break cuts (x -10.93) aft, at her end (m3, full share):
+     BR2 1 (0 %); BR1 0 (0 %); RE 0 (0 %); TE 0 (0 %); EL 0 (0 %); T1 0 (0 %); T2 0 (0 %); AP 0 (0 %)
+     all of them: 1 m3 of 71270
+   her last hour (trim by the head / list, deg): T+96.0 3.87 / -6.21; T+111.0 4.19 / -7.21; T+126.0 4.57 / -1.89; T+141.0 4.99 / -5.66; T+151.0 5.47 / -11.21; T+156.0 6.76 / -5.34
+
+== a. the record's schedule, floats as modelled, to her hand-over (the default)
+   her end T+156.46 (she breaks: the onset), step 37792, fingerprint 0ae90224; 8 door orders logged; pumped 896 t
+   the onset: T+156.46 at x -10.93 m (hogging)
+   at her end: trim 6.93 deg by the head, list -3.80 deg (+ starboard)
+   doors open at her end: J, K, L, M, N, O
+   T+73.60 Watertight doors in bulkhead G released by their float: they fall shut
+   T+74.01 Watertight doors in bulkhead G shut
+   T+116.31 Watertight doors in bulkhead H released by their float: they fall shut
+   T+116.73 Watertight doors in bulkhead H shut
+   water in the rooms from the one the break cuts (x -10.93) aft, at her end (m3, full share):
+     BR2 1 (0 %); BR1 0 (0 %); RE 0 (0 %); TE 0 (0 %); EL 0 (0 %); T1 0 (0 %); T2 0 (0 %); AP 0 (0 %)
+     all of them: 1 m3 of 71270
+   her last hour (trim by the head / list, deg): T+96.0 3.87 / -6.21; T+111.0 4.19 / -7.21; T+126.0 4.57 / -1.89; T+141.0 4.99 / -5.66; T+151.0 5.47 / -11.21; T+156.0 6.76 / -5.34
+
+== b. the record's schedule, held open, to her hand-over (the default)
+   her end T+153.03 (she breaks: the onset), step 36969, fingerprint 071b1b73; 8 door orders logged; pumped 771 t
+   the onset: T+153.03 at x -10.93 m (hogging)
+   at her end: trim 7.44 deg by the head, list -15.53 deg (+ starboard)
+   doors open at her end: G (float disarmed), H (float disarmed), J (float disarmed), K (float disarmed), L (float disarmed), M (float disarmed), N (float disarmed), O (float disarmed)
+   water in the rooms from the one the break cuts (x -10.93) aft, at her end (m3, full share):
+     BR2 608 (5 %); BR1 0 (0 %); RE 0 (0 %); TE 0 (0 %); EL 0 (0 %); T1 0 (0 %); T2 0 (0 %); AP 0 (0 %)
+     all of them: 608 m3 of 71270
+   her last hour (trim by the head / list, deg): T+93.0 3.80 / -5.66; T+108.0 4.13 / -7.14; T+123.0 4.43 / -9.51; T+138.0 4.83 / -10.54; T+148.0 5.13 / -16.88; T+153.0 7.41 / -15.52
+
+== 0. as recorded (every door shut), to her flag (handover 'flag')
+   her end T+163.47 (she founders: the flag), step 39473, fingerprint 48b71712; 0 door orders logged; pumped 933 t
+   at her end: trim 68.83 deg by the head, list -80.21 deg (+ starboard)
+   doors open at her end: none
+   water in the rooms from BR2 aft, at her end (m3, full share):
+     BR2 8516 (71 %); BR1 4996 (70 %); RE 8831 (63 %); TE 6870 (61 %); EL 4185 (37 %); T1 0 (0 %); T2 0 (0 %); AP 0 (0 %)
+     all of them: 33398 m3 of 71270
+   her last hour (trim by the head / list, deg): T+103.0 4.02 / -6.91; T+118.0 4.35 / -7.58; T+133.0 4.76 / -3.08; T+148.0 5.27 / -9.09; T+158.0 7.44 / -5.03; T+163.0 56.94 / -80.21
+
+== a. the record's schedule, floats as modelled, to her flag (handover 'flag')
+   her end T+163.47 (she founders: the flag), step 39473, fingerprint 0fdcf0ad; 8 door orders logged; pumped 933 t
+   at her end: trim 68.85 deg by the head, list -80.21 deg (+ starboard)
+   doors open at her end: N, O
+   T+73.60 Watertight doors in bulkhead G released by their float: they fall shut
+   T+74.01 Watertight doors in bulkhead G shut
+   T+116.31 Watertight doors in bulkhead H released by their float: they fall shut
+   T+116.73 Watertight doors in bulkhead H shut
+   T+159.27 Watertight doors in bulkhead J released by their float: they fall shut
+   T+159.69 Watertight doors in bulkhead J shut
+   T+160.96 Watertight doors in bulkhead K released by their float: they fall shut
+   T+161.38 Watertight doors in bulkhead K shut
+   T+161.53 Watertight doors in bulkhead L released by their float: they fall shut
+   T+161.95 Watertight doors in bulkhead L shut
+   T+161.98 Watertight doors in bulkhead M released by their float: they fall shut
+   T+162.40 Watertight doors in bulkhead M shut
+   T+163.07 Watertight doors in bulkhead N released by their float: they fall shut
+   water in the rooms from BR2 aft, at her end (m3, full share):
+     BR2 8518 (71 %); BR1 4997 (70 %); RE 8831 (63 %); TE 6871 (61 %); EL 4190 (37 %); T1 0 (0 %); T2 0 (0 %); AP 0 (0 %)
+     all of them: 33407 m3 of 71270
+   her last hour (trim by the head / list, deg): T+103.0 4.02 / -6.91; T+118.0 4.35 / -7.58; T+133.0 4.76 / -3.08; T+148.0 5.27 / -9.09; T+158.0 7.44 / -5.03; T+163.0 56.95 / -80.21
+
+== b. the record's schedule, held open, to her flag (handover 'flag')
+   her end T+157.19 (she founders: the flag), step 37967, fingerprint c3dec02e; 8 door orders logged; pumped 779 t
+   at her end: trim 68.81 deg by the head, list -80.21 deg (+ starboard)
+   doors open at her end: G (float disarmed), H (float disarmed), J (float disarmed), K (float disarmed), L (float disarmed), M (float disarmed), N (float disarmed), O (float disarmed)
+   water in the rooms from BR2 aft, at her end (m3, full share):
+     BR2 8489 (70 %); BR1 4825 (68 %); RE 8885 (64 %); TE 6945 (62 %); EL 5008 (45 %); T1 0 (0 %); T2 0 (0 %); AP 0 (0 %)
+     all of them: 34152 m3 of 71270
+   her last hour (trim by the head / list, deg): T+97.0 3.89 / -6.41; T+112.0 4.20 / -8.41; T+127.0 4.56 / -6.30; T+142.0 4.94 / -12.48; T+152.0 6.20 / -19.08; T+157.0 64.21 / -80.21
+
+SUMMARY (member C)
+  0. as recorded (every door shut): hand-over T+156.46 (+0.00) at x -10.93; her flag T+163.47 (+0.00)
+  a. the record's schedule, floats as modelled: hand-over T+156.46 (+0.00) at x -10.93; her flag T+163.47 (+0.00)
+  b. the record's schedule, held open: hand-over T+153.03 (-3.43) at x -10.93; her flag T+157.19 (-6.28)
+(25 s)

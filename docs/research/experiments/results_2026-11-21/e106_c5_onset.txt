@@ -1,0 +1,16 @@
+e106 (the epoch, C5 and C1) on C:\code\titanic-sinking-simulator-main\.claude\worktrees\b1b2-strength-85bc79 at 1e18e98: the break's onset (B2) against the founder flag, today and with the switches on
+  T: minutes after the collision (the preset) or the touch (the watch); the onset: the first step where (M/Mu)^2 + (V/Vu)^2 reaches 1 at any station
+
+  run                         onset T    step   station                         M of Mu (GN m)   V of Vu (MN)   trim, list   flag T   flag less onset   water at the flag (m3): all, weighed
+  the preset, today            156.00   37441   x -10.93 (boiler room 2)         4.869 of 4.939  20.1 of 119.7    9.4, -3.6   158.28              2.28   98034, 98034
+  the preset, C5               159.28   38226   x -10.93 (boiler room 2)         4.904 of 4.939  14.3 of 119.7  10.5, -13.5   162.08              2.81   109045, 91676
+  the watch, today             156.67   37842   x -10.93 (boiler room 2)         4.869 of 4.939  20.2 of 119.7    9.3, -3.2   158.95              2.28   97801, 97801
+  the watch, C5                160.39   38734   x -10.93 (boiler room 2)         4.901 of 4.939  14.9 of 119.7  10.4, -11.7   163.26              2.87   108769, 91464
+  the watch, C5 and C1         160.37   38729   x -10.93 (boiler room 2)         4.902 of 4.939  14.9 of 119.7  10.4, -11.7   163.23              2.87   108684, 91404
+
+  the preset, C5          : the onset moves +3.27 min (station the same), the flag +3.80 min; the onset's move over the flag's 0.86
+  the watch, C5           : the onset moves +3.72 min (station the same), the flag +4.31 min; the onset's move over the flag's 0.86
+  the watch, C5 and C1    : the onset moves +3.70 min (station the same), the flag +4.28 min; the onset's move over the flag's 0.86
+  the watches' fingerprints: the watch, today 1a1bd179; the watch, C5 d637585c; the watch, C5 and C1 675afeae
+
+(e106 took 17 s)

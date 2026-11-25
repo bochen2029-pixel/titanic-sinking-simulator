@@ -8,6 +8,8 @@
 // "mounted" in version.json).
 //
 // Usage: node tools/mount.js --into <dir> [--home-href /games/ --home-text "All the games"] [--title "..."]
+//   --home-href fills the footer's <span id="footHome"></span> with " · <a href>text</a>" when the page has that span;
+//   on a page from before it, the link follows the footer's "· MIT" as before.
 'use strict';
 const fs = require('fs');
 const path = require('path');
@@ -44,9 +46,10 @@ let html = fs.readFileSync(path.join(target, 'index.html'), 'utf8');
 if (title) html = html.replace(/<title>[^<]*<\/title>/, `<title>${title.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</title>`);
 if (homeHref) {
   const link = ` · <a href="${homeHref}">${homeText.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</a>`;
-  const marker = '· MIT</div>';
-  if (!html.includes(marker)) { console.error('footer marker not found in index.html; the template changed'); process.exit(1); }
-  html = html.replace(marker, '· MIT' + link + '</div>');
+  const slot = '<span id="footHome"></span>', marker = '· MIT</div>';
+  if (html.includes(slot)) html = html.replace(slot, '<span id="footHome">' + link + '</span>');   // the footer's own place for it
+  else if (html.includes(marker)) html = html.replace(marker, '· MIT' + link + '</div>');          // a page from before that span
+  else { console.error('neither <span id="footHome"></span> nor "· MIT</div>" is in index.html; the footer changed'); process.exit(1); }
 }
 fs.writeFileSync(path.join(target, 'index.html'), html);
 const v = JSON.parse(fs.readFileSync(path.join(target, 'version.json'), 'utf8'));

@@ -1,0 +1,20 @@
+== (a) THE CORE RUN ON PAST THE FLAG (the 1912 damage preset)
+  t min   trim    list   hullTop     vz     air m3   since the flag
+   156.94   69.0   -80.2     61.2   -1.199     53113      0 min
+   wholly under (hull top 0.5 m below the sea) at t 157.75 min, 0.81 min after the flag; trim 77.3 list -80.2 vz -2.11 air 36404
+   157.94   77.3   -80.2    -29.9   -3.091     31943      1 min
+   158.94   77.3   -80.2   -395.6   -9.775     18651      2 min
+
+== (b) THE LAST MINUTES WITH THE UPPER DECKS' FREE SURFACE SPLIT (params.upperSplit 1): no refit, a look only
+as committed             founders 156.94 min at trim 69.0 list -80.2 | list 10 deg at T 151.4 , 20 at 153.0 , 45 at 155.1 | trim 11 at T 155.22 (list -48.1), 17 at T 155.79 (list -80.2)
+   trim/list: T60 3.0/-1.5  T100 4.1/-4.7  T130 4.9/-3.5  T145 5.5/-6.7  T150 6.2/-7.6  T152 6.8/-12.1  T154 8.0/-30.4  T155 10.1/-43.3  T156 21.9/-80.2
+   marks: over F 76.0  ports 90.2  well 125.7  fcastle 137.5  bridge 153.9  (record: 75, 100, 130, 145, 155)
+upperSplit 1, axUp 1.0   founders 157.83 min at trim 68.8 list -80.2 | list 10 deg at T 152.5 , 20 at 154.5 , 45 at 156.3 | trim 11 at T 155.98 (list -37.4), 17 at T 156.66 (list -67.1)
+   trim/list: T60 3.0/-1.5  T100 4.1/-4.5  T130 4.9/-3.6  T145 5.5/-6.6  T150 6.1/-7.3  T152 6.7/-9.1  T154 7.7/-16.0  T155 8.7/-24.4  T156 11.1/-37.7  T157 25.5/-80.2
+   marks: over F 76.3  ports 90.4  well 125.8  fcastle 137.7  bridge 154.8  (record: 75, 100, 130, 145, 155)
+upperSplit 1, axUp 0.3   founders 158.45 min at trim 68.8 list -80.2 | list 10 deg at T 153.9 , 20 at 155.9 , 45 at 157.1 | trim 11 at T 156.48 (list -27.2), 17 at T 157.25 (list -52.5)
+   trim/list: T60 3.0/-1.5  T100 4.1/-4.3  T130 4.9/-3.5  T145 5.5/-6.1  T150 6.1/-6.8  T152 6.6/-7.7  T154 7.5/-10.3  T155 8.2/-14.3  T156 9.6/-20.9  T157 14.0/-38.7  T158 42.3/-80.2
+   marks: over F 76.5  ports 90.7  well 125.9  fcastle 137.8  bridge 155.4  (record: 75, 100, 130, 145, 155)
+upperSplit 1, axUp 3.0   founders 157.53 min at trim 69.0 list -80.2 | list 10 deg at T 152.1 , 20 at 153.8 , 45 at 155.8 | trim 11 at T 155.77 (list -45.5), 17 at T 156.38 (list -78.8)
+   trim/list: T60 3.0/-1.5  T100 4.1/-4.5  T130 4.9/-3.6  T145 5.5/-6.6  T150 6.1/-7.4  T152 6.7/-9.9  T154 7.7/-22.3  T155 8.8/-33.2  T156 12.4/-52.5  T157 37.8/-80.2
+   marks: over F 76.3  ports 90.5  well 125.8  fcastle 137.7  bridge 154.4  (record: 75, 100, 130, 145, 155)

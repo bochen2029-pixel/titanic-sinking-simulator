@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Titanic Sinking Simulator</title>
-<meta name="description" content="A flooding model of RMS Titanic that computes the sinking instead of animating it: 4,408 hull columns, 64 spaces, 290 flow paths, calibrated to the 1912 eyewitness timeline. Punch holes, open doors, raise bulkheads, and watch the forecast.">
+<meta name="description" content="A flooding model of RMS Titanic that computes the sinking instead of animating it: 4,408 hull columns, 64 spaces, 290 flow paths, calibrated to the 1912 eyewitness timeline. Take the bridge and meet the ice, or punch holes, open doors, raise bulkheads, and watch the forecast.">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#05090f">
 <meta name="application-name" content="Titanic Sinking Simulator">
@@ -15,10 +15,12 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Titanic Sinking Simulator">
 <meta property="og:description" content="A flooding model that computes the sinking instead of animating it. 4,408 hull columns, 64 spaces, 290 flow paths, calibrated to the 1912 eyewitness timeline.">
+<meta property="og:url" content="@@HOME@@">
 <meta property="og:image" content="@@ORIGIN@@og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="@@HOME@@">
 <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
@@ -38,7 +40,10 @@
       <b>3D view unavailable.</b> <span id="noglWhy">This browser could not start WebGL.</span>
       The model still runs: the damage diagram below, the readouts and the Evidence tab all work.
     </div>
-    <div class="hud">
+    <!-- C-4 (docs/DESIGN_page_layout_authority_v1_1_2026-11-21.md): the stage's one layout, a grid of areas named by role;
+         the page's overlays and the parts' (TitanicApp.slot) stand in them, none placed by hand -->
+    <div id="hud" class="hud-grid">
+      <div class="slot" data-area="readouts">
       <div class="readout" id="readout">
         <div class="ship-name"><span id="scenName">RMS Titanic</span><small id="scenSub">14 April 1912</small> <span class="pill idle" id="status">Ready</span></div>
         <div class="clock"><span class="ship-time" id="shipTime">11:40 pm</span><span class="elapsed" id="elapsed">T+0:00:00</span></div>
@@ -51,24 +56,79 @@
         </div>
         <div class="forecast-line" id="fcLine">Forecasting…</div>
       </div>
+      </div>
+      <div class="slot" data-area="views">
       <div class="views">
         <div class="seg" role="group" aria-label="Camera">
           <button data-view="quarter" aria-pressed="true">Quarter</button>
           <button data-view="profile" aria-pressed="false">Profile</button>
           <button data-view="below" aria-pressed="false">Below</button>
           <button data-view="plan" aria-pressed="false">Plan</button>
+          <button data-view="astern" aria-pressed="false">Astern</button>
+          <button data-view="bridge" aria-pressed="false">Bridge</button>
+          <button data-view="stern" aria-pressed="false">Screws</button>
         </div>
         <div class="seg" role="group" aria-label="Display">
           <button id="bXray" aria-pressed="true">X-ray</button>
           <button id="bCols" aria-pressed="false">Columns</button>
           <button id="bFollow" aria-pressed="true">Follow</button>
+          <button id="bLights" aria-pressed="true">Lights</button>
         </div>
       </div>
-    </div>
+      </div>
+      <div class="slot" data-area="stack"></div>
+      <div class="slot" data-area="rail"></div>
+      <div class="slot" data-area="notice">
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      </div>
+      <div class="slot" data-area="aside"></div>
+      <div class="slot" data-area="helm">
+    <div class="bridge" id="bridge" hidden aria-label="The bridge: instruments, wheel and engine-order telegraph">
+      <div class="gauges">
+        <div class="stat"><div class="k">Speed</div><div class="v" id="gKn">–</div></div>
+        <div class="stat"><div class="k">Heading</div><div class="v" id="gHdg">–</div></div>
+        <div class="stat"><div class="k">Rudder</div><div class="v" id="gRud">–</div>
+          <svg class="helm-ind" id="helmInd" viewBox="-50 -46 100 52" width="92" height="48" aria-label="Rudder indicator: the hollow needle is the order, the solid one the rudder">
+            <path d="M -40 0 A 40 40 0 0 1 40 0" fill="none" stroke="currentColor" stroke-opacity="0.35" stroke-width="1.2"/>
+            <g id="helmTicks" stroke="currentColor" stroke-opacity="0.5" stroke-width="1"></g>
+            <text x="-44" y="5" font-size="8" fill="#ff6b5b">P</text><text x="38" y="5" font-size="8" fill="#5fd39a">S</text>
+            <line id="helmOrder" x1="0" y1="0" x2="0" y2="-38" stroke="#e0b15a" stroke-width="3" stroke-opacity="0.55" stroke-linecap="round"/>
+            <line id="helmActual" x1="0" y1="0" x2="0" y2="-34" stroke="#dbe6ef" stroke-width="1.6" stroke-linecap="round"/>
+            <circle r="2.4" fill="#dbe6ef"/>
+          </svg>
+        </div>
+        <div class="stat opt"><div class="k">Engines, rpm</div><div class="v" id="gRpm">–</div><div class="sub" id="gSteam"></div></div>
+        <div class="stat ice"><div class="k">Lookout</div><div class="v" id="gIce">Nothing in sight</div></div>
+      </div>
+      <div class="wheel">
+        <button class="btn helm" id="bHardPort"><b>Hard to port</b><small>1912: “hard-a-starboard”</small></button>
+        <div class="wheel-mid">
+          <input type="range" class="slider" id="wheel" min="-40" max="40" step="1" value="0" aria-label="Rudder order in degrees; left turns her head to port">
+          <div class="wheel-cap"><span>port</span><button class="chip" id="bMidships">Midships</button><span>starboard</span></div>
+        </div>
+        <button class="btn helm" id="bHardStbd"><b>Hard to starboard</b><small>1912: “hard-a-port”</small></button>
+      </div>
+      <div class="tel">
+        <div class="tel-cap"><span>Astern</span><span>Engine-order telegraph</span><span>Ahead</span></div>
+        <div class="seg wide" role="group" aria-label="Engine-order telegraph" id="telegraph">
+          <button data-order="full astern" aria-pressed="false">Full</button>
+          <button data-order="half astern" aria-pressed="false">Half</button>
+          <button data-order="slow astern" aria-pressed="false">Slow</button>
+          <button data-order="stop" aria-pressed="false">Stop</button>
+          <button data-order="slow ahead" aria-pressed="false">Slow</button>
+          <button data-order="half ahead" aria-pressed="false">Half</button>
+          <button data-order="full ahead" aria-pressed="false">Full</button>
+        </div>
+      </div>
+      <div class="hint kbd-hint">Keys: A hard to port, D hard to starboard, S midships, ← → five degrees, ↑ ↓ the telegraph.</div>
+    </div>
+      </div>
+      <div class="slot" data-area="diagram">
     <div class="strip">
       <canvas id="profile" aria-label="Damage diagram: compartments, flood water and the sea surface in the ship's frame"></canvas>
       <div class="cap"><span><span class="long">Damage diagram, ship's frame · </span>bulkhead tops: <span class="brass">E deck</span> / <span class="teal">D deck</span></span><span id="stripNote">sea surface shown as the cyan line</span></div>
+    </div>
+      </div>
     </div>
   </div>
 
@@ -77,14 +137,22 @@
       <button class="tab" role="tab" aria-selected="true" data-tab="run">Run</button>
       <button class="tab" role="tab" aria-selected="false" data-tab="damage">Damage</button>
       <button class="tab" role="tab" aria-selected="false" data-tab="doors">Bulkheads</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="systems">Systems</button>
       <button class="tab" role="tab" aria-selected="false" data-tab="evidence">Evidence</button>
       <button class="tab-close" id="sheetClose" aria-label="Close the panel" aria-expanded="false">⌄</button>
     </div>
 
     <section class="pane" data-pane="run">
-      <div class="sec">
-        <h3>Scenario</h3>
-        <div class="cards" id="scenCards" role="radiogroup" aria-label="Scenario"></div>
+      <!-- RC1, the first minute: what to do first, while no watch is open; then Time (the pace and the scrubber's bar) above
+           everything a watch adds, so that both are found without scrolling -->
+      <div class="sec start-here" id="startHere">
+        <h3>Start here</h3>
+        <p>Take the Titanic's bridge on the night of 14 April 1912. When the lookout rings three bells, the wheel and the telegraph are yours: turn her, slow her, or do neither. After the ice, run the clock faster under Time; its bar takes you back to any minute, to try another way.</p>
+        <div class="row mt8">
+          <button class="btn primary" id="bStartWatch">Take the watch</button>
+          <button class="btn" id="bStartAuto">Watch the 1912 orders</button>
+        </div>
+        <p class="hint mt6">What this is, and what it is not: <button class="chip" id="bStartAbout">the Evidence tab</button></p>
       </div>
       <div class="sec">
         <h3>Time</h3>
@@ -99,7 +167,47 @@
           <button data-speed="240" aria-pressed="false">240×</button>
           <button data-speed="900" aria-pressed="false">900×</button>
         </div>
-        <p class="hint mt6">60× plays the 2 h 40 min sinking in under three minutes. <span class="kbd-hint">Space pauses, R restarts.</span></p>
+        <p class="hint mt6" id="speedHint">60× plays the 2 h 40 min sinking in under three minutes. <span class="kbd-hint">Space pauses, R restarts.</span></p>
+        <label class="check mt6"><input type="checkbox" id="sternLight" checked> <span>Stern light (a bet: the 1910 rules asked a steamer only for a light shown to a ship overtaking her, and whether she carried a fixed one is not settled)</span></label>
+      </div>
+      <div class="sec" id="watchSec" hidden>
+        <h3>The watch</h3>
+        <p id="watchText">You have the bridge. Nothing is in sight.</p>
+        <div class="row mt8">
+          <button class="btn primary" id="bSameNight">This night again</button>
+          <button class="btn" id="bNewNight">Another night</button>
+        </div>
+        <div class="row mt8">
+          <button class="btn" id="bAuto">Watch the 1912 orders</button>
+          <button class="btn" id="bReplay" disabled>Replay my watch</button>
+        </div>
+        <div class="kv mt8"><label for="seedIn">Night (seed)</label><span class="seedbox"><input id="seedIn" inputmode="numeric" maxlength="10" size="8" aria-label="Seed of the night"> <button class="chip" id="bSeedGo">Go</button></span></div>
+        <div class="kv mt6"><span>Her speed, knots</span>
+          <div class="seg" role="group" aria-label="Her speed on the next watch" id="knSeg">
+            <button data-kn="22.5" aria-pressed="true">22½</button>
+            <button data-kn="18" aria-pressed="false">18</button>
+            <button data-kn="15" aria-pressed="false">15</button>
+            <button data-kn="10" aria-pressed="false">10</button>
+          </div>
+        </div>
+        <div class="kv mt6"><span>The ice on a drawn night</span>
+          <div class="seg" role="group" aria-label="How hard the next drawn night is" id="levelSeg">
+            <button data-level="early" aria-pressed="false">Seen early</button>
+            <button data-level="hard" aria-pressed="true">Any night</button>
+            <button data-level="night1912" aria-pressed="false">Like 1912</button>
+          </div>
+        </div>
+        <label class="check mt6"><input type="checkbox" id="snd" checked> <span>Sound: the lookout's bell, the telegraph's gong, the engines' beat, the ship at sea</span></label>
+        <div id="debrief" hidden>
+          <h3 class="mt12">The same berg, another watch</h3>
+          <p class="hint">The 1912 orders as this model reconstructs them, on this berg: helm hard over away from the ice, reversed at the touch, engines stopped a minute later, with no engine order before the touch. The accounts of her engine orders differ, and Boxhall's "full speed astern" is not used. Only the moment of the order changes.</p>
+          <div class="tablewrap"><table><thead><tr><th class="num">Order after the bells</th><th>What the ice does</th></tr></thead><tbody id="winBody"></tbody></table></div>
+        </div>
+        <p class="hint mt8">Her handling is fitted to a consensus of the three sisters' trial record (Olympic, Titanic, Britannic). What the ice does to the plating is a model with fitted guesses: the plating's strength, the berg's mass, a bow that crushes at a force rising with the depth crushed. Read an outcome as an estimate. On its default the 1912 watch ends where she breaks, 2 h 36 min after the touch, as the model finds it (from the times witnesses gave, she broke between 2 h 35 min and just under 2 h 40 min after it, at about 2:15 to 2:19 am); carried on with no break to her foundering instead, a what-if the User Guide shows how to ask for, she founders 2 h 43 min after it.</p>
+      </div>
+      <div class="sec">
+        <h3>Scenario</h3>
+        <div class="cards" id="scenCards" role="radiogroup" aria-label="Scenario"></div>
       </div>
       <div class="sec">
         <h3>Forecast</h3>
@@ -134,7 +242,7 @@
       </div>
       <div class="sec">
         <h3>Before the collision</h3>
-        <label class="check"><input type="checkbox" id="coal" checked> <span>2° list to port from emptied starboard coal bunkers (applies on restart)</span></label>
+        <label class="check"><input type="checkbox" id="coal" checked> <span>A list to port of about 1.6° from emptied starboard coal bunkers, as calibrated; Halpern estimated 2° (applies on restart)</span></label>
       </div>
     </section>
 
@@ -142,7 +250,7 @@
       <div class="sec">
         <h3>Watertight doors</h3>
         <div class="row"><button class="btn" id="bDoorsClose">Close all from the bridge</button><button class="btn" id="bDoorsOpen">Open all</button></div>
-        <p class="hint mt6">Murdoch closed the doors right after the collision. Open them and water spreads aft low in the ship instead of tipping the bow.</p>
+        <p class="hint mt6">Murdoch closed the doors right after the collision. Open them and water spreads aft low in the ship instead of tipping the bow. The bridge's switch drops the doors at the tank top by electromagnets, so it needs current from the dynamos; a door falls shut in about 25 s. Without current, a float under each room's floor drops the doors into it when water comes in, and a lever at each door works by hand. A scenario's open doors are held open.</p>
       </div>
       <div class="sec">
         <h3>Bulkhead height</h3>
@@ -158,7 +266,53 @@
       </div>
     </section>
 
+    <section class="pane" data-pane="systems" hidden>
+      <div class="sec">
+        <h3>What depends on what</h3>
+        <ul class="chain" id="sysChain" aria-label="The ship's systems, each with its state now">
+          <li data-k="coal"><i></i><b>Coal</b><span></span></li>
+          <li data-k="fires"><i></i><b>Fires</b><span></span></li>
+          <li data-k="steam"><i></i><b>Steam</b><span></span></li>
+          <li data-k="engines"><i></i><b>Engines</b><span></span></li>
+          <li data-k="turbine"><i></i><b>Turbine</b><span></span></li>
+          <li data-k="screws"><i></i><b>Screws</b><span></span></li>
+          <li data-k="way"><i></i><b>Way</b><span></span></li>
+          <li data-k="steering"><i></i><b>Steering</b><span></span></li>
+          <li data-k="dynamos"><i></i><b>Dynamos</b><span></span></li>
+          <li data-k="doors"><i></i><b>Doors</b><span></span></li>
+          <li data-k="pumps"><i></i><b>Pumps</b><span></span></li>
+        </ul>
+        <p class="hint mt8">Coal feeds the fires in six boiler rooms. Their steam drives the two reciprocating engines and the wing screws; the engines' exhaust drives the turbine and the centre screw, ahead only, with both engines above 40 rpm. The same steam works the steering engines that move the rudder, and the dynamos that light her and work the magnets that drop the watertight doors from the bridge. Water at a room's furnaces puts its fires out; water at an engine's crankshaft stops it; a screw or the rudder out of the water does nothing, and with no way on her the rudder has no water to work on. Without current a door's float still drops it when water reaches it. Her steam bilge pumps, 1,700 tons an hour in all, need steam and no current: on a watch the engineers put a room's own pumps on it when water comes in, and lead pumps from dry rooms to it through the bilge main half an hour later [bets on their practice]; a pump stops when the room it stands in floods. Against a big hole they buy minutes, not the ship.</p>
+      </div>
+      <div class="sec" id="pumpSec">
+        <h3>Pumps</h3>
+        <div class="row"><span class="hint" id="pumpWho"></span><button class="btn" id="bPumpsBack" hidden>Back to the engineers</button></div>
+        <div class="prooms mt8" id="pumpRooms"></div>
+        <p class="hint mt6">On a watch the pumps take your orders: a room's own pumps, every free pump that can reach it, or one pump, put on it; a pump or all of them taken off; or back to the engineers' rules. A pump on its own room works 5 minutes after the order, one led through the bilge main 30 minutes after it [bets, as the engineers' own: Wilding's "half an hour" to couple a pump to another room]. A room's suctions and the two mains limit what can be drawn from it; the peaks have no suction, and the holds' valves stood in the firemen's passage, lost once it floods (it was holed about 5 minutes after the collision in 1912). A pump stops when the room it stands in floods, and none works without steam. Each order goes in the watch's log, so "Replay my watch" gives it again, and the forecast runs the watch on with it.</p>
+      </div>
+      <div class="sec">
+        <h3>Boiler rooms</h3>
+        <div class="tablewrap"><table><thead><tr><th>Room</th><th class="num">Ends lit</th><th>Fires</th><th class="num">Coal, t</th><th></th></tr></thead><tbody id="sysRooms"></tbody></table></div>
+        <div class="row mt8"><button class="btn" id="bDrawAll">Draw every fire</button></div>
+        <p class="hint mt6">An order to the stokehold: its stokers draw a room's fires in about twenty minutes [read]; the steam already raised carries the load a while longer. On a watch it goes in the log with the helm and telegraph orders.</p>
+      </div>
+      <div class="sec">
+        <h3>Coal in her bunkers</h3>
+        <div class="seg wide" role="group" aria-label="Coal in her bunkers on the next run" id="coalSeg">
+          <button data-coal="loaded" aria-pressed="true">As loaded</button>
+          <button data-coal="2h" aria-pressed="false">2 h left</button>
+          <button data-coal="15m" aria-pressed="false">15 min left</button>
+        </div>
+        <p class="hint mt6">Hours of coal with every boiler lit on the night at full firing; she burns less when she asks less of them. Applies on restart and to the next watch. With the bunkers empty a room's fires burn down in about fifteen minutes [bet].</p>
+      </div>
+    </section>
+
     <section class="pane" data-pane="evidence" hidden>
+      <div class="sec" id="evAbout">
+        <h3>What this is, and what it is not</h3>
+        <p>Early access, a work in progress. This is a physics model of her sinking: the sea through her damage and over her bulkheads, her trim and list, her machinery and pumps, the encounter with the berg, and her fall to the bed, each computed step by step. The charts and tables below set the flooding against the 1912 record; her fall is set against the wreck as surveyed, where the page shows it. Where the record is silent the model makes a bet, and its code and notes name every bet.</p>
+        <p>It is not a record of the night. The people aboard are counted, not followed: no one's fate is shown. In the desktop app, if you switch on the crew's minds with your own key, their words are written by a language model, in character and from what had reached the bridge. They are not the men's words, and they are not the record. Her break is modelled as the moment her hull reaches its strength, where the model hands her to her fall, not as the tearing itself. Every time and figure on the page is the model's; this tab sets them against the record. The sources (the inquiries, her plans, the wreck surveys and the papers) are listed in the repository's SOURCES.md. Not affiliated with any other Titanic project.</p>
+      </div>
       <div class="sec">
         <h3>Trim by the head</h3>
         <div class="legend"><span><i class="line model"></i>This run</span><span><i class="dash model"></i>Forecast</span><span><i class="dot obs"></i>Eyewitness reconstruction (Halpern 2023)</span></div>
@@ -171,27 +325,30 @@
       <div class="sec">
         <h3>Flood water</h3>
         <div class="chart" id="chWater"><canvas></canvas><div class="tip"></div></div>
-        <p class="hint mt6">Gold point: Wilding's 16,000 tons at 40 minutes, the basis of his "12 square feet". The eyewitness timeline fits a smaller opening.</p>
+        <p class="hint mt6">Gold point: Wilding's 16,000 tons at 40 minutes, the basis of his "12 square feet". This model's fit to the eyewitness timeline takes a smaller opening.</p>
       </div>
       <div class="sec">
         <h3>Timeline check, Titanic run</h3>
-        <div class="tablewrap"><table><thead><tr><th>Event</th><th class="num">Witnessed</th><th class="num">Model</th></tr></thead><tbody id="evBody"></tbody></table></div>
+        <div class="tablewrap"><table><thead><tr><th>Event</th><th class="num">The record</th><th class="num">Model</th></tr></thead><tbody id="evBody"></tbody></table></div>
+        <p class="hint mt6">The record's times for the five events and the trim are Halpern's reconstruction from the witnesses (2023), not times a witness gave by a clock. Each witness's own answer and its source are in the rows below.</p>
       </div>
       <div class="sec">
-        <h3>Cases the fit never saw</h3>
+        <h3>Other cases: her sisters, and Wilding's what-ifs</h3>
         <div class="tablewrap"><table><thead><tr><th>Case</th><th>Record</th><th>Model</th></tr></thead><tbody id="valBody"></tbody></table></div>
+        <p class="hint mt6">The first row is the fit. Each kept version of the model had to give the record's outcome in the next seven. The last two were not required of it, and are shown as they come.</p>
       </div>
       <div class="sec">
         <h3>How it works</h3>
-        <p>The hull is a parametric fit to Harland &amp; Wolff's hydrostatics (displacement, waterplane, KB, BM within about 1%), cut into 4,400 vertical columns. Every step integrates buoyancy and flood water over those columns at the ship's actual attitude. Sixteen compartments, split port and starboard and above and below E deck, exchange water through holes, doors and the open E deck using orifice and weir laws. Heave, pitch and roll are integrated as a damped rigid body. Four flow parameters were fitted to the eyewitness timeline; everything in the table above is a prediction.</p>
+        <!-- "four thousand" and "thirty" are out/kept_1912.json's counts (waves n1 + n2 = 4,000 tried; 30 members kept): change them with the kept set -->
+        <p>The hull is a parametric fit to Harland &amp; Wolff's hydrostatics (displacement, waterplane, KB, BM within about 1%), cut into 4,400 vertical columns. Every step integrates buoyancy and flood water over those columns at the ship's actual attitude. Sixteen compartments, split port and starboard and above and below E deck, exchange water through holes, doors and the open E deck using orifice and weir laws. Heave, pitch and roll are integrated as a damped rigid body. Its uncertain inputs (the opening's size, the flow laws, the pumps, the bunker and more) are calibrated by a history match against the 1912 record: of four thousand versions tried, thirty that pass the record's tests are kept, and one of them is the default. A count such as "k of 30" in this tab is over those thirty. They sample what the record does not rule out, and are not the whole of it. So the timeline table above is not a blind prediction: some of its rows helped fit the model, and the observation ledger in this tab says which.</p>
       </div>
       <div class="sec">
-        <h3>What it leaves out</h3>
-        <p>Hull girder failure (she broke at about 2:17), pumps, air trapped in compartments, the superstructure's buoyancy, and whatever drove the 10–15° port list witnesses saw: the model only reaches about 6° until the final plunge.</p>
+        <h3>What it leaves out, and where it misses</h3>
+        <p>The tearing of her hull itself: the model finds the moment her bending and shear reach her strength and hands her to her fall there. From the times witnesses gave, she broke at about 2:15 to 2:19; some who watched saw her break, her second and third officers said she went down whole, and the wreck shows she broke. In the model she breaks flatter and farther forward than the wreck and the published analyses have her: at about 7 degrees of trim, where the analyses have 10 or more, and over boiler room 2, a few metres forward of boiler room 1, where she parted. Nothing is tuned to move it. Air trapped in her compartments while she floats: until her fall each space is open to the sea's pressure. The cause of her list to port late in the night, which Halpern's reconstruction from the witnesses puts at 10° to 15° (Rowe, the one witness with a figure, judged about 6° at 1:40): the model's own list is in the chart above. And her last minute on the 1912 damage card, which runs with no break: a roll onto her beam ends that no witness saw, a known fault of the model's end. Her superstructure's buoyancy is in: the decks above B deck float while dry and flood through their windows and stairways.</p>
       </div>
     </section>
     <div class="foot">Sources: British Wreck Commissioner's report (compartment lengths, bulkhead decks); Halpern, <i>A Matter of Stability and Trim</i> and <i>Lifeboats, Launch Times, List and Trim</i> (2023); Wilding's evidence; Hackett &amp; Bedford (RINA 1996).
-      <div class="foot-meta"><a href="https://github.com/bochen2029-pixel/titanic-sinking-simulator" rel="noopener">Source code and model notes on GitHub</a> · site v@@VERSION@@ · MIT</div></div>
+      <div class="foot-meta"><b class="foot-early" id="footEarly">Early access, a work in progress</b> · <span id="footSource"><a href="https://github.com/bochen2029-pixel/titanic-sinking-simulator/tree/main/docs/guide" rel="noopener">User Guide</a> · <a href="https://github.com/bochen2029-pixel/titanic-sinking-simulator/issues" rel="noopener">Report a fault (GitHub Issues)</a> · <a href="https://github.com/bochen2029-pixel/titanic-sinking-simulator" rel="noopener">Source code</a> · </span>site v@@VERSION@@ · MIT</div></div>
   </aside>
 </div>
 

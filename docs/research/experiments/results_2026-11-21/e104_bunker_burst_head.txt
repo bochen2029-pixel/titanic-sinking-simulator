@@ -1,0 +1,107 @@
+e104 (W6, the epoch) on C:\code\titanic-sinking-simulator-main\.claude\worktrees\b1b2-strength-85bc79 at e6f5326: the bunker of the fire, its fill and its burst head, first order
+
+A. THE MODEL'S BUNKER (W6's pocket: from bulkhead E aft 2.74 m, from its floor at 1.60 m to G deck at 9.41 m, the centreline to the shell)
+   its capacity 259.9 m3 (7.81 m tall); once full its head rises by 1 m a m3 (bunkerAov 1 m2); it bursts at a head of 13 m over its floor
+  preset: the hull openings inside it 0.0847 m2; full at T 10.1; bursts at T 56.34 (the sea then 13.05 m over its floor)
+      T   water m3  full   head in it   the sea over its floor   over Barrett's hole   inflow m3/s
+       0       0.2    0 %        0.01            7.83                  6.44           0.609
+       2      70.0   27 %        2.11            8.33                  7.12           0.584
+       4     131.0   50 %        3.93            8.79                  7.74           0.508
+       6     182.9   70 %        5.49            9.01                  7.94           0.433
+       8     225.2   87 %        6.76            9.14                  7.97           0.352
+      10     258.7  100 %        7.77            9.37                  8.20           0.279
+      12     261.6  101 %        9.55            9.59                  8.43           0.024
+      14     261.8  101 %        9.76            9.81                  8.65           0.002
+      16     262.0  101 %        9.97           10.01                  8.86           0.002
+      18     262.2  101 %       10.17           10.21                  9.07           0.002
+      20     262.4  101 %       10.37           10.41                  9.26           0.002
+      30     263.3  101 %       11.24           11.28                 10.15           0.001
+      40     264.1  102 %       11.99           12.04                 10.92           0.001
+      50     264.7  102 %       12.64           12.68                 11.58           0.001
+      60       0.0    0 %       burst           13.05                 11.80          -0.441
+      70       0.0    0 %       burst           13.60                 12.34           0.000
+      80       0.0    0 %       burst           14.04                 12.72           0.000
+      90       0.0    0 %       burst           14.49                 13.14           0.000
+  watch: the hull openings inside it 0.0576 m2; full at T 15.0; bursts at T 55.33 (the sea then 13.10 m over its floor)
+      T   water m3  full   head in it   the sea over its floor   over Barrett's hole   inflow m3/s
+       0       0.0    0 %           -            8.72                  8.04           0.000
+       2      39.4   15 %        1.18            8.19                  6.90           0.329
+       4      83.2   32 %        2.50            8.70                  7.60           0.365
+       6     124.6   48 %        3.74            8.95                  7.86           0.345
+       8     161.3   62 %        4.84            9.05                  7.85           0.306
+      10     193.6   75 %        5.81            9.25                  8.01           0.269
+      12     222.4   86 %        6.67            9.53                  8.33           0.240
+      14     247.9   95 %        7.44            9.79                  8.62           0.213
+      16     262.0  101 %        9.96           10.03                  8.88           0.117
+      18     262.2  101 %       10.16           10.24                  9.09           0.002
+      20     262.4  101 %       10.36           10.44                  9.30           0.002
+      30     263.3  101 %       11.26           11.34                 10.21           0.002
+      40     264.1  102 %       12.02           12.12                 11.00           0.001
+      50     264.8  102 %       12.69           12.78                 11.67           0.001
+      60       0.0    0 %       burst           13.15                 11.89          -0.441
+      70       0.0    0 %       burst           13.69                 12.44           0.000
+      80       0.0    0 %       burst           14.05                 12.71           0.000
+      90       0.0    0 %       burst           14.37                 12.93           0.000
+  held for good, preset: the head in it T 60 13.19, T 73 13.75, T 90 14.24, T 100 14.44, T 120 14.77, T 140 15.49; its peak 80.60 m at T 184.6; founders at T 184.62
+  held for good, watch: the head in it T 60 13.25, T 73 13.81, T 90 14.28, T 100 14.39, T 120 14.80, T 140 16.13; its peak 68.56 m at T 174.9; founders at T 174.95
+
+B. THE BUNKER FILLED AS THE RECORD DESCRIBES ITS LEAK ("a stream about the size of a deck hose"), against the preset's own sea
+   the half bunker holds 259.8 m3 by the hull's form (the pocket: 259.9); its plan area 27.9 m2 at 0.5 m, 33.9 at half height, 36.8 at the top
+   the level over its floor (m), then once full the sea's head over its floor; T in min after the collision
+   case                                                   T 30    T 45    T 60    T 75    T 90   full at T
+   3 in stream, half bunker, no leak                         3.38    4.87    6.25    7.55   14.29        78.1
+   3 in stream, half bunker, the model's door leak 0.005 m2    2.80    3.82    4.71    5.50    6.21         n/a
+   2.5 in stream, half bunker, no leak                       2.47    3.62    4.71    5.75    6.74         n/a
+   3 in stream, whole cross bunker, no leak                  1.84    2.74    3.60    4.43    5.23         n/a
+   two 3 in streams, half bunker, no leak                    5.83   12.37   13.24   13.88   14.29        43.3
+
+C. WHAT THE DOOR AND THE WALL CAN BEAR, as a head of water over the bunker's floor (m); mild steel at 262 MPa
+  C1. the coal door, a plate spanning its guides, in plastic bending (p = 2 sY t^2 / b^2, simply supported), its centre 0.91 m up [bet]
+      span b (in) ->     18      21      24      27      30
+      t 0.25 in       11.0     8.3     6.6     5.4     4.5
+      t 0.3125 in     16.6    12.5     9.7     7.9     6.6
+      t 0.375 in      23.5    17.5    13.6    11.0     9.1
+      t 0.4375 in     31.7    23.5    18.2    14.6    12.0
+      t 0.5 in        41.1    30.5    23.5    18.8    15.4
+  C2. the wall's plating between stiffeners at the floor, a strip clamped at the stiffeners (p = 4 sY t^2 / s^2; membrane action ignored, so a lower bound)
+      spacing s (in) ->  24      27      30      33      36
+      t 0.25 in       11.3     8.9     7.2     6.0     5.0
+      t 0.3 in        16.3    12.9    10.4     8.6     7.2
+      t 0.35 in       22.2    17.5    14.2    11.7     9.9
+      t 0.4 in        29.0    22.9    18.5    15.3    12.9
+      t 0.5 in        45.2    35.7    29.0    23.9    20.1
+  C3. the wall's stiffeners, from the floor to G deck (span 7.81 m), plastic collapse, sized by Lloyd's rules of 1911-12 (Table 10; section 22, par. 12);
+      the plating's effective width by Faulkner where it is in compression; the heel's reaction at collapse, and the 7/8 in rivets in single shear it takes (116 kN each)
+      set                                                                                 Mp (kN m)   head (m)   heel reaction (kN)   rivets
+      Lloyd's bunker side at its widest: BA 9 1/2 x 3 1/2 x .56 at 72 in, plate .30, lugs          167       4.5               151         1.3
+      the same stiffeners at every frame, 36 in                                                    165       6.0               124         1.1
+      Lloyd's middle-line bulkhead: BA 10 1/2 x 3 1/2 x .56 at 30 in, plate .34, lugs              201       7.2               137         1.2
+      the same, bracketed at heads and heels                                                       201      10.9               247         2.1
+      her watertight bulkheads' stiffening, Lloyd's bracketed set x 1.75 (Wilding: 75 to 100 % over)       351      16.2               406         3.5
+      her watertight bulkheads' stiffening, Lloyd's bracketed set x 2 (Wilding: 75 to 100 % over)       401      17.9               458         3.9
+      the bunker side at 36 in, its stiffening x 1.75 (as Wilding's bulkheads; a bet for the bunker), lugs       288       7.9               190         1.6
+      the bunker side at 36 in, its stiffening x 2 (as Wilding's bulkheads; a bet for the bunker), lugs       329       8.5               211         1.8
+
+D. WHEN THE BUNKER WOULD BURST for a given head over its floor (T, min after the collision; "never": not by T 100 for the record's fill, not before she founders for the model's)
+   head (m)   the model's fill: preset, watch      the record's fill: case 1, case 2, case 3, case 4
+      3.0           2.9      4.8                   27.0    33.0    37.0    50.0
+      4.0           4.1      6.5                   37.0    48.0    51.0    68.0
+      5.0           5.3      8.3                   47.0    66.0    65.0    86.0
+      6.0           6.8     10.4                   58.0    86.0    79.0   never
+      7.0           8.4     12.8                   69.0   never    95.0   never
+      8.0          10.1     15.0                   79.0   never   never   never
+      9.0          10.2     15.2                   79.0   never   never   never
+     10.0          16.3     16.4                   79.0   never   never   never
+     11.0          27.1     27.0                   79.0   never   never   never
+     12.0          40.1     39.7                   79.0   never   never   never
+     12.5          47.7     47.0                   79.0   never   never   never
+     13.0          56.3     55.3                   79.0   never   never   never
+     13.5          66.6     65.4                   79.0   never   never   never
+     14.0          79.8     78.5                   79.0   never   never   never
+     14.5         103.3    103.6                  never   never   never   never
+     15.0         131.5    124.4                  never   never   never   never
+     16.0         147.4    138.5                  never   never   never   never
+     17.0         158.4    149.3                  never   never   never   never
+   Cases: 1 3 in stream, half bunker, no leak; 2 3 in stream, half bunker, the model's door leak 0.005 m2; 3 2.5 in stream, half bunker, no leak; 4 3 in stream, whole cross bunker, no leak
+
+(e104 took 8 s)

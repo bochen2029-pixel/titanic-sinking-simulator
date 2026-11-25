@@ -1,0 +1,723 @@
+
+== Boat deck: data/rooms/Boat_deck.json, 12 rows ==
+PASS Boat: the rows: each has its id, kind, name, frames, feet, doors (a width or a reason), source, check and tags 12 rows; bad: none                           every row
+     kinds: casing 3, crew 3, service 4, stair 2
+     checked against an original: 0 of 12 rows; rows that are blocks of rooms: 8; cabin numbers named in the cabin rows: 0
+PASS Boat: the derived fields (metres, area, zone by C.zoneAt, slab by slabAt) are the model's, as tools/rooms_table.js --write gives them stale: none                                  none
+PASS Boat:   every row stands in a slab of Boat deck (its pieces, cut at the model's bulkheads and the centreline) outside: none                                none
+     tagged 'beyond the model' (the plan's room where the model has no space of Boat deck): Bt-04 (28.5A to 15A), Bt-07 (13F to 29.5F)
+PASS Boat: each slab: the rooms on it (their union, a 0.1 m grid) cover no more floor than the slab has worst slab 98.7 %; over: none                none over 100.5 %
+PASS Boat:   no room stands outside the model's side at Boat deck                                     0.0 m2 outside                               under 1 m2
+     the rows' floor 1159 m2 summed, 1163 m2 as a union: -5 m2 where rows overlap (a block row drawn over a hatch or stair it lists in 'minus', or two readings of one wall)
+PASS Boat: the rooms stand where the model has a space of Boat deck (its hull; above B deck its tiers and houses), but rows tagged 'beyond the model' 215.4 m2 outside it in 6 rows; untagged and more than half outside: none none untagged
+     Bt-01 (81.5A to 72.5A): 17.5 of its 51.7 m2 where the model has no space of Boat deck
+     Bt-03 (39.5A to 30.5A): 11.0 of its 114.5 m2 where the model has no space of Boat deck
+     Bt-04 (28.5A to 15A): 135.7 of its 145.1 m2 where the model has no space of Boat deck [tagged beyond the model]
+     Bt-06 (13F to 29F): 3.0 of its 88.2 m2 where the model has no space of Boat deck
+     Bt-07 (13F to 29.5F): 44.5 of its 82.1 m2 where the model has no space of Boat deck [tagged beyond the model]
+     Bt-08 (29.5F to 39.5F): 3.7 of its 160.1 m2 where the model has no space of Boat deck
+     
+PASS Boat: every door names a row of the table or a place off it                                      37 doors in 12 rows; dangling: none          none dangling
+     watertight doors on Boat deck: 0 entries; widths written on the plan: 0 doors; the rest default [bet]
+
+Boat deck: where the plan's compartment and the model's zone part (the plan marks  on this deck):
+  nowhere
+
+Boat deck, slab by slab: the slab's footprint (its columns), her deck there (her side), and the floor the table's rooms cover (m2)
+  zone side  slab            footprint     deck    rooms   cover of the footprint
+     4 P     4:P:Boat              85       81       77     90 %
+     4 S     4:S:Boat              85       81       67     79 %
+     5 P     5:P:Boat             122      120      120     99 %
+     5 S     5:S:Boat             122      120      104     86 %
+     6 P     6:P:Boat             133      129      107     80 %
+     6 S     6:S:Boat             133      129      122     92 %
+     7 P     7:P:Boat              78       71       23     29 %
+     7 S     7:S:Boat              78       71       42     53 %
+     8 P     8:P:Boat             141      144       17     12 %
+     8 S     8:S:Boat             141      144       17     12 %
+    10 P     10:P:Boat            100       91       67     67 %
+    10 S     10:S:Boat            100       91       66     66 %
+    11 P     11:P:Boat            148      139       45     30 %
+    11 S     11:S:Boat            148      139       41     28 %
+    12 P     12:P:Boat             16       19       17    104 %
+    12 S     12:S:Boat             16       19       17    104 %
+
+== A deck: data/rooms/A_deck.json, 48 rows ==
+PASS A: the rows: each has its id, kind, name, frames, feet, doors (a width or a reason), source, check and tags 48 rows; bad: none                           every row
+     kinds: cabin 5, casing 5, lift 1, passage 18, service 16, stair 3
+     checked against an original: 0 of 48 rows; rows that are blocks of rooms: 13; cabin numbers named in the cabin rows: 34
+PASS A: the derived fields (metres, area, zone by C.zoneAt, slab by slabAt) are the model's, as tools/rooms_table.js --write gives them stale: none                                  none
+PASS A:   every row stands in a slab of A deck (its pieces, cut at the model's bulkheads and the centreline) outside: none                                none
+     tagged 'beyond the model' (the plan's room where the model has no space of A deck): A-035 (84.4A to 72.5A), A-036 (84.4A to 72.5A), A-037 (72.5A to 49.4A), A-038 (72.5A to 49.4A), A-039 (49.4A to 39A), A-040 (39A to 24.5A), A-041 (49.4A to 24.5A), A-042 (24.5A to 4.5F), A-043 (24.5A to 4.5F), A-044 (4.5F to 19F)
+PASS A: each slab: the rooms on it (their union, a 0.1 m grid) cover no more floor than the slab has  worst slab 100.0 %; over: none               none over 100.5 %
+PASS A:   no room stands outside the model's side at A deck                                           0.1 m2 outside                               under 1 m2
+     the rows' floor 3916 m2 summed, 3896 m2 as a union: 20 m2 where rows overlap (a block row drawn over a hatch or stair it lists in 'minus', or two readings of one wall)
+PASS A: the rooms stand where the model has a space of A deck (its hull; above B deck its tiers and houses), but rows tagged 'beyond the model' 752.6 m2 outside it in 19 rows; untagged and more than half outside: none none untagged
+     A-002 (80.9A to 72.5A): 10.8 of its 60.8 m2 where the model has no space of A deck
+     A-003 (80.9A to 72.5A): 10.8 of its 60.8 m2 where the model has no space of A deck
+     A-006 (69.5A to 49.4A): 5.5 of its 358.8 m2 where the model has no space of A deck
+     A-009 (44.5A to 39A): 2.6 of its 20.9 m2 where the model has no space of A deck
+     A-010 (44.5A to 39A): 2.6 of its 20.9 m2 where the model has no space of A deck
+     A-017 (24.5A to 16.5A): 1.5 of its 28.1 m2 where the model has no space of A deck
+     A-018 (11A to 4.5F): 4.0 of its 259.4 m2 where the model has no space of A deck
+     A-020 (16.5A to 11A): 1.0 of its 34.7 m2 where the model has no space of A deck
+     A-035 (84.4A to 72.5A): 27.8 of its 27.8 m2 where the model has no space of A deck [tagged beyond the model]
+     A-036 (84.4A to 72.5A): 27.8 of its 27.8 m2 where the model has no space of A deck [tagged beyond the model]
+     A-037 (72.5A to 49.4A): 87.3 of its 87.3 m2 where the model has no space of A deck [tagged beyond the model]
+     A-038 (72.5A to 49.4A): 85.4 of its 85.4 m2 where the model has no space of A deck [tagged beyond the model]
+     A-039 (49.4A to 39A): 36.5 of its 36.5 m2 where the model has no space of A deck [tagged beyond the model]
+     A-040 (39A to 24.5A): 57.6 of its 120.6 m2 where the model has no space of A deck [tagged beyond the model]
+     A-041 (49.4A to 24.5A): 87.0 of its 87.0 m2 where the model has no space of A deck [tagged beyond the model]
+     A-042 (24.5A to 4.5F): 108.4 of its 108.4 m2 where the model has no space of A deck [tagged beyond the model]
+     A-043 (24.5A to 4.5F): 105.8 of its 105.8 m2 where the model has no space of A deck [tagged beyond the model]
+     A-044 (4.5F to 19F): 43.7 of its 55.4 m2 where the model has no space of A deck [tagged beyond the model]
+     A-045 (4.5F to 28.5F): 44.7 of its 173.0 m2 where the model has no space of A deck
+     passages, clear width (m): 012 1.89; 023 3.02; 028 1.43; 029 1.43
+     
+PASS A: every door names a row of the table or a place off it                                         103 doors in 48 rows; dangling: none         none dangling
+     watertight doors on A deck: 0 entries; widths written on the plan: 0 doors; the rest default [bet]
+
+A deck: where the plan's compartment and the model's zone part (the plan marks  on this deck):
+  nowhere
+
+A deck, slab by slab: the slab's footprint (its columns), her deck there (her side), and the floor the table's rooms cover (m2)
+  zone side  slab            footprint     deck    rooms   cover of the footprint
+     3 P     3:P:A                 35       24        0      0 %
+     3 S     3:S:A                 35       24        0      0 %
+     4 P     4:P:A                222      214      204     92 %
+     4 S     4:S:A                222      214      204     92 %
+     5 P     5:P:A                242      239      238     99 %
+     5 S     5:S:A                242      239      238     99 %
+     6 P     6:P:A                243      242      238     98 %
+     6 S     6:S:A                243      242      237     98 %
+     7 P     7:P:A                191      190      190    100 %
+     7 S     7:S:A                191      190      190    100 %
+     8 P     8:P:A                174      176      176    101 %
+     8 S     8:S:A                174      176      171     99 %
+     9 P     9:P:A                104      105      105    100 %
+     9 S     9:S:A                104      105       84     81 %
+    10 P     10:P:A               200      203      186     93 %
+    10 S     10:S:A               200      203      157     78 %
+    11 P     11:P:A               165      166      166    101 %
+    11 S     11:S:A               165      166      166    101 %
+    12 P     12:P:A               104      118       95     91 %
+    12 S     12:S:A               104      118       96     92 %
+
+== B deck: data/rooms/B_deck.json, 36 rows ==
+PASS B: the rows: each has its id, kind, name, frames, feet, doors (a width or a reason), source, check and tags 36 rows; bad: none                           every row
+     kinds: cabin 10, casing 5, lift 1, passage 6, service 10, stair 4
+     checked against an original: 0 of 36 rows; rows that are blocks of rooms: 17; cabin numbers named in the cabin rows: 95
+PASS B: the derived fields (metres, area, zone by C.zoneAt, slab by slabAt) are the model's, as tools/rooms_table.js --write gives them stale: none                                  none
+PASS B:   every row stands in a slab of B deck (its pieces, cut at the model's bulkheads and the centreline) outside: none                                none
+PASS B: each slab: the rooms on it (their union, a 0.1 m grid) cover no more floor than the slab has  worst slab 100.0 %; over: none               none over 100.5 %
+PASS B:   no room stands outside the model's side at B deck                                           0.1 m2 outside                               under 1 m2
+     the rows' floor 4431 m2 summed, 4416 m2 as a union: 15 m2 where rows overlap (a block row drawn over a hatch or stair it lists in 'minus', or two readings of one wall)
+PASS B: the rooms stand where the model has a space of B deck (its hull; above B deck its tiers and houses), but rows tagged 'beyond the model' 19.8 m2 outside it in 1 rows; untagged and more than half outside: none none untagged
+     B-001 (103A to 94.5A): 19.8 of its 48.4 m2 where the model has no space of B deck
+     passages, clear width (m): 015 1.48; 016 1.48; 027 1.45; 028 1.45
+     
+PASS B: every door names a row of the table or a place off it                                         150 doors in 36 rows; dangling: none         none dangling
+     watertight doors on B deck: 0 entries; widths written on the plan: 8 doors; the rest default [bet]
+
+B deck: where the plan's compartment and the model's zone part (the plan marks  on this deck):
+  nowhere
+
+B deck, slab by slab: the slab's footprint (its columns), her deck there (her side), and the floor the table's rooms cover (m2)
+  zone side  slab            footprint     deck    rooms   cover of the footprint
+     3 P     3:P:B                 70       76       21     30 %
+     3 S     3:S:B                 70       76       21     30 %
+     4 P     4:P:B                222      215      215     97 %
+     4 S     4:S:B                222      215      215     97 %
+     5 P     5:P:B                243      240      237     97 %
+     5 S     5:S:B                243      240      237     98 %
+     6 P     6:P:B                243      244      243    100 %
+     6 S     6:S:B                243      244      243    100 %
+     7 P     7:P:B                243      244      244    100 %
+     7 S     7:S:B                243      244      244    100 %
+     8 P     8:P:B                256      256      256    100 %
+     8 S     8:S:B                256      256      256    100 %
+     9 P     9:P:B                154      153      153     99 %
+     9 S     9:S:B                154      153      153     99 %
+    10 P     10:P:B               294      295      295    100 %
+    10 S     10:S:B               294      295      295    100 %
+    11 P     11:P:B               243      241      241     99 %
+    11 S     11:S:B               243      241      241     99 %
+    12 P     12:P:B               266      259      255     96 %
+    12 S     12:S:B               266      259      255     96 %
+    13 P     13:P:B                74       77       37     50 %
+    13 S     13:S:B                74       77       37     50 %
+PASS B: her side as the plan draws it, read to port and to starboard, agrees within 1.5 ft at every frame read (a check of the reading) 18 frames; worst 0.10 ft apart               within 1.5 ft
+
+B deck: her side at her ends, the plan's against the model's (m from the centreline; the model at B deck itself, and halfway to the deck above)
+  frame       x     plan   model at deck   less plan   model halfway   less plan
+    80A   -72.9    13.84           13.66       -0.19           13.63       -0.21
+    75A   -68.4    13.91           13.81       -0.11           13.78       -0.14
+    70A   -63.8    14.00           13.91       -0.10           13.88       -0.13
+    65A   -59.2    14.06           13.97       -0.09           13.93       -0.13
+    60A   -54.6    14.06           14.00       -0.06           13.96       -0.10
+    55A   -50.0    14.05           14.02       -0.03           13.97       -0.08
+    50A   -45.4    14.05           14.02       -0.03           13.98       -0.07
+    45A   -40.9    14.05           14.02       -0.03           13.98       -0.07
+    40A   -36.3    14.05           14.02       -0.03           13.98       -0.07
+    40F    36.3    13.98           14.00        0.03           13.96       -0.01
+    45F    40.8    13.93           13.96        0.03           13.92       -0.01
+    50F    45.3    13.88           13.88       -0.00           13.85       -0.04
+    55F    49.9    13.83           13.76       -0.07           13.73       -0.09
+    60F    54.5    13.75           13.59       -0.16           13.57       -0.18
+    65F    59.1    13.68           13.37       -0.31           13.36       -0.32
+    70F    63.7    13.59           13.09       -0.50           13.09       -0.50
+    75F    68.3    13.47           12.75       -0.72           12.76       -0.71
+    80F    72.9    13.36           12.34       -1.02           12.36       -1.00
+
+== C deck: data/rooms/C_deck.json, 83 rows ==
+PASS C: the rows: each has its id, kind, name, frames, feet, doors (a width or a reason), source, check and tags 83 rows; bad: none                           every row
+     kinds: cabin 29, casing 5, crew 7, hatch 1, passage 10, service 20, stair 8, store 3
+     checked against an original: 0 of 83 rows; rows that are blocks of rooms: 45; cabin numbers named in the cabin rows: 135
+PASS C: the derived fields (metres, area, zone by C.zoneAt, slab by slabAt) are the model's, as tools/rooms_table.js --write gives them stale: none                                  none
+PASS C:   every row stands in a slab of C deck (its pieces, cut at the model's bulkheads and the centreline) outside: none                                none
+     tagged 'beyond the model' (the plan's room where the model has no space of C deck): C-002 (140A to 138A), C-003 (140A to 138A), C-011 (103A to 98A), C-012 (102.5A to 100.5A), C-013 (102.5A to 100.5A)
+PASS C: each slab: the rooms on it (their union, a 0.1 m grid) cover no more floor than the slab has  worst slab 100.0 %; over: none               none over 100.5 %
+PASS C:   no room stands outside the model's side at C deck                                           0.7 m2 outside                               under 1 m2
+     the rows' floor 5422 m2 summed, 5375 m2 as a union: 47 m2 where rows overlap (a block row drawn over a hatch or stair it lists in 'minus', or two readings of one wall)
+PASS C: the rooms stand where the model has a space of C deck (its hull; above B deck its tiers and houses), but rows tagged 'beyond the model' 33.4 m2 outside it in 8 rows; untagged and more than half outside: none none untagged
+     C-011 (103A to 98A): 19.8 of its 28.5 m2 where the model has no space of C deck [tagged beyond the model]
+     C-012 (102.5A to 100.5A): 2.9 of its 2.9 m2 where the model has no space of C deck [tagged beyond the model]
+     C-013 (102.5A to 100.5A): 2.9 of its 2.9 m2 where the model has no space of C deck [tagged beyond the model]
+     C-071 (101F to 103.5F): 0.9 of its 4.8 m2 where the model has no space of C deck
+     C-072 (101F to 103.5F): 0.9 of its 4.8 m2 where the model has no space of C deck
+     C-073 (101F to 110.5F): 2.5 of its 43.3 m2 where the model has no space of C deck
+     C-075 (101F to 120.5F): 2.8 of its 83.8 m2 where the model has no space of C deck
+     C-076 (101F to 120.5F): 2.6 of its 98.8 m2 where the model has no space of C deck
+     passages, clear width (m): 014 14.87; 023 1.55; 024 1.55; 055 1.43; 056 1.43; 081 1.71; 082 1.71; 083 18.29
+     
+PASS C: every door names a row of the table or a place off it                                         248 doors in 83 rows; dangling: none         none dangling
+     watertight doors on C deck: 0 entries; widths written on the plan: 2 doors; the rest default [bet]
+
+C deck: where the plan's compartment and the model's zone part (the plan marks  on this deck):
+  nowhere
+
+C deck, slab by slab: the slab's footprint (its columns), her deck there (her side), and the floor the table's rooms cover (m2)
+  zone side  slab            footprint     deck    rooms   cover of the footprint
+     0 P     0:P:C                 53       35       35     66 %
+     0 S     0:S:C                 53       35       35     66 %
+     1 P     1:P:C                119       87       87     73 %
+     1 S     1:S:C                119       87       87     73 %
+     2 P     2:P:C                119       87       87     73 %
+     2 S     2:S:C                119       87       87     73 %
+     3 P     3:P:C                 70       76       60     86 %
+     3 S     3:S:C                 70       76       60     86 %
+     4 P     4:P:C                228      215      215     95 %
+     4 S     4:S:C                228      215      215     95 %
+     5 P     5:P:C                243      241      241     99 %
+     5 S     5:S:C                243      241      241     99 %
+     6 P     6:P:C                243      245      244    100 %
+     6 S     6:S:C                243      245      243    100 %
+     7 P     7:P:C                243      245      245    101 %
+     7 S     7:S:C                243      245      245    101 %
+     8 P     8:P:C                256      258      255     99 %
+     8 S     8:S:C                256      258      255     99 %
+     9 P     9:P:C                154      154      153    100 %
+     9 S     9:S:C                154      154      154    100 %
+    10 P     10:P:C               294      298      295    100 %
+    10 S     10:S:C               294      298      298    101 %
+    11 P     11:P:C               243      242      242     99 %
+    11 S     11:S:C               243      242      242     99 %
+    12 P     12:P:C               266      259      259     97 %
+    12 S     12:S:C               266      259      259     97 %
+    13 P     13:P:C                74       77       64     87 %
+    13 S     13:S:C                74       77       64     87 %
+    14 P     14:P:C               139      110      106     77 %
+    14 S     14:S:C               139      110      106     77 %
+    15 P     15:P:C               193       80       80     41 %
+    15 S     15:S:C               193       80       80     41 %
+  (aft: the plan's C deck ends 138.8 m abaft amidships; the model's side at C deck runs on to 138.9 m)
+PASS C: her side as the plan draws it, read to port and to starboard, agrees within 1.5 ft at every frame read (a check of the reading) 43 frames; worst 0.39 ft apart               within 1.5 ft
+
+C deck: her side at her ends, the plan's against the model's (m from the centreline; the model at C deck itself, and halfway to the deck above)
+  frame       x     plan   model at deck   less plan   model halfway   less plan
+   150A  -130.6     9.49            3.33       -6.16            3.40       -6.08
+   148A  -129.2     9.86            3.81       -6.04            3.90       -5.96
+   145A  -127.2    10.29            4.52       -5.77            4.61       -5.68
+   140A  -123.8    10.89            5.62       -5.27            5.73       -5.16
+   135A  -120.3    11.35            6.65       -4.70            6.77       -4.58
+   130A  -116.8    11.72            7.59       -4.13            7.72       -4.00
+   125A  -112.9    12.04            8.55       -3.48            8.68       -3.36
+   120A  -108.9    12.29            9.43       -2.86            9.55       -2.74
+   115A  -104.7    12.53           10.24       -2.29           10.36       -2.16
+   110A  -100.4    12.83           10.97       -1.86           11.08       -1.75
+   100A   -91.3    13.30           12.22       -1.09           12.30       -1.01
+    90A   -82.1    13.66           13.09       -0.57           13.14       -0.53
+    80A   -72.9    13.88           13.64       -0.25           13.65       -0.23
+    75A   -68.4    13.98           13.81       -0.16           13.82       -0.16
+    70A   -63.8    14.03           13.94       -0.10           13.93       -0.10
+    65A   -59.2    14.08           14.02       -0.06           14.00       -0.08
+    60A   -54.6    14.08           14.06       -0.02           14.04       -0.04
+    55A   -50.0    14.11           14.07       -0.04           14.05       -0.06
+    50A   -45.4    14.11           14.08       -0.03           14.05       -0.06
+    45A   -40.9    14.12           14.08       -0.05           14.05       -0.07
+    40A   -36.3    14.14           14.08       -0.06           14.05       -0.09
+    40F    36.3    14.02           14.06        0.04           14.03        0.02
+    45F    40.8    13.99           14.01        0.02           13.99       -0.00
+    50F    45.3    13.99           13.92       -0.07           13.90       -0.09
+    55F    49.9    13.96           13.78       -0.18           13.78       -0.18
+    60F    54.5    13.93           13.60       -0.33           13.60       -0.33
+    65F    59.1    13.87           13.36       -0.51           13.37       -0.50
+    70F    63.7    13.81           13.06       -0.75           13.08       -0.73
+    75F    68.3    13.69           12.69       -1.00           12.73       -0.97
+    80F    72.9    13.56           12.27       -1.29           12.31       -1.25
+    90F    81.9    13.06           11.22       -1.84           11.28       -1.78
+   100F    90.8    12.21            9.90       -2.31            9.98       -2.24
+   105F    94.9    11.75            9.19       -2.56            9.27       -2.48
+   110F    99.0    11.07            8.42       -2.65            8.50       -2.57
+   115F   102.7    10.34            7.65       -2.69            7.73       -2.60
+   120F   106.4     9.47            6.82       -2.65            6.90       -2.57
+   125F   110.0     8.56            5.97       -2.59            6.05       -2.51
+   130F   113.4     7.40            5.08       -2.31            5.16       -2.23
+   135F   116.7     6.29            4.21       -2.08            4.29       -2.00
+   140F   119.9     4.95            3.29       -1.66            3.36       -1.59
+   145F   122.9     3.52            2.35       -1.17            2.42       -1.10
+   150F   126.0     2.21            1.37       -0.84            1.42       -0.78
+   154F   128.5     1.01            0.55       -0.47            0.59       -0.42
+
+== D deck: data/rooms/D_deck.json, 55 rows ==
+PASS D: the rows: each has its id, kind, name, frames, feet, doors (a width or a reason), source, check and tags 55 rows; bad: none                           every row
+     kinds: cabin 8, casing 5, crew 3, hatch 3, lift 1, passage 5, service 16, stair 11, store 3
+     checked against an original: 0 of 55 rows; rows that are blocks of rooms: 17; cabin numbers named in the cabin rows: 94
+PASS D: the derived fields (metres, area, zone by C.zoneAt, slab by slabAt) are the model's, as tools/rooms_table.js --write gives them stale: none                                  none
+PASS D:   every row stands in a slab of D deck (its pieces, cut at the model's bulkheads and the centreline) outside: none                                none
+PASS D: each slab: the rooms on it (their union, a 0.1 m grid) cover no more floor than the slab has  worst slab 100.0 %; over: none               none over 100.5 %
+PASS D:   no room stands outside the model's side at D deck                                           0.2 m2 outside                               under 1 m2
+     the rows' floor 6226 m2 summed, 5784 m2 as a union: 442 m2 where rows overlap (a block row drawn over a hatch or stair it lists in 'minus', or two readings of one wall)
+PASS D: the rooms stand where the model has a space of D deck (its hull; above B deck its tiers and houses), but rows tagged 'beyond the model' 0.0 m2 outside it in 0 rows; untagged and more than half outside: none none untagged
+     passages, clear width (m): 019 1.28; 020 1.31
+     
+PASS D: every door names a row of the table or a place off it                                         157 doors in 55 rows; dangling: none         none dangling
+     watertight doors on D deck: 0 entries; widths written on the plan: 1 doors; the rest default [bet]
+
+D deck: where the plan's compartment and the model's zone part (the plan marks  on this deck):
+  nowhere
+
+D deck, slab by slab: the slab's footprint (its columns), her deck there (her side), and the floor the table's rooms cover (m2)
+  zone side  slab            footprint     deck    rooms   cover of the footprint
+     0 P     0:P:D                 53       33       33     62 %
+     0 S     0:S:D                 53       33       33     62 %
+     1 P     1:P:D                119       84       65     55 %
+     1 S     1:S:D                119       84       65     55 %
+     2 P     2:P:D                184      143      113     61 %
+     2 S     2:S:D                184      143      112     61 %
+     3 P     3:P:D                206      180      172     84 %
+     3 S     3:S:D                206      180      172     84 %
+     4 P     4:P:D                228      214      214     94 %
+     4 S     4:S:D                228      214      214     94 %
+     5 P     5:P:D                243      242      232     96 %
+     5 S     5:S:D                243      242      232     96 %
+     6 P     6:P:D                243      245      245    101 %
+     6 S     6:S:D                243      245      245    101 %
+     7 P     7:P:D                243      245      245    101 %
+     7 S     7:S:D                243      245      245    101 %
+     8 P     8:P:D                256      258      258    101 %
+     8 S     8:S:D                256      258      258    101 %
+     9 P     9:P:D                154      154      125     81 %
+     9 S     9:S:D                154      154      124     81 %
+    10 P     10:P:D               294      298      293    100 %
+    10 S     10:S:D               294      298      293    100 %
+    11 P     11:P:D               243      243      243    100 %
+    11 S     11:S:D               243      243      243    100 %
+    12 P     12:P:D               266      258      258     97 %
+    12 S     12:S:D               266      258      258     97 %
+    13 P     13:P:D               218      195      173     79 %
+    13 S     13:S:D               218      195      174     80 %
+    14 P     14:P:D               213      156      156     73 %
+    14 S     14:S:D               213      156      156     73 %
+    15 P     15:P:D               193       76       67     35 %
+    15 S     15:S:D               193       76       67     35 %
+  (aft: the plan's D deck ends 132.1 m abaft amidships; the model's side at D deck runs on to 138.9 m)
+PASS D: her side as the plan draws it, read to port and to starboard, agrees within 1.5 ft at every frame read (a check of the reading) 43 frames; worst 1.08 ft apart               within 1.5 ft
+
+D deck: her side at her ends, the plan's against the model's (m from the centreline; the model at D deck itself, and halfway to the deck above)
+  frame       x     plan   model at deck   less plan   model halfway   less plan
+   150A  -130.6     8.31            3.14       -5.17            3.24       -5.08
+   148A  -129.2     8.85            3.61       -5.24            3.71       -5.14
+   145A  -127.2     9.38            4.28       -5.11            4.40       -4.98
+   140A  -123.8    10.40            5.34       -5.06            5.48       -4.92
+   135A  -120.3    11.03            6.34       -4.69            6.50       -4.53
+   130A  -116.8    11.53            7.26       -4.27            7.44       -4.10
+   125A  -112.9    11.92            8.21       -3.71            8.39       -3.53
+   120A  -108.9    12.28            9.09       -3.19            9.26       -3.02
+   115A  -104.7    12.61            9.91       -2.69           10.09       -2.52
+   110A  -100.4    12.89           10.65       -2.24           10.82       -2.07
+   100A   -91.3    13.29           11.97       -1.33           12.10       -1.19
+    90A   -82.1    13.59           12.92       -0.68           13.01       -0.58
+    80A   -72.9    13.86           13.54       -0.32           13.60       -0.26
+    75A   -68.4    13.97           13.75       -0.21           13.79       -0.17
+    70A   -63.8    14.05           13.91       -0.15           13.93       -0.12
+    65A   -59.2    14.08           14.01       -0.07           14.02       -0.06
+    60A   -54.6    14.10           14.07       -0.03           14.07       -0.03
+    55A   -50.0    14.12           14.09       -0.02           14.09       -0.03
+    50A   -45.4    14.12           14.10       -0.02           14.09       -0.02
+    45A   -40.9    14.13           14.10       -0.03           14.09       -0.04
+    40A   -36.3    14.14           14.10       -0.05           14.09       -0.05
+    40F    36.3    14.02           14.07        0.05           14.07        0.05
+    45F    40.8    14.01           14.01        0.00           14.02        0.01
+    50F    45.3    13.99           13.91       -0.08           13.92       -0.07
+    55F    49.9    13.97           13.76       -0.21           13.78       -0.19
+    60F    54.5    13.94           13.55       -0.39           13.58       -0.35
+    65F    59.1    13.89           13.29       -0.60           13.33       -0.56
+    70F    63.7    13.82           12.96       -0.85           13.02       -0.80
+    75F    68.3    13.67           12.58       -1.09           12.64       -1.02
+    80F    72.9    13.38           12.13       -1.25           12.21       -1.18
+    90F    81.9    12.62           11.05       -1.58           11.14       -1.48
+   100F    90.8    11.59            9.69       -1.90            9.80       -1.79
+   105F    94.9    11.00            8.98       -2.02            9.09       -1.90
+   110F    99.0    10.25            8.20       -2.05            8.31       -1.94
+   115F   102.7     9.44            7.43       -2.02            7.54       -1.90
+   120F   106.4     8.46            6.60       -1.86            6.72       -1.74
+   125F   110.0     7.68            5.76       -1.93            5.87       -1.82
+   130F   113.4     6.57            4.88       -1.68            4.99       -1.58
+   135F   116.7     5.55            4.02       -1.53            4.12       -1.43
+   140F   119.9     4.40            3.12       -1.28            3.20       -1.20
+   145F   122.9     3.22            2.20       -1.02            2.28       -0.94
+   150F   126.0     1.89            1.24       -0.65            1.31       -0.59
+   154F   128.5     0.79            0.44       -0.35            0.49       -0.30
+
+== E deck: data/rooms/E_deck.json, 137 rows ==
+PASS E: the rows: each has its id, kind, name, frames, feet, doors (a width or a reason), source, check and tags 137 rows; bad: none                          every row
+     kinds: cabin 20, casing 12, crew 39, hatch 6, lift 1, passage 16, service 19, stair 18, store 5, trunk 1
+     checked against an original: 28 of 137 rows; rows that are blocks of rooms: 44; cabin numbers named in the cabin rows: 118
+PASS E: the derived fields (metres, area, zone by C.zoneAt, slab by slabAt) are the model's, as tools/rooms_table.js --write gives them stale: none                                  none
+PASS E:   every row stands in a slab of E deck (its pieces, cut at the model's bulkheads and the centreline) outside: none                                none
+PASS E: each slab: the rooms on it (their union, a 0.1 m grid) cover no more floor than the slab has  worst slab 100.0 %; over: none               none over 100.5 %
+PASS E:   no room stands outside the model's side at E deck                                           0.4 m2 outside                               under 1 m2
+     the rows' floor 5789 m2 summed, 5586 m2 as a union: 202 m2 where rows overlap (a block row drawn over a hatch or stair it lists in 'minus', or two readings of one wall)
+PASS E: the rooms stand where the model has a space of E deck (its hull; above B deck its tiers and houses), but rows tagged 'beyond the model' 0.0 m2 outside it in 0 rows; untagged and more than half outside: none none untagged
+PASS E: Scotland Road's straight run (19A to 82.5F): its width over its two walls, against the record's 8 ft 6 in to 9 ft 2.63 m over the walls; 2.24 m clear          2.59 to 2.74 m
+     clear width by stretch (m): SR1 2.24; SR2 2.72; SR3 5.68; SR4 1.97; SR5 2.09; SR6 1.68; SR7 1.68; SR8 1.32; the model's port path: wPort 3.0 x wMul 1.036 = 3.11 m
+     the starboard passage, clear width by stretch (m): SP1 1.49; SP2 1.49; SP3 1.49; SP4 1.31; SP5 1.34; SP6 1.34; the model's starboard path: wStbd 2.0 x wMul 1.036 = 2.07 m
+PASS E: the plan's bulkheads K, L, M, N, O on E deck, by her frames at the plan's scale, against the model's (the scale's check) 5 of 5 within 0.5 m (worst of them 0.14 m); off: none four of five within 0.5 m
+     A 140F: 119.87 m, the model's 115.52 m (+4.35); B 110F: 99.00 m, the model's 101.80 m (-2.81); K 30A: -27.09 m, the model's -27.13 m (+0.04); L 53A: -48.16 m, the model's -48.16 m (+0.00); M 72A: -65.65 m, the model's -65.53 m (-0.12); N 93A: -84.81 m, the model's -84.73 m (-0.07); O 111A: -101.34 m, the model's -101.19 m (-0.14); P 139A: -123.06 m, the model's -118.57 m (-4.49)
+PASS E: every door names a row of the table or a place off it                                         373 doors in 137 rows; dangling: none        none dangling
+     watertight doors on E deck: 12 entries; widths written on the plan: 8 doors; the rest default [bet]
+
+E deck: where the plan's compartment and the model's zone part (the plan marks A, B, K, L, M, N, O, P on this deck):
+  E-003 (130F to 140F): the plan puts it in zone 1 (between A and B); the model, in zone 0 and 1
+  E-007 (111.5F to 114F): the plan puts it in zone 1 (between A and B); the model, in zone 2
+  E-008 (111.5F to 114F): the plan puts it in zone 1 (between A and B); the model, in zone 2
+  E-009 (110F to 114F): the plan puts it in zone 1 (between A and B); the model, in zone 2
+  E-010 (108.5F to 113.5F): the plan puts it in zone 1 (between A and B); the model, in zone 2
+  E-090 (77A to 70A): the plan puts it in zone 12 (between M and N); the model, in zone 11 and 12
+  E-091 (77A to 69.3A): the plan puts it in zone 12 (between M and N); the model, in zone 11 and 12
+  E-106 (139A to 111A): the plan puts it in zone 14 (between O and P); the model, in zone 14 and 15
+  E-107 (139A to 111A): the plan puts it in zone 14 (between O and P); the model, in zone 14 and 15
+  E-111 (138A to 130A): the plan puts it in zone 14 (between O and P); the model, in zone 14 and 15
+
+E deck, slab by slab: the slab's footprint (its columns), her deck there (her side), and the floor the table's rooms cover (m2)
+  zone side  slab            footprint     deck    rooms   cover of the footprint
+     0 P     0:P:E                 46       31       29     62 %
+     0 S     0:S:E                 46       31       29     62 %
+     1 P     1:P:E                110       82       66     60 %
+     1 S     1:S:E                110       82       57     52 %
+     2 P     2:P:E                172      139      129     75 %
+     2 S     2:S:E                172      139      100     58 %
+     3 P     3:P:E                202      177      155     76 %
+     3 S     3:S:E                202      177      163     81 %
+     4 P     4:P:E                228      213      206     90 %
+     4 S     4:S:E                228      213      210     92 %
+     5 P     5:P:E                243      241      231     95 %
+     5 S     5:S:E                243      241      241     99 %
+     6 P     6:P:E                243      245      238     98 %
+     6 S     6:S:E                243      245      236     97 %
+     7 P     7:P:E                243      245      238     98 %
+     7 S     7:S:E                243      245      244    100 %
+     8 P     8:P:E                256      258      251     98 %
+     8 S     8:S:E                256      258      245     96 %
+     9 P     9:P:E                154      154      136     89 %
+     9 S     9:S:E                154      154      152     99 %
+    10 P     10:P:E               294      298      291     99 %
+    10 S     10:S:E               294      298      298    101 %
+    11 P     11:P:E               243      242      228     94 %
+    11 S     11:S:E               243      242      222     91 %
+    12 P     12:P:E               265      255      225     85 %
+    12 S     12:S:E               265      255      230     87 %
+    13 P     13:P:E               218      191      186     85 %
+    13 S     13:S:E               218      191      190     87 %
+    14 P     14:P:E               213      150      140     66 %
+    14 S     14:S:E               213      150      140     66 %
+    15 P     15:P:E               140       72       41     29 %
+    15 S     15:S:E               140       72       41     29 %
+  (aft: the plan's E deck ends 129.5 m abaft amidships; the model's side at E deck runs on to 138.9 m)
+PASS E: her side as the plan draws it, read to port and to starboard, agrees within 1.5 ft at every frame read (a check of the reading) 41 frames; worst 1.28 ft apart               within 1.5 ft
+
+E deck: her side at her ends, the plan's against the model's (m from the centreline; the model at E deck itself, and halfway to the deck above)
+  frame       x     plan   model at deck   less plan   model halfway   less plan
+   145A  -127.2     3.41            4.06        0.65            4.17        0.76
+   140A  -123.8     6.11            5.08       -1.04            5.21       -0.91
+   135A  -120.3     7.57            6.05       -1.52            6.20       -1.37
+   130A  -116.8     8.88            6.95       -1.93            7.11       -1.77
+   125A  -112.9     9.70            7.88       -1.82            8.05       -1.65
+   120A  -108.9    10.49            8.75       -1.74            8.92       -1.57
+   115A  -104.7    11.36            9.58       -1.78            9.75       -1.61
+   110A  -100.4    11.90           10.33       -1.56           10.50       -1.40
+   100A   -91.3    12.69           11.69       -1.00           11.84       -0.86
+    90A   -82.1    13.22           12.71       -0.50           12.82       -0.40
+    80A   -72.9    13.66           13.41       -0.25           13.48       -0.18
+    75A   -68.4    13.78           13.66       -0.12           13.71       -0.07
+    70A   -63.8    13.90           13.85       -0.06           13.88       -0.02
+    65A   -59.2    13.99           13.98       -0.02           14.00        0.00
+    60A   -54.6    14.07           14.06       -0.01           14.06       -0.01
+    55A   -50.0    14.11           14.09       -0.02           14.09       -0.02
+    50A   -45.4    14.13           14.10       -0.03           14.10       -0.03
+    45A   -40.9    14.13           14.10       -0.03           14.10       -0.03
+    40A   -36.3    14.13           14.10       -0.03           14.10       -0.03
+    40F    36.3    14.13           14.07       -0.06           14.07       -0.06
+    45F    40.8    14.10           14.00       -0.10           14.00       -0.09
+    50F    45.3    14.05           13.88       -0.18           13.89       -0.16
+    55F    49.9    14.01           13.70       -0.30           13.73       -0.28
+    60F    54.5    13.93           13.48       -0.46           13.51       -0.42
+    65F    59.1    13.80           13.19       -0.61           13.24       -0.56
+    70F    63.7    13.62           12.85       -0.77           12.91       -0.71
+    75F    68.3    13.38           12.44       -0.94           12.51       -0.87
+    80F    72.9    13.13           11.97       -1.15           12.05       -1.07
+    90F    81.9    12.26           10.85       -1.40           10.95       -1.31
+   100F    90.8    11.00            9.48       -1.52            9.59       -1.41
+   105F    94.9    10.11            8.76       -1.35            8.87       -1.23
+   110F    99.0     9.42            7.98       -1.44            8.09       -1.33
+   115F   102.7     8.52            7.21       -1.31            7.32       -1.20
+   120F   106.4     7.58            6.40       -1.19            6.50       -1.08
+   125F   110.0     6.61            5.56       -1.05            5.66       -0.95
+   130F   113.4     5.62            4.70       -0.92            4.79       -0.83
+   135F   116.7     4.63            3.85       -0.78            3.94       -0.69
+   140F   119.9     3.68            2.96       -0.72            3.04       -0.64
+   145F   122.9     2.66            2.07       -0.59            2.14       -0.52
+   150F   126.0     1.60            1.13       -0.47            1.19       -0.41
+   154F   128.5     0.66            0.35       -0.31            0.40       -0.26
+
+== F deck: data/rooms/F_deck.json, 109 rows ==
+PASS F: the rows: each has its id, kind, name, frames, feet, doors (a width or a reason), source, check and tags 109 rows; bad: none                          every row
+     kinds: cabin 23, casing 10, crew 10, hatch 7, passage 11, service 26, stair 15, store 7
+     checked against an original: 0 of 109 rows; rows that are blocks of rooms: 41; cabin numbers named in the cabin rows: 178
+PASS F: the derived fields (metres, area, zone by C.zoneAt, slab by slabAt) are the model's, as tools/rooms_table.js --write gives them stale: none                                  none
+PASS F:   every row stands in a slab of F deck (its pieces, cut at the model's bulkheads and the centreline) outside: none                                none
+PASS F: each slab: the rooms on it (their union, a 0.1 m grid) cover no more floor than the slab has  worst slab 100.0 %; over: none               none over 100.5 %
+PASS F:   no room stands outside the model's side at F deck                                           0.3 m2 outside                               under 1 m2
+     the rows' floor 5691 m2 summed, 5598 m2 as a union: 94 m2 where rows overlap (a block row drawn over a hatch or stair it lists in 'minus', or two readings of one wall)
+PASS F: the rooms stand where the model has a space of F deck (its hull; above B deck its tiers and houses), but rows tagged 'beyond the model' 0.0 m2 outside it in 0 rows; untagged and more than half outside: none none untagged
+     passages, clear width (m): 021 0.76; 022 1.22; 038 2.41; 044 2.47; 074 0.91; 076 0.91; 079 1.37; 081 1.40; 086 1.49; 087 1.49; 087b 1.49
+PASS F: the plan's bulkheads K, L, M, N, O on F deck, by her frames at the plan's scale, against the model's (the scale's check) 5 of 5 within 0.5 m (worst of them 0.13 m); off: none four of five within 0.5 m
+     A 134F: 116.01 m, the model's 115.52 m (+0.49); B 111F: 99.53 m, the model's 101.80 m (-2.28); C 95F: 86.47 m, the model's 86.26 m (+0.21); D 78F: 70.86 m, the model's 70.71 m (+0.15); E 60F: 54.40 m, the model's 54.25 m (+0.14); F 42F: 37.99 m, the model's 36.88 m (+1.11); G 21F: 18.79 m, the model's 19.51 m (-0.71); H 3F: 2.28 m, the model's 2.13 m (+0.15); J 18A: -16.04 m, the model's -16.15 m (+0.12); K 30A: -27.00 m, the model's -27.13 m (+0.13); L 53A: -48.05 m, the model's -48.16 m (+0.11); M 72A: -65.46 m, the model's -65.53 m (+0.07); N 93A: -84.62 m, the model's -84.73 m (+0.11); O 111A: -101.07 m, the model's -101.19 m (+0.12); P 139A: -122.74 m, the model's -118.57 m (-4.17)
+PASS F: every door names a row of the table or a place off it                                         325 doors in 109 rows; dangling: none        none dangling
+     watertight doors on F deck: 14 entries; widths written on the plan: 0 doors; the rest default [bet]
+
+F deck: where the plan's compartment and the model's zone part (the plan marks A, B, C, D, E, F, G, H, J, K, L, M, N, O, P on this deck):
+  F-003 (121F to 134F): the plan puts it in zone 1 (between A and B); the model, in zone 0 and 1
+  F-005 (112.5F to 114.5F): the plan puts it in zone 1 (between A and B); the model, in zone 1 and 2
+  F-006 (112.5F to 114.5F): the plan puts it in zone 1 (between A and B); the model, in zone 1 and 2
+  F-007 (111F to 121F): the plan puts it in zone 1 (between A and B); the model, in zone 1 and 2
+  F-008 (111F to 121F): the plan puts it in zone 1 (between A and B); the model, in zone 1 and 2
+  F-025 (77.5F to 78.1F): the plan puts it in zone 4 (between D and E); the model, in zone 3 and 4
+  F-045 (33.6F to 41.8F): the plan puts it in zone 6 (between F and G); the model, in zone 5 and 6
+  F-046 (29F to 42F): the plan puts it in zone 6 (between F and G); the model, in zone 5 and 6
+  F-048 (31F to 42F): the plan puts it in zone 6 (between F and G); the model, in zone 5 and 6
+  F-053 (21F to 24F): the plan puts it in zone 6 (between F and G); the model, in zone 6 and 7
+  F-054 (21F to 24F): the plan puts it in zone 6 (between F and G); the model, in zone 6 and 7
+  F-055 (21F to 29F): the plan puts it in zone 6 (between F and G); the model, in zone 6 and 7
+  F-056 (19F to 24F): the plan puts it in zone 6 (between F and G); the model, in zone 6 and 7
+  F-061 (1F to 4F): the plan puts it in zone 8 (between H and J); the model, in zone 7 and 8
+  F-102 (139A to 111A): the plan puts it in zone 14 (between O and P); the model, in zone 14 and 15
+  F-103 (139A to 111A): the plan puts it in zone 14 (between O and P); the model, in zone 14 and 15
+  F-105 (137A to 130A): the plan puts it in zone 14 (between O and P); the model, in zone 14 and 15
+
+F deck, slab by slab: the slab's footprint (its columns), her deck there (her side), and the floor the table's rooms cover (m2)
+  zone side  slab            footprint     deck    rooms   cover of the footprint
+     0 P     0:P:F                 37       29       29     79 %
+     0 S     0:S:F                 37       29       29     79 %
+     1 P     1:P:F                 95       79       76     80 %
+     1 S     1:S:F                 95       79       76     80 %
+     2 P     2:P:F                159      136      129     81 %
+     2 S     2:S:F                159      136      130     82 %
+     3 P     3:P:F                196      174      150     77 %
+     3 S     3:S:F                196      174      161     82 %
+     4 P     4:P:F                225      211      210     93 %
+     4 S     4:S:F                225      211      199     89 %
+     5 P     5:P:F                243      240      225     93 %
+     5 S     5:S:F                243      240      173     71 %
+     6 P     6:P:F                243      245      228     94 %
+     6 S     6:S:F                243      245      220     91 %
+     7 P     7:P:F                243      245      242     99 %
+     7 S     7:S:F                243      245      242     99 %
+     8 P     8:P:F                256      258      240     94 %
+     8 S     8:S:F                256      258      246     96 %
+     9 P     9:P:F                154      154      154    100 %
+     9 S     9:S:F                154      154      154    100 %
+    10 P     10:P:F               294      298      298    101 %
+    10 S     10:S:F               294      298      298    101 %
+    11 P     11:P:F               243      242      242     99 %
+    11 S     11:S:F               243      242      242     99 %
+    12 P     12:P:F               261      252      242     93 %
+    12 S     12:S:F               261      252      235     90 %
+    13 P     13:P:F               206      185      178     87 %
+    13 S     13:S:F               206      185      180     87 %
+    14 P     14:P:F               178      144      138     77 %
+    14 S     14:S:F               178      144      138     77 %
+    15 P     15:P:F                77       68       47     61 %
+    15 S     15:S:F                77       68       47     61 %
+  (aft: the plan's F deck ends 128.2 m abaft amidships; the model's side at F deck runs on to 138.9 m)
+
+== G deck: data/rooms/G_deck.json, 58 rows ==
+PASS G: the rows: each has its id, kind, name, frames, feet, doors (a width or a reason), source, check and tags 58 rows; bad: none                           every row
+     kinds: bunker 5, cabin 9, casing 8, crew 5, hatch 7, service 3, stair 8, store 12, tank 1
+     checked against an original: 0 of 58 rows; rows that are blocks of rooms: 20; cabin numbers named in the cabin rows: 95
+PASS G: the derived fields (metres, area, zone by C.zoneAt, slab by slabAt) are the model's, as tools/rooms_table.js --write gives them stale: none                                  none
+PASS G:   every row stands in a slab of G deck (its pieces, cut at the model's bulkheads and the centreline) outside: none                                none
+PASS G: each slab: the rooms on it (their union, a 0.1 m grid) cover no more floor than the slab has  worst slab 100.0 %; over: none               none over 100.5 %
+PASS G:   no room stands outside the model's side at G deck                                           0.3 m2 outside                               under 1 m2
+     the rows' floor 5872 m2 summed, 5707 m2 as a union: 166 m2 where rows overlap (a block row drawn over a hatch or stair it lists in 'minus', or two readings of one wall)
+PASS G: the rooms stand where the model has a space of G deck (its hull; above B deck its tiers and houses), but rows tagged 'beyond the model' 0.0 m2 outside it in 0 rows; untagged and more than half outside: none none untagged
+PASS G: the plan's bulkheads K, L, M, N, O on G deck, by her frames at the plan's scale, against the model's (the scale's check) 4 of 5 within 0.5 m (worst of them 0.21 m); off: M 0.95 m four of five within 0.5 m
+     A 134F: 116.00 m, the model's 115.52 m (+0.48); B 111F: 99.50 m, the model's 101.80 m (-2.30); C 95F: 86.41 m, the model's 86.26 m (+0.15); D 78F: 70.87 m, the model's 70.71 m (+0.16); E 60F: 54.43 m, the model's 54.25 m (+0.18); F 41F: 36.93 m, the model's 36.88 m (+0.05); G 22F: 19.72 m, the model's 19.51 m (+0.21); H 3F: 2.27 m, the model's 2.13 m (+0.14); J 18A: -16.01 m, the model's -16.15 m (+0.15); K 30A: -26.99 m, the model's -27.13 m (+0.14); L 53A: -48.05 m, the model's -48.16 m (+0.10); M 71A: -64.58 m, the model's -65.53 m (+0.95); N 93A: -84.64 m, the model's -84.73 m (+0.09); O 111A: -100.98 m, the model's -101.19 m (+0.21); P 139A: -122.71 m, the model's -118.57 m (-4.14)
+PASS G: every door names a row of the table or a place off it                                         132 doors in 58 rows; dangling: none         none dangling
+     watertight doors on G deck: 0 entries; widths written on the plan: 0 doors; the rest default [bet]
+
+G deck: where the plan's compartment and the model's zone part (the plan marks A, B, C, D, E, F, G, H, J, K, L, M, N, O, P on this deck):
+  G-003 (116F to 134F): the plan puts it in zone 1 (between A and B); the model, in zone 0 and 1
+  G-004 (116F to 134F): the plan puts it in zone 1 (between A and B); the model, in zone 0 and 1
+  G-005 (120.5F to 134F): the plan puts it in zone 1 (between A and B); the model, in zone 0 and 1
+  G-007 (112F to 114.5F): the plan puts it in zone 1 (between A and B); the model, in zone 1 and 2
+  G-008 (112F to 114.5F): the plan puts it in zone 1 (between A and B); the model, in zone 1 and 2
+  G-009 (111F to 116F): the plan puts it in zone 1 (between A and B); the model, in zone 1 and 2
+  G-010 (111F to 116F): the plan puts it in zone 1 (between A and B); the model, in zone 1 and 2
+  G-020 (77F to 87F): the plan puts it in zone 3 (between C and D); the model, in zone 3 and 4
+  G-024 (57F to 63F): the plan puts it in zone 5 (between E and F); the model, in zone 4 and 5
+  G-027 (37F to 44.5F): the plan puts it in zone 6 (between F and G); the model, in zone 5 and 6
+  G-029 (18.5F to 25F): the plan puts it in zone 7 (between G and H); the model, in zone 6 and 7
+  G-031 (3A to 6F): the plan puts it in zone 8 (between H and J); the model, in zone 7 and 8
+  G-033 (21.7A to 15A): the plan puts it in zone 9 (between J and K); the model, in zone 8 and 9
+  G-042 (93A to 71A): the plan puts it in zone 12 (between M and N); the model, in zone 11 and 12
+  G-043 (93A to 71A): the plan puts it in zone 12 (between M and N); the model, in zone 11 and 12
+  G-044 (93A to 71A): the plan puts it in zone 12 (between M and N); the model, in zone 11 and 12
+  G-057 (139A to 133A): the plan puts it in zone 14 (between O and P); the model, in zone 15
+
+G deck, slab by slab: the slab's footprint (its columns), her deck there (her side), and the floor the table's rooms cover (m2)
+  zone side  slab            footprint     deck    rooms   cover of the footprint
+     0 P     0:P:G                 34       28       28     81 %
+     0 S     0:S:G                 34       28       28     81 %
+     1 P     1:P:G                 86       76       73     85 %
+     1 S     1:S:G                 86       76       74     86 %
+     2 P     2:P:G                144      133      126     87 %
+     2 S     2:S:G                144      133      127     88 %
+     3 P     3:P:G                181      172      169     93 %
+     3 S     3:S:G                181      172      158     87 %
+     4 P     4:P:G                214      209      209     98 %
+     4 S     4:S:G                214      209      209     98 %
+     5 P     5:P:G                240      240      240    100 %
+     5 S     5:S:G                240      240      240    100 %
+     6 P     6:P:G                243      245      245    101 %
+     6 S     6:S:G                243      245      245    101 %
+     7 P     7:P:G                243      245      245    101 %
+     7 S     7:S:G                243      245      245    101 %
+     8 P     8:P:G                256      258      258    101 %
+     8 S     8:S:G                256      258      258    101 %
+     9 P     9:P:G                154      154      154    100 %
+     9 S     9:S:G                154      154      154    100 %
+    10 P     10:P:G               294      298      298    101 %
+    10 S     10:S:G               294      298      298    101 %
+    11 P     11:P:G               242      241      241     99 %
+    11 S     11:S:G               242      241      241     99 %
+    12 P     12:P:G               251      243      243     97 %
+    12 S     12:S:G               251      243      243     97 %
+    13 P     13:P:G               187      169      169     90 %
+    13 S     13:S:G               187      169      169     90 %
+    14 P     14:P:G               149      123      123     83 %
+    14 S     14:S:G               149      123      123     83 %
+    15 P     15:P:G                61       46       38     62 %
+    15 S     15:S:G                61       46       38     62 %
+  (aft: the plan's G deck ends 129.0 m abaft amidships; the model's side at G deck runs on to 136.0 m)
+
+== orlop deck: data/rooms/orlop_deck.json, 34 rows ==
+PASS orlop: the rows: each has its id, kind, name, frames, feet, doors (a width or a reason), source, check and tags 34 rows; bad: none                           every row
+     kinds: bunker 5, hatch 6, hold 4, machinery 8, service 1, store 9, tank 1
+     checked against an original: 0 of 34 rows; rows that are blocks of rooms: 3; cabin numbers named in the cabin rows: 0
+PASS orlop: the derived fields (metres, area, zone by C.zoneAt, slab by slabAt) are the model's, as tools/rooms_table.js --write gives them stale: none                                  none
+PASS orlop:   every row stands in a slab of orlop deck (its pieces, cut at the model's bulkheads and the centreline) outside: none                                none
+PASS orlop: each slab: the rooms on it (their union, a 0.1 m grid) cover no more floor than the slab has worst slab 100.0 %; over: none               none over 100.5 %
+PASS orlop:   no room stands outside the model's side at orlop deck                                   0.4 m2 outside                               under 1 m2
+     the rows' floor 5809 m2 summed, 5585 m2 as a union: 223 m2 where rows overlap (a block row drawn over a hatch or stair it lists in 'minus', or two readings of one wall)
+PASS orlop: the rooms stand where the model has a space of orlop deck (its hull; above B deck its tiers and houses), but rows tagged 'beyond the model' 0.0 m2 outside it in 0 rows; untagged and more than half outside: none none untagged
+PASS orlop: the plan's bulkheads N, O on orlop deck, by her frames at the plan's scale, against the model's (the scale's check) 2 of 2 within 0.5 m (worst of them 0.14 m); off: none four of five within 0.5 m
+     A 134F: 116.02 m, the model's 115.52 m (+0.50); B 114F: 101.97 m, the model's 101.80 m (+0.17); C 95F: 86.36 m, the model's 86.26 m (+0.10); D 78F: 71.06 m, the model's 70.71 m (+0.34); N 93A: -84.81 m, the model's -84.73 m (-0.07); O 111A: -101.34 m, the model's -101.19 m (-0.14); P 139A: -123.06 m, the model's -118.57 m (-4.49)
+PASS orlop: every door names a row of the table or a place off it                                     7 doors in 34 rows; dangling: none           none dangling
+     watertight doors on orlop deck: 2 entries; widths written on the plan: 0 doors; the rest default [bet]
+
+orlop deck: where the plan's compartment and the model's zone part (the plan marks A, B, C, D, N, O, P on this deck):
+  O-003 (114F to 134F): the plan puts it in zone 1 (between A and B); the model, in zone 0 and 1
+  O-033 (139A to 111A): the plan puts it in zone 14 (between O and P); the model, in zone 14 and 15
+
+orlop deck, slab by slab: the slab's footprint (its columns), her deck there (her side), and the floor the table's rooms cover (m2)
+  zone side  slab            footprint     deck    rooms   cover of the footprint
+     0 P     0:P:below G           28       26       26     93 %
+     0 S     0:S:below G           28       26       26     93 %
+     1 P     1:P:below G           77       74       74     96 %
+     1 S     1:S:below G           77       74       74     96 %
+     2 P     2:P:below G          132      130      129     98 %
+     2 S     2:S:below G          132      130      130     98 %
+     3 P     3:P:below G          171      168      156     91 %
+     3 S     3:S:below G          171      168      168     98 %
+     4 P     4:P:below G          208      205      205     98 %
+     4 S     4:S:below G          208      205      205     98 %
+     5 P     5:P:below G          239      237      237     99 %
+     5 S     5:S:below G          239      237      237     99 %
+     6 P     6:P:below G          243      245      245    101 %
+     6 S     6:S:below G          243      245      245    101 %
+     7 P     7:P:below G          243      245      245    101 %
+     7 S     7:S:below G          243      245      245    101 %
+     8 P     8:P:below G          256      258      258    101 %
+     8 S     8:S:below G          256      258      258    101 %
+     9 P     9:P:below G          154      154      154    100 %
+     9 S     9:S:below G          154      154      154    100 %
+    10 P     10:P:below G         294      298      298    101 %
+    10 S     10:S:below G         294      298      298    101 %
+    11 P     11:P:below G         240      238      238     99 %
+    11 S     11:S:below G         240      238      238     99 %
+    12 P     12:P:below G         241      236      236     98 %
+    12 S     12:S:below G         241      236      236     98 %
+    13 P     13:P:below G         166      161      160     97 %
+    13 S     13:S:below G         166      161      160     97 %
+    14 P     14:P:below G         107      105      105     98 %
+    14 S     14:S:below G         107      105      105     98 %
+    15 P     15:P:below G          23       21       21     88 %
+    15 S     15:S:below G          23       21       21     88 %
+  (aft: the plan's orlop deck ends 129.5 m abaft amidships; the model's side at orlop deck runs on to 129.5 m)
+
+== her openings: data/rooms/openings.json, 256 rows ==
+PASS openings: each row has its id, deck, rooms, kind, where it stands, the plan's words, size and shape, count and how it was had, side, frames, source, check and tags 256 rows; bad: none                          every row
+PASS openings:   every size is positive (one figure for a round one or a width, two for a rectangle), every count a whole number over 0 or null with its reason bad: none; 247 sized, 254 counted            none
+PASS openings:   each stands inside its deck and its rooms (rows of that deck's table; its frames within theirs, a metre either way); one in her side on a room at her side, that side outside: none                                none
+PASS openings: the derived fields (x in metres, zones by C.zoneAt, clear areas) are the model's, as tools/rooms_table.js --write gives them stale: none                                  none
+PASS openings:   a group counted opening by opening has as many positions as its count, each inside its frames, none twice 184 groups with positions; bad: none         none
+PASS openings:   on each deck the sidelights and windows counted in her side to port and to starboard agree within a tenth (or 3): a check of the counting C 128/126, B 55/58, E 129/135, D 193/191     every deck
+
+  her openings per deck and side: groups, openings counted, their clear area (m2, where the size is known), and of them those to the weather
+  deck   side              groups   openings   area m2   to the weather: openings, m2
+  C      P                     30        145     44.40      130, 36.57
+  C      S                     31        143     44.03      128, 36.20
+  C      fwd wall               2          0      0.00        0, 0.00
+  B      P                     10         71     35.88       71, 35.88
+  B      S                     12         78     45.06       74, 41.44
+  B      front                  3         20      7.50       20, 7.50
+  B      aft wall               1          2      3.47        2, 3.47
+  A      P                     14         62     90.16       62, 90.16
+  A      aft wall               3          4      1.30        4, 1.30
+  A      S                     13         77     98.66       77, 98.66
+  A      fwd wall               1          1      5.05        1, 5.05
+  Boat   P&S                    4         48     37.27       48, 37.27
+  Boat   P                      2         14      6.83       14, 6.83
+  Boat   S                      2         14      6.83       14, 6.83
+  Boat   front and sides        1         16     11.46       16, 11.46
+  E      P                     41        131     18.96      131, 18.96
+  E      S                     28        137     19.64      137, 19.64
+  D      P                     29        195     37.93      195, 37.93
+  D      S                     29        193     37.59      193, 37.59
+  in all: 1351 openings counted, 552.0 m2; to the weather 1317, 532.7 m2
+  by deck and kind: C sidelight 230; C window 54; C door in her side 4; B gangway door 2; B door in her side 4; B house door 2; B window 163; A window 137; A house door 7; Boat window 76; Boat house door 2; Boat deck light 14; E sidelight 264; E door in her side 4; D sidelight 376; D door in her side 4; D window 8
+  groups with no count (the plan gives none and does not let one count them): O-013 (C, fwd wall), O-014 (C, fwd wall)
+
+PASS: all 78 rows

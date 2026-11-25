@@ -1,0 +1,24 @@
+/* NH2, her rooms and when the water came (site/parts/79_cabins.js), in the Damage tab [appearance] */
+.cb-sec .cb-lead { margin: 0 0 6px; max-width: 62ch; }
+.cb-q { box-sizing: border-box; width: 100%; padding: 7px 9px; border: 1px solid var(--line-2); border-radius: 5px; background: rgba(6, 12, 20, 0.6); color: var(--ink); font: 13px var(--f-ui); }
+.cb-q:focus { outline: none; border-color: var(--ink-2); }
+.cb-hits { list-style: none; margin: 4px 0 0; padding: 0; }
+.cb-hit { display: block; width: 100%; text-align: left; padding: 5px 6px; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--ink-2); font: 12.5px var(--f-ui); cursor: pointer; }
+.cb-hit:hover, .cb-hit:focus { color: var(--ink); background: rgba(39, 64, 90, 0.35); outline: none; }
+.cb-status { margin: 4px 0 0; }
+.cb-sec .cb-credit { margin: 10px 0 0; font-size: 11px; line-height: 1.45; max-width: 62ch; }   /* RC2: the rooms' credit [appearance] */
+.cb-card { margin-top: 8px; padding: 8px 10px; border: 1px solid var(--line-2); border-radius: 6px; background: rgba(6, 12, 20, 0.45); }
+.cb-title { font-weight: 600; color: var(--ink); font-size: 13.5px; }
+.cb-sub { margin-top: 2px; font-size: 12px; color: var(--muted); }
+.cb-hit.cb-who { color: var(--ink); }
+.cb-people { margin-top: 6px; }
+.cb-folk-head { font-size: 12px; color: var(--muted); }
+.cb-folk { list-style: none; margin: 2px 0 0; padding: 0; }
+.cb-folk li { padding: 2px 0; font-size: 12.5px; color: var(--ink-2); }
+.cb-folk .cb-more { color: var(--muted); }
+.cb-people .cb-caveat { margin: 3px 0 0; font-size: 11.5px; max-width: 62ch; }
+.cb-pieces { list-style: none; margin: 6px 0 0; padding: 0; }
+.cb-piece { padding: 4px 0; border-bottom: 1px solid var(--line); font-size: 12.5px; color: var(--ink-2); }
+.cb-piece[data-state="wet"] .cb-words { color: #8fd3ff; }
+.cb-piece .cb-depth { display: block; font: 11.5px var(--f-num); color: var(--muted); }
+html[data-device="phone"] .cb-actions .btn { min-height: 40px; }

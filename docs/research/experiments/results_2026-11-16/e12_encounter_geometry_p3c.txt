@@ -1,0 +1,25 @@
+e12: runs kept 93 in 335 s (handling {"uRk":1.8125,"cd":2.4281,"fA":0.518,"kap":0.0458})
+best twelve (score = extent error m + 0.5 x split error points):
+    57 | ahead 240 port 40 | tears x 121.125 .. 36.75 (609), dents 190 | area 1.297 m2 | split 9/34/14/2/23/18/0 +aft -0 | split error 76
+    58 | ahead 170 port 20 | tears x 124.875 .. 35 (720), dents 110 | area 1.530 m2 | split 16/27/9/5/24/19/0 +aft 0 | split error 78
+    63 | ahead 180 port 22 | tears x 120.625 .. 30.375 (723), dents 99 | area 1.615 m2 | split 6/28/17/5/18/23/3 +aft 0 | split error 73
+    64 | ahead 210 port 30 | tears x 118.25 .. 30.25 (705), dents 98 | area 1.553 m2 | split 2/29/21/6/17/23/3 +aft 0 | split error 71
+    70 | ahead 230 port 36 | tears x 115.375 .. 28.125 (699), dents 94 | area 1.587 m2 | split 0/24/26/9/14/22/4 +aft 0 | split error 73
+    73 | ahead 190 port 24 | tears x 115 .. 24.875 (722), dents 84 | area 1.734 m2 | split 0/21/25/11/13/22/7 +aft -0 | split error 71
+    78 | ahead 220 port 32 | tears x 108.25 .. 21.375 (696), dents 77 | area 1.767 m2 | split 0/9/29/20/14/19/10 +aft -0 | split error 61
+    78 | ahead 200 port 26 | tears x 108 .. 20.375 (702), dents 74 | area 1.839 m2 | split 0/8/28/21/15/18/11 +aft -0 | split error 59
+    80 | ahead 170 port 18 | tears x 106.25 .. 19.375 (696), dents 71 | area 1.916 m2 | split 0/5/27/23/17/17/11 +aft 0 | split error 57
+    84 | ahead 180 port 20 | tears x 102.25 .. 18.875 (668), dents 72 | area 1.905 m2 | split 0/0/24/26/21/18/11 +aft 0 | split error 57
+    85 | ahead 240 port 38 | tears x 102.5 .. 19.375 (666), dents 74 | area 1.812 m2 | split 0/0/26/26/19/17/11 +aft 0 | split error 59
+    85 | ahead 210 port 28 | tears x 99.875 .. 18.875 (649), dents 73 | area 1.891 m2 | split 0/0/21/27/23/19/11 +aft 0 | split error 53
+the P3 point (220, 32): tears x 108.25..21.375, score 78
+
+phase 2, best eight (score = extent m + 0.5 x split points + sighting error m / 5 + seconds outside 20-25 s to impact):
+   53.4 | ahead 214 port 32 | tears x 126.125 .. 41.5 | split 22/29/3/6/29/10/0 (error 77) | sighted at 453 m | impact 21.6 s after the order
+   55.6 | ahead 236 port 39 | tears x 125 .. 41.25 | split 20/32/4/5/28/11/0 (error 78) | sighted at 475 m | impact 23.8 s after the order
+   56.1 | ahead 208 port 30 | tears x 124.125 .. 38.375 | split 16/31/8/4/26/16/0 (error 78) | sighted at 447 m | impact 21.3 s after the order
+   56.3 | ahead 242 port 41 | tears x 124.125 .. 40.75 | split 17/33/6/5/28/12/0 (error 78) | sighted at 481 m | impact 24.4 s after the order
+   57.1 | ahead 204 port 29 | tears x 125.875 .. 40.125 | split 21/29/4/6/28/12/0 (error 79) | sighted at 443 m | impact 20.8 s after the order
+   58.1 | ahead 212 port 31 | tears x 122.25 .. 36.125 | split 11/31/13/3/23/19/0 (error 76) | sighted at 451 m | impact 21.8 s after the order
+   59.4 | ahead 234 port 38 | tears x 121.75 .. 37.25 | split 10/33/13/2/23/17/0 (error 76) | sighted at 473 m | impact 23.9 s after the order
+   61.0 | ahead 216 port 32 | tears x 120 .. 33 | split 6/31/18/3/19/22/1 (error 73) | sighted at 455 m | impact 22.4 s after the order

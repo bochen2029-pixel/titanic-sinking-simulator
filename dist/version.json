@@ -1,8 +1,11 @@
 {
-  "version": "0.2.0",
-  "built": "2026-10-09T00:49:06.213Z",
-  "builtFromCommit": "160474f",
-  "app": "app.434567ea81.js",
-  "worker": "forecast-worker.7a019ed9c7.js",
-  "styles": "styles.c8b95dd395.css"
+  "version": "0.3.0",
+  "built": "2026-11-24T19:16:01.439Z",
+  "builtFromCommit": "74a09b8",
+  "sourcesCommitted": true,
+  "app": "app.489fb2128d.js",
+  "worker": "forecast-worker.6b262eaf6d.js",
+  "styles": "styles.eedbce016f.css",
+  "rooms": "rooms.94984e0466.json",
+  "home": "https://bochen.xyz/titanic/"
 }

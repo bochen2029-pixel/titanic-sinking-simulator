@@ -1,0 +1,81 @@
+e63: the bow released three ways, cut at x -23, the tiers' share 0, untuned
+tree: this repository
+
+==== the hand-off at T 155.50: trim 11.0, list 6.4 to port
+
+(a) as now (T 155.50): at the hand-off afloat, top 13.3 m, vent 3.17 m2, air 47862 m3 at 1 atm; wholly under +17.0 s; in the first 120 s her pitch reached 84 deg, her nose 84 deg (at +24 s: not past the vertical)
+    0 s afloat   pitch   11 nose   11 roll    -6 heading    -0 speed  0.15 depth    43 top   13.3 air  34781 (47862 at 1 atm) along 75 across -0
+    5 s afloat   pitch   35 nose   35 roll    -9 heading    -0 speed  1.51 depth    68 top   40.9 air  45058 (45058 at 1 atm) along 72 across -1
+   10 s afloat   pitch   63 nose   63 roll   -17 heading    -2 speed  6.44 depth   104 top   43.0 air  42393 (42393 at 1 atm) along 74 across -1
+   15 s afloat   pitch   77 nose   77 roll   -15 heading    -2 speed  7.10 depth   139 top   13.6 air  14056 (39163 at 1 atm) along 80 across -2
+   20 s under    pitch   82 nose   82 roll    -3 heading     4 speed 10.45 depth   183 top  -29.8 air   4767 (33407 at 1 atm) along 84 across -1
+   25 s under    pitch   84 nose   84 roll    11 heading    12 speed 15.31 depth   247 top  -93.8 air   1873 (25029 at 1 atm) along 89 across -0
+   30 s falling  pitch   82 nose   82 roll    18 heading    14 speed 20.21 depth   336 top -182.1 air    626 (13888 at 1 atm) along 97 across 2
+   35 s falling  pitch   79 nose   79 roll    23 heading    14 speed 24.50 depth   446 top -293.1 air      0 (0 at 1 atm) along 110 across 5
+   40 s falling  pitch   75 nose   76 roll    30 heading    15 speed 27.90 depth   575 top -422.6 air      0 (0 at 1 atm) along 133 across 10
+   45 s falling  pitch   69 nose   70 roll    44 heading    18 speed 30.22 depth   714 top -564.3 air      0 (0 at 1 atm) along 167 across 19
+   50 s falling  pitch   61 nose   63 roll    70 heading    22 speed 31.43 depth   855 top -712.9 air      0 (0 at 1 atm) along 216 across 35
+   55 s falling  pitch   50 nose   51 roll   134 heading    21 speed 31.16 depth   993 top -858.5 air      0 (0 at 1 atm) along 284 across 60
+   60 s falling  pitch   41 nose   42 roll  -131 heading    20 speed 30.21 depth  1108 top -988.0 air      0 (0 at 1 atm) along 370 across 87
+   65 s falling  pitch   29 nose   31 roll  -146 heading    23 speed 28.52 depth  1202 top -1102.0 air      0 (0 at 1 atm) along 467 across 124
+   70 s falling  pitch   20 nose   22 roll   135 heading    24 speed 26.35 depth  1270 top -1191.1 air      0 (0 at 1 atm) along 567 across 171
+   75 s falling  pitch   10 nose   10 roll   163 heading    22 speed 23.55 depth  1317 top -1263.0 air      0 (0 at 1 atm) along 669 across 214
+   80 s falling  pitch    1 nose    1 roll  -139 heading    23 speed 20.53 depth  1350 top -1310.6 air      0 (0 at 1 atm) along 764 across 250
+   85 s falling  pitch   -8 nose   -9 roll   179 heading    25 speed 17.01 depth  1378 top -1329.6 air      0 (0 at 1 atm) along 846 across 287
+   90 s falling  pitch  -16 nose  -17 roll   147 heading    23 speed 13.52 depth  1405 top -1337.1 air      0 (0 at 1 atm) along 913 across 318
+  on the bed +6.61 min at 8.25 m/s; pitch 2.6, roll -178.9, heading 23; 1474 m from breakAt (along 1381, across 515)
+
+(b) its air taken out at the hand-off (every space full) (T 155.50): at the hand-off afloat, top 13.3 m, vent 3.17 m2, air 0 m3 at 1 atm; wholly under +4.0 s; in the first 120 s her pitch reached 11 deg, her nose 11 deg (at +0 s: not past the vertical)
+    0 s afloat   pitch   11 nose   11 roll    -6 heading    -0 speed  0.13 depth    43 top   13.3 air      0 (0 at 1 atm) along 75 across -0
+    5 s falling  pitch    7 nose    7 roll    -4 heading    -0 speed  4.98 depth    53 top   -5.8 air      0 (0 at 1 atm) along 77 across 0
+   10 s falling  pitch    6 nose    6 roll     3 heading    -0 speed  7.22 depth    82 top  -37.8 air      0 (0 at 1 atm) along 81 across 1
+   15 s falling  pitch    6 nose    6 roll     2 heading     0 speed  8.32 depth   121 top  -76.5 air      0 (0 at 1 atm) along 88 across 0
+   20 s falling  pitch    6 nose    6 roll    -4 heading    -0 speed  8.86 depth   162 top -118.8 air      0 (0 at 1 atm) along 99 across 0
+   25 s falling  pitch    4 nose    4 roll    -0 heading    -0 speed  9.02 depth   202 top -163.3 air      0 (0 at 1 atm) along 112 across 0
+   30 s falling  pitch    2 nose    2 roll     2 heading     0 speed  9.06 depth   243 top -206.5 air      0 (0 at 1 atm) along 126 across 1
+   35 s falling  pitch    0 nose    0 roll    -2 heading    -0 speed  9.02 depth   283 top -249.7 air      0 (0 at 1 atm) along 140 across 0
+   40 s falling  pitch   -1 nose   -1 roll    -1 heading    -0 speed  8.91 depth   327 top -292.6 air      0 (0 at 1 atm) along 154 across 0
+   45 s falling  pitch   -2 nose   -2 roll     1 heading    -0 speed  8.91 depth   371 top -335.3 air      0 (0 at 1 atm) along 166 across 0
+   50 s falling  pitch   -3 nose   -3 roll    -2 heading    -0 speed  8.94 depth   415 top -378.6 air      0 (0 at 1 atm) along 176 across 0
+   55 s falling  pitch   -3 nose   -3 roll    -2 heading    -0 speed  8.93 depth   459 top -422.5 air      0 (0 at 1 atm) along 184 across 0
+   60 s falling  pitch   -2 nose   -2 roll     1 heading    -0 speed  9.02 depth   502 top -467.1 air      0 (0 at 1 atm) along 191 across 0
+   65 s falling  pitch   -2 nose   -2 roll    -1 heading    -0 speed  9.08 depth   547 top -512.4 air      0 (0 at 1 atm) along 196 across 0
+   70 s falling  pitch   -1 nose   -1 roll    -2 heading    -0 speed  9.05 depth   591 top -557.3 air      0 (0 at 1 atm) along 201 across 0
+   75 s falling  pitch   -0 nose   -0 roll    -0 heading    -0 speed  9.08 depth   635 top -602.6 air      0 (0 at 1 atm) along 206 across 0
+   80 s falling  pitch    1 nose    1 roll    -1 heading    -0 speed  9.11 depth   681 top -647.6 air      0 (0 at 1 atm) along 211 across 0
+   85 s falling  pitch    1 nose    1 roll    -1 heading    -0 speed  9.07 depth   726 top -692.6 air      0 (0 at 1 atm) along 217 across 0
+   90 s falling  pitch    1 nose    1 roll    -0 heading    -0 speed  9.05 depth   771 top -737.5 air      0 (0 at 1 atm) along 223 across 0
+  on the bed +7.18 min at 8.94 m/s; pitch 0.7, roll -0.8, heading -2; 724 m from breakAt (along 724, across -8)
+
+(c) its air kept, its vent shut (T 155.50): at the hand-off afloat, top 13.3 m, vent 0.00 m2, air 47862 m3 at 1 atm; wholly under +20.3 s; in the first 120 s her pitch reached 90 deg, her nose 174 deg (at +96 s: past the vertical)
+    0 s afloat   pitch   11 nose   11 roll    -6 heading    -0 speed  0.15 depth    43 top   13.3 air  34781 (47862 at 1 atm) along 75 across -0
+    5 s afloat   pitch   36 nose   36 roll    -8 heading    -0 speed  1.81 depth    68 top   42.7 air  47862 (47862 at 1 atm) along 72 across -1
+   10 s afloat   pitch   69 nose   69 roll   -16 heading    -2 speed  5.82 depth   102 top   47.9 air  47862 (47862 at 1 atm) along 73 across -1
+   15 s afloat   pitch   88 nose   88 roll    -6 heading     5 speed  3.34 depth   130 top   23.4 air  29305 (47862 at 1 atm) along 77 across -2
+   20 s afloat   pitch   84 nose   96 roll   156 heading   165 speed  6.09 depth   155 top    0.5 air  11763 (47862 at 1 atm) along 77 across -1
+   25 s under    pitch   83 nose   96 roll   149 heading   158 speed  9.24 depth   192 top  -36.7 air   6145 (47862 at 1 atm) along 78 across -0
+   30 s under    pitch   85 nose   94 roll   128 heading   141 speed 13.74 depth   249 top  -94.1 air   3559 (47862 at 1 atm) along 77 across 1
+   35 s under    pitch   85 nose   92 roll    98 heading   118 speed 18.37 depth   329 top -174.7 air   2234 (47862 at 1 atm) along 77 across 4
+   40 s falling  pitch   83 nose   92 roll    77 heading   103 speed 22.58 depth   431 top -276.8 air   1514 (47862 at 1 atm) along 76 across 10
+   45 s falling  pitch   80 nose   91 roll    70 heading    98 speed 26.07 depth   552 top -397.7 air   1095 (47862 at 1 atm) along 76 across 22
+   50 s falling  pitch   76 nose   91 roll    76 heading    96 speed 28.74 depth   686 top -533.7 air    835 (47862 at 1 atm) along 74 across 43
+   55 s falling  pitch   69 nose   91 roll   103 heading    93 speed 30.47 depth   829 top -679.2 air    665 (47862 at 1 atm) along 73 across 77
+   60 s falling  pitch   61 nose   88 roll   168 heading    87 speed 31.23 depth   976 top -827.7 air    550 (47862 at 1 atm) along 74 across 129
+   65 s falling  pitch   55 nose   88 roll  -126 heading    87 speed 31.60 depth  1111 top -970.8 air    473 (47862 at 1 atm) along 80 across 196
+   70 s falling  pitch   46 nose   91 roll  -135 heading    91 speed 31.15 depth  1238 top -1109.3 air    416 (47862 at 1 atm) along 82 across 279
+   75 s falling  pitch   38 nose   95 roll   148 heading    94 speed 30.06 depth  1350 top -1232.4 air    376 (47862 at 1 atm) along 75 across 377
+   80 s falling  pitch   29 nose   94 roll   135 heading    92 speed 28.54 depth  1437 top -1340.2 air    347 (47862 at 1 atm) along 69 across 484
+   85 s falling  pitch   20 nose   90 roll  -153 heading    90 speed 26.38 depth  1508 top -1427.9 air    327 (47862 at 1 atm) along 69 across 596
+   90 s falling  pitch   11 nose  102 roll  -143 heading    92 speed 23.86 depth  1553 top -1497.0 air    313 (47862 at 1 atm) along 68 across 707
+  on the bed +6.11 min at 8.89 m/s; pitch 0.1, roll -1.0, heading 92; 1478 m from breakAt (along 35, across 1477)
+
+==== the hand-off at T 156.00: trim 15.1, list 9.4 to port
+
+(a) as now (T 156.00): at the hand-off afloat, top 11.5 m, vent 3.17 m2, air 49528 m3 at 1 atm; wholly under +19.3 s; in the first 120 s her pitch reached 89 deg, her nose 180 deg (at +77 s: past the vertical)
+  on the bed +6.79 min at 8.94 m/s; pitch -0.2, roll -0.9, heading 154; 1279 m from breakAt (along -1131, across 598)
+
+(b) its air taken out at the hand-off (every space full) (T 156.00): at the hand-off afloat, top 11.5 m, vent 3.17 m2, air 0 m3 at 1 atm; wholly under +4.5 s; in the first 120 s her pitch reached 15 deg, her nose 15 deg (at +1 s: not past the vertical)
+  on the bed +7.19 min at 8.94 m/s; pitch 0.7, roll -0.8, heading -2; 792 m from breakAt (along 792, across -6)
+
+(c) its air kept, its vent shut (T 156.00): at the hand-off afloat, top 11.5 m, vent 0.00 m2, air 49528 m3 at 1 atm; wholly under NEVER; in the first 120 s her pitch reached 90 deg, her nose 120 deg (at +15 s: past the vertical)
+  on the bed +n/a min at n/a m/s; pitch 78.5, roll -18.1, heading -145; 127 m from breakAt (along 125, across 23) [state afloat]

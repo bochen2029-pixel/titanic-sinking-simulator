@@ -1,0 +1,9 @@
+/* NH4, the scrubber (site/parts/82_scrub.js): its bar in the Run tab's Time section [appearance] */
+.scrub { display: flex; flex-direction: column; gap: 4px; }
+.scrub-head { display: flex; gap: 8px; align-items: baseline; font: 500 12px/1.3 var(--f-num); color: var(--ink-2); }
+.scrub-k { font: 500 10px/1.2 var(--f-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); }
+.scrub-at { font-variant-numeric: tabular-nums; }
+.scrub input[type="range"] { width: 100%; margin: 0; accent-color: var(--brass); }
+.scrub input[type="range"]:disabled { opacity: 0.45; }
+.scrub-hint { margin: 0; }
+html[data-device="phone"] .scrub input[type="range"] { min-height: 44px; }

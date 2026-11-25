@@ -1,0 +1,8 @@
+e116: the level solve against its own tolerance, on the landed member (the core copied to <scratch>)
+the 1912 preset, the cap at 6 (the core as it is): founders 165.7042 min (golden 165.7042: the same); 3 of 332772 solves miss (0.001 %), in 3 of 39769 steps; the worst 0.04 % of the space's water (space 17)
+   the misses by size: <0.1 % 3, 0.1-1 % 0, 1-5 % 0, >5 % 0
+   ... the cap at 40: founders 165.7042 min (0.00 s); 0 of 332772 solves miss (0.000 %), in 0 of 39769 steps; the worst 0.00 % of the space's water (space -1)
+the 1912 watch, the cap at 6: 48b71712 at step 39473 (BASE 48b71712 at 39473), founders T 163.4679; 7 of 334989 solves miss (0.002 %), in 7 of 39473 steps; the worst 0.04 % of the space's water (space 17)
+   the misses by size: <0.1 % 7, 0.1-1 % 0, 1-5 % 0, >5 % 0
+   ... the cap at 40: founders T 163.4679 (0.00 s); 0 of 334989 solves miss (0.000 %), in 0 of 39473 steps; the worst 0.00 % of the space's water (space -1)
+(2026-11-23T17:18:53.508Z)

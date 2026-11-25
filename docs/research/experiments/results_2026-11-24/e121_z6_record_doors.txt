@@ -1,0 +1,55 @@
+# e121_z6_record_doors.js, run 2026-11-24 01:47 to 01:55 CST (the clock), one thread at BelowNormal beside the floats' suites,
+# Node v26.13.0, on claude/z1-floats's tree (3292413's code, committed after this run's start with no change to it).
+#
+e121: the record's doors in the stern's fall; K.limiter "held", K.floats default "core"
+the onset at T+156.46 min, x -10.93; doors open at the hand-over: J (its float armed), K (its float armed), L (its float armed), M (its float armed), N (its float armed), O (its float armed)
+
+K.floats 'core': the stern's doors J (float), K (float), L (float), M (float), N (float), O (float)
+  +30 s: the stern lowest -12.5 m, pitch 1.4, roll -0.6, water 1908 m3, air 60704 m3, given way 0 of 32
+  +60 s: the stern lowest -17.4 m, pitch -5.7, roll -1.1, water 1228 m3, air 61385 m3, given way 0 of 32
+  +90 s: the stern lowest -16.3 m, pitch -5.8, roll -6.3, water 1198 m3, air 61415 m3, given way 0 of 32
+  +120 s: the stern lowest -12.4 m, pitch -0.4, roll -11.1, water 1823 m3, air 60790 m3, given way 0 of 32
+  +150 s: the stern lowest -14.1 m, pitch 1.3, roll -11.5, water 2000 m3, air 60613 m3, given way 0 of 32
+  +180 s: the stern lowest -12.1 m, pitch -1.7, roll -7.8, water 1559 m3, air 61053 m3, given way 0 of 32
+  +210 s: the stern lowest -16.2 m, pitch -4.7, roll -2.5, water 1318 m3, air 61294 m3, given way 0 of 32
+  +240 s: the stern lowest -15.0 m, pitch -3.6, roll 3.7, water 1466 m3, air 61147 m3, given way 0 of 32
+  +270 s: the stern lowest -11.1 m, pitch -0.7, roll 7.0, water 1712 m3, air 60900 m3, given way 0 of 32
+  +300 s: the stern lowest -12.0 m, pitch -0.2, roll 7.4, water 1820 m3, air 60792 m3, given way 0 of 32
+  +330 s: the stern lowest -13.7 m, pitch -2.5, roll 4.4, water 1565 m3, air 61048 m3, given way 0 of 32
+  +360 s: the stern lowest -15.1 m, pitch -4.2, roll -0.6, water 1328 m3, air 61284 m3, given way 0 of 32
+  +390 s: the stern lowest -14.0 m, pitch -2.9, roll -5.1, water 1518 m3, air 61094 m3, given way 0 of 32
+  +420 s: the stern lowest -11.9 m, pitch -0.9, roll -7.5, water 1752 m3, air 60860 m3, given way 0 of 32
+  +450 s: the stern lowest -11.4 m, pitch -0.8, roll -7.2, water 1707 m3, air 60905 m3, given way 0 of 32
+  +480 s: the stern lowest -13.8 m, pitch -2.6, roll -5.0, water 1532 m3, air 61080 m3, given way 0 of 32
+  +510 s: the stern lowest -15.0 m, pitch -3.7, roll -0.8, water 1432 m3, air 61180 m3, given way 0 of 32
+  +540 s: the stern lowest -13.5 m, pitch -2.6, roll 3.0, water 1511 m3, air 61101 m3, given way 0 of 32
+  +570 s: the stern lowest -12.1 m, pitch -1.1, roll 4.9, water 1710 m3, air 60902 m3, given way 0 of 32
+  +600 s: the stern lowest -12.3 m, pitch -1.2, roll 4.6, water 1708 m3, air 60904 m3, given way 0 of 32
+  the stern's floats: released J +0.1 s, K +0.5 s, L +6.4 s, M +23.4 s, N +55.3 s; shut J +25.1 s, K +25.5 s, L +31.4 s, M +48.4 s, N +80.3 s
+  the stern NOT under in 600 s
+
+K.floats 'none': the stern's doors as handed over
+  +30 s: the stern lowest -12.5 m, pitch 1.4, roll -0.6, water 1947 m3, air 60665 m3, given way 0 of 32
+  +60 s: the stern lowest -17.3 m, pitch -5.2, roll -2.2, water 2134 m3, air 60478 m3, given way 0 of 32
+  +90 s: the stern lowest -14.6 m, pitch -3.5, roll -5.3, water 3039 m3, air 59573 m3, given way 0 of 32
+  +120 s: the stern lowest -14.2 m, pitch 2.1, roll -4.0, water 4333 m3, air 58279 m3, given way 0 of 32
+  +150 s: the stern lowest -14.1 m, pitch 1.5, roll -2.3, water 4957 m3, air 57655 m3, given way 0 of 32
+  +180 s: the stern lowest -13.9 m, pitch -1.8, roll -2.0, water 5250 m3, air 57362 m3, given way 0 of 32
+  +210 s: the stern lowest -13.0 m, pitch -0.8, roll -3.4, water 6160 m3, air 56452 m3, given way 0 of 32
+  +240 s: the stern lowest -15.0 m, pitch 1.7, roll -3.5, water 7328 m3, air 55285 m3, given way 0 of 32
+  +270 s: the stern lowest -15.7 m, pitch 1.9, roll -3.8, water 8306 m3, air 54306 m3, given way 0 of 32
+  +300 s: the stern lowest -15.7 m, pitch 1.8, roll -4.2, water 9434 m3, air 53178 m3, given way 0 of 32
+  +330 s: the stern lowest -17.0 m, pitch 2.8, roll -3.9, water 10784 m3, air 51828 m3, given way 0 of 32
+  +360 s: the stern lowest -18.7 m, pitch 3.8, roll -4.7, water 12228 m3, air 50384 m3, given way 0 of 32
+  +390 s: the stern lowest -20.1 m, pitch 4.5, roll -5.5, water 13759 m3, air 48853 m3, given way 0 of 32
+  +420 s: the stern lowest -21.5 m, pitch 5.5, roll -6.0, water 15435 m3, air 47177 m3, given way 0 of 32
+  +450 s: the stern lowest -22.9 m, pitch 6.4, roll -6.4, water 17198 m3, air 45414 m3, given way 0 of 32
+  +480 s: the stern lowest -24.3 m, pitch 7.3, roll -6.7, water 19040 m3, air 43572 m3, given way 0 of 32
+  +510 s: the stern lowest -25.9 m, pitch 8.2, roll -7.3, water 20940 m3, air 41672 m3, given way 0 of 32
+  +540 s: the stern lowest -36.2 m, pitch 15.8, roll -9.0, water 28727 m3, air 33885 m3, given way 10 of 32
+  +570 s: the stern lowest -37.0 m, pitch 17.3, roll -0.4, water 30136 m3, air 32476 m3, given way 10 of 32
+  +600 s: the stern lowest -49.6 m, pitch 28.3, roll -1.9, water 32237 m3, air 30375 m3, given way 11 of 32
+  the stern's floats: released none; shut none
+  the stern NOT under in 600 s
+
+e121 done in 387 s

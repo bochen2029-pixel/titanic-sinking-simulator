@@ -1,0 +1,67 @@
+# e119_z6_limiter_hang.js, run 2026-11-24 00:12 to 00:22 CST (the clock), one thread at BelowNormal, Node v26.13.0, beside join 19's
+# gate. The tree: a scratch copy of claude/z1-z6-onset e6d1071's core/ (K.torn) with claude/z1-limiter 55cf28a's limiter applied
+# (git diff 5e12900 55cf28a -- core/readers/spaces.js core/readers/fall.js; the one export line merged by hand), so K.limiter's
+# default there is 'pair'; every run below names its own limiter, so D108 ('held' the default) moves none of them.
+# Line 1's "K.torn not in this tree" was the script's K0 test, wrong for K.torn (it has no K0 entry): part 3's own probe
+# found it (6 boundaries and 8 shells opened). The script's first line is fixed after this run.
+#
+e119: the stern's hang and the one-way limiter; K.limiter default "pair"; K.torn not in this tree
+
+PART 1: two rooms of 400 m3 (10 x 4 x 10 m, 20 to 30 m down), the bulkhead between them given way over 20 m2, the forward one full, the after one dry at one atmosphere; the spaces' step 1/32 s
+  fed by the sea  pair  +0.25 s 36.0 m3 (111.0 kPa), +1 s 53.3 m3 (116.8 kPa), +2 s 62.1 m3 (119.9 kPa), +5 s 75.0 m3 (124.7 kPa), +10 s 85.2 m3 (128.7 kPa)
+  fed by the sea  held  +0.25 s 54.3 m3 (116.0 kPa), +1 s 209.7 m3 (204.8 kPa), +2 s 332.3 m3 (310.3 kPa), +5 s 379.7 m3 (306.6 kPa), +10 s 395.6 m3 (303.5 kPa)
+  sealed          pair  +0.25 s 36.8 m3 (101.6 kPa), +1 s 143.1 m3 (101.4 kPa), +2 s 198.5 m3 (101.3 kPa), +5 s 200.0 m3 (101.3 kPa), +10 s 200.0 m3 (101.3 kPa)
+  sealed          held  +0.25 s 36.8 m3 (101.6 kPa), +1 s 143.1 m3 (101.4 kPa), +2 s 198.5 m3 (101.3 kPa), +5 s 200.0 m3 (101.3 kPa), +10 s 200.0 m3 (101.3 kPa)
+
+PART 2: the 1912 preset at its flag (T 165.70 min, trim 68.77, list -80.21), cut at X_BREAK (H1); K.air 'spaces', K.fail 'boundaries'
+  pair  the stern under at +176.25 s (2.94 min); reports 10; 24 of 28 spaces given way
+        +30 s -78 m, pitch 64.1, roll -37.6, air 20591 m3
+        +60 s -91 m, pitch 84.1, roll -75.0, air 16027 m3
+        +90 s -99 m, pitch 80.2, roll -29.2, air 14617 m3
+        +120 s -102 m, pitch 81.2, roll -57.7, air 13469 m3
+        +150 s -111 m, pitch 84.1, roll -66.3, air 12523 m3
+  held  the stern under at +77.25 s (1.29 min); reports 12; 25 of 28 spaces given way
+        +30 s -71 m, pitch 46.3, roll -40.9, air 19080 m3
+        +60 s -105 m, pitch 79.5, roll 21.4, air 12917 m3
+
+PART 3: member C's watch at its onset (step 37792, x -10.93, trim 6.93, list -3.80), cut there; K.air 'spaces', K.fail 'boundaries', K.torn 20 (the stern: 6 boundaries and 8 shells opened within 10 m of the cut); to 900 s
+  pair  the stern NOT under in 900 s; reports 5; 23 of 32 spaces given way
+        +30 s -20 m, pitch 6.6, roll 0.9, air 51305 m3
+        +60 s -34 m, pitch 17.3, roll -3.1, air 38460 m3
+        +90 s -35 m, pitch 17.4, roll -2.0, air 36851 m3
+        +120 s -36 m, pitch 17.9, roll -0.9, air 35703 m3
+        +150 s -40 m, pitch 21.6, roll 0.7, air 34491 m3
+        +180 s -43 m, pitch 23.6, roll 2.8, air 33279 m3
+        +210 s -50 m, pitch 30.0, roll 3.8, air 32034 m3
+        +240 s -57 m, pitch 36.8, roll 4.8, air 30930 m3
+        +270 s -70 m, pitch 52.6, roll 7.1, air 29842 m3
+        +300 s -77 m, pitch 66.7, roll 10.5, air 28926 m3
+        +330 s -80 m, pitch 72.0, roll 15.7, air 28182 m3
+        +360 s -81 m, pitch 73.2, roll 21.6, air 27525 m3
+        +390 s -82 m, pitch 79.5, roll 22.5, air 27041 m3
+        +420 s -83 m, pitch 76.6, roll 25.2, air 26764 m3
+        +450 s -83 m, pitch 78.9, roll 25.2, air 26482 m3
+        +480 s -84 m, pitch 81.6, roll 30.3, air 26188 m3
+        +510 s -85 m, pitch 79.3, roll 29.7, air 25882 m3
+        +540 s -85 m, pitch 84.7, roll 37.1, air 25580 m3
+        +570 s -86 m, pitch 81.3, roll 35.6, air 25244 m3
+        +600 s -87 m, pitch 86.0, roll 46.0, air 24901 m3
+        +630 s -88 m, pitch 83.3, roll 41.9, air 24521 m3
+        +660 s -88 m, pitch 87.2, roll 58.0, air 24139 m3
+        +690 s -90 m, pitch 84.3, roll 47.1, air 23748 m3
+        +720 s -90 m, pitch 88.2, roll 76.8, air 23333 m3
+        +750 s -92 m, pitch 85.3, roll 54.7, air 22876 m3
+        +780 s -92 m, pitch 88.7, roll 86.1, air 22356 m3
+        +810 s -94 m, pitch 87.3, roll 75.0, air 21964 m3
+        +840 s -95 m, pitch 87.1, roll 77.8, air 21593 m3
+        +870 s -96 m, pitch 88.3, roll 133.2, air 21188 m3
+        +900 s -98 m, pitch 86.3, roll 32.1, air 20730 m3
+  held  the stern under at +188.75 s (3.15 min); reports 12; 31 of 32 spaces given way
+        +30 s -35 m, pitch 14.8, roll -32.1, air 34246 m3
+        +60 s -60 m, pitch 34.5, roll -24.7, air 28421 m3
+        +90 s -78 m, pitch 49.2, roll -35.7, air 24579 m3
+        +120 s -106 m, pitch 87.4, roll -172.1, air 18337 m3
+        +150 s -111 m, pitch 85.1, roll -167.1, air 16088 m3
+        +180 s -120 m, pitch 87.6, roll -91.8, air 13536 m3
+
+e119 done in 623 s

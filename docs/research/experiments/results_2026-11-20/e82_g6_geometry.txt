@@ -1,0 +1,44 @@
+e82 (G6), run 2026-11-20 on wt/g6 (from main 0f3f4d1). The present geometry 257/47 kept; 238/40 is the re-search's alternative under the tearing law, not taken (it would move the watch's whole first minute).
+
+#### without the tearing law (ICE.tearAlong null, as on main): the geometry alone
+e82 (G6): ICE alpha 0.20701033996361745, R 40 m; ICE overrides {"tearAlong":null,"alpha":0.20701033996361745}; the present point, ahead 257 port 47:
+   35.0 | ahead 257 port 47 | tears x 123.125..42.125 | split 10/19/19/21/22/9/0 (error 29) | sighted 496 m, impact 25.9 s  (0.1 s for its run)
+G6's MUST: the tears end at x 51.5 or forward; the split's error at most 29.4; the sighting within 39.1 m of 457; the impact within 3.48 s of 22.5 (20 to 25 s, and no later than the present point)
+
+1. GRID ahead 236-290 by 2, port 36-60 by 2: 209 starboard tears (29.9 s)
+   meeting G6's MUST rows: 0
+   ending at x 51.5 or forward (whatever else): 1; the best eight by e17's score:
+   43.4 | ahead 288 port 60 | tears x 124.625..53.125 | split 17/24/13/25/21/0/0 (error 50) | sighted 527 m, impact 28.8 s
+
+(29.9 s; 2026-11-21T00:29:07.485Z)
+
+#### with the tearing dent doubled aft of the bunker (the encounter as committed here, the area constant before its refit)
+e82 (G6): ICE alpha 0.20701033996361745, R 40 m; ICE overrides {"alpha":0.20701033996361745}; the present point, ahead 257 port 47:
+   24.4 | ahead 257 port 47 | tears x 123.125..51.625 | split 11/20/20/23/23/3/0 (error 27) | sighted 496 m, impact 25.9 s  (0.2 s for its run)
+G6's MUST: the tears end at x 51.5 or forward; the split's error at most 27.1; the sighting within 39.1 m of 457; the impact within 3.48 s of 22.5 (20 to 25 s, and no later than the present point)
+
+1. GRID ahead 236-290 by 2, port 36-60 by 2: 119 starboard tears (31.1 s)
+   meeting G6's MUST rows: 7; the best ten:
+   19.6 | ahead 238 port 40 | tears x 122.875..51.625 | split 10/19/22/22/23/4/0 (error 26) | sighted 477 m, impact 24.1 s
+   21.0 | ahead 244 port 42 | tears x 121.5..51.625 | split 8/20/22/23/24/4/0 (error 24) | sighted 483 m, impact 24.8 s
+   23.6 | ahead 250 port 44 | tears x 119.5..51.625 | split 5/20/23/23/24/4/0 (error 21) | sighted 489 m, impact 25.6 s
+   26.0 | ahead 240 port 40 | tears x 115.875..51.625 | split 0/21/24/24/26/4/0 (error 24) | sighted 479 m, impact 25.0 s
+   28.2 | ahead 236 port 38 | tears x 110.25..51.625 | split 0/14/27/27/28/5/0 (error 18) | sighted 475 m, impact 25.1 s
+   28.7 | ahead 246 port 42 | tears x 114.5..51.625 | split 0/20/25/25/26/4/0 (error 23) | sighted 485 m, impact 25.7 s
+   31.1 | ahead 242 port 40 | tears x 109.25..51.625 | split 0/12/27/27/29/5/0 (error 19) | sighted 481 m, impact 25.8 s
+   ending at x 51.5 or forward (whatever else): 119; the best eight by e17's score:
+   19.6 | ahead 238 port 40 | tears x 122.875..51.625 | split 10/19/22/22/23/4/0 (error 26) | sighted 477 m, impact 24.1 s
+   21.0 | ahead 244 port 42 | tears x 121.5..51.625 | split 8/20/22/23/24/4/0 (error 24) | sighted 483 m, impact 24.8 s
+   23.6 | ahead 250 port 44 | tears x 119.5..51.625 | split 5/20/23/23/24/4/0 (error 21) | sighted 489 m, impact 25.6 s
+   25.6 | ahead 260 port 48 | tears x 121.5..51.625 | split 8/20/21/23/24/4/0 (error 24) | sighted 499 m, impact 26.4 s
+   26.0 | ahead 240 port 40 | tears x 115.875..51.625 | split 0/21/24/24/26/4/0 (error 24) | sighted 479 m, impact 25.0 s
+   26.8 | ahead 254 port 46 | tears x 124.5..51.625 | split 14/20/17/24/23/2/0 (error 34) | sighted 493 m, impact 25.5 s
+   28.1 | ahead 270 port 52 | tears x 121.5..51.625 | split 8/20/21/23/24/4/0 (error 23) | sighted 509 m, impact 27.3 s
+   28.2 | ahead 236 port 38 | tears x 110.25..51.625 | split 0/14/27/27/28/5/0 (error 18) | sighted 475 m, impact 25.1 s
+
+(31.1 s; 2026-11-21T00:29:38.705Z)
+
+#### factors 2, 3 and 5 at the present point (the same night)
+   24.4 | ahead 257 port 47 | tears x 123.125..51.625 | split 11/20/20/23/23/3/0 (error 27) | sighted 496 m, impact 25.9 s  (0.2 s for its run)
+   24.4 | ahead 257 port 47 | tears x 123.125..51.625 | split 11/20/20/23/23/3/0 (error 27) | sighted 496 m, impact 25.9 s  (0.2 s for its run)
+   24.4 | ahead 257 port 47 | tears x 123.125..51.625 | split 11/20/20/23/23/3/0 (error 27) | sighted 496 m, impact 25.9 s  (0.2 s for its run)

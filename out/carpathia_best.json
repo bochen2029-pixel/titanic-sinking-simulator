@@ -1,0 +1,173 @@
+{
+ "what": "The best night found by tools/carpathia.js: seed 1912, its own orders to the touch and a minute after, then the search's. Replay: Night.replay(ship, Night.spec(seed), log, k) ends at endT, her hand-over (the break's onset since G12; founderT is her flag where she founders first), with this fingerprint.",
+ "seed": 1912,
+ "gen": 1,
+ "k": 38935,
+ "founderT": -1,
+ "foundered": true,
+ "minutes": 161.22624999999996,
+ "fingerprint": "9bb19f14",
+ "endT": 9733.75,
+ "broke": true,
+ "baseline": {
+  "minutes": 156.46374999999995,
+  "k": 37792,
+  "fingerprint": "0ae90224"
+ },
+ "orders": [
+  {
+   "k": 721,
+   "T": 2,
+   "words": "boiler room 4's ash-ejector pump put on boiler room 6"
+  },
+  {
+   "k": 1201,
+   "T": 4,
+   "words": "the pumps handed back to the engineers"
+  },
+  {
+   "k": 6961,
+   "T": 28,
+   "words": "engines: full astern"
+  },
+  {
+   "k": 7681,
+   "T": 31,
+   "words": "every free pump that can reach boiler room 6 put on it"
+  },
+  {
+   "k": 7681,
+   "T": 31,
+   "words": "every free pump that can reach boiler room 4 put on it"
+  },
+  {
+   "k": 13441,
+   "T": 55,
+   "words": "draw the fires in every boiler room"
+  },
+  {
+   "k": 14161,
+   "T": 58,
+   "words": "engines: stop"
+  },
+  {
+   "k": 17041,
+   "T": 70,
+   "words": "raise the doors in bulkhead F by hand"
+  },
+  {
+   "k": 21841,
+   "T": 90,
+   "words": "the other ballast pump in the reciprocating engine room put on boiler room 3"
+  }
+ ],
+ "log": [
+  {
+   "k": 137,
+   "type": "helm",
+   "value": -40
+  },
+  {
+   "k": 241,
+   "type": "helm",
+   "value": 40
+  },
+  {
+   "k": 481,
+   "type": "telegraph",
+   "value": "stop"
+  },
+  {
+   "k": 481,
+   "type": "helm",
+   "value": 0
+  },
+  {
+   "k": 721,
+   "type": "pump",
+   "value": 4,
+   "arg": 2
+  },
+  {
+   "k": 1201,
+   "type": "pump",
+   "value": -1,
+   "arg": "engineers"
+  },
+  {
+   "k": 6961,
+   "type": "telegraph",
+   "value": "full astern"
+  },
+  {
+   "k": 7681,
+   "type": "pump",
+   "value": 4,
+   "arg": "all"
+  },
+  {
+   "k": 7681,
+   "type": "pump",
+   "value": 6,
+   "arg": "all"
+  },
+  {
+   "k": 13441,
+   "type": "fires",
+   "value": -1
+  },
+  {
+   "k": 14161,
+   "type": "telegraph",
+   "value": "stop"
+  },
+  {
+   "k": 17041,
+   "type": "door",
+   "value": 5,
+   "arg": true
+  },
+  {
+   "k": 21841,
+   "type": "pump",
+   "value": 7,
+   "arg": 6
+  }
+ ],
+ "address": "#night=1912&log=W1sxMzcsImhlbG0iLC00MF0sWzI0MSwiaGVsbSIsNDBdLFs0ODEsInRlbGVncmFwaCIsInN0b3AiXSxbNDgxLCJoZWxtIiwwXSxbNzIxLCJwdW1wIiw0LDJdLFsxMjAxLCJwdW1wIiwtMSwiZW5naW5lZXJzIl0sWzY5NjEsInRlbGVncmFwaCIsImZ1bGwgYXN0ZXJuIl0sWzc2ODEsInB1bXAiLDQsImFsbCJdLFs3NjgxLCJwdW1wIiw2LCJhbGwiXSxbMTM0NDEsImZpcmVzIiwtMV0sWzE0MTYxLCJ0ZWxlZ3JhcGgiLCJzdG9wIl0sWzE3MDQxLCJkb29yIiw1LHRydWVdLFsyMTg0MSwicHVtcCIsNyw2XV0",
+ "search": {
+  "evaluation": 4,
+  "nights": 6000,
+  "tried": 2020,
+  "seed": 1,
+  "variants": 80,
+  "kept": "64e65defdc46",
+  "band": [
+   150,
+   170
+  ],
+  "warm": "carpathia_best.json"
+ },
+ "robust": {
+  "band": [
+   150,
+   170
+  ],
+  "models": 80,
+  "N": 79,
+  "flagged": 1,
+  "past": {
+   "fiveMiles": 0,
+   "callAtOnce": 0,
+   "asWent": 0
+  },
+  "targets": {
+   "fiveMiles": 193.91443397313353,
+   "callAtOnce": 213.1669870890214,
+   "asWent": 265.14646361334576
+  },
+  "holds": 56,
+  "helps": 76,
+  "members": 30
+ }
+}

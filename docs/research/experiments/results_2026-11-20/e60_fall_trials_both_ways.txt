@@ -1,0 +1,33 @@
+e60: the fall's trials with the tiers' share of the section at 1 and at 0 (fall.js K.tiersFlow, D52)
+tree: this repository
+share 1: FAIL: 2 MUST row(s)
+share 0: PASS: every MUST row (26); CHECK rows in range: 9 of 13
+
+the rows whose verdict differs (share 1 -> share 0), each with its value both ways:
+  OUT  -> in   ... and upright
+      share 1: roll -89.5 deg on the bed
+      share 0: roll -0.8 deg on the bed
+  OUT  -> in   ... and upright
+      share 1: roll -88.5 deg on the bed
+      share 0: roll -0.8 deg on the bed
+  OUT  -> in   ... and she lands upright
+      share 1: 0 of 12 within 30 deg of upright; rolls from -89.5 to 89.6 deg
+      share 0: 12 of 12 within 30 deg of upright; rolls from -0.8 to -0.8 deg
+  FAIL -> PASS trial 7: the size of the fit, the bow
+      share 1: -9.35 m (from 2.20 m to -7.14 m: the weight in water moved along her)
+      share 0: -0.32 m (from 2.20 m to 1.88 m: the weight in water moved along her)
+  OUT  -> in   ... the bow's dive and its creep apart
+      share 1: untuned: 219 m in the first 90 s, -267 m of creep after; fitted: -43 and -573 m
+      share 0: untuned: 369 m in the first 90 s, 505 m of creep after; fitted: 351 and 421 m
+  OUT  -> in   trial 9: a bow let go standing 69 deg by the head (as if it hung from the stern by her bottom)
+      share 1: untuned 539 m (along 539, across 3); with the fitted lever 306 m (along -245, ac
+      share 0: untuned 1376 m (along 1375, across -52); with the fitted lever 1285 m (along 128
+  FAIL -> PASS trial 10: trial 7's pair, bow to stern on the bed
+      share 1: 902 m (the bow -616 m along, the stern 147 m along)
+      share 0: 623 m (the bow 771 m along, the stern 148 m along)
+  OUT  -> in   trial 12: the 1912 preset's state at the flag (H1): where the bow lands
+      share 1: 824 m from the point under the break (along her heading 785, across 251); the st
+      share 0: 1446 m from the point under the break (along her heading 1230, across 760); the
+  FAIL -> PASS every MUST row (26); CHECK rows in range: 9 of 13
+      share 1: 
+      share 0: 

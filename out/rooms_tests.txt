@@ -1,0 +1,30 @@
+PASS the slabs: each of the core's 64 spaces cut at her decks (G and F below E deck; D, C, B, A, Boat above) 250 slabs (below G 32, G 32, F 32, E 32, D 32, C 32, B 22, A 20, Boat 16); spaces with none: 0 every space has slabs
+PASS   the slabs of each space sum to its capacity, the core's nodeVmax                           the worst space off by 0.0e+0 of itself          under 1e-12
+PASS the 1912 orders to her foundering: at every share-out (each 10 s) each space's slabs hold exactly its water, its pockets' with it as far as each holds (C.spaceWater less over-fill) 986 share-outs; the worst space off by 5.7e-11 m3 under 1e-6 m3
+PASS   and the slabs with the pockets' over-fill (the sea's head over a full pocket's top: counted, not placed) are her water, the readouts' the worst share-out off by 1.9e-10 m3; the pockets held up to 597 m3, over-filled by up to 139.84 m3 under 1e-6 m3; the pockets held water
+PASS   and no slab holds more than it can while its space is not over-full (a lowest slab: with its pockets' capacity) 0 slabs over                                     none
+PASS a library: the watch shared out every 10 s has the fingerprint and the state of one never shared out; no state of its own in the sim or the forecast's copy 0fdcf0ad at step 39473; rooms in the sim: false; in the forecast's copy: false 0fdcf0ad at step 39473; false; false
+
+The 1912 orders: the water on each deck (thousand tonnes), by the minutes after the touch (the slabs whose floor is that deck; "below G": the holds and the boiler and engine rooms below G deck)
+  min   below G       G       F       E       D       C       B       A    Boat
+    0      0.05    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00
+   10      3.86    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00
+   20      7.17    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00
+   30      8.75    1.10    0.00    0.00    0.00    0.00    0.00    0.00    0.00
+   40      8.81    2.61    0.67    0.00    0.00    0.00    0.00    0.00    0.00
+   50      8.87    2.73    2.32    0.03    0.00    0.00    0.00    0.00    0.00
+   60      8.88    2.78    3.14    0.61    0.00    0.00    0.00    0.00    0.00
+   70      9.25    2.83    3.14    1.60    0.00    0.00    0.00    0.00    0.00
+   80      9.96    2.86    3.17    2.36    0.00    0.00    0.00    0.00    0.00
+   90     10.81    2.86    3.34    2.96    0.03    0.00    0.00    0.00    0.00
+  100     11.60    3.01    3.34    3.55    0.28    0.00    0.00    0.00    0.00
+  110     12.01    3.55    3.44    3.99    0.60    0.00    0.00    0.00    0.00
+  120     12.29    3.88    4.01    4.34    0.95    0.00    0.00    0.00    0.00
+  130     12.59    3.88    4.55    4.92    1.43    0.00    0.00    0.00    0.00
+  140     13.06    3.88    4.54    5.35    2.45    0.01    0.00    0.00    0.00
+  150     13.71    3.90    4.53    5.67    3.57    0.44    0.00    0.00    0.00
+  160     14.75    4.17    5.07    7.77    7.90    4.76    1.88    0.68    0.00
+  163     16.48    5.54   12.13   13.78   16.29   16.49   11.37   11.58   10.46
+
+~ cost: a share-out of every slab 164 us on average over 986; the table built once in 13 ms
+PASS: all 6 rows

@@ -1,0 +1,2357 @@
+{
+ "table": "occupants",
+ "title": "Her first-class passengers by stateroom: the Cave list (1912)",
+ "format": 1,
+ "written": "2026-11-24",
+ "source": {
+  "title": "First Class Passenger List, S.S. \"Titanic\", from Southampton and Cherbourg to New York (via Queenstown), Wednesday, 10th April, 1912 (\"Third Proof\"): the Cave list",
+  "urls": [
+   "https://archives.novascotia.ca/titanic/archives/?ID=1",
+   "https://archives.novascotia.ca/titanic/fatalities/archives/?ID=218",
+   "https://encyclopedia-titanica.org/the-cave-list.html",
+   "https://hbiostat.org/data/repo/titanic3.csv"
+  ],
+  "what": "A \"Third Proof\" of the White Star Line's printed first-class passenger list for the maiden voyage, with cabin numbers set against the names, found on the body of saloon steward Herbert Cave (body no. 218, one of the 306 recovered by the cable ship Mackay-Bennett; buried at Fairview Cemetery, Halifax). The original is held by the Nova Scotia Archives (Medical Examiner, City of Halifax, RG 41 vol. 76 no. 218); its six list pages run alphabetically from Allen to Young in two columns, first-class passengers and their servants, with cabins mostly on decks A to E.",
+  "transcribed_from": "scan: the Nova Scotia Archives' digitised original, read from the full-resolution Zoomify images of its pages 1-6 (pages 7-8 are White Star advertisements, 9 is blank, 10 is the back). Encyclopedia Titanica's transcription refused automated fetches and its archived copy could not be fetched, so it was not read. The cross-check is titanic3 (hbiostat.org, compiled from Encyclopedia Titanica), whose first-class cabins agree with this reading for most entries; this file's counts equal those Encyclopedia Titanica gives for the list (223 names, 25 servants, 157 cabins).",
+  "accessed": "2026-11-24",
+  "gaps": "Incomplete, being a proof: Encyclopedia Titanica counts 84 first-class passengers and servants who sailed but are not on it (among them the Astors, J. Bruce Ismay, the Ryersons and the Futrelles), while some it lists did not sail or sailed second class (noted per entry). 14 names in 12 entries have no cabin (Thomas Andrews, W. T. Stead and the Thayers among them), and 25 servants appear only as \"and Maid\", \"and Manservant\" or \"and Nurse\". Nothing is struck out or corrected by hand; two tears take one deck letter (Snyder) and the end of one name (Van der Hoef).",
+  "conventions": "One entry per unbraced name, or per brace: the list joins name lines with a brace and sets one or more cabin numbers against it, without saying who in the brace had which cabin (a number sometimes stands level with a single line). cabin: the numbers in printed order, joined by \", \"; /1 /2 /3 are as printed (berths); square brackets mark letters lost in a tear and supplied. names: one per printed name, with its wrapped lines and \"and Maid\" joined to it; spelling and punctuation as printed, spacing normalised, line-break hyphens joined. Misspellings kept as printed include Aubert (Aubart), Buckell (Bucknell), Christy, Miss Juli (Julie), Earnshew (Earnshaw), Frauenthal T. G. (I. G.), Giglo (Giglio), Goldenberg E. L. (S. L.), Molsom (Molson) and Penchen (Peuchen). where: list page 1-6, col 1 left and col 2 right, lines counted from the top of the column (wrapped lines counted, letter headings not). note: damage, and where titanic3 differs."
+ },
+ "counts": {
+  "entries": 158,
+  "cabin_numbers_printed": 175,
+  "cabins_distinct_as_printed": 162,
+  "cabins_distinct_rooms": 157,
+  "name_lines": 223,
+  "unnamed_servants": 25,
+  "entries_without_cabin": 12,
+  "name_lines_without_cabin": 14
+ },
+ "rules": [
+  "One row is one line of the list: its stateroom or staterooms (cabin) and its names, as the list writes them, in the list's order (n), with where in the list it stands. Nothing is normalised: a name stands as the list spells it.",
+  "The list is first class's alone. Second and third class stay unnamed in her rooms: no list of their staterooms is used here.",
+  "A line names the room it was allocated, which is not proof the passenger slept there that night: the source's gaps say what it leaves out."
+ ],
+ "how": [
+  "labels and rooms are derived: node tools/occupants_table.js --write (labels by parseCabin from cabin, rooms by core/readers/cabins.js's index of R3's tables). A row with labels_note keeps labels read by hand, with its reason.",
+  "core/readers/cabins.js puts each line's names on the rows its staterooms stand in (each row's people) and finds them by name (named). A line whose staterooms her plans do not number is kept apart (I.people.unplaced), with why.",
+  "node tools/cabins_tests.js holds it: every line its fields, its labels and rooms derived, placed or kept apart with why, every name found in its own room, the index otherwise unchanged."
+ ],
+ "rows": [
+  {
+   "n": 1,
+   "cabin": "B5",
+   "names": [
+    "Allen, Miss Elizabeth Walton"
+   ],
+   "where": "page 1, col 1, lines 1-2",
+   "labels": [
+    "B 5"
+   ],
+   "rooms": [
+    "B-036"
+   ]
+  },
+  {
+   "n": 2,
+   "cabin": "C22, C26",
+   "names": [
+    "Allison, Mr. H. J.",
+    "Allison, Mrs. H. J. and Maid",
+    "Allison, Miss",
+    "Allison, Master and Nurse"
+   ],
+   "where": "page 1, col 1, lines 3-8",
+   "labels": [
+    "C 22",
+    "C 26"
+   ],
+   "rooms": [
+    "C-059",
+    "C-059"
+   ]
+  },
+  {
+   "n": 3,
+   "cabin": "E12",
+   "names": [
+    "Anderson, Mr. Harry"
+   ],
+   "where": "page 1, col 1, line 9",
+   "labels": [
+    "E 12"
+   ],
+   "rooms": [
+    "E-035"
+   ]
+  },
+  {
+   "n": 4,
+   "cabin": "D7",
+   "names": [
+    "Andrews, Miss Cornelia I."
+   ],
+   "where": "page 1, col 1, lines 10-11",
+   "labels": [
+    "D 7"
+   ],
+   "rooms": [
+    "D-016"
+   ]
+  },
+  {
+   "n": 5,
+   "cabin": null,
+   "names": [
+    "Andrews, Mr. Thomas"
+   ],
+   "where": "page 1, col 1, line 12",
+   "note": "no cabin on the list; titanic3 gives A36",
+   "labels": [],
+   "rooms": []
+  },
+  {
+   "n": 6,
+   "cabin": "C101/2",
+   "names": [
+    "Appleton, Mrs. E. D."
+   ],
+   "where": "page 1, col 1, line 13",
+   "labels": [
+    "C 101"
+   ],
+   "rooms": [
+    "C-050"
+   ]
+  },
+  {
+   "n": 7,
+   "cabin": "B35",
+   "names": [
+    "Aubert, Mrs. N. and Maid"
+   ],
+   "where": "page 1, col 1, lines 14-15",
+   "labels": [
+    "B 35"
+   ],
+   "rooms": [
+    "B-036"
+   ]
+  },
+  {
+   "n": 8,
+   "cabin": "A23",
+   "names": [
+    "Barkworth, Mr. A. H."
+   ],
+   "where": "page 1, col 2, line 1",
+   "labels": [
+    "A 23"
+   ],
+   "rooms": [
+    "A-030"
+   ]
+  },
+  {
+   "n": 9,
+   "cabin": "B58, B60",
+   "names": [
+    "Baxter, Mrs. James",
+    "Baxter, Mr. Quigg"
+   ],
+   "where": "page 1, col 2, lines 2-3",
+   "labels": [
+    "B 58",
+    "B 60"
+   ],
+   "rooms": [
+    "B-019",
+    "B-019"
+   ]
+  },
+  {
+   "n": 10,
+   "cabin": "C6",
+   "names": [
+    "Beattie, Mr. T."
+   ],
+   "where": "page 1, col 2, line 4",
+   "labels": [
+    "C 6"
+   ],
+   "rooms": [
+    "C-069"
+   ]
+  },
+  {
+   "n": 11,
+   "cabin": "D35",
+   "names": [
+    "Beckwith, Mr. R. L.",
+    "Beckwith, Mrs. R. L."
+   ],
+   "where": "page 1, col 2, lines 5-6",
+   "labels": [
+    "D 35"
+   ],
+   "rooms": [
+    "D-016"
+   ]
+  },
+  {
+   "n": 12,
+   "cabin": "C148",
+   "names": [
+    "Behr, Mr. K, H."
+   ],
+   "where": "page 1, col 2, line 7",
+   "labels": [
+    "C 148"
+   ],
+   "rooms": [
+    "C-025"
+   ]
+  },
+  {
+   "n": 13,
+   "cabin": "B49",
+   "names": [
+    "Bishop, Mr. D. H.",
+    "Bishop, Mrs. D. H."
+   ],
+   "where": "page 1, col 2, lines 8-9",
+   "labels": [
+    "B 49"
+   ],
+   "rooms": [
+    "B-036"
+   ]
+  },
+  {
+   "n": 14,
+   "cabin": "T",
+   "names": [
+    "Blackwell, Mr. Stephen Weart"
+   ],
+   "where": "page 1, col 2, lines 10-11",
+   "labels": [],
+   "rooms": []
+  },
+  {
+   "n": 15,
+   "cabin": "A31",
+   "names": [
+    "Blank, Mr. Henry"
+   ],
+   "where": "page 1, col 2, line 12",
+   "labels": [
+    "A 31"
+   ],
+   "rooms": [
+    "A-030"
+   ]
+  },
+  {
+   "n": 16,
+   "cabin": "C7",
+   "names": [
+    "Bonnell, Miss Caroline"
+   ],
+   "where": "page 1, col 2, line 13",
+   "labels": [
+    "C 7"
+   ],
+   "rooms": [
+    "C-070"
+   ]
+  },
+  {
+   "n": 17,
+   "cabin": "C103/1",
+   "names": [
+    "Bonnell, Miss Lily"
+   ],
+   "where": "page 1, col 2, line 14",
+   "labels": [
+    "C 103"
+   ],
+   "rooms": [
+    "C-050"
+   ]
+  },
+  {
+   "n": 18,
+   "cabin": "D22/1",
+   "names": [
+    "Borebank, Mr. J. J."
+   ],
+   "where": "page 1, col 2, line 15",
+   "labels": [
+    "D 22"
+   ],
+   "rooms": [
+    "D-015"
+   ]
+  },
+  {
+   "n": 19,
+   "cabin": "E33",
+   "names": [
+    "Bowerman, Miss Elsie"
+   ],
+   "where": "page 2, col 1, line 1",
+   "labels": [
+    "E 33"
+   ],
+   "rooms": [
+    "E-115"
+   ]
+  },
+  {
+   "n": 20,
+   "cabin": "A21/1",
+   "names": [
+    "Brady, Mr. John B."
+   ],
+   "where": "page 2, col 1, line 2",
+   "labels": [
+    "A 21"
+   ],
+   "rooms": [
+    "A-030"
+   ]
+  },
+  {
+   "n": 21,
+   "cabin": "B10",
+   "names": [
+    "Brandeis, Mr. E."
+   ],
+   "where": "page 2, col 1, line 3",
+   "labels": [
+    "B 10"
+   ],
+   "rooms": [
+    "B-035"
+   ]
+  },
+  {
+   "n": 22,
+   "cabin": "C101/1",
+   "names": [
+    "Brown, Mrs. J. M."
+   ],
+   "where": "page 2, col 1, line 4",
+   "labels": [
+    "C 101"
+   ],
+   "rooms": [
+    "C-050"
+   ]
+  },
+  {
+   "n": 23,
+   "cabin": "D15",
+   "names": [
+    "Buckell, Mrs. W. and Maid"
+   ],
+   "where": "page 2, col 1, lines 5-6",
+   "labels": [
+    "D 15"
+   ],
+   "rooms": [
+    "D-016"
+   ]
+  },
+  {
+   "n": 24,
+   "cabin": "B38",
+   "names": [
+    "Butt, Major Archibald W."
+   ],
+   "where": "page 2, col 1, lines 7-8",
+   "labels": [
+    "B 38"
+   ],
+   "rooms": [
+    "B-035"
+   ]
+  },
+  {
+   "n": 25,
+   "cabin": "E 24/3",
+   "names": [
+    "Calderhead, Mr. E. P."
+   ],
+   "where": "page 2, col 1, line 9",
+   "labels": [
+    "E 24"
+   ],
+   "rooms": [
+    "E-113"
+   ]
+  },
+  {
+   "n": 26,
+   "cabin": "B51, B53, B55, 101",
+   "names": [
+    "Cardeza, Mrs. J. W. M. and Maid",
+    "Cardeza, Mr. T. D. M. and Manservant"
+   ],
+   "where": "page 2, col 1, lines 10-13",
+   "note": "cabin 101 is printed with no deck letter; titanic3 puts the manservant in B101",
+   "labels": [
+    "B 51",
+    "B 53",
+    "B 55",
+    "B 101"
+   ],
+   "rooms": [
+    "B-022",
+    "B-022",
+    "B-022",
+    "B-024"
+   ]
+  },
+  {
+   "n": 27,
+   "cabin": "B96, B98",
+   "names": [
+    "Carter, Mr. William E.",
+    "Carter, Mrs. William E.",
+    "Carter. Miss Lucile",
+    "Carter, Master William T."
+   ],
+   "where": "page 2, col 1, lines 14-18",
+   "labels": [
+    "B 96",
+    "B 98"
+   ],
+   "rooms": [
+    "B-017",
+    "B-017"
+   ]
+  },
+  {
+   "n": 28,
+   "cabin": null,
+   "names": [
+    "Case, Mr Howard B."
+   ],
+   "where": "page 2, col 1, line 19",
+   "labels": [],
+   "rooms": []
+  },
+  {
+   "n": 29,
+   "cabin": "C 46",
+   "names": [
+    "Cavendish, Mr. T. W.",
+    "Cavendish, Mrs. T. W. and Maid"
+   ],
+   "where": "page 2, col 1, lines 20-22",
+   "labels": [
+    "C 46"
+   ],
+   "rooms": [
+    "C-051"
+   ]
+  },
+  {
+   "n": 30,
+   "cabin": "E31",
+   "names": [
+    "Chaffee, Mr. Herbert F.",
+    "Chaffee, Mrs. Herbert F."
+   ],
+   "where": "page 2, col 1, lines 23-24",
+   "labels": [
+    "E 31"
+   ],
+   "rooms": [
+    "E-115"
+   ]
+  },
+  {
+   "n": 31,
+   "cabin": "C37",
+   "names": [
+    "Cherry, Miss Gladys"
+   ],
+   "where": "page 2, col 1, line 25",
+   "note": "titanic3 gives B77",
+   "labels": [
+    "C 37"
+   ],
+   "rooms": [
+    "C-060"
+   ]
+  },
+  {
+   "n": 32,
+   "cabin": "A9",
+   "names": [
+    "Chevré, Mr. Paul"
+   ],
+   "where": "page 2, col 1, line 26",
+   "labels": [
+    "A 9"
+   ],
+   "rooms": [
+    null
+   ]
+  },
+  {
+   "n": 33,
+   "cabin": "E 33",
+   "names": [
+    "Chibnall, Mrs. E. M. Bowerman"
+   ],
+   "where": "page 2, col 1, lines 27-28",
+   "labels": [
+    "E 33"
+   ],
+   "rooms": [
+    "E-115"
+   ]
+  },
+  {
+   "n": 34,
+   "cabin": null,
+   "names": [
+    "Chisholm, Mr. Robert"
+   ],
+   "where": "page 2, col 1, line 29",
+   "labels": [],
+   "rooms": []
+  },
+  {
+   "n": 35,
+   "cabin": null,
+   "names": [
+    "Christy, Mrs. Alice Frances"
+   ],
+   "where": "page 2, col 1, lines 30-31",
+   "note": "titanic3 has her in second class",
+   "labels": [],
+   "rooms": []
+  },
+  {
+   "n": 36,
+   "cabin": null,
+   "names": [
+    "Christy, Miss Juli"
+   ],
+   "where": "page 2, col 1, line 32",
+   "note": "titanic3 has her in second class",
+   "labels": [],
+   "rooms": []
+  },
+  {
+   "n": 37,
+   "cabin": "C89",
+   "names": [
+    "Clark, Mr. Walter M.",
+    "Clark, Mrs. Walter M."
+   ],
+   "where": "page 2, col 1, lines 33-34",
+   "labels": [
+    "C 89"
+   ],
+   "rooms": [
+    "C-022"
+   ]
+  },
+  {
+   "n": 38,
+   "cabin": "C110",
+   "names": [
+    "Clifford, Mr. George Quincy"
+   ],
+   "where": "page 2, col 1, lines 35-36",
+   "note": "titanic3 gives A14",
+   "labels": [
+    "C 110"
+   ],
+   "rooms": [
+    "C-049"
+   ]
+  },
+  {
+   "n": 39,
+   "cabin": "E 58",
+   "names": [
+    "Colley, Mr. E. P."
+   ],
+   "where": "page 2, col 2, line 1",
+   "labels": [
+    "E 58"
+   ],
+   "rooms": [
+    "E-120"
+   ]
+  },
+  {
+   "n": 40,
+   "cabin": "E45, E49, E52",
+   "names": [
+    "Compton, Mrs. A. T.",
+    "Compton, Miss S. R.",
+    "Compton, Mr. A. T., Jr."
+   ],
+   "where": "page 2, col 2, lines 2-4",
+   "labels": [
+    "E 45",
+    "E 49",
+    "E 52"
+   ],
+   "rooms": [
+    "E-116",
+    "E-116",
+    "E-116"
+   ]
+  },
+  {
+   "n": 41,
+   "cabin": "C101/3",
+   "names": [
+    "Cornell, Mrs. R. C."
+   ],
+   "where": "page 2, col 2, line 5",
+   "labels": [
+    "C 101"
+   ],
+   "rooms": [
+    "C-050"
+   ]
+  },
+  {
+   "n": 42,
+   "cabin": "C132/1",
+   "names": [
+    "Craig, Mr. Norman C., K.C., M.P."
+   ],
+   "where": "page 2, col 2, lines 6-7",
+   "note": "not in titanic3's passenger list",
+   "labels": [
+    "C 132"
+   ],
+   "rooms": [
+    "C-034"
+   ]
+  },
+  {
+   "n": 43,
+   "cabin": "B22",
+   "names": [
+    "Crosby, Mr. Edward G.",
+    "Crosby, Mrs. Edward G."
+   ],
+   "where": "page 2, col 2, lines 8-9",
+   "note": "titanic3 gives Mrs. Crosby B26",
+   "labels": [
+    "B 22"
+   ],
+   "rooms": [
+    "B-035"
+   ]
+  },
+  {
+   "n": 44,
+   "cabin": "E17",
+   "names": [
+    "Daly, Mr. P. D."
+   ],
+   "where": "page 2, col 2, line 10",
+   "labels": [
+    "E 17"
+   ],
+   "rooms": [
+    "E-034"
+   ]
+  },
+  {
+   "n": 45,
+   "cabin": "B71",
+   "names": [
+    "Davidson, Mr. Thornton",
+    "Davidson, Mrs. Thornton"
+   ],
+   "where": "page 2, col 2, lines 11-12",
+   "labels": [
+    "B 71"
+   ],
+   "rooms": [
+    "B-020"
+   ]
+  },
+  {
+   "n": 46,
+   "cabin": "C90",
+   "names": [
+    "de Villiers, Mrs. B."
+   ],
+   "where": "page 2, col 2, line 13",
+   "note": "titanic3: Mlle. Berthe Mayne, travelling as Mrs de Villiers",
+   "labels": [
+    "C 90"
+   ],
+   "rooms": [
+    "C-037"
+   ]
+  },
+  {
+   "n": 47,
+   "cabin": "B20",
+   "names": [
+    "Dick, Mr. A. A.",
+    "Dick, Mrs. A. A."
+   ],
+   "where": "page 2, col 2, lines 14-15",
+   "labels": [
+    "B 20"
+   ],
+   "rooms": [
+    "B-035"
+   ]
+  },
+  {
+   "n": 48,
+   "cabin": "A34",
+   "names": [
+    "Dodge, Mr. Washington",
+    "Dodge, Mrs. Washington",
+    "Dodge, Master Washington"
+   ],
+   "where": "page 2, col 2, lines 16-19",
+   "labels": [
+    "A 34"
+   ],
+   "rooms": [
+    "A-027"
+   ]
+  },
+  {
+   "n": 49,
+   "cabin": "B60",
+   "names": [
+    "Douglas, Mrs. F. C."
+   ],
+   "where": "page 2, col 2, line 20",
+   "labels": [
+    "B 60"
+   ],
+   "rooms": [
+    "B-019"
+   ]
+  },
+  {
+   "n": 50,
+   "cabin": "C86",
+   "names": [
+    "Douglas, Mr. W. D.",
+    "Douglas, Mrs. W. D. and Maid"
+   ],
+   "where": "page 2, col 2, lines 21-23",
+   "labels": [
+    "C 86"
+   ],
+   "rooms": [
+    "C-037"
+   ]
+  },
+  {
+   "n": 51,
+   "cabin": "A18",
+   "names": [
+    "Dulles, Mr. William C."
+   ],
+   "where": "page 2, col 2, line 24",
+   "labels": [
+    "A 18"
+   ],
+   "rooms": [
+    "A-027"
+   ]
+  },
+  {
+   "n": 52,
+   "cabin": "C53",
+   "names": [
+    "Earnshew, Mrs. Boulton"
+   ],
+   "where": "page 2, col 2, line 25",
+   "note": "titanic3 gives C54",
+   "labels": [
+    "C 53"
+   ],
+   "rooms": [
+    "C-063"
+   ]
+  },
+  {
+   "n": 53,
+   "cabin": "D31",
+   "names": [
+    "Eastman, Miss Anne K."
+   ],
+   "where": "page 2, col 2, line 26",
+   "note": "not in titanic3's passenger list",
+   "labels": [
+    "D 31"
+   ],
+   "rooms": [
+    "D-016"
+   ]
+  },
+  {
+   "n": 54,
+   "cabin": "C45",
+   "names": [
+    "Endres, Miss Caroline"
+   ],
+   "where": "page 2, col 2, line 27",
+   "labels": [
+    "C 45"
+   ],
+   "rooms": [
+    "C-067"
+   ]
+  },
+  {
+   "n": 55,
+   "cabin": "D20",
+   "names": [
+    "Eustis, Miss E. M."
+   ],
+   "where": "page 2, col 2, line 28",
+   "labels": [
+    "D 20"
+   ],
+   "rooms": [
+    "D-015"
+   ]
+  },
+  {
+   "n": 56,
+   "cabin": "A29",
+   "names": [
+    "Evans, Miss E."
+   ],
+   "where": "page 2, col 2, line 29",
+   "labels": [
+    "A 29"
+   ],
+   "rooms": [
+    "A-030"
+   ]
+  },
+  {
+   "n": 57,
+   "cabin": "E25/3",
+   "names": [
+    "Flynn, Mr. J. I."
+   ],
+   "where": "page 3, col 1, line 1",
+   "labels": [
+    "E 25"
+   ],
+   "rooms": [
+    "E-113"
+   ]
+  },
+  {
+   "n": 58,
+   "cabin": "C111",
+   "names": [
+    "Foreman, M. B. L."
+   ],
+   "where": "page 3, col 1, line 2",
+   "labels": [
+    "C 111"
+   ],
+   "rooms": [
+    "C-043"
+   ]
+  },
+  {
+   "n": 59,
+   "cabin": "C23, C25, C27",
+   "names": [
+    "Fortune, Mr. Mark",
+    "Fortune, Mrs. Mark",
+    "Fortune, Miss Ethel",
+    "Fortune, Miss Alice",
+    "Fortune, Miss Mabel",
+    "Fortune, Mr. Charles"
+   ],
+   "where": "page 3, col 1, lines 3-8",
+   "labels": [
+    "C 23",
+    "C 25",
+    "C 27"
+   ],
+   "rooms": [
+    "C-060",
+    "C-060",
+    "C-060"
+   ]
+  },
+  {
+   "n": 60,
+   "cabin": "D34/3",
+   "names": [
+    "Franklin, Mr. T. P."
+   ],
+   "where": "page 3, col 1, line 9",
+   "labels": [
+    "D 34"
+   ],
+   "rooms": [
+    null
+   ]
+  },
+  {
+   "n": 61,
+   "cabin": "D40",
+   "names": [
+    "Frauenthal, Mr. T. G."
+   ],
+   "where": "page 3, col 1, line 10",
+   "labels": [
+    "D 40"
+   ],
+   "rooms": [
+    "D-017"
+   ]
+  },
+  {
+   "n": 62,
+   "cabin": "B39",
+   "names": [
+    "Frolicher, Miss Marguerite"
+   ],
+   "where": "page 3, col 1, lines 11-12",
+   "labels": [
+    "B 39"
+   ],
+   "rooms": [
+    "B-036"
+   ]
+  },
+  {
+   "n": 63,
+   "cabin": "E63",
+   "names": [
+    "Gee, Mr. Arthur"
+   ],
+   "where": "page 3, col 1, line 13",
+   "labels": [
+    "E 63"
+   ],
+   "rooms": [
+    "E-120"
+   ]
+  },
+  {
+   "n": 64,
+   "cabin": "C92",
+   "names": [
+    "Goldenberg, Mr. E. L.",
+    "Goldenberg, Mrs. E. L."
+   ],
+   "where": "page 3, col 1, lines 14-15",
+   "labels": [
+    "C 92"
+   ],
+   "rooms": [
+    "C-021"
+   ]
+  },
+  {
+   "n": 65,
+   "cabin": "A5",
+   "names": [
+    "Goldschmidt, Mr. George B."
+   ],
+   "where": "page 3, col 1, lines 16-17",
+   "labels": [
+    "A 5"
+   ],
+   "rooms": [
+    "A-030"
+   ]
+  },
+  {
+   "n": 66,
+   "cabin": "C51",
+   "names": [
+    "Gracie, Colonel Archibald"
+   ],
+   "where": "page 3, col 1, lines 18-19",
+   "labels": [
+    "C 51"
+   ],
+   "rooms": [
+    "C-063"
+   ]
+  },
+  {
+   "n": 67,
+   "cabin": "C42",
+   "names": [
+    "Graham, Mr."
+   ],
+   "where": "page 3, col 1, line 20",
+   "note": "titanic3 gives Mr. George Edward Graham C91",
+   "labels": [
+    "C 42"
+   ],
+   "rooms": [
+    "C-051"
+   ]
+  },
+  {
+   "n": 68,
+   "cabin": "C91, C125",
+   "names": [
+    "Graham, Mrs. William G.",
+    "Graham, Miss Margaret"
+   ],
+   "where": "page 3, col 1, lines 21-22",
+   "note": "titanic3 gives Mrs. W. T. Graham C125 and Miss Margaret Graham B42",
+   "labels": [
+    "C 91",
+    "C 125"
+   ],
+   "rooms": [
+    "C-022",
+    "C-027"
+   ]
+  },
+  {
+   "n": 69,
+   "cabin": "D10, D12",
+   "names": [
+    "Greenfield, Mrs. L. D.",
+    "Greenfield, Mr. W. B."
+   ],
+   "where": "page 3, col 1, lines 23-24",
+   "labels": [
+    "D 10",
+    "D 12"
+   ],
+   "rooms": [
+    "D-015",
+    "D-015"
+   ]
+  },
+  {
+   "n": 70,
+   "cabin": "B84",
+   "names": [
+    "Giglo, Mr. Victor",
+    "Guggenheim, Mr. Benjamin"
+   ],
+   "where": "page 3, col 1, lines 25-27",
+   "note": "titanic3 gives Guggenheim B82 B84 and Giglio B86",
+   "labels": [
+    "B 84"
+   ],
+   "rooms": [
+    "B-019"
+   ]
+  },
+  {
+   "n": 71,
+   "cabin": "E50",
+   "names": [
+    "Harder, Mr. George A.",
+    "Harder. Mrs. George A."
+   ],
+   "where": "page 3, col 1, lines 28-29",
+   "labels": [
+    "E 50"
+   ],
+   "rooms": [
+    "E-116"
+   ]
+  },
+  {
+   "n": 72,
+   "cabin": "D33",
+   "names": [
+    "Harper, Mr. Henry Sleeper and Manservant",
+    "Harper, Mrs. Henry Sleeper"
+   ],
+   "where": "page 3, col 2, lines 1-5",
+   "labels": [
+    "D 33"
+   ],
+   "rooms": [
+    "D-016"
+   ]
+  },
+  {
+   "n": 73,
+   "cabin": "C83",
+   "names": [
+    "Harris, Mr. Henry B.",
+    "Harris, Mrs. Henry B."
+   ],
+   "where": "page 3, col 2, lines 6-7",
+   "labels": [
+    "C 83"
+   ],
+   "rooms": [
+    "C-038"
+   ]
+  },
+  {
+   "n": 74,
+   "cabin": "D45",
+   "names": [
+    "Hawksford, Mr. W. J."
+   ],
+   "where": "page 3, col 2, line 8",
+   "labels": [
+    "D 45"
+   ],
+   "rooms": [
+    "D-018"
+   ]
+  },
+  {
+   "n": 75,
+   "cabin": "B69, B73, B24",
+   "names": [
+    "Hays, Mr. Charles M.",
+    "Hays, Mrs. Charles M. and Maid"
+   ],
+   "where": "page 3, col 2, lines 9-11",
+   "note": "titanic3 gives Mr and Mrs Hays B69, their maid B73, and B24 to V. Payne",
+   "labels": [
+    "B 69",
+    "B 73",
+    "B 24"
+   ],
+   "rooms": [
+    "B-020",
+    "B-020",
+    "B-035"
+   ]
+  },
+  {
+   "n": 76,
+   "cabin": "C54",
+   "names": [
+    "Hays, Miss Margaret"
+   ],
+   "where": "page 3, col 2, line 12",
+   "labels": [
+    "C 54"
+   ],
+   "rooms": [
+    "C-066"
+   ]
+  },
+  {
+   "n": 77,
+   "cabin": "B11",
+   "names": [
+    "Head, Mr. Christopher"
+   ],
+   "where": "page 3, col 2, line 13",
+   "labels": [
+    "B 11"
+   ],
+   "rooms": [
+    null
+   ]
+  },
+  {
+   "n": 78,
+   "cabin": "E46",
+   "names": [
+    "Hilliard, Mr. Herbert Henry"
+   ],
+   "where": "page 3, col 2, lines 14-15",
+   "labels": [
+    "E 46"
+   ],
+   "rooms": [
+    "E-116"
+   ]
+  },
+  {
+   "n": 79,
+   "cabin": "C39",
+   "names": [
+    "Hipkins, Mr. W. E."
+   ],
+   "where": "page 3, col 2, line 16",
+   "labels": [
+    "C 39"
+   ],
+   "rooms": [
+    "C-060"
+   ]
+  },
+  {
+   "n": 80,
+   "cabin": "B18",
+   "names": [
+    "Hippach, Mrs. Ida S.",
+    "Hippach, Miss Jean"
+   ],
+   "where": "page 3, col 2, lines 17-18",
+   "labels": [
+    "B 18"
+   ],
+   "rooms": [
+    "B-035"
+   ]
+  },
+  {
+   "n": 81,
+   "cabin": "D11",
+   "names": [
+    "Hogeboom, Mrs. John C."
+   ],
+   "where": "page 3, col 2, line 19",
+   "labels": [
+    "D 11"
+   ],
+   "rooms": [
+    "D-016"
+   ]
+  },
+  {
+   "n": 82,
+   "cabin": null,
+   "names": [
+    "Holden, M.A., Rev. J. Stuart"
+   ],
+   "where": "page 3, col 2, lines 20-21",
+   "note": "not in titanic3's passenger list",
+   "labels": [],
+   "rooms": []
+  },
+  {
+   "n": 83,
+   "cabin": "C93",
+   "names": [
+    "Hoyt, Mr. Frederick M.",
+    "Hoyt, Mrs. Frederick M."
+   ],
+   "where": "page 3, col 2, lines 22-23",
+   "labels": [
+    "C 93"
+   ],
+   "rooms": [
+    "C-022"
+   ]
+  },
+  {
+   "n": 84,
+   "cabin": "C49",
+   "names": [
+    "Isham, Miss A. E."
+   ],
+   "where": "page 3, col 2, line 24",
+   "labels": [
+    "C 49"
+   ],
+   "rooms": [
+    "C-063"
+   ]
+  },
+  {
+   "n": 85,
+   "cabin": null,
+   "names": [
+    "Jakob, Mr. Birnbaum"
+   ],
+   "where": "page 3, col 2, line 25",
+   "note": "titanic3: Birnbaum, Mr. Jakob (the list inverts the names)",
+   "labels": [],
+   "rooms": []
+  },
+  {
+   "n": 86,
+   "cabin": "E60",
+   "names": [
+    "Julian, Mr. H. F."
+   ],
+   "where": "page 3, col 2, line 26",
+   "labels": [
+    "E 60"
+   ],
+   "rooms": [
+    "E-120"
+   ]
+  },
+  {
+   "n": 87,
+   "cabin": "B37",
+   "names": [
+    "Kent, Mr. Edward A."
+   ],
+   "where": "page 4, col 1, line 1",
+   "labels": [
+    "B 37"
+   ],
+   "rooms": [
+    "B-036"
+   ]
+  },
+  {
+   "n": 88,
+   "cabin": "D21",
+   "names": [
+    "Kenyon, Mr. F. R.",
+    "Kenyon, Mrs. F. R."
+   ],
+   "where": "page 4, col 1, lines 2-3",
+   "labels": [
+    "D 21"
+   ],
+   "rooms": [
+    "D-016"
+   ]
+  },
+  {
+   "n": 89,
+   "cabin": "D19",
+   "names": [
+    "Kimball, Mr. E. N.",
+    "Kimball, Mrs. E. N."
+   ],
+   "where": "page 4, col 1, lines 4-5",
+   "labels": [
+    "D 19"
+   ],
+   "rooms": [
+    "D-016"
+   ]
+  },
+  {
+   "n": 90,
+   "cabin": "C124",
+   "names": [
+    "Klaber, Mr. Herman"
+   ],
+   "where": "page 4, col 1, line 6",
+   "labels": [
+    "C 124"
+   ],
+   "rooms": [
+    "C-040"
+   ]
+  },
+  {
+   "n": 91,
+   "cabin": "C128",
+   "names": [
+    "Lambert-Williams, Mr. Fletcher Fellowes"
+   ],
+   "where": "page 4, col 1, lines 7-8",
+   "labels": [
+    "C 128"
+   ],
+   "rooms": [
+    "C-040"
+   ]
+  },
+  {
+   "n": 92,
+   "cabin": "E37/1",
+   "names": [
+    "Lawrence, Mr. Arthur"
+   ],
+   "where": "page 4, col 1, line 9",
+   "note": "not in titanic3's passenger list",
+   "labels": [
+    "E 37"
+   ],
+   "rooms": [
+    "E-115"
+   ]
+  },
+  {
+   "n": 93,
+   "cabin": "D17/3",
+   "names": [
+    "Leader, Mrs. F. A."
+   ],
+   "where": "page 4, col 1, line 10",
+   "labels": [
+    "D 17"
+   ],
+   "rooms": [
+    "D-016"
+   ]
+  },
+  {
+   "n": 94,
+   "cabin": "D31",
+   "names": [
+    "Lewis, Mrs. Charlton T."
+   ],
+   "where": "page 4, col 1, line 11",
+   "note": "not in titanic3's passenger list",
+   "labels": [
+    "D 31"
+   ],
+   "rooms": [
+    "D-016"
+   ]
+  },
+  {
+   "n": 95,
+   "cabin": "D28",
+   "names": [
+    "Lines, Mrs. Ernest H.",
+    "Lines, Miss Mary C."
+   ],
+   "where": "page 4, col 1, lines 12-13",
+   "labels": [
+    "D 28"
+   ],
+   "rooms": [
+    null
+   ]
+  },
+  {
+   "n": 96,
+   "cabin": "D6",
+   "names": [
+    "Long, Mr. Milton C."
+   ],
+   "where": "page 4, col 1, line 14",
+   "labels": [
+    "D 6"
+   ],
+   "rooms": [
+    "D-014"
+   ]
+  },
+  {
+   "n": 97,
+   "cabin": "D9",
+   "names": [
+    "Longley, Miss Gretchen F."
+   ],
+   "where": "page 4, col 1, line 15",
+   "labels": [
+    "D 9"
+   ],
+   "rooms": [
+    "D-016"
+   ]
+  },
+  {
+   "n": 98,
+   "cabin": "B5",
+   "names": [
+    "Madill, Miss Georgette Alexandra"
+   ],
+   "where": "page 4, col 1, lines 16-17",
+   "labels": [
+    "B 5"
+   ],
+   "rooms": [
+    "B-036"
+   ]
+  },
+  {
+   "n": 99,
+   "cabin": "C108",
+   "names": [
+    "Maguire, Mr. J. E."
+   ],
+   "where": "page 4, col 1, line 18",
+   "note": "titanic3 gives C106",
+   "labels": [
+    "C 108"
+   ],
+   "rooms": [
+    "C-049"
+   ]
+  },
+  {
+   "n": 100,
+   "cabin": "C47",
+   "names": [
+    "Marechal, Mr. Pierre"
+   ],
+   "where": "page 4, col 1, line 19",
+   "labels": [
+    "C 47"
+   ],
+   "rooms": [
+    "C-067"
+   ]
+  },
+  {
+   "n": 101,
+   "cabin": "D30",
+   "names": [
+    "Marvin, Mr. D. W.",
+    "Marvin, Mrs. D. W."
+   ],
+   "where": "page 4, col 1, lines 20-21",
+   "labels": [
+    "D 30"
+   ],
+   "rooms": [
+    "D-015"
+   ]
+  },
+  {
+   "n": 102,
+   "cabin": "C6",
+   "names": [
+    "McCaffry, Mr. T."
+   ],
+   "where": "page 4, col 1, line 22",
+   "labels": [
+    "C 6"
+   ],
+   "rooms": [
+    "C-069"
+   ]
+  },
+  {
+   "n": 103,
+   "cabin": "E46",
+   "names": [
+    "McCarthy, Mr. Timothy J."
+   ],
+   "where": "page 4, col 2, lines 1-2",
+   "labels": [
+    "E 46"
+   ],
+   "rooms": [
+    "E-116"
+   ]
+  },
+  {
+   "n": 104,
+   "cabin": "E25/1",
+   "names": [
+    "McGough, Mr J. R."
+   ],
+   "where": "page 4, col 2, line 3",
+   "labels": [
+    "E 25"
+   ],
+   "rooms": [
+    "E-113"
+   ]
+  },
+  {
+   "n": 105,
+   "cabin": "E38",
+   "names": [
+    "Millet, Mr. Frank D."
+   ],
+   "where": "page 4, col 2, line 4",
+   "labels": [
+    "E 38"
+   ],
+   "rooms": [
+    "E-121"
+   ]
+  },
+  {
+   "n": 106,
+   "cabin": "C78",
+   "names": [
+    "Minahan, Dr. W. E.",
+    "Minahan, Mrs. W. E.",
+    "Minahan, Miss Daisy"
+   ],
+   "where": "page 4, col 2, lines 5-7",
+   "labels": [
+    "C 78"
+   ],
+   "rooms": [
+    "C-046"
+   ]
+  },
+  {
+   "n": 107,
+   "cabin": "C30",
+   "names": [
+    "Molsom, Mr. H. Markland"
+   ],
+   "where": "page 4, col 2, line 8",
+   "labels": [
+    "C 30"
+   ],
+   "rooms": [
+    "C-059"
+   ]
+  },
+  {
+   "n": 108,
+   "cabin": "A16, A20, E36",
+   "names": [
+    "Morgan, Mr.",
+    "Morgan, Mrs. and Maid"
+   ],
+   "where": "page 4, col 2, lines 9-11",
+   "note": "titanic3 names them Sir Cosmo and Lady Duff Gordon, travelling as Mr and Mrs Morgan: Lady Duff Gordon A16, Sir Cosmo A20, their maid E36",
+   "labels": [
+    "A 16",
+    "A 20",
+    "E 36"
+   ],
+   "rooms": [
+    "A-027",
+    "A-027",
+    "E-115"
+   ]
+  },
+  {
+   "n": 109,
+   "cabin": "C118",
+   "names": [
+    "Natsch, Mr. Charles"
+   ],
+   "where": "page 4, col 2, line 12",
+   "labels": [
+    "C 118"
+   ],
+   "rooms": [
+    "C-043"
+   ]
+  },
+  {
+   "n": 110,
+   "cabin": "D48, D36",
+   "names": [
+    "Newell, Mr. A. W.",
+    "Newell, Miss Alice",
+    "Newell, Miss Madeline"
+   ],
+   "where": "page 4, col 2, lines 13-15",
+   "note": "printed \"M ss Madeline\" (the i did not print); titanic3 has Miss Marjorie Newell and no Alice: both daughters D36, Mr. Newell D48",
+   "labels": [
+    "D 48",
+    "D 36"
+   ],
+   "rooms": [
+    "D-017",
+    "D-015"
+   ]
+  },
+  {
+   "n": 111,
+   "cabin": "D47",
+   "names": [
+    "Newsom, Miss Helen"
+   ],
+   "where": "page 4, col 2, line 16",
+   "labels": [
+    "D 47"
+   ],
+   "rooms": [
+    "D-018"
+   ]
+  },
+  {
+   "n": 112,
+   "cabin": "B30, B36",
+   "names": [
+    "Ostby, Mr. E. C.",
+    "Ostby, Miss Helen R."
+   ],
+   "where": "page 4, col 2, lines 17-18",
+   "labels": [
+    "B 30",
+    "B 36"
+   ],
+   "rooms": [
+    "B-035",
+    "B-035"
+   ]
+  },
+  {
+   "n": 113,
+   "cabin": "D43",
+   "names": [
+    "Ovies, Mr. S."
+   ],
+   "where": "page 4, col 2, line 19",
+   "labels": [
+    "D 43"
+   ],
+   "rooms": [
+    "D-018"
+   ]
+  },
+  {
+   "n": 114,
+   "cabin": null,
+   "names": [
+    "Parr, Mr. M. H. W."
+   ],
+   "where": "page 4, col 2, line 20",
+   "labels": [],
+   "rooms": []
+  },
+  {
+   "n": 115,
+   "cabin": "C142",
+   "names": [
+    "Partner, Mr. Austin"
+   ],
+   "where": "page 4, col 2, line 21",
+   "note": "titanic3 gives C124",
+   "labels": [
+    "C 142"
+   ],
+   "rooms": [
+    "C-025"
+   ]
+  },
+  {
+   "n": 116,
+   "cabin": null,
+   "names": [
+    "Payne, Mr. V."
+   ],
+   "where": "page 4, col 2, line 22",
+   "note": "no cabin on the list; titanic3 gives B24",
+   "labels": [],
+   "rooms": []
+  },
+  {
+   "n": 117,
+   "cabin": "C2",
+   "names": [
+    "Pears, Mr. Thomas",
+    "Pears, Mrs. Thomas"
+   ],
+   "where": "page 5, col 1, lines 1-2",
+   "labels": [
+    "C 2"
+   ],
+   "rooms": [
+    "C-069"
+   ]
+  },
+  {
+   "n": 118,
+   "cabin": "C65, C109/1",
+   "names": [
+    "Penasco, Mr. Victor",
+    "Penasco, Mrs. Victor and Maid"
+   ],
+   "where": "page 5, col 1, lines 3-5",
+   "labels": [
+    "C 65",
+    "C 109"
+   ],
+   "rooms": [
+    "C-047",
+    "C-045"
+   ]
+  },
+  {
+   "n": 119,
+   "cabin": "C104",
+   "names": [
+    "Penchen, Major Arthur"
+   ],
+   "where": "page 5, col 1, line 6",
+   "labels": [
+    "C 104"
+   ],
+   "rooms": [
+    "C-049"
+   ]
+  },
+  {
+   "n": 120,
+   "cabin": "C110",
+   "names": [
+    "Porter, Mr. Walter Chamberlain"
+   ],
+   "where": "page 5, col 1, lines 7-8",
+   "labels": [
+    "C 110"
+   ],
+   "rooms": [
+    "C-049"
+   ]
+  },
+  {
+   "n": 121,
+   "cabin": "C50",
+   "names": [
+    "Potter, Mrs. Thomas, Jr."
+   ],
+   "where": "page 5, col 1, line 9",
+   "labels": [
+    "C 50"
+   ],
+   "rooms": [
+    "C-066"
+   ]
+  },
+  {
+   "n": 122,
+   "cabin": null,
+   "names": [
+    "Reuchlin, Mr. Jonkheer J. G."
+   ],
+   "where": "page 5, col 1, lines 10-11",
+   "labels": [],
+   "rooms": []
+  },
+  {
+   "n": 123,
+   "cabin": "B3",
+   "names": [
+    "Robert, Mrs. Elizabeth Walton and Maid"
+   ],
+   "where": "page 5, col 1, lines 12-14",
+   "labels": [
+    "B 3"
+   ],
+   "rooms": [
+    null
+   ]
+  },
+  {
+   "n": 124,
+   "cabin": "A24",
+   "names": [
+    "Roebling, M. Washington A. 2nd"
+   ],
+   "where": "page 5, col 1, lines 15-16",
+   "labels": [
+    "A 24"
+   ],
+   "rooms": [
+    "A-027"
+   ]
+  },
+  {
+   "n": 125,
+   "cabin": "A32",
+   "names": [
+    "Rood, Mr. Hugh R."
+   ],
+   "where": "page 5, col 1, line 17",
+   "labels": [
+    "A 32"
+   ],
+   "rooms": [
+    "A-027"
+   ]
+  },
+  {
+   "n": 126,
+   "cabin": "A10",
+   "names": [
+    "Ross, Mr. J. Hugo"
+   ],
+   "where": "page 5, col 1, line 18",
+   "labels": [
+    "A 10"
+   ],
+   "rooms": [
+    "A-027"
+   ]
+  },
+  {
+   "n": 127,
+   "cabin": "C37",
+   "names": [
+    "Rothes, The Countess of and Maid"
+   ],
+   "where": "page 5, col 1, lines 19-20",
+   "note": "titanic3 gives B77",
+   "labels": [
+    "C 37"
+   ],
+   "rooms": [
+    "C-060"
+   ]
+  },
+  {
+   "n": 128,
+   "cabin": "C106",
+   "names": [
+    "Saalfeld, Mr. Adolphe"
+   ],
+   "where": "page 5, col 1, line 21",
+   "labels": [
+    "C 106"
+   ],
+   "rooms": [
+    "C-049"
+   ]
+  },
+  {
+   "n": 129,
+   "cabin": "C125",
+   "names": [
+    "Shutes, Miss E. W."
+   ],
+   "where": "page 5, col 1, line 22",
+   "labels": [
+    "C 125"
+   ],
+   "rooms": [
+    "C-027"
+   ]
+  },
+  {
+   "n": 130,
+   "cabin": "E24/1",
+   "names": [
+    "Silverthorne, Mr."
+   ],
+   "where": "page 5, col 1, line 23",
+   "labels": [
+    "E 24"
+   ],
+   "rooms": [
+    "E-113"
+   ]
+  },
+  {
+   "n": 131,
+   "cabin": "E44",
+   "names": [
+    "Silvey, Mr. William B.",
+    "Silvey, Mrs. William B."
+   ],
+   "where": "page 5, col 1, lines 24-25",
+   "labels": [
+    "E 44"
+   ],
+   "rooms": [
+    "E-116"
+   ]
+  },
+  {
+   "n": 132,
+   "cabin": "A26",
+   "names": [
+    "Simonius, Mr. Oberst Alfons"
+   ],
+   "where": "page 5, col 1, lines 26-27",
+   "labels": [
+    "A 26"
+   ],
+   "rooms": [
+    "A-027"
+   ]
+  },
+  {
+   "n": 133,
+   "cabin": "A7",
+   "names": [
+    "Smith, Mr. J. Clinch"
+   ],
+   "where": "page 5, col 1, line 28",
+   "labels": [
+    "A 7"
+   ],
+   "rooms": [
+    "A-030"
+   ]
+  },
+  {
+   "n": 134,
+   "cabin": "A19",
+   "names": [
+    "Smith, Mr. R. W."
+   ],
+   "where": "page 5, col 1, line 29",
+   "labels": [
+    "A 19"
+   ],
+   "rooms": [
+    "A-030"
+   ]
+  },
+  {
+   "n": 135,
+   "cabin": "[B]45",
+   "names": [
+    "Snyder, Mr. John",
+    "Snyder, Mrs. John"
+   ],
+   "where": "page 5, col 2, lines 1-2",
+   "note": "the deck letter is lost in a tear; its right edge fits B, and titanic3 gives B45",
+   "labels": [
+    "B 45"
+   ],
+   "rooms": [
+    "B-036"
+   ]
+  },
+  {
+   "n": 136,
+   "cabin": "E34, E36, E40/1",
+   "names": [
+    "Spedden, Mr. Frederick O.",
+    "Spedden, Mrs. Frederick O. and Maid.",
+    "Spedden, Master R. Douglas and Nurse"
+   ],
+   "where": "page 5, col 2, lines 3-9",
+   "note": "titanic3 gives the three Speddens E34, the nurse E40 and the maid E39 E41; it gives E36 to the Morgans' maid",
+   "labels": [
+    "E 34",
+    "E 36",
+    "E 40"
+   ],
+   "rooms": [
+    "E-115",
+    "E-115",
+    "E-121"
+   ]
+  },
+  {
+   "n": 137,
+   "cabin": "B76, B80/1",
+   "names": [
+    "Spencer, Mr. W. A",
+    "Spencer, Mrs. W. A. and Maid"
+   ],
+   "where": "page 5, col 2, lines 10-12",
+   "note": "titanic3 gives B78, and the maid B80",
+   "labels": [
+    "B 76",
+    "B 80"
+   ],
+   "rooms": [
+    "B-019",
+    "B-019"
+   ]
+  },
+  {
+   "n": 138,
+   "cabin": "B50",
+   "names": [
+    "Stahelin, Mr. Max"
+   ],
+   "where": "page 5, col 2, line 13",
+   "labels": [
+    "B 50"
+   ],
+   "rooms": [
+    "B-031"
+   ]
+  },
+  {
+   "n": 139,
+   "cabin": null,
+   "names": [
+    "Stead, Mr. W. T."
+   ],
+   "where": "page 5, col 2, line 14",
+   "note": "no cabin on the list; titanic3 gives C87",
+   "labels": [],
+   "rooms": []
+  },
+  {
+   "n": 140,
+   "cabin": "B41",
+   "names": [
+    "Stehli, Mr. Max Frolicher",
+    "Stehli, Mrs. Max Frolicher"
+   ],
+   "where": "page 5, col 2, lines 15-16",
+   "labels": [
+    "B 41"
+   ],
+   "rooms": [
+    "B-036"
+   ]
+  },
+  {
+   "n": 141,
+   "cabin": "D20",
+   "names": [
+    "Stephenson, Mrs. W. B."
+   ],
+   "where": "page 5, col 2, line 17",
+   "labels": [
+    "D 20"
+   ],
+   "rooms": [
+    "D-015"
+   ]
+  },
+  {
+   "n": 142,
+   "cabin": "B28",
+   "names": [
+    "Stone, Mrs. George M. and Maid"
+   ],
+   "where": "page 5, col 2, lines 18-19",
+   "labels": [
+    "B 28"
+   ],
+   "rooms": [
+    "B-035"
+   ]
+  },
+  {
+   "n": 143,
+   "cabin": "C55, C57, C97",
+   "names": [
+    "Straus, Mr. Isidor and Manservant",
+    "Straus, Mrs. Isidor and Maid"
+   ],
+   "where": "page 5, col 2, lines 20-23",
+   "labels": [
+    "C 55",
+    "C 57",
+    "C 97"
+   ],
+   "rooms": [
+    "C-052",
+    "C-052",
+    "C-050"
+   ]
+  },
+  {
+   "n": 144,
+   "cabin": "D50",
+   "names": [
+    "Sutton, Mr. Frederick"
+   ],
+   "where": "page 5, col 2, line 24",
+   "labels": [
+    "D 50"
+   ],
+   "rooms": [
+    "D-017"
+   ]
+  },
+  {
+   "n": 145,
+   "cabin": "D17/1",
+   "names": [
+    "Swift, Mrs. Frederick Joel"
+   ],
+   "where": "page 5, col 2, line 25",
+   "labels": [
+    "D 17"
+   ],
+   "rooms": [
+    "D-016"
+   ]
+  },
+  {
+   "n": 146,
+   "cabin": "E67, E68/1",
+   "names": [
+    "Taussig, Mr. Emil",
+    "Taussig, Mrs. Emil",
+    "Taussig, Miss Ruth"
+   ],
+   "where": "page 5, col 2, lines 26-28",
+   "labels": [
+    "E 67",
+    "E 68"
+   ],
+   "rooms": [
+    "E-117",
+    "E-119"
+   ]
+  },
+  {
+   "n": 147,
+   "cabin": "C126",
+   "names": [
+    "Taylor, Mr. E. Z.",
+    "Taylor, Mrs. E. Z."
+   ],
+   "where": "page 5, col 2, lines 29-30",
+   "labels": [
+    "C 126"
+   ],
+   "rooms": [
+    "C-040"
+   ]
+  },
+  {
+   "n": 148,
+   "cabin": null,
+   "names": [
+    "Thayer, Mr. J. B.",
+    "Thayer, Mrs. J. B. and Maid",
+    "Thayer, Mr. J. B., Jr."
+   ],
+   "where": "page 5, col 2, lines 31-34",
+   "note": "no cabin on the list; titanic3 gives Mr and Mrs Thayer C68 and the son C70",
+   "labels": [],
+   "rooms": []
+  },
+  {
+   "n": 149,
+   "cabin": "C53",
+   "names": [
+    "Tucker, Mr. G. M., Jr."
+   ],
+   "where": "page 5, col 2, line 35",
+   "labels": [
+    "C 53"
+   ],
+   "rooms": [
+    "C-063"
+   ]
+  },
+  {
+   "n": 150,
+   "cabin": "B19",
+   "names": [
+    "Van der Hoef, Mr. Wyck[off]"
+   ],
+   "where": "page 6, col 1, lines 1-2",
+   "note": "the end of the name is lost in a tear: \"Wyck\" is printed, \"off\" supplied (titanic3: Wyckoff)",
+   "labels": [
+    "B 19"
+   ],
+   "rooms": [
+    "B-036"
+   ]
+  },
+  {
+   "n": 151,
+   "cabin": "D46",
+   "names": [
+    "Walker, Mr. W. Anderson"
+   ],
+   "where": "page 6, col 1, lines 3-4",
+   "labels": [
+    "D 46"
+   ],
+   "rooms": [
+    "D-017"
+   ]
+  },
+  {
+   "n": 152,
+   "cabin": "D37",
+   "names": [
+    "Warren, Mr. F. M.",
+    "Warren, Mrs. F. M."
+   ],
+   "where": "page 6, col 1, lines 5-6",
+   "labels": [
+    "D 37"
+   ],
+   "rooms": [
+    "D-016"
+   ]
+  },
+  {
+   "n": 153,
+   "cabin": "D26",
+   "names": [
+    "White, Mr. Percival W.",
+    "White, Mr. Richard F."
+   ],
+   "where": "page 6, col 1, lines 7-8",
+   "labels": [
+    "D 26"
+   ],
+   "rooms": [
+    "D-015"
+   ]
+  },
+  {
+   "n": 154,
+   "cabin": "C32, C99/1, C120/1",
+   "names": [
+    "White, Mrs. J. Stuart and Maid and Manservant"
+   ],
+   "where": "page 6, col 1, lines 9-11",
+   "labels": [
+    "C 32",
+    "C 99",
+    "C 120"
+   ],
+   "rooms": [
+    "C-059",
+    "C-050",
+    "C-043"
+   ]
+  },
+  {
+   "n": 155,
+   "cabin": "C80, C82, D44",
+   "names": [
+    "Widener, Mr. George D. and Manservant",
+    "Widener, Mrs. George D. and Maid",
+    "Widener, Mr. Harry"
+   ],
+   "where": "page 6, col 1, lines 12-16",
+   "labels": [
+    "C 80",
+    "C 82",
+    "D 44"
+   ],
+   "rooms": [
+    "C-046",
+    "C-037",
+    "D-017"
+   ]
+  },
+  {
+   "n": 156,
+   "cabin": "D32",
+   "names": [
+    "Wood, Mr. Frank P.",
+    "Wood, Mrs. Frank P."
+   ],
+   "where": "page 6, col 1, lines 17-18",
+   "note": "not in titanic3's passenger list",
+   "labels": [
+    "D 32"
+   ],
+   "rooms": [
+    "D-015"
+   ]
+  },
+  {
+   "n": 157,
+   "cabin": "C52",
+   "names": [
+    "Woolner, Mr. Hugh"
+   ],
+   "where": "page 6, col 1, line 19",
+   "labels": [
+    "C 52"
+   ],
+   "rooms": [
+    "C-066"
+   ]
+  },
+  {
+   "n": 158,
+   "cabin": "C32",
+   "names": [
+    "Young, Miss Marie"
+   ],
+   "where": "page 6, col 2, line 1",
+   "labels": [
+    "C 32"
+   ],
+   "rooms": [
+    "C-059"
+   ]
+  }
+ ]
+}

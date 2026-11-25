@@ -1,0 +1,55 @@
+e16: the speed against revolutions with a resistance shaped by Holtrop 1984 (equal to Biles's at 21 kn). Hull: L 259.08 m, B 28.19 m, T 9.83 m, 49021 t
+
+1. HOLTROP 1984 FOR THIS HULL (C_M 0.975, C_WP 0.78, lcb -1.23 % assumed; nu 0.00000119)
+   at 22.5 kn: S 9145 m2, C_B 0.666, C_P 0.683, Fn 0.230, C_F 0.00137, 1+k1 1.132
+   kn     R_F(1+k1)  R_W     R_A     total kN   wave share   R / (cR u^2) relative to 21 kn
+   6            81       0      16        98       0.0 %        0.9216
+   8           139       0      29       169       0.0 %        0.8944
+   10          212       0      45       258       0.2 %        0.8755
+   12          298       3      65       367       0.8 %        0.8653
+   14          399      13      89       501       2.6 %        0.8672
+   16          512      38     116       667       5.7 %        0.8845
+   18          639      90     147       877      10.2 %        0.9187
+   20          780     180     182      1141      15.8 %        0.9690
+   21          855     244     201      1299      18.8 %        1.0000
+   22          933     319     220      1472      21.7 %        1.0330
+   22.5        973     361     230      1565      23.1 %        1.0495
+   23         1014     406     241      1661      24.4 %        1.0661
+   (the model's cR u^2 at 21 kn: 1544 kN; Holtrop's bare hull there: 1299 kN)
+
+2. STEADY SPEEDS (kn) against the consensus: Full 75 21.75-22.3; 74 21.4-21.9; 60 17.3-18.0; Half 50 14.9-15.9; Slow 30 8.2-9.2
+                                                   Full         74         60       Half       Slow
+quadratic, Cdw 0.25 (before M3, M4)           22.15 in   21.85 in   17.72 in   14.77 OUT   7.86 OUT   3/5
+Holtrop shape, Cdw 0.25                       22.15 in   21.90 in   18.20 OUT  15.34 in    8.14 OUT   3/5
+Holtrop shape, centre screw Cdw 0.15          22.15 in   21.90 in   18.20 OUT  15.34 in    8.22 in    4/5
+Holtrop shape, centre screw Cdw 0.1           22.15 in   21.90 in   18.20 OUT  15.34 in    8.25 in    4/5
+Holtrop shape, centre screw Cdw 0.05          22.15 in   21.90 in   18.20 OUT  15.34 in    8.29 in    4/5
+Holtrop shape, centre screw Cdw 0             22.15 in   21.90 in   18.20 OUT  15.34 in    8.33 in    4/5
+quadratic, centre screw Cdw 0                 22.15 in   21.85 in   17.72 in   14.77 OUT   8.02 OUT   3/5
+AS BUILT: SHIP.resist's cubic, Cdw 0.1        22.15 in   21.90 in   18.18 OUT  15.31 in    8.25 in    4/5
+
+3. THE SHAPE'S SENSITIVITY TO THE ASSUMED COEFFICIENTS
+C_M 0.96                                      22.15 in   21.90 in   18.22 OUT  15.37 in    8.17 OUT   3/5
+C_M 0.99                                      22.15 in   21.89 in   18.18 OUT  15.31 in    8.12 OUT   3/5
+C_WP 0.74                                     22.15 in   21.90 in   18.20 OUT  15.34 in    8.14 OUT   3/5
+C_WP 0.82                                     22.15 in   21.90 in   18.20 OUT  15.34 in    8.14 OUT   3/5
+lcb +1 %                                      22.15 in   21.90 in   18.21 OUT  15.35 in    8.15 OUT   3/5
+lcb -3 %                                      22.15 in   21.90 in   18.20 OUT  15.34 in    8.14 OUT   3/5
+nu 1.83e-6 (sea at -2 C)                      22.15 in   21.89 in   18.18 OUT  15.31 in    8.12 OUT   3/5
+
+4. A WAVE SHARE ALONE (R = cR u^2 (1 - s + s (u/u21)^2), friction quadratic): how much is needed
+s 0.05                                        22.15 in   21.86 in   17.80 in   14.87 OUT   7.95 OUT   3/5
+s 0.1                                         22.15 in   21.87 in   17.88 in   14.98 in    8.05 OUT   4/5
+s 0.15                                        22.15 in   21.88 in   17.96 in   15.08 in    8.14 OUT   4/5
+s 0.2                                         22.15 in   21.88 in   18.03 OUT  15.19 in    8.24 in    4/5
+s 0.3                                         22.15 in   21.89 in   18.18 OUT  15.39 in    8.45 in    4/5
+
+5. THE SHAPE AS A POLYNOMIAL in x = u / (21 kn), fitted over 3-25 kn (least squares, 89 points), held constant outside
+degree 3, max error 0.49 % (0.84 % as used)   22.15 in   21.90 in   18.18 OUT  15.31 in    8.14 OUT   3/5
+    coefficients (g(1) = 1): [1.0822331610460612, -0.69099582864974440, 0.48388570807433345, 0.12487695952934966]
+degree 4, max error 0.82 % (0.69 % as used)   22.15 in   21.90 in   18.19 OUT  15.32 in    8.14 OUT   3/5
+    coefficients (g(1) = 1): [1.0589421267273713, -0.49926284715708424, -0.051697531180445011, 0.71242895753381663, -0.22041070592365869]
+degree 5, max error 0.52 % (0.45 % as used)   22.15 in   21.90 in   18.20 OUT  15.34 in    8.14 OUT   3/5
+    coefficients (g(1) = 1): [1.1180231411864814, -1.1886181778217946, 2.6805294029221214, -4.1143717172956249, 3.6720986805510654, -1.1676613295422482]
+degree 6, max error 0.23 % (0.27 % as used)   22.15 in   21.90 in   18.19 OUT  15.34 in    8.14 OUT   3/5
+    coefficients (g(1) = 1): [1.1932324621521346, -2.2394199858973622, 8.0880950602207911, -17.519738955745076, 20.842149014488676, -12.096689223988546, 2.7323716287693833]

@@ -1,0 +1,79 @@
+THE OBSERVATION LEDGER AGAINST THE MODEL: the 1912 damage preset at its default numbers (26 rows; every row a CHECK; nothing is scored from it)
+she founders at T 165.70; the onset of the break at T 159.41; 1990 samples, one every 5 s
+levels are metres over the row's place (+ up); angles degrees (trim + by the bow, list + to starboard); T minutes after the touch; "miss" is the model at the
+witness's time against the band; "reaches" when the model is first at the witness's level; "late" how far that lies outside the row's time window (+ late, - early)
+
+     CHECK row                   kind     role   bd the record                              the model             miss      reaches  late        
+in   CHECK trim_at_touch         angle    report -  -0.20 +/- 0.30 deg, T 0                 -0.20 at T 0          0.00                           
+in   CHECK symons_hatch1         sea_at   fit    -  at least 0.00 m, T 15 to 20             1.25 at T 15          0.00      T 8.8    -6.2 min    
+in   CHECK robinson_mail_stairs  sea_at   fit    -  at least -1.20 m, T 25 to 35            -1.09 at T 30         0.00      T 28.9   in time     
+out  CHECK poingdestre_quarters  sea_at   fit    -  at least 0.91 m, T 40 to 45             0.24 at T 45          -0.68     T 53.5   +8.5 min    
+in   CHECK wheat_stair_f         event    fit    -  T 65.00 to 75.00 min                      T 70.2                                   in time     
+in   CHECK symons_ports          sea_at   fit    -  -1.00 m, T 90 to 110                    -0.88 at T 100        +0.12     T 98.6   in time     
+in   CHECK bride_well            sea_at   fit    -  0.00 m, T 122 to 138                    -0.43 at T 130        -0.43     T 136.1  in time     
+in   CHECK fcastle_head          sea_at   report -  0.00 m, T 140 to 150                    -0.37 at T 145        -0.37     T 147.9  in time     
+out  CHECK lightoller_bridge     sea_at   fit    -  0.00 m, T 150 to 160                    -6.72 at T 155        -6.72     T 162.0  +2.0 min    
+out  CHECK founder               end      fit    -  T 160.00 +/- 4.00 min                     T 165.7                                  +1.7 min    
+in   CHECK break_onset           end      report -  T 155.00 to 159.70 min                    T 159.4                                  in time     
+in   CHECK hichens_list          angle    held   A  3.00 to 7.00 deg, T 5 to 10             0.64 at T 10          -2.36                          
+out  CHECK symons_list_85        angle    held   B  2.00 +/- 3.00 deg, T 85 to 90           -3.61 at T 85         -2.61                          
+out  CHECK halpern_list_100      angle    held   C  0.00 +/- 3.00 deg, T 100                -4.34 at T 100        -1.34                          
+in   CHECK rowe_list             angle    fit    A  -9.00 to -3.00 deg, T 120               -5.65 at T 120        0.00                           
+out  CHECK side_change           event    fit    A  T 85.00 to 110.00 min                     T 65.4                                   -19.6 min   
+out  CHECK halpern_list_130      angle    held   C  -10.00 +/- 3.00 deg, T 130              -2.01 at T 130        +4.99                          
+out  CHECK boat_d_waterline      sea_at   held   C  -3.05 m, T 140 to 145                   -6.92 at T 145        -3.87     T 158.4  +13.4 min   
+out  CHECK halpern_list_145      angle    report C  -15.00 +/- 3.00 deg, T 145              -7.83 at T 145        +4.17                          
+out  CHECK boxhall_mail_room     water_in held   -  -0.61 m, T 10 to 20                     -1.15 at T 20         -0.54     T 22.1   +2.1 min    
+out  CHECK carpenter_hold1       sounding held   -  2.13 m, T 5 to 15                       4.83 at T 10          +2.69     T 3.6    -1.4 min    
+in   CHECK barrett_br6           sounding held   -  2.44 to 4.27 m, T 5 to 15               3.28 at T 10          0.00      T 7.1    in time     
+in   CHECK br5_plates_dry        sounding held   -  0.30 m, T 60 to 90                      0.00 at T 60          -0.30     T 65.3   in time     
+out  CHECK br4_from_below        sounding held   -  0.30 m, T 95 to 100                     0.00 at T 95          -0.30     T 106.7  +6.7 min    
+out  CHECK weeks_halpern_tonnage tonnage  report -  13717 t, T 45                           12591 at T 45         -1126     T 51.6   +6.6 min    
+out  CHECK wilding_tonnage       tonnage  report -  16257 t, T 40                           11642 at T 40         -4615     T 69.9   +29.9 min   
+
+THE HELD-OUT ROWS (role held: printed before and after every refit, never fitted)
+in   CHECK hichens_list          angle    held   A  3.00 to 7.00 deg, T 5 to 10             0.64 at T 10          -2.36                          
+out  CHECK symons_list_85        angle    held   B  2.00 +/- 3.00 deg, T 85 to 90           -3.61 at T 85         -2.61                          
+out  CHECK halpern_list_100      angle    held   C  0.00 +/- 3.00 deg, T 100                -4.34 at T 100        -1.34                          
+out  CHECK halpern_list_130      angle    held   C  -10.00 +/- 3.00 deg, T 130              -2.01 at T 130        +4.99                          
+out  CHECK boat_d_waterline      sea_at   held   C  -3.05 m, T 140 to 145                   -6.92 at T 145        -3.87     T 158.4  +13.4 min   
+out  CHECK boxhall_mail_room     water_in held   -  -0.61 m, T 10 to 20                     -1.15 at T 20         -0.54     T 22.1   +2.1 min    
+out  CHECK carpenter_hold1       sounding held   -  2.13 m, T 5 to 15                       4.83 at T 10          +2.69     T 3.6    -1.4 min    
+in   CHECK barrett_br6           sounding held   -  2.44 to 4.27 m, T 5 to 15               3.28 at T 10          0.00      T 7.1    in time     
+in   CHECK br5_plates_dry        sounding held   -  0.30 m, T 60 to 90                      0.00 at T 60          -0.30     T 65.3   in time     
+out  CHECK br4_from_below        sounding held   -  0.30 m, T 95 to 100                     0.00 at T 95          -0.30     T 106.7  +6.7 min    
+  in range: 3 of 10
+
+THE REPORTED ROWS (role report: beside the record, never fitted)
+in   CHECK trim_at_touch         angle    report -  -0.20 +/- 0.30 deg, T 0                 -0.20 at T 0          0.00                           
+in   CHECK fcastle_head          sea_at   report -  0.00 m, T 140 to 150                    -0.37 at T 145        -0.37     T 147.9  in time     
+in   CHECK break_onset           end      report -  T 155.00 to 159.70 min                    T 159.4                                  in time     
+out  CHECK halpern_list_145      angle    report C  -15.00 +/- 3.00 deg, T 145              -7.83 at T 145        +4.17                          
+out  CHECK weeks_halpern_tonnage tonnage  report -  13717 t, T 45                           12591 at T 45         -1126     T 51.6   +6.6 min      (-8.2 %)
+out  CHECK wilding_tonnage       tonnage  report -  16257 t, T 40                           11642 at T 40         -4615     T 69.9   +29.9 min     (-28.4 %)
+
+THE SCORE'S GROUPS AS THEY WOULD READ IF THE LEDGER WERE THE SCORE (role fit; E-3's option 1). IT IS NOT: tools/calibrate.js reads OBS, and J is as it was
+  group                   family        rows                          verdict  term    or its lateness
+  symons_hatch1           fore and aft  symons_hatch1                 in       -       -6.2 min
+  robinson_mail_stairs    fore and aft  robinson_mail_stairs          in       -       in time
+  poingdestre_quarters    fore and aft  poingdestre_quarters          out      -       +8.5 min
+  wheat_stair_f           fore and aft  wheat_stair_f                 in       0.000   in time
+  symons_ports            fore and aft  symons_ports                  in       -       in time
+  bride_well              fore and aft  bride_well                    in       -       in time
+  lightoller_bridge       fore and aft  lightoller_bridge             out      -       +2.0 min
+  end                     the end       founder                       out      2.034   +1.7 min
+  list_rowe               the list      rowe_list                     in       0.000   0.00 deg
+  list_side               the list      side_change                   out      2.454   -19.6 min
+  groups: fore and aft 7, the end 1, the list 2 (today's score: 7 trim terms, 2 founders, 5 list terms, 3 events)
+  the terms that can be written today: fore and aft 0.000, the end 2.034, the list 2.454; the fore-and-aft rows wait for stage D's sigma and disc
+
+HER TRIM WHEN THE SEA REACHES EACH MARK, beside Halpern's trim for the same sighting (QC E, E-13: the hull and the decks against his waterline curves)
+  symons_hatch1         0.55 deg at T 8.8         Halpern 0.8 deg at T 15
+  robinson_mail_stairs  1.82 deg at T 28.9        Halpern 1.8 deg at T 30
+  poingdestre_quarters  2.79 deg at T 53.5        Halpern 2.6 deg at T 45
+  symons_ports          3.86 deg at T 98.6        Halpern 4.0 deg at T 100
+  bride_well            4.75 deg at T 136.1       Halpern 5.5 deg at T 130
+  lightoller_bridge     8.72 deg at T 162.0       Halpern 10.0 deg at T 155
+
+rows by kind: sea_at 8, water_in 1, sounding 4, angle 7, event 2, tonnage 2, end 2; by role: fit 10, held 10, report 6; groups: 24; list rows by band: A 3, B 1, C 4
+in range: 12 of 26 (fit 6 of 10)

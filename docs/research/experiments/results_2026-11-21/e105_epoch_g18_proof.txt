@@ -1,0 +1,6 @@
+e105 (the epoch, C2): the 1912 watch at rung 2's numbers, the area constant alpha x (1 + e); her founder, min after the touch
+  leadRule 0 (today: lost or not at the due instant): 156.61, 157.95, 157.92, 157.92, 157.94, 156.60, 157.94, 157.95, 157.94, 157.94, 156.61
+      the largest step from e = 0 within |e| <= 1e-6: 1.354 min; the spread over all eleven: 1.354 min
+  leadRule 1 (C2: judged by inflow): 157.93, 157.95, 157.92, 157.92, 157.94, 157.92, 157.94, 157.95, 157.94, 157.94, 157.94
+      the largest step from e = 0 within |e| <= 1e-6: 0.029 min; the spread over all eleven: 0.029 min
+(2026-11-21T11:09:02.757Z)

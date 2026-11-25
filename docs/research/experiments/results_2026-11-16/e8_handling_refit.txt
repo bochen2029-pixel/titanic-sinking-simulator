@@ -1,0 +1,45 @@
+e8: the handling against the consensus (RESEARCH_handling_consensus_v1, section 11), before and after M2
+
+A. P1'S FIT (the 37 s as a turn with the helm alone, kappa 0.5): uRk 1.600, cd 2.700, fA 0.518, kappa 0.5000, centre Cdw 0.250
+   OUT [fit] two points, 74 rpm, engines reversed with the helm  45.8 s                37 s (35-39)
+   in  [fit] tactical diameter at 20 kn                          1175 m                1,173 m (1,158-1,189)
+   in  [fit] crash stop from 60 rpm                              914 m                 914 m (853-945)
+   in  two points, 74 rpm, helm only                             36.8 s                30-37 s expected (sensitivity)
+   OUT distance in the two points (reversed / helm only)         448 / 387 m           366-402 m
+   in  advance at 20 kn from the order                           818 m                 700-885 m
+   OUT advance at 20 kn from the helm hard over                  716 m                 580-700 m
+   in  speed held in the steady turn, 20 kn                      0.65                  0.65-0.82
+   in  steady rate, 20 kn                                        0.69 deg/s            0.65-0.88
+   OUT circle at 11 kn (turbine out, as in service) / at 20 kn   1.36 (1598 m)         1.00-1.10
+   OUT two points at 11 kn, helm only                            84.0 s                60-80 s
+   in  crash stop: time to way off                               190 s                 180-210 s
+   in  crash stop: engines astern after / backing hard after     17 / 65 s             10-22 s / 40-70 s
+   OUT stop from 75 rpm (Olympic 1911, prompt reversal)          1203 m                no more than about 945 m
+   OUT stop from 30 rpm / from 60 rpm (half-speed ratio)         0.34                  0.75-0.90 (another ship)
+   OUT speed at Slow (30 rpm, turbine out)                       7.86 kn               8.2-9.2
+   OUT speed at Half (50 rpm, turbine in)                        14.77 kn              14.9-15.9
+   in  speed at 60 / 74 / 75 rpm                                 17.72 / 21.85 / 22.15 kn17.3-18.0 / 21.4-21.9 / 21.75-22.3
+
+B. REFIT WITH KAPPA HELD AT 0.5, 37 s WITH THE ENGINES REVERSED: no uRk and cd give both the 37 s and the trial circle
+
+C. M2'S FIT (core/motion.js now: tools/calibrate_motion.js, kappa fitted to the 11-kn circle): uRk 1.813, cd 2.428, fA 0.518, kappa 0.0458, centre Cdw 0.250
+   in  [fit] two points, 74 rpm, engines reversed with the helm  37.0 s                37 s (35-39)
+   in  [fit] tactical diameter at 20 kn                          1173 m                1,173 m (1,158-1,189)
+   in  [fit] crash stop from 60 rpm                              914 m                 914 m (853-945)
+   in  two points, 74 rpm, helm only                             35.0 s                30-37 s expected (sensitivity)
+   in  distance in the two points (reversed / helm only)         367 / 369 m           366-402 m
+   in  advance at 20 kn from the order                           782 m                 700-885 m
+   in  advance at 20 kn from the helm hard over                  680 m                 580-700 m
+   in  speed held in the steady turn, 20 kn                      0.68                  0.65-0.82
+   in  steady rate, 20 kn                                        0.68 deg/s            0.65-0.88
+   in  circle at 11 kn (turbine out, as in service) / at 20 kn   1.03 (1209 m)         1.00-1.10
+   in  two points at 11 kn, helm only                            68.5 s                60-80 s
+   in  crash stop: time to way off                               190 s                 180-210 s
+   in  crash stop: engines astern after / backing hard after     17 / 65 s             10-22 s / 40-70 s
+   OUT stop from 75 rpm (Olympic 1911, prompt reversal)          1203 m                no more than about 945 m
+   OUT stop from 30 rpm / from 60 rpm (half-speed ratio)         0.34                  0.75-0.90 (another ship)
+   OUT speed at Slow (30 rpm, turbine out)                       7.86 kn               8.2-9.2
+   OUT speed at Half (50 rpm, turbine in)                        14.77 kn              14.9-15.9
+   in  speed at 60 / 74 / 75 rpm                                 17.72 / 21.85 / 22.15 kn17.3-18.0 / 21.4-21.9 / 21.75-22.3
+
+Centre screw drag for Slow = 8.6 kn: not reachable with 0 <= Cdw <= 0.25 (with no drag at all: 8.02 kn): BACKLOG M3

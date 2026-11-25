@@ -1,0 +1,282 @@
+#### rung 1: G7 alone (calibrate.js 45 from join 6's numbers, launched before G11)
+e92 (G7 ladder) on C:\temp\titanic-wt-g7: area 0.8266 m2 (8.90 sq ft), {"wMul":1.1,"aDown":0.2544,"fOpen":0.02277,"g11":0}, ship {}
+  (2) the preset founders at T 157.03, the watch at T 157.84 (157 to 160)
+  (3) the moves against join 6: area 5.3 %, wMul 0 %, aDown -4 %, fOpen 4 % (each within half of D69's base: wMul 1.036, aDown 0.2815, fOpen 0.02068: 6 %, -10 %, 10 %)
+  (4) J (the preset) 6.71 (no more than 11.27); the watch's term 0.29
+  the forepeak on the watch: the tank (323 m3) full at T 23.2; water up its vent from T 23.4, 11.95 m3 by T 30; its own space at most 0.00 m3 by T 10
+  (1) the validation table (its verdicts against join 6's: the bulkheads-to-B-deck what-if among them):
+    Titanic 1912 (calibrated)                    FOUNDERS at 2h37m  trim 68.81°  list -80.21°  water 100531 t
+       floodwater reaches Wilding's 16,000 tons at 74.5 min (Wilding assumed 40)
+          48.8 min Centre propeller breaks the surface
+          55.9 min The bunker of the fire gives way: its water rushes into boiler room 5
+          56.1 min Water flows over bulkhead C at E deck
+          58.8 min Water flows over bulkhead D at E deck
+          64.0 min Water flows over bulkhead E at E deck
+          76.4 min Water flows over bulkhead F at E deck
+          95.3 min Second row of ports under the forecastle submerges
+          98.1 min Water flows over bulkhead B at D deck
+         100.4 min Water flows over bulkhead A at D deck
+         124.5 min Water flows over bulkhead G at E deck
+         127.0 min Forward well deck awash
+         138.0 min Forecastle head goes under
+         151.8 min The sea breaks in at the windows of B deck
+         153.0 min Water flows over bulkhead H at E deck
+         154.4 min The sea breaks in at the windows of A deck
+         154.4 min Water reaches the bridge
+         155.1 min The sea breaks in at the windows of the Boat deck's houses
+         155.5 min The sea breaks in at the forward grand staircase's Boat-deck entrance (port door)
+         155.6 min The dome over the forward grand staircase gives way
+         155.7 min Water flows over bulkhead J at E deck
+         155.7 min The sea breaks in at the forward grand staircase's Boat-deck entrance (starboard door)
+         156.2 min The sea breaks in at the aft grand staircase's A-deck entrance (port door)
+         156.2 min The dome over the aft grand staircase gives way
+         156.5 min The sea breaks in at the aft grand staircase's A-deck entrance (starboard door)
+         156.6 min Water flows over bulkhead K at D deck
+         156.6 min Water flows over bulkhead L at D deck
+         157.0 min Foundered
+    Four forward compartments (Wilding: floats)  afloat (checked to 8h00m)  trim 2.06°  list -0.00°  water 9031 t
+    Five forward compartments (Wilding: sinks)   FOUNDERS at 2h29m  trim 68.85°  list 4.49°  water 94948 t
+    Olympic-Hawke 1911 (returned to port)        afloat (checked to 8h00m)  trim -0.74°  list -0.00°  water 1907 t
+    Britannic 1916, approx. (sank in ~55 min)    FOUNDERS at 0h49m  trim 68.95°  list 80.21°  water 103198 t
+    Britannic, same damage, portholes shut       afloat (checked to 8h00m)  trim 8.01°  list 0.00°  water 35359 t
+    Titanic damage without the BR5 seam          FOUNDERS at 3h11m  trim 68.90°  list -80.21°  water 99245 t
+    Titanic damage stopping at hold 3            afloat (checked to 8h00m)  trim 2.06°  list -1.60°  water 9040 t
+    Titanic damage, all bulkheads to D deck      FOUNDERS at 2h44m  trim 68.85°  list -80.21°  water 99550 t
+    Titanic damage, all bulkheads to B deck      FOUNDERS at 5h16m  trim 68.83°  list -80.21°  water 95954 t
+    Titanic damage, watertight doors left open   FOUNDERS at 2h47m  trim 68.91°  list -10.32°  water 125643 t
+
+#### rung 2: G7 with G11's widths (calibrate.js 45 from rung 1)
+e92 (G7 ladder) on C:\temp\titanic-wt-g7: area 0.8286 m2 (8.92 sq ft), {"wMul":1.1,"aDown":0.256,"fOpen":0.0214,"g11":1}, ship {}
+  (2) the preset founders at T 157.13, the watch at T 157.95 (157 to 160)
+  (3) the moves against join 6: area 5.5 %, wMul 0 %, aDown -3 %, fOpen -2 % (each within half of D69's base: wMul 1.036, aDown 0.2815, fOpen 0.02068: 6 %, -9 %, 3 %)
+  (4) J (the preset) 6.67 (no more than 11.27); the watch's term 0.26
+  the forepeak on the watch: the tank (323 m3) full at T 23.2; water up its vent from T 23.4, 11.95 m3 by T 30; its own space at most 0.00 m3 by T 10
+  (1) the validation table (its verdicts against join 6's: the bulkheads-to-B-deck what-if among them):
+    Titanic 1912 (calibrated)                    FOUNDERS at 2h37m  trim 68.93°  list -80.21°  water 100534 t
+       floodwater reaches Wilding's 16,000 tons at 74.0 min (Wilding assumed 40)
+          48.6 min Centre propeller breaks the surface
+          55.8 min The bunker of the fire gives way: its water rushes into boiler room 5
+          56.0 min Water flows over bulkhead C at E deck
+          59.0 min Water flows over bulkhead D at E deck
+          63.8 min Water flows over bulkhead E at E deck
+          76.3 min Water flows over bulkhead F at E deck
+          95.2 min Second row of ports under the forecastle submerges
+          98.3 min Water flows over bulkhead B at D deck
+         101.4 min Water flows over bulkhead A at D deck
+         124.3 min Water flows over bulkhead G at E deck
+         126.7 min Forward well deck awash
+         137.7 min Forecastle head goes under
+         151.8 min The sea breaks in at the windows of B deck
+         153.2 min Water flows over bulkhead H at E deck
+         154.5 min The sea breaks in at the windows of A deck
+         154.5 min Water reaches the bridge
+         155.2 min The sea breaks in at the windows of the Boat deck's houses
+         155.6 min The sea breaks in at the forward grand staircase's Boat-deck entrance (port door)
+         155.7 min The dome over the forward grand staircase gives way
+         155.8 min The sea breaks in at the forward grand staircase's Boat-deck entrance (starboard door)
+         155.9 min Water flows over bulkhead J at E deck
+         156.3 min The sea breaks in at the aft grand staircase's A-deck entrance (port door)
+         156.3 min The dome over the aft grand staircase gives way
+         156.6 min The sea breaks in at the aft grand staircase's A-deck entrance (starboard door)
+         156.7 min Water flows over bulkhead K at D deck
+         156.7 min Water flows over bulkhead L at D deck
+         157.1 min Foundered
+    Four forward compartments (Wilding: floats)  afloat (checked to 8h00m)  trim 2.06°  list -0.00°  water 9031 t
+    Five forward compartments (Wilding: sinks)   FOUNDERS at 2h29m  trim 68.81°  list 3.98°  water 94953 t
+    Olympic-Hawke 1911 (returned to port)        afloat (checked to 8h00m)  trim -0.74°  list -0.00°  water 1907 t
+    Britannic 1916, approx. (sank in ~55 min)    FOUNDERS at 0h49m  trim 68.80°  list 80.21°  water 103119 t
+    Britannic, same damage, portholes shut       afloat (checked to 8h00m)  trim 8.01°  list 0.00°  water 35358 t
+    Titanic damage without the BR5 seam          FOUNDERS at 3h10m  trim 69.00°  list -80.21°  water 99226 t
+    Titanic damage stopping at hold 3            afloat (checked to 8h00m)  trim 2.06°  list -1.60°  water 9036 t
+    Titanic damage, all bulkheads to D deck      FOUNDERS at 2h45m  trim 68.89°  list -80.21°  water 99532 t
+    Titanic damage, all bulkheads to B deck      FOUNDERS at 5h17m  trim 68.79°  list -80.21°  water 95909 t
+    Titanic damage, watertight doors left open   FOUNDERS at 2h47m  trim 68.91°  list -10.25°  water 125647 t
+
+#### rung 0: join 6 (17712b2's numbers; no tank, G11's widths off), for the table
+e92 (G7 ladder) on C:\temp\titanic-wt-g7: area 0.7853 m2 (8.45 sq ft), {"wMul":1.1,"aDown":0.2647,"fOpen":0.02189,"g11":0}, ship {"peakTank":0}
+  (2) the preset founders at T 157.33, the watch at T 157.03 (157 to 160)
+  (3) the moves against join 6: area 0.0 %, wMul 0 %, aDown 0 %, fOpen 0 % (each within half of D69's base: wMul 1.036, aDown 0.2815, fOpen 0.02068: 6 %, -6 %, 6 %)
+  (4) J (the preset) 7.92 (no more than 11.27); the watch's term 0.55
+  the forepeak on the watch: no tank; its own space at most 143.28 m3 by T 10
+  (1) the validation table (its verdicts against join 6's: the bulkheads-to-B-deck what-if among them):
+    Titanic 1912 (calibrated)                    FOUNDERS at 2h37m  trim 68.90°  list -80.21°  water 100656 t
+       floodwater reaches Wilding's 16,000 tons at 74.0 min (Wilding assumed 40)
+          48.9 min Centre propeller breaks the surface
+          56.2 min The bunker of the fire gives way: its water rushes into boiler room 5
+          58.8 min Water flows over bulkhead C at E deck
+          61.1 min Water flows over bulkhead D at E deck
+          66.4 min Water flows over bulkhead E at E deck
+          79.5 min Water flows over bulkhead F at E deck
+          84.9 min Water flows over bulkhead A at D deck
+          87.5 min Water flows over bulkhead B at D deck
+          93.6 min Second row of ports under the forecastle submerges
+         111.1 min Water flows over bulkhead G at E deck
+         127.0 min Forward well deck awash
+         138.0 min Forecastle head goes under
+         152.1 min The sea breaks in at the windows of B deck
+         153.5 min Water flows over bulkhead H at E deck
+         154.7 min Water reaches the bridge
+         154.8 min The sea breaks in at the windows of A deck
+         155.4 min The sea breaks in at the windows of the Boat deck's houses
+         155.8 min The sea breaks in at the forward grand staircase's Boat-deck entrance (port door)
+         155.9 min The dome over the forward grand staircase gives way
+         156.0 min The sea breaks in at the forward grand staircase's Boat-deck entrance (starboard door)
+         156.1 min Water flows over bulkhead J at E deck
+         156.5 min The sea breaks in at the aft grand staircase's A-deck entrance (port door)
+         156.5 min The dome over the aft grand staircase gives way
+         156.8 min The sea breaks in at the aft grand staircase's A-deck entrance (starboard door)
+         156.9 min Water flows over bulkhead K at D deck
+         156.9 min Water flows over bulkhead L at D deck
+         157.3 min Foundered
+    Four forward compartments (Wilding: floats)  afloat (checked to 8h00m)  trim 2.04°  list 0.00°  water 8979 t
+    Five forward compartments (Wilding: sinks)   FOUNDERS at 2h14m  trim 68.99°  list 3.12°  water 96030 t
+    Olympic-Hawke 1911 (returned to port)        afloat (checked to 8h00m)  trim -0.74°  list -0.00°  water 1907 t
+    Britannic 1916, approx. (sank in ~55 min)    FOUNDERS at 0h49m  trim 68.85°  list 80.21°  water 102161 t
+    Britannic, same damage, portholes shut       afloat (checked to 8h00m)  trim 8.53°  list 0.00°  water 36555 t
+    Titanic damage without the BR5 seam          FOUNDERS at 3h08m  trim 68.78°  list -80.21°  water 99137 t
+    Titanic damage stopping at hold 3            afloat (checked to 8h00m)  trim 2.04°  list -1.61°  water 8977 t
+    Titanic damage, all bulkheads to D deck      FOUNDERS at 2h46m  trim 68.92°  list -80.21°  water 99933 t
+    Titanic damage, all bulkheads to B deck      afloat (checked to 8h00m)  trim 8.53°  list -1.06°  water 36573 t
+    Titanic damage, watertight doors left open   FOUNDERS at 2h51m  trim 69.00°  list -10.40°  water 125840 t
+
+#### rung 1a: G7 at join 6's numbers, before the refit (G11's widths off), for the table
+e92 (G7 ladder) on C:\temp\titanic-wt-g7: area 0.7853 m2 (8.45 sq ft), {"wMul":1.1,"aDown":0.2647,"fOpen":0.02189,"g11":0}, ship {}
+  (2) the preset founders at T 164.22, the watch at T 164.45 (157 to 160)
+  (3) the moves against join 6: area 0.0 %, wMul 0 %, aDown 0 %, fOpen 0 % (each within half of D69's base: wMul 1.036, aDown 0.2815, fOpen 0.02068: 6 %, -6 %, 6 %)
+  (4) J (the preset) 18.85 (no more than 11.27); the watch's term 1.24
+  the forepeak on the watch: the tank (323 m3) full at T 23.2; water up its vent from T 23.4, 11.95 m3 by T 30; its own space at most 0.00 m3 by T 10
+  (1) the validation table (its verdicts against join 6's: the bulkheads-to-B-deck what-if among them):
+    Titanic 1912 (calibrated)                    FOUNDERS at 2h44m  trim 68.92°  list -80.21°  water 100584 t
+       floodwater reaches Wilding's 16,000 tons at 78.0 min (Wilding assumed 40)
+          51.3 min Centre propeller breaks the surface
+          58.8 min The bunker of the fire gives way: its water rushes into boiler room 5
+          59.0 min Water flows over bulkhead C at E deck
+          62.1 min Water flows over bulkhead D at E deck
+          67.3 min Water flows over bulkhead E at E deck
+          80.3 min Water flows over bulkhead F at E deck
+         100.3 min Second row of ports under the forecastle submerges
+         103.3 min Water flows over bulkhead B at D deck
+         105.8 min Water flows over bulkhead A at D deck
+         130.2 min Water flows over bulkhead G at E deck
+         133.1 min Forward well deck awash
+         144.6 min Forecastle head goes under
+         159.0 min The sea breaks in at the windows of B deck
+         160.4 min Water flows over bulkhead H at E deck
+         161.6 min Water reaches the bridge
+         161.7 min The sea breaks in at the windows of A deck
+         162.3 min The sea breaks in at the windows of the Boat deck's houses
+         162.7 min The sea breaks in at the forward grand staircase's Boat-deck entrance (port door)
+         162.8 min The dome over the forward grand staircase gives way
+         162.9 min The sea breaks in at the forward grand staircase's Boat-deck entrance (starboard door)
+         163.0 min Water flows over bulkhead J at E deck
+         163.4 min The sea breaks in at the aft grand staircase's A-deck entrance (port door)
+         163.4 min The dome over the aft grand staircase gives way
+         163.7 min The sea breaks in at the aft grand staircase's A-deck entrance (starboard door)
+         163.8 min Water flows over bulkhead K at D deck
+         163.8 min Water flows over bulkhead L at D deck
+         164.2 min Foundered
+    Four forward compartments (Wilding: floats)  afloat (checked to 8h00m)  trim 2.06°  list -0.00°  water 9031 t
+    Five forward compartments (Wilding: sinks)   FOUNDERS at 2h28m  trim 68.80°  list 4.09°  water 94743 t
+    Olympic-Hawke 1911 (returned to port)        afloat (checked to 8h00m)  trim -0.74°  list -0.00°  water 1907 t
+    Britannic 1916, approx. (sank in ~55 min)    FOUNDERS at 0h49m  trim 68.93°  list 80.21°  water 103337 t
+    Britannic, same damage, portholes shut       afloat (checked to 8h00m)  trim 8.01°  list 0.00°  water 35366 t
+    Titanic damage without the BR5 seam          FOUNDERS at 3h19m  trim 68.88°  list -80.21°  water 98903 t
+    Titanic damage stopping at hold 3            afloat (checked to 8h00m)  trim 2.06°  list -1.60°  water 9036 t
+    Titanic damage, all bulkheads to D deck      FOUNDERS at 2h52m  trim 68.79°  list -80.21°  water 99571 t
+    Titanic damage, all bulkheads to B deck      FOUNDERS at 5h31m  trim 68.93°  list -80.21°  water 96064 t
+    Titanic damage, watertight doors left open   FOUNDERS at 2h58m  trim 68.83°  list -9.59°  water 126786 t
+
+#### rung
+e92 (G7 ladder) on C:\temp\titanic-wt-g7: area 0.8207 m2 (8.83 sq ft), {"wMul":1.1,"aDown":0.2786,"fOpen":0.02087,"g11":1}, ship {}
+  (2) the preset founders at T 158.09, the watch at T 158.78 as it is and T 156.96 with no pumps led through the main (G18; 157 to 160 for all three)
+  (3) the moves against join 6: area 4.5 %, wMul 0 %, aDown 5 %, fOpen -5 % (each within half of D69's base: wMul 1.036, aDown 0.2815, fOpen 0.02068: 6 %, -1 %, 1 %)
+  (4) J (the preset) 8.02 (no more than 11.27); the watch's term 0.58 (on the never-led branch, G18)
+  the forepeak on the watch: the tank (323 m3) full at T 22.0; water up its vent from T 22.3, 14.46 m3 by T 30; its own space at most 0.00 m3 by T 10
+  (1) the validation table (its verdicts against join 6's: the bulkheads-to-B-deck what-if among them):
+    Titanic 1912 (calibrated)                    FOUNDERS at 2h38m  trim 68.81°  list -80.21°  water 100460 t
+       floodwater reaches Wilding's 16,000 tons at 75.0 min (Wilding assumed 40)
+          49.1 min Centre propeller breaks the surface
+          56.3 min The bunker of the fire gives way: its water rushes into boiler room 5
+          56.5 min Water flows over bulkhead C at E deck
+          59.7 min Water flows over bulkhead D at E deck
+          64.6 min Water flows over bulkhead E at E deck
+          77.1 min Water flows over bulkhead F at E deck
+          96.1 min Second row of ports under the forecastle submerges
+          99.3 min Water flows over bulkhead B at D deck
+         100.9 min Water flows over bulkhead A at D deck
+         125.0 min Water flows over bulkhead G at E deck
+         127.4 min Forward well deck awash
+         138.5 min Forecastle head goes under
+         152.9 min The sea breaks in at the windows of B deck
+         154.4 min Water flows over bulkhead H at E deck
+         155.5 min Water reaches the bridge
+         155.5 min The sea breaks in at the windows of A deck
+         156.2 min The sea breaks in at the windows of the Boat deck's houses
+         156.6 min The sea breaks in at the forward grand staircase's Boat-deck entrance (port door)
+         156.7 min The dome over the forward grand staircase gives way
+         156.8 min The sea breaks in at the forward grand staircase's Boat-deck entrance (starboard door)
+         157.0 min Water flows over bulkhead J at E deck
+         157.3 min The sea breaks in at the aft grand staircase's A-deck entrance (port door)
+         157.3 min The dome over the aft grand staircase gives way
+         157.6 min The sea breaks in at the aft grand staircase's A-deck entrance (starboard door)
+         157.7 min Water flows over bulkhead K at D deck
+         157.7 min Water flows over bulkhead L at D deck
+         158.1 min Foundered
+    Four forward compartments (Wilding: floats)  afloat (checked to 8h00m)  trim 2.06°  list -0.00°  water 9031 t
+    Five forward compartments (Wilding: sinks)   FOUNDERS at 2h28m  trim 68.99°  list 4.04°  water 95017 t
+    Olympic-Hawke 1911 (returned to port)        afloat (checked to 8h00m)  trim -0.74°  list -0.00°  water 1907 t
+    Britannic 1916, approx. (sank in ~55 min)    FOUNDERS at 0h49m  trim 68.94°  list 80.21°  water 103547 t
+    Britannic, same damage, portholes shut       afloat (checked to 8h00m)  trim 8.01°  list 0.00°  water 35357 t
+    Titanic damage without the BR5 seam          FOUNDERS at 3h11m  trim 69.00°  list -80.21°  water 98957 t
+    Titanic damage stopping at hold 3            afloat (checked to 8h00m)  trim 2.06°  list -1.60°  water 9033 t
+    Titanic damage, all bulkheads to D deck      FOUNDERS at 2h46m  trim 68.88°  list -80.21°  water 99695 t
+    Titanic damage, all bulkheads to B deck      FOUNDERS at 5h20m  trim 68.83°  list -80.21°  water 96106 t
+    Titanic damage, watertight doors left open   FOUNDERS at 2h49m  trim 69.05°  list -9.91°  water 126258 t
+
+#### rung
+e92 (G7 ladder) on C:\temp\titanic-wt-g7: area 0.8196 m2 (8.82 sq ft), {"wMul":1.1,"aDown":0.2786,"fOpen":0.02087,"g11":1}, ship {}
+  (2) the preset founders at T 158.28, the watch at T 158.96 as it is and T 157.16 with no pumps led through the main (G18; 157 to 160 for all three)
+  (3) the moves against join 6: area 4.4 %, wMul 0 %, aDown 5 %, fOpen -5 % (each within half of D69's base: wMul 1.036, aDown 0.2815, fOpen 0.02068: 6 %, -1 %, 1 %)
+  (4) J (the preset) 8.23 (no more than 11.27); the watch's term 0.50 (on the never-led branch, G18)
+  the forepeak on the watch: the tank (323 m3) full at T 22.1; water up its vent from T 22.3, 14.40 m3 by T 30; its own space at most 0.00 m3 by T 10
+  (1) the validation table (its verdicts against join 6's: the bulkheads-to-B-deck what-if among them):
+    Titanic 1912 (calibrated)                    FOUNDERS at 2h38m  trim 68.84°  list -80.21°  water 100484 t
+       floodwater reaches Wilding's 16,000 tons at 75.0 min (Wilding assumed 40)
+          49.2 min Centre propeller breaks the surface
+          56.3 min The bunker of the fire gives way: its water rushes into boiler room 5
+          56.5 min Water flows over bulkhead C at E deck
+          59.4 min Water flows over bulkhead D at E deck
+          64.7 min Water flows over bulkhead E at E deck
+          77.2 min Water flows over bulkhead F at E deck
+          96.3 min Second row of ports under the forecastle submerges
+          99.7 min Water flows over bulkhead B at D deck
+         100.3 min Water flows over bulkhead A at D deck
+         125.1 min Water flows over bulkhead G at E deck
+         127.6 min Forward well deck awash
+         138.7 min Forecastle head goes under
+         153.1 min The sea breaks in at the windows of B deck
+         154.6 min Water flows over bulkhead H at E deck
+         155.7 min Water reaches the bridge
+         155.7 min The sea breaks in at the windows of A deck
+         156.4 min The sea breaks in at the windows of the Boat deck's houses
+         156.8 min The sea breaks in at the forward grand staircase's Boat-deck entrance (port door)
+         156.9 min The dome over the forward grand staircase gives way
+         157.0 min The sea breaks in at the forward grand staircase's Boat-deck entrance (starboard door)
+         157.1 min Water flows over bulkhead J at E deck
+         157.5 min The sea breaks in at the aft grand staircase's A-deck entrance (port door)
+         157.5 min The dome over the aft grand staircase gives way
+         157.8 min The sea breaks in at the aft grand staircase's A-deck entrance (starboard door)
+         157.9 min Water flows over bulkhead K at D deck
+         157.9 min Water flows over bulkhead L at D deck
+         158.3 min Foundered
+    Four forward compartments (Wilding: floats)  afloat (checked to 8h00m)  trim 2.06°  list -0.00°  water 9031 t
+    Five forward compartments (Wilding: sinks)   FOUNDERS at 2h28m  trim 68.99°  list 4.04°  water 95017 t
+    Olympic-Hawke 1911 (returned to port)        afloat (checked to 8h00m)  trim -0.74°  list -0.00°  water 1907 t
+    Britannic 1916, approx. (sank in ~55 min)    FOUNDERS at 0h49m  trim 68.94°  list 80.21°  water 103547 t
+    Britannic, same damage, portholes shut       afloat (checked to 8h00m)  trim 8.01°  list 0.00°  water 35357 t
+    Titanic damage without the BR5 seam          FOUNDERS at 3h11m  trim 68.80°  list -80.21°  water 98829 t
+    Titanic damage stopping at hold 3            afloat (checked to 8h00m)  trim 2.06°  list -1.60°  water 9035 t
+    Titanic damage, all bulkheads to D deck      FOUNDERS at 2h46m  trim 68.79°  list -80.21°  water 99644 t
+    Titanic damage, all bulkheads to B deck      FOUNDERS at 5h20m  trim 68.79°  list -80.21°  water 96061 t
+    Titanic damage, watertight doors left open   FOUNDERS at 2h50m  trim 69.07°  list -9.89°  water 126288 t
+

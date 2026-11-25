@@ -1,0 +1,34 @@
+#### main 4bf604e (run on C:\temp\titanic-wt-g6b-notes, 2026-11-20, both runs ending at 19:08 CST by the clock), the flow numbers as calibrated
+e87 on C:\temp\titanic-wt-g6b-notes, flow numbers {} (minutes after the touch; depths over the tank top)
+== the 1912 watch (the encounter's split)
+   forepeak      14 ft above the keel at T 3.0; at T 10 27.7 ft over the floor (the floor 0.0 ft above the keel)
+   hold 1        7 ft at T 3.1; 14 ft above the keel at T 4.0; at T 10 17.7 ft over the floor (the floor 5.3 ft above the keel)
+   hold 2        14 ft above the keel at T 4.5; at T 10 11.0 ft over the floor (the floor 5.3 ft above the keel)
+   hold 3        14 ft above the keel at T 5.7; at T 10 10.7 ft over the floor (the floor 5.3 ft above the keel)
+   boiler room 6 8 ft at T 10.0; 10 ft at T 12.5; 10.5 ft at T 13.2; 11 ft at T 13.9; 14 ft at T 18.2; 14 ft above the keel at T 10.9; at T 10 8.1 ft over the floor (the floor 5.3 ft above the keel)
+== the 1912 damage preset (Hackett and Bedford's split)
+   forepeak      14 ft above the keel at T 7.0; at T 10 17.7 ft over the floor (the floor 0.0 ft above the keel)
+   hold 1        7 ft at T 4.3; 14 ft above the keel at T 5.6; at T 10 13.8 ft over the floor (the floor 5.3 ft above the keel)
+   hold 2        14 ft above the keel at T 3.9; at T 10 11.9 ft over the floor (the floor 5.3 ft above the keel)
+   hold 3        14 ft above the keel at T 4.5; at T 10 10.5 ft over the floor (the floor 5.3 ft above the keel)
+   boiler room 6 8 ft at T 6.5; 10 ft at T 8.5; 10.5 ft at T 8.9; 11 ft at T 9.4; 14 ft at T 12.7; 14 ft above the keel at T 7.2; at T 10 11.5 ft over the floor (the floor 5.3 ft above the keel)
+   the record: boiler room 6, 8 ft above the plates at about T 10 (with the plates 0, 2, 2.5, 3 or 6 ft up: 8, 10,
+   10.5, 11 or 14 ft over the floor); hold 1, 7 ft at about T 10; the Report, 14 ft above the keel at about T 10
+
+#### wt/split: G6 and W6 on 4bf604e (run on C:\temp\titanic-wt-split), the flow numbers as calibrated (the first 25 minutes hardly depend on them)
+e87 on C:\temp\titanic-wt-split, flow numbers {} (minutes after the touch; depths over the tank top)
+== the 1912 watch (the encounter's split)
+   forepeak      14 ft above the keel at T 2.8; at T 10 28.5 ft over the floor (the floor 0.0 ft above the keel)
+   hold 1        7 ft at T 2.9; 14 ft above the keel at T 3.8; at T 10 18.5 ft over the floor (the floor 5.3 ft above the keel)
+   hold 2        14 ft above the keel at T 4.2; at T 10 11.6 ft over the floor (the floor 5.3 ft above the keel)
+   hold 3        14 ft above the keel at T 5.4; at T 10 10.6 ft over the floor (the floor 5.3 ft above the keel)
+   boiler room 6 8 ft at T 9.3; 10 ft at T 11.7; 10.5 ft at T 12.4; 11 ft at T 13.1; 14 ft at T 17.1; 14 ft above the keel at T 10.2; at T 10 8.6 ft over the floor (the floor 5.3 ft above the keel)
+== the 1912 damage preset (Hackett and Bedford's split)
+   forepeak      14 ft above the keel at T 7.0; at T 10 17.7 ft over the floor (the floor 0.0 ft above the keel)
+   hold 1        7 ft at T 4.3; 14 ft above the keel at T 5.6; at T 10 13.9 ft over the floor (the floor 5.3 ft above the keel)
+   hold 2        14 ft above the keel at T 4.0; at T 10 11.9 ft over the floor (the floor 5.3 ft above the keel)
+   hold 3        14 ft above the keel at T 4.6; at T 10 10.6 ft over the floor (the floor 5.3 ft above the keel)
+   boiler room 6 8 ft at T 6.5; 10 ft at T 8.4; 10.5 ft at T 8.9; 11 ft at T 9.4; 14 ft at T 12.6; 14 ft above the keel at T 7.2; at T 10 11.6 ft over the floor (the floor 5.3 ft above the keel)
+   the record: boiler room 6, 8 ft above the plates at about T 10 (with the plates 0, 2, 2.5, 3 or 6 ft up: 8, 10,
+   10.5, 11 or 14 ft over the floor); hold 1, 7 ft at about T 10; the Report, 14 ft above the keel at about T 10
+

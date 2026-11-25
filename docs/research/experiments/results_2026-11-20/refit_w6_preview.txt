@@ -1,0 +1,66 @@
+W6's refit, previewed (not adopted): node tools/calibrate.js 45 "[0.7506,1.036,0.2815,0.02068]" --fix-area on wt/w6 (1563f01), 18:00 to 18:03 CST
+area held at 0.7506
+#1 J=26.96 area=0.751 wMul=1.04 aDown=0.281 fOpen=0.0207 Tf=167.0
+#3 J=26.79 area=0.751 wMul=1.89 aDown=0.281 fOpen=0.0207 Tf=166.9
+#4 J=22.41 area=0.751 wMul=1.04 aDown=0.513 fOpen=0.0207 Tf=164.8
+#5 J=16.74 area=0.751 wMul=1.04 aDown=0.281 fOpen=0.0460 Tf=161.1
+#7 J=15.69 area=0.751 wMul=1.62 aDown=0.441 fOpen=0.0377 Tf=160.7
+#8 J=12.94 area=0.751 wMul=2.03 aDown=0.553 fOpen=0.0509 Tf=158.0
+#9 J=12.62 area=0.751 wMul=0.926 aDown=0.619 fOpen=0.0591 Tf=156.6
+#28 J=12.13 area=0.751 wMul=1.42 aDown=0.665 fOpen=0.0555 Tf=156.6
+#32 J=12.13 area=0.751 wMul=1.29 aDown=0.528 fOpen=0.0625 Tf=156.6
+#39 J=11.67 area=0.751 wMul=1.83 aDown=0.568 fOpen=0.0597 Tf=156.8
+#45 J=11.58 area=0.751 wMul=1.83 aDown=0.472 fOpen=0.0614 Tf=157.0
+#61 J=11.58 area=0.751 wMul=1.52 aDown=0.444 fOpen=0.0628 Tf=157.0
+#62 J=11.51 area=0.751 wMul=1.43 aDown=0.402 fOpen=0.0651 Tf=157.1
+#75 J=11.49 area=0.751 wMul=1.40 aDown=0.378 fOpen=0.0655 Tf=157.1
+#80 J=11.48 area=0.751 wMul=1.37 aDown=0.376 fOpen=0.0662 Tf=157.1
+#89 J=11.46 area=0.751 wMul=1.41 aDown=0.380 fOpen=0.0658 Tf=157.1
+
+BEST {"area":0.7506,"params":{"wMul":1.406,"aDown":0.3803,"fOpen":0.06582}}
+trim            15 obs    0.8 model    0.79
+trim            30 obs    1.8 model    1.60
+trim            45 obs    2.6 model    2.28
+trim            75 obs    3.2 model    3.32
+trim           100 obs      4 model    3.91
+trim           130 obs    5.5 model    4.66
+trim           155 obs     10 model    9.76
+founder          - obs    160 model  157.07
+list            10 obs      5 model   -0.74
+list            85 obs      2 model   -3.22
+list           100 obs      0 model   -4.49
+list           130 obs    -10 model   -2.28
+list           145 obs    -15 model   -3.96
+event:well       - obs    130 model  134.49
+event:bridge     - obs    155 model  154.56
+event:overF      - obs     75 model   78.17
+J 11.460
+evals 93
+
+
+The validation table with those numbers (tools/validate.js on a scratch copy of wt/w6's core with wMul 1.406, aDown 0.3803, fOpen 0.06582), 18:05 CST:
+Titanic 1912 (calibrated)                    FOUNDERS at 2h37m  trim 68.80°  list -80.21°  water 103143 t
+   floodwater reaches Wilding's 16,000 tons at 77.0 min (Wilding assumed 40)
+Four forward compartments (Wilding: floats)  afloat (checked to 8h00m)  trim 2.04°  list 0.00°  water 8979 t
+Five forward compartments (Wilding: sinks)   FOUNDERS at 2h04m  trim 68.95°  list 7.66°  water 96462 t
+Olympic-Hawke 1911 (returned to port)        afloat (checked to 8h00m)  trim -0.74°  list -0.00°  water 1907 t
+Britannic 1916, approx. (sank in ~55 min)    FOUNDERS at 0h47m  trim 68.96°  list 80.21°  water 104755 t
+Britannic, same damage, portholes shut       afloat (checked to 8h00m)  trim 8.53°  list 0.00°  water 36556 t
+Titanic damage without the BR5 seam          FOUNDERS at 2h56m  trim 68.82°  list -80.21°  water 102118 t
+Titanic damage stopping at hold 3            afloat (checked to 8h00m)  trim 2.04°  list -1.61°  water 8980 t
+Titanic damage, all bulkheads to D deck      FOUNDERS at 2h53m  trim 68.85°  list -80.21°  water 102981 t
+Titanic damage, all bulkheads to B deck      afloat (checked to 8h00m)  trim 8.53°  list -1.09°  water 36589 t
+Titanic damage, watertight doors left open   FOUNDERS at 2h49m  trim 68.83°  list -11.86°  water 127777 t
+
+Before W6 (out/validate.txt at 0f3f4d1):
+Titanic 1912 (calibrated)                    FOUNDERS at 2h37m  trim 68.85°  list -80.21°  water 100415 t
+Four forward compartments (Wilding: floats)  afloat (checked to 8h00m)  trim 2.04°  list 0.00°  water 8979 t
+Five forward compartments (Wilding: sinks)   FOUNDERS at 2h13m  trim 68.95°  list 2.72°  water 96127 t
+Olympic-Hawke 1911 (returned to port)        afloat (checked to 8h00m)  trim -0.74°  list -0.00°  water 1907 t
+Britannic 1916, approx. (sank in ~55 min)    FOUNDERS at 0h49m  trim 68.82°  list 80.21°  water 102310 t
+Britannic, same damage, portholes shut       afloat (checked to 8h00m)  trim 8.53°  list 0.00°  water 36556 t
+Titanic damage without the BR5 seam          FOUNDERS at 3h08m  trim 69.00°  list -80.21°  water 98940 t
+Titanic damage stopping at hold 3            afloat (checked to 8h00m)  trim 2.04°  list -1.61°  water 8980 t
+Titanic damage, all bulkheads to D deck      FOUNDERS at 2h49m  trim 68.89°  list -80.21°  water 99901 t
+Titanic damage, all bulkheads to B deck      afloat (checked to 8h00m)  trim 8.53°  list -1.05°  water 36577 t
+Titanic damage, watertight doors left open   FOUNDERS at 2h58m  trim 68.84°  list -9.35°  water 127192 t

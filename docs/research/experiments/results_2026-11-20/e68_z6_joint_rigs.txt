@@ -1,0 +1,38 @@
+e68: Z6's joint on rigid bodies, against closed forms (the design v1.1, sections 1 and 5)
+
+A. two prisms pinned (2.0e7 and 3.0e7 kg; 120 and 150 m), tumbling in empty space, the hinge held; 4000 sub-steps of 1/64 s
+PASS MUST  A1 linear momentum: the joint's impulses equal and opposite                                      drift 4.99e-15 of |P| (first step 2.58e-16)                      to rounding (1e-12)
+PASS MUST  A2 the locked freedoms after the projection: the pin's gap, the relative roll and yaw            2.98e-14 m; 8.42e-17 rad                                         under 1e-9
+PASS MUST  A3 theta held (no moment asked of the hinge passes its M)                                        1.11e-16 rad                                                     under 1e-9
+PASS CHECK A4 angular momentum about the origin (the scheme is first order: the drift is the integrator's, not the joint's) 6.31e-6 of |L| over 62.5 s                                       small; halves with the sub-step
+PASS MUST  A5 twenty solves with random symmetric positive 6 x 6 inverse masses (couplings as an added mass has): the six rows met the worst row 3.92e-14 of the velocities                         to rounding (1e-12)
+
+B. a prism (40 m, 2.0e6 kg, net weight 0.2 m g) hung by a hinge from a fixed one, horizontal at rest; the demand at theta 0 is W' L/2 = 78.480 MN m
+PASS MUST  B1 M = 1.1 x the demand: the hinge holds                                                         theta 0 rad after 10 s; yielded on 0 sub-steps                   0 (under 1e-9)
+PASS MUST  B2 M = 0.6 x the demand: it turns and stops where W' (L/2) sin(theta) = M theta (rest to rest, no drag), and stays h 1/64: 1.65931, h 1/256: 1.65985, h 1/1024: 1.65999 rad         1.66003 rad; the error falls with h (1/1024 within 1e-3)
+PASS MUST  B3   it never turns back (theta never decreases), though past the vertical its weight asks it to close the most it went back: 0 rad                                     0
+PASS CHECK B4   the energy identity until it stops: the work of its weight = the tear's work + its kinetic energy h 1/64: 4.99e-4, h 1/256: 1.25e-4, h 1/1024: 3.12e-5 of W' L/2   falls with h (the scheme's, first order)
+PASS MUST  B2 M = 0.9 x the demand: it turns and stops where W' (L/2) sin(theta) = M theta (rest to rest, no drag), and stays h 1/64: 0.78663, h 1/256: 0.78667, h 1/1024: 0.78668 rad         0.78668 rad; the error falls with h (1/1024 within 1e-3)
+PASS MUST  B3   it never turns back (theta never decreases), though past the vertical its weight asks it to close the most it went back: 0 rad                                     0
+PASS CHECK B4   the energy identity until it stops: the work of its weight = the tear's work + its kinetic energy h 1/64: 3.80e-5, h 1/256: 9.50e-6, h 1/1024: 2.37e-6 of W' L/2   falls with h (the scheme's, first order)
+
+C. the same prism with a falling M(theta) = M0 (1 - theta / 0.3), floor 0
+PASS MUST  C1 M0 = 1.02 x the demand: it holds                                                              theta 0 rad; yielded on 0 sub-steps                              0
+PASS MUST  C2 M0 = 0.98 x the demand: it opens past the peak, swings past the vertical, and never closes: it stops at its furthest angle theta 2.9715 rad at 20 s (furthest 2.9715); the most it went back 0 theta = its furthest; never back
+PASS CHECK C3   the energy identity with the tear's work W = the integral of M over theta, until it first stops h 1/64: 5.09e-3, h 1/256: 1.28e-3, h 1/1024: 3.20e-4 of W' L/2   falls with h
+
+E. the elastic-plastic hinge: the same prism, the hinge holding the demand at the hand-over (M0 = W' L/2); below its
+   furthest angle the ligament's line, ku = W' L/2 a degree (B1+B2's order: about a degree of spring-back from the tear's
+   top); before it yields, the intact section's, k0 = 50 ku
+PASS MUST  E1 backbone 1.1 x the demand: it holds, at rest from the hand-over (no transient)                theta 0 rad, the most 0 rad after 10 s; yielded false            under 1e-6 rad; not yielded
+PASS MUST  E2 backbone 0.6 x the demand: its furthest angle is the energy balance's, as the rigid hinge's (no elastic energy is stored on the backbone) h 1/256: 1.65985, h 1/1024: 1.65999 rad                          1.66003 rad, within 1e-3
+PASS MUST  E3   then it springs back on the ligament's line and swings there: theta between its furthest and that less 2 (M - demand) / ku; the furthest never decreases swings 1.63635 to 1.65999 rad (1.355 deg); the furthest never decreased 1.63598 to 1.66003 rad (1.378 deg), within 5 %
+PASS CHECK E4   the energy identity throughout, with the hinge's own work (its plastic work and its elastic returns) h 1/256: 1.41e-4, h 1/1024: 3.53e-5 of W' L/2                    falls with h
+PASS MUST  E5 a falling backbone (C's): it opens, swings, and at its furthest springs back by the ligament's line only: the torn part never mends furthest 2.9937 rad (never decreased); swings back to 2.9593 (1.973 deg) back by at most 2 demand / ku = 1.978 deg (+5 %)
+
+D. the release: a held joint (the bow pinned to a fixed stern, M huge), no weight; a pull at the bow's middle rising in time
+PASS MUST  D1 a pull along her rising 10 MN a second against Nt 227 MN (the as-built ligament's, B1+B2): the release on the first sub-step where N passes Nt sub-step 1453 (t 22.7031 s), by tension, N/Nt 1.000138           sub-step 1453: the first with 227.031 MN > 227
+PASS MUST  D2 a pull across her (up) rising 1 MN a second against Vs 20.34 MN (the as-built double bottom's): the release on the first sub-step where |V| passes Vs sub-step 1302 (t 20.3438 s), by shear, |V|/Vs 1.000184           sub-step 1302: the first with 20.3438 MN > 20.34
+PASS MUST  D3 the margin printed on the way: the largest N/Nt and |V|/Vs while held                         N/Nt 0.999449 (tension run); |V|/Vs 0.999416 (shear run)         just under 1 at the sub-step before the release
+
+PASS: every MUST row

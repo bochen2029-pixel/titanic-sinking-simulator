@@ -1,0 +1,23 @@
+e10: the 1912 watch on courses 266 + (0, 0.13, 0.37, 0.61, 0.89, 1.27, 45.3) degrees; opened area at the current ICE.alpha
+
+1. THE OUTLINE: node counts, the berg still (stations every metre)
+   {"nodes":180,"turns":false,"ds":1}            spread  69.1 % of 0.475 m2 | 0.486 0.574 0.480 0.386 0.399 0.336 0.664
+   {"nodes":720,"turns":false,"ds":1}            spread  56.9 % of 0.893 m2 | 1.137 0.762 0.630 1.071 0.981 0.833 0.837
+   {"nodes":1440,"turns":false,"ds":1}           spread  41.7 % of 0.668 m2 | 0.546 0.824 0.636 0.603 0.644 0.808 0.612
+   {"nodes":2880,"turns":false,"ds":1}           spread  30.0 % of 0.636 m2 | 0.767 0.649 0.646 0.582 0.591 0.576 0.642
+
+2. CHAOS OR DISCRETENESS: the same course nudged (nodes 1440, stations every metre)
+   the berg still,  nudge 0      deg: 0.54593 m2, x 127..31
+   the berg still,  nudge 1e-9   deg: 0.54593 m2, x 127..31
+   the berg still,  nudge 0.000001 deg: 0.54593 m2, x 127..31
+   the berg still,  nudge 0.001  deg: 0.54671 m2, x 127..31
+   the berg turns,  nudge 0      deg: 0.57548 m2, x 127..18
+   the berg turns,  nudge 1e-9   deg: 0.57548 m2, x 127..18
+   the berg turns,  nudge 0.000001 deg: 0.57548 m2, x 127..18
+   the berg turns,  nudge 0.001  deg: 0.77519 m2, x 127..21
+
+3. FINER STATIONS (each carries ds metres of force, contact and opening)
+   {"ds":0.5,"nodes":2880,"turns":false}         spread  28.6 % of 0.280 m2 | 0.330 0.274 0.250 0.268 0.285 0.291 0.261
+   {"ds":0.25,"nodes":2880,"turns":false}        spread  23.2 % of 0.269 m2 | 0.269 0.304 0.242 0.267 0.262 0.251 0.291
+   {"ds":0.25,"nodes":5760,"turns":false}        spread  29.8 % of 0.282 m2 | 0.259 0.251 0.255 0.267 0.323 0.335 0.282
+   {"ds":0.25,"nodes":2880,"turns":true}         spread  49.2 % of 0.312 m2 | 0.279 0.301 0.382 0.343 0.244 0.394 0.241 | berg turned 8.3 deg

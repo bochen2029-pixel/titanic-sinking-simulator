@@ -1,0 +1,11 @@
+  as reconstructed                      holed           stbd x 123.125..51.625                            0.98 m2 seams   276 dents FP H1 H2 H3 BR6 BR5                 founders at 158 min
+  helm 5 s sooner                       holed           stbd x -82.25..-101                               0.23 m2 seams   244 dents EL T1                               afloat at 8 h
+  helm 10 s sooner                      miss by 21.7 m                                                    0.00 m2 seams   0 dents                                       no damage
+  helm 5 s later                        holed           bow crushed 13 m, stbd x 125.75..115.5            0.06 m2 seams   16 dents  FP H1                               afloat at 8 h
+  helm 10 s later                       holed           bow crushed 20 m, stbd x 120..108.25              0.06 m2 seams   60 dents  FP H1                               afloat at 8 h
+  no helm order: straight on            holed           bow crushed 22 m, port x 123.5..107               0.10 m2 seams   40 dents  FP H1                               afloat at 8 h
+  helm held, no port-around             holed           stbd x 123.125..-33.375                           1.05 m2 seams   410 dents FP H1 H2 H3 BR6 BR5 BR2 BR1 RE      founders at 154 min
+  engines stopped with the helm order   holed           stbd x 125.625..71                                0.19 m2 seams   585 dents FP H1 H3                            afloat at 8 h
+  turned to starboard instead           holed           port x 5.875..-33.5                               0.57 m2 seams   55 dents  BR3 BR2 BR1 RE                      afloat at 8 h
+  15 knots, same distance               holed           stbd x 93.375..75.5                               0.26 m2 seams   436 dents H2 H3                               afloat at 8 h
+  10 knots, same distance               holed           stbd x 85.25..77.25                               0.11 m2 seams   202 dents H3                                  afloat at 8 h

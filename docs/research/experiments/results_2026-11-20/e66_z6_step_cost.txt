@@ -1,0 +1,26 @@
+e66: what a step costs today (wall clock: this machine, its load)
+tree: this repository
+
+-- run 1 of 3
+the core: 37320 steps to T 155.5 in 2367 ms: 63.4 us a step; connections 392
+the fall's slices: bow 56, stern 42
+the first 60 s (at the surface):  1.93 ms an advance (both pieces); 16.0 sub-steps and 4.0 iterations a sub-step; 121 us a sub-step
+60 to 180 s (under):              1.91 ms an advance (both pieces); 16.0 sub-steps and 4.4 iterations a sub-step; 119 us a sub-step
+180 to 300 s:                     0.97 ms an advance (both pieces); 16.0 sub-steps and 4.0 iterations a sub-step; 61 us a sub-step
+the rest, to rest on the bed: 735 advances in 1468 ms
+
+-- run 2 of 3
+the core: 37320 steps to T 155.5 in 4013 ms: 107.5 us a step; connections 392
+the fall's slices: bow 56, stern 42
+the first 60 s (at the surface):  3.65 ms an advance (both pieces); 16.0 sub-steps and 4.0 iterations a sub-step; 228 us a sub-step
+60 to 180 s (under):              1.32 ms an advance (both pieces); 16.0 sub-steps and 4.4 iterations a sub-step; 83 us a sub-step
+180 to 300 s:                     1.14 ms an advance (both pieces); 16.0 sub-steps and 4.0 iterations a sub-step; 71 us a sub-step
+the rest, to rest on the bed: 735 advances in 748 ms
+
+-- run 3 of 3
+the core: 37320 steps to T 155.5 in 3885 ms: 104.1 us a step; connections 392
+the fall's slices: bow 56, stern 42
+the first 60 s (at the surface):  5.72 ms an advance (both pieces); 16.0 sub-steps and 4.0 iterations a sub-step; 358 us a sub-step
+60 to 180 s (under):              1.37 ms an advance (both pieces); 16.0 sub-steps and 4.4 iterations a sub-step; 85 us a sub-step
+180 to 300 s:                     0.88 ms an advance (both pieces); 16.0 sub-steps and 4.0 iterations a sub-step; 55 us a sub-step
+the rest, to rest on the bed: 735 advances in 689 ms

@@ -1,0 +1,32 @@
+the 1912 preset at its flag (T 158.30 min): solids, way | each piece: lever, weight in water: where it lands (along, across), way up, strikes
+  core          as she is               bow 0.80 m 17180 t: 1203 m (910, 787) upright, +6.13 min | stern 1.43 m 12144 t: 100 m (99, 9) upright, +7.85 min
+  core          heave rate x0.85        bow 0.80 m 17180 t: 1218 m (890, 831) upright, +6.10 min | stern 1.43 m 12144 t: 103 m (102, 10) upright, +7.84 min
+  core          heave rate x1.18        bow 0.80 m 17180 t: 1177 m (921, 733) upright, +6.16 min | stern 1.43 m 12144 t: 96 m (95, 9) upright, +7.85 min
+  core          roll 3 deg to port      bow 0.80 m 17180 t: 1220 m (927, 794) upright, +6.10 min | stern 1.43 m 12144 t: 98 m (98, 8) upright, +7.87 min
+  core          roll 3 deg to starboard bow 0.80 m 17180 t: 1175 m (885, 774) upright, +6.15 min | stern 1.43 m 12144 t: 101 m (100, 11) upright, +7.83 min
+  items, afloat as she is               bow -2.50 m 16264 t: 727 m (552, 473) upright, +6.35 min | stern 4.67 m 12968 t: 389 m (389, 19) upright, +7.71 min
+  items, afloat heave rate x0.85        bow -2.50 m 16264 t: 740 m (543, 502) upright, +6.35 min | stern 4.67 m 12968 t: 398 m (397, 26) upright, +7.66 min
+  items, afloat heave rate x1.18        bow -2.50 m 16264 t: 708 m (555, 439) upright, +6.37 min | stern 4.67 m 12968 t: 383 m (382, 23) upright, +7.76 min
+  items, afloat roll 3 deg to port      bow -2.50 m 16264 t: 740 m (565, 478) upright, +6.35 min | stern 4.67 m 12968 t: 394 m (393, 27) upright, +7.68 min
+  items, afloat roll 3 deg to starboard bow -2.50 m 16264 t: 706 m (532, 464) upright, +6.37 min | stern 4.67 m 12968 t: 387 m (386, 17) upright, +7.73 min
+  items, soaked as she is               bow -2.36 m 17201 t: 712 m (560, 440) upside down, +6.56 min | stern 4.46 m 13630 t: 394 m (393, 30) upright, +7.43 min
+  items, soaked heave rate x0.85        bow -2.36 m 17201 t: 766 m (578, 502) upright, +6.16 min | stern 4.46 m 13630 t: 413 m (410, 50) upright, +7.38 min
+  items, soaked heave rate x1.18        bow -2.36 m 17201 t: 737 m (598, 431) upright, +6.20 min | stern 4.46 m 13630 t: 368 m (368, 15) upright, +7.51 min
+  items, soaked roll 3 deg to port      bow -2.36 m 17201 t: 766 m (598, 479) upright, +6.16 min | stern 4.46 m 13630 t: 407 m (404, 48) upright, +7.40 min
+  items, soaked roll 3 deg to starboard bow -2.36 m 17201 t: 739 m (581, 457) upright, +6.19 min | stern 4.46 m 13630 t: 381 m (381, 19) upright, +7.47 min
+the 1912 watch at its flag (step 38386, T 159.94 min)
+  core          as she is               bow 0.80 m 17180 t: 1224 m (917, 811) upright, +6.07 min | stern 1.43 m 12144 t: 107 m (106, 16) upright, +7.81 min
+  core          heave rate x0.85        bow 0.80 m 17180 t: 1235 m (892, 854) upright, +6.05 min | stern 1.43 m 12144 t: 111 m (110, 17) upright, +7.80 min
+  core          heave rate x1.18        bow 0.80 m 17180 t: 1206 m (937, 759) upright, +6.10 min | stern 1.43 m 12144 t: 103 m (102, 15) upright, +7.82 min
+  core          roll 3 deg to port      bow 0.80 m 17180 t: 1236 m (926, 818) upright, +6.05 min | stern 1.43 m 12144 t: 106 m (105, 14) upright, +7.83 min
+  core          roll 3 deg to starboard bow 0.80 m 17180 t: 1208 m (903, 801) upright, +6.10 min | stern 1.43 m 12144 t: 109 m (108, 18) upright, +7.79 min
+  items, afloat as she is               bow -2.50 m 16264 t: 743 m (561, 487) upright, +6.33 min | stern 4.67 m 12968 t: 392 m (391, 28) upright, +7.71 min
+  items, afloat heave rate x0.85        bow -2.50 m 16264 t: 743 m (541, 509) upright, +6.34 min | stern 4.67 m 12968 t: 399 m (397, 29) upright, +7.68 min
+  items, afloat heave rate x1.18        bow -2.50 m 16264 t: 733 m (573, 456) upright, +6.34 min | stern 4.67 m 12968 t: 388 m (387, 34) upright, +7.76 min
+  items, afloat roll 3 deg to port      bow -2.50 m 16264 t: 741 m (560, 485) upright, +6.34 min | stern 4.67 m 12968 t: 395 m (394, 31) upright, +7.69 min
+  items, afloat roll 3 deg to starboard bow -2.50 m 16264 t: 733 m (552, 483) upright, +6.33 min | stern 4.67 m 12968 t: 391 m (390, 27) upright, +7.73 min
+  items, soaked as she is               bow -2.36 m 17201 t: 773 m (597, 491) upright, +6.14 min | stern 4.46 m 13630 t: 386 m (385, 29) upright, +7.46 min
+  items, soaked heave rate x0.85        bow -2.36 m 17201 t: 798 m (595, 532) upright, +6.10 min | stern 4.46 m 13630 t: 403 m (401, 38) upright, +7.41 min
+  items, soaked heave rate x1.18        bow -2.36 m 17201 t: 722 m (581, 429) upside down, +6.54 min | stern 4.46 m 13630 t: 373 m (372, 23) upright, +7.50 min
+  items, soaked roll 3 deg to port      bow -2.36 m 17201 t: 796 m (614, 508) upright, +6.11 min | stern 4.46 m 13630 t: 398 m (396, 40) upright, +7.42 min
+  items, soaked roll 3 deg to starboard bow -2.36 m 17201 t: 732 m (566, 464) upright, +6.19 min | stern 4.46 m 13630 t: 388 m (387, 30) upright, +7.44 min

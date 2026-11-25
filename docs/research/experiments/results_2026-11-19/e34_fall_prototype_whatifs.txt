@@ -1,0 +1,46 @@
+== THE BOW FROM THE RECORD'S BREAK (trim 11 to 25 deg) AND FROM THE MODEL'S FLAG (69 deg)
+bow, 11 deg nose down                          to the bed  6.57 min | along her heading    685 m | arrives   9.7 m/s (down 9.6, along 1.4) at    -0 deg | fastest 11.8 m/s | below 600 m her angle ran -3 to 1
+bow, 17 deg nose down                          to the bed  6.56 min | along her heading    749 m | arrives   9.7 m/s (down 9.6, along 1.4) at    -0 deg | fastest 13.2 m/s | below 600 m her angle ran -4 to 2
+bow, 25 deg nose down                          to the bed  6.54 min | along her heading    841 m | arrives   9.7 m/s (down 9.6, along 1.4) at    -0 deg | fastest 15.4 m/s | below 600 m her angle ran -5 to 6
+bow, 69 deg nose down                          to the bed  5.68 min | along her heading   1380 m | arrives   9.7 m/s (down 9.6, along 1.4) at    -0 deg | fastest 29.7 m/s | below 600 m her angle ran -51 to 24
+bow, 69 deg, with its 12,641 m3 of air kept (at x 0) to the bed  5.47 min | along her heading   1562 m | arrives   9.7 m/s (down 9.6, along 1.4) at    -0 deg | fastest 31.2 m/s | below 600 m her angle ran -55 to 20
+
+== THE LEVER: her weight moved along her (bow, 17 deg nose down)
+bow, weight -3 m (aft)                         to the bed  6.38 min | along her heading   -180 m | arrives   9.9 m/s (down 9.9, along -0.9) at     0 deg | fastest 10.5 m/s | below 600 m her angle ran -1 to 2
+bow, weight -1.5 m (aft)                       to the bed  6.40 min | along her heading    116 m | arrives   9.9 m/s (down 9.9, along -0.2) at     0 deg | fastest 11.6 m/s | below 600 m her angle ran -3 to 2
+bow, weight +0 m (forward)                     to the bed  6.56 min | along her heading    749 m | arrives   9.7 m/s (down 9.6, along 1.4) at    -0 deg | fastest 13.2 m/s | below 600 m her angle ran -4 to 2
+bow, weight +1.5 m (forward)                   to the bed  6.81 min | along her heading   1684 m | arrives   9.9 m/s (down 9.2, along 3.7) at    -1 deg | fastest 15.1 m/s | below 600 m her angle ran -5 to 8
+bow, weight +3 m (forward)                     to the bed  7.00 min | along her heading   2774 m | arrives  10.8 m/s (down 8.8, along 6.2) at    -2 deg | fastest 17.6 m/s | below 600 m her angle ran -5 to 7
+bow, weight +6 m (forward)                     to the bed  6.54 min | along her heading   4814 m | arrives  15.0 m/s (down 9.0, along 11.9) at    -7 deg | fastest 23.0 m/s | below 600 m her angle ran -20 to -3
+  the same with no lift at the blunt end (the lever alone, held by Munk's moment):
+  bow, no lift, weight +0 m                    to the bed  6.34 min | along her heading    192 m | arrives   9.9 m/s (down 9.9, along 0.4) at    -0 deg | fastest 10.5 m/s | below 600 m her angle ran -1 to 2
+  bow, no lift, weight +3 m                    to the bed  6.33 min | along her heading    652 m | arrives  10.0 m/s (down 9.9, along 1.6) at    -0 deg | fastest 11.9 m/s | below 600 m her angle ran -2 to 2
+  bow, no lift, weight +6 m                    to the bed  6.30 min | along her heading   1097 m | arrives  10.3 m/s (down 9.9, along 2.9) at    -0 deg | fastest 13.6 m/s | below 600 m her angle ran -2 to 3
+  bow, no lift, weight +10 m                   to the bed  6.22 min | along her heading   1656 m | arrives  10.9 m/s (down 10.0, along 4.4) at    -1 deg | fastest 16.2 m/s | below 600 m her angle ran -3 to 3
+
+== THE STERN: its weight moved along it (broken end 70 deg down, wholly flooded)
+stern, weight -6 m                             to the bed  7.42 min | along her heading  -3441 m | arrives  11.2 m/s (down 8.1, along -7.8) at     4 deg | fastest 17.8 m/s | below 600 m her angle ran -2 to 11
+stern, weight -3 m                             to the bed  6.92 min | along her heading  -1087 m | arrives   9.2 m/s (down 8.9, along -2.5) at     0 deg | fastest 13.2 m/s | below 600 m her angle ran -11 to 4
+stern, weight +0 m                             to the bed  6.48 min | along her heading    139 m | arrives   9.5 m/s (down 9.5, along 0.5) at    -0 deg | fastest 13.3 m/s | below 600 m her angle ran -2 to 2
+stern, weight +3 m                             to the bed  6.44 min | along her heading    614 m | arrives   9.7 m/s (down 9.5, along 1.6) at    -0 deg | fastest 13.9 m/s | below 600 m her angle ran -2 to 0
+
+== WITH THE RESEARCH NOTE'S COEFFICIENTS (its sections 1.2 and 1.3) in place of the first bets
+bow, 11 deg nose down                          to the bed  6.87 min | along her heading    563 m | arrives   9.3 m/s (down 9.2, along 1.0) at    -0 deg | fastest 11.0 m/s | below 600 m her angle ran -3 to 1
+bow, 17 deg nose down                          to the bed  6.87 min | along her heading    622 m | arrives   9.3 m/s (down 9.2, along 1.0) at    -0 deg | fastest 12.3 m/s | below 600 m her angle ran -4 to 2
+bow, 25 deg nose down                          to the bed  6.85 min | along her heading    714 m | arrives   9.3 m/s (down 9.2, along 1.0) at    -0 deg | fastest 14.6 m/s | below 600 m her angle ran -4 to 3
+bow, 45 deg nose down                          to the bed  6.72 min | along her heading   1009 m | arrives   9.3 m/s (down 9.2, along 1.0) at    -0 deg | fastest 21.8 m/s | below 600 m her angle ran -6 to 26
+bow, 17 deg, cross-flow drag 0.8               to the bed  5.91 min | along her heading    489 m | arrives  10.8 m/s (down 10.8, along 0.9) at    -0 deg | fastest 12.6 m/s | below 600 m her angle ran -2 to 2
+bow, 17 deg, cross-flow drag 1.4               to the bed  7.71 min | along her heading    760 m | arrives   8.2 m/s (down 8.2, along 1.2) at    -0 deg | fastest 12.2 m/s | below 600 m her angle ran -5 to 2
+bow, 17 deg, no lift at the blunt end          to the bed  6.65 min | along her heading    173 m | arrives   9.4 m/s (down 9.4, along 0.3) at    -0 deg | fastest 10.0 m/s | below 600 m her angle ran -1 to 1
+bow, 69 deg (the model's flag)                 to the bed  6.00 min | along her heading   1451 m | arrives   9.3 m/s (down 9.2, along 1.0) at    -0 deg | fastest 32.2 m/s | below 600 m her angle ran -49 to 32
+stern, broken end 85 deg down                  to the bed  6.74 min | along her heading     71 m | arrives   9.1 m/s (down 9.1, along 0.5) at    -0 deg | fastest 15.8 m/s | below 600 m her angle ran -13 to 2
+stern, broken end 70 deg down                  to the bed  6.81 min | along her heading    101 m | arrives   9.1 m/s (down 9.1, along 0.5) at    -0 deg | fastest 13.0 m/s | below 600 m her angle ran -3 to 2
+stern, broken end 45 deg down                  to the bed  6.86 min | along her heading    139 m | arrives   9.1 m/s (down 9.1, along 0.5) at    -0 deg | fastest 9.9 m/s | below 600 m her angle ran -2 to 1
+
+== HOW FAST THE PITCHING DIES (bow, 17 deg): her angle every 15 s for the first 4 minutes
+   0s -17.0  15s -17.6  30s -1.7  45s 10.9  60s 6.0  75s -3.8  90s -1.8  105s 1.3  120s 1.6  135s -0.0  150s -1.0  165s -0.5  180s 0.2  195s 0.3  210s -0.1  225s -0.3  240s -0.2
+
+== THE WEIGHT IN WATER: the bow at 17 deg with her solids lighter or heavier (cross-flow drag as set)
+bow, solids x 1.15                             to the bed  6.99 min | along her heading   1125 m | arrives   9.3 m/s (down 9.0, along 2.2) at    -0 deg | fastest 13.3 m/s | below 600 m her angle ran -4 to 4
+bow, solids x 1.00                             to the bed  6.56 min | along her heading    749 m | arrives   9.7 m/s (down 9.6, along 1.4) at    -0 deg | fastest 13.2 m/s | below 600 m her angle ran -4 to 2
+bow, solids x 0.85                             to the bed  6.20 min | along her heading    453 m | arrives  10.2 m/s (down 10.2, along 0.6) at    -0 deg | fastest 13.1 m/s | below 600 m her angle ran -4 to 2

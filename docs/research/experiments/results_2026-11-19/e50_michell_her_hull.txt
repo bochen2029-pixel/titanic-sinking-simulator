@@ -1,0 +1,53 @@
+e50: Michell's integral for her own hull (run from a scratch folder)
+
+1. WIGLEY'S PARABOLIC HULL, L/B 10, B/T 1.6 (Y = (B/2)(1 - (2x/L)^2)(1 - (zeta/T)^2)): the code's check
+   wetted surface 0.14879 L^2 (the usual 0.1487 L^2 [from memory]); volume 0.4444 L B T (4/9 = 0.4444)
+   Fn      Cw x 1000 (Rw / (0.5 rho U^2 S))   Rw / (rho g vol) x 1000   the two forms agree to
+   0.160     0.3471                           0.2380                 4.8e-15
+   0.180     0.7139                           0.6195                 4.9e-15
+   0.200     0.8874                           0.9508                 2.0e-15
+   0.220     0.6535                           0.8472                 3.1e-15
+   0.240     1.3849                           2.1366                 6.7e-16
+   0.250     1.0637                           1.7807                 8.9e-16
+   0.267     0.9753                           1.8624                 4.0e-15
+   0.280     1.6021                           3.3643                 6.0e-15
+   0.300     2.1413                           5.1619                 7.8e-16
+   0.316     1.8311                           4.8976                 4.4e-16
+   0.330     1.4336                           4.1815                 9.3e-15
+   0.350     1.2477                           4.0939                 2.4e-15
+   0.400     2.7334                          11.7144                 2.2e-15
+   0.450     4.1535                          22.5283                 9.1e-15
+   0.500     4.5164                          30.2429                 5.9e-15
+   0.600     3.9177                          37.7765                 4.2e-15
+   convergence at Fn 0.316: every step halved changes Rw by 1.3e-4
+
+2. HER HULL at the night's mean draught, 9.83 m (core/motion.js SHIP.d), level
+   waterline -129.3 to 128.7 m: 258.0 m; displaced 47839 m3 (49035 t; the model's mass 49021 t); block 0.669, prismatic 0.688, waterplane 0.776, midship 0.972
+   entrance half-angle of the waterline, from the stem over 5, 10, 20, 30 m: 16.2, 15.8, 14.9, 14.0 deg; half-breadth 20 m aft of the stem 5.31 m
+   run half-angle at the stern over 10, 20, 30 m: 18.8, 17.5, 16.2 deg
+   Holtrop's own entrance half-angle for this hull (his regression, e16): 11.1 deg
+
+3. HER WAVE RESISTANCE AND SPECTRUM AGAINST SPEED
+   kn    Fn     k0 L   waves    Rw Michell  Rw Holtrop  ratio  model's whole  Michell    power into   |A| ahead  |A| largest  at     transverse wave's height (crest to trough)
+                       along    kN          kN                 resistance kN  share      waves MW     m          m            deg    300 m and 1,000 m astern, m
+    5.0  0.051   384.1   61.1        0.6         0.0   113851.92         83        0.7 %      0.00       0.277      0.281       51    0.07, 0.04
+    8.0  0.082   150.1   23.9        9.6         0.0   414.13        201        4.8 %      0.04       0.556      0.734       78    0.21, 0.12
+   10.0  0.102    96.0   15.3       25.4         0.4   60.02        307        8.3 %      0.13       0.697      1.156       79    0.33, 0.18
+   12.0  0.122    66.7   10.6       69.7         3.0   22.88        438       15.9 %      0.43       0.355      1.669       82    0.20, 0.11
+   14.0  0.143    49.0    7.8      178.9        12.8   14.01        600       29.8 %      1.29       1.151      2.285       83    0.77, 0.42
+   16.0  0.163    37.5    6.0      333.9        38.0    8.78        800       41.8 %      2.75       1.708      2.985       83    1.30, 0.71
+   18.0  0.184    29.6    4.7      484.8        89.7    5.40       1048       46.2 %      4.49       1.122      3.785       84    0.96, 0.53
+   19.0  0.194    26.6    4.2      472.5       129.2    3.66       1195       39.5 %      4.62       1.498      4.207       84    1.35, 0.74
+   20.0  0.204    24.0    3.8      903.3       179.9    5.02       1360       66.4 %      9.29       1.851      4.674       85    1.76, 0.96
+   21.0  0.214    21.8    3.5      689.8       243.5    2.83       1544       44.7 %      7.45       0.068      5.142       85    0.07, 0.04
+   22.0  0.224    19.8    3.2      847.9       319.4    2.65       1751       48.4 %      9.60       1.616      5.655       85    1.69, 0.93
+   22.5  0.230    19.0    3.0     1102.6       361.2    3.05       1863       59.2 %     12.76       1.932      5.916       85    2.07, 1.13
+   23.0  0.235    18.2    2.9     1293.3       406.0    3.19       1982       65.3 %     15.30       1.883      6.188       85    2.06, 1.13
+   24.0  0.245    16.7    2.7     1245.8       509.5    2.45       2241       55.6 %     15.38       0.974      6.754       86    1.11, 0.61
+   between 18 and 22.5 kn Michell's Rw grows as U^3.7 and the transverse amplitude as U^2.4
+   Rw / U^6 against speed (humps and hollows of the interference): 12.0:1258.4 12.5:1411.6 13.0:1355.2 13.5:907.5 14.0:1281.5 14.5:862.8 15.0:1136.1 15.5:714.9 16.0:1073.6 16.5:829.2 17.0:629.8 17.5:860.2 18.0:769.0 18.5:512.0 19.0:541.8 19.5:729.3 20.0:761.4 20.5:606.1 21.0:433.9 21.5:369.3 22.0:403.4 22.5:458.5 23.0:471.3 23.5:427.9 24.0:351.7 
+
+4. THE SPECTRUM AT 22.5 kn, |A| in m by wave direction (deg from her course; 35.26 is the cusp's): 0:1.932 10:1.917 20:1.561 30:0.223 35:1.939 40:3.185 50:2.188 60:4.502 70:4.569 75:2.609 80:2.613 
+   of her wave resistance, the transverse waves carry 53 % and the divergent 47 %
+
+5. AT HER LOAD DRAUGHT (10.54 m, 34 ft 7 in) at 22.5 kn: Rw 1282.8 kN, 16.3 % on the night's draught

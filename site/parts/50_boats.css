@@ -1,0 +1,22 @@
+/* The boats (site/parts/50_boats.js): a one-line count on the stage, and a section of the Run tab with the count and the
+   three orders. Sized like the page's other controls: 40 px on a phone. The count stands first in the stage's stack (C-4:
+   under the view buttons on a desktop, beside the readouts; under the bar on a phone), the end card under it; the stack
+   keeps it clear of the readouts, the deep's strip and the Bridge, so it has no place of its own. */
+.boats-chip { flex: none; z-index: 2; max-width: 360px; box-sizing: border-box; background: rgba(6, 12, 20, 0.78); border: 1px solid var(--line); border-radius: 6px; padding: 5px 9px; font: 12px/1.35 var(--f-num); color: var(--ink-2); pointer-events: none; }
+.boats-chip[hidden] { display: none; }
+.boats-chip b { font: 600 10.5px/1.2 var(--f-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); }
+/* on a desktop the count is one line: "Boats 18 of 20 away · 664 in them · 420 places empty" (it broke over two at 360 px);
+   at most as wide as the stack's column, the view buttons', so it stays clear of the readouts; past that (the people in
+   the water, after she founders) it breaks only between its segments */
+html:not([data-device="phone"]) .boats-chip { max-width: 480px; }
+html:not([data-device="phone"]) .boats-chip span { white-space: nowrap; }
+.boats-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px 10px; }
+.boats-now { margin-top: 8px !important; font-size: 12.5px; }
+.boats-ctl { display: grid; gap: 4px; }
+.boats-k { font: 500 10.5px/1.2 var(--f-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); }
+.boats .seg button { white-space: normal; line-height: 1.2; padding: 6px 6px; }
+.boats details summary { cursor: pointer; color: var(--ink-2); font-size: 12.5px; }
+.boats td.num, .boats th.num { text-align: right; }
+html[data-device="phone"] .boats-chip { font-size: 11px; }
+html[data-device="phone"] .boats .btn { min-height: 40px; }
+html[data-device="phone"] .boats .seg button { min-height: 40px; }

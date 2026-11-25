@@ -1,0 +1,31 @@
+/* NH15, the nervous-system view (site/parts/77_nerves.js) in the Systems tab [appearance] */
+.nv-sec .nv-lead { margin: 0 0 6px; max-width: 62ch; }
+.nv-graph { display: block; width: 100%; height: auto; margin: 2px 0 4px; }
+.nv-edge { stroke: var(--line-2); stroke-width: 1.2; }
+.nv-edge[data-state="green"] { stroke: rgba(95, 211, 154, 0.45); }
+.nv-edge[data-state="amber"] { stroke: rgba(255, 181, 71, 0.7); }
+.nv-edge[data-state="red"] { stroke: rgba(255, 107, 107, 0.8); stroke-dasharray: 4 3; }
+.nv-edge.nv-changed { stroke-width: 2.6; }
+.nv-node { cursor: pointer; outline: none; }
+.nv-node .nv-dot { fill: var(--muted); stroke: rgba(6, 12, 20, 0.9); stroke-width: 1.5; }
+.nv-node .nv-ring { fill: none; stroke: transparent; stroke-width: 2; }
+.nv-node[data-state="green"] .nv-dot { fill: var(--ok); }
+.nv-node[data-state="amber"] .nv-dot { fill: var(--warn); }
+.nv-node[data-state="red"] .nv-dot { fill: var(--crit); }
+.nv-node.nv-changed .nv-ring { stroke: var(--ink); }
+.nv-node.nv-pointed .nv-ring, .nv-node:focus .nv-ring { stroke: var(--ink-2); }
+.nv-label { fill: var(--ink-2); font: 9.5px var(--f-ui); pointer-events: none; }
+.nv-node[data-state="grey"] .nv-label { fill: var(--muted); }
+.nv-cap { margin: 0 0 6px; min-height: 2.6em; font-size: 12.5px; color: var(--ink-2); }
+.nv-listcap { margin: 4px 0 2px; }
+.nv-list { list-style: none; margin: 0; padding: 0; }
+.nv-item { display: grid; grid-template-columns: 8px minmax(0, 1fr) auto; gap: 2px 8px; align-items: baseline; padding: 4px 0; border-bottom: 1px solid var(--line); font-size: 12.5px; }
+.nv-item i { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); align-self: center; }
+.nv-item[data-state="green"] i { background: var(--ok); } .nv-item[data-state="amber"] i { background: var(--warn); } .nv-item[data-state="red"] i { background: var(--crit); }
+.nv-item .nv-name { font-weight: 600; color: var(--ink); grid-column: 2; }
+.nv-item .nv-t { grid-column: 3; grid-row: 1; font: 11.5px var(--f-num); color: var(--ink-2); white-space: nowrap; }
+.nv-item .nv-why { grid-column: 2 / 4; color: var(--ink-2); }
+/* desktop first: the graph, and under it only the systems not working; a phone: every system as a list */
+html:not([data-device="phone"]) .nv-item[data-state="green"], html:not([data-device="phone"]) .nv-item[data-state="grey"] { display: none; }
+html[data-device="phone"] .nv-graph, html[data-device="phone"] .nv-cap { display: none; }
+html[data-device="phone"] .nv-listcap { display: none; }

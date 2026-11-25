@@ -1,0 +1,18 @@
+top at B deck, as committed                envelope 125019 m3 | founders 156.94 min (trim over 68.75) at trim 69.0 list -80.2 | list 10 at T 151.4 , 20 at 153.0 , 45 at 155.1 | trim 11 at T 155.22 (list -48.1), 17 at T 155.79 (list -80.2)
+   trim/list: T100 4.1/-4.7  T130 4.9/-3.5  T145 5.5/-6.7  T150 6.2/-7.6  T152 6.8/-12.1  T154 8.0/-30.4  T155 10.1/-43.3  T156 21.9/-80.2
+   marks: over F 76.0  ports 90.2  well 125.7  fcastle 137.5  bridge 153.9  (record: 75, 100, 130, 145, 155)
+top at B deck, upperSplit 1, axUp 0.3      envelope 125019 m3 | founders 158.45 min (trim over 68.75) at trim 68.8 list -80.2 | list 10 at T 153.9 , 20 at 155.9 , 45 at 157.1 | trim 11 at T 156.48 (list -27.2), 17 at T 157.25 (list -52.5)
+   trim/list: T100 4.1/-4.3  T130 4.9/-3.5  T145 5.5/-6.1  T150 6.1/-6.8  T152 6.6/-7.7  T154 7.5/-10.3  T155 8.2/-14.3  T156 9.6/-20.9  T157 14.0/-38.7  T158 42.3/-80.2
+   marks: over F 76.5  ports 90.7  well 125.9  fcastle 137.8  bridge 155.4  (record: 75, 100, 130, 145, 155)
+top at A deck, as committed                envelope 136766 m3 | founders 165.03 min (trim over 68.75) at trim 68.8 list -59.9 | list 10 at T 160.0 , 20 at 164.4 , 45 at 164.9 | trim 11 at T 162.30 (list -18.1), 17 at T 163.55 (list -17.0)
+   trim/list: T100 4.1/-4.8  T130 4.9/-3.7  T145 5.5/-6.6  T150 6.2/-5.6  T152 6.6/-3.5  T154 7.1/-2.5  T155 7.3/-2.6  T156 7.4/-2.7  T157 7.7/-3.2  T158 7.9/-4.1  T159 8.2/-5.9  T160 8.6/-9.9  T162 10.4/-17.6  T165 67.5/-57.1
+   marks: over F 75.9  ports 90.1  well 125.7  fcastle 137.5  bridge 160.2  (record: 75, 100, 130, 145, 155)
+top at A deck, upperSplit 1, axUp 0.3      envelope 136766 m3 | founders 166.05 min (trim over 68.75) at trim 68.8 list -47.9 | list 10 at T 164.3 , 20 at 165.6 , 45 at 166.0 | trim 11 at T 163.06 (list -7.9), 17 at T 164.52 (list -10.8)
+   trim/list: T100 4.1/-4.3  T130 4.9/-3.5  T145 5.5/-6.1  T150 6.1/-6.2  T152 6.5/-4.7  T154 7.0/-3.1  T155 7.2/-2.7  T156 7.3/-2.6  T157 7.5/-2.7  T158 7.8/-3.0  T159 8.0/-3.5  T160 8.4/-4.2  T162 9.6/-6.6  T165 23.7/-11.0
+   marks: over F 76.5  ports 90.7  well 125.9  fcastle 137.8  bridge 161.0  (record: 75, 100, 130, 145, 155)
+top at Boat deck, as committed             envelope 149129 m3 | founders 170.70 min (trim over 68.75) at trim 68.8 list -2.0 | list 10 at T -0.0 , 20 at never , 45 at never | trim 11 at T 166.50 (list -2.1), 17 at T 168.88 (list -1.3)
+   trim/list: T100 4.1/-4.7  T130 4.9/-3.7  T145 5.5/-6.7  T150 6.2/-5.7  T152 6.6/-3.5  T154 7.1/-2.6  T155 7.3/-2.6  T156 7.4/-2.6  T157 7.6/-2.4  T158 7.8/-2.4  T159 8.0/-2.3  T160 8.2/-2.1  T162 8.7/-1.8  T165 9.8/-2.2  T170 35.6/-1.3
+   marks: over F 75.8  ports 90.2  well 125.7  fcastle 137.5  bridge 162.4  (record: 75, 100, 130, 145, 155)
+top at Boat deck, upperSplit 1, axUp 0.3   envelope 149129 m3 | founders 171.79 min (trim over 68.75) at trim 68.9 list -2.3 | list 10 at T -0.0 , 20 at never , 45 at never | trim 11 at T 167.46 (list -2.0), 17 at T 169.93 (list -1.3)
+   trim/list: T100 4.1/-4.3  T130 4.9/-3.5  T145 5.5/-6.1  T150 6.1/-6.1  T152 6.5/-4.7  T154 7.0/-3.1  T155 7.2/-2.7  T156 7.3/-2.5  T157 7.5/-2.5  T158 7.7/-2.4  T159 7.9/-2.3  T160 8.1/-2.2  T162 8.5/-1.9  T165 9.4/-2.0  T170 17.5/-1.3
+   marks: over F 76.7  ports 90.7  well 125.9  fcastle 137.8  bridge 163.2  (record: 75, 100, 130, 145, 155)

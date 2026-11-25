@@ -1,0 +1,400 @@
+===== node e40_break_two_bodies_prototype.js 4.0 held -30   (TITANIC_ROOT = a clean worktree of a97a6bd)
+core read from C:/temp/titanic-wt-stairs, core.js sha256 931e2e2609d7
+cap 4.00 GN m, list held: BREAK at T 151.75 min, trim 6.62 deg, list -2.0 deg; governing station x -16.15 (bulkhead J), M 4.000; hull peak 4.216 at x -0.5; shear there 28 MN
+  along the hull: largest moment at x -0.5 (4.216); largest moment/capacity with the aft joint 10 % weaker at x -0.5 (ratio 1.054)
+  M(x) GN m: -139:0.00  -121:0.09  -104:0.41  -87:0.95  -71:1.66  -54:2.45  -38:3.17  -22:3.84  -6:4.19  11:4.09  28:3.40  46:2.43  62:1.59  78:0.91  94:0.41  110:0.11  127:0.00
+  cut at the slice edge x -29.76 (asked -30.00)
+  stern: x -139.0 to -29.8, 18 t, centre x -69.7 z 11.2; floodable 40161 m3, water aboard 0 t; open end 637 m2; 144 connections shut; vz 0.00 m/s
+  bow: x -29.8 to 130.3, 31 t, centre x 35.7 z 10.5; floodable 67436 m3, water aboard 32333 t; open end 637 m2; 70 connections shut; vz -0.01 m/s
+
+BOW after the break: wholly under at 72 s (T 152.95 min); trim from 6.8 (at 0 s) to 77.3 deg (at 47 s)
+      0 s  trim    6.6  list   -2.0  top     0.0  break end's deck    10.0  far end's deck    -4.0  water  32333 t  in       0 t/min  vz  -0.01
+     15 s  trim   29.5  list   -2.0  top    25.2  break end's deck    25.4  far end's deck   -45.3  water  33804 t  in   10225 t/min  vz  -0.76
+     30 s  trim   51.5  list   -2.0  top    28.3  break end's deck    28.8  far end's deck   -86.3  water  37464 t  in   18913 t/min  vz  -0.93
+     45 s  trim   75.0  list   -2.0  top    20.7  break end's deck    21.4  far end's deck  -122.2  water  43224 t  in   23941 t/min  vz  -1.00
+     60 s  trim   77.3  list   -2.0  top     8.0  break end's deck     8.8  far end's deck  -136.4  water  49352 t  in   20553 t/min  vz  -0.69
+     75 s  trim   77.3  list   -2.0  top    -2.3  break end's deck    -1.6  far end's deck  -146.8  water  56334 t  in   19359 t/min  vz  -0.95
+     90 s  trim   77.3  list   -2.0  top   -23.9  break end's deck   -23.4  far end's deck  -168.6  water  62900 t  in   35092 t/min  vz  -1.98
+
+STERN after the break: wholly under at 718 s (T 163.71 min); trim from 2.5 (at 4 s) to 77.3 deg (at 618 s)
+      0 s  trim    6.6  list   -2.0  top     0.0  break end's deck    10.0  far end's deck    22.6  water      0 t  in       0 t/min  vz   0.00
+     15 s  trim    6.1  list   -2.0  top    18.4  break end's deck     5.0  far end's deck    16.7  water   6440 t  in    7775 t/min  vz  -0.07
+     30 s  trim    7.9  list   -2.0  top    20.0  break end's deck     3.2  far end's deck    17.9  water   7508 t  in    1704 t/min  vz  -0.01
+     45 s  trim    8.2  list   -2.0  top    20.3  break end's deck     2.9  far end's deck    18.1  water   7700 t  in     423 t/min  vz  -0.00
+     60 s  trim    8.4  list   -2.0  top    20.4  break end's deck     2.7  far end's deck    18.2  water   7855 t  in     880 t/min  vz  -0.01
+     75 s  trim    8.6  list   -2.0  top    20.6  break end's deck     2.4  far end's deck    18.3  water   8117 t  in    1314 t/min  vz  -0.01
+     90 s  trim    9.1  list   -2.0  top    20.9  break end's deck     1.9  far end's deck    18.6  water   8593 t  in    2632 t/min  vz  -0.02
+    105 s  trim    9.9  list   -2.0  top    21.4  break end's deck     1.0  far end's deck    18.9  water   9387 t  in    3580 t/min  vz  -0.03
+    120 s  trim   10.9  list   -2.0  top    22.2  break end's deck    -0.1  far end's deck    19.4  water  10325 t  in    3581 t/min  vz  -0.03
+    135 s  trim   11.9  list   -2.0  top    22.9  break end's deck    -1.2  far end's deck    19.9  water  11141 t  in    2817 t/min  vz  -0.02
+    150 s  trim   12.7  list   -2.0  top    23.5  break end's deck    -2.2  far end's deck    20.4  water  11690 t  in    1721 t/min  vz  -0.02
+    165 s  trim   13.4  list   -2.0  top    24.0  break end's deck    -2.9  far end's deck    20.7  water  12065 t  in    1506 t/min  vz  -0.01
+    180 s  trim   13.9  list   -2.0  top    24.4  break end's deck    -3.5  far end's deck    21.0  water  12342 t  in    1131 t/min  vz  -0.01
+    195 s  trim   14.3  list   -2.0  top    24.7  break end's deck    -3.9  far end's deck    21.2  water  12544 t  in     638 t/min  vz  -0.01
+    210 s  trim   14.7  list   -2.0  top    25.0  break end's deck    -4.3  far end's deck    21.4  water  12716 t  in     480 t/min  vz  -0.01
+    225 s  trim   15.0  list   -2.0  top    25.2  break end's deck    -4.7  far end's deck    21.6  water  12860 t  in     442 t/min  vz  -0.01
+    240 s  trim   15.3  list   -2.0  top    25.3  break end's deck    -5.0  far end's deck    21.7  water  13023 t  in     565 t/min  vz  -0.01
+    300 s  trim   15.9  list   -2.0  top    25.8  break end's deck    -5.8  far end's deck    22.0  water  13354 t  in     294 t/min  vz  -0.00
+    360 s  trim   16.7  list   -2.0  top    26.3  break end's deck    -6.7  far end's deck    22.3  water  13694 t  in     390 t/min  vz  -0.01
+    420 s  trim   18.1  list   -2.0  top    27.2  break end's deck    -8.1  far end's deck    22.9  water  14149 t  in     532 t/min  vz  -0.01
+    480 s  trim   20.8  list   -2.0  top    29.0  break end's deck   -11.0  far end's deck    24.2  water  14804 t  in     818 t/min  vz  -0.02
+    540 s  trim   28.0  list   -2.0  top    33.7  break end's deck   -18.6  far end's deck    27.5  water  15968 t  in    1719 t/min  vz  -0.07
+    600 s  trim   59.7  list   -2.0  top    45.7  break end's deck   -48.2  far end's deck    34.7  water  18916 t  in    5018 t/min  vz  -0.28
+    660 s  trim   77.3  list   -2.0  top    29.6  break end's deck   -75.9  far end's deck    17.2  water  25768 t  in    7191 t/min  vz  -0.38
+    720 s  trim   77.3  list   -2.0  top    -2.5  break end's deck  -108.2  far end's deck   -15.1  water  33715 t  in   12089 t/min  vz  -1.17
+
+===== node e40_break_two_bodies_prototype.js 4.6 free -30   (TITANIC_ROOT = a clean worktree of a97a6bd)
+core read from C:/temp/titanic-wt-stairs, core.js sha256 931e2e2609d7
+cap 4.60 GN m, list free: BREAK at T 154.39 min, trim 8.58 deg, list -34.7 deg; governing station x -16.15 (bulkhead J), M 4.601; hull peak 4.774 at x -3.1; shear there 28 MN
+  along the hull: largest moment at x -3.1 (4.774); largest moment/capacity with the aft joint 10 % weaker at x -24.4 (ratio 1.044)
+  M(x) GN m: -139:0.00  -121:0.09  -104:0.43  -87:1.04  -71:1.87  -54:2.82  -38:3.68  -22:4.43  -6:4.77  11:4.55  28:3.73  46:2.65  62:1.70  78:0.96  94:0.42  110:0.11  127:0.00
+  cut at the slice edge x -29.76 (asked -30.00)
+  stern: x -139.0 to -29.8, 18 t, centre x -69.7 z 11.2; floodable 40161 m3, water aboard 0 t; open end 637 m2; 144 connections shut; vz 0.01 m/s
+  bow: x -29.8 to 130.3, 31 t, centre x 35.7 z 10.5; floodable 67436 m3, water aboard 36073 t; open end 637 m2; 70 connections shut; vz -0.04 m/s
+
+BOW after the break: wholly under at 57 s (T 155.33 min); trim from 8.7 (at 0 s) to 77.3 deg (at 39 s)
+      0 s  trim    8.6  list  -34.7  top     0.0  break end's deck     7.2  far end's deck   -12.5  water  36073 t  in       0 t/min  vz  -0.04
+     15 s  trim   36.0  list  -80.0  top    27.9  break end's deck    17.5  far end's deck   -70.0  water  38889 t  in   19624 t/min  vz  -1.08
+     30 s  trim   63.1  list  -80.2  top    23.9  break end's deck    18.6  far end's deck  -114.5  water  44308 t  in   23662 t/min  vz  -1.25
+     45 s  trim   77.3  list  -80.2  top     8.8  break end's deck     6.7  far end's deck  -139.1  water  50217 t  in   22333 t/min  vz  -0.88
+     60 s  trim   77.3  list  -80.2  top    -3.5  break end's deck    -5.6  far end's deck  -151.4  water  57195 t  in   21910 t/min  vz  -1.12
+     75 s  trim   77.3  list  -80.2  top   -27.8  break end's deck   -30.3  far end's deck  -176.1  water  64613 t  in   35189 t/min  vz  -2.23
+
+STERN after the break: wholly under at 433 s (T 161.61 min); trim from 2.4 (at 5 s) to 77.3 deg (at 367 s)
+      0 s  trim    8.6  list  -34.7  top     0.0  break end's deck     7.3  far end's deck    22.8  water      0 t  in       0 t/min  vz   0.01
+     15 s  trim    6.5  list   17.2  top    18.4  break end's deck     4.2  far end's deck    16.5  water   6783 t  in    6864 t/min  vz  -0.03
+     30 s  trim    8.0  list   -9.2  top    20.0  break end's deck     3.0  far end's deck    17.8  water   7624 t  in    2040 t/min  vz  -0.00
+     45 s  trim    8.2  list  -20.6  top    19.6  break end's deck     2.2  far end's deck    17.3  water   8263 t  in    3484 t/min  vz  -0.02
+     60 s  trim    9.0  list  -30.6  top    19.5  break end's deck     0.6  far end's deck    16.9  water   8926 t  in    2870 t/min  vz  -0.01
+     75 s  trim    9.7  list  -38.6  top    19.6  break end's deck    -1.0  far end's deck    16.4  water   9494 t  in    2348 t/min  vz  -0.01
+     90 s  trim   10.5  list  -53.5  top    18.9  break end's deck    -3.9  far end's deck    14.5  water  10077 t  in    2475 t/min  vz  -0.03
+    105 s  trim   11.9  list  -80.2  top    15.7  break end's deck   -10.1  far end's deck     9.7  water  10815 t  in    5304 t/min  vz  -0.05
+    120 s  trim   13.1  list  -80.2  top    15.7  break end's deck   -11.7  far end's deck    10.2  water  12238 t  in    5326 t/min  vz  -0.06
+    135 s  trim   14.9  list  -80.2  top    15.9  break end's deck   -13.9  far end's deck    10.8  water  13774 t  in    4327 t/min  vz  -0.06
+    150 s  trim   16.3  list  -80.2  top    16.2  break end's deck   -15.7  far end's deck    11.3  water  14763 t  in    1252 t/min  vz  -0.04
+    165 s  trim   16.8  list  -80.2  top    16.1  break end's deck   -16.5  far end's deck    11.2  water  15389 t  in    2225 t/min  vz  -0.03
+    180 s  trim   17.1  list  -80.2  top    15.9  break end's deck   -17.1  far end's deck    11.0  water  15953 t  in    2075 t/min  vz  -0.03
+    195 s  trim   17.6  list  -80.2  top    15.8  break end's deck   -17.9  far end's deck    11.0  water  16506 t  in    2164 t/min  vz  -0.03
+    210 s  trim   18.2  list  -80.2  top    15.8  break end's deck   -18.8  far end's deck    11.1  water  16974 t  in    1595 t/min  vz  -0.03
+    225 s  trim   18.8  list  -80.2  top    16.0  break end's deck   -19.7  far end's deck    11.2  water  17377 t  in    1624 t/min  vz  -0.03
+    240 s  trim   19.7  list  -80.2  top    16.4  break end's deck   -20.8  far end's deck    11.5  water  17802 t  in    1794 t/min  vz  -0.04
+    300 s  trim   30.4  list  -80.2  top    22.1  break end's deck   -32.8  far end's deck    15.5  water  20118 t  in    2742 t/min  vz  -0.16
+    360 s  trim   71.8  list  -80.2  top    31.6  break end's deck   -70.8  far end's deck    19.5  water  24608 t  in    6357 t/min  vz  -0.47
+    420 s  trim   77.3  list  -80.2  top     9.7  break end's deck   -95.5  far end's deck    -2.7  water  30772 t  in    8209 t/min  vz  -0.57
+
+===== node e40_break_two_bodies_prototype.js 4.6 held -30   (TITANIC_ROOT = a clean worktree of a97a6bd)
+core read from C:/temp/titanic-wt-stairs, core.js sha256 931e2e2609d7
+cap 4.60 GN m, list held: BREAK at T 155.09 min, trim 8.22 deg, list -2.0 deg; governing station x -16.15 (bulkhead J), M 4.600; hull peak 4.870 at x -0.5; shear there 33 MN
+  along the hull: largest moment at x -0.5 (4.870); largest moment/capacity with the aft joint 10 % weaker at x -0.5 (ratio 1.059)
+  M(x) GN m: -139:0.00  -121:0.09  -104:0.42  -87:1.00  -71:1.81  -54:2.74  -38:3.61  -22:4.40  -6:4.83  11:4.73  28:3.94  46:2.81  62:1.78  78:0.98  94:0.43  110:0.11  127:0.00
+  cut at the slice edge x -29.76 (asked -30.00)
+  stern: x -139.0 to -29.8, 18 t, centre x -69.7 z 11.2; floodable 40161 m3, water aboard 0 t; open end 637 m2; 144 connections shut; vz 0.01 m/s
+  bow: x -29.8 to 130.3, 31 t, centre x 35.7 z 10.5; floodable 67436 m3, water aboard 35295 t; open end 637 m2; 70 connections shut; vz -0.02 m/s
+
+BOW after the break: wholly under at 61 s (T 156.11 min); trim from 8.4 (at 0 s) to 77.3 deg (at 39 s)
+      0 s  trim    8.2  list   -2.0  top     0.0  break end's deck     9.5  far end's deck    -8.7  water  35295 t  in       0 t/min  vz  -0.02
+     15 s  trim   36.1  list   -2.0  top    25.8  break end's deck    26.2  far end's deck   -59.3  water  37216 t  in   12698 t/min  vz  -1.02
+     30 s  trim   62.9  list   -2.0  top    24.7  break end's deck    25.3  far end's deck  -106.3  water  41789 t  in   20676 t/min  vz  -1.13
+     45 s  trim   77.3  list   -2.0  top    11.6  break end's deck    12.4  far end's deck  -132.8  water  47997 t  in   22901 t/min  vz  -0.89
+     60 s  trim   77.3  list   -2.0  top     0.8  break end's deck     1.6  far end's deck  -143.6  water  54477 t  in   23076 t/min  vz  -0.74
+     75 s  trim   77.3  list   -2.0  top   -17.5  break end's deck   -17.0  far end's deck  -162.2  water  61187 t  in   30533 t/min  vz  -1.73
+
+STERN after the break: wholly under at 720 s (T 167.08 min); trim from 3.1 (at 4 s) to 77.3 deg (at 620 s)
+      0 s  trim    8.2  list   -2.0  top     0.0  break end's deck     9.5  far end's deck    24.7  water      0 t  in       0 t/min  vz   0.01
+     15 s  trim    6.1  list   -2.0  top    18.5  break end's deck     5.0  far end's deck    16.8  water   6474 t  in    7694 t/min  vz  -0.07
+     30 s  trim    7.9  list   -2.0  top    20.0  break end's deck     3.2  far end's deck    17.9  water   7515 t  in    1577 t/min  vz  -0.01
+     45 s  trim    8.2  list   -2.0  top    20.3  break end's deck     2.9  far end's deck    18.1  water   7703 t  in     596 t/min  vz  -0.00
+     60 s  trim    8.4  list   -2.0  top    20.4  break end's deck     2.7  far end's deck    18.2  water   7859 t  in     878 t/min  vz  -0.01
+     75 s  trim    8.6  list   -2.0  top    20.6  break end's deck     2.4  far end's deck    18.3  water   8122 t  in    1311 t/min  vz  -0.01
+     90 s  trim    9.1  list   -2.0  top    20.9  break end's deck     1.9  far end's deck    18.6  water   8603 t  in    2590 t/min  vz  -0.02
+    105 s  trim    9.9  list   -2.0  top    21.5  break end's deck     1.0  far end's deck    18.9  water   9398 t  in    3555 t/min  vz  -0.03
+    120 s  trim   10.9  list   -2.0  top    22.2  break end's deck    -0.1  far end's deck    19.4  water  10340 t  in    3626 t/min  vz  -0.03
+    135 s  trim   11.9  list   -2.0  top    22.9  break end's deck    -1.2  far end's deck    20.0  water  11148 t  in    2903 t/min  vz  -0.02
+    150 s  trim   12.7  list   -2.0  top    23.5  break end's deck    -2.2  far end's deck    20.4  water  11695 t  in    1834 t/min  vz  -0.02
+    165 s  trim   13.4  list   -2.0  top    24.0  break end's deck    -2.9  far end's deck    20.8  water  12074 t  in    1084 t/min  vz  -0.01
+    180 s  trim   13.9  list   -2.0  top    24.4  break end's deck    -3.5  far end's deck    21.0  water  12346 t  in     724 t/min  vz  -0.01
+    195 s  trim   14.4  list   -2.0  top    24.7  break end's deck    -3.9  far end's deck    21.2  water  12548 t  in     586 t/min  vz  -0.01
+    210 s  trim   14.7  list   -2.0  top    25.0  break end's deck    -4.3  far end's deck    21.4  water  12717 t  in     491 t/min  vz  -0.01
+    225 s  trim   15.0  list   -2.0  top    25.2  break end's deck    -4.7  far end's deck    21.6  water  12864 t  in     444 t/min  vz  -0.01
+    240 s  trim   15.3  list   -2.0  top    25.3  break end's deck    -5.0  far end's deck    21.7  water  13024 t  in     549 t/min  vz  -0.01
+    300 s  trim   15.9  list   -2.0  top    25.7  break end's deck    -5.7  far end's deck    21.9  water  13340 t  in     293 t/min  vz  -0.00
+    360 s  trim   16.7  list   -2.0  top    26.3  break end's deck    -6.6  far end's deck    22.3  water  13678 t  in     387 t/min  vz  -0.01
+    420 s  trim   18.0  list   -2.0  top    27.1  break end's deck    -8.1  far end's deck    22.9  water  14129 t  in     527 t/min  vz  -0.01
+    480 s  trim   20.6  list   -2.0  top    28.9  break end's deck   -10.9  far end's deck    24.2  water  14777 t  in     805 t/min  vz  -0.02
+    540 s  trim   27.6  list   -2.0  top    33.4  break end's deck   -18.2  far end's deck    27.3  water  15915 t  in    1665 t/min  vz  -0.07
+    600 s  trim   58.0  list   -2.0  top    45.5  break end's deck   -46.8  far end's deck    34.7  water  18770 t  in    4796 t/min  vz  -0.27
+    660 s  trim   77.3  list   -2.0  top    30.2  break end's deck   -75.3  far end's deck    17.8  water  25545 t  in    7094 t/min  vz  -0.37
+    720 s  trim   77.3  list   -2.0  top    -0.6  break end's deck  -106.3  far end's deck   -13.2  water  33382 t  in   11214 t/min  vz  -1.09
+
+===== node e40_break_two_bodies_prototype.js 5.0 free -30   (TITANIC_ROOT = a clean worktree of a97a6bd)
+core read from C:/temp/titanic-wt-stairs, core.js sha256 931e2e2609d7
+cap 5.00 GN m, list free: BREAK at T 155.25 min, trim 11.17 deg, list -48.9 deg; governing station x -16.15 (bulkhead J), M 5.000; hull peak 5.156 at x -5.7; shear there 27 MN
+  along the hull: largest moment at x -5.7 (5.156); largest moment/capacity with the aft joint 10 % weaker at x -24.4 (ratio 1.048)
+  M(x) GN m: -139:0.00  -121:0.09  -104:0.43  -87:1.06  -71:1.99  -54:3.06  -38:4.02  -22:4.82  -6:5.16  11:4.88  28:3.97  46:2.79  62:1.74  78:0.97  94:0.42  110:0.11  127:0.00
+  cut at the slice edge x -29.76 (asked -30.00)
+  stern: x -139.0 to -29.8, 18 t, centre x -69.7 z 11.2; floodable 40161 m3, water aboard 0 t; open end 637 m2; 144 connections shut; vz 0.03 m/s
+  bow: x -29.8 to 130.3, 31 t, centre x 35.7 z 10.5; floodable 67436 m3, water aboard 38887 t; open end 637 m2; 70 connections shut; vz -0.13 m/s
+
+BOW after the break: wholly under at 48 s (T 156.04 min); trim from 11.4 (at 0 s) to 77.3 deg (at 34 s)
+      0 s  trim   11.2  list  -48.9  top     0.0  break end's deck     4.4  far end's deck   -22.5  water  38887 t  in       0 t/min  vz  -0.13
+     15 s  trim   42.8  list  -80.2  top    26.6  break end's deck    17.4  far end's deck   -83.7  water  42645 t  in   20825 t/min  vz  -1.34
+     30 s  trim   71.2  list  -80.2  top    17.4  break end's deck    13.8  far end's deck  -127.6  water  48209 t  in   22173 t/min  vz  -1.29
+     45 s  trim   77.3  list  -80.2  top     2.2  break end's deck     0.1  far end's deck  -145.7  water  54337 t  in   33138 t/min  vz  -0.81
+     60 s  trim   77.3  list  -80.2  top   -16.2  break end's deck   -18.5  far end's deck  -164.3  water  61288 t  in   31560 t/min  vz  -1.75
+
+STERN after the break: wholly under at 427 s (T 162.36 min); trim from 3.5 (at 5 s) to 77.3 deg (at 360 s)
+      0 s  trim   11.2  list  -48.9  top     0.0  break end's deck     4.5  far end's deck    23.9  water      0 t  in       0 t/min  vz   0.03
+     15 s  trim    7.1  list   18.9  top    18.9  break end's deck     3.5  far end's deck    16.8  water   7186 t  in    5599 t/min  vz  -0.01
+     30 s  trim    8.3  list   -3.2  top    20.3  break end's deck     2.8  far end's deck    18.1  water   7869 t  in    1853 t/min  vz  -0.02
+     45 s  trim    8.4  list  -27.6  top    19.3  break end's deck     1.5  far end's deck    16.9  water   8445 t  in    2695 t/min  vz  -0.00
+     60 s  trim    9.2  list  -30.9  top    19.6  break end's deck     0.3  far end's deck    16.9  water   9126 t  in    1612 t/min  vz  -0.01
+     75 s  trim   10.0  list  -41.9  top    19.5  break end's deck    -1.6  far end's deck    16.1  water   9637 t  in    2790 t/min  vz  -0.02
+     90 s  trim   10.8  list  -60.9  top    18.3  break end's deck    -5.4  far end's deck    13.2  water  10268 t  in    2721 t/min  vz  -0.03
+    105 s  trim   12.4  list  -80.2  top    15.7  break end's deck   -10.8  far end's deck    10.0  water  11376 t  in    4415 t/min  vz  -0.05
+    120 s  trim   13.8  list  -80.2  top    15.7  break end's deck   -12.6  far end's deck    10.4  water  12936 t  in    7096 t/min  vz  -0.07
+    135 s  trim   15.7  list  -80.2  top    16.2  break end's deck   -14.8  far end's deck    11.2  water  14243 t  in    3884 t/min  vz  -0.06
+    150 s  trim   16.5  list  -80.2  top    16.2  break end's deck   -16.0  far end's deck    11.3  water  15004 t  in    2143 t/min  vz  -0.03
+    165 s  trim   16.8  list  -80.2  top    16.0  break end's deck   -16.7  far end's deck    11.1  water  15610 t  in    2095 t/min  vz  -0.03
+    180 s  trim   17.1  list  -80.2  top    15.8  break end's deck   -17.4  far end's deck    10.9  water  16231 t  in    2156 t/min  vz  -0.03
+    195 s  trim   17.8  list  -80.2  top    15.8  break end's deck   -18.4  far end's deck    11.0  water  16773 t  in    2671 t/min  vz  -0.03
+    210 s  trim   18.4  list  -80.2  top    15.8  break end's deck   -19.2  far end's deck    11.1  water  17175 t  in    1627 t/min  vz  -0.03
+    225 s  trim   19.2  list  -80.2  top    16.1  break end's deck   -20.2  far end's deck    11.3  water  17581 t  in    1632 t/min  vz  -0.03
+    240 s  trim   20.2  list  -80.2  top    16.6  break end's deck   -21.4  far end's deck    11.6  water  18020 t  in    1875 t/min  vz  -0.05
+    300 s  trim   33.0  list  -80.2  top    23.5  break end's deck   -35.6  far end's deck    16.5  water  20436 t  in    3067 t/min  vz  -0.18
+    360 s  trim   77.3  list  -80.2  top    30.0  break end's deck   -75.2  far end's deck    17.6  water  25354 t  in    6818 t/min  vz  -0.48
+    420 s  trim   77.3  list  -80.2  top     5.5  break end's deck   -99.8  far end's deck    -7.0  water  31766 t  in    8833 t/min  vz  -0.73
+
+===== node e40_break_two_bodies_prototype.js 5.0 held -23 openK   (TITANIC_ROOT = a clean worktree of a97a6bd)
+core read from C:/temp/titanic-wt-stairs, core.js sha256 931e2e2609d7
+cap 5.00 GN m, list held: BREAK at T 156.07 min, trim 9.49 deg, list -2.0 deg; governing station x -16.15 (bulkhead J), M 5.001; hull peak 5.306 at x -0.5; shear there 37 MN
+  along the hull: largest moment at x -0.5 (5.306); largest moment/capacity with the aft joint 10 % weaker at x -0.5 (ratio 1.061)
+  M(x) GN m: -139:0.00  -121:0.09  -104:0.42  -87:1.03  -71:1.90  -54:2.93  -38:3.90  -22:4.78  -6:5.27  11:5.15  28:4.26  46:2.98  62:1.84  78:1.01  94:0.44  110:0.11  127:0.00
+  cut at the slice edge x -21.64 (asked -23.00); bulkhead K torn out (doors and top opened)
+  stern: x -139.0 to -21.6, 20 t, centre x -65.6 z 11.2; floodable 44396 m3, water aboard 0 t; open end 641 m2; 130 connections shut; vz 0.01 m/s
+  bow: x -21.6 to 130.3, 29 t, centre x 39.6 z 10.5; floodable 63201 m3, water aboard 36677 t; open end 641 m2; 84 connections shut; vz -0.04 m/s
+
+BOW after the break: wholly under at 47 s (T 156.85 min); trim from 9.7 (at 0 s) to 77.3 deg (at 32 s)
+      0 s  trim    9.5  list   -2.0  top     0.0  break end's deck     7.7  far end's deck   -12.4  water  36677 t  in       0 t/min  vz  -0.04
+     15 s  trim   43.6  list   -2.0  top    23.2  break end's deck    23.6  far end's deck   -71.6  water  39132 t  in   15188 t/min  vz  -1.29
+     30 s  trim   73.9  list   -2.0  top    15.2  break end's deck    15.9  far end's deck  -119.1  water  44058 t  in   22802 t/min  vz  -1.16
+     45 s  trim   77.3  list   -2.0  top     1.4  break end's deck     2.2  far end's deck  -135.1  water  50581 t  in   52788 t/min  vz  -0.75
+     60 s  trim   77.3  list   -2.0  top   -20.0  break end's deck   -19.4  far end's deck  -156.7  water  59519 t  in   31271 t/min  vz  -2.11
+
+STERN after the break: wholly under at never (20 min); trim from -1.4 (at 8 s) to 12.9 deg (at 1200 s)
+      0 s  trim    9.5  list   -2.0  top     0.0  break end's deck     7.7  far end's deck    26.4  water      0 t  in       0 t/min  vz   0.01
+     15 s  trim   -1.0  list   -2.0  top    13.0  break end's deck    12.6  far end's deck    12.5  water   1285 t  in     781 t/min  vz  -0.01
+     30 s  trim   -0.8  list   -2.0  top    12.8  break end's deck    12.3  far end's deck    12.6  water   1482 t  in     782 t/min  vz  -0.01
+     45 s  trim   -0.6  list   -2.0  top    12.9  break end's deck    12.1  far end's deck    12.7  water   1685 t  in     759 t/min  vz  -0.01
+     60 s  trim   -0.4  list   -2.0  top    13.1  break end's deck    11.9  far end's deck    12.8  water   1887 t  in     888 t/min  vz  -0.01
+     75 s  trim   -0.2  list   -2.0  top    13.3  break end's deck    11.6  far end's deck    12.9  water   2086 t  in     722 t/min  vz  -0.01
+     90 s  trim   -0.0  list   -2.0  top    13.4  break end's deck    11.4  far end's deck    13.1  water   2284 t  in     724 t/min  vz  -0.01
+    105 s  trim    0.2  list   -2.0  top    13.6  break end's deck    11.1  far end's deck    13.2  water   2478 t  in     737 t/min  vz  -0.01
+    120 s  trim    0.4  list   -2.0  top    13.8  break end's deck    10.9  far end's deck    13.3  water   2669 t  in     726 t/min  vz  -0.01
+    135 s  trim    0.6  list   -2.0  top    14.0  break end's deck    10.7  far end's deck    13.5  water   2859 t  in     731 t/min  vz  -0.01
+    150 s  trim    0.8  list   -2.0  top    14.1  break end's deck    10.5  far end's deck    13.6  water   3047 t  in     840 t/min  vz  -0.01
+    165 s  trim    1.0  list   -2.0  top    14.3  break end's deck    10.2  far end's deck    13.7  water   3234 t  in     721 t/min  vz  -0.00
+    180 s  trim    1.2  list   -2.0  top    14.5  break end's deck    10.0  far end's deck    13.8  water   3419 t  in     722 t/min  vz  -0.01
+    195 s  trim    1.4  list   -2.0  top    14.6  break end's deck     9.8  far end's deck    14.0  water   3601 t  in     720 t/min  vz  -0.00
+    210 s  trim    1.6  list   -2.0  top    14.8  break end's deck     9.6  far end's deck    14.1  water   3784 t  in     623 t/min  vz  -0.00
+    225 s  trim    1.8  list   -2.0  top    15.0  break end's deck     9.3  far end's deck    14.2  water   3965 t  in     771 t/min  vz  -0.00
+    240 s  trim    1.9  list   -2.0  top    15.1  break end's deck     9.1  far end's deck    14.3  water   4143 t  in     784 t/min  vz  -0.00
+    300 s  trim    2.6  list   -2.0  top    15.7  break end's deck     8.3  far end's deck    14.7  water   4784 t  in     688 t/min  vz  -0.00
+    360 s  trim    3.2  list   -2.0  top    16.2  break end's deck     7.7  far end's deck    15.1  water   5336 t  in     747 t/min  vz  -0.00
+    420 s  trim    3.6  list   -2.0  top    16.6  break end's deck     7.2  far end's deck    15.4  water   5729 t  in     425 t/min  vz  -0.00
+    480 s  trim    4.2  list   -2.0  top    17.0  break end's deck     6.6  far end's deck    15.8  water   6195 t  in     550 t/min  vz  -0.00
+    540 s  trim    4.8  list   -2.0  top    17.6  break end's deck     5.8  far end's deck    16.2  water   6813 t  in     703 t/min  vz  -0.00
+    600 s  trim    5.7  list   -2.0  top    18.4  break end's deck     4.8  far end's deck    16.8  water   7632 t  in     890 t/min  vz  -0.01
+    660 s  trim    6.8  list   -2.0  top    19.3  break end's deck     3.5  far end's deck    17.5  water   8656 t  in    1108 t/min  vz  -0.01
+    720 s  trim    8.1  list   -2.0  top    20.4  break end's deck     2.1  far end's deck    18.3  water   9852 t  in    1272 t/min  vz  -0.01
+    780 s  trim    9.5  list   -2.0  top    21.6  break end's deck     0.4  far end's deck    19.2  water  11242 t  in    1650 t/min  vz  -0.01
+    840 s  trim   10.8  list   -2.0  top    22.5  break end's deck    -1.2  far end's deck    19.8  water  12724 t  in     788 t/min  vz  -0.01
+    900 s  trim   11.3  list   -2.0  top    22.9  break end's deck    -1.9  far end's deck    20.1  water  13173 t  in     207 t/min  vz  -0.00
+    960 s  trim   11.6  list   -2.0  top    23.1  break end's deck    -2.2  far end's deck    20.2  water  13373 t  in     205 t/min  vz  -0.00
+   1020 s  trim   11.8  list   -2.0  top    23.3  break end's deck    -2.5  far end's deck    20.3  water  13585 t  in     219 t/min  vz  -0.00
+   1080 s  trim   12.1  list   -2.0  top    23.5  break end's deck    -2.8  far end's deck    20.5  water  13812 t  in     236 t/min  vz  -0.00
+   1140 s  trim   12.5  list   -2.0  top    23.7  break end's deck    -3.3  far end's deck    20.7  water  14060 t  in     259 t/min  vz  -0.00
+
+===== node e40_break_two_bodies_prototype.js 5.0 held -23   (TITANIC_ROOT = a clean worktree of a97a6bd)
+core read from C:/temp/titanic-wt-stairs, core.js sha256 931e2e2609d7
+cap 5.00 GN m, list held: BREAK at T 156.07 min, trim 9.49 deg, list -2.0 deg; governing station x -16.15 (bulkhead J), M 5.001; hull peak 5.306 at x -0.5; shear there 37 MN
+  along the hull: largest moment at x -0.5 (5.306); largest moment/capacity with the aft joint 10 % weaker at x -0.5 (ratio 1.061)
+  M(x) GN m: -139:0.00  -121:0.09  -104:0.42  -87:1.03  -71:1.90  -54:2.93  -38:3.90  -22:4.78  -6:5.27  11:5.15  28:4.26  46:2.98  62:1.84  78:1.01  94:0.44  110:0.11  127:0.00
+  cut at the slice edge x -21.64 (asked -23.00)
+  stern: x -139.0 to -21.6, 20 t, centre x -65.6 z 11.2; floodable 44396 m3, water aboard 0 t; open end 641 m2; 130 connections shut; vz 0.01 m/s
+  bow: x -21.6 to 130.3, 29 t, centre x 39.6 z 10.5; floodable 63201 m3, water aboard 36677 t; open end 641 m2; 84 connections shut; vz -0.04 m/s
+
+BOW after the break: wholly under at 47 s (T 156.85 min); trim from 9.7 (at 0 s) to 77.3 deg (at 32 s)
+      0 s  trim    9.5  list   -2.0  top     0.0  break end's deck     7.7  far end's deck   -12.4  water  36677 t  in       0 t/min  vz  -0.04
+     15 s  trim   43.6  list   -2.0  top    23.2  break end's deck    23.6  far end's deck   -71.6  water  39132 t  in   15188 t/min  vz  -1.29
+     30 s  trim   73.9  list   -2.0  top    15.2  break end's deck    15.9  far end's deck  -119.1  water  44058 t  in   22802 t/min  vz  -1.16
+     45 s  trim   77.3  list   -2.0  top     1.4  break end's deck     2.2  far end's deck  -135.1  water  50581 t  in   52788 t/min  vz  -0.75
+     60 s  trim   77.3  list   -2.0  top   -20.0  break end's deck   -19.4  far end's deck  -156.7  water  59519 t  in   31271 t/min  vz  -2.11
+
+STERN after the break: wholly under at never (20 min); trim from -1.4 (at 8 s) to 9.3 deg (at 0 s)
+      0 s  trim    9.5  list   -2.0  top     0.0  break end's deck     7.7  far end's deck    26.4  water      0 t  in       0 t/min  vz   0.01
+     15 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1095 t  in       8 t/min  vz  -0.00
+     30 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1095 t  in      26 t/min  vz   0.00
+     45 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in      67 t/min  vz   0.00
+     60 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1093 t  in     -63 t/min  vz   0.00
+     75 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in     -71 t/min  vz  -0.00
+     90 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in      72 t/min  vz   0.00
+    105 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1093 t  in     -75 t/min  vz   0.00
+    120 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1095 t  in      46 t/min  vz  -0.00
+    135 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in      64 t/min  vz   0.00
+    150 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1093 t  in     -66 t/min  vz  -0.00
+    165 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in      66 t/min  vz   0.00
+    180 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1093 t  in      49 t/min  vz   0.00
+    195 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in     -78 t/min  vz  -0.00
+    210 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in      60 t/min  vz   0.00
+    225 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1093 t  in     -74 t/min  vz   0.00
+    240 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1095 t  in     -83 t/min  vz  -0.00
+    300 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in      49 t/min  vz   0.00
+    360 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1095 t  in      49 t/min  vz  -0.00
+    420 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in      49 t/min  vz   0.00
+    480 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in     -75 t/min  vz  -0.00
+    540 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in      62 t/min  vz   0.00
+    600 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in     -75 t/min  vz  -0.00
+    660 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1093 t  in      66 t/min  vz   0.00
+    720 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in     -75 t/min  vz  -0.00
+    780 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in      66 t/min  vz   0.00
+    840 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in     -61 t/min  vz  -0.00
+    900 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in      66 t/min  vz   0.00
+    960 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in     -61 t/min  vz  -0.00
+   1020 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in      67 t/min  vz   0.00
+   1080 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1093 t  in     -61 t/min  vz   0.00
+   1140 s  trim   -1.2  list   -2.0  top    13.2  break end's deck    12.8  far end's deck    12.4  water   1094 t  in      73 t/min  vz   0.00
+
+===== node e40_break_two_bodies_prototype.js 5.0 held -30   (TITANIC_ROOT = a clean worktree of a97a6bd)
+core read from C:/temp/titanic-wt-stairs, core.js sha256 931e2e2609d7
+cap 5.00 GN m, list held: BREAK at T 156.07 min, trim 9.49 deg, list -2.0 deg; governing station x -16.15 (bulkhead J), M 5.001; hull peak 5.306 at x -0.5; shear there 37 MN
+  along the hull: largest moment at x -0.5 (5.306); largest moment/capacity with the aft joint 10 % weaker at x -0.5 (ratio 1.061)
+  M(x) GN m: -139:0.00  -121:0.09  -104:0.42  -87:1.03  -71:1.90  -54:2.93  -38:3.90  -22:4.78  -6:5.27  11:5.15  28:4.26  46:2.98  62:1.84  78:1.01  94:0.44  110:0.11  127:0.00
+  cut at the slice edge x -29.76 (asked -30.00)
+  stern: x -139.0 to -29.8, 18 t, centre x -69.7 z 11.2; floodable 40161 m3, water aboard 0 t; open end 637 m2; 144 connections shut; vz 0.01 m/s
+  bow: x -29.8 to 130.3, 31 t, centre x 35.7 z 10.5; floodable 67436 m3, water aboard 36677 t; open end 637 m2; 70 connections shut; vz -0.04 m/s
+
+BOW after the break: wholly under at 56 s (T 157.01 min); trim from 9.7 (at 0 s) to 77.3 deg (at 36 s)
+      0 s  trim    9.5  list   -2.0  top     0.0  break end's deck     9.0  far end's deck   -12.4  water  36677 t  in       0 t/min  vz  -0.04
+     15 s  trim   39.9  list   -2.0  top    25.9  break end's deck    26.3  far end's deck   -67.1  water  38887 t  in   14448 t/min  vz  -1.14
+     30 s  trim   68.1  list   -2.0  top    22.0  break end's deck    22.7  far end's deck  -114.9  water  43690 t  in   22576 t/min  vz  -1.16
+     45 s  trim   77.3  list   -2.0  top     7.9  break end's deck     8.7  far end's deck  -136.5  water  49843 t  in   21181 t/min  vz  -0.79
+     60 s  trim   77.3  list   -2.0  top    -3.6  break end's deck    -2.8  far end's deck  -148.1  water  57028 t  in   20907 t/min  vz  -1.08
+     75 s  trim   77.3  list   -2.0  top   -27.2  break end's deck   -26.8  far end's deck  -172.0  water  64130 t  in   38095 t/min  vz  -2.16
+
+STERN after the break: wholly under at 719 s (T 168.05 min); trim from 3.6 (at 5 s) to 77.3 deg (at 619 s)
+      0 s  trim    9.5  list   -2.0  top     0.0  break end's deck     9.1  far end's deck    26.4  water      0 t  in       0 t/min  vz   0.01
+     15 s  trim    6.2  list   -2.0  top    18.5  break end's deck     4.9  far end's deck    16.8  water   6514 t  in    7588 t/min  vz  -0.07
+     30 s  trim    7.9  list   -2.0  top    20.0  break end's deck     3.2  far end's deck    17.9  water   7524 t  in    1553 t/min  vz  -0.01
+     45 s  trim    8.2  list   -2.0  top    20.3  break end's deck     2.9  far end's deck    18.1  water   7708 t  in     523 t/min  vz  -0.00
+     60 s  trim    8.4  list   -2.0  top    20.4  break end's deck     2.7  far end's deck    18.2  water   7868 t  in     774 t/min  vz  -0.01
+     75 s  trim    8.7  list   -2.0  top    20.6  break end's deck     2.4  far end's deck    18.3  water   8132 t  in    1417 t/min  vz  -0.01
+     90 s  trim    9.1  list   -2.0  top    20.9  break end's deck     1.9  far end's deck    18.6  water   8620 t  in    2714 t/min  vz  -0.02
+    105 s  trim    9.9  list   -2.0  top    21.5  break end's deck     0.9  far end's deck    19.0  water   9431 t  in    3671 t/min  vz  -0.03
+    120 s  trim   10.9  list   -2.0  top    22.2  break end's deck    -0.2  far end's deck    19.5  water  10370 t  in    3385 t/min  vz  -0.03
+    135 s  trim   11.9  list   -2.0  top    22.9  break end's deck    -1.3  far end's deck    20.0  water  11164 t  in    2536 t/min  vz  -0.02
+    150 s  trim   12.8  list   -2.0  top    23.5  break end's deck    -2.2  far end's deck    20.4  water  11712 t  in    1852 t/min  vz  -0.02
+    165 s  trim   13.4  list   -2.0  top    24.0  break end's deck    -2.9  far end's deck    20.8  water  12083 t  in    1435 t/min  vz  -0.01
+    180 s  trim   14.0  list   -2.0  top    24.4  break end's deck    -3.5  far end's deck    21.0  water  12353 t  in    1066 t/min  vz  -0.01
+    195 s  trim   14.4  list   -2.0  top    24.7  break end's deck    -4.0  far end's deck    21.2  water  12553 t  in     638 t/min  vz  -0.01
+    210 s  trim   14.7  list   -2.0  top    25.0  break end's deck    -4.3  far end's deck    21.4  water  12724 t  in     630 t/min  vz  -0.01
+    225 s  trim   15.0  list   -2.0  top    25.2  break end's deck    -4.7  far end's deck    21.6  water  12874 t  in     448 t/min  vz  -0.01
+    240 s  trim   15.3  list   -2.0  top    25.3  break end's deck    -5.0  far end's deck    21.7  water  13026 t  in    -316 t/min  vz  -0.01
+    300 s  trim   15.9  list   -2.0  top    25.8  break end's deck    -5.8  far end's deck    21.9  water  13347 t  in     294 t/min  vz  -0.00
+    360 s  trim   16.7  list   -2.0  top    26.3  break end's deck    -6.6  far end's deck    22.3  water  13687 t  in     389 t/min  vz  -0.01
+    420 s  trim   18.0  list   -2.0  top    27.1  break end's deck    -8.1  far end's deck    22.9  water  14140 t  in     530 t/min  vz  -0.01
+    480 s  trim   20.7  list   -2.0  top    29.0  break end's deck   -11.0  far end's deck    24.2  water  14792 t  in     813 t/min  vz  -0.02
+    540 s  trim   27.8  list   -2.0  top    33.6  break end's deck   -18.4  far end's deck    27.4  water  15945 t  in    1697 t/min  vz  -0.07
+    600 s  trim   59.0  list   -2.0  top    45.6  break end's deck   -47.6  far end's deck    34.7  water  18856 t  in    4932 t/min  vz  -0.27
+    660 s  trim   77.3  list   -2.0  top    29.8  break end's deck   -75.7  far end's deck    17.4  water  25681 t  in    7150 t/min  vz  -0.38
+    720 s  trim   77.3  list   -2.0  top    -1.8  break end's deck  -107.5  far end's deck   -14.4  water  33585 t  in   11732 t/min  vz  -1.14
+
+===== node e40_break_two_bodies_prototype.js 5.2 free -30   (TITANIC_ROOT = a clean worktree of a97a6bd)
+core read from C:/temp/titanic-wt-stairs, core.js sha256 931e2e2609d7
+cap 5.20 GN m, list free: BREAK at T 155.63 min, trim 14.40 deg, list -66.8 deg; governing station x -16.15 (bulkhead J), M 5.200; hull peak 5.349 at x -5.7; shear there 26 MN
+  along the hull: largest moment at x -5.7 (5.349); largest moment/capacity with the aft joint 10 % weaker at x -24.4 (ratio 1.050)
+  M(x) GN m: -139:0.00  -121:0.09  -104:0.44  -87:1.08  -71:2.06  -54:3.19  -38:4.20  -22:5.02  -6:5.35  11:5.03  28:4.04  46:2.78  62:1.70  78:0.93  94:0.41  110:0.11  127:0.00
+  cut at the slice edge x -29.76 (asked -30.00)
+  stern: x -139.0 to -29.8, 18 t, centre x -69.7 z 11.2; floodable 40161 m3, water aboard 0 t; open end 637 m2; 144 connections shut; vz 0.07 m/s
+  bow: x -29.8 to 130.3, 31 t, centre x 35.7 z 10.5; floodable 67436 m3, water aboard 41464 t; open end 637 m2; 70 connections shut; vz -0.30 m/s
+
+BOW after the break: wholly under at 40 s (T 156.30 min); trim from 14.6 (at 0 s) to 77.3 deg (at 30 s)
+      0 s  trim   14.4  list  -66.8  top     0.0  break end's deck     0.3  far end's deck   -35.7  water  41464 t  in       0 t/min  vz  -0.30
+     15 s  trim   49.7  list  -80.2  top    24.5  break end's deck    16.4  far end's deck   -97.4  water  45948 t  in   20710 t/min  vz  -1.51
+     30 s  trim   77.3  list  -80.2  top    10.4  break end's deck     8.2  far end's deck  -137.6  water  51481 t  in   23742 t/min  vz  -1.24
+     45 s  trim   77.3  list  -80.2  top    -5.4  break end's deck    -7.6  far end's deck  -153.4  water  58153 t  in   23522 t/min  vz  -1.28
+     60 s  trim   77.3  list  -80.2  top   -32.5  break end's deck   -35.0  far end's deck  -180.8  water  65954 t  in   35959 t/min  vz  -2.44
+
+STERN after the break: wholly under at 409 s (T 162.45 min); trim from 5.1 (at 6 s) to 77.3 deg (at 342 s)
+      0 s  trim   14.4  list  -66.8  top     0.0  break end's deck     0.4  far end's deck    24.7  water      0 t  in       0 t/min  vz   0.07
+     15 s  trim    7.6  list   27.8  top    18.7  break end's deck     2.4  far end's deck    16.4  water   7624 t  in    2661 t/min  vz   0.04
+     30 s  trim    8.7  list    9.9  top    20.4  break end's deck     2.1  far end's deck    18.1  water   8536 t  in    4090 t/min  vz  -0.03
+     45 s  trim    9.3  list   33.4  top    19.5  break end's deck     0.0  far end's deck    16.8  water   9072 t  in     483 t/min  vz   0.01
+     60 s  trim    9.8  list   34.7  top    19.7  break end's deck    -0.7  far end's deck    16.8  water   9644 t  in    2469 t/min  vz  -0.01
+     75 s  trim   10.7  list   53.8  top    18.9  break end's deck    -4.1  far end's deck    14.5  water  10138 t  in    1517 t/min  vz  -0.02
+     90 s  trim   12.1  list   80.2  top    15.7  break end's deck   -10.4  far end's deck     9.8  water  11079 t  in    6309 t/min  vz  -0.05
+    105 s  trim   13.5  list   80.2  top    15.7  break end's deck   -12.1  far end's deck    10.3  water  12547 t  in    7155 t/min  vz  -0.05
+    120 s  trim   15.4  list   80.2  top    16.1  break end's deck   -14.4  far end's deck    11.0  water  14021 t  in    4793 t/min  vz  -0.06
+    135 s  trim   16.2  list   80.2  top    16.0  break end's deck   -15.7  far end's deck    11.0  water  14992 t  in    3188 t/min  vz  -0.04
+    150 s  trim   16.6  list   80.2  top    15.8  break end's deck   -16.6  far end's deck    10.9  water  15730 t  in    2262 t/min  vz  -0.04
+    165 s  trim   17.2  list   80.2  top    15.7  break end's deck   -17.5  far end's deck    10.9  water  16343 t  in    2154 t/min  vz  -0.04
+    180 s  trim   17.9  list   80.2  top    15.8  break end's deck   -18.5  far end's deck    11.0  water  16872 t  in    1506 t/min  vz  -0.03
+    195 s  trim   18.6  list   80.2  top    15.9  break end's deck   -19.4  far end's deck    11.1  water  17256 t  in    1537 t/min  vz  -0.03
+    210 s  trim   19.3  list   80.2  top    16.2  break end's deck   -20.4  far end's deck    11.3  water  17663 t  in    1735 t/min  vz  -0.04
+    225 s  trim   20.4  list   80.2  top    16.7  break end's deck   -21.7  far end's deck    11.7  water  18112 t  in    1905 t/min  vz  -0.05
+    240 s  trim   22.1  list   80.2  top    17.6  break end's deck   -23.7  far end's deck    12.3  water  18619 t  in    2171 t/min  vz  -0.07
+    300 s  trim   42.5  list   80.2  top    27.9  break end's deck   -45.2  far end's deck    19.2  water  21517 t  in    4249 t/min  vz  -0.29
+    360 s  trim   77.3  list   80.2  top    23.0  break end's deck   -82.2  far end's deck    10.6  water  27013 t  in    4892 t/min  vz  -0.31
+    420 s  trim   77.3  list   80.2  top   -13.1  break end's deck  -118.6  far end's deck   -25.8  water  35085 t  in   15813 t/min  vz  -1.51
+
+===== node e40_break_two_bodies_prototype.js 5.4 free -30   (TITANIC_ROOT = a clean worktree of a97a6bd)
+core read from C:/temp/titanic-wt-stairs, core.js sha256 931e2e2609d7
+cap 5.40 GN m, list free: NO BREAK: foundered at T 156.94; peak 5.385 GN m at T 156.00, trim 21.89
+
+===== node e40_break_two_bodies_prototype.js 5.4 held -30   (TITANIC_ROOT = a clean worktree of a97a6bd)
+core read from C:/temp/titanic-wt-stairs, core.js sha256 931e2e2609d7
+cap 5.40 GN m, list held: BREAK at T 156.75 min, trim 11.18 deg, list -2.0 deg; governing station x -16.15 (bulkhead J), M 5.401; hull peak 5.727 at x -0.5; shear there 40 MN
+  along the hull: largest moment at x -0.5 (5.727); largest moment/capacity with the aft joint 10 % weaker at x -0.5 (ratio 1.060)
+  M(x) GN m: -139:0.00  -121:0.09  -104:0.42  -87:1.05  -71:1.97  -54:3.10  -38:4.19  -22:5.16  -6:5.69  11:5.54  28:4.50  46:3.08  62:1.86  78:1.01  94:0.44  110:0.11  127:0.00
+  cut at the slice edge x -29.76 (asked -30.00)
+  stern: x -139.0 to -29.8, 18 t, centre x -69.7 z 11.2; floodable 40161 m3, water aboard 0 t; open end 637 m2; 144 connections shut; vz 0.02 m/s
+  bow: x -29.8 to 130.3, 31 t, centre x 35.7 z 10.5; floodable 67436 m3, water aboard 38089 t; open end 637 m2; 70 connections shut; vz -0.09 m/s
+
+BOW after the break: wholly under at 52 s (T 157.61 min); trim from 11.4 (at 0 s) to 77.3 deg (at 33 s)
+      0 s  trim   11.2  list   -2.0  top     0.0  break end's deck     8.5  far end's deck   -17.4  water  38089 t  in       0 t/min  vz  -0.09
+     15 s  trim   44.3  list   -2.0  top    25.6  break end's deck    26.1  far end's deck   -76.0  water  40675 t  in   15815 t/min  vz  -1.27
+     30 s  trim   73.2  list   -2.0  top    18.6  break end's deck    19.3  far end's deck  -122.9  water  45793 t  in   24914 t/min  vz  -1.18
+     45 s  trim   77.3  list   -2.0  top     4.5  break end's deck     5.3  far end's deck  -139.9  water  51743 t  in   22117 t/min  vz  -0.72
+     60 s  trim   77.3  list   -2.0  top    -9.6  break end's deck    -9.0  far end's deck  -154.2  water  58985 t  in   24814 t/min  vz  -1.41
+     75 s  trim   77.3  list   -2.0  top   -39.1  break end's deck   -38.8  far end's deck  -184.0  water  67278 t  in   38588 t/min  vz  -2.62
+
+STERN after the break: wholly under at 719 s (T 168.73 min); trim from 4.2 (at 6 s) to 77.3 deg (at 619 s)
+      0 s  trim   11.2  list   -2.0  top     0.0  break end's deck     8.5  far end's deck    28.6  water      0 t  in       0 t/min  vz   0.02
+     15 s  trim    6.3  list   -2.0  top    18.6  break end's deck     4.8  far end's deck    16.9  water   6593 t  in    7368 t/min  vz  -0.07
+     30 s  trim    7.9  list   -2.0  top    20.1  break end's deck     3.2  far end's deck    17.9  water   7539 t  in    1383 t/min  vz  -0.01
+     45 s  trim    8.2  list   -2.0  top    20.3  break end's deck     2.9  far end's deck    18.1  water   7713 t  in     598 t/min  vz  -0.00
+     60 s  trim    8.4  list   -2.0  top    20.4  break end's deck     2.7  far end's deck    18.2  water   7873 t  in     879 t/min  vz  -0.01
+     75 s  trim    8.7  list   -2.0  top    20.6  break end's deck     2.4  far end's deck    18.4  water   8144 t  in    1311 t/min  vz  -0.01
+     90 s  trim    9.1  list   -2.0  top    20.9  break end's deck     1.8  far end's deck    18.6  water   8646 t  in    2595 t/min  vz  -0.02
+    105 s  trim    9.9  list   -2.0  top    21.5  break end's deck     0.9  far end's deck    19.0  water   9461 t  in    3840 t/min  vz  -0.03
+    120 s  trim   10.9  list   -2.0  top    22.2  break end's deck    -0.2  far end's deck    19.5  water  10401 t  in    3644 t/min  vz  -0.03
+    135 s  trim   11.9  list   -2.0  top    22.9  break end's deck    -1.3  far end's deck    20.0  water  11194 t  in    2440 t/min  vz  -0.02
+    150 s  trim   12.8  list   -2.0  top    23.6  break end's deck    -2.2  far end's deck    20.4  water  11726 t  in    1679 t/min  vz  -0.02
+    165 s  trim   13.4  list   -2.0  top    24.0  break end's deck    -2.9  far end's deck    20.8  water  12093 t  in    1104 t/min  vz  -0.01
+    180 s  trim   14.0  list   -2.0  top    24.4  break end's deck    -3.5  far end's deck    21.0  water  12360 t  in     737 t/min  vz  -0.01
+    195 s  trim   14.4  list   -2.0  top    24.7  break end's deck    -4.0  far end's deck    21.3  water  12562 t  in     524 t/min  vz  -0.01
+    210 s  trim   14.7  list   -2.0  top    25.0  break end's deck    -4.4  far end's deck    21.4  water  12731 t  in     512 t/min  vz  -0.01
+    225 s  trim   15.0  list   -2.0  top    25.2  break end's deck    -4.7  far end's deck    21.6  water  12882 t  in     675 t/min  vz  -0.01
+    240 s  trim   15.3  list   -2.0  top    25.4  break end's deck    -5.0  far end's deck    21.7  water  13039 t  in    1480 t/min  vz  -0.01
+    300 s  trim   15.9  list   -2.0  top    25.7  break end's deck    -5.7  far end's deck    21.9  water  13346 t  in     295 t/min  vz  -0.00
+    360 s  trim   16.7  list   -2.0  top    26.3  break end's deck    -6.6  far end's deck    22.3  water  13687 t  in     389 t/min  vz  -0.01
+    420 s  trim   18.0  list   -2.0  top    27.2  break end's deck    -8.1  far end's deck    22.9  water  14140 t  in     530 t/min  vz  -0.01
+    480 s  trim   20.7  list   -2.0  top    29.0  break end's deck   -11.0  far end's deck    24.2  water  14793 t  in     814 t/min  vz  -0.02
+    540 s  trim   27.8  list   -2.0  top    33.6  break end's deck   -18.4  far end's deck    27.4  water  15948 t  in    1701 t/min  vz  -0.07
+    600 s  trim   59.1  list   -2.0  top    45.6  break end's deck   -47.7  far end's deck    34.7  water  18863 t  in    4945 t/min  vz  -0.27
+    660 s  trim   77.3  list   -2.0  top    29.8  break end's deck   -75.7  far end's deck    17.4  water  25693 t  in    7160 t/min  vz  -0.38
+    720 s  trim   77.3  list   -2.0  top    -1.9  break end's deck  -107.6  far end's deck   -14.5  water  33602 t  in   11781 t/min  vz  -1.14
+
+===== node e40_break_two_bodies_prototype.js 8.5 held -30   (TITANIC_ROOT = a clean worktree of a97a6bd)
+core read from C:/temp/titanic-wt-stairs, core.js sha256 931e2e2609d7
+cap 8.50 GN m, list held: NO BREAK: foundered at T 158.87; peak 6.215 GN m at T 157.87, trim 21.88
+

@@ -1,0 +1,31 @@
+PASS a seed gives one night: the same spec twice, 1,000 seeds all different and inside the stated spreads same, 1000 distinct                                              same, 1000 distinct, in range
+PASS the levels (G1): "Any night" is the default draw; each level inside its spreads; a seed keeps its berg and its clock default = hard; spreads held; berg and clock kept                early 1+0.6 x 457 m, off <= R+34; hard 0.55+0.75 x 457 m, off <= R+34; night1912 0.9+0.2 x 457 m, off <= R+10
+PASS a seeded night replays exactly: every state of 700 steps, three nights, run twice                    1912:4a72c08d 7:04f2c92b 16:01bbcc20                             equal SHA-256 of the state after every step
+PASS a reader is attached, stepped once a step and owns its orders in the log; the night is the same with it and without (700 steps) attached yes, 700 steps, order at step 300 done; without it: none, states equal; replay the same, and without the readers the same, its order idle; nobody's order unknown; a taken name refused 700 steps, the order logged at step 300 and replayed; equal SHA-256 of every state; the log replays without the readers too; "helm" cannot be taken
+PASS before the ice is near, Night.step is exactly Motion.step (17 s of the 1912 watch)                   1d05e05822c7                                                     1d05e05822c7
+PASS the 1912 watch: bells, then the helm order 20.5 s later with the ice 257 m ahead                     bells 13.75 s at 494.3 m; order 20.50 s later, 257.000000 m      bells at 13.75 s; "about 500 yards" (457 m, British report), within 45 m; 257 m (the 1912 geometry, core/night.js)
+PASS the 1912 watch: she touches the ice at 11.40 pm                                                      23:40:00.2                                                       23:40 (ship's time)
+in   the 1912 watch: her head had swung at the touch                                                      15.1 deg to port                                                 "about two points" (22.5 deg, Hichens); about one point (11.25 deg, Halpern's model)
+PASS the 1912 watch on the reconstructed orders is the P3 encounter (course 266 deg, not north)           0.977300 m2, starboard x 123.125 to 51.625                       0.977300 m2, x 123.125 to 51.625 (tools/encounter_tests.js)
+PASS a played watch (4 orders: helm, telegraph, one shaft, a door) replays from its log, bit for bit      6dcb726a at step 900                                             6dcb726a at step 900
+PASS a snapshot (seed, orders, step) resumes the night: 400 more steps equal the uninterrupted run        77bef09b                                                         77bef09b
+PASS the reaction time runs from the bells to the first order                                             3.25 s, hindsight false                                          3.25 s, false
+PASS an order before the bells is marked as hindsight, not as a reaction                                  reaction n/a, hindsight true, miss                               no reaction time, hindsight true
+PASS G27: a watch holed by hand at T+10 (a punch and a stroke of five, logged as `hole`, the model's own order) replays from its log, bit for bit ce04610b at step 28885                                           ce04610b at step 28885 (6 holes; she breaks at T+119.35)
+PASS   ... and its bounds need no state: inside her zones 1 m clear of either end, from her floor + 0.25 m to E deck, area up to 5 m2 (the brush's largest) inside 4 of 4 accepted; outside 8 of 8 refused                   all accepted; all refused
+PASS the miss window, order 0.5 to 30.5 s after the bells: each outcome equals the P3 encounter's         all 7 equal                                                      kind, clearance, area and bow crush as tools/encounter_run.js
+PASS the miss window turns between 15 and 21 s: sooner she clears, later she is holed                     0.5:miss 5.5:miss 10.5:miss 15.5:miss 20.5:holed 25.5:holed 30.5:holed miss up to 15.5 s; holed from 20.5 s (helm only, never reversed; the ice 256 m ahead at 20.5 s since P3c)
+PASS the same night on courses 0, 90, 180 and 266 deg: the same damage                                    0.977300 0.977300 0.977300 0.977300                              within 1e-4 m2 (whole turns of the round berg's outline nodes: the same problem)
+in   the same night on courses 266.37, 267.13 and 311.61 deg (between the outline's nodes)                0.9908 0.9780 0.9619 m2                                          within 2 % of 0.9773 m2 (1.7 % at e11's point; the 1912 point grazes a stem strike: BACKLOG P3e)
+in   the 1912 berg dead ahead and no order: the bow crushes, and the core floats her                      bow 22.9 m, afloat; verdict after 14 s                           80 to 100 ft crushed and afloat (Wilding); the watch must end by itself
+
+THE MISS WINDOW of the 1912 night (out/night_window_1912.txt)
+    order  0.5 s after the bells (ice 489 m ahead)  Clear of the ice: it passed 86 m off her starboard side
+    order  5.5 s after the bells (ice 431 m ahead)  Clear of the ice: it passed 52 m off her starboard side
+    order 10.5 s after the bells (ice 373 m ahead)  Clear of the ice: it passed 22 m off her starboard side
+    order 15.5 s after the bells (ice 315 m ahead)  Holed: 0.23 m2 of seams open along the starboard side, electric engine room to shaft tunnel / refrigerated cargo
+    order 20.5 s after the bells (ice 257 m ahead)  Holed: 0.98 m2 of seams open along the starboard side, the forepeak to boiler room 5
+    order 25.5 s after the bells (ice 199 m ahead)  Stem into the ice: bow crushed in 13 m, 0.06 m2 of seams open along the starboard side. Open to the sea: the forepeak to No. 1 hold
+    order 30.5 s after the bells (ice 141 m ahead)  Stem into the ice: bow crushed in 20 m, 0.06 m2 of seams open along the starboard side. Open to the sea: the forepeak to No. 1 hold
+
+PASS: every MUST row (17); CHECK rows in range: 3 of 3

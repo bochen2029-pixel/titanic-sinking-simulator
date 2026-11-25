@@ -1,0 +1,1165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Watch: User Guide, edition 1.6</title>
+<meta name="generator" content="tools/build_guide.js from docs/guide/src and docs/guide/template">
+<style>
+/* The User Guide's one stylesheet, for the screen and for print (Letter). tools/build_guide.js inlines it into the
+   HTML and fills its facts (a name between two pairs of at-signs) as it does the chapters'. Navy and brass, serif
+   headings. */
+:root {
+  --navy: #0b1f33; --navy2: #13304d; --ink: #1d2733; --muted: #5b6878; --rule: #d9dee5; --paper: #ffffff;
+  --brass: #a8834a; --brass2: #d8c29a; --ivory: #fbf8f2; --sea: #2c6e91; --seabg: #f1f6f9;
+  --ok: #2f7d4f; --warn: #b7791f; --crit: #a33a30; --critbg: #fbf3f2;
+  --serif: Georgia, Cambria, "Times New Roman", serif;
+  --sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --mono: Consolas, "Cascadia Mono", Menlo, monospace;
+}
+
+/* ------------------------------------------------------------------ paper */
+@page {
+  size: Letter;
+  margin: 0.72in 0.8in 0.78in 0.8in;
+  @bottom-left { content: "The Watch · User Guide, edition 1.6"; font: 7.5pt var(--sans); color: #8a95a3; letter-spacing: .04em; vertical-align: top; padding-top: 0.2in; }
+  @bottom-right { content: counter(page); font: 9pt var(--serif); color: var(--brass); vertical-align: top; padding-top: 0.17in; }
+}
+@page cover { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
+
+* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); }
+body { font: 10.2pt/1.52 var(--sans); orphans: 3; widows: 3; }
+h1, h2, h3 { font-family: var(--serif); font-weight: normal; color: var(--navy); }
+h2 { font-size: 23pt; line-height: 1.12; margin: 0 0 4pt; }
+h3 { font-size: 13.5pt; line-height: 1.25; margin: 17pt 0 5pt; color: var(--navy2); break-after: avoid; }
+h4 { font: 600 8.6pt/1.3 var(--sans); letter-spacing: .09em; text-transform: uppercase; color: var(--brass); margin: 13pt 0 4pt; break-after: avoid; }
+h3 + h4 { margin-top: 6pt; }
+p { margin: 0 0 7pt; }
+a { color: var(--sea); text-decoration: none; }
+strong { font-weight: 600; color: var(--navy); }
+code { font: 8.9pt var(--mono); background: #f3f5f8; border-radius: 2px; padding: 0 2pt; color: var(--navy2); }
+kbd { display: inline-block; min-width: 1.55em; text-align: center; padding: 0 3.5pt; font: 600 8.4pt/1.45 var(--sans); color: var(--navy);
+  border: 1px solid #b9c2cd; border-bottom-width: 2px; border-radius: 3px; background: #f6f8fa; }
+.chip { display: inline-block; font: 600 8.4pt/1.45 var(--sans); padding: 0 6pt; border-radius: 9pt; border: 1px solid #c3ccd7; color: var(--navy); background: #f2f5f8; white-space: nowrap; }
+.chip.long { display: inline; white-space: normal; padding: 0 4pt; border-radius: 4pt; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.ui { font: 600 8.6pt var(--sans); letter-spacing: .07em; text-transform: uppercase; color: var(--navy2); }
+ul, ol { margin: 0 0 8pt; padding-left: 15pt; }
+li { margin: 2pt 0; }
+li::marker { color: var(--brass); }
+
+/* ------------------------------------------------------------------ the parts of a chapter */
+.chapter, .contents { break-before: page; }
+.eyebrow { font: 600 8.5pt/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--brass); margin-bottom: 7pt; }
+.rule { height: 2px; background: linear-gradient(90deg, var(--brass), rgba(168, 131, 74, 0)); margin: 7pt 0 15pt; border: 0; }
+.lede { font: 11.6pt/1.5 var(--serif); color: #3d4a5a; margin-bottom: 13pt; }
+.steps { counter-reset: s; list-style: none; padding: 0; }
+.steps > li { counter-increment: s; position: relative; padding: 1pt 0 5pt 29pt; margin: 0 0 3pt; break-inside: avoid; }
+.steps > li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 19pt; height: 19pt; border-radius: 50%; background: var(--navy); color: #fff; font: 600 9.5pt/19pt var(--serif); text-align: center; }
+
+.tw { display: flow-root; margin: 5pt 0 9pt; break-inside: avoid; }
+.tw.long { break-inside: auto; clear: both; }
+.tw.long tbody.first, .tw.long tbody.last { break-inside: avoid; }
+.tw.long thead { break-after: avoid; }
+table { width: 100%; border-collapse: collapse; margin: 0; font-size: 9.3pt; line-height: 1.4; }
+p:has(+ .tw), p:has(+ .gen), p:has(+ ul), p:has(+ ol) { break-after: avoid; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+th { text-align: left; font: 600 7.9pt/1.3 var(--sans); letter-spacing: .07em; text-transform: uppercase; color: var(--muted); border-bottom: 1.5px solid var(--navy); padding: 3.5pt 5pt; vertical-align: bottom; }
+td { border-bottom: 1px solid var(--rule); padding: 3.8pt 5pt; vertical-align: top; }
+td:first-child { color: var(--navy); }
+th.r, td.r { text-align: right; } th.c, td.c { text-align: center; }
+td.r { white-space: nowrap; font-variant-numeric: tabular-nums; }
+td code { font-size: 8.2pt; background: none; padding: 0; white-space: normal; word-break: break-word; }
+.tcap { font-size: 8.5pt; color: var(--muted); font-style: italic; margin: 4pt 0 0; }
+.gen { position: relative; }
+
+.box { display: flow-root; border-left: 3px solid var(--brass); background: var(--ivory); padding: 7pt 11pt 2pt; margin: 9pt 0 11pt; break-inside: avoid; }
+.box.tip { border-color: var(--sea); background: var(--seabg); }
+.box.warn { border-color: var(--crit); background: var(--critbg); }
+.box .lab { font: 600 7.9pt var(--sans); letter-spacing: .13em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 3pt; }
+.box.tip .lab { color: var(--sea); } .box.warn .lab { color: var(--crit); }
+.box p { margin-bottom: 5pt; }
+
+figure { margin: 7pt 0 12pt; break-inside: avoid; }
+figure img { display: block; width: 100%; height: auto; max-height: 8.4in; object-fit: contain; border: 1px solid var(--rule); border-radius: 3px; background: #05090f; }
+figcaption { font-size: 8.6pt; line-height: 1.4; color: var(--muted); margin-top: 4pt; font-style: italic; }
+figure.half { width: 64%; margin-left: auto; margin-right: auto; }
+figure.stage { width: 84%; margin-left: auto; margin-right: auto; }
+figure.side { float: right; clear: right; width: 2.45in; margin: 2pt 0 10pt 0.22in; }
+figure.narrow { width: 2.6in; margin-left: auto; margin-right: auto; }
+.figrow { display: flex; gap: 0.18in; align-items: flex-start; margin: 7pt 0 12pt; break-inside: avoid; }
+.figrow > figure { flex: 1 1 0; margin: 0; min-width: 0; }
+.figrow.phone { justify-content: center; gap: 0.3in; }
+.figrow.phone > figure, figure.phone { flex: 0 0 2.3in; width: 2.3in; margin-left: auto; margin-right: auto; }
+.chapter::after { content: ""; display: block; clear: both; }
+figure:not(.side), .figrow { clear: both; }
+
+/* ------------------------------------------------------------------ the contents page */
+.toc { list-style: none; padding: 0; margin: 8pt 0 18pt; }
+.toc li { margin: 0; border-bottom: 1px solid var(--rule); }
+.toc a { display: flex; align-items: baseline; padding: 7pt 0; color: inherit; }
+.toc .n { font: 13pt var(--serif); color: var(--brass); width: 26pt; flex: none; }
+.toc .t { font: 12.5pt/1.25 var(--serif); color: var(--navy); flex: 1; }
+.toc .t small { display: block; font: 8.8pt/1.4 var(--sans); color: var(--muted); margin-top: 2pt; }
+.toc .pg { width: 30pt; flex: none; text-align: right; font: 12pt var(--serif); color: var(--navy2); }
+
+/* ------------------------------------------------------------------ the cover */
+.cover { page: cover; position: relative; overflow: hidden; width: 8.5in; height: 10.98in; color: #f3efe6;
+  background: radial-gradient(ellipse at 70% 15%, #1d4467 0%, var(--navy) 55%, #06121e 100%); break-after: page; }
+.cover .frame { position: absolute; inset: 0.55in; border: 1px solid rgba(216, 194, 154, .45); }
+.cover .inner { position: absolute; left: 1.1in; right: 1.1in; top: 2.15in; }
+.cover .kick { font: 600 9pt/1 var(--sans); letter-spacing: .32em; text-transform: uppercase; color: var(--brass2); }
+.cover h1 { font-size: 48pt; line-height: 1.02; color: #fbf6ea; margin: 18pt 0 10pt; }
+.cover .sub { font: italic 16pt/1.35 var(--serif); color: #d7cfbf; }
+.cover .line { width: 1.6in; height: 2px; background: var(--brass2); margin: 26pt 0 20pt; }
+.cover .meta { font-size: 9.6pt; color: #b9c3cf; line-height: 1.75; }
+.cover .foot { position: absolute; left: 1.1in; right: 1.1in; bottom: 1.0in; font-size: 8.6pt; color: #8fa0b2; border-top: 1px solid rgba(216, 194, 154, .3); padding-top: 9pt; display: flex; justify-content: space-between; }
+.cover svg { position: absolute; right: -0.4in; bottom: 2.1in; width: 7.2in; opacity: .9; }
+
+/* ------------------------------------------------------------------ on a screen: pages on a desk */
+@media screen {
+  html { background: #d9dfe6; }
+  body { background: transparent; padding: 24px 0 48px; }
+  .cover, .contents, .chapter { width: 8.5in; max-width: 100%; margin: 0 auto 24px; box-shadow: 0 2px 14px rgba(11, 31, 51, .18); }
+  .contents, .chapter { background: var(--paper); padding: 0.72in 0.8in 0.8in; }
+  .contents::after, .chapter::after { content: ""; display: block; clear: both; }
+  @media (max-width: 8.6in) {
+    body { padding: 0; }
+    .cover { height: auto; min-height: 100vh; }
+    .cover .inner { position: relative; left: auto; right: auto; top: auto; padding: 1.6in 0.6in 3.4in; }
+    .cover .frame { inset: 0.3in; }
+    .contents, .chapter { padding: 28px 18px 36px; margin-bottom: 12px; }
+    figure.side { float: none; width: 70%; margin: 7pt auto 12pt; }
+    .figrow { flex-direction: column; }
+  }
+}
+
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="kick">RMS Titanic · 14 April 1912</div>
+    <h1>The Watch</h1>
+    <div class="sub">A flooding and ship-handling simulator<br>User Guide</div>
+    <div class="line"></div>
+    <div class="meta">Edition 1.6 · 21 November 2026<br>
+      For the website build 0.2.0 (app b139d97150)<br>
+      Built from repository commit 3fb0ede</div>
+  </div>
+  <svg viewBox="0 0 700 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M40 78 L612 78 L655 52 L600 52 L585 60 L120 60 L60 66 Z" fill="none" stroke="#d8c29a" stroke-width="1.4"/>
+    <path d="M150 60 L150 44 L520 44 L520 60" fill="none" stroke="#d8c29a" stroke-width="1"/>
+    <g fill="none" stroke="#d8c29a" stroke-width="1.1">
+      <path d="M215 44 L219 14 L235 14 L231 44"/><path d="M300 44 L304 14 L320 14 L316 44"/>
+      <path d="M385 44 L389 14 L405 14 L401 44"/><path d="M470 44 L474 14 L490 14 L486 44"/>
+    </g>
+    <path d="M110 60 L104 8 M600 52 L606 4" stroke="#d8c29a" stroke-width=".8"/>
+    <path d="M0 92 Q60 86 120 92 T240 92 T360 92 T480 92 T600 92 T720 92" fill="none" stroke="#5e88a8" stroke-width="1"/>
+    <path d="M0 104 Q60 98 120 104 T240 104 T360 104 T480 104 T600 104 T720 104" fill="none" stroke="#3f6684" stroke-width=".8"/>
+  </svg>
+  <div class="foot"><span>titanic-sinking-simulator · MIT licence</span><span>Pictures and figures taken from the build itself</span></div>
+</section>
+
+<section class="contents" id="contents">
+  <div class="eyebrow">Contents</div>
+  <h2>What is in this guide</h2>
+  <hr class="rule">
+  <ol class="toc">
+<li><a href="#ch1"><span class="n">1</span><span class="t">The simulator in one page<small>what it is, what it models, what it does not</small></span><span class="pg">3</span></a></li>
+<li><a href="#ch2"><span class="n">2</span><span class="t">Quick start: your first watch<small>from opening the page to the end of a watch, in nine steps</small></span><span class="pg">6</span></a></li>
+<li><a href="#ch3"><span class="n">3</span><span class="t">The screen<small>the readouts, the views, the Night look, the two eyes, her wake, the sounds, the panel, a phone</small></span><span class="pg">8</span></a></li>
+<li><a href="#ch4"><span class="n">4</span><span class="t">The Bridge: wheel and telegraph<small>the instruments, the wheel and the 1912 helm orders, the telegraph and the engines</small></span><span class="pg">14</span></a></li>
+<li><a href="#ch5"><span class="n">5</span><span class="t">Playing a watch<small>the bells, the outcomes, the forecast, the same berg another way, the end of a watch and its link, seeds</small></span><span class="pg">17</span></a></li>
+<li><a href="#ch6"><span class="n">6</span><span class="t">After the ice<small>the reports, the boats, help, the hull gauge, her end and her fall to the bed, the Carpathia question</small></span><span class="pg">22</span></a></li>
+<li><a href="#ch7"><span class="n">7</span><span class="t">Scenarios and what-ifs<small>the scenario cards, the clock, the hole tool, doors and bulkheads, what-ifs</small></span><span class="pg">36</span></a></li>
+<li><a href="#ch8"><span class="n">8</span><span class="t">Her systems<small>coal to steam to screws; the lights and the doors; the pumps and the orders to them; the stokehold</small></span><span class="pg">39</span></a></li>
+<li><a href="#ch9"><span class="n">9</span><span class="t">The evidence<small>the run against the eyewitness record, and the cases the fit never saw</small></span><span class="pg">43</span></a></li>
+<li><a href="#ch10"><span class="n">10</span><span class="t">How the model works, briefly<small>the flooding, the handling, the ice, speed, the wake, the pumps, the readers, her strength, her fall</small></span><span class="pg">46</span></a></li>
+<li><a href="#ch11"><span class="n">11</span><span class="t">Reference<small>running it yourself, the commands, a glossary, the sources, this guide</small></span><span class="pg">51</span></a></li>
+  </ol>
+  <aside class="box"><b class="lab">How this guide is made</b>
+  <p>The chapters are Markdown files kept with the simulator's code. A script builds this document from them, takes its
+  pictures from the website build through the page's own controls, and pulls the tables of results from the
+  repository's own test output, so the guide changes when the simulator does. Names in
+  <span class="chip">rounded boxes</span> are the labels of controls on the screen; <kbd>A</kbd> is a key.</p></aside>
+</section>
+
+<section class="chapter" id="ch1">
+<div class="eyebrow">Chapter 1</div>
+<h2>The simulator in one page</h2>
+<hr class="rule">
+<p class="lede">You stand the watch on the bridge of RMS Titanic at 11:39 pm on 14 April 1912. She makes 22½ knots on a course of 266°. Somewhere ahead is ice. What you order, and when, decides what the ice does to her. The flooding model then decides whether she sinks, and how. After the ice the night goes on: reports reach the bridge, the boats go down, the wireless calls for help. When she founders, the page follows her two pieces down to the sea bed.</p>
+<aside class="box note"><b class="lab">This edition</b>
+<p>Edition 1.6 describes the model as it stood on 21 November 2026 (the repository at 3fb0ede). Since edition 1.5 the 1912 damage is one damage for the preset and the watch alike, shared out over her compartments as Hackett and Bedford give its openings, and fitted to both together; boiler room 5's forward bunker holds the sea until it gives way, and her forepeak stays dry above its tank for the first minutes, as the record has them; her rooms are read from the deck plans into tables; and her bow wave follows a law. In her fall both pieces now come to rest upright, as the wreck's do, and they go down without their funnels, the first of which falls at the surface at about 2:15 am. The model now computes its own exponentials, logarithms and arc tangents as it did its sines, so a browser reckons the night as Node does; the eyewitness record is kept beside it as a ledger of checks; and the Carpathia question is put to this model afresh.</p>
+</aside>
+<p>The simulator computes the sinking instead of animating it. A model of her hull and compartments works out, a quarter of a second at a time, where the water goes and how she floats with it. The 3D view only draws what the model says; the same model runs without it, in Node, for the tests (chapter 11).</p>
+<h3 id="c1-what-it-models">What it models</h3>
+<ul>
+<li><strong>Flooding.</strong> Sixteen watertight compartments, each split port and starboard and above and below E deck: 64 spaces, joined by 290 water paths. The paths are the holes in her shell, the watertight doors, the openings in the decks and the tops of the bulkheads.</li>
+<li><strong>How she floats.</strong> Her rise and fall, her trim and her list, as one rigid body, starting from her drafts on the night.</li>
+<li><strong>How she handles.</strong> Her turning and her stopping, fitted to the trial record of the three sister ships.</li>
+<li><strong>The iceberg.</strong> A body of ice she can miss, graze, dent or run her stem into. The contact makes the damage. No hole is painted on.</li>
+<li><strong>Her machinery.</strong> Coal, the fires in six boiler rooms, steam, two engines and a turbine, the steering engines, the dynamos, the watertight doors and the bilge pumps. Each fails when water reaches it, and what depends on it fails after it. The pumps take your orders.</li>
+<li><strong>Flooding at speed.</strong> While she moves, the sea presses harder at an opening that faces the flow, and her bow wave raises the water near the stem.</li>
+<li><strong>Her wake.</strong> On a watch, the waves her hull raises as it moves, and the white water where they break and in the races of her screws (chapter 3).</li>
+<li><strong>The rest of the night.</strong> Four readers of the watch follow it without changing it: the reports that reach the bridge, late and in words; the twenty boats, uncovered, filled and lowered; the wireless, the rockets and the other ships; and a gauge of the bending of her hull, which marks the moment her own loads reach what her hull could bear. Chapter 6 takes them in turn.</li>
+<li><strong>Her fall to the bed.</strong> After she founders, her bow and her stern as two bodies of their own, carried 3,790&nbsp;m down to the sea bed by their weight, the water and the air in them, and the sea about them. The wreck as surveyed is laid on the bed beside them.</li>
+<li><strong>How it looked and sounded.</strong> A Night look, the lookouts' eye in the crow's nest and the eye of someone in a boat off her beam; the ship heard, each sound following a number in the model (chapter 3); and her decks walked while she sinks, on the model's own water (chapter 6).</li>
+</ul>
+<h3 id="c1-what-it-is-fitted-to">What it is fitted to</h3>
+<p>The flooding is fitted to an eyewitness reconstruction of her trim through the night (Halpern, 2023) and to her foundering 157 to 160 minutes after the collision, on the 1912 damage and on the reconstructed watch together. Four numbers were fitted; nothing else was tuned. Cases the fit never saw are kept as checks: four or five compartments open, Olympic after the Hawke collision of 1911, and Britannic in 1916. Chapter 9 shows them. The boats are fitted to the launch record of 1912 with 3 numbers of their own.</p>
+<p>In this build the 1912 damage gives: <em>Founders at 2:18 am, 2&nbsp;h 38&nbsp;min after the damage.</em> The reconstructed watch, on the night's own orders, founders at 2:19 am, 158.9 minutes after she touched the ice. On the night she went down 157 to 160 minutes after the collision.</p>
+<figure class="fig stage"><img src="img/preset-0209.jpg" alt="The 1912 damage at 2:09 am in the X-ray hull"><figcaption>The 1912 damage at 2:09 am, in the quarter view with the X-ray hull. The readouts give 6.1° head of trim, 7.1° port of list, 31,087&nbsp;t of water aboard and 3.8 GN m on the hull gauge; the status reads “Over bulkhead G”. The damage diagram below shows the sea's surface against the bulkhead tops.</figcaption></figure>
+<aside class="box note"><b class="lab">Read every outcome as an estimate</b>
+<p>Several inputs are informed guesses with a physical meaning: the strength of her plating, the berg's mass, the force at which a bow crushes, how her engineers worked the pumps, how readily people came forward to the boats. The code labels each of them as a bet. A night's outcome is a well-founded estimate, not a verdict.</p>
+</aside>
+<h3 id="c1-what-it-does-not-do">What it does not do</h3>
+<ul>
+<li><strong>No break-up afloat.</strong> Her hull does not break while she floats. The gauge shows the bending against what the studies say it could bear, and a line marks the moment her own loads reach her strength, but nothing gives way: her last minute is a plunge, not the break at about 2:17 am. Only once she has foundered is she cut in two, over boiler room 1, for her fall.</li>
+<li><strong>The fall is a first model.</strong> Each piece carries its air as one pocket, and it is handed over as the model leaves her at the flag, far down by the head and rolled some 80° onto her side. Both pieces come to rest upright, as the wreck's halves sit, but with a margin of under 3° of that roll: rolled a little further at the flag, the bow would land upside down. The bow lands farther from the break than the wreck's bow lies, and where she broke and the air in her space by space are still to come (chapter 6).</li>
+<li><strong>No trapped air while she floats,</strong> but for one rule: the air shut in under a grand staircase's dome lifts its glazed cover once the doors of the stair hall are under water.</li>
+<li><strong>The decks above E deck are one space</strong> in each compartment, up through the superstructure, which keeps the sea out until its windows break. Water that comes in at a window is at once on the decks under it, where in the ship it had to find a stairwell first.</li>
+<li><strong>Speed is rough.</strong> Her speed reaches the holes only roughly: nobody measured the pressures on this hull. The damage presets lie stopped.</li>
+<li><strong>Only the 1912 damage and a watch are pumped.</strong> The other presets lie unpumped.</li>
+<li><strong>The list.</strong> The model's list to port falls short of the one witnesses saw late in the night, and its list to starboard just after the collision is smaller and shorter-lived than the 5° they saw (chapter 9).</li>
+<li><strong>People are counted, not drawn.</strong> The boats move places and minutes; the model names nobody.</li>
+</ul>
+</section>
+
+<section class="chapter" id="ch2">
+<div class="eyebrow">Chapter 2</div>
+<h2>Quick start: your first watch</h2>
+<hr class="rule">
+<p class="lede">Ten minutes from opening the page to your first forecast; a few more, at a faster clock, to her end.</p>
+<figure class="fig side"><img src="img/run-cards.png" alt="The first scenario cards on the Run tab"><figcaption>The Run tab's first cards. The first two are the watch's: the night of 1912, and a night drawn from a seed.</figcaption></figure>
+<ol class="steps">
+<li><strong>Open the watch.</strong> On the <span class="chip">Run</span> tab, pick the card <span class="chip">The watch, 14 April 1912</span>. A link that ends in <code>#night=1912</code> opens it directly. The Bridge appears over the 3D view. Nothing is in sight yet, and the clock runs at real time.</li>
+<li><strong>Keep the sound on</strong> if you want the lookout's bell, the telegraph's gong, the engines and the ship at sea. The box <span class="chip">Sound</span> on the <span class="chip">Run</span> tab is ticked from the start, and <span class="chip">The ship at sea: volume</span> beside it sets how loud the ship herself is. A browser plays sound only after your first tap or key; any will do.</li>
+<li><strong>Wait for the bells.</strong> Three bells ring from the crow's nest, and the lookout calls &quot;Iceberg right ahead!&quot; The status turns to <span class="ui">Ice ahead</span>, and the <span class="ui">Lookout</span> readout on the Bridge gives the ice's range and bearing.</li>
+<li><strong>Give your order.</strong> Put the wheel over with <span class="chip">Hard to port</span> or <span class="chip">Hard to starboard</span>, or the keys <kbd>A</kbd> and <kbd>D</kbd>. Ring the telegraph with its buttons, or step it with <kbd>↑</kbd> and <kbd>↓</kbd>. The time from the bells to your first order is your reaction time.</li>
+<li><strong>Watch her answer.</strong> She is slow to answer. The rudder goes over at 4&nbsp;degrees a second, and it needs water moving past it to bite.</li>
+<li><strong>Read the outcome.</strong> She clears the ice, or is dented, or has seams opened along her side, or runs her stem into it. The <span class="chip">Run</span> tab says which, in one sentence.</li>
+<li><strong>Read the forecast.</strong> Once the ice is astern, the model runs the watch on to the end in the background, and the line under the readouts gives the forecast. The table <span class="ui">The same berg, another watch</span> shows how the same drill goes with the order given sooner or later.</li>
+<li><strong>Run the night on.</strong> Choose <span class="chip">60×</span> or <span class="chip">900×</span> on the <span class="chip">Run</span> tab. The reports reach the bridge, the boats are uncovered and lowered, the wireless calls for help (chapter 6). When she founders, or lies steady, or has passed the ice untouched, a card says what happened, and <span class="chip">Copy a link to this watch</span> gives an address that replays it. If she founders, the clock runs on while her two pieces fall to the bed: choose <span class="chip">10×</span> before her end to watch them go.</li>
+<li><strong>Try again.</strong> <span class="chip">This night again</span> repeats the same berg. <span class="chip">Another night</span> draws a new one. <span class="chip">Watch the 1912 orders</span> plays the night's own orders. <span class="chip">Replay my watch</span> plays yours back, exactly.</li>
+</ol>
+<figure class="fig"><img src="img/watch-bells.jpg" alt="The 1912 watch three seconds after the bells"><figcaption>The 1912 watch three seconds after the bells, seen from astern. The berg is ahead on her course line. The Bridge, lower left, gives the ice's range and bearing; the damage diagram along the bottom is still dry.</figcaption></figure>
+<aside class="box tip"><b class="lab">On the 1912 night</b>
+<p>The order came about twenty seconds after the bells, and she was holed along her starboard side. In this build an order up to 10.5 seconds after the bells clears the berg; from 25.5 seconds she meets it stem first. Chapter 5 has the whole table.</p>
+</aside>
+<aside class="box note"><b class="lab">Time runs at its own pace</b>
+<p>On a watch the clock is held to real time until the ice is passed, so that your reaction time is real. After that, run it faster with the speed buttons on the <span class="chip">Run</span> tab: <span class="chip">60×</span> plays the rest of the night in under three minutes. When a report reaches the bridge, the clock drops to her own pace for a few seconds; the box <span class="chip long">When a report comes, the clock slows to her own pace for a few seconds</span> turns that off.</p>
+</aside>
+</section>
+
+<section class="chapter" id="ch3">
+<div class="eyebrow">Chapter 3</div>
+<h2>The screen</h2>
+<hr class="rule">
+<figure class="fig stage"><img src="img/screen-marked.jpg" alt="The screen with its five parts numbered"><figcaption>The screen during the 1912 watch, three seconds after the bells. 1 the readouts; 2 the views; 3 the Bridge, on a watch only; 4 the damage diagram; 5 the panel and its tabs.</figcaption></figure>
+<h3 id="c3-1-the-readouts">1 · The readouts</h3>
+<p>The box at the top left names the ship and the night, gives the status, the ship's time, five readouts and the hull's gauge. Under them one line carries the watch before the ice (&quot;Bells 3&nbsp;s ago, no order yet&quot;) and the forecast after it. Two more kinds of line join them late in the night: the mark of where she would break, and, once she has foundered, a line for each of her pieces as it falls.</p>
+<div class="tw long">
+<table>
+<thead><tr><th>Readout</th><th>What it shows</th></tr></thead>
+<tbody class="first">
+<tr><td>The time</td><td>Ship's time. On a watch it shows the seconds, with the time since the bells or the touch beside it. On a damage preset, the time since the collision.</td></tr>
+<tr><td><span class="ui">Trim</span></td><td>Degrees down by the head (the bow) or by the stern.</td></tr>
+<tr><td><span class="ui">List</span></td><td>Degrees down to port or to starboard.</td></tr>
+</tbody>
+<tbody>
+<tr><td><span class="ui">Water</span></td><td>Tons of sea water aboard.</td></tr>
+<tr><td><span class="ui">Inflow</span></td><td>Tons a minute coming in.</td></tr>
+<tr><td><span class="ui">Draft fwd/aft</span></td><td>Metres of hull under water at the bow and at the stern.</td></tr>
+<tr><td><span class="ui">Hull</span></td><td>The bending moment of her hull where it is greatest over boiler room 1, in GN m, on a bar that marks what the studies say her hull could bear, 4.0 to 5.4 GN m: teal below that range, amber within it, red past it. Chapter 6.</td></tr>
+</tbody>
+<tbody class="last">
+<tr><td><span class="ui">She would break here, now</span></td><td>A red line under the gauge, from the moment her bending and shear somewhere along her reach what her hull could bear there: the station, the space it lies in, and the ship's time. Nothing breaks. Chapter 6.</td></tr>
+<tr><td><span class="ui">Depth</span> · <span class="ui">Speed</span> · <span class="ui">Pressure</span> · <span class="ui">Water</span> · <span class="ui">Under</span></td><td>After she founders, a line for each piece of her as it falls to the bed: its depth, its speed, the sea's pressure and temperature there, and the time since it went under. Chapter 6.</td></tr>
+</tbody>
+</table>
+</div>
+<p>The status is one coloured word or two. On a watch: <span class="ui">On watch</span>, <span class="ui">Ice ahead</span>, <span class="ui">On the ice</span>, then <span class="ui">Clear</span> if she passed it. Otherwise: <span class="ui">Intact</span>, <span class="ui">Afloat</span>, <span class="ui">Flooding</span>, &quot;Over bulkhead&quot; and its letter when water pours over a bulkhead's top, and at the end <span class="ui">Foundered</span>. From the touch on, a strip under the views counts the boats: how many are away, the people in them, the places that went empty.</p>
+<h3 id="c3-2-the-views">2 · The views</h3>
+<p>The buttons at the top right move the camera. Drag the 3D view to turn it, scroll or pinch to zoom, and drag with the right button or with Shift held to move sideways. From the Bridge, the crow's nest and the boat, dragging looks about.</p>
+<div class="tw long">
+<table>
+<thead><tr><th>Button</th><th>The view</th></tr></thead>
+<tbody class="first">
+<tr><td><span class="chip">Quarter</span></td><td>Off her starboard bow, from above. The damage presets open here.</td></tr>
+<tr><td><span class="chip">Profile</span></td><td>Her starboard side, level with her.</td></tr>
+<tr><td><span class="chip">Below</span></td><td>From under the sea, looking up at her bottom.</td></tr>
+</tbody>
+<tbody>
+<tr><td><span class="chip">Plan</span></td><td>From straight above.</td></tr>
+<tr><td><span class="chip">Astern</span></td><td>From astern and above, looking where she is going. A watch opens here.</td></tr>
+<tr><td><span class="chip">Bridge</span></td><td>From her navigating bridge, looking ahead: what the officer of the watch saw.</td></tr>
+<tr><td><span class="chip">Crow's nest</span></td><td>The lookouts' eye on the foremast, about 29&nbsp;m above the water (a guess), carried by her pose.</td></tr>
+<tr><td><span class="chip">Boat</span></td><td>The eye of someone in a lifeboat lying 300&nbsp;m off her port beam, 1.2&nbsp;m above the sea. The boat stays where it is while she moves on or goes down; the wheel or a pinch brings it nearer or farther, and the button again lays it off her beam once more.</td></tr>
+<tr><td><span class="chip">Screws</span></td><td>Under the sea off her starboard quarter: the rudder, the screws and their shafts.</td></tr>
+<tr><td><span class="chip">Director</span></td><td>Hands the camera to the night: at the bells, the touch, the first boat, each rocket and her last minutes it chooses the view and holds her own pace for a few seconds, with a small caption of the ship's time. Any view button takes the camera back.</td></tr>
+<tr><td><span class="chip">X-ray</span></td><td>A see-through hull, showing the water in each space (and in each pocket, its own surface while it fills), the bulkheads and their letters, and the engines. On at the start.</td></tr>
+<tr><td><span class="chip">Night</span></td><td>The night as a person there would have seen it. Night and X-ray take turns: choosing one turns the other off.</td></tr>
+<tr><td><span class="chip">Wake</span></td><td>On a watch, her wake as the model makes it: the waves her hull raises and the white water where they break and in her screws' races (below). On at the start, but on a phone.</td></tr>
+<tr><td><span class="chip">Columns</span></td><td>The vertical columns the model adds up, one box each where it holds water, and a box of its own for each pocket.</td></tr>
+<tr><td><span class="chip">Follow</span></td><td>Keeps the camera on her as she moves and settles.</td></tr>
+</tbody>
+<tbody class="last">
+<tr><td><span class="chip">Lights</span></td><td>Draws her lights. They are the model's: they fail when her dynamos do.</td></tr>
+<tr><td><span class="chip">Walk</span></td><td>Puts you on her decks, an eye 1.7&nbsp;m above E deck amidships, to walk her while she sinks, on the model's own water. The button again, or Esc, brings you out (chapter 6).</td></tr>
+</tbody>
+</table>
+</div>
+<p>While she falls to the bed, four more views head a strip at the right of the stage; Quarter, Profile, Below, Plan and Astern follow her bow, and Screws her stern; and the zoom reaches out to 6.5&nbsp;km (chapter 6).</p>
+<h3 id="c3-3-the-bridge">3 · The Bridge</h3>
+<p>The wheel, the engine-order telegraph and the instruments, over the lower part of the view. It appears on a watch only. Chapter 4 takes it in turn.</p>
+<h3 id="c3-4-the-damage-diagram">4 · The damage diagram</h3>
+<p>Her profile in the ship's own frame, from the after peak (AP, at the left) to the forepeak (FP, at the right): the fifteen bulkheads lettered A to P, and the compartments between them. Brass tops stand to E deck, teal ones to D deck. The cyan line is the sea's surface as she lies, so it tilts as she trims. Water fills each compartment as it comes in, and the holes show as red marks. The two pockets inside her compartments, boiler room 5's bunker and the forepeak's tank (chapter 10), fill on their own, each in its own place.</p>
+<h3 id="c3-5-the-panel">5 · The panel</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Tab</th><th>What it holds</th><th>Chapter</th></tr></thead>
+<tbody>
+<tr><td><span class="chip">Run</span></td><td>The watch and its orders; on a watch, help, the reports to the bridge and the boats; the scenario cards, the clock, the forecast and the log</td><td>5, 6, 7</td></tr>
+<tr><td><span class="chip">Damage</span></td><td>The hole tool, the hole size and the list of openings</td><td>7</td></tr>
+<tr><td><span class="chip">Bulkheads</span></td><td>The watertight doors and the height of the bulkheads</td><td>7</td></tr>
+<tr><td><span class="chip">Systems</span></td><td>Her machinery: what depends on what, the pumps and the orders to them, the boiler rooms, the coal</td><td>8</td></tr>
+<tr><td><span class="chip">Evidence</span></td><td>The run against the eyewitness record, and the cases the fit never saw</td><td>9</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="c3-the-night-and-the-eyes-of-people-who-were-there">The night, and the eyes of people who were there</h3>
+<p><span class="chip">Night</span> draws what a person there would have seen: a clear, moonless, flat-calm night, stars to the horizon and mirrored in the glassy sea, a black sea, her own lights. The berg is a dark mass a little paler than the sky, with no white water at its foot, which is why it was seen so late. Her lit ports shine in the water and go out with her dynamos. All of it is appearance, chosen in the code and marked there; X-ray is how the physics is read.</p>
+<figure class="fig"><img src="img/nest-night.jpg" alt="The crow's nest at the bells, at night"><figcaption>From the crow's nest in the Night look, three seconds after the bells: the berg a dark shape on the horizon, right ahead.</figcaption></figure>
+<figure class="fig"><img src="img/bridge-view.jpg" alt="The Bridge view at night"><figcaption>From her bridge, eleven seconds after the bells: the foremast, and the berg a little to one side of it. On the night the order came about nine seconds later.</figcaption></figure>
+<h3 id="c3-her-wake">Her wake</h3>
+<p>On a watch the sea round her is the model's, not a drawing. Her hull raises a field of waves as it moves, worked out step by step from her speed, her turning and her drift; and white water is made where those waves are too steep to stand, in a sheet off each bow, and in the races of her three screws, as much as each shaft's thrust makes. The white water stays on the sea where it was made, spreads and dies away, so what she did is written on the water behind her. Ring <span class="chip">Stop</span> and the white road astern fades as her screws' races die; ring <span class="chip">Full</span> astern and the wing screws throw their races forward along her sides. Nothing of Kelvin's wedge is drawn by rule: the V of waves either side of her track, the waves across it and the lopsided wake of a turn come out of the field.</p>
+<p><span class="chip">Wake</span>, with the display switches, turns it off and on. It is on from the start, but on a phone, where it waits to be asked for. Off, the page draws what it drew before: a ribbon from her stern, a bow wave and Kelvin's lines. They stand in as well for a watch's first seconds, while the field is being made, and whenever the clock runs at <span class="chip">10×</span> or faster, quicker than the field can follow. A damage preset lies stopped and has no wake.</p>
+<p>Where the waves are and how high, and where white water is made, are the model's. How much white water each cause makes and how long it lasts are estimates, marked in the code (chapter 10). The drawing is appearance: the sheen and shade on the slopes, the lines of equal height every quarter of a metre in the X-ray look, the broken edges of the foam. In the Night look her own lights show the white water close about her; farther off it is a darker road on the black sea.</p>
+<h3 id="c3-the-ship-heard">The ship heard</h3>
+<p>With <span class="chip">Sound</span> ticked, the ship has a sound of her own beside the bells, the telegraph's gong and the engines' beat. Each sound's loudness follows a number in the model; only the timbres are the page's own.</p>
+<ul>
+<li><strong>Her own wind and the sea along her side</strong> grow as the square of her speed. On a flat calm the only wind on her is her own, so when her engines stop the night goes quiet.</li>
+<li><strong>The engines</strong> rumble with the revolutions of the wing shafts.</li>
+<li><strong>The ice</strong> grinds with the force of each step of the contact, from the first blow to the end of the grind.</li>
+<li><strong>The water coming in</strong> rushes with the tons a minute coming in.</li>
+<li><strong>Her structure</strong> creaks as her trim changes.</li>
+<li><strong>The ship's bell</strong> strikes the half hours by her clock.</li>
+</ul>
+<p>Each view hears its own mix: the wind and the bell on the Bridge and in the crow's nest, the engines and the water below the waterline, everything faint from the boat. <span class="chip">The ship at sea: volume</span> sets the level. The sound is silent when switched off, paused or foundered, and fades as the clock runs faster than her own pace. Nobody has tuned the levels by ear yet.</p>
+<h3 id="c3-on-a-phone">On a phone</h3>
+<p>The same model and the same controls. The readouts keep <span class="ui">Trim</span>, <span class="ui">List</span>, <span class="ui">Water</span> and the hull gauge; the view buttons scroll sideways; the Bridge sits between the readouts and the damage diagram, and on a short screen gives way to the end card while it is up and to the walk while you walk. The panel becomes a sheet along the bottom: tap a tab to open it, and tap the tab again or <span class="chip">⌄</span> to close it. After she founders, the strip of her fall stands at the right edge in the room the readouts and the Bridge leave it, with the boats' count to its left, below the view buttons.</p>
+<div class="figrow n2 phone">
+<figure class="fig phone"><img src="img/phone-watch.jpg" alt="The 1912 watch on a phone"><figcaption>On a phone, three seconds after the bells: the lookout's call, the Bridge and the damage diagram.</figcaption></figure>
+<figure class="fig phone"><img src="img/phone-sheet.jpg" alt="The panel open as a sheet on a phone"><figcaption>The same moment with the Run tab open as a sheet.</figcaption></figure>
+</div>
+</section>
+
+<section class="chapter" id="ch4">
+<div class="eyebrow">Chapter 4</div>
+<h2>The Bridge: wheel and telegraph</h2>
+<hr class="rule">
+<p class="lede">Two controls ran the ship in 1912: the wheel, through the steering engines, and the engine-order telegraph to the engine room. The Bridge gives you both, with the instruments to read her answer.</p>
+<h3 id="c4-the-instruments">The instruments</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Instrument</th><th>What it shows</th></tr></thead>
+<tbody>
+<tr><td><span class="ui">Speed</span></td><td>Knots through the water, and &quot;astern&quot; when she goes backwards.</td></tr>
+<tr><td><span class="ui">Heading</span></td><td>Her course in degrees, 266 at the start of the 1912 watch.</td></tr>
+<tr><td><span class="ui">Rudder</span></td><td>Where the rudder is, to port or starboard. The dial under it has two needles: the broad gold one is the order, the thin one the rudder following it.</td></tr>
+<tr><td><span class="ui">Engines, rpm</span></td><td>Revolutions a minute of the port engine, the turbine and the starboard engine. Under them, the steam pressure, with &quot;short&quot; when there is not enough steam for the order.</td></tr>
+<tr><td><span class="ui">Lookout</span></td><td><span class="ui">Nothing in sight</span> until the bells; then the range and bearing of the ice; <span class="ui">On the ice</span> while she is on it; then whether she cleared it.</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="c4-the-wheel-and-the-1912-orders">The wheel, and the 1912 orders</h3>
+<p>In 1912 helm orders were tiller orders, the reverse of today's. &quot;Hard-a-starboard&quot; put the tiller to starboard, the rudder to port, and swung her head to port. Each button says both:</p>
+<div class="tw">
+<table>
+<thead><tr><th>Button</th><th>The 1912 order</th><th>Her head goes</th></tr></thead>
+<tbody>
+<tr><td><span class="chip">Hard to port</span></td><td>&quot;hard-a-starboard&quot;</td><td>to port</td></tr>
+<tr><td><span class="chip">Hard to starboard</span></td><td>&quot;hard-a-port&quot;</td><td>to starboard</td></tr>
+<tr><td><span class="chip">Midships</span></td><td>&quot;midships&quot;</td><td>straight on: the rudder centred</td></tr>
+</tbody>
+</table>
+</div>
+<p>The slider between the buttons sets any angle up to 40&nbsp;degrees either side. The steering engines move the rudder at 4&nbsp;degrees a second (a guess: it was never measured), so hard over from midships takes 10 seconds. They need steam: without it the rudder stays where it is.</p>
+<aside class="box tip"><b class="lab">What the rudder needs</b>
+<p>The rudder works only on water moving past it. Stopped, she will not turn however hard you put it over. Going astern, the rudder works the other way, and weakly. The faster she goes, the faster she turns, but the further she runs while turning. With her screws going astern, their wash creeps forward along her sides.</p>
+</aside>
+<h3 id="c4-the-engine-order-telegraph">The engine-order telegraph</h3>
+<p>Seven positions, from <span class="chip">Full</span> astern on the left to <span class="chip">Full</span> ahead on the right. Each rings the engine room for so many revolutions a minute:</p>
+<div class="gen" data-gen="telegraph">
+<div class="tw">
+<table>
+<thead><tr><th>Position</th><th>Button</th><th class="r">Revolutions a minute</th></tr></thead>
+<tbody>
+<tr><td>Full astern</td><td><span class="chip">Full</span></td><td class="r">75 astern</td></tr>
+<tr><td>Half astern</td><td><span class="chip">Half</span></td><td class="r">50 astern</td></tr>
+<tr><td>Slow astern</td><td><span class="chip">Slow</span></td><td class="r">30 astern</td></tr>
+<tr><td>Stop</td><td><span class="chip">Stop</span></td><td class="r">0</td></tr>
+<tr><td>Slow ahead</td><td><span class="chip">Slow</span></td><td class="r">30 ahead</td></tr>
+<tr><td>Half ahead</td><td><span class="chip">Half</span></td><td class="r">50 ahead</td></tr>
+<tr><td>Full ahead</td><td><span class="chip">Full</span></td><td class="r">75 ahead</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>The two reciprocating engines turn the wing screws. Their exhaust steam drives the turbine, which turns the centre screw: ahead only, at <span class="chip">Half</span> or <span class="chip">Full</span>, and with both engines above 40 revolutions. Reversing an engine takes time: it runs down, its valve gear is reversed, and it comes up astern.</p>
+<figure class="fig stage"><img src="img/screws.jpg" alt="The Screws view at full speed"><figcaption>The Screws view four seconds into the watch, at 22½ knots: the rudder, the starboard wing screw, the centre screw in its aperture before the rudder, and the shafts. The screws turn with the model's shafts.</figcaption></figure>
+<h3 id="c4-keys">Keys</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Key</th><th>On a watch</th></tr></thead>
+<tbody>
+<tr><td><kbd>A</kbd> · <kbd>D</kbd></td><td><span class="chip">Hard to port</span> · <span class="chip">Hard to starboard</span></td></tr>
+<tr><td><kbd>S</kbd></td><td><span class="chip">Midships</span></td></tr>
+<tr><td><kbd>←</kbd> · <kbd>→</kbd></td><td>The wheel five degrees to port · to starboard</td></tr>
+<tr><td><kbd>↑</kbd> · <kbd>↓</kbd></td><td>The telegraph one step ahead · one step astern</td></tr>
+<tr><td><kbd>Space</kbd> · <kbd>R</kbd></td><td>Pause or play · restart (these work on every run)</td></tr>
+</tbody>
+</table>
+</div>
+<p>The keys of the watch work wherever the focus was left, except in a text box, a slider or a tick box. <kbd>Space</kbd> and <kbd>R</kbd> work when no button has the focus; with a button focused, <kbd>Space</kbd> presses it.</p>
+</section>
+
+<section class="chapter" id="ch5">
+<div class="eyebrow">Chapter 5</div>
+<h2>Playing a watch</h2>
+<hr class="rule">
+<h3 id="c5-the-bells-and-your-reaction-time">The bells and your reaction time</h3>
+<p>The lookout rings three bells when the ice comes within the night's sighting range. On the 1912 night that is about 500 yards; in this build the bells ring with the ice 494&nbsp;m off. Your reaction time runs from the bells to your first order to the wheel or the engines. An order given before the bells is logged, but it is not a reaction: nobody had seen anything yet, so the panel calls it hindsight. Orders to the doors, the stokehold, the pumps, the boats and the wireless do not count.</p>
+<h3 id="c5-the-four-outcomes">The four outcomes</h3>
+<div class="figrow n2">
+<figure class="fig"><img src="img/watch-touch.jpg" alt="Three seconds after the touch on the 1912 orders"><figcaption>Holed: the 1912 orders, three seconds after the touch, the wheel reversed as on the night. The damage diagram shows the seams opening.</figcaption></figure>
+<figure class="fig"><img src="img/stem-strike.jpg" alt="A stem strike on night 16"><figcaption>Stem into the ice: night 16, no order given, three seconds after her stem met the ice. The red marks are her crushed bow.</figcaption></figure>
+</div>
+<p>When the encounter is over (the ice is abaft the beam and out of reach, or she has stopped, or she has lain against it for ten seconds), the <span class="chip">Run</span> tab and a notice give the outcome in one sentence:</p>
+<div class="tw">
+<table>
+<thead><tr><th>Outcome</th><th>What happened</th></tr></thead>
+<tbody>
+<tr><td>Clear of the ice</td><td>She passed it. The sentence says how far off her side it went.</td></tr>
+<tr><td>Clear, but dented</td><td>She touched it. Plating dented, no seam opened, no water.</td></tr>
+<tr><td>Holed</td><td>Seams opened along her side, compartment by compartment: the 1912 kind of damage. The sentence gives the area open and the compartments.</td></tr>
+<tr><td>Stem into the ice</td><td>She struck it head on. Her bow crushes and the compartments in it open to the sea. Wilding told the inquiry she would have come in with her bow crushed 80 to 100 feet.</td></tr>
+</tbody>
+</table>
+</div>
+<p>On the 1912 orders the sentence is <em>Holed: 0.82&nbsp;m2 of seams open along the starboard side, the forepeak to boiler room 5</em>. Night 16 with no order ends <em>Stem into the ice: bow crushed in 20&nbsp;m, 0.10&nbsp;m2 of seams open along the port side. Open to the sea: the forepeak to No. 1 hold</em>.</p>
+<h3 id="c5-after-the-ice-the-forecast">After the ice: the forecast</h3>
+<p>Once the encounter is over, the clock is free: run it faster with the speed buttons. The page then runs a copy of the whole watch on to the end, in the background: her plant, the engineers' rules, every order given and the scripted orders still to come all go with it, and the line under the readouts gives the forecast. Its time is the watch's own: on the 1912 orders it reads <em>Founders at 2:18 am, 2&nbsp;h 39&nbsp;min after the touch</em>, and she founders 158.9 minutes after the touch in the forecast and 158.9 when the watch is run to her end. An order to the ship given after the ice (to the pumps, say) brings a new forecast. An order to the boats, the reports or the wireless changes nothing in the model and brings none, unless it ends the 1912 orders before their Stop. If she will float, the forecast says so, with her final trim and the water aboard.</p>
+<figure class="fig stage"><img src="img/watch-flooding.jpg" alt="The 1912 watch forty minutes after the touch"><figcaption>The 1912 watch at 12:20:00 am, forty minutes after the touch, in the quarter view with the X-ray hull: 2.2° head of trim, 10,614&nbsp;t of water aboard. The forecast is under the readouts; steam blows off at her funnels.</figcaption></figure>
+<h3 id="c5-the-same-berg-another-watch">The same berg, another watch</h3>
+<figure class="fig side"><img src="img/run-watch.png" alt="The same berg, another watch, on the Run tab"><figcaption>The table on the Run tab after the 1912 orders. The row nearest your own order is marked.</figcaption></figure>
+<p>After every watch the <span class="chip">Run</span> tab works out the same drill on the same berg with the order given 0, 5, 10 and up to 30 seconds after the bells. The drill is the one of 1912: the helm hard over away from the ice, reversed at the touch, the engines stopped a minute later. Only the moment of the order changes, so the table shows how much the seconds mattered.</p>
+<p>The repository's own tests run the same drill on the 1912 berg, each order half a second later than the page's:</p>
+<div class="gen" data-gen="window">
+<div class="tw">
+<table>
+<thead><tr><th class="r">Order after the bells</th><th class="r">Ice ahead</th><th>What the ice does</th></tr></thead>
+<tbody>
+<tr><td class="r">0.5&nbsp;s</td><td class="r">489&nbsp;m</td><td>Clear of the ice: it passed 86&nbsp;m off her starboard side</td></tr>
+<tr><td class="r">5.5&nbsp;s</td><td class="r">431&nbsp;m</td><td>Clear of the ice: it passed 52&nbsp;m off her starboard side</td></tr>
+<tr><td class="r">10.5&nbsp;s</td><td class="r">373&nbsp;m</td><td>Clear of the ice: it passed 22&nbsp;m off her starboard side</td></tr>
+<tr><td class="r">15.5&nbsp;s</td><td class="r">315&nbsp;m</td><td>Holed: 0.19&nbsp;m2 of seams open along the starboard side, electric engine room to shaft tunnel / refrigerated cargo</td></tr>
+<tr><td class="r">20.5&nbsp;s</td><td class="r">257&nbsp;m</td><td>Holed: 0.82&nbsp;m2 of seams open along the starboard side, the forepeak to boiler room 5</td></tr>
+<tr><td class="r">25.5&nbsp;s</td><td class="r">199&nbsp;m</td><td>Stem into the ice: bow crushed in 13&nbsp;m, 0.05&nbsp;m2 of seams open along the starboard side. Open to the sea: the forepeak to No. 1 hold</td></tr>
+<tr><td class="r">30.5&nbsp;s</td><td class="r">141&nbsp;m</td><td>Stem into the ice: bow crushed in 20&nbsp;m, 0.05&nbsp;m2 of seams open along the starboard side. Open to the sea: the forepeak to No. 1 hold</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<h3 id="c5-when-a-watch-ends">When a watch ends</h3>
+<p>When she founders, lies steady with water aboard, or has passed the ice untouched, a card on the stage says what happened, in plain words, every figure read from the model at that moment: when she went and how long after the touch, beside the record's own time; what the ice did; when the first order came; her lights; what her pumps put back over the side; and the watch's fingerprint. If she founders, the card gains a line as each of her two pieces comes to rest on the bed (chapter 6).</p>
+<figure class="fig side"><img src="img/end-card.png" alt="The card at the end of the 1912 watch"><figcaption>The card at the end of the 1912 orders. On the stage it stands below the boats' count.</figcaption></figure>
+<div class="gen" data-gen="endcard">
+<aside class="box note"><b class="lab">The card at her end, on the 1912 orders</b>
+<p><strong>Foundered.</strong> She foundered at 2:18 am, 2&nbsp;h 39&nbsp;min after she touched the ice. On the night of 14 April 1912 she went down 2&nbsp;h 40&nbsp;min after the collision. Holed: 0.82&nbsp;m2 of seams open along the starboard side, the forepeak to boiler room 5. The 1912 orders were on the bridge. 4 orders in the watch's log: 3 to the wheel, 1 to the engines. Her lights went out at 2:18 am (the steam mains broken). Her pumps put 687&nbsp;t of water back over the side. Watch 1a1bd179, step 38389.</p>
+</aside>
+</div>
+<p><span class="chip">This night again</span> starts the same night afresh; <span class="chip">Close</span> puts the card away. <span class="chip">Copy a link to this watch</span> copies an address that holds the night's seed and every order given, for example <code>#night=1912&amp;log=W1sxMz…</code>. A night is its seed and its orders, so whoever opens the link sees the same watch, bit for bit on the same browser. Orders that arrive in an address are checked before they reach the model: an order the model does not have, a rudder angle past the stops or a door that is not there, and the night opens without them. If the browser will not copy, the link appears in a box on the card to be copied by hand.</p>
+<h3 id="c5-nights-seeds-and-levels">Nights, seeds and levels</h3>
+<ul>
+<li><strong>A night is its seed and its orders.</strong> Every order is logged with the step of the model it was given at, so <span class="chip">Replay my watch</span> plays a watch again exactly. Any order makes the watch yours and lets it be replayed, as the wheel does: on the 1912 orders, those still to come are dropped. The watch's fingerprint is made from her state at every step. The <span class="chip">Run</span> tab stamps it once, on the step the encounter ends, at the end of its sentence about the watch (&quot;Watch …, step …&quot;), and the card gives it again at her end. The same seed and orders give the same fingerprint on the same browser. Across engines the model computes its own functions, so the page reaches the end of the 1912 encounter with Node's own fingerprint; past it, where the power function is still the engine's, two engines may part in the last bit (chapter 10).</li>
+<li><strong><span class="chip">Another night</span></strong> draws a berg from a seed: its size, its depth, where it lies off her track, and how far off the lookout sees it. To choose one, type a seed in <span class="chip">Night (seed)</span> and press <span class="chip">Go</span> or Enter. Seed 1912 is the night of 1912.</li>
+<li><strong><span class="ui">The ice on a drawn night</span></strong> sets how hard the next drawn night is: <span class="chip">Seen early</span>, <span class="chip">Any night</span> (the default), or <span class="chip">Like 1912</span>, seen late and close to her track. It never changes the 1912 watch.</li>
+<li><strong><span class="ui">Her speed, knots</span></strong> sets the speed of the next watch: <span class="chip">22½</span>, <span class="chip">18</span>, <span class="chip">15</span> or <span class="chip">10</span>.</li>
+<li><strong>The address carries the night</strong>, for example <code>#night=1912</code>, with <code>&amp;kn=18</code> or <code>&amp;level=early</code> when they are not the defaults, and <code>&amp;log=</code> with the orders when it came from the card.</li>
+</ul>
+<h3 id="c5-how-hard-is-it">How hard is it?</h3>
+<p>The repository runs the 1912 drill on two hundred drawn nights at each level, with the order at the bells and later:</p>
+<div class="gen" data-gen="sweeps">
+<div class="tw">
+<table>
+<thead><tr><th>The order</th><th class="r">Seen early: clear · stem</th><th class="r">Any night: clear · stem</th><th class="r">Like 1912: clear · stem</th></tr></thead>
+<tbody>
+<tr><td>At the bells</td><td class="r">100&nbsp;% · 0&nbsp;%</td><td class="r">96&nbsp;% · 0&nbsp;%</td><td class="r">100&nbsp;% · 0&nbsp;%</td></tr>
+<tr><td>5&nbsp;s after the bells</td><td class="r">100&nbsp;% · 0&nbsp;%</td><td class="r">86&nbsp;% · 1&nbsp;%</td><td class="r">100&nbsp;% · 0&nbsp;%</td></tr>
+<tr><td>10&nbsp;s after the bells</td><td class="r">100&nbsp;% · 0&nbsp;%</td><td class="r">76&nbsp;% · 7&nbsp;%</td><td class="r">97&nbsp;% · 0&nbsp;%</td></tr>
+<tr><td>15&nbsp;s after the bells</td><td class="r">99&nbsp;% · 0&nbsp;%</td><td class="r">64&nbsp;% · 15&nbsp;%</td><td class="r">73&nbsp;% · 0&nbsp;%</td></tr>
+<tr><td>20.5&nbsp;s after the bells</td><td class="r">89&nbsp;% · 0&nbsp;%</td><td class="r">49&nbsp;% · 19&nbsp;%</td><td class="r">34&nbsp;% · 13&nbsp;%</td></tr>
+<tr><td>No order at all</td><td class="r">28&nbsp;% · 44&nbsp;%</td><td class="r">28&nbsp;% · 44&nbsp;%</td><td class="r">0&nbsp;% · 70&nbsp;%</td></tr>
+</tbody>
+</table>
+<p class="tcap">Of 200 drawn nights at each level, the share on which she clears the ice, and the share on which she meets it stem first. The order is the 1912 drill: the helm hard over away from the ice, reversed at the touch.</p>
+</div>
+</div>
+<p>With no order at all, on the default level, she meets the ice stem first on 44&nbsp;% of nights; with the order at the bells, on 0&nbsp;%.</p>
+</section>
+
+<section class="chapter" id="ch6">
+<div class="eyebrow">Chapter 6</div>
+<h2>After the ice</h2>
+<hr class="rule">
+<p class="lede">The encounter takes a minute or two; what follows took two and a half hours, and most of it could only be watched. Four readers of the watch follow the rest of the night. Each reads the model and keeps an account of its own, and none changes the night: a watch has the same fingerprint with all of them as with none.</p>
+<p>They appear on a watch only, as sections of the <span class="chip">Run</span> tab and as marks on the stage. Their orders go in the watch's log with the helm's, so <span class="chip">Replay my watch</span> and a link from the card replay them too. Each takes the watch over as the wheel does: on the 1912 orders it drops those still to come, and the watch is yours from then on.</p>
+<h3 id="c6-reports-to-the-bridge">Reports to the bridge</h3>
+<figure class="fig side"><img src="img/reports.png" alt="The reports to the bridge on the Run tab"><figcaption>The Run tab forty minutes after the touch on the 1912 orders: the orders to send a man to look, and the reports, newest first.</figcaption></figure>
+<p>Nothing on her bridge measured water. A report in the simulator is a fact of the model, noticed by a man placed to notice it and brought to the bridge in the time that took, in his words: the carpenter after sounding, the mail clerks, the chief engineer by messenger, the officer of the watch by eye, the commutator read on the bridge. The section <span class="ui">Reports to the bridge</span> lists them, newest first, and a notice shows each as it comes.</p>
+<p>The bridge can send for more. Under <span class="ui">Send an officer to look</span>: <span class="chip">Forward</span>, <span class="chip">Mail room</span>, <span class="chip">Boiler rooms</span>, <span class="chip">Engine rooms</span> or <span class="chip">Aft</span>; <span class="chip">Have the carpenter sound</span> the wells; <span class="chip">Ask the engine room</span> with a note to the chief engineer. Each man takes the time his errand took; a button stays grey while he is out.</p>
+<p>On the 1912 orders the bridge heard this, in this order:</p>
+<div class="gen" data-gen="reports">
+<div class="tw long">
+<table>
+<thead><tr><th class="r">Time</th><th>Who, and how</th><th>What he said</th></tr></thead>
+<tbody class="first">
+<tr><td class="r">11:40 pm</td><td>The ship, felt on the bridge</td><td>A tremble and a grinding along her starboard side.</td></tr>
+<tr><td class="r">11:47 pm</td><td>The officer of the watch, by eye</td><td>A little down by the head: the forecastle head about 50&nbsp;ft above the water.</td></tr>
+<tr><td class="r">11:49 pm</td><td>The Fourth Officer, back from forward</td><td>No damage seen forward, down to F deck.</td></tr>
+</tbody>
+<tbody>
+<tr><td class="r">11:52 pm</td><td>The carpenter, in person</td><td>Making water fast: 12&nbsp;ft in No. 1 hold, 12&nbsp;ft in No. 2 hold, 11&nbsp;ft in No. 3 hold.</td></tr>
+<tr><td class="r">11:56 pm</td><td>The chief engineer, by a messenger</td><td>Boiler room 6 flooded; its men have left. Boiler room 5: 1&nbsp;ft of water, its pumps on it.</td></tr>
+<tr><td class="r">12:03 am</td><td>The officer of the watch, by eye</td><td>Down by the head: the forecastle head about 40&nbsp;ft above the water.</td></tr>
+<tr><td class="r">12:04 am</td><td>A mail clerk, in person</td><td>The mail room is filling rapidly.</td></tr>
+<tr><td class="r">12:05 am</td><td>The builder's man, to the captain</td><td>He gives her from an hour to an hour and a half.</td></tr>
+<tr><td class="r">12:11 am</td><td>The Fourth Officer, back from the mail room</td><td>Water in the mail room within 2 feet of G deck, rising fast.</td></tr>
+<tr><td class="r">12:37 am</td><td>The purser, from a steward, in person</td><td>Water on F deck forward.</td></tr>
+<tr><td class="r">12:39 am</td><td>The officer of the watch, by eye</td><td>Well down by the head: the forecastle head about 25&nbsp;ft above the water.</td></tr>
+<tr><td class="r">12:43 am</td><td>The purser, from a steward, in person</td><td>Water on F deck amidships.</td></tr>
+<tr><td class="r">12:45 am</td><td>The Fourth Officer, back from forward</td><td>Water on F deck over No. 1 hold, No. 2 hold and No. 3 hold; water on E deck forward.</td></tr>
+<tr><td class="r">12:51 am</td><td>The purser, from a steward, in person</td><td>Water on E deck amidships.</td></tr>
+<tr><td class="r">12:52 am</td><td>The purser, from a steward, in person</td><td>Water on E deck forward.</td></tr>
+<tr><td class="r">1:48 am</td><td>The officer of the watch, by eye</td><td>The forward well deck is awash.</td></tr>
+<tr><td class="r">1:59 am</td><td>The officer of the watch, by eye</td><td>The forecastle head goes under.</td></tr>
+</tbody>
+<tbody class="last">
+<tr><td class="r">2:08 am</td><td>The chief engineer, by telephone</td><td>Boiler room 6 flooded; its men have left. Boiler room 5 flooded; its men have left. Boiler room 4 flooded; its men have left. Boiler room 3: 6&nbsp;ft of water, its pumps on it.</td></tr>
+<tr><td class="r">2:16 am</td><td>The officer of the watch, by eye</td><td>Water comes over the bridge.</td></tr>
+</tbody>
+</table>
+<p class="tcap">The page's feed on the 1912 orders, oldest first. Left out: the commutator, read 8 times.</p>
+</div>
+</div>
+<h4 id="c6-as-the-bridge-knew-it">As the bridge knew it</h4>
+<p>The box <span class="chip">As the bridge knew it</span> covers what nobody on the bridge could read: the water aboard, the inflow, the drafts, the forecast and the water in the damage diagram. In their place the readouts show <span class="ui">Trim, by eye</span>, the <span class="ui">Commutator</span> (the list as the bridge's instrument gave it) and what has been <span class="ui">Reported</span>, and the damage diagram shows each compartment as reported: not known, dry, water, or flooded. X-ray and this view take turns: one turns the other off.</p>
+<figure class="fig stage"><img src="img/bridge-knew.jpg" alt="The bridge's own view forty minutes after the touch"><figcaption>The same moment as the bridge knew it, at 12:20:00 am: the trim by eye, the commutator, the compartments reported; the status reads Sinking and the builder's man's estimate is under the readouts.</figcaption></figure>
+<h3 id="c6-the-pumps">The pumps</h3>
+<p>The engineers work her pumps by their own rules from the touch on, and on a watch you can give the pumps orders of your own from the <span class="chip">Systems</span> tab. Chapter 8 has them.</p>
+<h3 id="c6-the-boats">The boats</h3>
+<figure class="fig side"><img src="img/boats.png" alt="The boats on the Run tab"><figcaption>The section on the boats eighty-five minutes after the touch on the 1912 orders: what the two parties of officers are doing, and the three orders.</figcaption></figure>
+<p>Twenty boats with 1,178 places for the 2,201 people aboard. The model moves places and minutes, not persons: the boats are uncovered, swung out, loaded and lowered by two parties of officers and hands, one to a side, at the rates the record gives, and people come forward to them the more readily the more she is down by the head. It names nobody and draws no person.</p>
+<p>From the touch on, a strip on the stage counts <span class="ui">Boats</span> away, the people in them, the places that went empty and, at the end, the people in the water. The section <span class="ui">The boats</span> on the <span class="chip">Run</span> tab gives the same counts (<span class="ui">Boats away</span>, <span class="ui">In them</span>, <span class="ui">Places empty</span>, <span class="ui">Still aboard</span>, <span class="ui">In the water</span>), a line on what each party is doing, the table <span class="ui">Boat by boat</span>, and three orders:</p>
+<ul>
+<li><strong><span class="chip">Uncover the boats now</span>.</strong> Otherwise the officers order it themselves, 20 minutes after a touch that lets the sea in, and call the people to the boats 25 minutes later.</li>
+<li><strong><span class="ui">Who may board, port side</span></strong> and <strong><span class="ui">Who may board, starboard side</span></strong>: <span class="chip">Women and children only</span>, <span class="chip">Women and children first</span> or <span class="chip">Fill her</span>. A watch starts with the night's own: women and children only to port, women and children first to starboard.</li>
+<li><strong><span class="ui">Lower a boat once she holds</span></strong>: <span class="chip">30&nbsp;% (as on the night)</span>, <span class="chip">Half</span>, <span class="chip">Three-quarters</span> or <span class="chip">Full</span>.</li>
+</ul>
+<p>A boat is lowered by hand down the falls, more slowly when she is down by the head, when she lists against the boat, in the dark, and at half the pace with more than 1&nbsp;knots of way on her; not at all above 5&nbsp;knots, nor from a station within 2&nbsp;m of the sea. An order that cannot be carried out says why.</p>
+<figure class="fig stage"><img src="img/boats-night.jpg" alt="The port boats at night, seen from a boat off her beam"><figcaption>Eighty-five minutes after the touch, at night, from a boat lying off her port beam: the boats already away lie off her side.</figcaption></figure>
+<p>On the 1912 orders, 14 of the 18 boats lowered from the davits go within ten minutes of the record's time, and 637 people are in them against the record's 671. Outside the ten minutes (minutes early or late): 11 (-13), 4 (-38), 2 (-30), C (-19). At her end the strip reads 19 of 20 boats away, 684 in them, 447 places empty and 1,517 in the water.</p>
+<div class="gen" data-gen="boats">
+<div class="tw long">
+<table>
+<thead><tr><th>Boat</th><th>Side</th><th class="r">Places</th><th class="r">The record: away</th><th class="r">In her</th><th class="r">The model: away</th><th class="r">In her</th><th class="r">Minutes</th></tr></thead>
+<tbody class="first">
+<tr><td>7</td><td>stbd</td><td class="r">65</td><td class="r">12:40 am</td><td class="r">28</td><td class="r">12:47 am</td><td class="r">20</td><td class="r">+7</td></tr>
+<tr><td>5</td><td>stbd</td><td class="r">65</td><td class="r">12:44 am</td><td class="r">36</td><td class="r">12:53 am</td><td class="r">20</td><td class="r">+9</td></tr>
+<tr><td>3</td><td>stbd</td><td class="r">65</td><td class="r">12:55 am</td><td class="r">32</td><td class="r">12:59 am</td><td class="r">20</td><td class="r">+4</td></tr>
+</tbody>
+<tbody>
+<tr><td>1</td><td>stbd</td><td class="r">40</td><td class="r">1:05 am</td><td class="r">12</td><td class="r">1:02 am</td><td class="r">21</td><td class="r">-3</td></tr>
+<tr><td>9</td><td>stbd</td><td class="r">65</td><td class="r">1:30 am</td><td class="r">40</td><td class="r">1:22 am</td><td class="r">65</td><td class="r">-8</td></tr>
+<tr><td>11</td><td>stbd</td><td class="r">65</td><td class="r">1:35 am</td><td class="r">50</td><td class="r">1:22 am</td><td class="r">65</td><td class="r">-13</td></tr>
+<tr><td>13</td><td>stbd</td><td class="r">65</td><td class="r">1:40 am</td><td class="r">55</td><td class="r">1:37 am</td><td class="r">65</td><td class="r">-3</td></tr>
+<tr><td>15</td><td>stbd</td><td class="r">65</td><td class="r">1:41 am</td><td class="r">68</td><td class="r">1:37 am</td><td class="r">65</td><td class="r">-4</td></tr>
+<tr><td>8</td><td>port</td><td class="r">65</td><td class="r">1:00 am</td><td class="r">25</td><td class="r">12:55 am</td><td class="r">20</td><td class="r">-5</td></tr>
+<tr><td>6</td><td>port</td><td class="r">65</td><td class="r">1:10 am</td><td class="r">23</td><td class="r">1:04 am</td><td class="r">20</td><td class="r">-6</td></tr>
+<tr><td>4</td><td>port</td><td class="r">65</td><td class="r">1:50 am</td><td class="r">30</td><td class="r">1:12 am</td><td class="r">21</td><td class="r">-38</td></tr>
+<tr><td>2</td><td>port</td><td class="r">40</td><td class="r">1:45 am</td><td class="r">17</td><td class="r">1:15 am</td><td class="r">12</td><td class="r">-30</td></tr>
+<tr><td>16</td><td>port</td><td class="r">65</td><td class="r">1:20 am</td><td class="r">53</td><td class="r">1:29 am</td><td class="r">45</td><td class="r">+9</td></tr>
+<tr><td>14</td><td>port</td><td class="r">65</td><td class="r">1:25 am</td><td class="r">40</td><td class="r">1:29 am</td><td class="r">44</td><td class="r">+4</td></tr>
+<tr><td>12</td><td>port</td><td class="r">65</td><td class="r">1:30 am</td><td class="r">42</td><td class="r">1:38 am</td><td class="r">20</td><td class="r">+8</td></tr>
+<tr><td>10</td><td>port</td><td class="r">65</td><td class="r">1:50 am</td><td class="r">57</td><td class="r">1:52 am</td><td class="r">20</td><td class="r">+2</td></tr>
+<tr><td>C</td><td>stbd</td><td class="r">47</td><td class="r">2:00 am</td><td class="r">43</td><td class="r">1:41 am</td><td class="r">47</td><td class="r">-19</td></tr>
+<tr><td>D</td><td>port</td><td class="r">47</td><td class="r">2:05 am</td><td class="r">20</td><td class="r">2:01 am</td><td class="r">47</td><td class="r">-4</td></tr>
+</tbody>
+<tbody class="last">
+<tr><td>A</td><td>stbd</td><td class="r">47</td><td class="r">floated off</td><td class="r">–</td><td class="r">2:12 am</td><td class="r">47</td><td class="r"></td></tr>
+<tr><td>B</td><td>port</td><td class="r">47</td><td class="r">floated off</td><td class="r">–</td><td class="r">floated off</td><td class="r">–</td><td class="r"></td></tr>
+</tbody>
+</table>
+<p class="tcap">The record is the re-examined launch times and numbers that core/readers/people.js keeps; the model's columns are the page's at her end on the 1912 orders. &quot;Minutes&quot;: the model's time less the record's.</p>
+</div>
+</div>
+<p>The model's fitted numbers are 3: how readily people came forward, below and above a trim of about 3.5&nbsp;degrees, and the minutes a party gives a boat before it lowers her. The rest are the record's rates or named guesses.</p>
+<h3 id="c6-help-the-wireless-the-rockets-the-other-ships">Help: the wireless, the rockets, the other ships</h3>
+<p>The section <span class="ui">Help: the wireless, the rockets, the other ships</span> gives the wireless (calling or silent, and why), the ships that have answered and when each expects to be with her, and the rockets left. Its three orders are <span class="chip">Send the distress call</span>, <span class="chip">Fire a rocket</span> and <span class="chip">Work the Morse lamp</span>.</p>
+<p>With no order of yours the bridge does as it did in 1912: the captain orders the call 25 minutes after the touch (12:05 am), the operators send it at 12:27 am once they have her position, and 8 rockets go up from 12:46 am to 1:48 am, of the 36 in the locker aft. The wireless runs on her dynamos; when they stop, the operator throws in the battery, whose reach is about 150 miles against some 1,500 on the main set at night.</p>
+<div class="figrow n2">
+<figure class="fig"><img src="img/rocket.jpg" alt="A rocket over her at night"><figcaption>The first rocket bursting over her, from astern in the Night look, at 12:46 am. The burst, its light and its report are drawn for the eye; its time and its height are the model's.</figcaption></figure>
+<figure class="fig"><img src="img/help.png" alt="The wireless and the other ships on the Run tab"><figcaption>The section on help at the same moment: the wireless calling, the ships that have answered and when each expects to be with her, the rockets, and the three orders.</figcaption></figure>
+</div>
+<p>On the 1912 orders the wireless and the bridge went like this:</p>
+<div class="gen" data-gen="wireless">
+<div class="tw long">
+<table>
+<thead><tr><th class="r">Time</th><th>On the wireless and the bridge</th></tr></thead>
+<tbody class="first">
+<tr><td class="r">12:05 am</td><td>The captain to the wireless room: send the call for assistance. The operators wait for the position.</td></tr>
+<tr><td class="r">12:27 am</td><td>CQD: struck a berg, her position. The operators keep calling.</td></tr>
+<tr><td class="r">12:37 am</td><td>The corrected position is sent (Boxhall's).</td></tr>
+</tbody>
+<tbody>
+<tr><td class="r">12:37 am</td><td>Carpathia answers: 46 miles off.</td></tr>
+<tr><td class="r">12:38 am</td><td>Sinking; cannot hear for the noise of steam.</td></tr>
+<tr><td class="r">12:40 am</td><td>Carpathia: coming; she expects to be with you at 4:01 am.</td></tr>
+<tr><td class="r">12:46 am</td><td>A rocket goes up from the starboard socket, 1 of 36 (one every few minutes after it).</td></tr>
+<tr><td class="r">12:57 am</td><td>SOS: the new call goes out with the old.</td></tr>
+<tr><td class="r">1:14 am</td><td>Going down fast at the head; get your boats ready.</td></tr>
+<tr><td class="r">1:48 am</td><td>Engine room flooded.</td></tr>
+<tr><td class="r">1:48 am</td><td>A rocket goes up from the starboard socket, 8 of 36.</td></tr>
+<tr><td class="r">1:59 am</td><td>The captain releases the operators; Phillips stays at the key.</td></tr>
+<tr><td class="r">2:02 am</td><td>Come as quickly as possible: the engine room is filling up to the boilers.</td></tr>
+</tbody>
+<tbody class="last">
+<tr><td class="r">2:17 am</td><td>The wireless is silent: the sea is in the wireless room.</td></tr>
+<tr><td class="r">2:19 am</td><td>The wireless is silent: she has gone.</td></tr>
+</tbody>
+</table>
+<p class="tcap">The page's own log on the 1912 orders. Left out: 6 rockets between the first and the last, and 12 answers from the other ships.</p>
+</div>
+</div>
+<p>The other ships are placed where the research put them on the night, with their speeds, their operators' hours and the time each took to get under way:</p>
+<div class="gen" data-gen="ships">
+<div class="tw">
+<table>
+<thead><tr><th>Ship</th><th class="r">Off at the start</th><th class="r">Speed</th><th class="r">Hears her</th><th>At her end</th></tr></thead>
+<tbody>
+<tr><td>Carpathia</td><td class="r">46.5 miles</td><td class="r">13.6&nbsp;kn</td><td class="r">12:37 am</td><td>coming, expected at 4:05 am</td></tr>
+<tr><td>Californian</td><td class="r">18 miles</td><td class="r">13&nbsp;kn</td><td class="r">–</td><td>heard nothing</td></tr>
+<tr><td>Mount Temple</td><td class="r">49.5 miles</td><td class="r">11.5&nbsp;kn</td><td class="r">12:27 am</td><td>coming, the ice between</td></tr>
+<tr><td>Frankfurt</td><td class="r">154 miles</td><td class="r">12.5&nbsp;kn</td><td class="r">12:27 am</td><td>coming, expected at 1:01 pm</td></tr>
+<tr><td>Birma</td><td class="r">100 miles</td><td class="r">13&nbsp;kn</td><td class="r">12:27 am</td><td>coming, expected at 8:24 am</td></tr>
+<tr><td>Virginian</td><td class="r">170 miles</td><td class="r">18&nbsp;kn</td><td class="r">12:27 am</td><td>coming, expected at 10:09 am</td></tr>
+<tr><td>Baltic</td><td class="r">243 miles</td><td class="r">17.5&nbsp;kn</td><td class="r">12:27 am</td><td>coming, expected at 2:35 pm</td></tr>
+<tr><td>Olympic</td><td class="r">505 miles</td><td class="r">22.7&nbsp;kn</td><td class="r">12:27 am</td><td>coming, expected at 10:57 pm</td></tr>
+</tbody>
+</table>
+<p class="tcap">Distances from her wreck, and speeds, as core/readers/world.js places the ships; the last two columns are the page's 1912 night.</p>
+</div>
+</div>
+<p>Carpathia, 46.5 miles off at 13.6&nbsp;knots, hears the call at 12:37 am and is expected at 4:05 am, 265 minutes after the touch. Californian, 18 miles off, hears nothing: her operator had turned in. A call made sooner brings Carpathia sooner; so do miles made good towards her.</p>
+<h3 id="c6-walking-her-decks">Walking her decks</h3>
+<p><span class="chip">Walk</span>, at the end of the row of display buttons, puts you on her decks: an eye 1.7&nbsp;m above E deck amidships, in her own frame, so that her heave, her trim and her list carry you while down stays the world's. As she goes down by the head the deck ahead becomes a hill and the horizon tilts. The W, A, S and D keys walk, the arrow keys turn and walk, Q and E take you down and up a deck where there is one, Shift runs and Esc leaves; drag to look about. On a phone a pad of buttons does the same. While you walk the page holds her own pace, and gives yours back when you leave. At the flag the walk ends.</p>
+<p>What you meet is the model's: her side where her hull is; her watertight bulkheads on every deck below their tops, with their doors open to you only while the model has them open; and the water of each of her 64 spaces at its own level, the levels the X-ray hull draws, with the bunker's and the peak tank's water where they stand. A pad at the lower right of the stage says where you are: the deck, the compartment and the side, and the water at your feet, or that you are under it, or that her lights are out. Its buttons walk, turn, go down and up a deck and leave. Water to the knees slows you.</p>
+<figure class="fig stage"><img src="img/walk.jpg" alt="Walking E deck, looking forward"><figcaption>Her E deck at 2:05:00 am on the 1912 orders, walked from amidships, looking forward. The pad at the lower right reads: E deck · compartment 9 of 16, port · dry.</figcaption></figure>
+<p>This is a first stage. Each deck is open floor from side to side, without its rooms. Her rooms are read from the deck plans into sourced tables, all nine decks from the orlop to the Boat deck, each room checked against a 1912 original where one could be reached (chapter 10), but the walk does not draw them yet. A key takes you up or down a deck where you stand, without stairs. Where the model gives a bulkhead's doors no place, they stand on her centreline, or a third of her half-breadth out to either side. The lines, the colours, the water's look and the dark are appearance.</p>
+<h3 id="c6-the-hull-girder-s-gauge">The hull girder's gauge</h3>
+<figure class="fig side"><img src="img/gauge.png" alt="The readouts with the hull gauge inside the range"><figcaption>The readouts at 2:11:15 am on the 1912 orders: the hull gauge reads 4.0 GN m, hogging at bulkhead J, and its bar has entered the marked range.</figcaption></figure>
+<p>As her bow fills and her stern rises out of the water, her hull bends: her middle carries the weight of both ends. The <span class="ui">Hull</span> line in the readouts gives the bending moment where it is greatest over boiler room 1, where she broke, in GN m, and says where it is. Its bar marks the range the studies give for what her hull could bear there, 4.0 to 5.4 GN m: teal below it, amber within it, red past it. In the X-ray hull a band round her shows the same station in the same colour. Nothing breaks in this model yet: the gauge only shows where the bending stands against what she could bear.</p>
+<p>On the 1912 orders the gauge enters the range at 2:11:15 am. On the 1912 damage (the preset, the model's calibrated run), read on every step of the page's own run from 2:10 am:</p>
+<div class="gen" data-gen="gauge">
+<div class="tw">
+<table>
+<thead><tr><th>On the 1912 damage</th><th class="r">Ship's time</th><th class="r">Trim</th><th class="r">GN m</th></tr></thead>
+<tbody>
+<tr><td>Enters the studies' range (4.0 GN m)</td><td class="r">2:10:39 am</td><td class="r">6.6°</td><td class="r">4.00</td></tr>
+<tr><td>11° of trim: the record's break begins</td><td class="r">2:16:33 am</td><td class="r">11.0°</td><td class="r">5.12</td></tr>
+<tr><td>13° of trim</td><td class="r">2:16:51 am</td><td class="r">13.0°</td><td class="r">5.49</td></tr>
+<tr><td>17° of trim: the record's break at the latest</td><td class="r">2:17:11 am</td><td class="r">17.0°</td><td class="r">5.87</td></tr>
+<tr><td>The greatest moment</td><td class="r">2:17:21 am</td><td class="r">20.9°</td><td class="r">5.97</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>So the record's break, between 11 and 17&nbsp;degrees of trim, falls at 5.12 to 5.87 GN m on this model's curve: inside the range. Intact she bends at 0.89 GN m.</p>
+<figure class="fig stage"><img src="img/hull-gauge.jpg" alt="The hull gauge's band in the X-ray hull"><figcaption>The same moment in the profile view with the X-ray hull: the band round her hull over boiler room 1 in the gauge's colour, her stern rising.</figcaption></figure>
+<h4 id="c6-where-she-would-break">Where she would break</h4>
+<figure class="fig side"><img src="img/onset.png" alt="The readouts at the onset"><figcaption>The readouts at 2:16:40 am on the 1912 orders, the first step her own loads reach her strength somewhere along her. Under the hull gauge the red line reads: She would break here, now: x −10.9&nbsp;m, boiler room 2, 2:16:40 am.</figcaption></figure>
+<p>The studies' range is a figure for one place. The model also works out what her hull could bear at every station along her, in bending and in shear, from her plates and the riveted joints between them, and holds the gauge's bending and shear against it as she settles. The first time the two meet anywhere along her, a red line appears under the gauge: <span class="ui">She would break here, now</span>, then the station in metres forward (+) or aft (−) of amidships, the space it lies in, and the ship's time. In the X-ray hull a red ring marks the place. Hold the pointer over the line for the figures: the bending moment against what the hull could bear there, the shear against what it could carry, her trim and her list.</p>
+<p>Nothing breaks there. The model carries on as before, and her last minute is still a plunge: the line only marks where and when her own loads first reached her strength. In this build, on the 1912 damage and on the 1912 orders alike, it comes over boiler room 2, a few metres forward of boiler room 1 where she broke, and about two minutes before the record's break; nothing in her strength was tuned to put it there. It shows on a damage preset as on a watch.</p>
+<figure class="fig stage"><img src="img/onset-xray.jpg" alt="The red ring in the X-ray hull"><figcaption>The same moment in the profile view with the X-ray hull: the red ring round her hull where she would break, a few metres forward of the gauge's band over boiler room 1.</figcaption></figure>
+<h3 id="c6-her-end">Her end</h3>
+<p>Her lights go out at 2:18 am (the steam mains broken), and on the 1912 orders she founders at 2:19 am, 158.9 minutes after the touch. The card on the stage then says what happened (chapter 5).</p>
+<figure class="fig stage"><img src="img/night-boat.jpg" alt="The sinking at 2:05 am, seen from a boat"><figcaption>2:05 am on the 1912 orders, from a boat lying off her port beam at night: down by the head, her lights still burning, her ports reflected in the sea.</figcaption></figure>
+<h3 id="c6-her-fall-to-the-bed">Her fall to the bed</h3>
+<p>When she founders the page does not stop. From the flag the model takes her as two pieces, her bow and her stern, cut over boiler room 1 where she broke, and carries each 3,790&nbsp;m down to the bed: each moved by its weight, by the water and the air in it, by the water it must push aside and the water's drag on it, and at the last by the mud. The status stays <span class="ui">Foundered</span>, the ship's time runs on, and the stage follows the fall, on a watch and on a damage preset alike.</p>
+<ul>
+<li><strong>The clock.</strong> The fall runs at the speed you chose: at <span class="chip">60×</span> it is over in under ten seconds, at <span class="chip">1×</span> it takes its own time, some eight minutes for the stern. <span class="chip">Pause</span> stops it and <span class="chip">Play</span> goes on; when both pieces lie still that button reads <span class="chip">On the bed</span>. The ship's sounds stop at the flag. On a watch the night goes on beside her fall: the wireless is silent from the flag, the reports are done and the boats stay as they were left (their hours after are not yet in the model), but the other ships keep their courses, so the section on help still moves.</li>
+<li><strong>The strip.</strong> Down the right edge of the stage, the sea from the surface to the bed, to scale: marks at 200&nbsp;m, where daylight ends by day, and at each kilometre, the bed's depth at its foot, and each piece a mark at its own depth with its speed in metres a second. Tap a piece's mark to go with it.</li>
+<li><strong>The views.</strong> Four buttons head the strip. <span class="chip">Bow</span> and <span class="chip">Stern</span> go with their piece from 400&nbsp;m off: drag to turn the view, scroll or pinch to zoom. <span class="chip">Bed</span> is an eye on the bed below her, looking up as she comes down. <span class="chip">Column</span> shows the whole sea, surface to bed, in one picture from some 6&nbsp;km off, each piece named beside it. Drag to look about from the bed, or to turn the column.</li>
+<li><strong>The readouts.</strong> Under the gauge, a line for each piece: <span class="ui">Depth</span>, the depth of its lowest point, its keel while it lies upright; <span class="ui">Speed</span>, through the water, in metres a second and in knots; <span class="ui">Pressure</span>, the sea's at that depth, in atmospheres; <span class="ui">Water</span>, here the water's temperature there; <span class="ui">Under</span>, the time since the piece went under, or &quot;afloat&quot;. The pressure and the temperature come from the model's own column of an April sea at the wreck.</li>
+<li><strong>The bed.</strong> A net of 50&nbsp;m squares about her and 500&nbsp;m squares beyond, laid on the bed so that its slope, and her height above it, can be seen.</li>
+<li><strong>At rest.</strong> Once both pieces are down, the wreck as surveyed is laid on the bed in brass outlines, with the boiler field as a ring round the point under the break. They are placed about the model's own point under the break, so that the model's answer and the wreck are seen together. The labels give the gap between the two bows in its two parts, how far on from the break each lies and which way her head was: &quot;the model's bow: 819&nbsp;m on, her head at the flag 284 deg&quot;, and &quot;the bow, as surveyed: 772&nbsp;m on, her head about north&quot;.</li>
+<li><strong>The card.</strong> As each piece comes to rest, a line on the card says when, how deep, and how far from where she broke: &quot;The bow is on the bed at …&quot;, then &quot;The stern followed at …&quot;.</li>
+</ul>
+<div class="figrow n2 half">
+<figure class="fig half"><img src="img/fall-xray.jpg" alt="The bow falling, in the X-ray look"><figcaption>100 seconds after the flag on the 1912 orders, from the Bow view in the X-ray look: the bow 1,495&nbsp;m down and falling at 8.1&nbsp;m/s. The strip at the right holds the whole sea to scale.</figcaption></figure>
+<figure class="fig half"><img src="img/fall-night.jpg" alt="The bow falling, in the Night look"><figcaption>The same moment in the Night look: a lamp that was not there, 150&nbsp;m off her, and the water darkening as she goes down.</figcaption></figure>
+</div>
+<div class="figrow n2 half">
+<figure class="fig half"><img src="img/rest-bow.jpg" alt="The bow at rest on the bed"><figcaption>Both pieces at rest on the 1912 orders, from the Bow view: the model's bow on the bed, 3,792&nbsp;m down, and the survey's outline of the bow. Their two labels give the gap between them: how far on from the point under the break each lies, and which way her head was.</figcaption></figure>
+<figure class="fig half"><img src="img/rest-stern.jpg" alt="The stern at rest with the survey's outline"><figcaption>The same from the Stern view: the stern as the model lays it, upright, 3,800&nbsp;m down, beside the survey's outline of the stern, with the boiler field's ring round the point under the break.</figcaption></figure>
+</div>
+<p>Each piece's place and attitude, its depth and speed, the sea's pressure and temperature, the bed and its slope, and the moments each piece goes under, strikes the bed and comes to rest are the model's. The rest is appearance. In the X-ray look the fall is drawn in the page's own colours. In the Night look, where nothing could have been seen at that depth, a lamp hangs 150&nbsp;m off the piece you are with (&quot;a lamp that was not there&quot;) and the water darkens as she goes down. In either look specks stand in the water so that her speed shows. Her torn ends are drawn flat, and the water drawn in her is what the model held at the flag. No funnel rides down on either piece, as none stands on the wreck. Her first funnel falls before she founders, at about 2:15 am, when the model's own sea reaches its seat, as survivors saw it fall under its own weight; the second also fell at the surface and the third at the break, so the page draws none from the fall's first frame (when the fourth went is a bet). The foremast is laid back across the bow when the bow strikes the bed, its crow's nest on it, as the wreck has it (Ballard, 1987), and the mainmast, which no part of the wreck has, leaves the stern when the stern strikes. Those moments are the drawing's bets; the record has the end state only.</p>
+<aside class="box note"><b class="lab">Read the fall as a first model</b>
+<p>The page lets her pieces go at the flag as the model leaves her there: far down by the head, rolled some 80° onto her side, and in one piece until that moment. Both pieces come to rest upright, as both halves of the wreck sit. Each piece's air is one pocket that rises through the part of each slice the sea can fill, a stand-in until the air is followed space by space; held where it lay at the flag, as in edition 1.5, it turned them over. The way up still has a narrow margin: the bow rights itself if she is handed over rolled up to about 82.7°, and the model holds her roll at 80.2°. Her bow lands farther from the point under the break than the surveyed bow lies, and part of that gap is her heading at the flag (the labels at rest give both).</p>
+<p>Her speeds are near the record's estimates. On the 1912 orders the bow strikes the bed at 8.97&nbsp;m/s, where Best and others (2000) put it between 5 and 10&nbsp;m/s, and falls at 22 mph on average on the way down, against Ballard's estimate of 25 to 30. In the repository's trials (<code>out/fall_trials.txt</code>) the same pieces let go wholly under and flooded, the bow at the record's trim and the stern standing steeply, land upright with nothing tuned: the stern within 66&nbsp;m of where the survey found it, the bow 265 to 380&nbsp;m short of its place. The page does not yet model where and when she broke: the engine's joint at the break is in its trials only (chapter 10). Every preset that founders goes down the same way, cut in two, into the 1912 sea, 3,790&nbsp;m deep: Britannic too, though she lies in 119&nbsp;m of water.</p>
+</aside>
+<h3 id="c6-the-carpathia-question">The Carpathia question</h3>
+<p>Could any order given after the ice have kept her afloat until Carpathia was alongside? A search put the question to this model (its note is <code>docs/research/RESULT_carpathia_search_v3_2026-11-21.md</code>): from a minute after the touch on the 1912 orders, it tried 3,667&nbsp;nights of orders to the doors, the engines, the fires and the pumps, and kept the best. The note answers in its own words: <em>Not on this model, and by a wider margin than v2.</em> (its v2, run on the model of edition 1.5, found more than twice the gain). Nothing here says she could have been saved. The search is the model's answer as it stood on 21 November 2026, and the repository will run it again when the model's calibration is renewed.</p>
+<ul>
+<li><strong>What it buys.</strong> The best orders found keep her afloat 6.0 minutes longer: she founders 165.0 minutes after the touch, against 159.0. Carpathia is alongside 265.1 minutes after the touch as the night went, so she needed 106.2 minutes more; 54.2 had the distress call been made at once; and 35.0, the nearest of the three, had she also made five miles toward Carpathia. The best night falls 29.0 minutes short of that.</li>
+<li><strong>What it is made of.</strong> Pumps, the engines full astern for half an hour, and one door raised by hand, as the table below lists them. By the search's own count it pumps 1,643&nbsp;tons overboard, against 687 on the 1912 watch, whose engineers' own rules now do much of what an order could. Its pump orders are ones the <span class="ui">Pumps</span> section gives (chapter 8); its engine orders are the telegraph's (chapter 4); its door order is a click on bulkhead F's door on the Bulkheads tab (chapter 7).</li>
+<li><strong>How firm.</strong> With the model's guesses moved, at least half of the gain holds on 34 of 40 models, and some of it on 40. The 1912 watch it starts from is itself on a knife-edge: one of the engineers' own pump orders, at about an hour and three quarters after the touch, falls on one side or the other of its threshold with a change in the last bit, which moves her foundering by about 1.35 minutes. So one order that gains less than about a minute and a half may be that, not the order; the best night's gain is well above it.</li>
+</ul>
+<div class="gen" data-gen="carpathia">
+<div class="tw">
+<table>
+<thead><tr><th class="r">After the touch</th><th>The order</th></tr></thead>
+<tbody>
+<tr><td class="r">1&nbsp;min</td><td>Boiler room 4's ash-ejector pump put on boiler room 6</td></tr>
+<tr><td class="r">4&nbsp;min</td><td>The pumps handed back to the engineers</td></tr>
+<tr><td class="r">28&nbsp;min</td><td>Engines: full astern</td></tr>
+<tr><td class="r">31&nbsp;min</td><td>Every free pump that can reach boiler room 6 put on it</td></tr>
+<tr><td class="r">32&nbsp;min</td><td>Every free pump that can reach boiler room 4 put on it</td></tr>
+<tr><td class="r">58&nbsp;min</td><td>Engines: stop</td></tr>
+<tr><td class="r">68&nbsp;min</td><td>Raise the doors in bulkhead F by hand</td></tr>
+</tbody>
+</table>
+<p class="tcap">The best night of the 3,667 the search tried: its orders after the 1912 orders, which it keeps to a minute after the touch.</p>
+</div>
+</div>
+</section>
+
+<section class="chapter" id="ch7">
+<div class="eyebrow">Chapter 7</div>
+<h2>Scenarios and what-ifs</h2>
+<hr class="rule">
+<p class="lede">Besides the watch, the <span class="chip">Run</span> tab's cards load damage cases that start at the collision, with the ship stopped. They are the cases the flooding model was built and checked on, and a hull with no damage for your own.</p>
+<p>The cards, as the page lists them, with what this build's model makes of each:</p>
+<div class="gen" data-gen="cards">
+<div class="tw">
+<table>
+<thead><tr><th>Card</th><th>What the card says</th><th>In the model</th></tr></thead>
+<tbody>
+<tr><td><strong>The watch, 14 April 1912</strong></td><td>You have the bridge at 11.39 pm: 22½ knots, course 266°. When the lookout rings three bells, the wheel and the telegraph are yours. The ice makes the damage.</td><td>On the 1912 orders: founders at 2:18 am, 2&nbsp;h 39&nbsp;min after the touch</td></tr>
+<tr><td><strong>Another night</strong></td><td>A berg somewhere ahead, drawn from a seed: its size, its place, how far off it is seen. The same seed gives the same night.</td><td>Whatever the seed and your orders make of it</td></tr>
+<tr><td><strong>Titanic, 14 April 1912</strong></td><td>Iceberg damage along the starboard bow: six compartments holed, about 8.8 sq ft in all (Wilding estimated 12), shared out as Hackett and Bedford found; boiler room 5 holed only inside its forward bunker. Watertight doors closed from the bridge; boiler rooms 5 and 4 pumped as they were.</td><td>Founders in 2&nbsp;h 38&nbsp;min</td></tr>
+<tr><td><strong>Four forward compartments</strong></td><td>Forepeak and holds 1-3 open to the sea. Wilding testified she would have floated like this.</td><td>Floats, 2.1° by the head</td></tr>
+<tr><td><strong>Five forward compartments</strong></td><td>Add boiler room 6. Water reaches E deck at bulkhead E and the compartments fill one after another.</td><td>Founders in 2&nbsp;h 28&nbsp;min</td></tr>
+<tr><td><strong>Olympic and HMS Hawke, 1911</strong></td><td>Rammed near the stern on the starboard side. Two after compartments flooded; she returned to Southampton.</td><td>Floats, 0.7° by the stern</td></tr>
+<tr><td><strong>Britannic, 21 November 1916 (approx.)</strong></td><td>Mine on the starboard bow, six forward compartments flooded through failed doors, bulkheads raised to B deck, about 25 portholes open.</td><td>Founders in 49&nbsp;min</td></tr>
+<tr><td><strong>Undamaged hull</strong></td><td>No damage. Switch to the hole tool and tap the hull below the waterline.</td><td>Floats until you make a hole</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<h3 id="c7-the-clock">The clock</h3>
+<p><span class="chip">Pause</span> stops the clock and <span class="chip">Play</span> starts it again; <kbd>Space</kbd> does the same. <span class="chip">Restart from collision</span>, or <kbd>R</kbd>, starts the run again with the damage it has now; on a watch the button reads <span class="chip">Restart this watch</span>. The speed buttons run the model <span class="chip">1×</span>, <span class="chip">10×</span>, <span class="chip">60×</span>, <span class="chip">240×</span> or <span class="chip">900×</span> faster than real time. The tick box <span class="chip">Stern light</span> shows the light at her stern: photographs suggest she had one, though the rules of 1910 did not ask it of a steamer.</p>
+<p>A damage preset has no watch, so the boats, the reports and help do not appear on it; the hull gauge, the mark of where she would break, the card at the end and her fall to the bed do. When a preset founders the card says when, and when she lies steady with water aboard it says she floats; <span class="chip">This run again</span> starts it afresh. The 1912 damage founders at 2:18 am, 158.3 minutes after the collision. After the flag the clock runs on through her fall, and once both pieces lie on the bed the play button reads <span class="chip">On the bed</span> (chapter 6).</p>
+<h3 id="c7-the-damage-tab">The Damage tab</h3>
+<ul>
+<li><strong><span class="ui">Tool</span>.</strong> <span class="chip">Look</span> leaves the hull alone. With <span class="chip">Punch hole</span>, tap the hull below the waterline to open a hole there; dragging still turns the view. With <span class="chip">Scrape</span>, drag along the hull to open a line of holes, as the ice did. Picking a tool turns the X-ray hull on.</li>
+<li><strong><span class="ui">Hole size</span>.</strong> The slider runs from 0.02&nbsp;m² to 5&nbsp;m², and names the size: smaller than a sheet of paper, about one A4 sheet, a few sheets, a torn plate, a ram or a mine.</li>
+<li><strong><span class="ui">Openings</span>.</strong> The holes, by compartment and side, with their depth, their area in square feet and the tons a minute coming in. The × at a row's end closes those holes; <span class="chip">Remove all openings</span> closes them all. The water already aboard stays.</li>
+<li><strong><span class="ui">Before the collision</span>.</strong> The tick box gives her the 2° list to port of the night, from her emptied starboard coal bunkers, and with it the one bunker the model holds as a space of its own: the empty starboard half of boiler room 5's forward bunker, which takes the sea in first and gives way later (chapter 10). It applies when the run restarts.</li>
+</ul>
+<figure class="fig"><img src="img/damage-hole.jpg" alt="One hole punched in No. 2 hold"><figcaption>The undamaged hull with one hole of about an A4 sheet punched in No. 2 hold, ten minutes on. The Damage tab lists it: H2, starboard, 6.3&nbsp;m deep, 25&nbsp;tons a minute. The forecast: Stays afloat: settles 0.3° by the head with 1,926&nbsp;t aboard.</figcaption></figure>
+<h3 id="c7-the-bulkheads-tab">The Bulkheads tab</h3>
+<figure class="fig side"><img src="img/bulkheads.png" alt="The Bulkheads tab at 2:09 am"><figcaption>The Bulkheads tab at 2:09 am on the 1912 damage: the time water first flowed over each bulkhead.</figcaption></figure>
+<ul>
+<li><strong><span class="ui">Watertight doors</span>.</strong> <span class="chip">Close all from the bridge</span> drops the doors at the tank top from the bridge. The switch works by electromagnets, so it needs current from the dynamos; a door falls shut in about 25 seconds. Without current the switch does nothing. A float under each room's floor still drops the doors into it when water comes in, and a lever at each door works it by hand. <span class="chip">Open all</span> raises the doors by hand. A scenario's own open doors are held open.</li>
+<li><strong><span class="ui">Bulkhead height</span>.</strong> <span class="chip">As built</span>, <span class="chip">All to D deck</span> or <span class="chip">All to B deck</span>: raising the bulkheads is the classic what-if.</li>
+<li><strong><span class="ui">The fifteen bulkheads</span>.</strong> For each bulkhead: its letter, the compartments it stands between, the deck its top reaches, its doors, and the time water first flowed over it. A door reads <span class="chip">Open</span>, <span class="chip">Closed</span> or <span class="chip">Falling</span>; click it to work it by hand. On a watch every door order goes in the log, like the helm's.</li>
+</ul>
+<h3 id="c7-what-ifs-and-what-the-model-makes-of-them">What-ifs, and what the model makes of them</h3>
+<p>Each of these changes the 1912 damage. The page makes the first four: the × beside an opening's row on the <span class="chip">Damage</span> tab, and the bulkhead height. The last is in the note below. The model's answers come from the repository's validation run, the same run the <span class="chip">Evidence</span> tab shows:</p>
+<div class="gen" data-gen="validation">
+<div class="tw">
+<table>
+<thead><tr><th>Case</th><th>The record</th><th>The model</th></tr></thead>
+<tbody>
+<tr><td>No damage in boiler room 5</td><td>Wilding: she still sinks, slower</td><td>Founders in 3&nbsp;h 12&nbsp;min</td></tr>
+<tr><td>The damage stopping at hold 3</td><td>Four compartments: she floats</td><td>Floats, 2.1° by the head</td></tr>
+<tr><td>Every bulkhead to D deck</td><td>Wilding: it would not have saved her</td><td>Founders in 2&nbsp;h 47&nbsp;min</td></tr>
+<tr><td>Every bulkhead to B deck</td><td>Wilding: she would still go down</td><td>Founders in 5&nbsp;h 20&nbsp;min (disagrees)</td></tr>
+<tr><td>The watertight doors left open</td><td>Debated</td><td>Founders in 2&nbsp;h 50&nbsp;min</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<aside class="box note"><b class="lab">Doors left open: the model and the page</b>
+<p>The validation run holds every door open from the collision on, as a scenario holds its own open doors, with their floats unarmed. Held open, she sinks later in this model, not sooner, because the water spreads aft low down instead of tipping the bow: <em>Founders in 2&nbsp;h 50&nbsp;min</em>, against <em>Founders in 2&nbsp;h 38&nbsp;min</em> with the doors shut. In the page, <span class="chip">Open all</span> raises the doors by hand, but each door's float drops it again once water stands 0.5&nbsp;m deep beside it. On the 1912 damage the doors of bulkheads D, E and F fall shut within minutes, and she founders as if they had never been opened. The page cannot repeat the validation's case.</p>
+</aside>
+</section>
+
+<section class="chapter" id="ch8">
+<div class="eyebrow">Chapter 8</div>
+<h2>Her systems</h2>
+<hr class="rule">
+<p class="lede">Her machinery depends on itself, so a failure spreads. The <span class="chip">Systems</span> tab shows each link and its state now: green when it works, amber when it is short, red when it has failed, grey when it is idle.</p>
+<p>Coal feeds the fires in six boiler rooms. Their steam drives the two reciprocating engines and the wing screws. The engines' exhaust drives the turbine and the centre screw. The same steam works the steering engines that move the rudder, the dynamos that light her, and the pumps. Water breaks the chain where it reaches: at a room's furnaces, at an engine's crankshafts, at the dynamo flat. As her stern rises, the screws and then the rudder leave the water.</p>
+<div class="gen" data-gen="chain">
+<div class="tw long">
+<table>
+<thead><tr><th>Link</th><th>Needs</th><th>Fails when</th></tr></thead>
+<tbody class="first">
+<tr><td><strong>Coal</strong></td><td>Coal in the bunkers</td><td>The bunkers run empty</td></tr>
+<tr><td><strong>Fires</strong></td><td>Coal, and a dry stokehold</td><td>Water reaches a room's furnaces; the bunkers run dry; the stokers draw them</td></tr>
+<tr><td><strong>Steam</strong></td><td>The fires</td><td>Fewer fires burn than she uses; the steam mains break as she rises steeply</td></tr>
+</tbody>
+<tbody>
+<tr><td><strong>Engines</strong></td><td>Steam, and a dry engine room</td><td>Water reaches the crankshafts; the steam falls below what they need</td></tr>
+<tr><td><strong>Turbine</strong></td><td>The engines' exhaust: ahead, at Half or Full, both engines above 40&nbsp;rpm</td><td>Its room floods</td></tr>
+<tr><td><strong>Screws</strong></td><td>The engines, and water round the blades</td><td>Her stern rises and lifts them out</td></tr>
+<tr><td><strong>Way</strong></td><td>The screws: water moving past the rudder</td><td>She stops; the rudder then has nothing to work on</td></tr>
+<tr><td><strong>Steering</strong></td><td>Steam, way on her, and the blade under water</td><td>No steam: the rudder stays where it is</td></tr>
+<tr><td><strong>Dynamos</strong></td><td>Steam, and a dry dynamo flat</td><td>She goes dark; the emergency dynamos on D deck keep her emergency lights a while</td></tr>
+</tbody>
+<tbody class="last">
+<tr><td><strong>Doors</strong></td><td>Current, for the bridge's switch</td><td>In the dark only their floats and levers drop them</td></tr>
+<tr><td><strong>Pumps</strong></td><td>Steam; no current</td><td>The room a pump stands in floods; the steam fails</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<h3 id="c8-the-boiler-rooms">The boiler rooms</h3>
+<div class="gen" data-gen="rooms">
+<div class="tw">
+<table>
+<thead><tr><th>Room</th><th>Boilers</th><th class="r">Furnaces</th><th class="r">Ends lit on the night</th></tr></thead>
+<tbody>
+<tr><td>Boiler room 6</td><td>4, double-ended</td><td class="r">24</td><td class="r">8 of 8</td></tr>
+<tr><td>Boiler room 5</td><td>5, double-ended</td><td class="r">30</td><td class="r">10 of 10</td></tr>
+<tr><td>Boiler room 4</td><td>5, double-ended</td><td class="r">30</td><td class="r">10 of 10</td></tr>
+<tr><td>Boiler room 3</td><td>5, double-ended</td><td class="r">30</td><td class="r">10 of 10</td></tr>
+<tr><td>Boiler room 2</td><td>5, double-ended</td><td class="r">30</td><td class="r">10 of 10</td></tr>
+<tr><td>Boiler room 1</td><td>5, single-ended</td><td class="r">15</td><td class="r">0 of 5: cold</td></tr>
+<tr><td><strong>In all</strong></td><td>29</td><td class="r"><strong>159</strong></td><td class="r">48 of 53</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><span class="chip">Draw</span> beside a room orders its stokers to draw the fires; <span class="chip">Draw every fire</span> orders all of them. A room's fires take about 20 minutes to draw: the source says room 5's thirty furnaces took fifteen to twenty men about twenty minutes. The steam already raised carries the load a while longer. Then, as the pressure falls, the engines stop first, then the dynamos, then the steering gear. On a watch the order goes in the log with the helm's and the telegraph's.</p>
+<figure class="fig side"><img src="img/systems.png" alt="The Systems tab on the 1912 watch"><figcaption>The Systems tab seven and a half minutes after the touch on the 1912 orders. Boiler room 6 has flooded, so the fires burn in four of the five rooms lit; the telegraph has stopped the engines; the pumps: 2 at work, 6.8&nbsp;t a minute; 15&nbsp;t put overboard.</figcaption></figure>
+<h3 id="c8-coal-in-her-bunkers">Coal in her bunkers</h3>
+<p><span class="chip">As loaded</span> gives her the coal of the night, about 3,050&nbsp;tons: worked out from what she took aboard at Southampton and what she burned on the way. <span class="chip">2&nbsp;h left</span> and <span class="chip">15&nbsp;min left</span> give her that long at full firing, about 750&nbsp;tons a day. The choice applies when the run restarts, and to the next watch. With a room's bunkers empty its fires burn down in about 15 minutes (a guess).</p>
+<h3 id="c8-her-lights-and-the-doors">Her lights and the doors</h3>
+<p>Her lights are the dynamos' output, not a clock. Water at the dynamo flat, or too little steam, puts the main sets out. Two small emergency dynamos on D deck then keep about 15&nbsp;% of her light (a guess), until the sea reaches D deck where they stand. When the main dynamos stop, so does the current that drops the watertight doors from the bridge: in the dark the bridge's switch does nothing, and only each door's float, or its lever worked by hand, will drop it.</p>
+<h3 id="c8-the-pumps">The pumps</h3>
+<p>Her steam pumps reach the bilges of the boiler rooms and the engine rooms, and of the holds while their valves can be worked: the valves stood in the firemen's passage, lost once it floods, about five minutes after the collision in 1912. The peaks have no suctions.</p>
+<div class="gen" data-gen="pumps">
+<div class="tw long">
+<table>
+<thead><tr><th>Pump</th><th class="r">Tons of water an hour</th></tr></thead>
+<tbody class="first">
+<tr><td>Boiler room 6's ash-ejector pump</td><td class="r">150</td></tr>
+<tr><td>Boiler room 5's ballast-and-bilge pump</td><td class="r">250</td></tr>
+<tr><td>Boiler room 4's ash-ejector pump</td><td class="r">150</td></tr>
+</tbody>
+<tbody>
+<tr><td>Boiler room 3's ballast-and-bilge pump</td><td class="r">250</td></tr>
+<tr><td>Boiler room 2's ballast-and-bilge pump</td><td class="r">250</td></tr>
+<tr><td>A ballast pump in the reciprocating engine room</td><td class="r">250</td></tr>
+<tr><td>The other ballast pump in the reciprocating engine room</td><td class="r">250</td></tr>
+<tr><td>A bilge pump in the reciprocating engine room</td><td class="r">150</td></tr>
+<tr><td>The other bilge pump in the reciprocating engine room</td><td class="r">150</td></tr>
+</tbody>
+<tbody class="last">
+<tr><td>The turbine room's bilge pump</td><td class="r">150</td></tr>
+<tr><td><strong>In all</strong></td><td class="r"><strong>2,000</strong></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>That is 1,700&nbsp;tons an hour from the ballast and bilge pumps, and 2,000 with the two ash ejectors (an estimate of Wilding's). All of them run on steam; none needs the dynamos. They give nothing below 30&nbsp;psi and their full rate above 80&nbsp;psi (a guess at direct-acting pumps).</p>
+<p>On a watch the engineers work them as the model guesses they would: a room's own pumps go on 5 minutes after water comes in, and pumps from rooms still dry are led to it through the bilge main 30 minutes later. A pump stops for good when the room it stands in floods 2.3&nbsp;m deep: its crew has gone. The 1912 damage preset carries the night's own schedule instead: boiler room 5's pump from 10 minutes, and boiler room 4's from 30. Against the 1912 damage they put about 367&nbsp;tons overboard and keep her afloat 2.48 minutes longer; every pump able to reach the bilges, never abandoned, would buy 21.12 minutes (the repository's experiment e22). Against a small leak they can hold a room dry.</p>
+<h4 id="c8-orders-to-the-pumps">Orders to the pumps</h4>
+<figure class="fig side"><img src="img/pumps.png" alt="Three rooms of the Pumps section after two orders"><figcaption>Boiler rooms 5, 4 and 3 in the Pumps section, three minutes after the touch on the 1912 orders, just after Every pump that can reach it on boiler room 4 and then on boiler room 5: each lists the pumps now on it and when each will be at work. Boiler room 3, still dry, is in the quieter form.</figcaption></figure>
+<p>The section <span class="ui">Pumps</span> on the <span class="chip">Systems</span> tab says who has the pumps, and lists each room with water in it or pumps on it: its water, what its pumps put out, and each pump on it, at work or at work in so many minutes. On a watch it lists every other room an order can draw from as well, dry and in a quieter form, so that pumps can be put on a room before the water reaches it; and it takes your orders:</p>
+<ul>
+<li><span class="chip">Its own pumps</span> puts a room's own pumps on it, at work 5 minutes after the order.</li>
+<li><span class="chip">Every pump that can reach it</span> adds every free pump that can, those standing elsewhere led to it through the bilge main, at work 30 minutes after the order.</li>
+<li><span class="chip">One pump…</span> opens a list of the free pumps, each with its rate and when it would be at work.</li>
+<li><span class="chip">Off</span> beside a pump, or <span class="chip">All off</span> for a room, takes pumps off at once.</li>
+<li><span class="chip">Back to the engineers</span> hands the pumps back to their rules, which go on from where the pumps stand.</li>
+</ul>
+<p>An order takes the pumps from the engineers, who then wait for yours. A room's suctions and the two mains limit what can be drawn from it; none works without steam, and a pump stops when the room it stands in floods. An order that cannot be carried out changes nothing and says why. Every order goes in the watch's log, and the forecast runs the watch on with it.</p>
+<p>On the 1912 orders, <span class="chip">Every pump that can reach it</span> on boiler room 4, still dry, and then on boiler room 5, 3 minutes after the touch, moves the forecast from 158.95 to 160.28 minutes after the touch: 1.33 minutes more. What the best orders a search found buy is in chapter 6, under &quot;The Carpathia question&quot;.</p>
+<aside class="box note"><b class="lab">Blowing off</b>
+<p>When the engines stop with every fire lit, the safety valves lift and steam roars from the escape pipes on her funnels, until the stokers bank the fires. On the 1912 orders it starts soon after the telegraph rings Stop. With the sound on, you hear it; in the 3D view, the steam rises from her funnels.</p>
+</aside>
+</section>
+
+<section class="chapter" id="ch9">
+<div class="eyebrow">Chapter 9</div>
+<h2>The evidence</h2>
+<hr class="rule">
+<p class="lede">The <span class="chip">Evidence</span> tab sets the run beside the record: her trim by the head, her list and the water aboard, against the eyewitness reconstruction, with the forecast to the end. Below them, the timeline check and the cases the fit never saw.</p>
+<figure class="fig side"><img src="img/evidence.png" alt="The Evidence tab at 2:09 am"><figcaption>The Evidence tab at 2:09 am on the 1912 damage. Blue: this run; dashed: the forecast; gold: the eyewitness reconstruction (Halpern, 2023), and in the last chart Wilding's 16,000&nbsp;tons at 40 minutes.</figcaption></figure>
+<h3 id="c9-trim-by-the-head">Trim by the head</h3>
+<p>The fit's main evidence. Halpern's reconstruction of her trim from the eyewitnesses (core/scenarios.js), against the model's calibrated run of the 1912 damage (out/validation.json):</p>
+<div class="gen" data-gen="trim">
+<div class="tw">
+<table>
+<thead><tr><th>Time</th><th class="r">Eyewitness reconstruction</th><th class="r">The model</th></tr></thead>
+<tbody>
+<tr><td>11:55 pm</td><td class="r">0.8°</td><td class="r">0.9°</td></tr>
+<tr><td>12:10 am</td><td class="r">1.8°</td><td class="r">1.7°</td></tr>
+<tr><td>12:25 am</td><td class="r">2.6°</td><td class="r">2.3°</td></tr>
+<tr><td>12:55 am</td><td class="r">3.2°</td><td class="r">3.3°</td></tr>
+<tr><td>1:20 am</td><td class="r">4.0°</td><td class="r">4.0°</td></tr>
+<tr><td>1:50 am</td><td class="r">5.5°</td><td class="r">4.9°</td></tr>
+<tr><td>2:15 am</td><td class="r">10.0°</td><td class="r">8.1°</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>The reconstruction is itself an estimate: Halpern read her trim from what survivors said they saw, the rows of ports going under and the well deck awash, at times they gave.</p>
+<h3 id="c9-the-list">The list</h3>
+<p>The model's list begins as the coal list of the evening, 2° to port. The sea then comes first into the empty starboard half of boiler room 5's forward bunker, and on the calibrated run she lists 2° to starboard five minutes after the collision, and little by 11:50 pm, where witnesses saw 5° to starboard. Once the bunker gives way, about an hour after the collision, the coal list and the free surface of the water in her take her to port: 4° to port at 1:50 am and 8° to port at 2:05 am, where witnesses saw 10° to 15° to port. On a watch the commutator reads that list, a few degrees short of what the officers reported. The candidates for the rest are worked out in the repository's design notes for her list: water running aft along Scotland Road, and the port gangway door ordered open.</p>
+<h3 id="c9-the-timeline-check">The timeline check</h3>
+<p>The events witnesses saw, against the times the model gives for them, as the <span class="chip">Evidence</span> tab lists them:</p>
+<div class="gen" data-gen="timeline">
+<div class="tw">
+<table>
+<thead><tr><th>Event</th><th class="r">Witnessed</th><th class="r">Model</th></tr></thead>
+<tbody>
+<tr><td>Water seen pouring down from E deck at the Turkish baths (bulkhead F)</td><td class="r">12:55 am</td><td class="r">12:57 am</td></tr>
+<tr><td>Second row of ports under the forecastle submerged</td><td class="r">1:20 am</td><td class="r">1:16 am</td></tr>
+<tr><td>Forward well deck awash</td><td class="r">1:50 am</td><td class="r">1:48 am</td></tr>
+<tr><td>Forecastle head going under</td><td class="r">2:05 am</td><td class="r">1:59 am</td></tr>
+<tr><td>Bridge goes under; crow's nest at the waterline</td><td class="r">2:15 am</td><td class="r">2:16 am</td></tr>
+<tr><td>Foundered (stern under)</td><td class="r">2:20 am</td><td class="r">2:18 am</td></tr>
+<tr><td>16,000&nbsp;tons aboard (Wilding)</td><td class="r">12:20 am</td><td class="r">12:55 am</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Wilding told the inquiry that 16,000&nbsp;tons came in during the first 40 minutes, and from that he put the opening at 12 square feet. The model reaches 16,000&nbsp;tons only after 75 minutes: the eyewitness timeline fits a smaller opening, 8.8 square feet (0.82&nbsp;m²).</p>
+<h3 id="c9-the-ledger">The ledger</h3>
+<p>The repository also keeps the record as a ledger of 26 observations, each one witness's sight of one thing at one time: the sea at a hatch or a stair, the water in a room, a sounding, her list, the tons aboard, an event. Each is read against the run of the 1912 damage, and every row is a check, printed and never scored: some rows are marked for the model's next calibration, some are held out to judge that fit, and some are only reported. At this edition's numbers 8 of the 26 lie in their band. The largest misses are her list changing sides, which the model has 56 minutes after the collision and the record between 85 and 110; the water aboard 45 minutes after it, 18&nbsp;% short of Weeks and Halpern's reconstruction, 13,717&nbsp;tons; and the sea at Poingdestre's quarters, which reaches the mark he saw 11 minutes late. The whole ledger is <code>out/ledger_1912.txt</code>.</p>
+<h3 id="c9-cases-the-fit-never-saw">Cases the fit never saw</h3>
+<p>Four numbers were fitted to the 1912 record, on the damage preset and the reconstructed watch together. The first row is that fit; the others were no part of it, and nothing was changed for them:</p>
+<div class="gen" data-gen="validation">
+<div class="tw">
+<table>
+<thead><tr><th>Case</th><th>The record</th><th>The model</th></tr></thead>
+<tbody>
+<tr><td>Titanic, 1912 (the fit)</td><td>Sank in 2&nbsp;h 40&nbsp;min</td><td>Founders in 2&nbsp;h 38&nbsp;min</td></tr>
+<tr><td>Forepeak and holds 1 to 3 open</td><td>Wilding: she would float</td><td>Floats, 2.1° by the head</td></tr>
+<tr><td>Add boiler room 6</td><td>Wilding: she sinks</td><td>Founders in 2&nbsp;h 28&nbsp;min</td></tr>
+<tr><td>Olympic and HMS Hawke, 1911</td><td>Two compartments flooded; she reached port</td><td>Floats, 0.7° by the stern</td></tr>
+<tr><td>Britannic, 1916 (approximate)</td><td>Sank in about 55&nbsp;min</td><td>Founders in 49&nbsp;min</td></tr>
+<tr><td>Britannic with her portholes shut</td><td>Built to float with six compartments flooded</td><td>Floats, 8.0° by the head</td></tr>
+<tr><td>Titanic, bulkheads to D deck</td><td>Wilding: it would not have saved her</td><td>Founders in 2&nbsp;h 47&nbsp;min</td></tr>
+<tr><td>Titanic, bulkheads to B deck</td><td>Wilding: she would still go down</td><td>Founders in 5&nbsp;h 20&nbsp;min (disagrees)</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>The B-deck case is the one disagreement with a witness. Wilding thought she would still have gone down; the model floats her, as the later design of Britannic claimed for her own six forward compartments. Britannic's hull is taken as Titanic's, a little narrower, and which of her bulkheads went to B deck, and where her open ports were, are assumptions.</p>
+<p>The validation table prints, for each case that floats, how far the lowest top of a bulkhead with water on one side and none on the other stands above the sea. Olympic after the Hawke keeps 6.26&nbsp;m at bulkhead O, but two cases float by little: 0.78&nbsp;m at bulkhead F for Britannic with her portholes shut, and 0.94&nbsp;m at bulkhead D with the four forward compartments open. Those are edges, not margins: a small change in an assumption could turn either case.</p>
+</section>
+
+<section class="chapter" id="ch10">
+<div class="eyebrow">Chapter 10</div>
+<h2>How the model works, briefly</h2>
+<hr class="rule">
+<p class="lede">Each piece below is a model with numbers in it. Where a number comes from a source the code names the source; where it had to be guessed the code says so. This chapter says which is which.</p>
+<h3 id="c10-flooding">Flooding</h3>
+<p>Her hull is a shape fitted to the builder's hydrostatics, cut into 4,408 vertical columns. Every quarter of a second the model adds up her buoyancy and the water in her over those columns, at the pose she has at that moment, and moves her as one rigid body in rise, trim and list. Water moves between the 64 spaces and the sea through orifice and weir laws: through holes, doors and deck openings, and over the tops of the bulkheads. The two halves of an open space share one water surface.</p>
+<p>Above B deck stand the three tiers of her superstructure. They belong to the spaces above E deck, so they hold her up while they are dry. Their windows, and the entrance doors and domes of the two grand staircases, keep the sea out until the water on them reaches their strength: about a metre at the sill of a wooden door, a metre and a half on a window, half a metre on a dome's glazed cover. A dome goes sooner than that, from below: once the doors of its stair hall are under water, the air shut in under it lifts the cover's panes. On the 1912 damage the forward dome gives way about a minute after the sea reaches the bridge. No survivor saw a dome give way; it is a reconstruction, in the model as in the paintings and the film.</p>
+<p>Four numbers were fitted to the eyewitness record: the total area of the iceberg's damage (0.82&nbsp;m², about 8.8 square feet, shared out over six compartments as Hackett and Bedford give its openings: 4.8, 11.9, 24.6, 26.2, 22.2 and 10.3&nbsp;% from the forepeak aft, in the table of Felkins, Leighly and Jankovic, 1998), and three for the water's paths: along E deck, down through it, and through the deck above once it is under water. The fit holds the 1912 damage's timeline and the reconstructed watch's foundering together, both within 157 to 160 minutes. It includes the pumps as they were worked on the night, and the superstructure with its windows and staircases. Along E deck, over the bulkheads that stop there, the water runs aft by two passages at their widths on the deck plans, which the fitted number for that path multiplies: Scotland Road to port, 2.24&nbsp;m between its walls, and the passage to starboard, 1.40 to 1.49&nbsp;m.</p>
+<p>Two spaces hold smaller ones. With her coal list to port, the empty starboard half of boiler room 5's forward bunker is a pocket of its own: the openings the ice made inside it fill it, its door leaks into the stokehold, and it gives way once the water in it stands high enough, emptying into boiler room 5, on the 1912 damage about an hour after the collision. Until then the stokehold's plates stay dry, as the leading stoker Barrett, who was there, told the inquiry. At her bow, the forepeak's lowest part, from the keel to the orlop deck's watertight flat, is her peak tank, a pocket that never gives way: the ice's openings there fill it, and the sea rises into the forepeak above only by the tank's vent, a 4-inch pipe led to G deck (its size is a bet). So the forepeak stays dry for its first minutes, as the British inquiry's report has it and as the lamp trimmer Hemming found its stores soon after the jar; on the 1912 watch the tank is full some 22 minutes after the collision, and the water comes up its vent from then on.</p>
+<p>Her rooms are not yet part of the flooding. The model can cut each of its 64 spaces at her decks into 250 slabs, one deck's space in one compartment on one side, and share a space's water out among them by its own rule. Her rooms themselves are read from Encyclopedia Titanica's free deck plans into tables of facts, 572 rows on all nine decks from the orlop to the Boat deck, each with its source and its check against a 1912 original where one could be reached (<em>The Shipbuilder</em>'s plates). Neither the flooding nor the page uses them yet: inside a space her decks are open floor. What the tables find against the model, such as two of her bulkheads standing a little aft of the model's and her hull too narrow at her ends above E deck, is the next work for her rooms.</p>
+<h3 id="c10-handling">Handling</h3>
+<p>A standard manoeuvring model (the MMG model) with her hull, three screws and one rudder. Four numbers are fitted to the trial record the three sister ships share: Olympic's two points of turn in about 37 seconds, Titanic's turning circle of 3,850 feet, circles that barely change with speed, and the crash stop of about 3,000 feet, run as the trial was, with the engines reversed more slowly than usual. Her resistance follows Holtrop's method, and her screws going astern follow the Wageningen B-series' measurements. The screws' places were measured on a side plan of 1911.</p>
+<h3 id="c10-the-iceberg">The iceberg</h3>
+<p>The berg is a free body of ice. Where her side presses into it, the plating dents against the ice's crushing pressure, and the riveted seams open once a dent passes a set depth. The opened area is fitted so that the 1912 watch makes the same opening as the calibrated damage, shared out over her compartments the same way: one fitted factor for each, since the contact opens every torn metre alike. Head on, her bow crushes at a force that rises with the depth already crushed, from crushing laws for ship sections. The berg's face stays rigid in a stem strike.</p>
+<p>These are the least certain numbers in the simulator: the plating's strength, the berg's mass, the seam gap for each metre of dent and the crushing force are all guesses with a physical meaning. And the 1912 point grazes the edge of a stem strike: a metre either way changes the damage a good deal.</p>
+<p>Where the tear ends aft is fitted to the record. On the 1912 orders it ends inside boiler room 5's starboard forward bunker, about two feet abaft the bulkhead, where the British inquiry and the leading stoker Barrett put that room's damage, and the stokehold's own side stays whole. The rule covers that room's side only and rests on the 1912 record: on any other night it is a bet. Farther aft, on every night tried, the ice only dents her plating (<code>docs/research/RESEARCH_br5_damage_extent_G6_v1_2026-11-20.md</code>).</p>
+<h3 id="c10-flooding-at-speed">Flooding at speed</h3>
+<p>While she moves, the sea's level at each hole is raised by the share of her speed that strikes it head on, and near the stem by her bow wave. Stopped, it adds nothing. The 1912 damage is mostly slits along the flow, so for the night as it happened speed changes little: about a third of a minute. A bow crushed head on faces the flow, and takes the whole of it. The shares are guesses: nobody measured the pressures on this hull.</p>
+<h3 id="c10-her-wake">Her wake</h3>
+<p>Her wake is the sea's answer to her hull. The hull is a sheet of sources on her centre plane (Michell's thin ship), driven by her speed, her drift and her turning; the sea answers as linear waves on deep water, each wave travelling at its own exact speed, in two squares of sea that follow her, about 3&nbsp;km across for the long waves and 1&nbsp;km for the short. Thin-ship theory makes her waves too high, so their heights are scaled until the energy they carry away is what Holtrop's method, the one her resistance follows, spends on making waves. The white water is laid where that sea is too steep to stand, off her bows and in her screws' races, and left where it was made. How much each cause makes and how long it lasts are guesses. The wake reads her motion and feeds nothing back: a watch has the same fingerprint with it as without.</p>
+<p>The method has been run unchanged on three hulls whose waves were measured in tanks. On the KRISO container ship its waves fall where they were measured, along the hull and in two cuts out to 35&nbsp;m from its side, at about two-thirds of their height, and farther out they arrive early. On two hulls without a bulb, the Series 60 and Wigley's, the waves along the hull are again where they were measured; the Series 60's troughs amidships come out shallower than its tank's, about 0.6 as deep at her speed. Her bow wave against her plating follows a law: the height Noblesse and others (2008) give for a stem of her half-angle, 21°, measured on Bob Read's plans of Olympic. It replaced a fixed factor that no one value could make right (the Series 60 wanted 3.69, Wigley's hull 2.76, her stem about 7), and at full speed it raises her crest from 3.1&nbsp;m to 5.7&nbsp;m. The white water keeps a factor of its own. The notes are <code>docs/research/RESULT_k6_kcs_benchmark_v1_1_2026-11-20.md</code> and the Series 60 and Wigley results beside it.</p>
+<h3 id="c10-the-pumps-and-the-doors">The pumps and the doors</h3>
+<p>The pumps run on steam, at rates from the British inquiry's report, from the bottoms of the rooms with suctions. When the engineers started them on the night, and which they led where, is a guess for each room. The watertight doors fall shut over 25 seconds once released, by the bridge's switch, by their floats or by hand.</p>
+<h3 id="c10-the-readers-of-the-night">The readers of the night</h3>
+<p>The boats, the reports, help and the hull gauge are readers: modules that read the watch after each step of the model and keep an account of their own beside it. None writes into the flooding, the motion, the ice or the plant, so a watch has the same fingerprint with every reader and with none, and the repository's suites hold each of them to that.</p>
+<ul>
+<li><strong>The boats</strong> move places and minutes, fitted to the launch record of 1912 with 3 numbers: how readily people came forward below and above a trim of about 3.5&nbsp;degrees, and the minutes a party gives a boat before it lowers her. The hands' rates are the record's; the rest are named guesses.</li>
+<li><strong>The reports</strong> follow rules: who could see a fact of the model, from where, and how long his news took to reach the bridge. One constant is fitted, to the builder's man's estimate of an hour to an hour and a half.</li>
+<li><strong>Help</strong> places the other ships where the research found them, with their speeds, their operators' hours and the time each took to get under way. The wireless is a load on her plant: it needs the dynamos, or the battery.</li>
+<li><strong>The hull gauge</strong> weighs her along her length, layer by layer, to the model's own mass and centre, and takes the bending moment of her hull at the pose and the water of the moment. The range it is read against is the studies'. Beside it the onset holds the gauge's bending and shear at every station against her strength there (below), and marks the first step at which, somewhere along her, the two together reach it. It is a mark: it changes nothing.</li>
+</ul>
+<h3 id="c10-her-strength-along-her-length">Her strength along her length</h3>
+<p>What her hull could bear is worked out from her cross-section at each station: the keel and the bottom, the side plating, the double bottom, and B and C decks, which carried her strength, each plate with its thickness and each riveted joint with its strength, from the sources the code names (Mengot, Walker in 1912, Halpern, Wilding, the Marine Forensics Panel, among others), with the funnels' uptakes cut out of the decks. Smith's method of progressive collapse then bends the section further and further, adding up what each plate still carries, until the whole gives way. Amidships her hull could bear about 5.3 GN m with her ends bending down, inside the studies' range, and its bottom gives way first. One figure no source gives, C deck's plating against B deck's, is fitted to the panel's section; nothing was fitted to her strength itself.</p>
+<h3 id="c10-her-fall-to-the-bed">Her fall to the bed</h3>
+<p>At the flag the fall takes over from the flooding model. Her hull is cut in two over boiler room 1 (a rule for now: the break itself, before she went under, is not modelled), and each piece is a rigid body built from the model's own slices: its steel, the water in it (the pockets' water with it), and the air still in it, one pocket that the sea squeezes as it goes down and whose lift acts, slice by slice, through the middle of the part the sea can fill. Each moves in all six ways a body can, its attitude free to pass through any angle. The water acts on it slice by slice: the mass of water it must move with it, the drag of the flow across it and along it, a lift where the flow leaves a torn end, and buoyancy at the density of an April column of sea, which grows with depth. On the bed the mud bears it up until it lies still. The coefficients come from experiments and textbooks, each named in the code; the one number the trials fit, where her weight acts along her, is not used on the page, and the time to the bed is checked against the reconstructions, not fitted to them.</p>
+<p>The engine can also keep the two pieces joined at the break, on a hinge that bends, tears and lets go when the force across it passes what is left to hold it. In its trials (<code>out/fall_trials.txt</code>, trial 13), handed over at the onset on the 1912 orders, the joint lets go by shear 18&nbsp;s later. The page does not use it yet: it still cuts her at the flag. Handing a watch to the fall at the onset is a what-if of the repository's, not of the page: there the night carries the onset's check itself, so the watch's forecast and every copy of it meet the same onset.</p>
+<h3 id="c10-same-night-same-result">Same night, same result</h3>
+<p>The model steps a quarter of a second at a time and adds its sums in a fixed order, so a night replays bit for bit on the same JavaScript engine. It computes its own sine and cosine, exponential and logarithms, tangent and arc tangents, hyperbolic tangent, arc sine and arc cosine, cube root and the length of a vector: fdlibm's routines (V8's for the length) in plain arithmetic, the same in every engine that keeps the IEEE 754 standard and equal to Node's on every value tried. So a browser reckons the night as Node does: in the repository's test the page in Edge reaches the end of the 1912 encounter with Node's own fingerprint, and her fall to the bed takes the model's own functions as well. The power function is the exception, which the model still takes from the engine because changing it moves the calibration. Where two engines part, they part in the last digit, and the night can carry it: a change in the last bit moves the 1912 damage's foundering by up to 1.5&nbsp;s (the validation table prints that floor), and the 1912 watch's by more than a minute, because one of the engineers' own pump orders there falls on one side or the other of its threshold. The forecast after the ice is a copy of the watch run on, so it gives the watch's own end. Her fall to the bed is reckoned the same way: the same flag gives the same fall, bit for bit.</p>
+<aside class="box note"><b class="lab">Where it is least certain</b>
+<p>The ice: its crushing pressure over a large area of contact, its mass, the plating's strength, and the 1912 point itself. Then the list late in the night, which the model does not reproduce. Then the engineers' practice with the pumps, and how readily people came forward to the boats. Then her fall: the air in her pieces, and the moment and the pose in which they are let go. Every guess is marked [bet] in the code, with its reasoning in the research notes under <code>docs/research/</code>.</p>
+</aside>
+</section>
+
+<section class="chapter" id="ch11">
+<div class="eyebrow">Chapter 11</div>
+<h2>Reference</h2>
+<hr class="rule">
+<h3 id="c11-running-it-yourself">Running it yourself</h3>
+<p>The website is built into the repository's <code>dist/</code> folder. Serve that folder with any static web server, for example <code>node tools/serve.js dist 8080</code>, and open it in a current browser: Edge, Chrome, Firefox or Safari. The model runs in the page itself. The same models run without a browser, in Node 18 or later with nothing to install (the browser tests need Node 22 or later, and Edge or Chrome). The page keeps one clock of its own, the time of its frames, which runs on while a watch is paused and to which its timers and notices keep; a browser test can run it frame by frame, so that the test does not depend on how busy the machine is. The repository lists its commands in CLAUDE.md:</p>
+<div class="gen" data-gen="commands">
+<div class="tw long">
+<table>
+<thead><tr><th>Command</th><th>What it does</th></tr></thead>
+<tbody class="first">
+<tr><td><code>node tools/gate.js</code></td><td>THE GATE: every suite, one verdict line each, each suite with a deadline (G16) (about an hour here; one session at a time: C:\temp\titanic-browser-turn.txt); run it before a commit</td></tr>
+<tr><td><code>node tools/gate.js --deadline-scale 2</code></td><td>each suite's deadline (three times the longest of its last five PASS times, at least 10&nbsp;min, kept in out/gate/durations.json), scaled</td></tr>
+<tr><td><code>node tools/gate_deadline_tests.js</code></td><td>G16: the gate's deadlines on three fixture suites (a hang killed as TIMEOUT, times kept only from a PASS, the last five), and the deadline's floor, factor and longest of five (headless, about 10&nbsp;s)</td></tr>
+</tbody>
+<tbody>
+<tr><td><code>node tools/cdp_tests.js [dist]</code></td><td>G8 and G16: two browser suites launched at once, each on its own port and browser; a page that never answers fails in bounded time; the profile removed (a browser suite: take a turn)</td></tr>
+<tr><td><code>node tools/gate.js --quick</code></td><td>the fast headless suites and the dist check (about half a minute)</td></tr>
+<tr><td><code>node tools/gate.js --only night,night_site</code></td><td>just these; --list names them; --sweeps adds the three sweeps; --write refreshes out/</td></tr>
+<tr><td><code>node tools/night_scene_site_test.js dist docs/evidence/night_scene</code></td><td>the Night look and the two eyes; the folder is where its six pictures go</td></tr>
+<tr><td><code>node tools/sound_site_test.js</code></td><td>the ship heard: each sound's level against its number in the model</td></tr>
+<tr><td><code>node tools/girder_tests.js</code></td><td>the hull girder's gauge: closure, purity, the 1912 finding (about 3&nbsp;min); girder_site_test.js in a browser</td></tr>
+<tr><td><code>node tools/strength_tests.js</code></td><td>her strength along her length (Smith's method) and the onset of the break (about 2&nbsp;min)</td></tr>
+<tr><td><code>node tools/fall_trials.js</code></td><td>the fall: the free body's trials against closed forms and the wreck (about a minute)</td></tr>
+<tr><td><code>node tools/night_after_tests.js</code></td><td>the watch past the hand-over (Z3): the fingerprint through the fall, replays to the bed, the readers past the flag (about a minute)</td></tr>
+<tr><td><code>node tools/walk_site_test.js dist docs/evidence/walk</code></td><td>W0: the walk inside her on the core's own water, in a browser: walls, doors, her side, decks, the water at the feet the core's, no walk after the flag; the folder is where its two pictures go</td></tr>
+<tr><td><code>node tools/rooms_tests.js</code></td><td>R1: the core's 64 spaces cut at her decks into 250 slabs, the water shared out from the core's own</td></tr>
+<tr><td><code>node tools/rooms_table_tests.js</code></td><td>R3: her rooms from the deck plans as sourced tables, against the model's bulkheads, decks, tiers and slabs (seconds)</td></tr>
+<tr><td><code>node tools/deep_site_test.js dist docs/evidence/deep</code></td><td>the deep: the fall from a test feed on a preset, and the real engine on the watch and the presets; its views, strip and readouts, and its eight pictures (about 10&nbsp;min)</td></tr>
+<tr><td><code>node tools/wake_spectrum.js</code></td><td>her waves by Michell from her own hull against Holtrop; --bake writes the page's scale into the library</td></tr>
+<tr><td><code>node tools/wake_tests.js</code></td><td>her wake as a wave field: energy against Michell, wavelength, wedge, the turn, the white water's causes (about 2&nbsp;min)</td></tr>
+<tr><td><code>node tools/wake_site_test.js dist docs/evidence/wake</code></td><td>the computed wake in a browser; the folder is where its six pictures go</td></tr>
+<tr><td><code>node tools/export_ship.js</code></td><td>U0: the ship as numbers for Blender or Unreal -&gt; out/titanic_ship.json (seconds; not tracked)</td></tr>
+<tr><td><code>node tools/record_night.js 1912 auto [--fall]</code></td><td>U0: the watch step by step -&gt; out/titanic_night_1912.json (about 15&nbsp;s; not tracked); --fall on to the bed</td></tr>
+<tr><td><code>node tools/export_tests.js</code></td><td>U0: both files byte-stable, the record's fingerprint the model's alone, values against the model (about a minute)</td></tr>
+<tr><td><code>node tools/u3_water_tests.js</code></td><td>U3: the water inside her, the model's 64 spaces cut at the record's level, against the model</td></tr>
+<tr><td><code>node tools/u3_lights.js</code></td><td>U3: her lights going out deck by deck, from the record alone, against the model</td></tr>
+<tr><td><code>node tools/u3_smoke.js</code></td><td>U3: her smoke and steam as a timeline from the record's plant, against its own events</td></tr>
+<tr><td><code>node tools/hull_stl.js &lt;out.stl&gt;</code></td><td>her hull as a closed STL for a towing tank (K6; the run sheet: docs/runbooks/K6_tank_on_the_rtx_machine.md)</td></tr>
+<tr><td><code>node tools/tank_compare.js &lt;export folder&gt; --png &lt;out.png&gt; --txt &lt;out.txt&gt;</code></td><td>any free surface written on a grid against her wave field (K6; the FluidX3D tank is retired)</td></tr>
+<tr><td><code>node tools/kcs_compare.js &lt;kcs offsets .json&gt;</code></td><td>K6: the field's method on the KCS against KRISO's profile and cuts (the offsets from tools/iges_offsets.js, kept outside this repository)</td></tr>
+<tr><td><code>node tools/s60_compare.js [--own]</code></td><td>K6: the field's method on the Series 60, a bulb-less hull, against its tank profiles at six Fn (about 30&nbsp;s; --own adds its own length, about 100&nbsp;s)</td></tr>
+<tr><td><code>node tools/wigley_compare.js [--cw] [--local] [--stated]</code></td><td>K6: the field's method on Wigley's hull against its tank profiles (about 25&nbsp;s)</td></tr>
+<tr><td><code>node tools/local_flow.js</code></td><td>K6: the hull's local flow, checked against the 2D thin strut (seconds)</td></tr>
+<tr><td><code>node tools/blender_tests.js</code></td><td>U1: her hull and topsides built in headless Blender from the export, checked against it (about 30&nbsp;s; needs Blender 5.2, BLENDER=&lt;blender.exe&gt;; not in the gate)</td></tr>
+<tr><td><code>node tools/blender_spaces_tests.js</code></td><td>U3: the model's 64 spaces as named volumes in headless Blender, each against nodeVmax (seconds; needs Blender 5.2; not in the gate)</td></tr>
+<tr><td><code>node tools/blender_u3_tests.js</code></td><td>U3: her water, lights, steam and smoke at three times, built in headless Blender and read back off the GLB (about a minute; needs Blender 5.2; not in the gate)</td></tr>
+<tr><td><code>node tools/people_tests.js</code></td><td>the boats against the launch record; boats_site_test.js in a browser</td></tr>
+<tr><td><code>node tools/reports_tests.js</code></td><td>the reports to the bridge against the night's script; reports_site_test.js in a browser</td></tr>
+<tr><td><code>node tools/world_tests.js</code></td><td>the wireless, the rockets, Carpathia; help_site_test.js in a browser</td></tr>
+<tr><td><code>node tools/carpathia.js --nights 6000 --jobs 6 --variants 40</code></td><td>W5: the Carpathia search (about 90&nbsp;min here); progress in out/gate/carpathia; the best night -&gt; out/carpathia_best.json</td></tr>
+<tr><td><code>node tools/carpathia_tests.js</code></td><td>its acceptance (about four minutes)</td></tr>
+<tr><td><code>node tools/gate.js --release</code></td><td>the gate with the release suites as well: the User Guide's check</td></tr>
+<tr><td><code>node tools/build_guide.js</code></td><td>the User Guide: docs/guide/src/*.md -&gt; HTML and PDF (headless Edge, about 10&nbsp;s)</td></tr>
+<tr><td><code>node tools/guide_shots.js</code></td><td>the guide's pictures and the page's account of the 1912 night, from dist/ (about a minute)</td></tr>
+<tr><td><code>node tools/guide_check.js</code></td><td>the guide in step with the page and the repository; --pages DIR to look at every page</td></tr>
+<tr><td><code>node tools/seams.js</code></td><td>the seams gate: bit-identical at rest (5&nbsp;s)</td></tr>
+<tr><td><code>node tools/engine_tests.js</code></td><td>E1 and E2a: the model's own sine, cosine and ten more; no Math transcendental in core/ but pow; eleven frozen hashes (seconds)</td></tr>
+<tr><td><code>node tools/clock_tests.js</code></td><td>QC C-3: every wall-clock read in site/ on its list (permanent or pending), and the page's clock and its interface (seconds)</td></tr>
+<tr><td><code>node tools/layout_site_test.js [dist] [picture dir]</code></td><td>C-4: the stage's layout at six sizes in ten states each: no overlay over another, none outside the stage or cut (MUST; about 10&nbsp;min; a browser suite: take a turn)</td></tr>
+<tr><td><code>node tools/layout_check.js</code></td><td>C-4: the stage's layout check, its own geometry rows (a second)</td></tr>
+<tr><td><code>node tools/director_site_test.js [dist] [picture dir] [--real]</code></td><td>the director on the page's virtual clock (about a minute; --real: every row on real time, about 8&nbsp;min)</td></tr>
+<tr><td><code>node tools/stairs_tests.js</code></td><td>the tiers above B deck, their windows and the grand staircases: laws, neutrality, the 1912 timetable (about a minute)</td></tr>
+<tr><td><code>node tools/conserve_tests.js</code></td><td>C3: every validation case's water conserved step by step; no cut, the same bits (about a minute)</td></tr>
+<tr><td><code>node tools/trials.js</code></td><td>the motion model against the 1911-12 trials (acceptance table)</td></tr>
+<tr><td><code>node tools/astern_tests.js</code></td><td>the rudder with sternway; headway unchanged to the bit (seconds)</td></tr>
+<tr><td><code>node tools/encounter_tests.js</code></td><td>the iceberg encounter: acceptance and what-ifs (about a minute)</td></tr>
+<tr><td><code>node tools/encounter_run.js 220 32 0 22.5 '{}' sink</code></td><td>one night: helm at 220&nbsp;m, ice 32&nbsp;m to port, port-around at the touch</td></tr>
+<tr><td><code>node tools/calibrate_encounter.js</code></td><td>refit the encounter's area constant (a few seconds)</td></tr>
+<tr><td><code>node tools/night_tests.js</code></td><td>the seeded night and the watch: acceptance (about a minute)</td></tr>
+<tr><td><code>node tools/night_run.js 1912 auto sink</code></td><td>one watch: seed, then auto | none | seconds after the bells</td></tr>
+<tr><td><code>node tools/night_sweep.js 200</code></td><td>how hard the drawn nights are -&gt; out/night_sweep.txt (about 25&nbsp;min under P3c)</td></tr>
+<tr><td><code>node tools/night_sweep.js 200 1 night1912</code></td><td>the same for a level (G1: early, night1912) -&gt; out/night_sweep_&lt;level&gt;.txt</td></tr>
+<tr><td><code>node tools/build_site.js</code></td><td>dist/ (works without node_modules: keeps the vendored files in dist/); --check: is dist/ current?</td></tr>
+<tr><td><code>node tools/night_site_test.js</code></td><td>the watch in headless Edge or Chrome, through the real controls (about 3&nbsp;min)</td></tr>
+<tr><td><code>node tools/visuals_tests.js</code></td><td>screws, rudder, wake and lights as numbers (seconds)</td></tr>
+<tr><td><code>node tools/visuals_site_test.js</code></td><td>the same in a browser (about 3&nbsp;min)</td></tr>
+<tr><td><code>node tools/topsides_tests.js</code></td><td>the drawn ship as numbers: houses, funnels, masts, davits, domes, the round stern (seconds)</td></tr>
+<tr><td><code>node tools/topsides_site_test.js</code></td><td>the same in a browser, desktop and phone (about 90&nbsp;s)</td></tr>
+<tr><td><code>node tools/systems_tests.js</code></td><td>the ship's plant: each dependency made to fail; intact ship unchanged (about 2&nbsp;min)</td></tr>
+<tr><td><code>node tools/systems_site_test.js</code></td><td>the Systems tab and its orders in a browser (about 4&nbsp;min)</td></tr>
+<tr><td><code>node tools/validate.js</code></td><td>validation table -&gt; out/validation.json (about 1&nbsp;min)</td></tr>
+<tr><td><code>node tools/ledger_tests.js</code></td><td>the epoch's stage A3: every row of the observation ledger (RECORD_1912) read against the 1912 preset, each a CHECK -&gt; out/ledger_1912.txt (seconds)</td></tr>
+<tr><td><code>node tools/titanic.js</code></td><td>1912 run against eyewitness trim and list</td></tr>
+<tr><td><code>node tools/golden.js</code></td><td>golden trace -&gt; out/golden_titanic.json</td></tr>
+<tr><td><code>node tools/calibrate.js 45</code></td><td>refit the opening's area and the 3 flow numbers to the preset and the 1912 watch together (D73; about 20&nbsp;min)</td></tr>
+</tbody>
+<tbody class="last">
+<tr><td><code>node tools/build.js</code></td><td>inline everything -&gt; out/titanic.html</td></tr>
+<tr><td><code>node tools/shot.js 1400 860 4000 shot.png</code></td><td>screenshot the viewer</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<h3 id="c11-glossary">Glossary</h3>
+<div class="tw long">
+<table>
+<thead><tr><th>Word</th><th>Meaning</th></tr></thead>
+<tbody class="first">
+<tr><td>Trim</td><td>Her tilt fore and aft. By the head is bow down, and counts as positive.</td></tr>
+<tr><td>List</td><td>Her tilt to one side, port or starboard.</td></tr>
+<tr><td>Bulkhead</td><td>A watertight wall across the hull. Fifteen, lettered A at the bow to P at the stern, without I.</td></tr>
+</tbody>
+<tbody>
+<tr><td>Compartment</td><td>The space between two bulkheads: the forepeak FP, the holds H1 to H3, boiler rooms BR6 to BR1, the engine rooms RE, TE and EL, the shaft tunnels T1 and T2, the after peak AP.</td></tr>
+<tr><td>Decks</td><td>Lettered downward from A: B, C, D and E deck are named in this guide. A bulkhead's top reaches B, D or E.</td></tr>
+<tr><td>Way</td><td>Her motion through the water. A rudder needs it.</td></tr>
+<tr><td>Telegraph</td><td>The bridge's dial for engine orders, rung to the engine room.</td></tr>
+<tr><td>Wing screws</td><td>The two outer propellers, turned by the reciprocating engines. The centre screw is the turbine's.</td></tr>
+<tr><td>Seams</td><td>The joints between her plates, riveted. Opened by the ice, they let the sea in along her side.</td></tr>
+<tr><td>Stem</td><td>The foremost edge of her bow.</td></tr>
+<tr><td>Seed</td><td>The number a drawn night is made from. The same seed gives the same night.</td></tr>
+<tr><td>Fingerprint</td><td>Eight characters made from her state at every step of a watch: equal fingerprints, equal watches.</td></tr>
+<tr><td>Bet</td><td>The code's word for a number that had to be guessed, with its reasoning beside it.</td></tr>
+<tr><td>Reader</td><td>A part of the model that follows a watch and keeps an account of its own (the boats, the reports, help, the hull gauge and its onset) without changing the night.</td></tr>
+<tr><td>Commutator</td><td>The bridge's instrument for her list: a pendulum against a scale.</td></tr>
+<tr><td>Davits, falls</td><td>The arms that swing a boat out over the side, and the ropes she is lowered by.</td></tr>
+<tr><td>CQD, SOS</td><td>The distress calls of the wireless: the old one, and the new one she sent beside it.</td></tr>
+<tr><td>Bending moment</td><td>How hard her hull is being bent, here in GN m (a billion newton metres): the weight of her flooded bow and her rising stern against the buoyancy along her length.</td></tr>
+<tr><td>Hogging, sagging</td><td>Her hull bent with its middle up and its ends down, as when her bow and her stern hang on her middle; or the other way.</td></tr>
+<tr><td>Onset</td><td>The first moment her bending and shear somewhere along her reach what her hull could bear there: where and when she would break. A mark: nothing breaks.</td></tr>
+<tr><td>Kelvin's wedge</td><td>The V of waves a ship leaves on deep water, about 19½° either side of her track.</td></tr>
+</tbody>
+<tbody class="last">
+<tr><td>Survey</td><td>The wreck as found and mapped on the bed, 3,790&nbsp;m down: the bow, the stern, and the field of boilers and wreckage where she broke.</td></tr>
+<tr><td>Point under the break</td><td>Where she broke, on the sea above the bed, as her fall takes it: the cut between her two pieces at the moment she foundered.</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="c11-sources">Sources</h3>
+<p>The British and American inquiries of 1912. Halpern's eyewitness reconstruction of her trim and list (2023) and his study of her stability. Hackett and Bedford, <em>The Sinking of S.S. Titanic, Investigated by Modern Techniques</em> (RINA, 1996). The trial record of Olympic, Titanic and Britannic. <em>The Shipbuilder</em> and <em>Engineering</em> of 1911. The Wageningen B-series of screws. For her strength, her scantlings from Mengot, Walker (1912) and the Marine Forensics Panel, and Smith's method of progressive collapse; for her fall, the survey of the wreck, Lamb's hydrodynamics and UNESCO's equation of state of sea water (1983), and for her speed at the bed Best and others (2000); for her wake, Michell's thin-ship theory, Holtrop's resistance method and Noblesse and others' bow wave (2008), tried against the tanks' records of the KCS (Kim, Van and Kim, 2001), the Series 60 (Kim and Jenkins, 1981) and Wigley's hull (Kajitani and others, 1983); for the damage's share by compartment, Felkins, Leighly and Jankovic's table of Hackett and Bedford's openings (JOM, 1998); for her rooms, Encyclopedia Titanica's free deck plans, checked against <em>The Shipbuilder</em>'s plates. Each number in the model names its source, or says it is a guess, in the repository's research notes.</p>
+<h3 id="c11-this-guide">This guide</h3>
+<p>This is edition 1.6, built from the repository at commit 3fb0ede for the website build 0.2.0 (app b139d97150). Its chapters are Markdown files in <code>docs/guide/src/</code>, built by <code>node tools/build_guide.js</code> and held to the simulator by <code>node tools/guide_check.js</code>; <code>node tools/guide_shots.js</code> takes its pictures through the page's own controls. Its tables of results, the cards, the <span class="chip">Systems</span> tab's links, the plant's numbers, the readers' rules, the commands, and the sentences and counts it quotes from the page are pulled from the repository at build time.</p>
+</section>
+
+<script type="application/json" id="guide-build">{"tool":"tools/build_guide.js","edition":"1.6","file":"USER_GUIDE_v1_6_2026-11-21","repoCommit":"3fb0ede","site":{"version":"0.2.0","app":"app.b139d97150.js","builtFromCommit":"37190bd"},"chapters":[{"id":"ch1","file":"docs/guide/src/01-the-simulator.md","title":"The simulator in one page","page":3},{"id":"ch2","file":"docs/guide/src/02-quick-start.md","title":"Quick start: your first watch","page":6},{"id":"ch3","file":"docs/guide/src/03-the-screen.md","title":"The screen","page":8},{"id":"ch4","file":"docs/guide/src/04-the-bridge.md","title":"The Bridge: wheel and telegraph","page":14},{"id":"ch5","file":"docs/guide/src/05-playing-a-watch.md","title":"Playing a watch","page":17},{"id":"ch6","file":"docs/guide/src/06-after-the-ice.md","title":"After the ice","page":22},{"id":"ch7","file":"docs/guide/src/07-scenarios-and-what-ifs.md","title":"Scenarios and what-ifs","page":36},{"id":"ch8","file":"docs/guide/src/08-her-systems.md","title":"Her systems","page":39},{"id":"ch9","file":"docs/guide/src/09-the-evidence.md","title":"The evidence","page":43},{"id":"ch10","file":"docs/guide/src/10-how-it-works.md","title":"How the model works, briefly","page":46},{"id":"ch11","file":"docs/guide/src/11-reference.md","title":"Reference","page":51}],"images":["img/boats-night.jpg","img/boats.png","img/bridge-knew.jpg","img/bridge-view.jpg","img/bulkheads.png","img/damage-hole.jpg","img/end-card.png","img/evidence.png","img/fall-night.jpg","img/fall-xray.jpg","img/gauge.png","img/help.png","img/hull-gauge.jpg","img/nest-night.jpg","img/night-boat.jpg","img/onset-xray.jpg","img/onset.png","img/phone-sheet.jpg","img/phone-watch.jpg","img/preset-0209.jpg","img/pumps.png","img/reports.png","img/rest-bow.jpg","img/rest-stern.jpg","img/rocket.jpg","img/run-cards.png","img/run-watch.png","img/screen-marked.jpg","img/screws.jpg","img/stem-strike.jpg","img/systems.png","img/walk.jpg","img/watch-bells.jpg","img/watch-flooding.jpg","img/watch-touch.jpg"],"generated":["boats","cards","carpathia","chain","commands","endcard","gauge","pumps","reports","rooms","ships","sweeps","telegraph","timeline","trim","validation","window","wireless"],"inputs":{"CLAUDE.md":"88cfd64371134c934c387cb86b4aaef9b34b77c6555a31aba218a5b3d469c806","core/core.js":"abc173cbe1612a1ccacf2abf1cb0c05d66796c0bcfb445ef58d567bdff02cb65","core/motion.js":"46e14cd2ce2df2f32d3ffa2d17835e1104e0ecec7ecf88821f60322fd272a1e5","core/night.js":"15910f1cffdf498a2913bfadf4e8a5a722552db3177aa3de50b02a4599e2beab","core/readers/girder.js":"c3395475d9be388ae102d1a70da80cbab541f610e89167d41f0eaa5fe336769b","core/readers/people.js":"79e8d6b696fb85bf8fb1c30dd52e55d0f956647aa884cfc6f450fbb5750d0165","core/readers/world.js":"80e7ffeacd08b3192111d4d15fb7e1b4a4bdcdfcae5aede9ffc856b8e8d8f139","core/scenarios.js":"bbe1b8b7b3b40dcd99294a82f320f4a1c9162ca4a95074bee54722f854573c46","core/systems.js":"f2d97a3e3b458cb6f26ab84289060c9d2dddde7289afce7f44f39945d52ede01","data/rooms/A_deck.json":"5c220b5fa8c385f065a681e9e6b00ee20a07a899ae0b10f9f9484d70eb73ff48","data/rooms/B_deck.json":"b8723cbfba12b7cb3d85ac51dc0748704376640ea22e6af67ccd97a2a65e4a49","data/rooms/Boat_deck.json":"2b0f0a98cb90ebc628567fb8e726e09a57700764579f65f768a43d7fd0b26012","data/rooms/C_deck.json":"1940dee432faaae4fa253023ab82734a8ec23a0bc7758658ffc586b2a097009a","data/rooms/D_deck.json":"0c9d16d49c0705dd882485beefb61cea5ba61e6bdc08321fc461671f8805bcb1","data/rooms/E_deck.json":"c44b83b9c7ebc8a16e090c03f5eb0b4897b766bbd02a5b419f647fa92973fb3e","data/rooms/F_deck.json":"6f21ea7fbf6c2e371a4df15c9e48869eaff8fb9a091ba4f1e5eb11de8aa5baa9","data/rooms/G_deck.json":"35205e0fd48689310702e66f1adca17250a88fc8f82ba5203520de9449163559","data/rooms/orlop_deck.json":"12f93747ad5627d0a93d4fe74462b75e6c03d1882bedf630d9f0053d28c840b1","docs/guide/img/boats-night.jpg":"5b5e85a7a986f95b8bddd7499443edbc75ebba1c2ac30a3af4da22e7178474d9","docs/guide/img/boats.png":"26969b055133fe222fab2b43fc66017b07c089d3108814bb3d6db0d6fce250f3","docs/guide/img/bridge-knew.jpg":"6583a6776818a89c3176b38a9dfb93548d43cfac425c1c184e554341a1529c4d","docs/guide/img/bridge-view.jpg":"e8270b0ac38da2f4ddff766b55e2216255af760aa6b500c039c098f2094e733a","docs/guide/img/bulkheads.png":"61f7821029338badeae359ffb8174c5ae2b913ed9c4148d354708c48d5b86c06","docs/guide/img/damage-hole.jpg":"a1e0a2f807a368aaeaec386c429e7c019aedabf0e20621e5a71dc50537d59959","docs/guide/img/end-card.png":"d86fe0485a8c2d9f05620aa3a2846e5f4c4d90e7368735bd2a7f9399473d57d0","docs/guide/img/evidence.png":"7424aed34e9096003d02e0d80ed947357d8a82b3be928001044c643bf85650c4","docs/guide/img/fall-night.jpg":"1dd9ea50195b441bd2540b5dc59bb6feac2e8231ab27ff2972e879a7fd0cd6de","docs/guide/img/fall-xray.jpg":"9dc8359a4b9dd156c634b99458bdef1c555ecbba352599106aaf6610bcc058a1","docs/guide/img/gauge.png":"c769b1aff2805b8c6441cbddc90fba47c98455e52cdc8f999333e53a8c54504a","docs/guide/img/help.png":"afb322a40d5ce574c0b264dcf345250b671b155c4a3196edd0871fec13d3d8bf","docs/guide/img/hull-gauge.jpg":"5cfdd713c3ed28a11d761529494b24eb0c9ceb2cab829109b8976fc9bfa3c634","docs/guide/img/nest-night.jpg":"4b72c9f465d813af236eb7090c7823ac4882a862893c4175f29a980c534b6dd1","docs/guide/img/night-boat.jpg":"676d2208585679550fed3c07b12f1b1844f66e36c853f4536974dd28697c1be8","docs/guide/img/onset-xray.jpg":"cc447a6fb8dcf4b7fa52917a35eb09269feadd1b65802582995aad20af510307","docs/guide/img/onset.png":"d1776df20eb4df0e1a4222ecb9e679d2c0d64c12ec114a6ed2b685837bbf8486","docs/guide/img/phone-sheet.jpg":"2089e001396991495f47adca1662d9865bafaec1b959f9d99adb077cdeefd2af","docs/guide/img/phone-watch.jpg":"1fc931b0cfb2d3a0db5a1cd9200864e59d3906669ecf92eeea0781833b2f3b6e","docs/guide/img/preset-0209.jpg":"9cd6844209bd08a866fd06c2acf1824b1b831149b0c7bacd5e7b520fc5390f94","docs/guide/img/pumps.png":"2b3e6c46f523b270d9c1c4c79853420a4b3c6a96843556139effd062d13d14a4","docs/guide/img/reports.png":"0b46b3c11392cbbb112709421fac43f07f32eb2ffa2ec6bf89cb76abcd9123d9","docs/guide/img/rest-bow.jpg":"5406de256d2008e5816845266a72dbcc3b50d4d8b5ccb508d1d9b6e9bde47f7f","docs/guide/img/rest-stern.jpg":"5929105382ebc2e01be3da084bbc5599a711c8c3ab62ced442093ee975bba52f","docs/guide/img/rocket.jpg":"c295d4b42773716e3a3628fe73eab55e13f0fca4f7dfd5f5c9be673fe382b60a","docs/guide/img/run-cards.png":"b68a737e44fe1ff6f16df7b2b626ad926f8fe3972f1e7ab229057c100a9dbfd9","docs/guide/img/run-watch.png":"cd390d9d8f7e4f5db83bb500c551cc9268d98d86c0406207dd04568c87a81351","docs/guide/img/screen-marked.jpg":"ed7000172ba9ca6b19bbeac08b74e13689ff7f080c97013ab8f25ce653f19cef","docs/guide/img/screws.jpg":"48f9ac961759f97a7f3ca06337e4a18a80c29f1dfea1f7bcdec5fa6fef5cbd54","docs/guide/img/stem-strike.jpg":"e7b6148fa8fc7eb63bd33fc94393c66105c4c17326f8c5dcbc8499d88c179a6e","docs/guide/img/systems.png":"7c6588bb51042c8859d5191b0765e6ff9f407fdbd28706c9f8947470c16e7a46","docs/guide/img/walk.jpg":"046931352f0a524427956dbb00b92da6bdeac32c2407109757a21f89729862bb","docs/guide/img/watch-bells.jpg":"95bcf59d78360497eea3649be86c1e74169ed3ea2848a433a7724e25e86ebf0b","docs/guide/img/watch-flooding.jpg":"1a88eaea6e8fbb6595a5992c7d0a3cfb6a167fe8dfebc0a5d536bed9c9752d68","docs/guide/img/watch-touch.jpg":"67a4d6142f4d929621f902d02c96d11c363ffa8df52045efd128d44ab13b53d2","docs/guide/shots.json":"694521571066f3315f753a1215c18b68408418483d1acae0cf4fef1c18ab5724","docs/guide/src/01-the-simulator.md":"30171958444c30c1a3870b72395903ef1c6cd382b619dc7528c237cdc3886902","docs/guide/src/02-quick-start.md":"574137e19bdccd65d9ca9d8284aad1bd37eb046dc27fa7df73109e98168d3ac8","docs/guide/src/03-the-screen.md":"a532f9cf29ed64cc1d607a3a8ca4a1aca6920160098c889bea0a52697335617b","docs/guide/src/04-the-bridge.md":"ef27020ac7e99bb01d0a2bb96584b5e3e286f46b2fbea58124d81c611a84c554","docs/guide/src/05-playing-a-watch.md":"d10bc17410ab15ab435ac635b420d044e558654982222825831c8727d4f9fb12","docs/guide/src/06-after-the-ice.md":"f83ecd1ac8081db9c9e23da4dba79aca2115739c6f07fa9a49f4d8f2f213cb12","docs/guide/src/07-scenarios-and-what-ifs.md":"74dc5d95943d4dcfc850789d27122bb7416803bdec23173e05bfea4dc91884f5","docs/guide/src/08-her-systems.md":"a6c75fe18e12ad475c0d856dd74923e453c3442843ce3b1cf487fd87cba122ce","docs/guide/src/09-the-evidence.md":"6547ead76acfdd0de353dd124aa58b1d2b7c014a35a10d757854f04b82cb217c","docs/guide/src/10-how-it-works.md":"73f8b6e1743bf5e9c4f5fa0047c42205576fa18c46df90391c59259daf94e0ca","docs/guide/src/11-reference.md":"c60a242abad2e0f4e399a09f88377ef4a3e01f79b55b89a1f9fe8f8bd69c887c","docs/guide/src/guide.json":"14cee699f64ad837c25027d6195818b2847c5b49e1e36a5777cf2213b449d4f8","docs/guide/template/guide.css":"3cdc17e9274e21669038f28ed4bc8f81d8e0500260def16acc92da4de1964187","docs/guide/template/guide.html":"8f165973063a1af39fb76635448879d1827d12480bf12e164dc9a91773f9c923","docs/research/RESULT_carpathia_search_v3_2026-11-21.md":"2b4b8e734920d6766e175ae42516139bf85bf2ce6d46e4d4f9ae3ec1793ceb46","docs/research/experiments/results_2026-11-17/e22_pumps_1912.txt":"132655f3b4bd9f995d94ad7a21a0749e4fc9a0faa31a3f0398c2d5fa780ab113","out/carpathia_best.json":"03de2f2858d9962623b3b9de8d5ab5f2a9159b3eda172171a0bdc70f801f870a","out/fall_trials.txt":"150a23896c0e00dd533f7f4aab744cf8f45863cc268866ac356f519b95f795f2","out/ledger_1912.txt":"83eaf4a9493b2599f655ecc0c3549a55265e961c021969fa9e9b55229b7b1b80","out/night_sweep.txt":"781ea617f81a326ddeed9d49018aae4b0f5b691144377384e6710a8d109071a0","out/night_sweep_early.txt":"bc8b15fd6d6afbb80899e6fb5e8fc3dcceb3823810386522566bae986cd20fc5","out/night_sweep_night1912.txt":"57756c7fd0eb53e1c08ddd7dc2d7eed0a53521952df42dabb45971c2610fc504","out/night_window_1912.txt":"40472ecead10a37442c86bdb2b772b00292b1aa3997fcbe53cab00ba158406dd","out/validation.json":"afb3f7c9459639258ea500b957aa1e2e8ad26d790703d98538fb566fbaa9d5bb","site/app.js":"4995224a7b138908936374bbb0e9802554ab50b5df536ae5bf05cd6b2a055f4a","site/index.template.html":"06fd132ea2898c49a74ade7505f764fc0adefbc1fad5ec19f6fe903d4e44ca93","tools/build_guide.js":"35b4a87eb6f2680c81c0fd060e1be20038e08a7fd500bf75997933a06f60c650"},"absent":[],"pages":56,"pdf":"84e77c0af27a8ce9652a50c8535e3120f44b50f28f8b85d21aabd23b7fef8467"}</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+e107 (the epoch, M3): C.pow against this engine's Math.pow; v26.13.0, node --no-use-std-math-pow (V8's own pow)
+Part 1: ten million inputs in the four forms of core/core.js
+  the hull form u^n: u in [0, 1), n in [0.9, 3.1) (nBlend 0.947 to 3.0)    112363 of 2,500,000 differ (4.49 %, at most 1 ulp); C.pow's results hash eee16cafbce43d91
+  the submerged weir r^1.5: r in [0, 1)                                    113256 of 2,500,000 differ (4.53 %, at most 1 ulp); C.pow's results hash c6ffe9e07683c240
+  the submerged weir (1 - r^1.5)^0.385: in [0, 1)                          109845 of 2,500,000 differ (4.39 %, at most 1 ulp); C.pow's results hash 9d1878b008db8538
+  the damping x^4: x in [0, 300)                                           113225 of 2,500,000 differ (4.53 %, at most 1 ulp); C.pow's results hash 341603db62047e7c
+Part 2: every Math.pow call the model makes, recorded as it runs, against C.pow
+  ef60334, the seams scenario titanic  : 37762 steps, digest 222f30f2ca12523a                             41343 of 1,281,043 calls differ (3.23 %, at most 1 ulp)
+  ef60334, the seams scenario britannic: 12199 steps, digest 01ed8b0fd5f8a71c                             19672 of 524,745 calls differ (3.75 %, at most 1 ulp)
+  ef60334, the seams scenario hawke    : 57600 steps, digest 51a162c7a0cd184d                             11236 of 250,313 calls differ (4.49 %, at most 1 ulp)
+  the code before B1, the 1912 preset: founders at 9496 s (158.2667 min)                                  41855 of 1,311,738 calls differ (3.19 %, at most 1 ulp)
+  the code before B1, the 1912 watch: fingerprint e9773daa at step 38382, founders at 9595.5 s            43454 of 1,336,761 calls differ (3.25 %, at most 1 ulp)
+Total: part 1 448689 of 10,000,000 differ; part 2 157560 of 4,704,600 of the model's own calls differ: M3 FAILS, V8's own pow is not fdlibm's here (B1's proof preloads C.pow instead: tools/pow_preload.js)
+(13.4 s; ef60334 from C:\temp\titanic-b1-ef60334, the code before B1 from C:\temp\titanic-wt-epoch-c3)
+(2026-11-21T18:10:44.611Z)

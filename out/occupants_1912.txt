@@ -1,0 +1,188 @@
+NH2: HER FIRST-CLASS PEOPLE BY STATEROOM: Her first-class passengers by stateroom: the Cave list (1912) (data/rooms/occupants_1912.json)
+Source: First Class Passenger List, S.S. "Titanic", from Southampton and Cherbourg to New York (via Queenstown), Wednesday, 10th April, 1912 ("Third Proof"): the Cave list. A "Third Proof" of the White Star Line's printed first-class passenger list for the maiden voyage, with cabin numbers set against the names, found on the body of saloon steward Herbert Cave (body no. 218, one of the 306 recovered by the cable ship Mackay-Bennett; buried at Fairview Cemetery, Halifax). The original is held by the Nova Scotia Archives (Medical Examiner, City of Halifax, RG 41 vol. 76 no. 218); its six list pages run alphabetically from Allen to Young in two columns, first-class passengers and their servants, with cabins mostly on decks A to E.
+Transcribed from: scan: the Nova Scotia Archives' digitised original, read from the full-resolution Zoomify images of its pages 1-6 (pages 7-8 are White Star advertisements, 9 is blank, 10 is the back). Encyclopedia Titanica's transcription refused automated fetches and its archived copy could not be fetched, so it was not read. The cross-check is titanic3 (hbiostat.org, compiled from Encyclopedia Titanica), whose first-class cabins agree with this reading for most entries; this file's counts equal those Encyclopedia Titanica gives for the list (223 names, 25 servants, 157 cabins).; accessed 2026-11-24; https://archives.novascotia.ca/titanic/archives/?ID=1 https://archives.novascotia.ca/titanic/fatalities/archives/?ID=218 https://encyclopedia-titanica.org/the-cave-list.html https://hbiostat.org/data/repo/titanic3.csv
+Its gaps: Incomplete, being a proof: Encyclopedia Titanica counts 84 first-class passengers and servants who sailed but are not on it (among them the Astors, J. Bruce Ismay, the Ryersons and the Futrelles), while some it lists did not sail or sailed second class (noted per entry). 14 names in 12 entries have no cabin (Thomas Andrews, W. T. Stead and the Thayers among them), and 25 servants appear only as "and Maid", "and Manservant" or "and Nurse". Nothing is struck out or corrected by hand; two tears take one deck letter (Snyder) and the end of one name (Van der Hoef).
+158 lines, 223 names: 140 placed, 18 kept apart; staterooms placed by deck A 15, B 34, C 62, D 31, E 27
+
+  line  stateroom (as the list)     her plans          R3 rows                names (as the list)
+     1  B5                        B 5                B-036                  Allen, Miss Elizabeth Walton
+     2  C22, C26                  C 22, C 26         C-059, C-059           Allison, Mr. H. J.; Allison, Mrs. H. J. and Maid; Allison, Miss; Allison, Master and Nurse
+     3  E12                       E 12               E-035                  Anderson, Mr. Harry
+     4  D7                        D 7                D-016                  Andrews, Miss Cornelia I.
+     5  -                         -                  -                      Andrews, Mr. Thomas  [no cabin on the list; titanic3 gives A36]
+     6  C101/2                    C 101              C-050                  Appleton, Mrs. E. D.
+     7  B35                       B 35               B-036                  Aubert, Mrs. N. and Maid
+     8  A23                       A 23               A-030                  Barkworth, Mr. A. H.
+     9  B58, B60                  B 58, B 60         B-019, B-019           Baxter, Mrs. James; Baxter, Mr. Quigg
+    10  C6                        C 6                C-069                  Beattie, Mr. T.
+    11  D35                       D 35               D-016                  Beckwith, Mr. R. L.; Beckwith, Mrs. R. L.
+    12  C148                      C 148              C-025                  Behr, Mr. K, H.
+    13  B49                       B 49               B-036                  Bishop, Mr. D. H.; Bishop, Mrs. D. H.
+    14  T                         -                  -                      Blackwell, Mr. Stephen Weart
+    15  A31                       A 31               A-030                  Blank, Mr. Henry
+    16  C7                        C 7                C-070                  Bonnell, Miss Caroline
+    17  C103/1                    C 103              C-050                  Bonnell, Miss Lily
+    18  D22/1                     D 22               D-015                  Borebank, Mr. J. J.
+    19  E33                       E 33               E-115                  Bowerman, Miss Elsie
+    20  A21/1                     A 21               A-030                  Brady, Mr. John B.
+    21  B10                       B 10               B-035                  Brandeis, Mr. E.
+    22  C101/1                    C 101              C-050                  Brown, Mrs. J. M.
+    23  D15                       D 15               D-016                  Buckell, Mrs. W. and Maid
+    24  B38                       B 38               B-035                  Butt, Major Archibald W.
+    25  E 24/3                    E 24               E-113                  Calderhead, Mr. E. P.
+    26  B51, B53, B55, 101        B 51, B 53, B 55, B 101B-022, B-022, B-022, B-024Cardeza, Mrs. J. W. M. and Maid; Cardeza, Mr. T. D. M. and Manservant  [cabin 101 is printed with no deck letter; titanic3 puts the manservant in B101]
+    27  B96, B98                  B 96, B 98         B-017, B-017           Carter, Mr. William E.; Carter, Mrs. William E.; Carter. Miss Lucile; Carter, Master William T.
+    28  -                         -                  -                      Case, Mr Howard B.
+    29  C 46                      C 46               C-051                  Cavendish, Mr. T. W.; Cavendish, Mrs. T. W. and Maid
+    30  E31                       E 31               E-115                  Chaffee, Mr. Herbert F.; Chaffee, Mrs. Herbert F.
+    31  C37                       C 37               C-060                  Cherry, Miss Gladys  [titanic3 gives B77]
+    32  A9                        A 9                ?                      Chevré, Mr. Paul
+    33  E 33                      E 33               E-115                  Chibnall, Mrs. E. M. Bowerman
+    34  -                         -                  -                      Chisholm, Mr. Robert
+    35  -                         -                  -                      Christy, Mrs. Alice Frances  [titanic3 has her in second class]
+    36  -                         -                  -                      Christy, Miss Juli  [titanic3 has her in second class]
+    37  C89                       C 89               C-022                  Clark, Mr. Walter M.; Clark, Mrs. Walter M.
+    38  C110                      C 110              C-049                  Clifford, Mr. George Quincy  [titanic3 gives A14]
+    39  E 58                      E 58               E-120                  Colley, Mr. E. P.
+    40  E45, E49, E52             E 45, E 49, E 52   E-116, E-116, E-116    Compton, Mrs. A. T.; Compton, Miss S. R.; Compton, Mr. A. T., Jr.
+    41  C101/3                    C 101              C-050                  Cornell, Mrs. R. C.
+    42  C132/1                    C 132              C-034                  Craig, Mr. Norman C., K.C., M.P.  [not in titanic3's passenger list]
+    43  B22                       B 22               B-035                  Crosby, Mr. Edward G.; Crosby, Mrs. Edward G.  [titanic3 gives Mrs. Crosby B26]
+    44  E17                       E 17               E-034                  Daly, Mr. P. D.
+    45  B71                       B 71               B-020                  Davidson, Mr. Thornton; Davidson, Mrs. Thornton
+    46  C90                       C 90               C-037                  de Villiers, Mrs. B.  [titanic3: Mlle. Berthe Mayne, travelling as Mrs de Villiers]
+    47  B20                       B 20               B-035                  Dick, Mr. A. A.; Dick, Mrs. A. A.
+    48  A34                       A 34               A-027                  Dodge, Mr. Washington; Dodge, Mrs. Washington; Dodge, Master Washington
+    49  B60                       B 60               B-019                  Douglas, Mrs. F. C.
+    50  C86                       C 86               C-037                  Douglas, Mr. W. D.; Douglas, Mrs. W. D. and Maid
+    51  A18                       A 18               A-027                  Dulles, Mr. William C.
+    52  C53                       C 53               C-063                  Earnshew, Mrs. Boulton  [titanic3 gives C54]
+    53  D31                       D 31               D-016                  Eastman, Miss Anne K.  [not in titanic3's passenger list]
+    54  C45                       C 45               C-067                  Endres, Miss Caroline
+    55  D20                       D 20               D-015                  Eustis, Miss E. M.
+    56  A29                       A 29               A-030                  Evans, Miss E.
+    57  E25/3                     E 25               E-113                  Flynn, Mr. J. I.
+    58  C111                      C 111              C-043                  Foreman, M. B. L.
+    59  C23, C25, C27             C 23, C 25, C 27   C-060, C-060, C-060    Fortune, Mr. Mark; Fortune, Mrs. Mark; Fortune, Miss Ethel; Fortune, Miss Alice; Fortune, Miss Mabel; Fortune, Mr. Charles
+    60  D34/3                     D 34               ?                      Franklin, Mr. T. P.
+    61  D40                       D 40               D-017                  Frauenthal, Mr. T. G.
+    62  B39                       B 39               B-036                  Frolicher, Miss Marguerite
+    63  E63                       E 63               E-120                  Gee, Mr. Arthur
+    64  C92                       C 92               C-021                  Goldenberg, Mr. E. L.; Goldenberg, Mrs. E. L.
+    65  A5                        A 5                A-030                  Goldschmidt, Mr. George B.
+    66  C51                       C 51               C-063                  Gracie, Colonel Archibald
+    67  C42                       C 42               C-051                  Graham, Mr.  [titanic3 gives Mr. George Edward Graham C91]
+    68  C91, C125                 C 91, C 125        C-022, C-027           Graham, Mrs. William G.; Graham, Miss Margaret  [titanic3 gives Mrs. W. T. Graham C125 and Miss Margaret Graham B42]
+    69  D10, D12                  D 10, D 12         D-015, D-015           Greenfield, Mrs. L. D.; Greenfield, Mr. W. B.
+    70  B84                       B 84               B-019                  Giglo, Mr. Victor; Guggenheim, Mr. Benjamin  [titanic3 gives Guggenheim B82 B84 and Giglio B86]
+    71  E50                       E 50               E-116                  Harder, Mr. George A.; Harder. Mrs. George A.
+    72  D33                       D 33               D-016                  Harper, Mr. Henry Sleeper and Manservant; Harper, Mrs. Henry Sleeper
+    73  C83                       C 83               C-038                  Harris, Mr. Henry B.; Harris, Mrs. Henry B.
+    74  D45                       D 45               D-018                  Hawksford, Mr. W. J.
+    75  B69, B73, B24             B 69, B 73, B 24   B-020, B-020, B-035    Hays, Mr. Charles M.; Hays, Mrs. Charles M. and Maid  [titanic3 gives Mr and Mrs Hays B69, their maid B73, and B24 to V. Payne]
+    76  C54                       C 54               C-066                  Hays, Miss Margaret
+    77  B11                       B 11               ?                      Head, Mr. Christopher
+    78  E46                       E 46               E-116                  Hilliard, Mr. Herbert Henry
+    79  C39                       C 39               C-060                  Hipkins, Mr. W. E.
+    80  B18                       B 18               B-035                  Hippach, Mrs. Ida S.; Hippach, Miss Jean
+    81  D11                       D 11               D-016                  Hogeboom, Mrs. John C.
+    82  -                         -                  -                      Holden, M.A., Rev. J. Stuart  [not in titanic3's passenger list]
+    83  C93                       C 93               C-022                  Hoyt, Mr. Frederick M.; Hoyt, Mrs. Frederick M.
+    84  C49                       C 49               C-063                  Isham, Miss A. E.
+    85  -                         -                  -                      Jakob, Mr. Birnbaum  [titanic3: Birnbaum, Mr. Jakob (the list inverts the names)]
+    86  E60                       E 60               E-120                  Julian, Mr. H. F.
+    87  B37                       B 37               B-036                  Kent, Mr. Edward A.
+    88  D21                       D 21               D-016                  Kenyon, Mr. F. R.; Kenyon, Mrs. F. R.
+    89  D19                       D 19               D-016                  Kimball, Mr. E. N.; Kimball, Mrs. E. N.
+    90  C124                      C 124              C-040                  Klaber, Mr. Herman
+    91  C128                      C 128              C-040                  Lambert-Williams, Mr. Fletcher Fellowes
+    92  E37/1                     E 37               E-115                  Lawrence, Mr. Arthur  [not in titanic3's passenger list]
+    93  D17/3                     D 17               D-016                  Leader, Mrs. F. A.
+    94  D31                       D 31               D-016                  Lewis, Mrs. Charlton T.  [not in titanic3's passenger list]
+    95  D28                       D 28               ?                      Lines, Mrs. Ernest H.; Lines, Miss Mary C.
+    96  D6                        D 6                D-014                  Long, Mr. Milton C.
+    97  D9                        D 9                D-016                  Longley, Miss Gretchen F.
+    98  B5                        B 5                B-036                  Madill, Miss Georgette Alexandra
+    99  C108                      C 108              C-049                  Maguire, Mr. J. E.  [titanic3 gives C106]
+   100  C47                       C 47               C-067                  Marechal, Mr. Pierre
+   101  D30                       D 30               D-015                  Marvin, Mr. D. W.; Marvin, Mrs. D. W.
+   102  C6                        C 6                C-069                  McCaffry, Mr. T.
+   103  E46                       E 46               E-116                  McCarthy, Mr. Timothy J.
+   104  E25/1                     E 25               E-113                  McGough, Mr J. R.
+   105  E38                       E 38               E-121                  Millet, Mr. Frank D.
+   106  C78                       C 78               C-046                  Minahan, Dr. W. E.; Minahan, Mrs. W. E.; Minahan, Miss Daisy
+   107  C30                       C 30               C-059                  Molsom, Mr. H. Markland
+   108  A16, A20, E36             A 16, A 20, E 36   A-027, A-027, E-115    Morgan, Mr.; Morgan, Mrs. and Maid  [titanic3 names them Sir Cosmo and Lady Duff Gordon, travelling as Mr and Mrs Morgan: Lady Duff Gordon A16, Sir Cosmo A20, their maid E36]
+   109  C118                      C 118              C-043                  Natsch, Mr. Charles
+   110  D48, D36                  D 48, D 36         D-017, D-015           Newell, Mr. A. W.; Newell, Miss Alice; Newell, Miss Madeline  [printed "M ss Madeline" (the i did not print); titanic3 has Miss Marjorie Newell and no Alice: both daughters D36, Mr. Newell D48]
+   111  D47                       D 47               D-018                  Newsom, Miss Helen
+   112  B30, B36                  B 30, B 36         B-035, B-035           Ostby, Mr. E. C.; Ostby, Miss Helen R.
+   113  D43                       D 43               D-018                  Ovies, Mr. S.
+   114  -                         -                  -                      Parr, Mr. M. H. W.
+   115  C142                      C 142              C-025                  Partner, Mr. Austin  [titanic3 gives C124]
+   116  -                         -                  -                      Payne, Mr. V.  [no cabin on the list; titanic3 gives B24]
+   117  C2                        C 2                C-069                  Pears, Mr. Thomas; Pears, Mrs. Thomas
+   118  C65, C109/1               C 65, C 109        C-047, C-045           Penasco, Mr. Victor; Penasco, Mrs. Victor and Maid
+   119  C104                      C 104              C-049                  Penchen, Major Arthur
+   120  C110                      C 110              C-049                  Porter, Mr. Walter Chamberlain
+   121  C50                       C 50               C-066                  Potter, Mrs. Thomas, Jr.
+   122  -                         -                  -                      Reuchlin, Mr. Jonkheer J. G.
+   123  B3                        B 3                ?                      Robert, Mrs. Elizabeth Walton and Maid
+   124  A24                       A 24               A-027                  Roebling, M. Washington A. 2nd
+   125  A32                       A 32               A-027                  Rood, Mr. Hugh R.
+   126  A10                       A 10               A-027                  Ross, Mr. J. Hugo
+   127  C37                       C 37               C-060                  Rothes, The Countess of and Maid  [titanic3 gives B77]
+   128  C106                      C 106              C-049                  Saalfeld, Mr. Adolphe
+   129  C125                      C 125              C-027                  Shutes, Miss E. W.
+   130  E24/1                     E 24               E-113                  Silverthorne, Mr.
+   131  E44                       E 44               E-116                  Silvey, Mr. William B.; Silvey, Mrs. William B.
+   132  A26                       A 26               A-027                  Simonius, Mr. Oberst Alfons
+   133  A7                        A 7                A-030                  Smith, Mr. J. Clinch
+   134  A19                       A 19               A-030                  Smith, Mr. R. W.
+   135  [B]45                     B 45               B-036                  Snyder, Mr. John; Snyder, Mrs. John  [the deck letter is lost in a tear; its right edge fits B, and titanic3 gives B45]
+   136  E34, E36, E40/1           E 34, E 36, E 40   E-115, E-115, E-121    Spedden, Mr. Frederick O.; Spedden, Mrs. Frederick O. and Maid.; Spedden, Master R. Douglas and Nurse  [titanic3 gives the three Speddens E34, the nurse E40 and the maid E39 E41; it gives E36 to the Morgans' maid]
+   137  B76, B80/1                B 76, B 80         B-019, B-019           Spencer, Mr. W. A; Spencer, Mrs. W. A. and Maid  [titanic3 gives B78, and the maid B80]
+   138  B50                       B 50               B-031                  Stahelin, Mr. Max
+   139  -                         -                  -                      Stead, Mr. W. T.  [no cabin on the list; titanic3 gives C87]
+   140  B41                       B 41               B-036                  Stehli, Mr. Max Frolicher; Stehli, Mrs. Max Frolicher
+   141  D20                       D 20               D-015                  Stephenson, Mrs. W. B.
+   142  B28                       B 28               B-035                  Stone, Mrs. George M. and Maid
+   143  C55, C57, C97             C 55, C 57, C 97   C-052, C-052, C-050    Straus, Mr. Isidor and Manservant; Straus, Mrs. Isidor and Maid
+   144  D50                       D 50               D-017                  Sutton, Mr. Frederick
+   145  D17/1                     D 17               D-016                  Swift, Mrs. Frederick Joel
+   146  E67, E68/1                E 67, E 68         E-117, E-119           Taussig, Mr. Emil; Taussig, Mrs. Emil; Taussig, Miss Ruth
+   147  C126                      C 126              C-040                  Taylor, Mr. E. Z.; Taylor, Mrs. E. Z.
+   148  -                         -                  -                      Thayer, Mr. J. B.; Thayer, Mrs. J. B. and Maid; Thayer, Mr. J. B., Jr.  [no cabin on the list; titanic3 gives Mr and Mrs Thayer C68 and the son C70]
+   149  C53                       C 53               C-063                  Tucker, Mr. G. M., Jr.
+   150  B19                       B 19               B-036                  Van der Hoef, Mr. Wyck[off]  [the end of the name is lost in a tear: "Wyck" is printed, "off" supplied (titanic3: Wyckoff)]
+   151  D46                       D 46               D-017                  Walker, Mr. W. Anderson
+   152  D37                       D 37               D-016                  Warren, Mr. F. M.; Warren, Mrs. F. M.
+   153  D26                       D 26               D-015                  White, Mr. Percival W.; White, Mr. Richard F.
+   154  C32, C99/1, C120/1        C 32, C 99, C 120  C-059, C-050, C-043    White, Mrs. J. Stuart and Maid and Manservant
+   155  C80, C82, D44             C 80, C 82, D 44   C-046, C-037, D-017    Widener, Mr. George D. and Manservant; Widener, Mrs. George D. and Maid; Widener, Mr. Harry
+   156  D32                       D 32               D-015                  Wood, Mr. Frank P.; Wood, Mrs. Frank P.  [not in titanic3's passenger list]
+   157  C52                       C 52               C-066                  Woolner, Mr. Hugh
+   158  C32                       C 32               C-059                  Young, Miss Marie
+
+KEPT APART (not placed in her rooms, with why)
+     5  -                         the list gives no stateroom: Andrews, Mr. Thomas
+    14  T                         no deck's letter and number to read in "T": Blackwell, Mr. Stephen Weart
+    28  -                         the list gives no stateroom: Case, Mr Howard B.
+    32  A9                        her plans in R3's tables number no A 9: Chevré, Mr. Paul
+    34  -                         the list gives no stateroom: Chisholm, Mr. Robert
+    35  -                         the list gives no stateroom: Christy, Mrs. Alice Frances
+    36  -                         the list gives no stateroom: Christy, Miss Juli
+    60  D34/3                     her plans in R3's tables number no D 34: Franklin, Mr. T. P.
+    77  B11                       her plans in R3's tables number no B 11: Head, Mr. Christopher
+    82  -                         the list gives no stateroom: Holden, M.A., Rev. J. Stuart
+    85  -                         the list gives no stateroom: Jakob, Mr. Birnbaum
+    95  D28                       her plans in R3's tables number no D 28: Lines, Mrs. Ernest H.; Lines, Miss Mary C.
+   114  -                         the list gives no stateroom: Parr, Mr. M. H. W.
+   116  -                         the list gives no stateroom: Payne, Mr. V.
+   122  -                         the list gives no stateroom: Reuchlin, Mr. Jonkheer J. G.
+   123  B3                        her plans in R3's tables number no B 3: Robert, Mrs. Elizabeth Walton and Maid
+   139  -                         the list gives no stateroom: Stead, Mr. W. T.
+   148  -                         the list gives no stateroom: Thayer, Mr. J. B.; Thayer, Mrs. J. B. and Maid; Thayer, Mr. J. B., Jr.
+
+THE CHECK ROWS
+in   CHECK the lines with a stateroom kept apart, each with why (a stateroom her plans in R3's tables do not number, or no deck's letter and number to read): findings for R3's tables (the lines that give no stateroom are the list's own, 12 of them) | 6 of 146: T, A9, D34/3, B11, D28, B3 | under a tenth

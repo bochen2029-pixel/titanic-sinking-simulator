@@ -1,0 +1,13 @@
+e26: the 1912 damage with the three tiers above B deck buoyant until their windows give way (through the seams; the core unchanged).
+Tiers [bets]: B to A deck -90.8 to 76.9 m, windows 0.5 m2 a metre; A deck to the Boat deck -78 to 73.5 m, windows 0.6 m2 a metre; the Boat-deck houses -70 to 73.5 m, windows 0.3 m2 a metre. Shut windows leak 0.02 of their area.
+  case                                                                bridge  fwd dome  founders   trim, list at T 155   most held up, t    at T  first windows
+  the core alone, without the staircases                              153.86         -    156.94           10.1, -43.3                 0    0.00              -
+  the core alone, with the staircases (S1)                            153.86    154.36    156.58           10.4, -45.1                 0    0.00              -
+  tiers buoyant, windows give way at 0.5 m; no staircases             156.13         -    159.91            7.8, -11.6              2545  159.44         151.42
+  tiers buoyant, windows give way at 0.5 m                            156.13    157.55    159.76            7.8, -11.6              2756  159.30         151.42
+  tiers buoyant, windows give way at 1.5 m                            157.39    159.95    161.43             7.4, -3.8              3043  160.39         154.03
+  tiers buoyant, windows give way at 3 m                              158.91    161.97    163.40             7.3, -2.6              3706  162.07         156.87
+  tiers buoyant, windows give way at 3 m; no staircases               158.91         -    163.47             7.3, -2.6              3682  162.07         156.87
+  tiers buoyant, windows give way at 6 m                              161.11    166.01    167.35             7.3, -2.6              6032  165.70         162.28
+  tiers buoyant, windows hold and leak                                161.11    170.47    173.92             7.3, -2.6             17463  173.88              -
+  tiers buoyant, windows hold and leak; no staircases                 161.11         -    174.02             7.3, -2.6             16918  173.99              -

@@ -1,0 +1,11 @@
+{"cmd":"num.eval","args":{"expr":"D/(V*1852/3600)","vars":{"D":"200","V":"22.5"},"digits":6}}
+{"cmd":"num.eval","args":{"expr":"D/(V*1852/3600)","vars":{"D":"350","V":"22.5"},"digits":6}}
+{"cmd":"num.eval","args":{"expr":"m*(V*1852/3600)^2/2/F","vars":{"m":"49020667","V":"22.5","F":"120000000"},"digits":6}}
+{"cmd":"num.eval","args":{"expr":"F/(m*g)","vars":{"F":"23510000","m":"29600000","g":"9.81"},"digits":4}}
+{"cmd":"num.eval","args":{"expr":"F/9964.01641818352","vars":{"F":"23510000"},"digits":6}}
+{"cmd":"num.eval","args":{"expr":"A/W","vars":{"A":"0.7506","W":"420.6"},"digits":6}}
+{"cmd":"num.eval","args":{"expr":"(T1 - T0)/T0","vars":{"T1":"1686","T0":"1177"},"digits":4}}
+{"cmd":"units.convert","args":{"value":"500 yd","to":"m"}}
+{"cmd":"check.units","args":{"expr":"m*U^2/(2*F)","vars":{"m":"kg","U":"m/s","F":"N"},"expect":"m"}}
+{"cmd":"check.units","args":{"expr":"cw*(p - dy)*dx","vars":{"cw":"1","p":"m","dy":"m","dx":"m"},"expect":"m^2"}}
+{"cmd":"check.units","args":{"expr":"K*p","vars":{"K":"N/m^2","p":"m"},"expect":"N/m"}}

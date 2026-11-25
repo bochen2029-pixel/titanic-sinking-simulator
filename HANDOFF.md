@@ -1,5 +1,12 @@
 # Handoff notes for the desktop build
 
+> These notes describe the core as it stood on 7 October 2026, and are kept as a dated record. The core has moved on
+> far since: the tiers above B deck, her restored ends, the calibration epoch, the plant, the readers and her fall. The
+> four fitted parameters of section 1 gave way to the history match of stage D. Of section 4's gaps, the bunker of 4a
+> (her early list to starboard still falls short), the pumps and doors of 4c, and the girder and the break of 4d are
+> built since, and 4e to 4g in part; section 7's question is searched by `tools/carpathia.js`. Today's gaps are the
+> README's "Known gaps" and `BACKLOG.md`; see README, "The port, and the oracle".
+
 Written at the end of the browser session, 7 October 2026. `README.md` says what the model is and how well it fits; `PORTING.md` has the kernel plan. This file is the rest: what to do first, what I am unsure of, the physics still missing, and the ideas that need a GPU.
 
 ## 1. Order of work

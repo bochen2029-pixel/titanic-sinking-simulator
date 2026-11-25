@@ -1,0 +1,3 @@
+# the receipts journal (SQLite, WAL) and its blob store are machine-local; commit an export instead:
+#   abacus journal export --jsonl --journal docs/research/abacus/journal/receipts.db
+journal/

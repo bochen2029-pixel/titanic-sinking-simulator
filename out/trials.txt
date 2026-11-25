@@ -1,0 +1,41 @@
+P1 acceptance: the motion model (core/motion.js), fit {"uRk":1.8225,"cd":2.4774,"fA":0.6501,"kap":0.0552}
+in   Full ahead, 75 rpm                                                 22.15 kn                       22.1 kn, 21.75-22.3 (BI 18372; 22.06 over a day; calibrated at Halpern's 22.15)
+in   74 rpm                                                             21.90 kn                       21.7 kn, 21.4-21.9 (Olympic 21.5, BI 25292, plus Titanic's 1/8-1/4 kn)
+OUT  60 rpm (the stopping trial), at the night's draft                  18.18 kn                       17.6 kn, 17.3-18.0 (18 kn at the trial's 30 ft, BI 25295, corrected)
+in   Half ahead, 50 rpm, turbine in                                     15.31 kn                       15.3 kn, 14.9-15.9 (Smith; Fleming; Halpern; pitch and draft corrected)
+in   Slow ahead, 30 rpm, turbine out                                    8.25 kn                        8.6 kn, 8.2-9.2 (Smith 8-9, Fleming 9); the model loses speed too fast below 60 rpm
+PASS time-stepper settles on the exact speed, full ahead                0.000 nm/s off                 under 1 nm/s
+PASS time-stepper settles on the exact speed, half ahead                0.000 nm/s off                 under 1 nm/s
+PASS time-stepper settles on the exact speed, slow ahead                0.000 nm/s off                 under 1 nm/s
+PASS steady speed is the certified unique root, full ahead              11.394944444 m/s               abacus1:261a8005fc01: 11.394944444 (count 1)
+PASS steady speed is the certified unique root, half ahead              7.878286971 m/s                abacus1:99df9f1ae951: 7.878286971 (count 1)
+PASS steady speed is the certified unique root, slow ahead              4.244150951 m/s                abacus1:3a410da7a09f: 4.244150951 (count 1)
+PASS two points (22.5 deg) at 74 rpm, hard over and both engines full astern [fitted] 37.0 s                         37 s from the order (Olympic 1912, BI 25292; "And reversed both engines.", Wilding 1915)
+PASS tactical diameter, hard over at 20 kn, engines ahead [fitted]      1174 m                         3,850 ft = 1,173 m (Titanic trials; Wilding 1915)
+PASS circle at 11 kn (turbine out, as in service) over the circle at 20 kn [fitted] 1.030                          1.03, 1.00-1.10: "only by a very small amount" (Wilding 1912 and 1915)
+in   two points at 21.5 kn with the helm alone                          35.2 s                         30-37 s expected (the consensus's sensitivity; Halpern read the 37 s this way)
+OUT  distance run to two points, engines reversed                       363 m                          381 m, 366-402 (BI 25293: 0.2 nm by log, 1,200-1,300 ft; 440 yd, 1915)
+in   advance at 20 kn, from the helm order                              781 m                          777 m, 700-885 (bounded by the records; Halpern's model 774)
+in   advance at 20 kn, from the rudder hard over                        678 m                          640 m, 580-700 (Wilding's "about 2,100 feet", origin not stated)
+in   speed held in the steady turn at 20 kn                             0.68                           0.74, 0.65-0.82 (Halpern's chart value; never measured)
+in   steady rate of turn at 20 kn                                       0.68 deg/s                     0.76 deg/s, 0.65-0.88 (follows from the speed held)
+in   two points at 11 kn, helm alone                                    68.2 s                         70 s, 60-80 (counsel relaying Wilding, BI Day 29: "double as long")
+in   circles at 11, 19.5, 21.75 kn (BI 25291's three)                   1209, 1173, 1174 m             nearly the same: the slow one up to 10 % larger
+in   centre screw out: two points; circle                               36.3 s; 1205 m                 little slower than with it (the "turbine question"; consensus Conflict 15); no record
+PASS port and starboard turns mirror each other                         1173.5 vs 1173.5 m             the model has no handed terms yet
+PASS crash stop from 60 rpm, the trial's slow reversal: distance [fitted] 914 m                          "just over 3,000 feet" = 914 m (BI 25295)
+in   crash stop, the trial's slow reversal: time to way off             183 s                          195 s, 180-210 (BI 25295: "about three minutes and 15 seconds")
+in   crash stop from 60 rpm, usual reversal: engines astern after       17 s                           15 s, 10-22 (Cone 1912; USS Delaware 10 and 22 s)
+in   crash stop from 60 rpm, usual reversal: distance                   864 m                          820-930 m (the consensus's 8.4: the trial corrected for its draft and its slow reversal)
+in   stop from 75 rpm, prompt reversal                                  942 m                          no more than about 945 m (Olympic 1911 stopped "rather less" than Titanic; Wilding 1915)
+OUT  stop from 30 rpm over the stop from 60 rpm, usual reversal         0.36                           0.82, 0.75-0.90 (halving the speed cut it about 15 %: another, smaller ship; Wilding 1915)
+PASS 1912 run driven by motion, engines stopped: same bits as the plain core 37758 steps, a37b2b7af7dc      seams reference a37b2b7af7dc
+PASS a turn to starboard heels her to port (core roll < 0), and the mirror -3.59 / 3.59 deg               outward heel in a steady turn
+in   steady heel in the turn at 20 kn (intact, no coal list)            3.59 deg                       4.1 deg, 3.0-5.5 (Halpern's 5.4 at 22.5 kn brought to 20 kn; never observed)
+PASS motion snapshot mid-turn, restore, run on 100 s (standalone)       heading -113.759140 vs -113.759140 bit-identical
+PASS coupled snapshot mid-turn, restore, run on 100 s                   0.00116 deg, 0.012 m apart     within 0.01 deg and 1 m (the core's restore tolerance)
+in   the 1912 damage at Full ahead for 30 min (the sea's pressure at the openings: P5) 22.15 -> 22.03 kn with 9.6 thousand t aboard she slows as she fills (hydrodynamics still at the intact draft)
+PASS P5: a crushed bow faces the flow: its outside level rises by the whole dynamic head 1.349 m at 10.00 kn            1.349 m (U^2/2g)
+PASS P5: a slit in her parallel side amidships: next to nothing; stopped: exactly 0 0.0000 m at 22.5 kn; 0 m stopped under 1 % of the dynamic head (6.83 m); 0
+OUT  P5: a 0.2 m2 hole in the forepeak's side, held 10 min at 0, 10 and 22.5 knots: water aboard 0, 0, 0 t (xNaN)               more at speed: the bow wave near the stem (e24: x1.02, x1.34) [bet]
+PASS: every MUST row (17); CHECK rows in range: 18 of 22

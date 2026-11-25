@@ -1,0 +1,33 @@
+RECORDS: two points in 37 s at 21.5 kn, run 366-396 m (Olympic 1912); tactical 1,158-1,189 m; advance 640 m (2,100 ft) or 672 m (2 1/2 lengths) (Titanic 1912, about 30 ft draft)
+
+1. THE FIT AS IT IS, AND REFITTED (uRk, cd) WITH EACH HULL TERM SCALED: does any one of them bring the advance to 640-672 m?
+as fitted (core/motion.js)    uRk 1.600 cd 2.700 | two points 37.3 s, run 386 m | tactical 1175 m, advance 818 m (716 from the helm hard over), speed held 0.65, rate 0.69 deg/s
+nr x 0.6                      uRk 1.466 cd 2.921 | two points 37.0 s, run 386 m | tactical 1173 m, advance 805 m (703 from the helm hard over), speed held 0.69, rate 0.72 deg/s
+nr x 0.8                      uRk 1.538 cd 2.815 | two points 37.0 s, run 385 m | tactical 1173 m, advance 810 m (708 from the helm hard over), speed held 0.67, rate 0.70 deg/s
+nr x 1.25                     uRk 1.718 cd 2.798 | two points 37.0 s, run 380 m | tactical 1173 m, advance 821 m (718 from the helm hard over), speed held 0.62, rate 0.66 deg/s
+jz x 0.5                      uRk 1.454 cd 2.057 | two points 37.0 s, run 387 m | tactical 1173 m, advance 824 m (722 from the helm hard over), speed held 0.67, rate 0.71 deg/s
+jz x 0.75                     uRk 1.532 cd 2.382 | two points 37.3 s, run 387 m | tactical 1173 m, advance 820 m (717 from the helm hard over), speed held 0.66, rate 0.70 deg/s
+jz x 1.5                      uRk 1.801 cd 3.820 | two points 37.3 s, run 380 m | tactical 1173 m, advance 806 m (704 from the helm hard over), speed held 0.62, rate 0.65 deg/s
+xvr x 0                       uRk 1.615 cd 2.766 | two points 37.0 s, run 383 m | tactical 1173 m, advance 815 m (713 from the helm hard over), speed held 0.65, rate 0.69 deg/s
+xvr x 0.5                     uRk 1.649 cd 3.045 | two points 37.0 s, run 380 m | tactical 1173 m, advance 813 m (711 from the helm hard over), speed held 0.62, rate 0.66 deg/s
+xvr x 1.5                     uRk 1.584 cd 2.520 | two points 37.3 s, run 388 m | tactical 1173 m, advance 817 m (715 from the helm hard over), speed held 0.68, rate 0.72 deg/s
+xvr x 2                       uRk 1.556 cd 2.298 | two points 37.3 s, run 390 m | tactical 1174 m, advance 819 m (716 from the helm hard over), speed held 0.72, rate 0.75 deg/s
+nv x 0.6                      uRk 1.681 cd 2.652 | two points 37.0 s, run 381 m | tactical 1173 m, advance 823 m (721 from the helm hard over), speed held 0.63, rate 0.67 deg/s
+nv x 0.8                      uRk 1.647 cd 2.710 | two points 37.3 s, run 384 m | tactical 1173 m, advance 819 m (716 from the helm hard over), speed held 0.64, rate 0.68 deg/s
+nv x 1.25                     uRk 1.577 cd 2.836 | two points 37.0 s, run 384 m | tactical 1173 m, advance 812 m (709 from the helm hard over), speed held 0.66, rate 0.69 deg/s
+nv x 1.5                      uRk 1.540 cd 2.903 | two points 37.3 s, run 387 m | tactical 1173 m, advance 808 m (706 from the helm hard over), speed held 0.67, rate 0.70 deg/s
+yv x 0.6                      uRk 1.619 cd 2.890 | two points 37.3 s, run 385 m | tactical 1173 m, advance 820 m (718 from the helm hard over), speed held 0.64, rate 0.68 deg/s
+yv x 0.8                      uRk 1.617 cd 2.827 | two points 37.0 s, run 383 m | tactical 1173 m, advance 818 m (715 from the helm hard over), speed held 0.65, rate 0.68 deg/s
+yv x 1.25                     uRk 1.612 cd 2.692 | two points 37.3 s, run 385 m | tactical 1173 m, advance 813 m (710 from the helm hard over), speed held 0.65, rate 0.69 deg/s
+yv x 1.6                      uRk 1.610 cd 2.595 | two points 37.0 s, run 383 m | tactical 1173 m, advance 809 m (707 from the helm hard over), speed held 0.66, rate 0.69 deg/s
+yr x 0.5                      uRk 1.615 cd 2.862 | two points 37.3 s, run 385 m | tactical 1173 m, advance 820 m (717 from the helm hard over), speed held 0.65, rate 0.68 deg/s
+yr x 1.5                      uRk 1.614 cd 2.659 | two points 37.0 s, run 383 m | tactical 1173 m, advance 811 m (708 from the helm hard over), speed held 0.65, rate 0.69 deg/s
+yr x 2                        uRk 1.613 cd 2.534 | two points 37.0 s, run 383 m | tactical 1173 m, advance 806 m (704 from the helm hard over), speed held 0.66, rate 0.70 deg/s
+my x 0.6                      uRk 1.555 cd 2.420 | two points 37.3 s, run 388 m | tactical 1173 m, advance 819 m (716 from the helm hard over), speed held 0.68, rate 0.71 deg/s
+my x 1.5                      uRk 1.682 cd 3.208 | two points 37.3 s, run 382 m | tactical 1173 m, advance 812 m (710 from the helm hard over), speed held 0.62, rate 0.66 deg/s
+   -> with 37 s and 1,173 m held, the advance from the order stays between 805 and 824 m
+
+2. THE TRIAL'S OWN CONDITION: about 30 ft draft against the night's 32.25 ft (lighter by the mean 144 tons per inch [bet])
+the night (9.83 m)            uRk 1.600 cd 2.700 | two points 37.3 s, run 386 m | tactical 1175 m, advance 818 m (716 from the helm hard over), speed held 0.65, rate 0.69 deg/s
+trial draft (30 ft, -3888 tons)uRk 1.600 cd 2.700 | two points 32.8 s, run 341 m | tactical 865 m, advance 687 m (585 from the helm hard over), speed held 0.59, rate 0.87 deg/s
+   (the helm is hard over 10 s after the order at 4 deg/s; an advance taken from then is about 100 m shorter at 20 kn)

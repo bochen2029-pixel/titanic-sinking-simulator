@@ -1,0 +1,118 @@
+e102 (G14, D77 stage C3) on C:\code\titanic-sinking-simulator-main\.claude\worktrees\b1b2-strength-85bc79 at cde997f: the girder and section side of her hull ends, first order
+
+A. THE HULL
+  A1. the model's half breadth at E, D and C decks between amidships and R3's first frames (m; the moulded 14.10); R3 read no frame here
+      x       E      D      C     (R3 at 80F: the plan E 13.13, D 13.38, C 13.56; at 80A: E 13.66, D 13.86, C 13.88)
+     -72.9  13.42  13.54  13.64
+     -60.0  13.96  14.00  14.00
+     -50.0  14.09  14.09  14.07
+     -46.5  14.10  14.10  14.08
+     -40.0  14.10  14.10  14.08
+       0.0  14.10  14.10  14.08
+      29.9  14.10  14.10  14.08
+      40.0  14.01  14.03  14.02
+      50.0  13.70  13.75  13.78
+      60.0  13.13  13.23  13.30
+      65.0  12.74  12.86  12.96
+      70.0  12.27  12.42  12.55
+      72.9  11.97  12.13  12.27
+  A2. the 1912 preset at rest (trim -0.20 deg): the sea on her centreline against E deck at her ends (m above the keel)
+    x -130.6: the sea 10.29, E deck 15.72, so 5.43 m above it
+    x -120.3: the sea 10.25, E deck 15.43, so 5.18 m above it
+    x -100.4: the sea 10.18, E deck 14.93, so 4.75 m above it
+    x  -72.9: the sea 10.09, E deck 14.39, so 4.31 m above it
+    x   72.9: the sea 9.57, E deck 15.03, so 5.45 m above it
+    x   99.0: the sea 9.48, E deck 16.07, so 6.59 m above it
+    x  116.7: the sea 9.42, E deck 16.96, so 7.54 m above it
+    x  128.5: the sea 9.38, E deck 17.63, so 8.25 m above it
+  A3. the restored volume between E and B decks (R3's rule; both sides, m3) by zone, against its space above E deck today
+      zone                                    E-D     D-C     C-B     all    above E today    share
+    0 Forepeak                                 59      99      96     254              554    46.0 %
+    1 No. 1 hold                              111     193     191     495             1390    35.6 %
+    2 No. 2 hold                              144     219     138     501             2078    24.1 %
+    3 No. 3 hold                              103     136      30     269             2852     9.4 %
+    12 Electric engine room                    32      39      30     101             6250     1.6 %
+    13 Shaft tunnel / refrigerated cargo      119     148      30     297             2906    10.2 %
+    14 Shaft tunnel / cargo                   245     357     236     838             2253    37.2 %
+    15 After peak                             187     398     354     939             1254    74.9 %
+    in all: aft 2176 m3, forward 1519 m3 (R3: about 2,300 and 1,700; its C-B band at C's floor is a bet)
+
+B. CORE/READERS/SECTION.JS AT HER ENDS: off (the model as it is) and on (R3's breadth above E deck); its scantlings unchanged
+       x  where              deck  half-breadth    area m2         Z deck m3        Z keel m3      Mu hog GN m      Mu sag GN m        Vu MN
+                                      off    on    off    on      off     on      off     on      off     on      off     on      off    on
+  -130.60  after peak           B  3.45  9.61  0.815  1.376    3.25    5.86    2.27    2.75    0.39    0.49    0.44    0.55  39.06  39.06
+  -127.20  after peak           B  4.67 10.44  1.293  1.820    8.83   14.22    5.76    6.41    1.07    1.16    1.18    1.31  72.03  72.03
+  -123.80  after peak           B  5.80 11.07  1.387  1.877   10.09   15.00    6.27    6.83    1.11    1.19    1.27    1.38  71.74  71.74
+  -120.30  after peak           B  6.86 11.56  1.488  1.931   11.35   15.75    6.84    7.31    1.17    1.24    1.36    1.46  72.20  72.20
+  -116.80  shaft tunnel / car   B  7.83 11.96  1.744  2.142   13.71   18.08   10.01   10.50    1.69    1.76    1.63    1.72  73.07  73.07
+  -112.90  shaft tunnel / car   B  8.79 12.27  1.869  2.207   14.96   18.69   10.87   11.27    1.80    1.86    1.76    1.84  74.45  74.45
+  -108.90  shaft tunnel / car   B  9.66 12.52  1.990  2.274   16.13   19.23   11.75   12.08    1.91    1.96    1.89    1.96  75.88  75.88
+  -104.70  shaft tunnel / car   C 10.24 12.53  1.669  1.818   10.35   12.03   11.40   11.66    1.78    1.93    1.22    1.38  68.48  68.48
+  -100.40  shaft tunnel / ref   C 10.97 12.83  1.797  1.921   10.97   12.39   12.78   13.01    1.91    2.10    1.27    1.41  69.78  69.78
+   -91.30  shaft tunnel / ref   C 12.21 13.30  2.052  2.127   12.03   12.88   15.60   15.74    2.12    2.26    1.33    1.41  72.45  72.45
+   -82.10  electric engine ro   B 13.17 13.74  2.926  2.985   22.37   23.07   22.47   22.56    3.71    3.74    2.51    2.57  84.49  84.49
+   -72.90  electric engine ro   B 13.66 13.91  3.409  3.435   28.29   28.59   25.00   25.03    4.08    4.09    3.36    3.36  98.38  98.38
+   -10.93  boiler room 2        B 14.02 14.02  4.020  4.020   27.29   27.29   34.96   34.96    4.94    4.94    4.56    4.56 119.66 119.66
+     0.00  boiler room 2        B 14.02 14.02  4.196  4.196   30.14   30.14   35.46   35.46    5.31    5.31    4.52    4.52 119.60 119.60
+    72.90  No. 3 hold           B 12.34 13.63  3.324  3.462   27.80   29.44   25.73   25.88    4.20    4.23    3.45    3.47 100.76 100.76
+    81.90  No. 3 hold           C 11.22 13.06  2.240  2.358   12.30   13.81   18.97   19.30    2.19    2.47    1.42    1.56  77.47  77.47
+    90.80  No. 2 hold           C  9.90 12.21  1.991  2.131   11.35   13.21   16.23   16.64    2.04    2.36    1.41    1.59  76.00  76.00
+    99.00  No. 2 hold           B  8.57 11.22  2.191  2.442   17.12   20.49   16.54   17.00    2.80    2.92    2.33    2.51  83.29  83.29
+   106.40  No. 1 hold           B  6.99  9.64  1.839  2.081   14.45   17.68   12.52   12.96    2.12    2.19    1.97    2.09  81.10  81.10
+   113.40  No. 1 hold           B  5.25  7.56  1.604  1.809   12.09   14.91   10.71   11.16    1.89    1.98    1.72    1.82  78.98  78.98
+   119.90  forepeak             B  3.41  5.07  1.225  1.375    8.55   10.41    6.39    6.71    1.24    1.30    1.29    1.36  77.40  77.40
+   126.00  forepeak             B  1.48  2.32  0.995  1.080    5.54    6.58    4.91    5.19    0.97    1.05    0.97    1.06  73.97  73.97
+  amidships unchanged to the bit (x -10.93, the onset's station; x 0, the fit's section): yes
+
+C. THE GIRDER (core/readers/girder.js), FIRST ORDER: the restored volume as buoyancy outboard of her side, on the gauge
+   (a) dry wherever under water (an upper bound); (b) only where its compartment's space above E deck holds no water
+  C1. the 1912 damage preset along its own path, every 10 minutes:
+        0 min, trim  -0.2, water      1 t: submerged dry fwd     0 m3, aft    0; with its space dry fwd     0, aft    0; the gauge 0.884 GN m, (a) 0.884, (b) 0.884
+       10 min, trim   0.5, water   2878 t: submerged dry fwd     0 m3, aft    0; with its space dry fwd     0, aft    0; the gauge 1.341 GN m, (a) 1.341, (b) 1.341
+       20 min, trim   1.2, water   5442 t: submerged dry fwd     0 m3, aft    0; with its space dry fwd     0, aft    0; the gauge 1.733 GN m, (a) 1.733, (b) 1.733
+       30 min, trim   1.7, water   7734 t: submerged dry fwd     0 m3, aft    0; with its space dry fwd     0, aft    0; the gauge 2.044 GN m, (a) 2.044, (b) 2.044
+       40 min, trim   2.1, water   9743 t: submerged dry fwd     0 m3, aft    0; with its space dry fwd     0, aft    0; the gauge 2.308 GN m, (a) 2.308, (b) 2.308
+       50 min, trim   2.5, water  11486 t: submerged dry fwd    35 m3, aft    0; with its space dry fwd    35, aft    0; the gauge 2.534 GN m, (a) 2.528, (b) 2.528
+       60 min, trim   2.8, water  13402 t: submerged dry fwd   168 m3, aft    0; with its space dry fwd    83, aft    0; the gauge 2.712 GN m, (a) 2.683, (b) 2.695
+       70 min, trim   3.2, water  15149 t: submerged dry fwd   298 m3, aft    0; with its space dry fwd    45, aft    0; the gauge 2.845 GN m, (a) 2.793, (b) 2.833
+       80 min, trim   3.5, water  16791 t: submerged dry fwd   432 m3, aft    0; with its space dry fwd    67, aft    0; the gauge 2.954 GN m, (a) 2.880, (b) 2.937
+       90 min, trim   3.7, water  18412 t: submerged dry fwd   574 m3, aft    0; with its space dry fwd    43, aft    0; the gauge 3.031 GN m, (a) 2.933, (b) 3.020
+      100 min, trim   4.0, water  20119 t: submerged dry fwd   738 m3, aft    0; with its space dry fwd     0, aft    0; the gauge 3.143 GN m, (a) 3.018, (b) 3.143
+      110 min, trim   4.3, water  21901 t: submerged dry fwd   894 m3, aft    0; with its space dry fwd     0, aft    0; the gauge 3.192 GN m, (a) 3.040, (b) 3.192
+      120 min, trim   4.6, water  23711 t: submerged dry fwd  1062 m3, aft    0; with its space dry fwd     0, aft    0; the gauge 3.259 GN m, (a) 3.079, (b) 3.259
+      130 min, trim   4.9, water  25502 t: submerged dry fwd  1224 m3, aft    0; with its space dry fwd     0, aft    0; the gauge 3.340 GN m, (a) 3.132, (b) 3.340
+      140 min, trim   5.2, water  27538 t: submerged dry fwd  1386 m3, aft    0; with its space dry fwd     0, aft    0; the gauge 3.404 GN m, (a) 3.169, (b) 3.404
+      150 min, trim   6.4, water  31497 t: submerged dry fwd  1514 m3, aft    0; with its space dry fwd     0, aft    0; the gauge 3.907 GN m, (a) 3.656, (b) 3.907
+    the record's moments (girder.js RECORD, the governing station in the band K to J):
+      trim 11 deg (T 156.55): as the model is 5.125 GN m at x -16.15; (a) 4.869 at -16.15 (submerged 1519 m3); (b) 5.125 at -16.15 (0 m3)
+      trim 17 deg (T 157.18): as the model is 5.871 GN m at x -16.15; (a) 5.610 at -16.15 (submerged 1519 m3); (b) 5.871 at -16.15 (0 m3)
+    the panel's C-7, the hull's largest moment at 35,000 t aboard (T 153.76, trim 7.43): as the model is 4.477 GN m at x -0.48 (4.64 within 2 %: no); (a) 4.183 (outside 2 %); (b) 4.477 (outside 2 %)
+  C2. the 1912 watch: the restored volume under water every 10 minutes after the touch
+       0.0 min after the touch, trim  -0.2: submerged dry fwd     0, aft    0 m3; with its space dry fwd     0, aft    0
+      10.0 min after the touch, trim   0.5: submerged dry fwd     0, aft    0 m3; with its space dry fwd     0, aft    0
+      20.0 min after the touch, trim   1.2: submerged dry fwd     0, aft    0 m3; with its space dry fwd     0, aft    0
+      30.0 min after the touch, trim   1.7: submerged dry fwd     0, aft    0 m3; with its space dry fwd     0, aft    0
+      40.0 min after the touch, trim   2.2: submerged dry fwd     0, aft    0 m3; with its space dry fwd     0, aft    0
+      50.0 min after the touch, trim   2.6: submerged dry fwd    59, aft    0 m3; with its space dry fwd    59, aft    0
+      60.0 min after the touch, trim   2.9: submerged dry fwd   192, aft    0 m3; with its space dry fwd    96, aft    0
+      70.0 min after the touch, trim   3.2: submerged dry fwd   316, aft    0 m3; with its space dry fwd    48, aft    0
+      80.0 min after the touch, trim   3.5: submerged dry fwd   443, aft    0 m3; with its space dry fwd    69, aft    0
+      90.0 min after the touch, trim   3.7: submerged dry fwd   579, aft    0 m3; with its space dry fwd    43, aft    0
+     100.0 min after the touch, trim   4.0: submerged dry fwd   737, aft    0 m3; with its space dry fwd     0, aft    0
+     110.0 min after the touch, trim   4.3: submerged dry fwd   890, aft    0 m3; with its space dry fwd     0, aft    0
+     120.0 min after the touch, trim   4.5: submerged dry fwd  1046, aft    0 m3; with its space dry fwd     0, aft    0
+     130.0 min after the touch, trim   4.8: submerged dry fwd  1213, aft    0 m3; with its space dry fwd     0, aft    0
+     140.0 min after the touch, trim   5.2: submerged dry fwd  1391, aft    0 m3; with its space dry fwd     0, aft    0
+     150.0 min after the touch, trim   6.2: submerged dry fwd  1512, aft    0 m3; with its space dry fwd     0, aft    0
+    B2's onset, the first step where (M/Mu)^2 + (V/Vu)^2 reaches 1 at any station:
+      as the model is                                                 T 156.67, step 37842, x -10.93 (boiler room 2), M 4.869 of 4.939 GN m, V 20.18 of 119.66 MN, trim 9.3, list -3.2
+      (a) dry wherever under water, the ends' capacities restored     T 157.09, step 37942, x -10.93 (boiler room 2), M 4.868 of 4.939 GN m, V 20.36 of 119.66 MN, trim 10.5, list -5.7
+      (b) only where its space is dry, the same                       T 156.67, step 37842, x -10.93 (boiler room 2), M 4.869 of 4.939 GN m, V 20.18 of 119.66 MN, trim 9.3, list -3.2
+    the largest ratio at any station outside x -70 to +70 from T 150 to the onset or the flag: as the model is 0.540 (x -71.0), (a) 0.576 (x -71.0)
+
+D. THE WEIGHT CURVE: it reads no breadth. The hull (31773 t, Prohaska's a = 0.4) is a trapezoid over her profile, x -138.99 to 130.32 (C.zoneBounds())
+  the stern tip as it is: the hull layer's moment aft of x -10.93 about it, weights only 7.858 GN m
+  the stern tip 3 m forward: the hull layer's moment aft of x -10.93 about it, weights only 7.757 GN m (-0.100)
+  the stern tip 7 m forward: the hull layer's moment aft of x -10.93 about it, weights only 7.618 GN m (-0.239)
+
+(e102 took 11 s)

@@ -1,0 +1,2027 @@
+{
+ "table": "vents",
+ "title": "Her vents, 1912: the ways each space's air can leave her, for NH7 (in R3's form)",
+ "format": 1,
+ "written": "2026-11-23, about 20:00 CST, by NH2's side session of the coordinator, at its word of 19:27, for Z1's NH7 design (docs/DESIGN_NH7_air_in_every_space_v1_2026-11-23.md, on claude/z1-z6-onset 5dcca8d); the machinery's rows with B1+B2's reading of The Shipbuilder (1911) and of docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md",
+ "rules": "Facts only, as R3's tables: which vent, where, how big, where it leads. No image or drawing of any plan is kept. Every row cites its source. Each row's tag is its clear area's: [read] where a source states it, [derived] where it is computed here from read numbers (R3's outlines, a printed diameter), [bet] where the plans are silent, each bet with its reason. A row's top carries its own tag (top_how).",
+ "reference": "R3's tables of her rooms (data/rooms/<deck>_deck.json: Encyclopedia Titanica's free deck plans, read as tables of facts under docs/research/RESEARCH_rooms_plans_licence_v1_1_2026-11-20.md); The Shipbuilder, Midsummer 1911 special number, 'The White Star Liners Olympic and Titanic' (public domain), as B1+B2 quoted it from the topsides lane's OCR, its page numbers to a page; the topsides note (scaled heights off ET's plan and profile); The Shipbuilder's text read in the topsides lane's OCR (a text file kept outside the repository; the Olympic and Titanic number only: the file also holds the Mauretania's); the stern study's work as the coordinator digested it (STERNWORK digests 01_02 and 04_05, 2026-11-23, in the coordinator's notes folder): Wilding's evidence (BI 20391, 20392, 20921), Hendrickson's (BI 4912-4913), Faulkner 2001 and the FLOODSTAND doors; and Bob Read's hatches article and Mengot's casings, as the repository already cites them",
+ "how": [
+  "A row is one way out for the air of one or more of the core's 64 spaces (space: its zone, sides P and S, and layer, 0 below E deck and 1 above): a machinery shaft to its skylight or funnel, a fan and its trunk, a hatch, a light and air trunk, a stair to the weather. Doors, windows and sidelights in her side (R3's data/rooms/openings.json, the core's C4) and S1's two grand staircases (the core's STAIRS) are the core's already and are not repeated here.",
+  "Place: by R3's rows (r3; the first is the one at its inlet), each row's outline clipped to the space's zone and sides; or by its frames (x).",
+  "Inlet: the deck it leaves its space at (deck). opens 'up': it leaves through its space's top (a shaft or hatch leaving a space below E deck at E deck); otherwise it stands on its deck inside its space.",
+  "Top: its outlet's height in the ship frame (z_top_m): a height read or scaled (top_z_m), or its top deck's height there, with the outlet's height over it (top_over_ft), each tagged in top_how.",
+  "Area: the narrower of its trunk (trunk_m2: the narrowest of the R3 rows above its inlet, each in the space's zone and sides, [derived]; or a fan's eye, the circle of its printed diameter, [derived from read], a lower bound on its shaft) and its way out (exit_m2, where read, derived or bet).",
+  "Hatches: their covers (hatch boards, tarpaulined where they meet the weather) are not read; each hatch row gives its clear opening, covered [bet]: NH7 takes it as a covered opening.",
+  "What closes it (closes) and at what head of water it gives way (gives_way: each with what gives way, the head or its range in metres where a source gives one, or when, the condition a source gives without a number, how, and a tag: the head's), where a source says. A cover lifted from below by air is a head of 0 to 0.1 m [bet unless read].",
+  "Derived fields (x_m, y_m, z_in_m, z_top_m, trunk_m2, exit_m2, area_m2, slab) are written by: node tools/vents_table.js --write"
+ ],
+ "spaces_without": [
+  {
+   "zone": 10,
+   "sides": [
+    "P",
+    "S"
+   ],
+   "layer": 1,
+   "why": "Her rooms over the reciprocating engine room (E to A decks): their ways out are S1's aft grand staircase and its dome (the core's STAIRS) and R3's windows, sidelights and doors (openings.json, the core's C4). The light and air trunks that pass them (R3 A-008: to the engine room and to the galley) belong to those spaces (V-001, V-008)."
+  },
+  {
+   "zone": 14,
+   "sides": [
+    "P",
+    "S"
+   ],
+   "layer": 1,
+   "why": "The third-class rooms under the poop (D and C decks, O to P): their ways out are R3's sidelights and doors to the poop deck (openings.json, the core's C4); no ventilator is read in R3's tables there, and No. 6 hatch is trunked through them (V-017)."
+  },
+  {
+   "zone": 15,
+   "sides": [
+    "P",
+    "S"
+   ],
+   "layer": 0,
+   "why": "The after peak, a tank under the steering gear: no air pipe or vent is read on the plans (R3's orlop row O-033 is the hold, not the tank's pipes). The Shipbuilder's account of the tanks was not read for it."
+  }
+ ],
+ "rows": [
+  {
+   "id": "V-001",
+   "kind": "casing",
+   "name": "The reciprocating engine room's light and air shaft, up through D, C, B and A decks to its skylight over the Boat deck",
+   "space": {
+    "zone": 10,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "E-081",
+    "D-033",
+    "C-033",
+    "B-014",
+    "A-011",
+    "Bt-03"
+   ],
+   "deck": "E",
+   "opens": "up",
+   "top": "Boat",
+   "top_z_m": 30.53,
+   "top_over_ft": 3.3,
+   "top_how": "the engine-casing house's roof at z 30.53 m, scaled off ET's plan and profile (the topsides note) [read]; the skylight's own height about 1 m [bet]",
+   "area": {
+    "rule": "r3-narrowest",
+    "rows": [
+     "D-033",
+     "C-033",
+     "B-014",
+     "A-011"
+    ],
+    "exit": {
+     "m2": 26,
+     "lo": 22,
+     "hi": 30,
+     "tag": "bet",
+     "how": "the skylight over the casing's opening at the Boat deck, 7.28 by 5.95 m = 43.3 m2 [read: scaled by B1+B2 off ET's Boat deck plan in the built-in browser, by R3's Boat deck calibration (x0 2846.5 px, 0.09751 ft a px; centreline 631, 0.09786 ft a px), edges to about 0.1 ft, nothing saved], at its glazed share, 60 % (50 to 70 %) [bet]"
+    },
+    "also": [
+     {
+      "m2": 44.59,
+      "how": "its opening through B and C decks, 24 by 20 ft as completed, closed down from 42 by 38 ft at the launch (Mengot, via core/readers/section.js) [read]"
+     }
+    ]
+   },
+   "leads": "the weather, through the skylight on the engine-casing house over the Boat deck",
+   "source": "The Shipbuilder (1911), 'Ventilation of the Engine Rooms', p. 67 [read, B1+B2]: the usual light and air shaft over the reciprocating engine room extends above the boat deck and is surmounted by a large skylight; three 30 in Sirocco fans, one in the skylight. Its place and sections: R3's rows E-081 to Bt-03 [read]. The casing's opening at the Boat deck, frames 38A to 30A, x -34.34 to -27.06 m, y +2.94 to -3.01 m, between the tank rooms' inner walls [read: scaled by B1+B2 off ET's Boat deck plan in the built-in browser, by R3's Boat deck calibration (x0 2846.5 px, 0.09751 ft a px; centreline 631, 0.09786 ft a px), edges to about 0.1 ft, nothing saved].",
+   "check": "The skylight's own outline and lights are not on ET's plan (it stands on the house's roof, z 30.53 m); the after dome beside it prints its panes, the skylight does not. A flat for two 30 kW engines and dynamos stands in the casing at D deck (The Shipbuilder, about p. 109), narrowing the shaft there by an amount not found.",
+   "tag": "bet",
+   "why": "The skylight stands on the house's roof and is not drawn on ET's plan, so its lights are not found. It is taken to cover the casing's opening at the Boat deck, 43.3 m2 [read: scaled by B1+B2], and to open at its glazed share once its glass goes (glass gives way under little head: the staircases' laws): 26 m2 [bet], within 22 and 30 m2 (50 to 70 % glazed). That is under the shaft's 34 m2 at D deck, which the dynamos' flat narrows by an amount not found.",
+   "x_m": [
+    -48.1584,
+    -27.1272
+   ],
+   "y_m": [
+    -6.94,
+    6.94
+   ],
+   "z_in_m": 13.9526,
+   "z_top_m": 31.5358,
+   "trunk_m2": 33.7124,
+   "exit_m2": 26,
+   "area_m2": 26,
+   "slab": 160,
+   "closes": "the skylight's glazed lights over the casing house",
+   "gives_way": [
+    {
+     "what": "the skylight's glass, from inside",
+     "head_m": 0.05,
+     "how": "a skylight 0.05 m from inside, 0.5 m from outside (docs/research/RESEARCH_downflooding_stairwells_glazing_v1_2026-11-19.md, its glazing laws, bets there) [bet]",
+     "tag": "bet"
+    },
+    {
+     "what": "the casing itself",
+     "head_m": null,
+     "when": "the sea outside rises faster than the water inside",
+     "how": "light casings \"not made to take a pressure of that kind\": they collapse when the water outside rises faster than inside (Wilding, BI 20921 [read], via the digest)",
+     "tag": "read"
+    }
+   ]
+  },
+  {
+   "id": "V-002",
+   "kind": "fan",
+   "name": "The reciprocating engine room's port wing fan: a 30 in Sirocco fan and its trunk",
+   "space": {
+    "zone": 10,
+    "sides": [
+     "P"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "G-036"
+   ],
+   "deck": "G",
+   "top": "Boat",
+   "top_over_ft": 5,
+   "top_how": "its trunk's head on the Boat deck, 5 ft over it [bet: a fan intake's cowl]",
+   "area": {
+    "rule": "dia",
+    "dia_in": 30,
+    "count": 1
+   },
+   "leads": "the weather, by its trunk to the Boat deck",
+   "source": "The Shipbuilder (1911), p. 67 [read, B1+B2]: of the three 30 in Sirocco fans, two ventilate the wings. Its place: R3 G-036, 'FAN' in the port wing's rooms on G deck [read].",
+   "check": "That R3's 'FAN' in the port wing is this fan is a reading of the plan's label; its trunk's route and head are not found. The engine rooms' four 30 in fans are all 'of the discharge type' (The Shipbuilder (1911), Olympic and Titanic number, p. 67 [read]): they drove air in, so air left by them only when they stopped [bet].",
+   "tag": "derived",
+   "x_m": [
+    -48.05,
+    -27.1272
+   ],
+   "y_m": [
+    8.56,
+    14.1
+   ],
+   "z_in_m": 8.923,
+   "z_top_m": 29.8018,
+   "trunk_m2": 0.456,
+   "exit_m2": null,
+   "area_m2": 0.456,
+   "slab": 159,
+   "closes": "nothing but its fan: an open trunk once the fan stops [bet] (the engine rooms' fans were of the discharge type, driving air in: The Shipbuilder, p. 67 [read])"
+  },
+  {
+   "id": "V-003",
+   "kind": "fan",
+   "name": "The reciprocating engine room's starboard wing fan: a 30 in Sirocco fan and its trunk",
+   "space": {
+    "zone": 10,
+    "sides": [
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "G-037"
+   ],
+   "deck": "G",
+   "top": "Boat",
+   "top_over_ft": 5,
+   "top_how": "its trunk's head on the Boat deck, 5 ft over it [bet: a fan intake's cowl]",
+   "area": {
+    "rule": "dia",
+    "dia_in": 30,
+    "count": 1
+   },
+   "leads": "the weather, by its trunk to the Boat deck",
+   "source": "The Shipbuilder (1911), p. 67 [read, B1+B2]: of the three 30 in Sirocco fans, two ventilate the wings. Its place: R3 G-037, 'FAN' in the starboard wing's workshop on G deck [read].",
+   "check": "As V-002. The engine rooms' four 30 in fans are all 'of the discharge type' (The Shipbuilder (1911), Olympic and Titanic number, p. 67 [read]): they drove air in, so air left by them only when they stopped [bet].",
+   "tag": "derived",
+   "x_m": [
+    -48.05,
+    -27.1272
+   ],
+   "y_m": [
+    -14.1,
+    -8.81
+   ],
+   "z_in_m": 8.923,
+   "z_top_m": 29.8018,
+   "trunk_m2": 0.456,
+   "exit_m2": null,
+   "area_m2": 0.456,
+   "slab": 168,
+   "closes": "nothing but its fan: an open trunk once the fan stops [bet] (the engine rooms' fans were of the discharge type, driving air in: The Shipbuilder, p. 67 [read])"
+  },
+  {
+   "id": "V-004",
+   "kind": "funnel",
+   "name": "The turbine engine room's shaft, up through D, C, B and A decks to the fourth funnel",
+   "space": {
+    "zone": 11,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "E-086",
+    "D-038",
+    "C-028",
+    "B-012",
+    "A-007",
+    "Bt-02"
+   ],
+   "deck": "E",
+   "opens": "up",
+   "top": "Boat",
+   "top_z_m": 49.89,
+   "top_how": "the fourth funnel's top (its forward high point) at z 49.89 m, scaled off ET's profile (the topsides note's funnels table) [read]",
+   "area": {
+    "rule": "r3-narrowest",
+    "rows": [
+     "D-038",
+     "A-007"
+    ],
+    "exit": {
+     "m2": 18.7,
+     "tag": "read",
+     "how": "the shaft's opening into funnel 4 at the Boat deck: the box 'TURBINE ENGINE CASING', frames 58A to 55A, 3.05 by 4.74 m = 14.5 m2, and the strip 'L & A TO ENGINE ROOM', 55A to 54A, 0.88 m by the same breadth = 4.2 m2 [read: scaled by B1+B2 off ET's Boat deck plan in the built-in browser, by R3's Boat deck calibration (x0 2846.5 px, 0.09751 ft a px; centreline 631, 0.09786 ft a px), edges to about 0.1 ft, nothing saved]; over it the funnel's oval section, 34 m2 [derived, the topsides note]"
+    },
+    "also": [
+     {
+      "m2": 33.45,
+      "how": "its opening through B and C decks, 18 by 20 ft as completed, closed down from 25 by 48 ft at the launch for the fourth funnel (Mengot, via core/readers/section.js) [read]; R3's B deck row (B-012, 17.4 m2, in the galley) is only part of it"
+     }
+    ]
+   },
+   "leads": "the weather, through the fourth funnel, open at the top",
+   "source": "The Shipbuilder (1911), p. 67 [read, B1+B2]: the similar shaft from the turbine room is surmounted by the fourth funnel, a most valuable adjunct for ventilating purposes. Its place and sections: R3's rows E-086 to Bt-02 [read].",
+   "check": "The narrowest is its opening into funnel 4 at the Boat deck, 18.7 m2 (scaled by B1+B2) [read], under its opening as completed through B and C decks (33.4 m2, Mengot) and R3's D and A deck rows. That the dummy funnel stood clear inside is a bet (B1+B2). The funnel's base centre scales at x -51.5 m against the topsides note's -52.3.",
+   "tag": "read",
+   "x_m": [
+    -52.29,
+    -48.16
+   ],
+   "y_m": [
+    -3.14,
+    3.11
+   ],
+   "z_in_m": 14.0778,
+   "z_top_m": 49.89,
+   "trunk_m2": 24.9024,
+   "exit_m2": 18.7,
+   "area_m2": 18.7,
+   "slab": 187,
+   "closes": "nothing: the fourth funnel stood open at the top [bet], its inside clear but for its ventilators and the galley's pipes",
+   "gives_way": [
+    {
+     "what": "the casing itself",
+     "head_m": null,
+     "when": "the sea outside rises faster than the water inside",
+     "how": "light casings \"not made to take a pressure of that kind\": they collapse when the water outside rises faster than inside (Wilding, BI 20921 [read], via the digest)",
+     "tag": "read"
+    }
+   ]
+  },
+  {
+   "id": "V-005",
+   "kind": "fan",
+   "name": "The turbine engine room's wing fan: a 30 in Sirocco fan and its trunk",
+   "space": {
+    "zone": 11,
+    "sides": [
+     "P"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "F-080"
+   ],
+   "deck": "F",
+   "top": "Boat",
+   "top_over_ft": 5,
+   "top_how": "its trunk's head on the Boat deck, 5 ft over it [bet: a fan intake's cowl]",
+   "area": {
+    "rule": "dia",
+    "dia_in": 30,
+    "count": 1
+   },
+   "leads": "the weather, by its trunk to the Boat deck",
+   "source": "The Shipbuilder (1911), p. 67 [read, B1+B2]: one 30 in Sirocco fan ventilates the turbine room's wings. Its place: R3 F-080, 'FAN TRK' among the second-class rooms on F deck, port, L to M [read].",
+   "check": "That R3's 'FAN TRK' is this fan's trunk is a bet; the fan's side is not stated. The engine rooms' four 30 in fans are all 'of the discharge type' (The Shipbuilder (1911), Olympic and Titanic number, p. 67 [read]): they drove air in, so air left by them only when they stopped [bet].",
+   "tag": "derived",
+   "x_m": [
+    -65.46,
+    -48.1584
+   ],
+   "y_m": [
+    7.83,
+    14.0989
+   ],
+   "z_in_m": 11.5668,
+   "z_top_m": 30.0072,
+   "trunk_m2": 0.456,
+   "exit_m2": null,
+   "area_m2": 0.456,
+   "slab": 178,
+   "closes": "nothing but its fan: an open trunk once the fan stops [bet] (the engine rooms' fans were of the discharge type, driving air in: The Shipbuilder, p. 67 [read])"
+  },
+  {
+   "id": "V-006",
+   "kind": "fan",
+   "name": "A 20 in fan in the turbine casing on C deck",
+   "space": {
+    "zone": 11,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 1
+   },
+   "r3": [
+    "C-028"
+   ],
+   "deck": "C",
+   "top": "Boat",
+   "top_over_ft": 5,
+   "top_how": "its trunk's head on the Boat deck, 5 ft over it [bet]",
+   "area": {
+    "rule": "dia",
+    "dia_in": 20,
+    "count": 1
+   },
+   "leads": "the weather, by its trunk",
+   "source": "R3 C-028, 'TURBINE ENGINE CASING; LIGHT & AIR; FAN 20\"' on C deck [read].",
+   "check": "What it served is not on the plan: taken as the casing's rooms on C deck (the lubricating-oil tanks) [bet]. The accommodation was ventilated by 64 Sirocco fans, supply and suction, many of them on the Boat deck, so that the usual cowls were 'conspicuous by their absence' (The Shipbuilder (1911), Olympic and Titanic number, about p. 106 [read]); this fan is one of them [read: R3's label], its trunk to the Boat deck [bet].",
+   "tag": "derived",
+   "x_m": [
+    -57.8,
+    -48.1584
+   ],
+   "y_m": [
+    -3.08,
+    3.08
+   ],
+   "z_in_m": 20.0536,
+   "z_top_m": 29.9596,
+   "trunk_m2": 0.2027,
+   "exit_m2": null,
+   "area_m2": 0.2027,
+   "slab": 181,
+   "closes": "nothing but its fan: an open trunk once the fan stops [bet] (the engine rooms' fans were of the discharge type, driving air in: The Shipbuilder, p. 67 [read])"
+  },
+  {
+   "id": "V-007",
+   "kind": "fan",
+   "name": "Two 30 in fans among the staff rooms at the after end of the first-class part of C deck",
+   "space": {
+    "zone": 11,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 1
+   },
+   "r3": [
+    "C-019"
+   ],
+   "deck": "C",
+   "top": "Boat",
+   "top_over_ft": 5,
+   "top_how": "their trunks' heads on the Boat deck, 5 ft over it [bet]",
+   "area": {
+    "rule": "dia",
+    "dia_in": 30,
+    "count": 2
+   },
+   "leads": "the weather, by their trunks",
+   "source": "R3 C-019, '30\" DIA. FAN (two)' on C deck, 70A to 63.5A [read].",
+   "check": "Which rooms they served is not on the plan: taken as the C deck rooms round them [bet]. The accommodation was ventilated by 64 Sirocco fans, supply and suction, many of them on the Boat deck, so that the usual cowls were 'conspicuous by their absence' (The Shipbuilder (1911), Olympic and Titanic number, about p. 106 [read]); this fan is one of them [read: R3's label], its trunk to the Boat deck [bet].",
+   "tag": "derived",
+   "x_m": [
+    -63.8,
+    -57.8
+   ],
+   "y_m": [
+    -6.98,
+    6.98
+   ],
+   "z_in_m": 20.1544,
+   "z_top_m": 30.0604,
+   "trunk_m2": 0.9121,
+   "exit_m2": null,
+   "area_m2": 0.9121,
+   "slab": 181,
+   "closes": "nothing but its fan: an open trunk once the fan stops [bet] (the engine rooms' fans were of the discharge type, driving air in: The Shipbuilder, p. 67 [read])"
+  },
+  {
+   "id": "V-008",
+   "kind": "trunk",
+   "name": "The second-class galley's light and air trunk, from B deck up beside the aft staircase",
+   "space": {
+    "zone": 11,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 1
+   },
+   "r3": [
+    "B-011"
+   ],
+   "deck": "B",
+   "top": "Boat",
+   "top_over_ft": 3,
+   "top_how": "its head on the Boat deck, 3 ft over it [bet]",
+   "area": {
+    "rule": "m2",
+    "m2": 2,
+    "lo": 1,
+    "hi": 4
+   },
+   "leads": "the weather, past A deck (R3 A-008's 'LIGHT & AIR TO GALLEY')",
+   "source": "R3 B-011, 'LIGHT & AIR TO 2ND CL GALLEY' on B deck, and A-008, 'LIGHT & AIR TO GALLEY' on A deck [read].",
+   "check": "No size is on the plan.",
+   "tag": "bet",
+   "why": "Its size is not on the plan: 2 m2 [bet], a trunk about 1.4 m square as the plan draws such trunks beside the staircases, within 1 and 4 m2.",
+   "x_m": [
+    -55.97,
+    -48.1584
+   ],
+   "y_m": [
+    -7.47,
+    13.97
+   ],
+   "z_in_m": 22.7859,
+   "z_top_m": 29.3391,
+   "trunk_m2": 2,
+   "exit_m2": null,
+   "area_m2": 2,
+   "slab": 182,
+   "closes": "not found"
+  },
+  {
+   "id": "V-009",
+   "kind": "hatch",
+   "name": "No. 4 hatch, port: from the hold up through F deck (trunked) and E deck to D deck",
+   "space": {
+    "zone": 12,
+    "sides": [
+     "P"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "E-096",
+    "D-046"
+   ],
+   "deck": "E",
+   "opens": "up",
+   "top": "B",
+   "top_over_ft": 2.5,
+   "top_how": "B deck, its open after end (the topsides note: the B deck house forms the hatch's forward and inboard sides; R3's tables show its trunk to D deck) [read]; its coaming 30 in (0.76 m) [read: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read]]",
+   "area": {
+    "rule": "rect",
+    "l_ft": 9,
+    "b_ft": 6.5,
+    "count": 1,
+    "how": "9 ft athwart by 6 ft 6 in (2.74 by 1.98 m), for galley stores [read: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read]]"
+   },
+   "leads": "the weather at B deck's open after end, beside the B deck house (which forms its forward and inboard sides), under its cover",
+   "source": "R3's rows O-029, G-046, F-091 ('NO 4 HATCH TRUNKED'), E-096 (with the store entrance and its gangway door) and D-046 [read]. The Shipbuilder (1911), Olympic and Titanic number, about p. 113 [read]: two smaller hatchways, away from the centre-line, give access to No. 4 hold, served by two cranes at the after end of the promenade deck. Its size and coaming: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read].",
+   "check": "Its size and its 30 in coaming are read (the topsides note, from Bob Read's hatches article), its place is the note's [bet], and what covers it is in closes. R3's narrowest drawn hatchway is 3.95 m2, 27 % under the article's 5.43 m2. R3 draws every hatch 10 to 41 % under the article's size, so the article's is taken [bet: the hatchways below in line with the weather deck's, and as large]. The narrowest of its rows is G deck's. Where its trunk meets the weather above D deck is not in R3's tables; the cranes at the after end of the promenade deck that served it (The Shipbuilder (1911), Olympic and Titanic number, about p. 113) put its head near the after ends of the decks above [bet].",
+   "tag": "read",
+   "x_m": [
+    -84.7344,
+    -82.06
+   ],
+   "y_m": [
+    7.62,
+    12.82
+   ],
+   "z_in_m": 14.5797,
+   "z_top_m": 24.0285,
+   "trunk_m2": 5.4348,
+   "exit_m2": null,
+   "area_m2": 5.4348,
+   "slab": 196,
+   "closes": "hatch boards and a tarpaulin on its 30 in coaming [bet: as No. 2's, the one cover read]",
+   "gives_way": [
+    {
+     "what": "the hatch boards and tarpaulin, from below",
+     "head_m": null,
+     "lo_m": 0,
+     "hi_m": 0.1,
+     "how": "lifted from below at a small head, as No. 2's tarpaulin was: No. 2 hatch's tarpaulin lifted \"like a big dome\", \"blown up by the air from below\", minutes after the collision (Hendrickson, BI 4912-4913 [read], via the digest) [bet: the same for this hatch]",
+     "tag": "bet"
+    },
+    {
+     "what": "the hatch trunk itself",
+     "head_m": null,
+     "when": "the sea reaches the top of its trunk",
+     "how": "it collapses \"when once the water got up as high as the top of the trunk\" (Wilding, Harland and Wolff, BI 20391 [read], via the coordinator's digest of the stern study)",
+     "tag": "read"
+    }
+   ]
+  },
+  {
+   "id": "V-010",
+   "kind": "hatch",
+   "name": "No. 4 hatch, starboard: from the hold up through F deck (trunked) and E deck to D deck",
+   "space": {
+    "zone": 12,
+    "sides": [
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "E-097",
+    "D-047"
+   ],
+   "deck": "E",
+   "opens": "up",
+   "top": "B",
+   "top_over_ft": 2.5,
+   "top_how": "B deck, its open after end (the topsides note) [read]; its coaming 30 in (0.76 m) [read: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read]]",
+   "area": {
+    "rule": "rect",
+    "l_ft": 9,
+    "b_ft": 6.5,
+    "count": 1,
+    "how": "9 ft athwart by 6 ft 6 in (2.74 by 1.98 m) [read: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read]]"
+   },
+   "leads": "the weather at B deck's open after end, beside the B deck house, under its cover",
+   "source": "R3's rows O-030, G-047, F-092 ('NO 4 HATCH TRUNKED'), E-097 and D-047 [read]. The Shipbuilder (1911), Olympic and Titanic number, about p. 113 [read]: as V-009. Its size and coaming: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read].",
+   "check": "Its size and its 30 in coaming are read (the topsides note, from Bob Read's hatches article), its place is the note's [bet], and what covers it is in closes. R3's narrowest drawn hatchway is 4.68 m2, 14 % under the article's 5.43 m2. R3 draws every hatch 10 to 41 % under the article's size, so the article's is taken [bet: the hatchways below in line with the weather deck's, and as large]. As V-009.",
+   "tag": "read",
+   "x_m": [
+    -84.7344,
+    -82.06
+   ],
+   "y_m": [
+    -12.82,
+    -7.8
+   ],
+   "z_in_m": 14.5797,
+   "z_top_m": 24.0285,
+   "trunk_m2": 5.4348,
+   "exit_m2": null,
+   "area_m2": 5.4348,
+   "slab": 205,
+   "closes": "hatch boards and a tarpaulin on the coaming [bet: as V-009]",
+   "gives_way": [
+    {
+     "what": "the hatch boards and tarpaulin, from below",
+     "head_m": null,
+     "lo_m": 0,
+     "hi_m": 0.1,
+     "how": "lifted from below at a small head, as V-009's, as No. 2's tarpaulin was: No. 2 hatch's tarpaulin lifted \"like a big dome\", \"blown up by the air from below\", minutes after the collision (Hendrickson, BI 4912-4913 [read], via the digest) [bet: the same for this hatch]",
+     "tag": "bet"
+    },
+    {
+     "what": "the hatch trunk itself",
+     "head_m": null,
+     "when": "the sea reaches the top of its trunk",
+     "how": "it collapses \"when once the water got up as high as the top of the trunk\" (Wilding, Harland and Wolff, BI 20391 [read], via the coordinator's digest of the stern study)",
+     "tag": "read"
+    }
+   ]
+  },
+  {
+   "id": "V-011",
+   "kind": "vent",
+   "name": "The provision stores' vent and fan suction, between bulkheads M and N",
+   "space": {
+    "zone": 12,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "G-043"
+   ],
+   "deck": "G",
+   "top": "Boat",
+   "top_over_ft": 5,
+   "top_how": "its trunk's head on the Boat deck, 5 ft over it [bet]",
+   "area": {
+    "rule": "m2",
+    "m2": 1,
+    "lo": 0.5,
+    "hi": 2
+   },
+   "leads": "the weather, by its trunk",
+   "source": "R3 G-043, 'VENT; FAN SUCTION' in the provision stores on G deck, 93A to 71A [read].",
+   "check": "No size is on the plan; the electric engine room's own ventilation is not found (B1+B2).",
+   "tag": "bet",
+   "why": "Its size is not on the plan: 1 m2 [bet], a fan suction trunk about 1 m square, within 0.5 and 2 m2.",
+   "x_m": [
+    -84.64,
+    -65.532
+   ],
+   "y_m": [
+    -4.57,
+    3.05
+   ],
+   "z_in_m": 9.4014,
+   "z_top_m": 30.2802,
+   "trunk_m2": 1,
+   "exit_m2": null,
+   "area_m2": 1,
+   "slab": 204,
+   "closes": "not found"
+  },
+  {
+   "id": "V-012",
+   "kind": "fan",
+   "name": "Fans at the after end of A deck's house",
+   "space": {
+    "zone": 12,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 1
+   },
+   "r3": [
+    "A-001"
+   ],
+   "deck": "A",
+   "top": "Boat",
+   "top_over_ft": 5,
+   "top_how": "their heads on the Boat deck, 5 ft over it [bet]",
+   "area": {
+    "rule": "m2",
+    "m2": 1,
+    "lo": 0.5,
+    "hi": 2
+   },
+   "leads": "the weather",
+   "source": "R3 A-001, 'FANS*' at the house's after end on A deck, 84.4A to 80.9A [read].",
+   "check": "Their number and size are not on the plan. The accommodation was ventilated by 64 Sirocco fans, supply and suction, many of them on the Boat deck, so that the usual cowls were 'conspicuous by their absence' (The Shipbuilder (1911), Olympic and Titanic number, about p. 106 [read]); this fan is one of them [read: R3's label], its trunk to the Boat deck [bet].",
+   "tag": "bet",
+   "why": "No size is on the plan: 1 m2 [bet], two fans' eyes of about 0.8 m, within 0.5 and 2 m2.",
+   "x_m": [
+    -76.95,
+    -73.76
+   ],
+   "y_m": [
+    -5.09,
+    4.79
+   ],
+   "z_in_m": 25.8651,
+   "z_top_m": 30.2847,
+   "trunk_m2": 1,
+   "exit_m2": null,
+   "area_m2": 1,
+   "slab": 210,
+   "closes": "nothing but its fan: an open trunk once the fan stops [bet] (the engine rooms' fans were of the discharge type, driving air in: The Shipbuilder, p. 67 [read])"
+  },
+  {
+   "id": "V-013",
+   "kind": "vent",
+   "name": "Two vents in the second-class entrance house on the Boat deck",
+   "space": {
+    "zone": 12,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 1
+   },
+   "r3": [
+    "Bt-01"
+   ],
+   "deck": "D",
+   "top": "Boat",
+   "top_over_ft": 6,
+   "top_how": "their cowls 6 ft over the Boat deck [bet]",
+   "area": {
+    "rule": "m2",
+    "m2": 1,
+    "lo": 0.5,
+    "hi": 2
+   },
+   "leads": "the weather, through their cowls",
+   "source": "R3 Bt-01, 'VENT (two)' in the second-class entrance house, 81.5A to 72.5A [read].",
+   "check": "Their trunks' feet are not on the plan: taken among the second-class rooms on D deck [bet]. The accommodation was ventilated by 64 Sirocco fans, supply and suction, many of them on the Boat deck, so that the usual cowls were 'conspicuous by their absence' (The Shipbuilder (1911), Olympic and Titanic number, about p. 106 [read]); this fan is one of them [read: R3's label], its trunk to the Boat deck [bet].",
+   "tag": "bet",
+   "why": "No size is on the plan: 1 m2 [bet], two cowls of about 0.8 m, within 0.5 and 2 m2.",
+   "x_m": [
+    -74.31,
+    -66.11
+   ],
+   "y_m": [
+    -2.99,
+    3.29
+   ],
+   "z_in_m": 17.0935,
+   "z_top_m": 30.5047,
+   "trunk_m2": 1,
+   "exit_m2": null,
+   "area_m2": 1,
+   "slab": 198,
+   "closes": "not found (cowls, open) [bet]"
+  },
+  {
+   "id": "V-014",
+   "kind": "hatch",
+   "name": "No. 5 hatch: from the hold up through F deck (trunked), E deck and D deck (trunked) to the after well deck",
+   "space": {
+    "zone": 13,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "E-102",
+    "D-050"
+   ],
+   "deck": "E",
+   "opens": "up",
+   "top": "C",
+   "top_over_ft": 2.5,
+   "top_how": "the after well deck, C deck, open to the sky (R3) [read]; its coaming 30 in (0.76 m) [read: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read]]",
+   "area": {
+    "rule": "rect",
+    "l_ft": 18,
+    "b_ft": 12,
+    "count": 1,
+    "how": "18 ft by 12 ft (5.49 by 3.66 m), two hatch beams [read: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read]]"
+   },
+   "leads": "the weather on the after well deck, under its cover",
+   "source": "R3's rows O-032, G-050, F-099 ('NO 5 HATCH TRUNKED'), E-102 (with a grating) and D-050 ('NO 5 HATCH TRUNKED', the aft second-class stair) [read]; the well decks are open to the sky (R3, C deck's how). The Shipbuilder (1911), Olympic and Titanic number, about p. 113 [read]: the hatchways for Nos. 5 and 6 holds are at the centre-line, each served by two 2.5-ton cranes and a 3-ton electric winch. Its size and coaming: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read].",
+   "check": "Its size and its 30 in coaming are read (the topsides note, from Bob Read's hatches article), its place is the note's [bet], and what covers it is in closes. R3's narrowest drawn hatchway is 14.61 m2, 27 % under the article's 20.07 m2. R3 draws every hatch 10 to 41 % under the article's size, so the article's is taken [bet: the hatchways below in line with the weather deck's, and as large]. The narrowest of its rows is G deck's.",
+   "tag": "read",
+   "x_m": [
+    -97.74,
+    -93.11
+   ],
+   "y_m": [
+    -2.84,
+    3.11
+   ],
+   "z_in_m": 14.8232,
+   "z_top_m": 21.5288,
+   "trunk_m2": 20.0671,
+   "exit_m2": null,
+   "area_m2": 20.0671,
+   "slab": 214,
+   "closes": "two hatch beams and its 30 in coaming [read: the topsides note], wood covers and a tarpaulin on them [bet: as No. 2]",
+   "gives_way": [
+    {
+     "what": "the hatch boards and tarpaulin, from below",
+     "head_m": null,
+     "lo_m": 0,
+     "hi_m": 0.1,
+     "how": "lifted from below at a small head [bet], as No. 2's was: No. 2 hatch's tarpaulin lifted \"like a big dome\", \"blown up by the air from below\", minutes after the collision (Hendrickson, BI 4912-4913 [read], via the digest)",
+     "tag": "bet"
+    },
+    {
+     "what": "the hatch trunk itself",
+     "head_m": null,
+     "when": "the sea reaches the top of its trunk",
+     "how": "it collapses \"when once the water got up as high as the top of the trunk\" (Wilding, Harland and Wolff, BI 20391 [read], via the coordinator's digest of the stern study)",
+     "tag": "read"
+    }
+   ]
+  },
+  {
+   "id": "V-015",
+   "kind": "fan",
+   "name": "A 30 in fan in the second-class covered promenade, port",
+   "space": {
+    "zone": 13,
+    "sides": [
+     "P"
+    ],
+    "layer": 1
+   },
+   "r3": [
+    "C-081"
+   ],
+   "deck": "C",
+   "top": "B",
+   "top_over_ft": 5,
+   "top_how": "its head 5 ft over B deck's open after end [bet]",
+   "area": {
+    "rule": "dia",
+    "dia_in": 30,
+    "count": 1
+   },
+   "leads": "the weather",
+   "source": "R3 C-081, '30\" DIA. FAN' on C deck, 98A to 94A, port [read].",
+   "check": "What it served is not on the plan: taken as the space round it [bet]. The accommodation was ventilated by 64 Sirocco fans, supply and suction, many of them on the Boat deck, so that the usual cowls were 'conspicuous by their absence' (The Shipbuilder (1911), Olympic and Titanic number, about p. 106 [read]); this fan is one of them [read: R3's label], its trunk to the Boat deck [bet].",
+   "tag": "derived",
+   "x_m": [
+    -89.42,
+    -85.73
+   ],
+   "y_m": [
+    7.44,
+    9.14
+   ],
+   "z_in_m": 20.6042,
+   "z_top_m": 24.8714,
+   "trunk_m2": 0.456,
+   "exit_m2": null,
+   "area_m2": 0.456,
+   "slab": 217,
+   "closes": "nothing but its fan: an open trunk once the fan stops [bet] (the engine rooms' fans were of the discharge type, driving air in: The Shipbuilder, p. 67 [read])"
+  },
+  {
+   "id": "V-016",
+   "kind": "fan",
+   "name": "A 30 in fan in the second-class covered promenade, starboard",
+   "space": {
+    "zone": 13,
+    "sides": [
+     "S"
+    ],
+    "layer": 1
+   },
+   "r3": [
+    "C-082"
+   ],
+   "deck": "C",
+   "top": "B",
+   "top_over_ft": 5,
+   "top_how": "its head 5 ft over B deck's open after end [bet]",
+   "area": {
+    "rule": "dia",
+    "dia_in": 30,
+    "count": 1
+   },
+   "leads": "the weather",
+   "source": "R3 C-082, '30\" DIA. FAN' on C deck, 98A to 94A, starboard [read].",
+   "check": "As V-015. The accommodation was ventilated by 64 Sirocco fans, supply and suction, many of them on the Boat deck, so that the usual cowls were 'conspicuous by their absence' (The Shipbuilder (1911), Olympic and Titanic number, about p. 106 [read]); this fan is one of them [read: R3's label], its trunk to the Boat deck [bet].",
+   "tag": "derived",
+   "x_m": [
+    -89.42,
+    -85.73
+   ],
+   "y_m": [
+    -9.14,
+    -7.44
+   ],
+   "z_in_m": 20.6042,
+   "z_top_m": 24.8714,
+   "trunk_m2": 0.456,
+   "exit_m2": null,
+   "area_m2": 0.456,
+   "slab": 224,
+   "closes": "nothing but its fan: an open trunk once the fan stops [bet] (the engine rooms' fans were of the discharge type, driving air in: The Shipbuilder, p. 67 [read])"
+  },
+  {
+   "id": "V-017",
+   "kind": "hatch",
+   "name": "No. 6 hatch: from the hold up through F and E decks and D deck (trunked), under the poop",
+   "space": {
+    "zone": 14,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "E-109",
+    "D-051"
+   ],
+   "deck": "E",
+   "opens": "up",
+   "top": "C",
+   "top_over_ft": 2.5,
+   "top_how": "the after well deck, C deck: the topsides note places No. 6 at about x -103.6 to -100.5, inside the after well (-106.1 to -92.2), not on the poop [read size, bet place]; R3's C and B deck tables show no row over it; its coaming 30 in (0.76 m) [read: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read]]",
+   "area": {
+    "rule": "rect",
+    "l_ft": 18,
+    "b_ft": 10,
+    "count": 1,
+    "how": "18 ft by 10 ft (5.49 by 3.05 m) [read: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read]]"
+   },
+   "leads": "the weather on the after well deck, under its cover",
+   "source": "R3's rows O-033 (the hold, with No. 6 hatch over), G-055, F-101, E-109 and D-051 ('NO 6 HATCH TRUNKED') [read]. The Shipbuilder (1911), Olympic and Titanic number, about p. 113 [read]: as V-014. Its size and coaming: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read].",
+   "check": "Its size and its 30 in coaming are read (the topsides note, from Bob Read's hatches article), its place is the note's [bet], and what covers it is in closes. R3's narrowest drawn hatchway is 12.08 m2, 28 % under the article's 16.72 m2. R3 draws every hatch 10 to 41 % under the article's size, so the article's is taken [bet: the hatchways below in line with the weather deck's, and as large].",
+   "tag": "read",
+   "x_m": [
+    -106.79,
+    -103.43
+   ],
+   "y_m": [
+    -1.98,
+    1.98
+   ],
+   "z_in_m": 15.0431,
+   "z_top_m": 21.7487,
+   "trunk_m2": 16.7225,
+   "exit_m2": null,
+   "area_m2": 16.7225,
+   "slab": 228,
+   "closes": "hatch boards and a tarpaulin on its 30 in coaming [bet: as No. 5; the article gives it no beams]",
+   "gives_way": [
+    {
+     "what": "the hatch boards and tarpaulin, from below",
+     "head_m": null,
+     "lo_m": 0,
+     "hi_m": 0.1,
+     "how": "lifted from below at a small head [bet], as No. 2's was: No. 2 hatch's tarpaulin lifted \"like a big dome\", \"blown up by the air from below\", minutes after the collision (Hendrickson, BI 4912-4913 [read], via the digest)",
+     "tag": "bet"
+    },
+    {
+     "what": "the hatch trunk itself",
+     "head_m": null,
+     "when": "the sea reaches the top of its trunk",
+     "how": "it collapses \"when once the water got up as high as the top of the trunk\" (Wilding, Harland and Wolff, BI 20391 [read], via the coordinator's digest of the stern study)",
+     "tag": "read"
+    }
+   ]
+  },
+  {
+   "id": "V-018",
+   "kind": "vent",
+   "name": "The steering engine room's stairs up to the poop",
+   "space": {
+    "zone": 15,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 1
+   },
+   "r3": [
+    "C-001"
+   ],
+   "deck": "C",
+   "top": "B",
+   "top_over_ft": 6,
+   "top_how": "a companion on the poop deck, 6 ft over it [bet]",
+   "area": {
+    "rule": "m2",
+    "m2": 1.5,
+    "lo": 0.8,
+    "hi": 3
+   },
+   "leads": "the weather on the poop deck",
+   "source": "R3 C-001, the steering engine room, 'UP' and its door to 'the poop deck (stairs up)' [read].",
+   "check": "The stair's opening is not measured.",
+   "tag": "bet",
+   "why": "No size is on the plan: 1.5 m2 [bet], a stair's well about 1 by 1.5 m, within 0.8 and 3 m2.",
+   "x_m": [
+    -138.84,
+    -122.36
+   ],
+   "y_m": [
+    -6.16,
+    6.16
+   ],
+   "z_in_m": 21.667,
+   "z_top_m": 26.239,
+   "trunk_m2": 1.5,
+   "exit_m2": null,
+   "area_m2": 1.5,
+   "slab": 243,
+   "closes": "a companion door on the poop deck [bet]",
+   "gives_way": [
+    {
+     "what": "a door, non-watertight",
+     "head_m": null,
+     "lo_m": 1,
+     "hi_m": 3.5,
+     "how": "non-watertight doors collapse at 1.0 to 3.5 m and leak at once (Jalonen and others, FLOODSTAND, Marine Structures: an abstract, second-hand, via the digest) [read, for modern doors]; taken for a 1912 companion door by analogy [bet]",
+     "tag": "bet"
+    }
+   ]
+  },
+  {
+   "id": "V-019",
+   "kind": "fan",
+   "name": "Boiler room 6's supply fans: two 50 in Sirocco fans on F deck, drawing from the Boat deck",
+   "space": {
+    "zone": 4,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "F-026"
+   ],
+   "deck": "F",
+   "top": "Boat",
+   "top_over_ft": 5,
+   "top_how": "their shafts' heads at the funnel casings' ends on the Boat deck (the topsides note, scaled places) [read], their housings 5 ft over it [bet: boxes of 1.5 to 2.0 m, B1+B2]",
+   "area": {
+    "rule": "dia",
+    "dia_in": 50,
+    "count": 2
+   },
+   "leads": "the weather, by their ventilating shafts to the Boat deck",
+   "source": "The Shipbuilder (1911), 'Draught and Fans', p. 50 [read, B1+B2]: twelve Sirocco fans, two for each boiler room, at the middle deck level, drawing air through ventilating shafts from the boat deck and supplying it through trunks led down the bulkheads to the furnaces; eight 55 in, two 50 in, two 40 in. R3 F-026, 'FANS; 50\" DIA. (two)' [read], places this room's pair and its size.",
+   "check": "The fans' eyes are a lower bound on their shafts' clear area [bet, B1+B2: a shaft no narrower than its fan].",
+   "tag": "derived",
+   "x_m": [
+    61.68,
+    70.4
+   ],
+   "y_m": [
+    -3.08,
+    3.14
+   ],
+   "z_in_m": 12.215,
+   "z_top_m": 30.6554,
+   "trunk_m2": 2.5335,
+   "exit_m2": null,
+   "area_m2": 2.5335,
+   "slab": 54,
+   "closes": "nothing but its fan: an open trunk once the fan stops [bet] (the engine rooms' fans were of the discharge type, driving air in: The Shipbuilder, p. 67 [read])"
+  },
+  {
+   "id": "V-020",
+   "kind": "fan",
+   "name": "Boiler room 5's supply fans: two 55 in Sirocco fans on F deck, drawing from the Boat deck",
+   "space": {
+    "zone": 5,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "F-040"
+   ],
+   "deck": "F",
+   "top": "Boat",
+   "top_over_ft": 5,
+   "top_how": "as V-019",
+   "area": {
+    "rule": "dia",
+    "dia_in": 55,
+    "count": 2
+   },
+   "leads": "the weather, by their ventilating shafts to the Boat deck",
+   "source": "As V-019; R3 F-040, 'FANS; 55\" DIA. (two)' [read].",
+   "check": "As V-019.",
+   "tag": "derived",
+   "x_m": [
+    38.45,
+    45.28
+   ],
+   "y_m": [
+    -3.08,
+    3.14
+   ],
+   "z_in_m": 11.6087,
+   "z_top_m": 30.0491,
+   "trunk_m2": 3.0656,
+   "exit_m2": null,
+   "area_m2": 3.0656,
+   "slab": 72,
+   "closes": "nothing but its fan: an open trunk once the fan stops [bet] (the engine rooms' fans were of the discharge type, driving air in: The Shipbuilder, p. 67 [read])"
+  },
+  {
+   "id": "V-021",
+   "kind": "fan",
+   "name": "Boiler room 4's supply fans: two 55 in Sirocco fans on F deck, drawing from the Boat deck",
+   "space": {
+    "zone": 6,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "F-050"
+   ],
+   "deck": "F",
+   "top": "Boat",
+   "top_over_ft": 5,
+   "top_how": "as V-019",
+   "area": {
+    "rule": "dia",
+    "dia_in": 55,
+    "count": 2
+   },
+   "leads": "the weather, by their ventilating shafts to the Boat deck",
+   "source": "As V-019; R3 F-050, 'FANS; 55\" DIA. (two)' [read].",
+   "check": "As V-019.",
+   "tag": "derived",
+   "x_m": [
+    30.08,
+    32.97
+   ],
+   "y_m": [
+    -2.83,
+    3.51
+   ],
+   "z_in_m": 11.4324,
+   "z_top_m": 29.8728,
+   "trunk_m2": 3.0656,
+   "exit_m2": null,
+   "area_m2": 3.0656,
+   "slab": 90,
+   "closes": "nothing but its fan: an open trunk once the fan stops [bet] (the engine rooms' fans were of the discharge type, driving air in: The Shipbuilder, p. 67 [read])"
+  },
+  {
+   "id": "V-022",
+   "kind": "fan",
+   "name": "Boiler room 3's supply fans: two 55 in Sirocco fans on F deck, drawing from the Boat deck",
+   "space": {
+    "zone": 7,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "F-060"
+   ],
+   "deck": "F",
+   "top": "Boat",
+   "top_over_ft": 5,
+   "top_how": "as V-019",
+   "area": {
+    "rule": "dia",
+    "dia_in": 55,
+    "count": 2
+   },
+   "leads": "the weather, by their ventilating shafts to the Boat deck",
+   "source": "As V-019; R3 F-060, 'FANS; 55\" DIA. (two)' [read].",
+   "check": "As V-019.",
+   "tag": "derived",
+   "x_m": [
+    3.19,
+    10.39
+   ],
+   "y_m": [
+    -6.16,
+    6.16
+   ],
+   "z_in_m": 11.2121,
+   "z_top_m": 29.6525,
+   "trunk_m2": 3.0656,
+   "exit_m2": null,
+   "area_m2": 3.0656,
+   "slab": 108,
+   "closes": "nothing but its fan: an open trunk once the fan stops [bet] (the engine rooms' fans were of the discharge type, driving air in: The Shipbuilder, p. 67 [read])"
+  },
+  {
+   "id": "V-023",
+   "kind": "fan",
+   "name": "Boiler room 2's supply fans: two 55 in Sirocco fans on F deck, drawing from the Boat deck",
+   "space": {
+    "zone": 8,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "F-062"
+   ],
+   "deck": "F",
+   "top": "Boat",
+   "top_over_ft": 5,
+   "top_how": "as V-019",
+   "area": {
+    "rule": "dia",
+    "dia_in": 55,
+    "count": 2
+   },
+   "leads": "the weather, by their ventilating shafts to the Boat deck",
+   "source": "As V-019; R3 F-062, 'FANS; 55\" DIA. (two)' [read].",
+   "check": "As V-019.",
+   "tag": "derived",
+   "x_m": [
+    -9.2,
+    -0.46
+   ],
+   "y_m": [
+    -6.16,
+    6.16
+   ],
+   "z_in_m": 11.204,
+   "z_top_m": 29.6444,
+   "trunk_m2": 3.0656,
+   "exit_m2": null,
+   "area_m2": 3.0656,
+   "slab": 126,
+   "closes": "nothing but its fan: an open trunk once the fan stops [bet] (the engine rooms' fans were of the discharge type, driving air in: The Shipbuilder, p. 67 [read])"
+  },
+  {
+   "id": "V-024",
+   "kind": "fan",
+   "name": "Boiler room 1's supply fans: two 40 in Sirocco fans on F deck, drawing from the Boat deck",
+   "space": {
+    "zone": 9,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "F-072"
+   ],
+   "deck": "F",
+   "top": "Boat",
+   "top_over_ft": 5,
+   "top_how": "as V-019",
+   "area": {
+    "rule": "dia",
+    "dia_in": 40,
+    "count": 2
+   },
+   "leads": "the weather, by their ventilating shafts to the Boat deck",
+   "source": "As V-019; R3 F-072, 'FANS*; 40\" DIA. (two); 30\" DIA. FAN' [read] (its 30 in fan not counted here).",
+   "check": "As V-019.",
+   "tag": "derived",
+   "x_m": [
+    -27,
+    -22.48
+   ],
+   "y_m": [
+    -6.16,
+    6.16
+   ],
+   "z_in_m": 11.2707,
+   "z_top_m": 29.7111,
+   "trunk_m2": 1.6215,
+   "exit_m2": null,
+   "area_m2": 1.6215,
+   "slab": 144,
+   "closes": "nothing but its fan: an open trunk once the fan stops [bet] (the engine rooms' fans were of the discharge type, driving air in: The Shipbuilder, p. 67 [read])"
+  },
+  {
+   "id": "V-025",
+   "kind": "fidley",
+   "name": "Boiler room 6's part of the casing of Nos 5 and 6, up to its fidley gratings at the Boat deck",
+   "space": {
+    "zone": 4,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "E-040",
+    "D-021",
+    "C-061",
+    "B-032",
+    "A-032",
+    "Bt-10"
+   ],
+   "deck": "E",
+   "opens": "up",
+   "top": "Boat",
+   "top_z_m": 31,
+   "top_how": "funnel 1's casing top at z 31.0 m, scaled (the topsides note) [read]",
+   "area": {
+    "rule": "r3-narrowest",
+    "rows": [
+     "D-021",
+     "C-061",
+     "B-032",
+     "A-032"
+    ],
+    "exit": {
+     "m2": 4.2,
+     "lo": 3.5,
+     "hi": 4.9,
+     "tag": "bet",
+     "how": "its fidley grating, the forward fidley of the casing of Nos 5 and 6, frames 64.7F to 66F, x 58.88 to 60.02 m, 1.14 by 6.13 m = 7 m2 of plan [read: scaled by B1+B2 off ET's Boat deck plan by R3's Boat deck calibration, the strip labelled 'FIDLEY' at the casing's end between the casing and its VENT, FAN and TRUNK block, the casing's full breadth, edges to about 0.1 ft, nothing saved], at an open share of 60 % (50 to 70 %) [bet: the bars are not drawn]"
+    }
+   },
+   "leads": "the weather, through the fidley gratings at the casing's end on the Boat deck",
+   "source": "R3's rows E-040 ('NOS 5 & 6 BOILER CASING'), E-039 and E-048 (the fidleys), D-021, C-061, B-032, A-032 and Bt-10 (each with its fidleys, vents, fans and trunks) [read]; the gratings' places on the Boat deck (the topsides note, B1+B2) [read]. The grating: the forward fidley of the casing of Nos 5 and 6 [read: scaled by B1+B2 off ET's Boat deck plan by R3's Boat deck calibration, the strip labelled 'FIDLEY' at the casing's end between the casing and its VENT, FAN and TRUNK block, the casing's full breadth, edges to about 0.1 ft, nothing saved]. An unlabelled 3.9 ft strip between it and the casing is not counted; the strip also holds two circles labelled H.S.W.T.",
+   "check": "The fidley is the casing's own opening: it lets out the hot air over the boilers and round the uptakes, not the stokeholds' supply, which comes down the fans' shafts (V-019 to V-024) (B1+B2). The uptakes inside the casing carry the boilers' smoke to the funnels.",
+   "tag": "bet",
+   "why": "The grating's plan is scaled, 7 m2 [read: B1+B2 off ET's Boat deck plan], but its bars are not drawn, so its open share is not found: 4.2 m2 [bet], 60 % of its plan, within 50 and 70 %. Which room it serves is by its place over the room's length [bet, B1+B2].",
+   "x_m": [
+    54.2544,
+    60.24
+   ],
+   "y_m": [
+    -3.09,
+    3.07
+   ],
+   "z_in_m": 14.5539,
+   "z_top_m": 31,
+   "trunk_m2": 24.3665,
+   "exit_m2": 4.2,
+   "area_m2": 4.2,
+   "slab": 63,
+   "closes": "nothing: the fidley gratings stand open (their bars only)",
+   "gives_way": [
+    {
+     "what": "the casing itself",
+     "head_m": null,
+     "when": "the sea outside rises faster than the water inside",
+     "how": "light casings \"not made to take a pressure of that kind\": they collapse when the water outside rises faster than inside (Wilding, BI 20921 [read], via the digest)",
+     "tag": "read"
+    }
+   ]
+  },
+  {
+   "id": "V-026",
+   "kind": "fidley",
+   "name": "Boiler room 5's part of the casing of Nos 5 and 6, up to its fidley gratings at the Boat deck",
+   "space": {
+    "zone": 5,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "E-040",
+    "D-021",
+    "C-061",
+    "B-032",
+    "A-032",
+    "Bt-10"
+   ],
+   "deck": "E",
+   "opens": "up",
+   "top": "Boat",
+   "top_z_m": 31,
+   "top_how": "as V-025",
+   "area": {
+    "rule": "r3-narrowest",
+    "rows": [
+     "D-021",
+     "C-061",
+     "B-032",
+     "A-032"
+    ],
+    "exit": {
+     "m2": 4.68,
+     "lo": 3.9,
+     "hi": 5.46,
+     "tag": "bet",
+     "how": "its fidley grating, the aft fidley of the casing of Nos 5 and 6, inside the officers' house, frames 55F to 56.4F, x 49.93 to 51.21 m, 1.28 by 6.13 m = 7.8 m2 of plan [read: scaled by B1+B2 off ET's Boat deck plan by R3's Boat deck calibration, the strip labelled 'FIDLEY' at the casing's end between the casing and its VENT, FAN and TRUNK block, the casing's full breadth, edges to about 0.1 ft, nothing saved], at an open share of 60 % (50 to 70 %) [bet: the bars are not drawn]"
+    }
+   },
+   "leads": "the weather, through the fidley gratings at the casing's end on the Boat deck",
+   "source": "As V-025. The grating: the aft fidley of the casing of Nos 5 and 6, inside the officers' house [read: scaled by B1+B2 off ET's Boat deck plan by R3's Boat deck calibration, the strip labelled 'FIDLEY' at the casing's end between the casing and its VENT, FAN and TRUNK block, the casing's full breadth, edges to about 0.1 ft, nothing saved].",
+   "check": "The fidley is the casing's own opening: it lets out the hot air over the boilers and round the uptakes, not the stokeholds' supply, which comes down the fans' shafts (V-019 to V-024) (B1+B2). The uptakes inside the casing carry the boilers' smoke to the funnels.",
+   "tag": "bet",
+   "why": "The grating's plan is scaled, 7.8 m2 [read: B1+B2 off ET's Boat deck plan], but its bars are not drawn, so its open share is not found: 4.68 m2 [bet], 60 % of its plan, within 50 and 70 %. Which room it serves is by its place over the room's length [bet, B1+B2].",
+   "x_m": [
+    48.65,
+    54.2544
+   ],
+   "y_m": [
+    -3.09,
+    3.07
+   ],
+   "z_in_m": 14.4075,
+   "z_top_m": 31,
+   "trunk_m2": 43.5783,
+   "exit_m2": 4.68,
+   "area_m2": 4.68,
+   "slab": 81,
+   "closes": "nothing: the fidley gratings stand open (their bars only)",
+   "gives_way": [
+    {
+     "what": "the casing itself",
+     "head_m": null,
+     "when": "the sea outside rises faster than the water inside",
+     "how": "light casings \"not made to take a pressure of that kind\": they collapse when the water outside rises faster than inside (Wilding, BI 20921 [read], via the digest)",
+     "tag": "read"
+    }
+   ]
+  },
+  {
+   "id": "V-027",
+   "kind": "fidley",
+   "name": "Boiler room 4's part of the casing of Nos 3 and 4, up to its fidley gratings at the Boat deck",
+   "space": {
+    "zone": 6,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "E-053",
+    "D-029",
+    "C-048",
+    "B-026",
+    "A-024",
+    "Bt-06"
+   ],
+   "deck": "E",
+   "opens": "up",
+   "top": "Boat",
+   "top_z_m": 30.76,
+   "top_how": "funnel 2's casing top at z 30.76 m, scaled (the topsides note) [read]",
+   "area": {
+    "rule": "r3-narrowest",
+    "rows": [
+     "D-029",
+     "C-048",
+     "B-026",
+     "A-024"
+    ],
+    "exit": {
+     "m2": 4.74,
+     "lo": 3.95,
+     "hi": 5.53,
+     "tag": "bet",
+     "how": "its fidley grating, the forward fidley of the casing of Nos 3 and 4, frames 25.7F to 27.1F, x 23.00 to 24.30 m, 1.29 by 6.14 m = 7.9 m2 of plan [read: scaled by B1+B2 off ET's Boat deck plan by R3's Boat deck calibration, the strip labelled 'FIDLEY' at the casing's end between the casing and its VENT, FAN and TRUNK block, the casing's full breadth, edges to about 0.1 ft, nothing saved], at an open share of 60 % (50 to 70 %) [bet: the bars are not drawn]"
+    }
+   },
+   "leads": "the weather, through the fidley gratings at the casing's end on the Boat deck",
+   "source": "R3's rows E-053 ('NOS 3 & 4 BOILER CASING'), E-052 and E-054 (the fidleys), D-029, C-048, B-026, A-024 and Bt-06 [read]. The grating: the forward fidley of the casing of Nos 3 and 4 [read: scaled by B1+B2 off ET's Boat deck plan by R3's Boat deck calibration, the strip labelled 'FIDLEY' at the casing's end between the casing and its VENT, FAN and TRUNK block, the casing's full breadth, edges to about 0.1 ft, nothing saved]. An unlabelled 3.5 ft strip between it and the casing's end is not counted.",
+   "check": "The fidley is the casing's own opening: it lets out the hot air over the boilers and round the uptakes, not the stokeholds' supply, which comes down the fans' shafts (V-019 to V-024) (B1+B2). The uptakes inside the casing carry the boilers' smoke to the funnels.",
+   "tag": "bet",
+   "why": "The grating's plan is scaled, 7.9 m2 [read: B1+B2 off ET's Boat deck plan], but its bars are not drawn, so its open share is not found: 4.74 m2 [bet], 60 % of its plan, within 50 and 70 %. Which room it serves is by its place over the room's length [bet, B1+B2].",
+   "x_m": [
+    19.5072,
+    25.36
+   ],
+   "y_m": [
+    -3.09,
+    3.07
+   ],
+   "z_in_m": 13.9092,
+   "z_top_m": 30.76,
+   "trunk_m2": 37.0421,
+   "exit_m2": 4.74,
+   "area_m2": 4.74,
+   "slab": 99,
+   "closes": "nothing: the fidley gratings stand open (their bars only)",
+   "gives_way": [
+    {
+     "what": "the casing itself",
+     "head_m": null,
+     "when": "the sea outside rises faster than the water inside",
+     "how": "light casings \"not made to take a pressure of that kind\": they collapse when the water outside rises faster than inside (Wilding, BI 20921 [read], via the digest)",
+     "tag": "read"
+    }
+   ]
+  },
+  {
+   "id": "V-028",
+   "kind": "fidley",
+   "name": "Boiler room 3's part of the casing of Nos 3 and 4, up to its fidley gratings at the Boat deck",
+   "space": {
+    "zone": 7,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "E-053",
+    "D-029",
+    "C-048",
+    "B-026",
+    "A-024",
+    "Bt-06"
+   ],
+   "deck": "E",
+   "opens": "up",
+   "top": "Boat",
+   "top_z_m": 30.76,
+   "top_how": "as V-027",
+   "area": {
+    "rule": "r3-narrowest",
+    "rows": [
+     "D-029",
+     "C-048",
+     "B-026",
+     "A-024"
+    ],
+    "exit": {
+     "m2": 5.22,
+     "lo": 4.35,
+     "hi": 6.09,
+     "tag": "bet",
+     "how": "its fidley grating, the aft fidley of the casing of Nos 3 and 4, frames 16F to 17.6F, x 14.18 to 15.59 m, 1.41 by 6.14 m = 8.7 m2 of plan [read: scaled by B1+B2 off ET's Boat deck plan by R3's Boat deck calibration, the strip labelled 'FIDLEY' at the casing's end between the casing and its VENT, FAN and TRUNK block, the casing's full breadth, edges to about 0.1 ft, nothing saved], at an open share of 60 % (50 to 70 %) [bet: the bars are not drawn]"
+    }
+   },
+   "leads": "the weather, through the fidley gratings at the casing's end on the Boat deck",
+   "source": "As V-027. The grating: the aft fidley of the casing of Nos 3 and 4 [read: scaled by B1+B2 off ET's Boat deck plan by R3's Boat deck calibration, the strip labelled 'FIDLEY' at the casing's end between the casing and its VENT, FAN and TRUNK block, the casing's full breadth, edges to about 0.1 ft, nothing saved].",
+   "check": "The fidley is the casing's own opening: it lets out the hot air over the boilers and round the uptakes, not the stokeholds' supply, which comes down the fans' shafts (V-019 to V-024) (B1+B2). The uptakes inside the casing carry the boilers' smoke to the funnels.",
+   "tag": "bet",
+   "why": "The grating's plan is scaled, 8.7 m2 [read: B1+B2 off ET's Boat deck plan], but its bars are not drawn, so its open share is not found: 5.22 m2 [bet], 60 % of its plan, within 50 and 70 %. Which room it serves is by its place over the room's length [bet, B1+B2].",
+   "x_m": [
+    12.34,
+    19.5072
+   ],
+   "y_m": [
+    -3.09,
+    3.07
+   ],
+   "z_in_m": 13.8511,
+   "z_top_m": 30.76,
+   "trunk_m2": 51.5647,
+   "exit_m2": 5.22,
+   "area_m2": 5.22,
+   "slab": 117,
+   "closes": "nothing: the fidley gratings stand open (their bars only)",
+   "gives_way": [
+    {
+     "what": "the casing itself",
+     "head_m": null,
+     "when": "the sea outside rises faster than the water inside",
+     "how": "light casings \"not made to take a pressure of that kind\": they collapse when the water outside rises faster than inside (Wilding, BI 20921 [read], via the digest)",
+     "tag": "read"
+    }
+   ]
+  },
+  {
+   "id": "V-029",
+   "kind": "fidley",
+   "name": "Boiler room 2's part of the casing of Nos 1 and 2, up to its fidley gratings at the Boat deck",
+   "space": {
+    "zone": 8,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "E-060",
+    "D-031",
+    "C-039",
+    "B-023",
+    "A-015",
+    "Bt-04"
+   ],
+   "deck": "E",
+   "opens": "up",
+   "top": "Boat",
+   "top_z_m": 30.76,
+   "top_how": "funnel 3's casing top at z 30.76 m, scaled (the topsides note) [read]",
+   "area": {
+    "rule": "r3-narrowest",
+    "rows": [
+     "D-031",
+     "C-039",
+     "B-023",
+     "A-015"
+    ],
+    "exit": {
+     "m2": 4.86,
+     "lo": 4.05,
+     "hi": 5.67,
+     "tag": "bet",
+     "how": "its fidley grating, the forward fidley of the casing of Nos 1 and 2, frames 14.5A to 13A, x -12.81 to -11.47 m, 1.34 by 6.08 m = 8.1 m2 of plan [read: scaled by B1+B2 off ET's Boat deck plan by R3's Boat deck calibration, the strip labelled 'FIDLEY' at the casing's end between the casing and its VENT, FAN and TRUNK block, the casing's full breadth, edges to about 0.1 ft, nothing saved], at an open share of 60 % (50 to 70 %) [bet: the bars are not drawn]"
+    }
+   },
+   "leads": "the weather, through the fidley gratings at the casing's end on the Boat deck",
+   "source": "R3's rows E-060 ('NOS 1 & 2 BOILER CASING'), E-059 and E-061 (the fidleys), D-031, C-039, B-023, A-015 and Bt-04 [read]. The grating: the forward fidley of the casing of Nos 1 and 2 [read: scaled by B1+B2 off ET's Boat deck plan by R3's Boat deck calibration, the strip labelled 'FIDLEY' at the casing's end between the casing and its VENT, FAN and TRUNK block, the casing's full breadth, edges to about 0.1 ft, nothing saved].",
+   "check": "The fidley is the casing's own opening: it lets out the hot air over the boilers and round the uptakes, not the stokeholds' supply, which comes down the fans' shafts (V-019 to V-024) (B1+B2). The uptakes inside the casing carry the boilers' smoke to the funnels.",
+   "tag": "bet",
+   "why": "The grating's plan is scaled, 8.1 m2 [read: B1+B2 off ET's Boat deck plan], but its bars are not drawn, so its open share is not found: 4.86 m2 [bet], 60 % of its plan, within 50 and 70 %. Which room it serves is by its place over the room's length [bet, B1+B2].",
+   "x_m": [
+    -16.1544,
+    -9.55
+   ],
+   "y_m": [
+    -3.09,
+    3.07
+   ],
+   "z_in_m": 13.8109,
+   "z_top_m": 30.76,
+   "trunk_m2": 39.347,
+   "exit_m2": 4.86,
+   "area_m2": 4.86,
+   "slab": 135,
+   "closes": "nothing: the fidley gratings stand open (their bars only)",
+   "gives_way": [
+    {
+     "what": "the casing itself",
+     "head_m": null,
+     "when": "the sea outside rises faster than the water inside",
+     "how": "light casings \"not made to take a pressure of that kind\": they collapse when the water outside rises faster than inside (Wilding, BI 20921 [read], via the digest)",
+     "tag": "read"
+    }
+   ]
+  },
+  {
+   "id": "V-030",
+   "kind": "fidley",
+   "name": "Boiler room 1's part of the casing of Nos 1 and 2, up to its fidley gratings at the Boat deck",
+   "space": {
+    "zone": 9,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "E-060",
+    "D-031",
+    "C-039",
+    "B-023",
+    "A-015",
+    "Bt-04"
+   ],
+   "deck": "E",
+   "opens": "up",
+   "top": "Boat",
+   "top_z_m": 30.76,
+   "top_how": "as V-029",
+   "area": {
+    "rule": "r3-narrowest",
+    "rows": [
+     "D-031",
+     "C-039",
+     "B-023",
+     "A-015"
+    ],
+    "exit": {
+     "m2": 5.34,
+     "lo": 4.45,
+     "hi": 6.23,
+     "tag": "bet",
+     "how": "its fidley grating, the aft fidley of the casing of Nos 1 and 2, frames 24A to 22.7A, x -21.81 to -20.35 m, 1.47 by 6.08 m = 8.9 m2 of plan [read: scaled by B1+B2 off ET's Boat deck plan by R3's Boat deck calibration, the strip labelled 'FIDLEY' at the casing's end between the casing and its VENT, FAN and TRUNK block, the casing's full breadth, edges to about 0.1 ft, nothing saved], at an open share of 60 % (50 to 70 %) [bet: the bars are not drawn]"
+    }
+   },
+   "leads": "the weather, through the fidley gratings at the casing's end on the Boat deck",
+   "source": "As V-029. The grating: the aft fidley of the casing of Nos 1 and 2 [read: scaled by B1+B2 off ET's Boat deck plan by R3's Boat deck calibration, the strip labelled 'FIDLEY' at the casing's end between the casing and its VENT, FAN and TRUNK block, the casing's full breadth, edges to about 0.1 ft, nothing saved].",
+   "check": "The fidley is the casing's own opening: it lets out the hot air over the boilers and round the uptakes, not the stokeholds' supply, which comes down the fans' shafts (V-019 to V-024) (B1+B2). The uptakes inside the casing carry the boilers' smoke to the funnels.",
+   "tag": "bet",
+   "why": "The grating's plan is scaled, 8.9 m2 [read: B1+B2 off ET's Boat deck plan], but its bars are not drawn, so its open share is not found: 5.34 m2 [bet], 60 % of its plan, within 50 and 70 %. Which room it serves is by its place over the room's length [bet, B1+B2].",
+   "x_m": [
+    -20.66,
+    -16.1544
+   ],
+   "y_m": [
+    -3.09,
+    3.07
+   ],
+   "z_in_m": 13.8306,
+   "z_top_m": 30.76,
+   "trunk_m2": 33.4833,
+   "exit_m2": 5.34,
+   "area_m2": 5.34,
+   "slab": 152,
+   "closes": "nothing: the fidley gratings stand open (their bars only)",
+   "gives_way": [
+    {
+     "what": "the casing itself",
+     "head_m": null,
+     "when": "the sea outside rises faster than the water inside",
+     "how": "light casings \"not made to take a pressure of that kind\": they collapse when the water outside rises faster than inside (Wilding, BI 20921 [read], via the digest)",
+     "tag": "read"
+    }
+   ]
+  },
+  {
+   "id": "V-031",
+   "kind": "hatch",
+   "name": "No. 1 hatch: from the hold up through G, F, E and D decks and the forecastle's hatch trunk to the forecastle deck",
+   "space": {
+    "zone": 1,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "D-003",
+    "C-077"
+   ],
+   "deck": "E",
+   "opens": "up",
+   "top": "B",
+   "top_over_ft": 2.5,
+   "top_how": "the forecastle deck (B deck's level) [read: R3, the forecastle is a B-level weather deck]; its coaming 30 in (0.76 m) [read: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read]]",
+   "area": {
+    "rule": "rect",
+    "l_ft": 14,
+    "b_ft": 12,
+    "count": 1,
+    "how": "14 ft athwart by 12 ft (4.27 by 3.66 m) [read: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read]]"
+   },
+   "leads": "the weather on the forecastle deck, under its cover",
+   "source": "R3's rows O-004, G-006 and F-004 (with portable grates), D-003 and C-077 ('A hatch trunk (gratings), in the middle of the forecastle') [read]. Its size and coaming: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read].",
+   "check": "Its size and its 30 in coaming are read (the topsides note, from Bob Read's hatches article), its place is the note's [bet], and what covers it is in closes. R3's narrowest drawn hatchway is 12.12 m2, 22 % under the article's 15.61 m2. R3 draws every hatch 10 to 41 % under the article's size, so the article's is taken [bet: the hatchways below in line with the weather deck's, and as large]. The record has water round its G-deck coaming at about T 20 (RESEARCH_room_by_room_flooding_record_v1).",
+   "tag": "read",
+   "x_m": [
+    103.46,
+    107.17
+   ],
+   "y_m": [
+    -3.08,
+    3.08
+   ],
+   "z_in_m": 16.3699,
+   "z_top_m": 25.8187,
+   "trunk_m2": 15.6077,
+   "exit_m2": null,
+   "area_m2": 15.6077,
+   "slab": 14,
+   "closes": "a steel cover with four bullseyes and two hinged vents, on its 30 in coaming [read: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read]]",
+   "gives_way": [
+    {
+     "what": "a steel weathertight cover, from above",
+     "head_m": 4,
+     "lo_m": 4.1,
+     "hi_m": 5.3,
+     "how": "tightness lost by about 4 m, collapse at 4.1 to 5.3 m (Faulkner 2001, Trans RINA, first-hand via the digest, a 1966 Load Line cover) [read]; taken for hers by analogy [bet]",
+     "tag": "bet"
+    },
+    {
+     "what": "the hatch trunk itself",
+     "head_m": null,
+     "when": "the sea reaches the top of its trunk",
+     "how": "it collapses \"when once the water got up as high as the top of the trunk\" (Wilding, Harland and Wolff, BI 20391 [read], via the coordinator's digest of the stern study)",
+     "tag": "read"
+    }
+   ]
+  },
+  {
+   "id": "V-032",
+   "kind": "hatch",
+   "name": "No. 2 hatch: from the hold up through G, F and E decks to the forward well deck",
+   "space": {
+    "zone": 2,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "E-018"
+   ],
+   "deck": "E",
+   "opens": "up",
+   "top": "C",
+   "top_over_ft": 2.5,
+   "top_how": "the forward well deck, C deck, open to the sky (R3) [read]; its coaming 30 in (0.76 m) [read: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read]]",
+   "area": {
+    "rule": "rect",
+    "l_ft": 20,
+    "b_ft": 16.5,
+    "count": 1,
+    "how": "20 ft athwart by 16 ft 6 in (6.10 by 5.03 m), three hatch beams and locking bars [read: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read]]"
+   },
+   "leads": "the weather on the forward well deck, under its cover",
+   "source": "R3's rows O-006, G-015, F-012 and E-018 [read]; the well decks are open to the sky (R3, C deck's how). Its size and coaming: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read].",
+   "check": "Its size and its 30 in coaming are read (the topsides note, from Bob Read's hatches article), its place is the note's [bet], and what covers it is in closes. R3's narrowest drawn hatchway is 27.57 m2, 10 % under the article's 30.66 m2. R3 draws every hatch 10 to 41 % under the article's size, so the article's is taken [bet: the hatchways below in line with the weather deck's, and as large].",
+   "tag": "read",
+   "x_m": [
+    87.25,
+    91.64
+   ],
+   "y_m": [
+    -3.14,
+    3.14
+   ],
+   "z_in_m": 15.6516,
+   "z_top_m": 22.3572,
+   "trunk_m2": 30.658,
+   "exit_m2": null,
+   "area_m2": 30.658,
+   "slab": 26,
+   "closes": "hatch beams, covers and a tarpaulin with locking bars, on its 30 in coaming [read: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read]]",
+   "gives_way": [
+    {
+     "what": "its tarpaulin, from below",
+     "head_m": null,
+     "lo_m": 0,
+     "hi_m": 0.1,
+     "how": "No. 2 hatch's tarpaulin lifted \"like a big dome\", \"blown up by the air from below\", minutes after the collision (Hendrickson, BI 4912-4913 [read], via the digest): that it gave way to the air from below is read; at what head is not, 0 to 0.1 m [bet]",
+     "tag": "bet"
+    },
+    {
+     "what": "the hatch trunk itself",
+     "head_m": null,
+     "when": "the sea reaches the top of its trunk",
+     "how": "it collapses \"when once the water got up as high as the top of the trunk\" (Wilding, Harland and Wolff, BI 20391 [read], via the coordinator's digest of the stern study)",
+     "tag": "read"
+    }
+   ]
+  },
+  {
+   "id": "V-033",
+   "kind": "hatch",
+   "name": "The bunker hatch, between bulkheads C and D: from the orlop up through G and F decks to E deck",
+   "space": {
+    "zone": 3,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "E-021"
+   ],
+   "deck": "E",
+   "opens": "up",
+   "top": "C",
+   "top_over_ft": 2.5,
+   "top_how": "the forward well deck, C deck: the topsides note places No. 3, \"the bunker hatch\", in the well at about x +78.7 to +82.4, the well deck's two electric cranes serving it [read size, bet place]; through D deck it passes the third-class general room (R3 D-010, which draws no hatchway there: covers flush with that deck [bet]); R3's E deck row is E-021, \"Bunker hatch\"; its coaming 30 in (0.76 m) [read: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read]]",
+   "area": {
+    "rule": "rect",
+    "l_ft": 20,
+    "b_ft": 12,
+    "count": 1,
+    "how": "20 ft by 12 ft (6.10 by 3.66 m), \"that near the passengers' quarters\" [read: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read]]"
+   },
+   "leads": "the weather on the forward well deck, under its cover",
+   "source": "R3's rows O-008, G-017, F-016 and E-021, 'BUNKER HATCH' [read]. Its size and coaming: Bob Read's hatches article, via the topsides note (docs/research/RESEARCH_topsides_dimensions_v1_2026-11-19.md, its hatch table) [read].",
+   "check": "Its size and its 30 in coaming are read (the topsides note, from Bob Read's hatches article), its place is the note's [bet], and what covers it is in closes. R3's narrowest drawn hatchway is 13.08 m2, 41 % under the article's 22.30 m2. R3 draws every hatch 10 to 41 % under the article's size, so the article's is taken [bet: the hatchways below in line with the weather deck's, and as large].",
+   "tag": "read",
+   "x_m": [
+    80.11,
+    83.68
+   ],
+   "y_m": [
+    -3.14,
+    3.14
+   ],
+   "z_in_m": 15.3509,
+   "z_top_m": 22.0565,
+   "trunk_m2": 22.2967,
+   "exit_m2": null,
+   "area_m2": 22.2967,
+   "slab": 38,
+   "closes": "hatch boards and a tarpaulin on its 30 in coaming [bet: as No. 2]",
+   "gives_way": [
+    {
+     "what": "the hatch boards and tarpaulin, from below",
+     "head_m": null,
+     "lo_m": 0,
+     "hi_m": 0.1,
+     "how": "lifted from below at a small head [bet], as No. 2's was: No. 2 hatch's tarpaulin lifted \"like a big dome\", \"blown up by the air from below\", minutes after the collision (Hendrickson, BI 4912-4913 [read], via the digest)",
+     "tag": "bet"
+    },
+    {
+     "what": "the hatch trunk itself",
+     "head_m": null,
+     "when": "the sea reaches the top of its trunk",
+     "how": "it collapses \"when once the water got up as high as the top of the trunk\" (Wilding, Harland and Wolff, BI 20391 [read], via the coordinator's digest of the stern study)",
+     "tag": "read"
+    }
+   ]
+  },
+  {
+   "id": "V-034",
+   "kind": "fan",
+   "name": "The forecastle's fan room, in the middle of the forecastle on C deck",
+   "space": {
+    "zone": 1,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 1
+   },
+   "r3": [
+    "C-076"
+   ],
+   "deck": "C",
+   "top": "B",
+   "top_over_ft": 5,
+   "top_how": "its intakes on the forecastle deck, 5 ft over it [bet]",
+   "area": {
+    "rule": "m2",
+    "m2": 2,
+    "lo": 1,
+    "hi": 4
+   },
+   "leads": "the weather on the forecastle deck",
+   "source": "R3 C-076, 'FAN ROOM' in the forecastle's middle, 101F to 120.5F [read].",
+   "check": "Its fans' number and size are not on the plan; what it served is taken as the crew's and third-class rooms forward [bet]. The accommodation was ventilated by 64 Sirocco fans, supply and suction, many of them on the Boat deck, so that the usual cowls were 'conspicuous by their absence' (The Shipbuilder (1911), Olympic and Titanic number, about p. 106 [read]); this fan is one of them [read: R3's label], its trunk to the Boat deck [bet].",
+   "tag": "bet",
+   "why": "No size is on the plan: 2 m2 [bet], two fans' eyes of about 1.1 m, within 1 and 4 m2.",
+   "x_m": [
+    101.8032,
+    106.8
+   ],
+   "y_m": [
+    -2.9,
+    3.57
+   ],
+   "z_in_m": 22.2642,
+   "z_top_m": 26.5314,
+   "trunk_m2": 2,
+   "exit_m2": null,
+   "area_m2": 2,
+   "slab": 17,
+   "closes": "nothing but its fan: an open trunk once the fan stops [bet] (the engine rooms' fans were of the discharge type, driving air in: The Shipbuilder, p. 67 [read])"
+  },
+  {
+   "id": "V-035",
+   "kind": "trunk",
+   "name": "The reciprocating engine room's light and air strip, abaft its casing in the engine-casing house on the Boat deck",
+   "space": {
+    "zone": 10,
+    "sides": [
+     "P",
+     "S"
+    ],
+    "layer": 0
+   },
+   "r3": [
+    "Bt-03",
+    "A-008"
+   ],
+   "deck": "E",
+   "opens": "up",
+   "top": "Boat",
+   "top_z_m": 30.53,
+   "top_how": "the engine-casing house's roof at z 30.53 m, scaled (the topsides note) [read]",
+   "area": {
+    "rule": "m2",
+    "m2": 5.2,
+    "how": "frames 39A to 38A, x -35.22 to -34.34 m (0.88 m), between the tank rooms' inner walls (5.95 m) [read: scaled by B1+B2 off ET's Boat deck plan in the built-in browser, by R3's Boat deck calibration (x0 2846.5 px, 0.09751 ft a px; centreline 631, 0.09786 ft a px), edges to about 0.1 ft, nothing saved]"
+   },
+   "leads": "the weather, through the engine-casing house on the Boat deck",
+   "source": "ET's Boat deck plan, the strip labelled 'LIGHT & AIR' abaft the casing's opening [read: scaled by B1+B2 off ET's Boat deck plan in the built-in browser, by R3's Boat deck calibration (x0 2846.5 px, 0.09751 ft a px; centreline 631, 0.09786 ft a px), edges to about 0.1 ft, nothing saved]; R3 A-008 ('LIGHT & AIR TO REC. ENG. RM', A deck) and Bt-03 ('LIGHT & AIR', the Boat deck) [read].",
+   "check": "Its route down to the engine room is R3's A deck label; its head over the house's roof is not drawn.",
+   "tag": "read",
+   "x_m": [
+    -35.81,
+    -27.55
+   ],
+   "y_m": [
+    -6.89,
+    6.89
+   ],
+   "z_in_m": 13.9058,
+   "z_top_m": 30.53,
+   "trunk_m2": 5.2,
+   "exit_m2": null,
+   "area_m2": 5.2,
+   "slab": 160,
+   "closes": "its head over the house's roof is not drawn: taken as V-001's skylight [bet]",
+   "gives_way": [
+    {
+     "what": "its glazing, from inside",
+     "head_m": 0.05,
+     "how": "as V-001's skylight [bet]",
+     "tag": "bet"
+    }
+   ]
+  }
+ ],
+ "notes": [
+  {
+   "zone": 12,
+   "layer": 0,
+   "what": "The central station (the electric engine room) is a separate watertight compartment about 63 ft long and 24 ft high, adjoining the turbine room's after end at the tank top (The Shipbuilder (1911), Olympic and Titanic number, about p. 107 [read]). Its own ventilation is not found: sealed [bet], no vent found. Its flat stands about 7.3 m (its 24 ft) over the tank top [derived]. V-009 to V-011 vent the stores and No. 4 hold above it, not it: for NH7 its air is nearly sealed [bet], a pocket under its flat.",
+   "state": "sealed [bet], no vent found"
+  },
+  {
+   "zone": null,
+   "layer": 1,
+   "what": "Her accommodation (above E deck) was ventilated mechanically: 64 Sirocco fans of Davidson's, supply (a warm-air Plenum system to the passages and staterooms) and suction (from the lavatories, galleys and pantries), with no cowls to speak of (The Shipbuilder (1911), Olympic and Titanic number, about p. 106 [read]); and about 2,000 windows and sidelights. So above E deck her air leaves by her fan trunks (most of them not placed in R3's tables, rows here only where R3 reads a fan), her windows and sidelights (openings.json, the core's C4) and her staircases (S1)."
+  },
+  {
+   "zone": 13,
+   "layer": 0,
+   "what": "The orlop over the shaft tunnels is a watertight flat (Wilding, BI 20392; the 1912 Report) [read, via the coordinator's digest of the stern study]: the tunnels' air is sealed under it but for the tunnels' own escapes [bet], a pocket for NH7."
+  },
+  {
+   "zone": 14,
+   "layer": 0,
+   "what": "As zone 13: the orlop over the shaft tunnel is a watertight flat (Wilding, BI 20392; the Report) [read, via the digest]."
+  },
+  {
+   "zone": 15,
+   "layer": 0,
+   "what": "G deck over the after peak is a watertight flat (Wilding, BI 20392; the Report) [read, via the digest]: the after peak's air is sealed under it [bet], and no air pipe is read."
+  },
+  {
+   "zone": null,
+   "layer": 0,
+   "what": "No deck was watertight but the weather deck, besides the flats named (Wilding, BI 20392) [read, via the digest]: the decks between the spaces leak; NH6 stage 1 opens a plate at its highest point for that."
+  },
+  {
+   "zone": null,
+   "layer": 1,
+   "what": "The core's TOP connections (the weather deck open to the sea, a share fOpen, fitted) stand in for her hatches, companionways and doors (core.js, rebuildConnections) [read]: NH7 must not count those and this table's rows both (the stern study's caveat, via the digest)."
+  }
+ ]
+}

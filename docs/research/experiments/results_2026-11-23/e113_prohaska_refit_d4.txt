@@ -1,0 +1,28 @@
+e113: Prohaska's a refitted to the panel's C-7 on the landed model, RECORD remeasured, and where the drift comes from
+  tree C:\code\titanic-sinking-simulator-main\.claude\worktrees\b1b2-strength-85bc79 at dbb3276; node v26.13.0
+  the landed defaults: the opening 0.9773 m2, the bunker's own 0.07609 m2; aDown 0.2093, fOpen 0.02522, zMergeHold 5.538, GM0 0.7839, coalListDeg 1.598; weighOverfill 0, g11Doors 0, sideOpenings 1; the ship C.buildShip() (hullEnds on)
+  girder.js's a 0.4 (fitted on join 1's path); the note's 0.566; the bounds 0.4 to 0.75; C-7: 4.640 GN m at 35000 t aboard (weighed, D88)
+
+THE LANDED MODEL: the 1912 damage preset, 39769 steps; founders at 165.70 min
+C-7, the first step with 35000 t aboard as weighed: step 38015, T 158.40 min, trim 6.31 deg; 35003 t weighed (35209 t as the readouts count it, the over-fill with it)
+  curve                 a        the hull's largest moment   x m     where                   against C-7
+  0.40, today's        0.400                3.888 GN m      -3.1     boiler room 2           -16.2 %
+  the note's           0.566                4.369 GN m      -3.1     boiler room 2           -5.8 %
+  the bounds' top      0.750                4.902 GN m      -3.1     boiler room 2           +5.6 %
+  the fit, rounded     0.660                4.641 GN m      -3.1     boiler room 2           +0.0 %
+  the fit: a = 0.659531, taken as 0.660
+
+RECORD (the gauge, relieved, the largest in the band, at the first step her trim reaches the angle):
+  11 deg: on the fit (a 0.660) 5.591 GN m at T 162.95, x -16.15; on 0.40 4.860 GN m at T 162.95, x -16.15; girder.js RECORD now 5.125
+  17 deg: on the fit (a 0.660) 5.708 GN m at T 163.62, x -16.15; on 0.40 4.995 GN m at T 163.62, x -16.15; girder.js RECORD now 5.871
+
+WHERE THE DRIFT COMES FROM: C-7 on a = 0.40, and its own fit, with the landing's switches taken back
+  run                                     founders   C-7: T    trim   t weighed   on a 0.40                 x m   its own fit
+  the landed model                         165.70    158.40   6.31       35003   3.888 GN m (-16.2 %)     -3.1   0.660
+  her ends off (hullEnds 0)                147.82    141.89   7.22       35001   4.330 GN m (-6.7 %)      -0.5   0.507
+  C5 off (weighOverfill 1)                 162.61    156.41   6.44       35003   4.016 GN m (-13.4 %)     -3.1   0.615
+  C4 off (g11Doors 1, sideOpenings 0)      165.70    158.40   6.31       35003   3.888 GN m (-16.2 %)     -3.1   0.660
+  her ends and C5 off                      144.48    139.78   7.37       35002   4.503 GN m (-3.0 %)      -0.5   0.448
+  before the landing (SC.PRE_D4)           158.28    153.49   7.34       35003   4.457 GN m (-3.9 %)      -0.5   0.463
+
+(38 s)

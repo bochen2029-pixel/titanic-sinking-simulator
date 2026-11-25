@@ -1,0 +1,75 @@
+== checks ==
+PASS orifice, 2 m head: 37.579 against 37.579
+PASS two-layer: air share of the height: 0.099779 against 0.099779
+PASS two-layer: exchange flow: 956.95 against 956.95
+     bottle neck 20 mm: j/sqrt(g d) = 0.347 (Clanet & Searby: 0.33)
+PASS flooding line residual: 1.0000 against 1.0000
+PASS limiter: largest share of the level moved: 1.0000 against 1.0000
+
+== (i) level: vertical opening, two-layer exchange (law P) ==
+   A m2  depth m   time to lose half / nine tenths of the air, s:  slow (Cd 0.45) | central (Cd 0.60) | fast (Cd 0.75)
+    100       1        53.3 / 105.9   |    40.0 /  79.4   |    32.0 /  63.5
+    100      50        59.7 / 120.1   |    44.8 /  90.1   |    35.8 /  72.1
+    300       1        14.2 /  31.3   |    10.6 /  23.4   |     8.5 /  18.8
+    300      50        16.1 /  36.7   |    12.1 /  27.5   |     9.7 /  22.0
+    600       1         6.5 /  15.3   |     4.9 /  11.5   |     3.9 /   9.2
+    600      50         7.6 /  18.7   |     5.7 /  14.0   |     4.5 /  11.2
+
+== (ii) pitched 90 deg, torn end up: counter-current (law X) ==
+   A m2  depth m   time to lose half / nine tenths of the air, s:  slow (C 0.55, cap, 4 m cells, Cd 0.45) | central (C 0.70, cap, whole, Cd 0.60) | fast (C 1.0, no cap, whole, Cd 0.75)
+    100       1       172.5 / 310.4   |    91.2 / 164.1   |    25.3 /  45.6
+    100      50       225.1 / 405.1   |   130.2 / 234.4   |    29.9 /  53.8
+    300       1        57.5 / 103.5   |    25.7 /  46.2   |     6.4 /  11.6
+    300      50        75.0 / 135.0   |    37.7 /  67.9   |     7.6 /  13.6
+    600       1        28.8 /  51.8   |    11.6 /  20.9   |     2.7 /   4.9
+    600      50        37.5 /  67.5   |    17.3 /  31.2   |     3.2 /   5.8
+
+== (ii) pitched 80 deg, torn end up: counter-current (law X and law P) ==
+   A m2  depth m   time to lose half / nine tenths of the air, s:  slow (C 0.55, cap, 4 m cells, Cd 0.45) | central (C 0.70, cap, whole, Cd 0.60) | fast (C 1.0, no cap, whole, Cd 0.75)
+    100       1       127.4 / 229.3   |    92.1 / 165.7   |    25.5 /  46.0
+    100      50       142.2 / 255.7   |   106.7 / 191.8   |    30.2 /  54.2
+    300       1        32.3 /  58.1   |    24.2 /  43.6   |     6.5 /  11.7
+    300      50        36.1 /  64.8   |    27.1 /  48.6   |     7.7 /  13.8
+    600       1        13.6 /  24.5   |    10.2 /  18.3   |     2.8 /   4.9
+    600      50        15.2 /  27.3   |    11.4 /  20.4   |     3.2 /   5.8
+
+== (ii) pitched 70 deg, torn end up: counter-current (law X and law P) ==
+   A m2  depth m   time to lose half / nine tenths of the air, s:  slow (C 0.55, cap, 4 m cells, Cd 0.45) | central (C 0.70, cap, whole, Cd 0.60) | fast (C 1.0, no cap, whole, Cd 0.75)
+    100       1        90.8 / 163.5   |    68.1 / 122.6   |    26.2 /  47.1
+    100      50       101.4 / 182.2   |    76.1 / 136.7   |    30.9 /  55.5
+    300       1        23.1 /  41.5   |    17.3 /  31.1   |     6.7 /  12.0
+    300      50        25.8 /  46.2   |    19.3 /  34.6   |     7.8 /  14.1
+    600       1         9.7 /  17.5   |     7.3 /  13.1   |     2.8 /   5.1
+    600      50        10.8 /  19.4   |     8.2 /  14.6   |     3.3 /   5.9
+
+== (iii) sinking at 0.5 m/s2 up to 10 m/s, from just under the surface ==
+   case                         t s  depth m   air m3   air kept   Boyle alone m3   lag, m of head
+   level, 300 m2                 2       2     31460      92 %         36391          -0.8
+   level, 300 m2                 5       7     25421      91 %         25391           1.5
+   level, 300 m2                10      26     13119      91 %         12195           5.5
+   level, 300 m2                15      57      5455      84 %          6532          -0.5
+   level, 300 m2                20     101      2391      61 %          3958          -0.4
+   level, 300 m2                30     201       678      33 %          2082           0.0
+   level, 300 m2              air volume halved at 8.3 s, a tenth left at 17.7 s
+   level, 100 m2                 2       2     34072      99 %         34596          -0.0
+   level, 100 m2                 5       7     32165      99 %         24139           4.5
+   level, 100 m2                10      26     26942      99 %         11593          20.7
+   level, 100 m2                15      57     18933      99 %          6210          45.5
+   level, 100 m2                20     101      8622      99 %          3763          63.2
+   level, 100 m2                30     201      1740      88 %          1979          -0.1
+   level, 100 m2              air volume halved at 15.8 s, a tenth left at 22.8 s
+   end up 90, 300 m2             2       2     33336      97 %         32144           0.8
+   end up 90, 300 m2             5       7     29345      96 %         22428           4.6
+   end up 90, 300 m2            10      26     17194      96 %         10772          14.4
+   end up 90, 300 m2            15      57      5495      94 %          5770           0.9
+   end up 90, 300 m2            20     101      2244      64 %          3496           0.4
+   end up 90, 300 m2          air volume halved at 9.9 s, a tenth left at 17.8 s (no air left before 30 s)
+   end up 90, 100 m2             2       2     34511      99 %         32144           0.9
+   end up 90, 100 m2             5       7     33150      99 %         22428           5.7
+   end up 90, 100 m2            10      26     28423      99 %         10772          22.5
+   end up 90, 100 m2            15      57     20633      99 %          5770          48.6
+   end up 90, 100 m2            20     101     10179      99 %          3496          73.1
+   end up 90, 100 m2            30     201      1544      84 %          1839           0.4
+   end up 90, 100 m2          air volume halved at 16.6 s, a tenth left at 23.2 s
+
+CHECKS: PASS

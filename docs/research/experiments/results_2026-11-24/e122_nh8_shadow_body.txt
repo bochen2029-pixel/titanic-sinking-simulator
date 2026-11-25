@@ -1,0 +1,109 @@
+# e122_nh8_shadow_body.js, run 2026-11-24 03:44 to 03:45 CST (the clock), one thread at BelowNormal, Node v26.13.0, on
+# claude/z1-nh8-stage0 (3aca45d: main 9ec05af with the joint's line merged, join 21's sha).
+#
+e122: NH8 stage 0. Member C's watch alone: onset at step 37792 (T+156.46 min), fingerprint 0ae90224
+
+1. THE SHADOW from 10 min before the onset (the whole body, the pocket at 'flag'), against the core
+  -10.00 min: the core pitch 5.191, roll -8.023, origin Z -14.703 | the shadow apart: pitch -0.001 deg, roll -0.001 deg, Z 0.000 m
+  -9.00 min: the core pitch 5.239, roll -8.640, origin Z -14.732 | the shadow apart: pitch -0.237 deg, roll -0.159 deg, Z 0.034 m
+  -8.00 min: the core pitch 5.292, roll -9.486, origin Z -14.757 | the shadow apart: pitch -0.170 deg, roll -0.207 deg, Z 0.043 m
+  -7.00 min: the core pitch 5.352, roll -10.192, origin Z -14.790 | the shadow apart: pitch -0.026 deg, roll -0.250 deg, Z 0.018 m
+  -6.00 min: the core pitch 5.426, roll -10.861, origin Z -14.832 | the shadow apart: pitch -0.134 deg, roll -0.241 deg, Z 0.030 m
+  -5.00 min: the core pitch 5.516, roll -11.527, origin Z -14.884 | the shadow apart: pitch -0.258 deg, roll -0.346 deg, Z 0.072 m
+  -4.00 min: the core pitch 5.631, roll -12.130, origin Z -14.954 | the shadow apart: pitch -0.298 deg, roll -0.434 deg, Z 0.099 m
+  -3.00 min: the core pitch 5.789, roll -12.406, origin Z -15.066 | the shadow apart: pitch -0.313 deg, roll -0.491 deg, Z 0.110 m
+  -2.00 min: the core pitch 6.017, roll -11.917, origin Z -15.261 | the shadow apart: pitch -0.314 deg, roll -0.560 deg, Z 0.116 m
+  -1.00 min: the core pitch 6.458, roll -8.888, origin Z -15.697 | the shadow apart: pitch -0.170 deg, roll -0.252 deg, Z 0.048 m
+  -0.00 min: the core pitch 6.930, roll -3.803, origin Z -16.177 | the shadow apart: pitch -0.171 deg, roll -0.076 deg, Z 0.044 m
+  AT THE ONSET: the core pitch 6.930 deg, roll -3.803, origin Z -16.177 m; its rates pitch 0.0049 deg/s, roll 0.0010, heave -0.0044 m/s
+  the shadow apart there: pitch -0.171 deg, roll -0.076 deg, Z 0.044 m; its turning in her axes 0.0195, 0.0316, 0.0016 deg/s; the largest apart over the 10 min: pitch -0.357, roll -0.644, Z 0.132
+  the fingerprint at the onset with the shadow 0ae90224 against 0ae90224 alone: the same; the shadow 5.91 ms a step
+
+2. THE JOINT AT THE ONSET (x -10.93, Lh 20, the mended step; the hinge unbreakable): its moment over 60 s against Mu; the gauge 4.877 GN m
+  the core's pose and rates, the stand-in vents (today): M0 0.9632 Mu (the gauge 0.9875); trough 0.8045 at +10.75 s; first peak 1.0175 at +23.00 s (past Mu by 1.75 %)
+  the shadow's pose and velocities, the stand-in vents: M0 0.9720 Mu (the gauge 0.9875); trough 0.8065 at +9.75 s; first peak 1.0234 at +23.25 s (past Mu by 2.34 %)
+  the core's pose and rates, the vents shut: M0 0.9632 Mu (the gauge 0.9875); trough 0.9449 at +11.25 s; first peak 0.9737 at +18.50 s (short of Mu by 2.63 %)
+  the shadow's pose and velocities, the vents shut: M0 0.9720 Mu (the gauge 0.9875); trough 0.9511 at +8.75 s; first peak 0.9707 at +28.00 s (short of Mu by 2.93 %)
+
+e122 done in 32 s
+
+READING (Z1, 2026-11-24; the coordinator's D113)
+1. The hand-over's error in pose and rates is small. At the onset the shadow body stands 0.17 deg less by the head than
+   the core, 0.08 deg of list and 4 cm of heave apart; its rates oscillate by 0.02 to 0.03 deg/s, which the core damps.
+   The fingerprint is the same with it and without.
+2. The pose does not drive the joint's swing. Placed at the shadow's pose, the joint swings as at the core's:
+   trough about 0.81 Mu at +10 s, first peak 1.02 Mu at +23 s.
+3. Milestone 1's stand-in vent does. With the pieces' vents shut while joined, the moment stays 2.6 to 2.9 % short of
+   Mu and she does not part in 60 s. So under the pocket, "she parts about 23 s after the onset" (23 of 30 kept
+   members with the air at 'flag') is the stand-in's. D113 judges the joint under K.air 'spaces'.
+4. Under the spaces (fall_trials, trial 20, 'held' and the floats) member C holds the 90 s without yielding. The
+   record has her parting at the surface: the witnesses, and two pieces on the bed about 600 m apart. That is A FINDING
+   AGAINST THE MODEL, named here and not tuned away.
+5. What physics is missing, in Z1's judgement, most likely first. Each is a measurement to make, not a knob to set:
+   a. The bow's venting through her real hatches, ventilators and skylights as she dives (NH7, data/vents_1912.json).
+      The core's TOP openings give each upper space about 0.2 m2. With the real openings the bow's air leaves as her
+      decks go under, her weight in water rises, and with it the hogging moment at the break. The stand-in vent's
+      swing is a load of the right kind at the wrong time and size. To measure: the vents table in the fall's spaces,
+      a what-if.
+   b. The crack's run. S.hinge's ligament loses capacity only with the plastic hinge's torn share; there is no
+      fracture. Plate brittle at the sea's -2 deg C [not read here: the metallurgical studies of recovered plate
+      report it] could let a crack through the side shell faster than the plastic backbone does. To measure: a
+      fracture criterion on the ligament (B1+B2).
+   c. The tear's flooding from the onset. S.hinge's openings grow with the joint's angle and are nothing at the
+      yield's 0.003 deg, but cracked deck and shell open area before the hull bends. To measure: the tear's area at
+      small angles from the plating's cracking (B1+B2).
+   The kept set under the spaces (gate 3, D113) says how general the finding is.
+
+READING v1.1 (Z1, 2026-11-24 05:43 CST; with B1+B2 and the coordinator's D114 and D115; e123 the measurements).
+Points 1 to 3 above stand. Points 4 and 5 are superseded. Member C held under the spaces because the hand-over did not
+take the loads and the check the onset takes. Missing physics did not keep her whole.
+4'. The joint began 3.6 % below its own yield. e123 splits the gap term by term against the gauge, and three
+   consistencies close it. Each makes the fall do what the core and the onset already do; none is a number chosen so
+   that she parts.
+   a. The yield, about 1.2 %: the onset fires on the circle (M/Mu)^2 + (V/Vu)^2 = 1, and the hinge yielded on M = Mu
+      alone. hinge.yieldOn 'circle' yields it on the same circle, through B1+B2's S.hinge under(s, V).
+   b. G7's peak tank, 2.1 %: the core's loads and the gauge weigh its 330.7 t at x 119.89, 131 m forward of the cut.
+      The fall counted its room solid, and the air's cap dropped its water. K.peakTank 'weighed' weighs it as they do.
+   c. The section, the last 0.33 % and the 1 % in the shear: where the waterline crosses her slices obliquely (trim
+      6.93 deg), the section polygon, decimated to about twelve points a side, put the bow's centre of buoyancy 0.62 m
+      forward and the stern 70 t short against the core's columns. K.section 'full' takes every column.
+   The fall's statics then agree with the gauge's about her own y at the joint's pin: the stern to 0.0001 GN m. The rest
+   is the fall's in-situ density (the April column) against the core's uniform 1025, a modelling difference kept and
+   named. With the three, member C's joint starts 0.014 % inside its yield under the spaces and parts at +1.63 s by
+   shear. Under the pocket at 'flag' it starts 0.036 % inside and parts at +19.06 s.
+5'. The kept set with the three on (tools/joint_kept.js --yield circle --k peakTank=weighed,section=full):
+   - under the spaces, 28 of 30 part at the surface, +1.28 to +6.59 s after the onset (median 1.86), all by shear;
+   - under the pocket at 'flag', 30 of 30, +1.72 to +21.34 s (median 18.80); at 'centre', 30 of 30, +1.06 to +20.06 s;
+   - the margin at t0, -0.21 to +1.70 % of the yield (median -0.13 under the spaces).
+   The two that hold under the spaces, #4 and #24, are the members with the most list at their onsets (8.2 and
+   11.4 deg). The gauge, and B2's onset with it, take the moment about the world's horizontal axis across her; the
+   hinge and her capacity Mu bend about her own y. The fall's statics are the gauge's about her y (the ratio is
+   cos(list) to four digits, e123 part D), and each member's margin at t0 is about 1 - cos(list), less 0.2 %. That
+   0.2 % is the relief's model: the fall's Kirchhoff mass slice by slice against the gauge's rigid kA with the water
+   once, named. Taking the onset onto her own axes is B1+B2's change: biaxial, M cos(list) about her y and M sin(list)
+   about her z, each against her strength. It moves the onset, so it goes with its own pins.
+   So the onset is the break, as B2's check says, and the margin at the hand-over is thin by construction: the onset
+   is where the gauge first reaches the strength.
+6. The openings to the weather, the fourth consistency (K.weather 'core', D115). At member C's onset 59 of her 197
+   openings to the weather had the sea at them: 1 given way and 58 at the sill. The fall opened none of the others.
+   With the core's own law mirrored, and the three on, under the spaces:
+   - 110 of the bow's openings give way between +2.9 and +39.3 s (51 windows, 56 side openings, 2 stair doors, a dome);
+   - the bow is under at +32.8 s, and lies level on the bed at 3,772 m by +8 min;
+   - with the openings as handed over, the bow hangs nearly vertical at 48 m for the whole 10 min;
+   - the stern floats level either way, its openings above the sea.
+7. What the page's fall shows on the default watch. The fall reader begins the default watch's fall as the cut fall:
+   no joint (K0.jointOnset 0) and the lumped pocket (K0.air 'pocket'). So of the four, only the tank and the section
+   act on the page; the circle needs the joint, and the openings to the weather need the spaces. The pieces' rest
+   (member C, untuned: each lever 0), against the wreck (R5 1.1, 10a and 10b: the bow 772 m from the point under the
+   break, band 540 to 950; the stern 148 m, band 0 to 300; both upright):
+   - today: the bow 1,208 m, the stern 44 m, both upright, at rest at +505 s;
+   - with join 22's defaults: the bow 1,631 m, the stern 51 m, both upright. The tank's 330.7 t at the stem carries the
+     untuned bow further. Trial 7's fitted levers, refitted in join 22, are what put the bow on the survey's 772 m;
+   - the judged configuration (the joint, the spaces, the four on): she parts at +1.63 s, and the bow rests at 1,750 m,
+     upright, at +429 s. The stern is still afloat at the surface at 15 min: its sinking needs the tear's flooding (the
+     joint's line, K.torn: Z6 v1.2's stern under at 3.15 min with 20 m of it torn), which the default does not open.
+8. Withdrawn:
+   - "she holds under the spaces: a finding against the model" (point 4);
+   - the vents as its likely cause (point 5a): NH2's vents table in the fall's spaces did not part her.
+   Points 5b and 5c, the crack's run and the tear's flooding at small angles, remain physics the fall lacks. She needs
+   neither to part at the onset, but the stern needs 5c to sink in the record's minutes.

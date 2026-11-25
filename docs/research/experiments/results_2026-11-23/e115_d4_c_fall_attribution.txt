@@ -1,0 +1,86 @@
+stage D's landing (member C): the fall's trials 4, 7 and 10 with each of the landing's moves put back alone (SC.PRE_D4)
+landed (C), a 0.660
+  trial 7, the bow   weight in water at x 47.30, plan's middle 44.81, lever +2.49 m; untuned 888 m along (across -1); the fit on the survey's side -0.43 m, the fitted lever +2.06 m
+  trial 7, the stern weight in water at x -73.96, plan's middle -77.11, lever +3.16 m; untuned 235 m along (across 1); the fit on the survey's side -0.90 m, the fitted lever +2.26 m
+  trial 4: the flag at T 165.70 min (pitch 68.8, roll -80.2); the stern's air 42315 m3 at one atmosphere, 3.58 times her weight in water (12267 t); d* 25.7 m; its pocket at most 18.4 m down (+24 s); FLOATS; 19 s of CPU
+  trial 12, the default fall from the same flag: bow upside down 1597 m (along 1292, across 938); stern upright 212 m (along 207, across 47)
+Prohaska's a 0.40 (as before D92)
+  trial 7, the bow   weight in water at x 41.75, plan's middle 44.81, lever -3.06 m; untuned -75 m along (across 1); the fit on the survey's side +5.12 m, the fitted lever +2.06 m
+  trial 7, the stern weight in water at x -68.95, plan's middle -77.11, lever +8.17 m; untuned 670 m along (across 5); the fit on the survey's side -5.91 m, the fitted lever +2.26 m
+  trial 4: the flag at T 165.70 min (pitch 68.8, roll -80.2); the stern's air 42315 m3 at one atmosphere, 3.66 times her weight in water (11981 t); d* 26.5 m; its pocket at most 12.5 m down (+22 s); FLOATS; 18 s of CPU
+  trial 12, the default fall from the same flag: bow upside down 614 m (along 530, across 310); stern upright 670 m (along 648, across 170)
+hullEnds as before (C3 off)
+  trial 7, the bow   weight in water at x 47.64, plan's middle 41.32, lever +6.32 m; untuned 2397 m along (across -58); the fit on the survey's side -4.52 m, the fitted lever +1.80 m
+  trial 7, the stern weight in water at x -74.47, plan's middle -70.97, lever -3.50 m; untuned -1820 m along (across -76); the fit on the survey's side +5.57 m, the fitted lever +2.07 m
+  trial 4: the flag at T 147.82 min (pitch 68.8, roll -80.2); the stern's air 47733 m3 at one atmosphere, 3.98 times her weight in water (12430 t); d* 29.7 m; its pocket at most 6.7 m down (+21 s); FLOATS; 16 s of CPU
+  trial 12, the default fall from the same flag: bow upright 2490 m (along 1915, across 1591); stern upright 2026 m (along -1989, across -386)
+weighOverfill 1 (as before)
+  trial 7, the bow   weight in water at x 47.30, plan's middle 44.81, lever +2.49 m; untuned 888 m along (across -1); the fit on the survey's side -0.43 m, the fitted lever +2.06 m
+  trial 7, the stern weight in water at x -73.96, plan's middle -77.11, lever +3.16 m; untuned 235 m along (across 1); the fit on the survey's side -0.90 m, the fitted lever +2.26 m
+  trial 4: the flag at T 162.61 min (pitch 68.8, roll -80.2); the stern's air 43820 m3 at one atmosphere, 3.70 times her weight in water (12267 t); d* 26.9 m; its pocket at most 21.0 m down (+43 s); FLOATS; 12 s of CPU
+  trial 12, the default fall from the same flag: bow upside down 1543 m (along 1088, across 1093); stern upright 199 m (along 192, across 49)
+g11Doors 1 (as before)
+  trial 7, the bow   weight in water at x 47.30, plan's middle 44.81, lever +2.49 m; untuned 888 m along (across -1); the fit on the survey's side -0.43 m, the fitted lever +2.06 m
+  trial 7, the stern weight in water at x -73.96, plan's middle -77.11, lever +3.16 m; untuned 235 m along (across 1); the fit on the survey's side -0.90 m, the fitted lever +2.26 m
+  trial 4: the flag at T 165.70 min (pitch 68.8, roll -80.2); the stern's air 42315 m3 at one atmosphere, 3.58 times her weight in water (12267 t); d* 25.7 m; its pocket at most 18.4 m down (+24 s); FLOATS; 11 s of CPU
+  trial 12, the default fall from the same flag: bow upside down 1597 m (along 1292, across 938); stern upright 212 m (along 207, across 47)
+sideOpenings 0 (as before)
+  trial 7, the bow   weight in water at x 47.30, plan's middle 44.81, lever +2.49 m; untuned 888 m along (across -1); the fit on the survey's side -0.43 m, the fitted lever +2.06 m
+  trial 7, the stern weight in water at x -73.96, plan's middle -77.11, lever +3.16 m; untuned 235 m along (across 1); the fit on the survey's side -0.90 m, the fitted lever +2.26 m
+  trial 4: the flag at T 165.70 min (pitch 68.8, roll -80.2); the stern's air 42315 m3 at one atmosphere, 3.58 times her weight in water (12267 t); d* 25.7 m; its pocket at most 18.4 m down (+24 s); FLOATS; 11 s of CPU
+  trial 12, the default fall from the same flag: bow upside down 1597 m (along 1292, across 938); stern upright 212 m (along 207, across 47)
+sideStrength 1 (as before)
+  trial 7, the bow   weight in water at x 47.30, plan's middle 44.81, lever +2.49 m; untuned 888 m along (across -1); the fit on the survey's side -0.43 m, the fitted lever +2.06 m
+  trial 7, the stern weight in water at x -73.96, plan's middle -77.11, lever +3.16 m; untuned 235 m along (across 1); the fit on the survey's side -0.90 m, the fitted lever +2.26 m
+  trial 4: the flag at T 165.70 min (pitch 68.8, roll -80.2); the stern's air 42315 m3 at one atmosphere, 3.58 times her weight in water (12267 t); d* 25.7 m; its pocket at most 18.4 m down (+24 s); FLOATS; 10 s of CPU
+  trial 12, the default fall from the same flag: bow upside down 1597 m (along 1292, across 938); stern upright 212 m (along 207, across 47)
+aDown 0.2786 (as before)
+  trial 7, the bow   weight in water at x 47.30, plan's middle 44.81, lever +2.49 m; untuned 888 m along (across -1); the fit on the survey's side -0.43 m, the fitted lever +2.06 m
+  trial 7, the stern weight in water at x -73.96, plan's middle -77.11, lever +3.16 m; untuned 235 m along (across 1); the fit on the survey's side -0.90 m, the fitted lever +2.26 m
+  trial 4: the flag at T 163.19 min (pitch 68.9, roll -80.2); the stern's air 44236 m3 at one atmosphere, 3.74 times her weight in water (12267 t); d* 27.3 m; its pocket at most 14.4 m down (+23 s); FLOATS; 11 s of CPU
+  trial 12, the default fall from the same flag: bow upside down 1576 m (along 1350, across 812); stern upright 201 m (along 196, across 45)
+zMergeHold 4.6 (as before)
+  trial 7, the bow   weight in water at x 47.30, plan's middle 44.81, lever +2.49 m; untuned 888 m along (across -1); the fit on the survey's side -0.43 m, the fitted lever +2.06 m
+  trial 7, the stern weight in water at x -73.96, plan's middle -77.11, lever +3.16 m; untuned 235 m along (across 1); the fit on the survey's side -0.90 m, the fitted lever +2.26 m
+  trial 4: the flag at T 165.55 min (pitch 68.8, roll -80.2); the stern's air 42331 m3 at one atmosphere, 3.58 times her weight in water (12267 t); d* 25.7 m; its pocket at most 18.4 m down (+24 s); FLOATS; 12 s of CPU
+  trial 12, the default fall from the same flag: bow upside down 1596 m (along 1290, across 939); stern upright 212 m (along 207, across 47)
+fOpen 0.02087 (as before)
+  trial 7, the bow   weight in water at x 47.30, plan's middle 44.81, lever +2.49 m; untuned 888 m along (across -1); the fit on the survey's side -0.43 m, the fitted lever +2.06 m
+  trial 7, the stern weight in water at x -73.96, plan's middle -77.11, lever +3.16 m; untuned 235 m along (across 1); the fit on the survey's side -0.90 m, the fitted lever +2.26 m
+  trial 4: the flag at T 166.83 min (pitch 68.8, roll -80.2); the stern's air 42115 m3 at one atmosphere, 3.56 times her weight in water (12267 t); d* 25.5 m; its pocket at most 18.9 m down (+24 s); FLOATS; 13 s of CPU
+  trial 12, the default fall from the same flag: bow upside down 1603 m (along 1301, across 936); stern upright 220 m (along 215, across 49)
+bunkerBurst 13 (as before)
+  trial 7, the bow   weight in water at x 47.30, plan's middle 44.81, lever +2.49 m; untuned 888 m along (across -1); the fit on the survey's side -0.43 m, the fitted lever +2.06 m
+  trial 7, the stern weight in water at x -73.96, plan's middle -77.11, lever +3.16 m; untuned 235 m along (across 1); the fit on the survey's side -0.90 m, the fitted lever +2.26 m
+  trial 4: the flag at T 160.20 min (pitch 68.8, roll -80.2); the stern's air 43045 m3 at one atmosphere, 3.64 times her weight in water (12267 t); d* 26.3 m; its pocket at most 16.9 m down (+23 s); FLOATS; 13 s of CPU
+  trial 12, the default fall from the same flag: bow upside down 1600 m (along 1292, across 945); stern upright 212 m (along 207, across 47)
+peakVent 0.008 (as before)
+  trial 7, the bow   weight in water at x 47.30, plan's middle 44.81, lever +2.49 m; untuned 888 m along (across -1); the fit on the survey's side -0.43 m, the fitted lever +2.06 m
+  trial 7, the stern weight in water at x -73.96, plan's middle -77.11, lever +3.16 m; untuned 235 m along (across 1); the fit on the survey's side -0.90 m, the fitted lever +2.26 m
+  trial 4: the flag at T 167.79 min (pitch 68.8, roll -80.2); the stern's air 42421 m3 at one atmosphere, 3.58 times her weight in water (12267 t); d* 25.8 m; its pocket at most 18.2 m down (+24 s); FLOATS; 10 s of CPU
+  trial 12, the default fall from the same flag: bow upside down 1596 m (along 1290, across 940); stern upright 212 m (along 207, across 47)
+coalListDeg 2 (as before)
+  trial 7, the bow   weight in water at x 47.30, plan's middle 44.81, lever +2.49 m; untuned 888 m along (across -1); the fit on the survey's side -0.43 m, the fitted lever +2.06 m
+  trial 7, the stern weight in water at x -73.96, plan's middle -77.11, lever +3.16 m; untuned 235 m along (across 1); the fit on the survey's side -0.90 m, the fitted lever +2.26 m
+  trial 4: the flag at T 165.70 min (pitch 68.8, roll -80.2); the stern's air 42315 m3 at one atmosphere, 3.58 times her weight in water (12267 t); d* 25.7 m; its pocket at most 18.4 m down (+24 s); FLOATS; 10 s of CPU
+  trial 12, the default fall from the same flag: bow upside down 1597 m (along 1292, across 938); stern upright 212 m (along 207, across 47)
+GM0 0.8001 (as before)
+  trial 7, the bow   weight in water at x 47.30, plan's middle 44.81, lever +2.49 m; untuned 887 m along (across -1); the fit on the survey's side -0.43 m, the fitted lever +2.07 m
+  trial 7, the stern weight in water at x -73.96, plan's middle -77.11, lever +3.16 m; untuned 235 m along (across 1); the fit on the survey's side -0.90 m, the fitted lever +2.26 m
+  trial 4: the flag at T 166.50 min (pitch 68.8, roll -80.2); the stern's air 42309 m3 at one atmosphere, 3.58 times her weight in water (12267 t); d* 25.7 m; its pocket at most 18.5 m down (+24 s); FLOATS; 11 s of CPU
+  trial 12, the default fall from the same flag: bow upright 1509 m (along 1230, across 875); stern upright 212 m (along 207, across 47)
+every param as before
+  trial 7, the bow   weight in water at x 47.30, plan's middle 44.81, lever +2.49 m; untuned 887 m along (across -1); the fit on the survey's side -0.43 m, the fitted lever +2.07 m
+  trial 7, the stern weight in water at x -73.96, plan's middle -77.11, lever +3.16 m; untuned 235 m along (across 1); the fit on the survey's side -0.90 m, the fitted lever +2.26 m
+  trial 4: the flag at T 158.66 min (pitch 68.8, roll -80.2); the stern's air 42835 m3 at one atmosphere, 3.62 times her weight in water (12267 t); d* 26.1 m; its pocket at most 3784.5 m down (+502 s); SINKS; 7 s of CPU
+  trial 12, the default fall from the same flag: bow upside down 1574 m (along 1202, across 1016); stern upright 212 m (along 206, across 52)
+the preset's build as before (area 0.8196, bunkerOpen null)
+  trial 7, the bow   weight in water at x 47.30, plan's middle 44.81, lever +2.49 m; untuned 887 m along (across -2); the fit on the survey's side -0.42 m, the fitted lever +2.07 m
+  trial 7, the stern weight in water at x -73.96, plan's middle -77.11, lever +3.16 m; untuned 235 m along (across 1); the fit on the survey's side -0.90 m, the fitted lever +2.26 m
+  trial 4: the flag at T 185.58 min (pitch 68.8, roll -80.2); the stern's air 42496 m3 at one atmosphere, 3.59 times her weight in water (12267 t); d* 25.8 m; its pocket at most 18.1 m down (+24 s); FLOATS; 10 s of CPU
+  trial 12, the default fall from the same flag: bow upright 1513 m (along 1231, across 880); stern upright 212 m (along 207, across 47)
+everything as before D4, a 0.40 too
+  trial 7, the bow   weight in water at x 42.12, plan's middle 41.32, lever +0.80 m; untuned 468 m along (across -2); the fit on the survey's side +1.01 m, the fitted lever +1.81 m
+  trial 7, the stern weight in water at x -69.55, plan's middle -70.97, lever +1.43 m; untuned 85 m along (across 1); the fit on the survey's side +0.57 m, the fitted lever +2.00 m
+  trial 4: the flag at T 158.28 min (pitch 68.9, roll -80.2); the stern's air 51923 m3 at one atmosphere, 4.43 times her weight in water (12144 t); d* 34.2 m; its pocket at most 4.3 m down (+1 s); FLOATS; 9 s of CPU
+  trial 12, the default fall from the same flag: bow upright 1203 m (along 909, across 787); stern upright 100 m (along 99, across 9)

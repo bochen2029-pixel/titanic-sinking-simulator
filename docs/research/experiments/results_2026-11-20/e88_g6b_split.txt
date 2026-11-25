@@ -1,0 +1,25 @@
+e88 (G6b) on C:\temp\titanic-wt-split: the 1912 encounter (ahead 257 m, port 47 m), G6's tearAlong [[-200,51.5112,2]]
+  share of the opened area, %            FP    H1    H2    H3   BR6   BR5
+  the preset's split (the water held)   4.0  13.0  21.0  24.0  32.0   6.0   error  0.0
+  the watch with G6 (no openAlong)     10.5  19.8  20.1  22.8  23.4   3.4   error 26.6   alpha 0.21936823159935526; tears x 123.125..51.625
+    the same, the berg's taper 0.06    10.5  19.8  20.1  22.8  23.4   3.4   error 26.6
+    the same, the berg's taper 0.04    10.5  19.8  20.1  22.8  23.4   3.4   error 26.6
+    the same, the berg's taper 0.02    10.5  19.8  20.1  22.8  23.4   3.4   error 26.6
+  (1) a factor per compartment          4.0  13.0  21.0  24.0  32.0   6.0   error  0.1   factors 0.380 0.657 1.044 1.053 1.367 1.769; alpha 0.21939907845366402
+  (2) a ramp, the stem at 0.40 of E     7.5  15.9  18.9  24.6  28.7   4.4   error 14.0
+  (2) a ramp, the stem at 0.20 of E     6.1  14.2  18.5  25.8  30.8   4.6   error 10.1
+  (2) a ramp, the stem at 0.10 of E     5.2  13.1  18.1  26.2  32.4   4.9   error  7.9
+  (2) a ramp, the stem at 0.10 of E     5.2  13.1  18.1  26.2  32.4   4.9   error  7.9
+  (2) the best ramp, refound            5.1  13.0  18.0  26.0  32.7   5.2   error  7.7   the stem at 0.10 of E; alpha 0.3360753387848532
+
+  today's numbers at 0.7506 m2: the preset founders at T 167.03 (its calibration score J 26.96); the watch:
+    with G6 alone                 T 178.67
+    (1) a factor per compartment  T 168.77
+    (2) the best ramp             T 169.95
+
+  e83's free-area refit at 0.8014 m2: the preset founders at T 156.88 (its calibration score J 9.20); the watch:
+    with G6 alone                 T 166.53
+    (1) a factor per compartment  T 158.88
+    (2) the best ramp             T 159.96
+
+(2026-11-21T02:20:57.614Z)

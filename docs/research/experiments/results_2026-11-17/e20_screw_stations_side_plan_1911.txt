@@ -1,0 +1,42 @@
+e20: the screws' stations from Engineering's side plan of 1911 (Wikimedia Commons), read by pixel scan
+
+The scale and the plan's registration at the stern
+  scale bar: 0 to 100 ft 396.5 px, 300 to 400 ft 397.0 px -> 3.9675 px a foot
+  ticks at 20, 50, 70, 80, 90 ft: 20.2, 50.0, 70.3, 80.2, 90.2 ft
+  length between perpendiculars, the stock's line to the stem at the load waterline: 851.7 ft (850 ft)
+  bulkhead P: 10.79 m ahead of the stock; the model's 10.97 m (-0.18)
+  bulkhead O: 28.42 m ahead of the stock; the model's 28.35 m (+0.08)
+  bulkhead N: 45.02 m ahead of the stock; the model's 44.81 m (+0.21)
+  depth of the double bottom: 5.23 ft (63 in = 5.25 ft at the centre line)
+  the rudder, chord from the stock against R1's trace of the castings photograph (scaled to the plans' area):
+     7.18 m above the heel: plan 4.76 m, R1 4.44 m
+     6.26 m above the heel: plan 4.69 m, R1 4.42 m
+     5.34 m above the heel: plan 4.57 m, R1 4.35 m
+     4.42 m above the heel: plan 4.26 m, R1 4.19 m
+     3.50 m above the heel: plan 3.80 m, R1 3.89 m
+     2.57 m above the heel: plan 3.19 m, R1 3.45 m
+     1.96 m above the heel: plan 2.73 m, R1 3.08 m
+     1.34 m above the heel: plan 2.11 m, R1 2.47 m
+     0.73 m above the heel: plan 1.31 m, R1 1.74 m
+  the rudder's heel 0.65 m above the keel (the drawing's bet 0.30 m; under a metre, not moved)
+
+The stations (m ahead of the rudder's stock; heights above the keel)
+  wing screws, station           plan   9.72 m   drawing   6.74 m   MOVE (2.98)
+  wing screws, hub height        plan   3.63 m   drawing   3.80 m   within a metre (-0.17)
+  centre screw, station          plan   3.03 m   drawing   1.90 m   MOVE (1.13)
+  centre screw, hub height       plan   3.75 m   drawing   4.82 m   MOVE (-1.07)
+  aperture, after side           plan   0.77 m   drawing   0.30 m   within a metre (0.47)
+  aperture, fore side            plan   4.34 m   drawing   3.60 m   within a metre (0.74)
+  aperture, sole                 plan   0.94 m   drawing   1.90 m   within a metre (-0.96)
+  aperture, arch                 plan   7.24 m   drawing   7.90 m   within a metre (-0.66)
+  the centre screw (radius 2.59 m) at the drawing's 4.82 m would reach 7.41 m, above the plan's arch at 7.24 m; at the plan's 3.75 m it spans 1.16 to 6.34 m
+  reading: hubs +-1.5 px (+-0.12 m), the scale +-0.3 %; the plan's own drafting: its rudder is within 0.4 m of R1's trace,
+  its bulkheads within 0.2 m of the model's; the drawn blades are 8 to 12 % short of the screws' diameters (a symbol), so
+  their hubs are read, not their tips
+
+Verdict (R2's rule: move what differs by more than a metre): the wing screws 9.72 m ahead of the stock (was 6.74),
+the centre screw 3.03 m ahead and 3.75 m up (was 1.90 and 4.82; the turbine's axis stays at 4.82 m, R1, so its
+shaft falls about 1.07 m aft). The aperture moves with the screw it holds (each edge within a metre, but the old
+sole at 1.90 m would cut the moved screw): the plan's. The wing shafts' height (3.63 against 3.80) is kept.
+The model's hull clears the wing discs at the new station: 0.45 m (0.064 D).
+In the plant (core/systems.js): [{"x":9.72,"z":3.8},{"x":3.03,"z":3.75},{"x":9.72,"z":3.8}]

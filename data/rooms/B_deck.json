@@ -1,0 +1,308 @@
+{
+  "deck": "B",
+  "title": "Her rooms on B deck (the bridge deck): R3, a sourced table of facts",
+  "format": 1,
+  "written": "2026-11-20, by the R3 session (Claude Opus 5.5), under docs/research/RESEARCH_rooms_plans_licence_v1_1_2026-11-20.md, on the coordinator's word after D deck and the orlop",
+  "rules": "Facts only: which room, where, how big, which door to which. No image or drawing of any plan is kept. Every row cites the reference read and the original checked, or says it was not checked. Bets are tagged as bets.",
+  "reference": "ET: Encyclopedia Titanica's free deck plans, B deck (https://www.encyclopedia-titanica.org/titanic-deckplans/b-deck.html; drawn by Bruce Beveridge for Titanic The Ship Magnificent, The History Press 2008), read on the page in the built-in browser on 2026-11-20, nothing saved",
+  "original": "Shipbuilder 1911: The Shipbuilder, Midsummer 1911 (the Olympic and Titanic number), its plate of the bridge deck (B), as reproduced by GG Archives (https://www.ggarchives.com/OT/Titanic/25-ImageLibrary/TheShipbuilder-10-Design-SpecialPlates.html); too small to read room by room, not opened this time.",
+  "how": [
+    "Walls by her frames, as on C deck: the plan's scale from its own frame ticks (30.85 px a frame amidships: 0.0975 ft a pixel), the midship section between the ticks of 1A and 1F (by the printed 2, 4, 6, 8 and 10 aft of it), a ruler of her frames drawn over the page at that scale; the plan's printed frames at 140A and 140F fall on it within a few inches. Walls read against the ruler at 1:2 (to about a frame) and 1:1; the house's sides, the passages and the house's front by pixel profiles at 1:1 (rows tagged 'profiled').",
+    "Frames to feet: E deck's anchors (data/rooms/E_deck.json). The rows run from the house's after end to its front; the forecastle and the poop on B deck are weather decks with no rooms (capstans, cranes, hatches, the docking bridge over the poop).",
+    "y: feet from the centreline, port positive, at 0.0979 ft a pixel (945 px between her sides amidships). 'shell+' and 'shell-' are her side; in metres the tool puts it at the model's half-breadth halfway between B and A decks [stand-in for the reference's shell].",
+    "Block level: a row is a block of rooms between passages (cabin numbers in plan), a public room, a casing, a stair or a service block.",
+    "No watertight bulkhead reaches B deck; the table's bulkheads is empty.",
+    "Doors: 2 ft 3 in by default [bet], unless the reference writes one: the doors in her side on the second-class promenade (a folding-down gangway door 10 ft 0 in clear; passenger doors of 4 ft 9 in and 4 ft 0 in) and the 4 ft 6 in doors at the house's front. Stairs are listed among the doors with no width.",
+    "Derived fields (x_m, y_m, poly_m, area_m2, zone, slab, plan_compartment) are written by: node tools/rooms_table.js --write data/rooms/B_deck.json"
+  ],
+  "frames": {
+    "note": "E deck's anchors (her frames, feet forward of amidships).",
+    "anchors": [
+      [
+        "148A",
+        -423.99
+      ],
+      [
+        "140A",
+        -406.04
+      ],
+      [
+        "139A",
+        -403.74
+      ],
+      [
+        "130A",
+        -383.11
+      ],
+      [
+        "128A",
+        -377.85
+      ],
+      [
+        "122A",
+        -362.72
+      ],
+      [
+        "111A",
+        -332.47
+      ],
+      [
+        "110A",
+        -329.55
+      ],
+      [
+        "108A",
+        -323.7
+      ],
+      [
+        "100A",
+        -299.41
+      ],
+      [
+        "93A",
+        -278.24
+      ],
+      [
+        "88A",
+        -263.21
+      ],
+      [
+        "72A",
+        -215.4
+      ],
+      [
+        "68A",
+        -203.21
+      ],
+      [
+        "53A",
+        -157.99
+      ],
+      [
+        "46A",
+        -137.06
+      ],
+      [
+        "30A",
+        -88.87
+      ],
+      [
+        "26A",
+        -76.87
+      ],
+      [
+        "16A",
+        -46.62
+      ],
+      [
+        "8A",
+        -22.62
+      ],
+      [
+        "1A",
+        -1.5
+      ],
+      [
+        "1F",
+        1.5
+      ],
+      [
+        "4F",
+        10.5
+      ],
+      [
+        "14F",
+        40.5
+      ],
+      [
+        "26F",
+        76.5
+      ],
+      [
+        "38F",
+        113.08
+      ],
+      [
+        "48F",
+        142.74
+      ],
+      [
+        "58F",
+        172.89
+      ],
+      [
+        "72F",
+        215.13
+      ],
+      [
+        "84F",
+        251.13
+      ],
+      [
+        "100F",
+        297.96
+      ],
+      [
+        "110F",
+        324.79
+      ],
+      [
+        "122F",
+        354.06
+      ],
+      [
+        "130F",
+        372.21
+      ],
+      [
+        "140F",
+        393.28
+      ],
+      [
+        "154F",
+        421.47
+      ],
+      [
+        "stem",
+        425.33
+      ]
+    ]
+  },
+  "bulkheads": {
+    "note": "None: no watertight bulkhead reaches B deck, and the reference marks none."
+  },
+  "side": {
+    "note": "Read 2026-11-21 between 05:20 and 05:45 CST by the B1+B2 lane with R3's method and line test, both sides, in the built-in browser (nothing saved), from 80A to 80F only, for C3 (the epoch's hull ends, D80; G20's G14 half): it removes R3's bet of C deck's side for the C-to-B band there. B deck's ends (the poop, the forecastle) are not read. Every 5 frames, no reading off the smooth line through its neighbours by more than 0.1 m. For BACKLOG G14 (the hull's ends): tools/rooms_table_tests.js sets each against the model's half-breadth.",
+    "unit": "ft from the centreline to her outer line as the plan draws it, port and starboard, read on the page at 1:1 by pixel profile: from her outside inward, the first dark pixel that lies on a continuous line (a dark path running at least 28 px each way along her), at three columns 6 px apart about the frame's tick; the median of the three. Annotations outside her (labels, dimension arrows) fail the line test. null: no reading (the line broken there by fittings).",
+    "at": [
+      [
+        "80A",
+        45.41,
+        45.41
+      ],
+      [
+        "75A",
+        45.6,
+        45.7
+      ],
+      [
+        "70A",
+        45.9,
+        45.99
+      ],
+      [
+        "65A",
+        46.09,
+        46.19
+      ],
+      [
+        "60A",
+        46.09,
+        46.19
+      ],
+      [
+        "55A",
+        46.09,
+        46.09
+      ],
+      [
+        "50A",
+        46.09,
+        46.09
+      ],
+      [
+        "45A",
+        46.09,
+        46.09
+      ],
+      [
+        "40A",
+        46.09,
+        46.09
+      ],
+      [
+        "40F",
+        45.8,
+        45.9
+      ],
+      [
+        "45F",
+        45.7,
+        45.7
+      ],
+      [
+        "50F",
+        45.5,
+        45.6
+      ],
+      [
+        "55F",
+        45.31,
+        45.41
+      ],
+      [
+        "60F",
+        45.11,
+        45.11
+      ],
+      [
+        "65F",
+        44.82,
+        44.92
+      ],
+      [
+        "70F",
+        44.53,
+        44.62
+      ],
+      [
+        "75F",
+        44.13,
+        44.23
+      ],
+      [
+        "80F",
+        43.84,
+        43.84
+      ]
+    ]
+  },
+  "rows": [
+    {"id":"B-001","kind":"stair","name":"Second-class aft entrance, a house standing on the open after end of B deck: stairs down to C deck and the light well","plan":"2ND CL. ENTRANCE*; WELL; D (two)","x":["103A","94.5A"],"y":[-10.1,10.1],"doors":[{"width_ft":2.25,"width":"default","to":"the open after end of B deck","n":2,"at":"94.5A"},{"to":"C deck (stairs down)","kind":"stair","width_ft":null,"width":"a stair, no door"}],"source":"ET, B deck, frames 103A to 94.5A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-94.037,-86.19],"y_m":[-3.078,3.078],"poly_m":[[-94.04,-3.08],[-86.19,-3.08],[-86.19,3.08],[-94.04,3.08]],"area_m2":48.31,"pieces":[{"zone":13,"side":0,"slab":218,"area":24.155,"key":"13:P:B"},{"zone":13,"side":1,"slab":225,"area":24.155,"key":"13:S:B"}],"zone":[13],"slab":[218,225],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-002","kind":"service","name":"Second-class smoke room's bar, port, with its wine cooler and dresser","plan":"2ND CL. SMOKE RM. BAR; WINE COOLER; DRESSER","x":["94A","90.5A"],"y":[15.7,31.2],"doors":[{"width_ft":2.25,"width":"default","to":"B-005","at":"90.5A"}],"source":"ET, B deck, frames 94A to 90.5A, port","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-85.729,-82.517],"y_m":[4.785,9.51],"poly_m":[[-85.73,4.79],[-82.52,4.79],[-82.52,9.51],[-85.73,9.51]],"area_m2":15.18,"pieces":[{"zone":12,"side":0,"slab":200,"area":10.476,"key":"12:P:B"},{"zone":13,"side":0,"slab":218,"area":4.701,"key":"13:P:B"}],"zone":[12,13],"slab":[200,218],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-003","kind":"service","name":"Second-class smoke room's lavatory, starboard","plan":"2ND CL. SMOKE ROOM LAV.","x":["94A","90.5A"],"y":[-31.2,-15.7],"doors":[{"width_ft":2.25,"width":"default","to":"B-005","at":"90.5A"}],"source":"ET, B deck, frames 94A to 90.5A, starboard","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-85.729,-82.517],"y_m":[-9.51,-4.785],"poly_m":[[-85.73,-9.51],[-82.52,-9.51],[-82.52,-4.79],[-85.73,-4.79]],"area_m2":15.18,"pieces":[{"zone":12,"side":1,"slab":209,"area":10.476,"key":"12:S:B"},{"zone":13,"side":1,"slab":225,"area":4.701,"key":"13:S:B"}],"zone":[12,13],"slab":[209,225],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-004","kind":"service","name":"Second-class smoke room, its after bay between the bar and the lavatory","plan":"2ND CLASS SMOKE ROOM*; 5' 4\" X 3' 6\" (windows in its after wall)","x":["92A","90.5A"],"y":[-15.7,15.7],"doors":[{"to":"B-005","at":"90.5A","width_ft":null,"width":"open: one room with B-005"},{"width_ft":2.25,"width":"default","to":"the open after end of B deck","at":"92A"}],"source":"ET, B deck, frames 92A to 90.5A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-83.891,-82.517],"y_m":[-4.785,4.785],"poly_m":[[-83.89,-4.79],[-82.52,-4.79],[-82.52,4.79],[-83.89,4.79]],"area_m2":13.15,"pieces":[{"zone":12,"side":0,"slab":200,"area":6.577,"key":"12:P:B"},{"zone":12,"side":1,"slab":209,"area":6.577,"key":"12:S:B"}],"zone":[12],"slab":[200,209],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-005","kind":"service","name":"Second-class smoke room","plan":"2ND CLASS SMOKE ROOM*; 2ND CLASS ENTRANCE, 2ND CLASS SMOKE ROOM LAVATORIES, BAR ETC. 26 OFF PATTERN 'L' TEAK FRAMED 3'8\" X 25\"","x":["90.5A","80.5A"],"y":[-31.2,31.2],"doors":[{"width_ft":2.25,"width":"default","to":"B-006","at":"80.5A","n":2}],"source":"ET, B deck, frames 90.5A to 80.5A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-82.517,-73.396],"y_m":[-9.51,9.51],"poly_m":[[-82.52,-9.51],[-73.4,-9.51],[-73.4,9.51],[-82.52,9.51]],"area_m2":173.49,"pieces":[{"zone":12,"side":0,"slab":200,"area":86.743,"key":"12:P:B"},{"zone":12,"side":1,"slab":209,"area":86.743,"key":"12:S:B"}],"zone":[12],"slab":[200,209],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-006","kind":"stair","name":"Second-class forward entrance: stairs up to A deck and down to C deck, the landing and two vestibules","plan":"2ND CLASS ENTRANCE*; UP; D; LANDING; VEST (two)","x":["80.5A","74.5A"],"y":[-31.2,31.2],"doors":[{"width_ft":2.25,"width":"default","to":"B-007","at":"31.2 ft"},{"width_ft":2.25,"width":"default","to":"B-008","at":"-31.2 ft"},{"to":"A deck (stairs up)","kind":"stair","width_ft":null,"width":"a stair, no door"},{"to":"C deck (stairs down)","kind":"stair","width_ft":null,"width":"a stair, no door"}],"source":"ET, B deck, frames 80.5A to 74.5A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-73.396,-67.931],"y_m":[-9.51,9.51],"poly_m":[[-73.4,-9.51],[-67.93,-9.51],[-67.93,9.51],[-73.4,9.51]],"area_m2":103.94,"pieces":[{"zone":12,"side":0,"slab":200,"area":51.968,"key":"12:P:B"},{"zone":12,"side":1,"slab":209,"area":51.968,"key":"12:S:B"}],"zone":[12],"slab":[200,209],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-007","kind":"passage","name":"Second-class promenade, port, between the house and her side on the after end of B deck (13 in waterways); in her side a folding-down gangway door 10 ft 0 in clear and passenger doors of 4 ft 9 in and 4 ft 0 in","plan":"2ND CLASS PROMENADE; 13\" WATERWAY P&S; FOLDING DOWN GANGWAY DOOR 10' 0\" CLEAR OPENING P&S; 4' 9\" PASSENGER DOOR P&S; 4' 0\" PASSENGER DOOR P&S; CRANE POST P&S","x":["99A","74.5A"],"y":[31.2,"shell+"],"doors":[{"to":"the sea (a gangway door in her side)","at":"about 94A","kind":"side door","width_ft":10,"width":"plan: FOLDING DOWN GANGWAY DOOR 10' 0\" CLEAR OPENING P&S"},{"to":"the sea (a passenger door in her side)","at":"about 82A","kind":"side door","width_ft":4.75,"width":"plan: 4' 9\" PASSENGER DOOR P&S"},{"to":"the sea (a passenger door in her side)","at":"about 78A","kind":"side door","width_ft":4,"width":"plan: 4' 0\" PASSENGER DOOR P&S"},{"width_ft":2.25,"width":"default","to":"the open after end of B deck","at":"99A"}],"source":"ET, B deck, frames 99A to 74.5A, port","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-90.338,-67.931],"y_m":[9.51,13.343],"poly_m":[[-90.34,9.51],[-89.36,9.51],[-88.39,9.51],[-87.42,9.51],[-86.44,9.51],[-85.47,9.51],[-84.49,9.51],[-83.52,9.51],[-82.54,9.51],[-81.57,9.51],[-80.6,9.51],[-79.62,9.51],[-78.65,9.51],[-77.67,9.51],[-76.7,9.51],[-75.72,9.51],[-74.75,9.51],[-73.78,9.51],[-72.8,9.51],[-71.83,9.51],[-70.85,9.51],[-69.88,9.51],[-68.91,9.51],[-67.93,9.51],[-67.93,13.79],[-68.91,13.77],[-69.88,13.74],[-70.85,13.71],[-71.83,13.68],[-72.8,13.64],[-73.78,13.6],[-74.75,13.56],[-75.72,13.52],[-76.7,13.47],[-77.67,13.42],[-78.65,13.37],[-79.62,13.32],[-80.6,13.26],[-81.57,13.19],[-82.54,13.13],[-83.52,13.06],[-84.49,12.98],[-85.47,12.91],[-86.44,12.83],[-87.42,12.74],[-88.39,12.65],[-89.36,12.56],[-90.34,12.46]],"area_m2":84.27,"pieces":[{"zone":12,"side":0,"slab":200,"area":66.257,"key":"12:P:B"},{"zone":13,"side":0,"slab":218,"area":18.017,"key":"13:P:B"}],"zone":[12,13],"slab":[200,218],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-008","kind":"passage","name":"Second-class promenade, starboard (13 in waterways); in her side a folding-down gangway door 10 ft 0 in clear and passenger doors of 4 ft 9 in and 4 ft 0 in","plan":"2ND CLASS PROMENADE; 13\" WATERWAY P&S; FOLDING DOWN GANGWAY DOOR 10' 0\" CLEAR OPENING P&S; 4' 9\" PASSENGER DOOR P&S; 4' 0\" PASSENGER DOOR P&S","x":["99A","74.5A"],"y":["shell-",-31.2],"doors":[{"to":"the sea (a gangway door in her side)","at":"about 94A","kind":"side door","width_ft":10,"width":"plan: FOLDING DOWN GANGWAY DOOR 10' 0\" CLEAR OPENING P&S"},{"to":"the sea (a passenger door in her side)","at":"about 82A","kind":"side door","width_ft":4.75,"width":"plan: 4' 9\" PASSENGER DOOR P&S"},{"to":"the sea (a passenger door in her side)","at":"about 78A","kind":"side door","width_ft":4,"width":"plan: 4' 0\" PASSENGER DOOR P&S"},{"width_ft":2.25,"width":"default","to":"the open after end of B deck","at":"99A"}],"source":"ET, B deck, frames 99A to 74.5A, starboard","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-90.338,-67.931],"y_m":[-13.343,-9.51],"poly_m":[[-90.34,-12.46],[-89.36,-12.56],[-88.39,-12.65],[-87.42,-12.74],[-86.44,-12.83],[-85.47,-12.91],[-84.49,-12.98],[-83.52,-13.06],[-82.54,-13.13],[-81.57,-13.19],[-80.6,-13.26],[-79.62,-13.32],[-78.65,-13.37],[-77.67,-13.42],[-76.7,-13.47],[-75.72,-13.52],[-74.75,-13.56],[-73.78,-13.6],[-72.8,-13.64],[-71.83,-13.68],[-70.85,-13.71],[-69.88,-13.74],[-68.91,-13.77],[-67.93,-13.79],[-67.93,-9.51],[-68.91,-9.51],[-69.88,-9.51],[-70.85,-9.51],[-71.83,-9.51],[-72.8,-9.51],[-73.78,-9.51],[-74.75,-9.51],[-75.72,-9.51],[-76.7,-9.51],[-77.67,-9.51],[-78.65,-9.51],[-79.62,-9.51],[-80.6,-9.51],[-81.57,-9.51],[-82.54,-9.51],[-83.52,-9.51],[-84.49,-9.51],[-85.47,-9.51],[-86.44,-9.51],[-87.42,-9.51],[-88.39,-9.51],[-89.36,-9.51],[-90.34,-9.51]],"area_m2":84.27,"pieces":[{"zone":12,"side":1,"slab":209,"area":66.257,"key":"12:S:B"},{"zone":13,"side":1,"slab":225,"area":18.017,"key":"13:S:B"}],"zone":[12,13],"slab":[209,225],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-009","kind":"service","name":"The a la carte restaurant, from the port side across the middle, with its buffet and sideboard","plan":"RESTAURANT; BUFFET; SIDEBOARD; JARDINIERES P&S","x":["74.5A","61.5A"],"y":[-24.5,"shell+"],"doors":[{"width_ft":2.25,"width":"default","to":"B-011","n":2,"at":"61.5A"}],"source":"ET, B deck, frames 74.5A to 61.5A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-67.931,-55.966],"y_m":[-7.468,13.903],"poly_m":[[-67.93,-7.47],[-66.93,-7.47],[-65.94,-7.47],[-64.94,-7.47],[-63.94,-7.47],[-62.95,-7.47],[-61.95,-7.47],[-60.95,-7.47],[-59.95,-7.47],[-58.96,-7.47],[-57.96,-7.47],[-56.96,-7.47],[-55.97,-7.47],[-55.97,13.96],[-56.96,13.95],[-57.96,13.94],[-58.96,13.94],[-59.95,13.93],[-60.95,13.92],[-61.95,13.9],[-62.95,13.89],[-63.94,13.87],[-64.94,13.86],[-65.94,13.84],[-66.93,13.81],[-67.93,13.79]],"area_m2":255.58,"pieces":[{"zone":11,"side":0,"slab":182,"area":133.081,"key":"11:P:B"},{"zone":11,"side":1,"slab":191,"area":71.437,"key":"11:S:B"},{"zone":12,"side":0,"slab":200,"area":33.148,"key":"12:P:B"},{"zone":12,"side":1,"slab":209,"area":17.914,"key":"12:S:B"}],"zone":[11,12],"slab":[182,191,200,209],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-010","kind":"service","name":"Cafe Parisien, starboard","plan":"CAFE PARISIEN; 3 OFF BRASS FRAMED PATTERN 'O' 5' 10\" X 3' 5\"","x":["74.5A","49.5A"],"y":["shell-",-24.5],"doors":[{"width_ft":2.25,"width":"default","to":"B-013","at":"49.5A"}],"source":"ET, B deck, frames 74.5A to 49.5A, starboard","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-67.931,-44.966],"y_m":[-13.953,-7.468],"poly_m":[[-67.93,-13.79],[-66.93,-13.81],[-65.93,-13.84],[-64.94,-13.86],[-63.94,-13.87],[-62.94,-13.89],[-61.94,-13.9],[-60.94,-13.92],[-59.94,-13.93],[-58.94,-13.94],[-57.95,-13.94],[-56.95,-13.95],[-55.95,-13.96],[-54.95,-13.96],[-53.95,-13.96],[-52.95,-13.97],[-51.96,-13.97],[-50.96,-13.97],[-49.96,-13.97],[-48.96,-13.97],[-47.96,-13.97],[-46.96,-13.97],[-45.96,-13.98],[-44.97,-13.98],[-44.97,-7.47],[-45.96,-7.47],[-46.96,-7.47],[-47.96,-7.47],[-48.96,-7.47],[-49.96,-7.47],[-50.96,-7.47],[-51.96,-7.47],[-52.95,-7.47],[-53.95,-7.47],[-54.95,-7.47],[-55.95,-7.47],[-56.95,-7.47],[-57.95,-7.47],[-58.94,-7.47],[-59.94,-7.47],[-60.94,-7.47],[-61.94,-7.47],[-62.94,-7.47],[-63.94,-7.47],[-64.94,-7.47],[-65.93,-7.47],[-66.93,-7.47],[-67.93,-7.47]],"area_m2":148.41,"pieces":[{"zone":10,"side":1,"slab":173,"area":20.776,"key":"10:S:B"},{"zone":11,"side":1,"slab":191,"area":112.395,"key":"11:S:B"},{"zone":12,"side":1,"slab":209,"area":15.235,"key":"12:S:B"}],"zone":[10,11,12],"slab":[173,191,209],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-011","kind":"service","name":"The restaurant's galley and pantry: the galley with its range, grill and hot presses, the pantry, scullery and copper wash-ups, the confectionery, the butcher's larder and fish, the chef's office and cabin, an office, light and air to the second-class galley, and a recess for coats and hats","plan":"GALLEY**; PANTRY**; SCULLERY**; COPPER WASH UPS; SINK; SLOP CHUTE; TABLE; CONFECTIONARY; BUTCHER'S LARDER; FISH; CHEF'S OFFICE; CHEF'S CABIN; OFFICE; RANGE; GRILL; HOT PRESS; DRESSER; LIGHT & AIR TO 2ND CL GALLEY; RECESS FOR COAT & HAT HOOKS; 4 OFF TEAK FRAMED PATTERN 'E' 4'6\" X 26\"","x":["61.5A","49.5A"],"y":[-24.5,"shell+"],"minus":["B-012"],"doors":[{"width_ft":2.25,"width":"default","to":"B-013","at":"49.5A"}],"source":"ET, B deck, frames 61.5A to 49.5A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-55.966,-44.966],"y_m":[-7.468,13.972],"poly_m":[[-55.97,-7.47],[-55.05,-7.47],[-54.13,-7.47],[-53.22,-7.47],[-52.3,-7.47],[-51.38,-7.47],[-50.47,-7.47],[-49.55,-7.47],[-48.63,-7.47],[-47.72,-7.47],[-46.8,-7.47],[-45.88,-7.47],[-44.97,-7.47],[-44.97,13.98],[-45.88,13.98],[-46.8,13.97],[-47.72,13.97],[-48.63,13.97],[-49.55,13.97],[-50.47,13.97],[-51.38,13.97],[-52.3,13.97],[-53.22,13.97],[-54.13,13.96],[-55.05,13.96],[-55.97,13.96]],"area_m2":218.47,"pieces":[{"zone":10,"side":0,"slab":164,"area":44.618,"key":"10:P:B"},{"zone":10,"side":1,"slab":173,"area":23.842,"key":"10:S:B"},{"zone":11,"side":0,"slab":182,"area":109.053,"key":"11:P:B"},{"zone":11,"side":1,"slab":191,"area":58.302,"key":"11:S:B"}],"zone":[10,11],"slab":[164,173,182,191],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-012","kind":"casing","name":"Turbine engine casing, in the galley","plan":"TURBINE ENGINE CASING","x":["60.5A","57A"],"y":[-10.8,6.9],"doors":[],"source":"ET, B deck, frames 60.5A to 57A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-55.047,-51.831],"y_m":[-3.292,2.103],"poly_m":[[-55.05,-3.29],[-51.83,-3.29],[-51.83,2.1],[-55.05,2.1]],"area_m2":17.35,"pieces":[{"zone":11,"side":0,"slab":182,"area":6.764,"key":"11:P:B"},{"zone":11,"side":1,"slab":191,"area":10.587,"key":"11:S:B"}],"zone":[11],"slab":[182,191],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-013","kind":"stair","name":"The restaurant's reception room, with the first-class aft staircase (up to A deck, down to C deck)","plan":"RESTAURANT RECEPTION ROOM; UP; D","x":["49.5A","39A"],"y":[-14.85,14.85],"doors":[{"width_ft":2.25,"width":"default","to":"B-015","at":"39A"},{"width_ft":2.25,"width":"default","to":"B-016","at":"39A"},{"to":"A deck (the staircase up)","kind":"stair","width_ft":null,"width":"a stair, no door"},{"to":"C deck (the staircase down)","kind":"stair","width_ft":null,"width":"a stair, no door"}],"source":"ET, B deck, frames 49.5A to 39A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-44.966,-35.35],"y_m":[-4.526,4.526],"poly_m":[[-44.97,-4.53],[-35.35,-4.53],[-35.35,4.53],[-44.97,4.53]],"area_m2":87.05,"pieces":[{"zone":10,"side":0,"slab":164,"area":43.524,"key":"10:P:B"},{"zone":10,"side":1,"slab":173,"area":43.524,"key":"10:S:B"}],"zone":[10],"slab":[164,173],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-014","kind":"casing","name":"Reciprocating engine casing","plan":"RECIPROCATING ENGINE CASING; BAIZED DOORS","x":["39A","29.5A"],"y":[-10,10],"doors":[],"source":"ET, B deck, frames 39A to 29.5A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-35.35,-26.63],"y_m":[-3.048,3.048],"poly_m":[[-35.35,-3.05],[-26.63,-3.05],[-26.63,3.05],[-35.35,3.05]],"area_m2":53.15,"pieces":[{"zone":9,"side":0,"slab":148,"area":1.514,"key":"9:P:B"},{"zone":9,"side":1,"slab":156,"area":1.514,"key":"9:S:B"},{"zone":10,"side":0,"slab":164,"area":25.062,"key":"10:P:B"},{"zone":10,"side":1,"slab":173,"area":25.062,"key":"10:S:B"}],"zone":[9,10],"slab":[148,156,164,173],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-015","kind":"passage","name":"Port fore-and-aft passage, from the aft staircase to the forward entrance (4.85 ft between its walls)","plan":"(passage); BAIZED DOORS","x":["39A","29F"],"y":[10,14.85],"doors":[{"width_ft":2.25,"width":"default","to":"B-013","at":"39A"},{"width_ft":2.25,"width":"default","to":"B-029","at":"29F"}],"source":"ET, B deck, frames 39A to 29F, port","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-35.35,26.105],"y_m":[3.048,4.526],"poly_m":[[-35.35,3.05],[26.1,3.05],[26.1,4.53],[-35.35,4.53]],"area_m2":90.85,"pieces":[{"zone":6,"side":0,"slab":94,"area":9.753,"key":"6:P:B"},{"zone":7,"side":0,"slab":112,"area":25.683,"key":"7:P:B"},{"zone":8,"side":0,"slab":130,"area":27.035,"key":"8:P:B"},{"zone":9,"side":0,"slab":148,"area":16.221,"key":"9:P:B"},{"zone":10,"side":0,"slab":164,"area":12.155,"key":"10:P:B"}],"zone":[6,7,8,9,10],"slab":[94,112,130,148,164],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-016","kind":"passage","name":"Starboard fore-and-aft passage, from the aft staircase to the forward entrance (4.85 ft between its walls)","plan":"(passage); BAIZED DOORS","x":["39A","29F"],"y":[-14.85,-10],"doors":[{"width_ft":2.25,"width":"default","to":"B-013","at":"39A"},{"width_ft":2.25,"width":"default","to":"B-029","at":"29F"}],"source":"ET, B deck, frames 39A to 29F, starboard","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-35.35,26.105],"y_m":[-4.526,-3.048],"poly_m":[[-35.35,-4.53],[26.1,-4.53],[26.1,-3.05],[-35.35,-3.05]],"area_m2":90.85,"pieces":[{"zone":6,"side":1,"slab":103,"area":9.753,"key":"6:S:B"},{"zone":7,"side":1,"slab":121,"area":25.683,"key":"7:S:B"},{"zone":8,"side":1,"slab":139,"area":27.035,"key":"8:S:B"},{"zone":9,"side":1,"slab":156,"area":16.221,"key":"9:S:B"},{"zone":10,"side":1,"slab":173,"area":12.155,"key":"10:S:B"}],"zone":[6,7,8,9,10],"slab":[103,121,139,156,173],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-017","kind":"cabin","name":"Staterooms B 98 to B 90, port, beside the aft staircase","plan":"B 98; B 96; B 94; B 92; B 90","x":["49.5A","29.5A"],"y":[14.85,"shell+"],"doors":[{"width_ft":2.25,"width":"default","to":"B-015","n":5,"at":"14.85 ft"}],"source":"ET, B deck, frames 49.5A to 29.5A, port","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-44.966,-26.63],"y_m":[4.526,13.978],"poly_m":[[-44.97,4.53],[-44,4.53],[-43.04,4.53],[-42.07,4.53],[-41.11,4.53],[-40.14,4.53],[-39.18,4.53],[-38.21,4.53],[-37.25,4.53],[-36.28,4.53],[-35.32,4.53],[-34.35,4.53],[-33.39,4.53],[-32.42,4.53],[-31.46,4.53],[-30.49,4.53],[-29.53,4.53],[-28.56,4.53],[-27.6,4.53],[-26.63,4.53],[-26.63,13.98],[-27.6,13.98],[-28.56,13.98],[-29.53,13.98],[-30.49,13.98],[-31.46,13.98],[-32.42,13.98],[-33.39,13.98],[-34.35,13.98],[-35.32,13.98],[-36.28,13.98],[-37.25,13.98],[-38.21,13.98],[-39.18,13.98],[-40.14,13.98],[-41.11,13.98],[-42.07,13.98],[-43.04,13.98],[-44,13.98],[-44.97,13.98]],"area_m2":173.3,"pieces":[{"zone":9,"side":0,"slab":148,"area":4.697,"key":"9:P:B"},{"zone":10,"side":0,"slab":164,"area":168.605,"key":"10:P:B"}],"zone":[9,10],"slab":[148,164],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-018","kind":"cabin","name":"Staterooms B 97 to B 87, starboard, beside the aft staircase","plan":"B 97; B 95; B 93; B 91; B 89; B 87","x":["49.5A","29.5A"],"y":["shell-",-14.85],"doors":[{"width_ft":2.25,"width":"default","to":"B-016","n":6,"at":"-14.85 ft"}],"source":"ET, B deck, frames 49.5A to 29.5A, starboard","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-44.966,-26.63],"y_m":[-13.978,-4.526],"poly_m":[[-44.97,-13.98],[-44,-13.98],[-43.04,-13.98],[-42.07,-13.98],[-41.11,-13.98],[-40.14,-13.98],[-39.18,-13.98],[-38.21,-13.98],[-37.25,-13.98],[-36.28,-13.98],[-35.32,-13.98],[-34.35,-13.98],[-33.39,-13.98],[-32.42,-13.98],[-31.46,-13.98],[-30.49,-13.98],[-29.53,-13.98],[-28.56,-13.98],[-27.6,-13.98],[-26.63,-13.98],[-26.63,-4.53],[-27.6,-4.53],[-28.56,-4.53],[-29.53,-4.53],[-30.49,-4.53],[-31.46,-4.53],[-32.42,-4.53],[-33.39,-4.53],[-34.35,-4.53],[-35.32,-4.53],[-36.28,-4.53],[-37.25,-4.53],[-38.21,-4.53],[-39.18,-4.53],[-40.14,-4.53],[-41.11,-4.53],[-42.07,-4.53],[-43.04,-4.53],[-44,-4.53],[-44.97,-4.53]],"area_m2":173.3,"pieces":[{"zone":9,"side":1,"slab":156,"area":4.697,"key":"9:S:B"},{"zone":10,"side":1,"slab":173,"area":168.605,"key":"10:S:B"}],"zone":[9,10],"slab":[156,173],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-019","kind":"cabin","name":"Staterooms B 88 to B 58, port (two deep, with baths and W.C.s)","plan":"B 88; B 86; B 84; B 82; B 80; B 78; B 76; B 74; B 72; B 70; B 68; B 66; B 64; B 62; B 60; B 58","x":["29.5A","12F"],"y":[14.85,"shell+"],"doors":[{"width_ft":2.25,"width":"default","to":"B-015","n":16,"at":"14.85 ft"}],"source":"ET, B deck, frames 29.5A to 12F, port","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-26.63,10.516],"y_m":[4.526,13.983],"poly_m":[[-26.63,4.53],[-25.65,4.53],[-24.68,4.53],[-23.7,4.53],[-22.72,4.53],[-21.74,4.53],[-20.77,4.53],[-19.79,4.53],[-18.81,4.53],[-17.83,4.53],[-16.86,4.53],[-15.88,4.53],[-14.9,4.53],[-13.92,4.53],[-12.95,4.53],[-11.97,4.53],[-10.99,4.53],[-10.01,4.53],[-9.03,4.53],[-8.06,4.53],[-7.08,4.53],[-6.1,4.53],[-5.12,4.53],[-4.15,4.53],[-3.17,4.53],[-2.19,4.53],[-1.21,4.53],[-0.24,4.53],[0.74,4.53],[1.72,4.53],[2.7,4.53],[3.67,4.53],[4.65,4.53],[5.63,4.53],[6.61,4.53],[7.58,4.53],[8.56,4.53],[9.54,4.53],[10.52,4.53],[10.52,13.98],[9.54,13.98],[8.56,13.98],[7.58,13.98],[6.61,13.98],[5.63,13.98],[4.65,13.98],[3.67,13.98],[2.7,13.98],[1.72,13.98],[0.74,13.98],[-0.24,13.98],[-1.21,13.98],[-2.19,13.98],[-3.17,13.98],[-4.15,13.98],[-5.12,13.98],[-6.1,13.98],[-7.08,13.98],[-8.06,13.98],[-9.03,13.98],[-10.01,13.98],[-10.99,13.98],[-11.97,13.98],[-12.95,13.98],[-13.92,13.98],[-14.9,13.98],[-15.88,13.98],[-16.86,13.98],[-17.83,13.98],[-18.81,13.98],[-19.79,13.98],[-20.77,13.98],[-21.74,13.98],[-22.72,13.98],[-23.7,13.98],[-24.68,13.98],[-25.65,13.98],[-26.63,13.98]],"area_m2":351.26,"pieces":[{"zone":7,"side":0,"slab":112,"area":79.264,"key":"7:P:B"},{"zone":8,"side":0,"slab":130,"area":172.941,"key":"8:P:B"},{"zone":9,"side":0,"slab":148,"area":99.051,"key":"9:P:B"}],"zone":[7,8,9],"slab":[112,130,148],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-020","kind":"cabin","name":"Staterooms B 85 to B 57, starboard (two deep, with baths and W.C.s)","plan":"B 85; B 83; B 81; B 79; B 77; B 75; B 73; B 71; B 69; B 67; B 65; B 63; B 61; B 59; B 57","x":["29.5A","12F"],"y":["shell-",-14.85],"doors":[{"width_ft":2.25,"width":"default","to":"B-016","n":15,"at":"-14.85 ft"}],"source":"ET, B deck, frames 29.5A to 12F, starboard","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-26.63,10.516],"y_m":[-13.983,-4.526],"poly_m":[[-26.63,-13.98],[-25.65,-13.98],[-24.68,-13.98],[-23.7,-13.98],[-22.72,-13.98],[-21.74,-13.98],[-20.77,-13.98],[-19.79,-13.98],[-18.81,-13.98],[-17.83,-13.98],[-16.86,-13.98],[-15.88,-13.98],[-14.9,-13.98],[-13.92,-13.98],[-12.95,-13.98],[-11.97,-13.98],[-10.99,-13.98],[-10.01,-13.98],[-9.03,-13.98],[-8.06,-13.98],[-7.08,-13.98],[-6.1,-13.98],[-5.12,-13.98],[-4.15,-13.98],[-3.17,-13.98],[-2.19,-13.98],[-1.21,-13.98],[-0.24,-13.98],[0.74,-13.98],[1.72,-13.98],[2.7,-13.98],[3.67,-13.98],[4.65,-13.98],[5.63,-13.98],[6.61,-13.98],[7.58,-13.98],[8.56,-13.98],[9.54,-13.98],[10.52,-13.98],[10.52,-4.53],[9.54,-4.53],[8.56,-4.53],[7.58,-4.53],[6.61,-4.53],[5.63,-4.53],[4.65,-4.53],[3.67,-4.53],[2.7,-4.53],[1.72,-4.53],[0.74,-4.53],[-0.24,-4.53],[-1.21,-4.53],[-2.19,-4.53],[-3.17,-4.53],[-4.15,-4.53],[-5.12,-4.53],[-6.1,-4.53],[-7.08,-4.53],[-8.06,-4.53],[-9.03,-4.53],[-10.01,-4.53],[-10.99,-4.53],[-11.97,-4.53],[-12.95,-4.53],[-13.92,-4.53],[-14.9,-4.53],[-15.88,-4.53],[-16.86,-4.53],[-17.83,-4.53],[-18.81,-4.53],[-19.79,-4.53],[-20.77,-4.53],[-21.74,-4.53],[-22.72,-4.53],[-23.7,-4.53],[-24.68,-4.53],[-25.65,-4.53],[-26.63,-4.53]],"area_m2":351.26,"pieces":[{"zone":7,"side":1,"slab":121,"area":79.264,"key":"7:S:B"},{"zone":8,"side":1,"slab":139,"area":172.941,"key":"8:S:B"},{"zone":9,"side":1,"slab":156,"area":99.051,"key":"9:S:B"}],"zone":[7,8,9],"slab":[121,139,156],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-021","kind":"cabin","name":"The port suite: B 56, B 54 and B 52 with its sitting room, and its private promenade along her side","plan":"B 56; B 54; B 52; SITTING ROOM; PRIVATE PROMENADE; 12 OFF P&S PATTERN 'O' TEAK FRAMED 3'5\" X 23 1/2\"","x":["12F","29F"],"y":[14.85,"shell+"],"doors":[{"width_ft":2.25,"width":"default","to":"B-015","n":3,"at":"14.85 ft"}],"source":"ET, B deck, frames 12F to 29F, port","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[10.516,26.105],"y_m":[4.526,13.98],"poly_m":[[10.52,4.53],[11.49,4.53],[12.46,4.53],[13.44,4.53],[14.41,4.53],[15.39,4.53],[16.36,4.53],[17.34,4.53],[18.31,4.53],[19.28,4.53],[20.26,4.53],[21.23,4.53],[22.21,4.53],[23.18,4.53],[24.16,4.53],[25.13,4.53],[26.1,4.53],[26.1,13.98],[25.13,13.98],[24.16,13.98],[23.18,13.98],[22.21,13.98],[21.23,13.98],[20.26,13.98],[19.28,13.98],[18.31,13.98],[17.34,13.98],[16.36,13.98],[15.39,13.98],[14.41,13.98],[13.44,13.98],[12.46,13.98],[11.49,13.98],[10.52,13.98]],"area_m2":147.38,"pieces":[{"zone":6,"side":0,"slab":94,"area":62.363,"key":"6:P:B"},{"zone":7,"side":0,"slab":112,"area":85.016,"key":"7:P:B"}],"zone":[6,7],"slab":[94,112],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-022","kind":"cabin","name":"The starboard suite: B 55, B 53 and B 51 with its sitting room, and its private promenade along her side","plan":"B 55; B 53; B 51; SITTING ROOM; PRIVATE PROMENADE","x":["12F","29F"],"y":["shell-",-14.85],"doors":[{"width_ft":2.25,"width":"default","to":"B-016","n":3,"at":"-14.85 ft"}],"source":"ET, B deck, frames 12F to 29F, starboard","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[10.516,26.105],"y_m":[-13.98,-4.526],"poly_m":[[10.52,-13.98],[11.49,-13.98],[12.46,-13.98],[13.44,-13.98],[14.41,-13.98],[15.39,-13.98],[16.36,-13.98],[17.34,-13.98],[18.31,-13.98],[19.28,-13.98],[20.26,-13.98],[21.23,-13.98],[22.21,-13.98],[23.18,-13.98],[24.16,-13.98],[25.13,-13.98],[26.1,-13.98],[26.1,-4.53],[25.13,-4.53],[24.16,-4.53],[23.18,-4.53],[22.21,-4.53],[21.23,-4.53],[20.26,-4.53],[19.28,-4.53],[18.31,-4.53],[17.34,-4.53],[16.36,-4.53],[15.39,-4.53],[14.41,-4.53],[13.44,-4.53],[12.46,-4.53],[11.49,-4.53],[10.52,-4.53]],"area_m2":147.38,"pieces":[{"zone":6,"side":1,"slab":103,"area":62.363,"key":"6:S:B"},{"zone":7,"side":1,"slab":121,"area":85.016,"key":"7:S:B"}],"zone":[6,7],"slab":[103,121],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-023","kind":"casing","name":"Fans, vents and trunks, the fidley and the boiler casing the plan labels 'Nos 3 & 4' (C deck's plan has Nos 1 and 2 here), the gents' lavatory, a service room and pantry","plan":"UP; VENT; FAN; TRUNK; FIDLEY; NOS 3 & 4 BOILER CASING (as printed); GENT'S LAVATORY; SERVICE; PANTRY; DRESSER","x":["29.5A","6.5A"],"y":[-10,10],"doors":[],"source":"ET, B deck, frames 29.5A to 6.5A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-26.63,-5.515],"y_m":[-3.048,3.048],"poly_m":[[-26.63,-3.05],[-5.52,-3.05],[-5.52,3.05],[-26.63,3.05]],"area_m2":128.72,"pieces":[{"zone":8,"side":0,"slab":130,"area":32.428,"key":"8:P:B"},{"zone":8,"side":1,"slab":139,"area":32.428,"key":"8:S:B"},{"zone":9,"side":0,"slab":148,"area":31.931,"key":"9:P:B"},{"zone":9,"side":1,"slab":156,"area":31.931,"key":"9:S:B"}],"zone":[8,9],"slab":[130,139,148,156],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-024","kind":"cabin","name":"Staterooms B 100 and B 99 and B 102 and B 101, with baths, in the middle amidships","plan":"B 100; B 99; B 102; B 101; BATH","x":["6.5A","6F"],"y":[-10,10],"doors":[{"width_ft":2.25,"width":"default","to":"B-015","n":2,"at":"10.0 ft"},{"width_ft":2.25,"width":"default","to":"B-016","n":2,"at":"-10.0 ft"}],"source":"ET, B deck, frames 6.5A to 6F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[-5.515,5.029],"y_m":[-3.048,3.048],"poly_m":[[-5.52,-3.05],[5.03,-3.05],[5.03,3.05],[-5.52,3.05]],"area_m2":64.28,"pieces":[{"zone":7,"side":0,"slab":112,"area":8.826,"key":"7:P:B"},{"zone":7,"side":1,"slab":121,"area":8.826,"key":"7:S:B"},{"zone":8,"side":0,"slab":130,"area":23.313,"key":"8:P:B"},{"zone":8,"side":1,"slab":139,"area":23.313,"key":"8:S:B"}],"zone":[7,8],"slab":[112,121,130,139],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-025","kind":"service","name":"The linen room, the ladies' lavatory and the stewardesses' room","plan":"LINEN; LADIES LAVATORY; STEWARDESSES; 2 BD & DRS","x":["6F","12F"],"y":[-10,10],"doors":[{"width_ft":2.25,"width":"default","to":"B-015","at":"10.0 ft"},{"width_ft":2.25,"width":"default","to":"B-016","at":"-10.0 ft"}],"source":"ET, B deck, frames 6F to 12F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[5.029,10.516],"y_m":[-3.048,3.048],"poly_m":[[5.03,-3.05],[10.52,-3.05],[10.52,3.05],[5.03,3.05]],"area_m2":33.45,"pieces":[{"zone":7,"side":0,"slab":112,"area":16.723,"key":"7:P:B"},{"zone":7,"side":1,"slab":121,"area":16.723,"key":"7:S:B"}],"zone":[7],"slab":[112,121],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-026","kind":"casing","name":"Boiler casing of Nos 3 and 4, with the fidleys, fans, vents and trunks","plan":"VENT; FAN; TRUNK; FIDLEY; NOS 3 & 4 BOILER CASING","x":["12F","29F"],"y":[-10,10],"doors":[],"source":"ET, B deck, frames 12F to 29F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[10.516,26.105],"y_m":[-3.048,3.048],"poly_m":[[10.52,-3.05],[26.1,-3.05],[26.1,3.05],[10.52,3.05]],"area_m2":95.03,"pieces":[{"zone":6,"side":0,"slab":94,"area":20.109,"key":"6:P:B"},{"zone":6,"side":1,"slab":103,"area":20.109,"key":"6:S:B"},{"zone":7,"side":0,"slab":112,"area":27.406,"key":"7:P:B"},{"zone":7,"side":1,"slab":121,"area":27.406,"key":"7:S:B"}],"zone":[6,7],"slab":[94,103,112,121],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-027","kind":"passage","name":"Port fore-and-aft passage, forward of the forward entrance (4.75 ft between its walls)","plan":"(passage); BAIZED DOORS","x":["43F","79.5F"],"y":[10,14.75],"doors":[{"width_ft":2.25,"width":"default","to":"B-029","at":"43F"}],"source":"ET, B deck, frames 43F to 79.5F, port","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[38.987,72.43],"y_m":[3.048,4.496],"poly_m":[[38.99,3.05],[72.43,3.05],[72.43,4.5],[38.99,4.5]],"area_m2":48.42,"pieces":[{"zone":3,"side":0,"slab":42,"area":2.484,"key":"3:P:B"},{"zone":4,"side":0,"slab":58,"area":23.83,"key":"4:P:B"},{"zone":5,"side":0,"slab":76,"area":22.104,"key":"5:P:B"}],"zone":[3,4,5],"slab":[42,58,76],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-028","kind":"passage","name":"Starboard fore-and-aft passage, forward of the forward entrance (4.75 ft between its walls)","plan":"(passage); BAIZED DOORS","x":["43F","79.5F"],"y":[-14.75,-10],"doors":[{"width_ft":2.25,"width":"default","to":"B-029","at":"43F"}],"source":"ET, B deck, frames 43F to 79.5F, starboard","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[38.987,72.43],"y_m":[-4.496,-3.048],"poly_m":[[38.99,-4.5],[72.43,-4.5],[72.43,-3.05],[38.99,-3.05]],"area_m2":48.42,"pieces":[{"zone":3,"side":1,"slab":50,"area":2.484,"key":"3:S:B"},{"zone":4,"side":1,"slab":67,"area":23.83,"key":"4:S:B"},{"zone":5,"side":1,"slab":85,"area":22.104,"key":"5:S:B"}],"zone":[3,4,5],"slab":[50,67,85],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-029","kind":"stair","name":"First-class forward entrance and the grand staircase, across her breadth (two windows each side)","plan":"1ST CLASS ENTRANCE; UP; D; 1ST CLASS ENTRANCE 2 OFF P&S PATTERN 'E' TEAK FRAMED 4'6\" X 26\"","x":["29F","40F"],"y":["shell-","shell+"],"doors":[{"width_ft":2.25,"width":"default","to":"B-015","at":"29F"},{"width_ft":2.25,"width":"default","to":"B-016","at":"29F"},{"width_ft":2.25,"width":"default","to":"B-030","at":"40F"},{"to":"A deck (the grand staircase up)","kind":"stair","width_ft":null,"width":"a stair, no door"},{"to":"C deck (the grand staircase down)","kind":"stair","width_ft":null,"width":"a stair, no door"}],"source":"ET, B deck, frames 29F to 40F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[26.105,36.275],"y_m":[-13.975,13.975],"poly_m":[[26.1,-13.98],[27.03,-13.98],[27.95,-13.98],[28.88,-13.98],[29.8,-13.98],[30.73,-13.98],[31.65,-13.97],[32.58,-13.97],[33.5,-13.97],[34.43,-13.97],[35.35,-13.96],[36.27,-13.96],[36.27,13.96],[35.35,13.96],[34.43,13.97],[33.5,13.97],[32.58,13.97],[31.65,13.97],[30.73,13.98],[29.8,13.98],[28.88,13.98],[27.95,13.98],[27.03,13.98],[26.1,13.98]],"area_m2":284.22,"pieces":[{"zone":6,"side":0,"slab":94,"area":142.11,"key":"6:P:B"},{"zone":6,"side":1,"slab":103,"area":142.11,"key":"6:S:B"}],"zone":[6],"slab":[94,103],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-030","kind":"lift","name":"The three lifts (elevators) of the first-class entrance","plan":"ELEVATOR (three)","x":["40F","43F"],"y":[-10,10],"doors":[{"width_ft":2.25,"width":"default","to":"B-029","n":3,"at":"40F"}],"source":"ET, B deck, frames 40F to 43F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[36.275,38.987],"y_m":[-3.048,3.048],"poly_m":[[36.27,-3.05],[38.99,-3.05],[38.99,3.05],[36.27,3.05]],"area_m2":16.53,"pieces":[{"zone":5,"side":0,"slab":76,"area":6.42,"key":"5:P:B"},{"zone":5,"side":1,"slab":85,"area":6.42,"key":"5:S:B"},{"zone":6,"side":0,"slab":94,"area":1.847,"key":"6:P:B"},{"zone":6,"side":1,"slab":103,"area":1.847,"key":"6:S:B"}],"zone":[5,6],"slab":[76,85,94,103],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-031","kind":"service","name":"Baths, stateroom B 50 and the ladies' lavatory, in the middle","plan":"BATH; B 50; LADIES LAVATORY","x":["43F","51.5F"],"y":[-10,10],"doors":[{"width_ft":2.25,"width":"default","to":"B-027","n":2,"at":"10.0 ft"},{"width_ft":2.25,"width":"default","to":"B-028","n":2,"at":"-10.0 ft"}],"source":"ET, B deck, frames 43F to 51.5F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[38.987,46.724],"y_m":[-3.048,3.048],"poly_m":[[38.99,-3.05],[46.72,-3.05],[46.72,3.05],[38.99,3.05]],"area_m2":47.16,"pieces":[{"zone":5,"side":0,"slab":76,"area":23.581,"key":"5:P:B"},{"zone":5,"side":1,"slab":85,"area":23.581,"key":"5:S:B"}],"zone":[5],"slab":[76,85],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-032","kind":"casing","name":"Boiler casing of Nos 5 and 6, with the fidleys, fans, vents and trunks","plan":"VENT; FAN; TRUNK; FIDLEY; NOS 5 & 6 BOILER CASING","x":["51.5F","67.5F"],"y":[-10,10],"doors":[],"source":"ET, B deck, frames 51.5F to 67.5F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[46.724,61.433],"y_m":[-3.048,3.048],"poly_m":[[46.72,-3.05],[61.43,-3.05],[61.43,3.05],[46.72,3.05]],"area_m2":89.67,"pieces":[{"zone":4,"side":0,"slab":58,"area":21.881,"key":"4:P:B"},{"zone":4,"side":1,"slab":67,"area":21.881,"key":"4:S:B"},{"zone":5,"side":0,"slab":76,"area":22.954,"key":"5:P:B"},{"zone":5,"side":1,"slab":85,"area":22.954,"key":"5:S:B"}],"zone":[4,5],"slab":[58,67,76,85],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-033","kind":"service","name":"The gents' lavatory, a pantry and a service room, in the middle","plan":"GENT'S LAVATORY; PANTRY; SERVICE","x":["67.5F","71.5F"],"y":[-10,10],"doors":[{"width_ft":2.25,"width":"default","to":"B-027","at":"10.0 ft"},{"width_ft":2.25,"width":"default","to":"B-028","at":"-10.0 ft"}],"source":"ET, B deck, frames 67.5F to 71.5F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[61.433,65.112],"y_m":[-3.048,3.048],"poly_m":[[61.43,-3.05],[65.11,-3.05],[65.11,3.05],[61.43,3.05]],"area_m2":22.42,"pieces":[{"zone":4,"side":0,"slab":58,"area":11.212,"key":"4:P:B"},{"zone":4,"side":1,"slab":67,"area":11.212,"key":"4:S:B"}],"zone":[4],"slab":[58,67],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-034","kind":"cabin","name":"Staterooms B 2 and B 1, with baths, in the middle forward","plan":"B 2; B 1; BATH","x":["71.5F","79.5F"],"y":[-10,10],"doors":[{"width_ft":2.25,"width":"default","to":"B-027","at":"10.0 ft"},{"width_ft":2.25,"width":"default","to":"B-028","at":"-10.0 ft"}],"source":"ET, B deck, frames 71.5F to 79.5F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[65.112,72.43],"y_m":[-3.048,3.048],"poly_m":[[65.11,-3.05],[72.43,-3.05],[72.43,3.05],[65.11,3.05]],"area_m2":44.61,"pieces":[{"zone":3,"side":0,"slab":42,"area":5.23,"key":"3:P:B"},{"zone":3,"side":1,"slab":50,"area":5.23,"key":"3:S:B"},{"zone":4,"side":0,"slab":58,"area":17.074,"key":"4:P:B"},{"zone":4,"side":1,"slab":67,"area":17.074,"key":"4:S:B"}],"zone":[3,4],"slab":[42,50,58,67],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-035","kind":"cabin","name":"Staterooms B 48 to B 4, port, forward of the entrance (two deep, with baths and W.C.s; a stair up to A deck at the front)","plan":"B 48; B 46; B 44; B 42; B 40; B 38; B 36; B 32; B 30; B 28; B 24; B 22; B 20; B 18; B 16; B 14; B 12; B 10; B 8; B 6; B 4; UP; FRONT TO S.R.'S AT FRAME 46 FWD 46 OFF PATTERN 'I' UTLEY'S SLIDING WINDOWS BRASS FRAMED 2' 11\" X 21\" CLEAR GLASS 2' 10\" X 19\"","x":["40F","79.5F"],"y":[14.75,"shell+"],"doors":[{"width_ft":2.25,"width":"default","to":"B-027","n":21,"at":"14.75 ft"},{"to":"the open forward end of B deck","at":"79.5F","width_ft":4.5,"width":"plan: 4'-6\" DOOR P&S"},{"to":"A deck (stairs up)","kind":"stair","width_ft":null,"width":"a stair, no door"}],"source":"ET, B deck, frames 40F to 79.5F, port","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[36.275,72.43],"y_m":[4.496,13.58],"poly_m":[[36.27,4.5],[37.25,4.5],[38.23,4.5],[39.21,4.5],[40.18,4.5],[41.16,4.5],[42.14,4.5],[43.11,4.5],[44.09,4.5],[45.07,4.5],[46.05,4.5],[47.02,4.5],[48,4.5],[48.98,4.5],[49.96,4.5],[50.93,4.5],[51.91,4.5],[52.89,4.5],[53.86,4.5],[54.84,4.5],[55.82,4.5],[56.8,4.5],[57.77,4.5],[58.75,4.5],[59.73,4.5],[60.7,4.5],[61.68,4.5],[62.66,4.5],[63.64,4.5],[64.61,4.5],[65.59,4.5],[66.57,4.5],[67.54,4.5],[68.52,4.5],[69.5,4.5],[70.48,4.5],[71.45,4.5],[72.43,4.5],[72.43,12.4],[71.45,12.49],[70.48,12.58],[69.5,12.66],[68.52,12.74],[67.54,12.82],[66.57,12.89],[65.59,12.96],[64.61,13.03],[63.64,13.09],[62.66,13.16],[61.68,13.22],[60.7,13.27],[59.73,13.33],[58.75,13.38],[57.77,13.43],[56.8,13.47],[55.82,13.52],[54.84,13.56],[53.86,13.6],[52.89,13.64],[51.91,13.67],[50.93,13.7],[49.96,13.73],[48.98,13.76],[48,13.79],[47.02,13.81],[46.05,13.83],[45.07,13.85],[44.09,13.87],[43.11,13.89],[42.14,13.9],[41.16,13.92],[40.18,13.93],[39.21,13.94],[38.23,13.95],[37.25,13.95],[36.27,13.96]],"area_m2":323.6,"pieces":[{"zone":3,"side":0,"slab":42,"area":13.703,"key":"3:P:B"},{"zone":4,"side":0,"slab":58,"area":142.193,"key":"4:P:B"},{"zone":5,"side":0,"slab":76,"area":161.974,"key":"5:P:B"},{"zone":6,"side":0,"slab":94,"area":5.734,"key":"6:P:B"}],"zone":[3,4,5,6],"slab":[42,58,76,94],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"B-036","kind":"cabin","name":"Staterooms B 49 to B 5, starboard, forward of the entrance (two deep, with baths and W.C.s; a stair up to A deck at the front)","plan":"B 49; B 47; B 45; B 43; B 41; B 39; B 37; B 35; B 33; B 29; B 27; B 25; B 23; B 21; B 19; B 17; B 15; B 9; B 7; B 5; UP; FRONT TO S.R.'S AT FRAME 46 FWD 46 OFF PATTERN 'I' UTLEY'S SLIDING WINDOWS BRASS FRAMED 2' 11\" X 21\" CLEAR GLASS 2' 10\" X 19\"","x":["40F","79.5F"],"y":["shell-",-14.75],"doors":[{"width_ft":2.25,"width":"default","to":"B-028","n":20,"at":"-14.75 ft"},{"to":"the open forward end of B deck","at":"79.5F","width_ft":4.5,"width":"plan: 4'-6\" DOOR P&S"},{"to":"A deck (stairs up)","kind":"stair","width_ft":null,"width":"a stair, no door"}],"source":"ET, B deck, frames 40F to 79.5F, starboard","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","profiled","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 140A and 140F fall on it), at 1:2 and 1:1; the walls of rows tagged 'profiled' by pixel profiles of the page at 1:1"],"x_m":[36.275,72.43],"y_m":[-13.58,-4.496],"poly_m":[[36.27,-13.96],[37.25,-13.95],[38.23,-13.95],[39.21,-13.94],[40.18,-13.93],[41.16,-13.92],[42.14,-13.9],[43.11,-13.89],[44.09,-13.87],[45.07,-13.85],[46.05,-13.83],[47.02,-13.81],[48,-13.79],[48.98,-13.76],[49.96,-13.73],[50.93,-13.7],[51.91,-13.67],[52.89,-13.64],[53.86,-13.6],[54.84,-13.56],[55.82,-13.52],[56.8,-13.47],[57.77,-13.43],[58.75,-13.38],[59.73,-13.33],[60.7,-13.27],[61.68,-13.22],[62.66,-13.16],[63.64,-13.09],[64.61,-13.03],[65.59,-12.96],[66.57,-12.89],[67.54,-12.82],[68.52,-12.74],[69.5,-12.66],[70.48,-12.58],[71.45,-12.49],[72.43,-12.4],[72.43,-4.5],[71.45,-4.5],[70.48,-4.5],[69.5,-4.5],[68.52,-4.5],[67.54,-4.5],[66.57,-4.5],[65.59,-4.5],[64.61,-4.5],[63.64,-4.5],[62.66,-4.5],[61.68,-4.5],[60.7,-4.5],[59.73,-4.5],[58.75,-4.5],[57.77,-4.5],[56.8,-4.5],[55.82,-4.5],[54.84,-4.5],[53.86,-4.5],[52.89,-4.5],[51.91,-4.5],[50.93,-4.5],[49.96,-4.5],[48.98,-4.5],[48,-4.5],[47.02,-4.5],[46.05,-4.5],[45.07,-4.5],[44.09,-4.5],[43.11,-4.5],[42.14,-4.5],[41.16,-4.5],[40.18,-4.5],[39.21,-4.5],[38.23,-4.5],[37.25,-4.5],[36.27,-4.5]],"area_m2":323.6,"pieces":[{"zone":3,"side":1,"slab":50,"area":13.703,"key":"3:S:B"},{"zone":4,"side":1,"slab":67,"area":142.193,"key":"4:S:B"},{"zone":5,"side":1,"slab":85,"area":161.974,"key":"5:S:B"},{"zone":6,"side":1,"slab":103,"area":5.734,"key":"6:S:B"}],"zone":[3,4,5,6],"slab":[50,67,85,103],"plan_compartment":"stem-stern","zone_note":null}
+  ]
+}

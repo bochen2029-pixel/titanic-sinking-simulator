@@ -1,0 +1,220 @@
+{
+  "deck": "orlop",
+  "title": "Her rooms on the orlop deck: R3, a sourced table of facts",
+  "format": 1,
+  "written": "2026-11-20, by the R3 session (Claude Opus 5.5), under docs/research/RESEARCH_rooms_plans_licence_v1_1_2026-11-20.md, on the coordinator's word after F and G",
+  "rules": "Facts only: which room, where, how big, which door to which. No image or drawing of any plan is kept. Every row cites the reference read and the original checked, or says it was not checked. Bets are tagged as bets.",
+  "reference": "ET: Encyclopedia Titanica's free deck plans, Orlop Deck (https://www.encyclopedia-titanica.org/titanic-deckplans/orlop-deck.html; drawn by Bruce Beveridge for Titanic The Ship Magnificent, The History Press 2008), read on the page in the built-in browser on 2026-11-20, nothing saved",
+  "original": "Shipbuilder 1911: The Shipbuilder, Midsummer 1911 (the Olympic and Titanic number), plate 5, 'Orlop Deck' and 'Lower Orlop Deck', as reproduced by GG Archives (https://www.ggarchives.com/OT/Titanic/25-ImageLibrary/TheShipbuilder-10-Design-SpecialPlates.html); too small to read room by room, not opened this time.",
+  "how": [
+    "Read at block level, coarser than E, F and G: views at zoom 0.5 with the browser pane hidden (screenshots at changing scales), so walls are placed by the frame labels printed beside them, to about two or three frames, and offsets by eye, to a few feet. Every row is tagged 'approx'.",
+    "Frames to feet: her frames are the same on every deck, so this table takes E deck's anchors (data/rooms/E_deck.json), with this deck's own ends at about 148A and 156F [approx].",
+    "The orlop is a deck only in the holds forward of D and abaft M. Between them it is no floor: the boiler rooms and the engine rooms rise through it. Those rows are kind 'machinery' or 'bunker', one a room or a cross bunker, across her breadth, so that the slabs below G deck are covered [read; the outlines from the reference, the contents not].",
+    "The model has no slab of its own for the orlop: R1 cuts the space below G deck as one slab ('below G'), and these rows stand in it. Her side in metres is the model's half-breadth halfway between the orlop and G deck.",
+    "Doors: 2 ft 3 in by default [bet]. Watertight doors: the reference marks one W.T.D. on this deck, in N.",
+    "Derived fields (x_m, y_m, poly_m, area_m2, zone, slab, plan_compartment) are written by: node tools/rooms_table.js --write data/rooms/orlop_deck.json"
+  ],
+  "frames": {
+    "note": "E deck's anchors (her frames, feet forward of amidships), with the orlop's own ends.",
+    "anchors": [
+      [
+        "stern",
+        -425
+      ],
+      [
+        "148A",
+        -423.99
+      ],
+      [
+        "140A",
+        -406.04
+      ],
+      [
+        "139A",
+        -403.74
+      ],
+      [
+        "130A",
+        -383.11
+      ],
+      [
+        "128A",
+        -377.85
+      ],
+      [
+        "122A",
+        -362.72
+      ],
+      [
+        "111A",
+        -332.47
+      ],
+      [
+        "110A",
+        -329.55
+      ],
+      [
+        "108A",
+        -323.7
+      ],
+      [
+        "100A",
+        -299.41
+      ],
+      [
+        "93A",
+        -278.24
+      ],
+      [
+        "88A",
+        -263.21
+      ],
+      [
+        "72A",
+        -215.4
+      ],
+      [
+        "68A",
+        -203.21
+      ],
+      [
+        "53A",
+        -157.99
+      ],
+      [
+        "46A",
+        -137.06
+      ],
+      [
+        "30A",
+        -88.87
+      ],
+      [
+        "26A",
+        -76.87
+      ],
+      [
+        "16A",
+        -46.62
+      ],
+      [
+        "8A",
+        -22.62
+      ],
+      [
+        "1A",
+        -1.5
+      ],
+      [
+        "1F",
+        1.5
+      ],
+      [
+        "4F",
+        10.5
+      ],
+      [
+        "14F",
+        40.5
+      ],
+      [
+        "26F",
+        76.5
+      ],
+      [
+        "38F",
+        113.08
+      ],
+      [
+        "48F",
+        142.74
+      ],
+      [
+        "58F",
+        172.89
+      ],
+      [
+        "72F",
+        215.13
+      ],
+      [
+        "84F",
+        251.13
+      ],
+      [
+        "100F",
+        297.96
+      ],
+      [
+        "110F",
+        324.79
+      ],
+      [
+        "122F",
+        354.06
+      ],
+      [
+        "130F",
+        372.21
+      ],
+      [
+        "140F",
+        393.28
+      ],
+      [
+        "154F",
+        421.47
+      ],
+      [
+        "stem",
+        423.5
+      ]
+    ]
+  },
+  "bulkheads": {
+    "note": "Watertight bulkheads where the reference marks them on the orlop (W.T.B. labels, written \"A\" to \"P\"). B stands at 114F here, where E deck has it at 110F and F and G at 111F: the model's B (the Inquiry's 91 ft) is the orlop's.",
+    "A": "134F",
+    "B": "114F",
+    "C": "95F",
+    "D": "78F",
+    "N": "93A",
+    "O": "111A",
+    "P": "139A"
+  },
+  "rows": [
+    {"id":"O-001","kind":"store","name":"Forepeak store","plan":"STORE","x":["140F","stem"],"y":["shell-","shell+"],"doors":[],"source":"ET, orlop, frame 140F to the stem","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[119.872,129.083],"y_m":[-1.336,1.336],"poly_m":[[119.87,-2.61],[120.79,-2.36],[121.71,-2.11],[122.64,-1.86],[123.56,-1.6],[124.48,-1.34],[125.4,-1.07],[126.32,-0.8],[127.24,-0.53],[128.16,-0.26],[129.08,0],[128.16,0.26],[127.24,0.53],[126.32,0.8],[125.4,1.07],[124.48,1.34],[123.56,1.6],[122.64,1.86],[121.71,2.11],[120.79,2.36],[119.87,2.61]],"area_m2":24.38,"pieces":[{"zone":0,"side":0,"slab":0,"area":12.19,"key":"0:P:below G"},{"zone":0,"side":1,"slab":6,"area":12.19,"key":"0:S:below G"}],"zone":[0],"slab":[0,6],"plan_compartment":"stem-A","zone_note":null},
+    {"id":"O-002","kind":"store","name":"Chain locker","plan":"CHAIN LOCKER","x":["134F","140F"],"y":["shell-","shell+"],"doors":[],"source":"ET, orlop, frames 134F (W.T.B. \"A\") to 140F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[116.018,119.872],"y_m":[-3.121,3.121],"poly_m":[[116.02,-3.62],[116.98,-3.37],[117.95,-3.12],[118.91,-2.87],[119.87,-2.61],[119.87,2.61],[118.91,2.87],[117.95,3.12],[116.98,3.37],[116.02,3.62]],"area_m2":24.03,"pieces":[{"zone":0,"side":0,"slab":0,"area":12.017,"key":"0:P:below G"},{"zone":0,"side":1,"slab":6,"area":12.017,"key":"0:S:below G"}],"zone":[0],"slab":[0,6],"plan_compartment":"stem-A","zone_note":null},
+    {"id":"O-003","kind":"hold","name":"No. 1 hold, its orlop (cargo)","plan":"(cargo; no rooms drawn)","x":["114F","134F"],"y":["shell-","shell+"],"minus":["O-004"],"doors":[],"source":"ET, orlop, frames 114F (W.T.B. \"B\") to 134F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[101.97,116.018],"y_m":[-5.318,5.318],"poly_m":[[101.97,-6.85],[102.91,-6.66],[103.84,-6.46],[104.78,-6.26],[105.72,-6.05],[106.65,-5.85],[107.59,-5.64],[108.53,-5.43],[109.46,-5.21],[110.4,-4.99],[111.34,-4.77],[112.27,-4.55],[113.21,-4.32],[114.15,-4.09],[115.08,-3.85],[116.02,-3.62],[116.02,3.62],[115.08,3.85],[114.15,4.09],[113.21,4.32],[112.27,4.55],[111.34,4.77],[110.4,4.99],[109.46,5.21],[108.53,5.43],[107.59,5.64],[106.65,5.85],[105.72,6.05],[104.78,6.26],[103.84,6.46],[102.91,6.66],[101.97,6.85]],"area_m2":125.98,"pieces":[{"zone":0,"side":0,"slab":0,"area":1.838,"key":"0:P:below G"},{"zone":0,"side":1,"slab":6,"area":1.838,"key":"0:S:below G"},{"zone":1,"side":0,"slab":12,"area":72.483,"key":"1:P:below G"},{"zone":1,"side":1,"slab":18,"area":72.483,"key":"1:S:below G"}],"zone":[0,1],"slab":[0,6,12,18],"plan_compartment":"A-B","zone_note":"the plan puts it in zone 1 (between A and B); the model, in zone 0 and 1"},
+    {"id":"O-004","kind":"hatch","name":"No. 1 hatch","plan":"NO 1 HATCH","x":["116F","121F"],"y":[-10,10],"doors":[],"source":"ET, orlop, frames 116F to 121F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[103.457,107.174],"y_m":[-3.048,3.048],"poly_m":[[103.46,-3.05],[107.17,-3.05],[107.17,3.05],[103.46,3.05]],"area_m2":22.66,"pieces":[{"zone":1,"side":0,"slab":12,"area":11.33,"key":"1:P:below G"},{"zone":1,"side":1,"slab":18,"area":11.33,"key":"1:S:below G"}],"zone":[1],"slab":[12,18],"plan_compartment":"A-B","zone_note":null},
+    {"id":"O-005","kind":"hold","name":"No. 2 hold, its orlop: cargo or motor cars, with two ventilators","plan":"CARGO OR MOTOR CARS; (two ventilators at 112F to 114F)","x":["95F","114F"],"y":["shell-","shell+"],"minus":["O-006"],"doors":[],"source":"ET, orlop, frames 95F (W.T.B. \"C\") to 114F (W.T.B. \"B\")","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[86.358,101.97],"y_m":[-8.383,8.383],"poly_m":[[86.36,-9.7],[87.33,-9.55],[88.31,-9.39],[89.28,-9.23],[90.26,-9.07],[91.24,-8.9],[92.21,-8.73],[93.19,-8.56],[94.16,-8.38],[95.14,-8.2],[96.12,-8.02],[97.09,-7.84],[98.07,-7.65],[99.04,-7.45],[100.02,-7.26],[100.99,-7.06],[101.97,-6.85],[101.97,6.85],[100.99,7.06],[100.02,7.26],[99.04,7.45],[98.07,7.65],[97.09,7.84],[96.12,8.02],[95.14,8.2],[94.16,8.38],[93.19,8.56],[92.21,8.73],[91.24,8.9],[90.26,9.07],[89.28,9.23],[88.31,9.39],[87.33,9.55],[86.36,9.7]],"area_m2":228.47,"pieces":[{"zone":2,"side":0,"slab":24,"area":130.324,"key":"2:P:below G"},{"zone":2,"side":1,"slab":30,"area":130.324,"key":"2:S:below G"}],"zone":[2],"slab":[24,30],"plan_compartment":"B-C","zone_note":null},
+    {"id":"O-006","kind":"hatch","name":"No. 2 hatch","plan":"NO 2 HATCH","x":["95F","101F"],"y":[-10,10],"doors":[],"source":"ET, orlop, frames 95F to 101F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[86.358,91.636],"y_m":[-3.048,3.048],"poly_m":[[86.36,-3.05],[91.64,-3.05],[91.64,3.05],[86.36,3.05]],"area_m2":32.18,"pieces":[{"zone":2,"side":0,"slab":24,"area":16.088,"key":"2:P:below G"},{"zone":2,"side":1,"slab":30,"area":16.088,"key":"2:S:below G"}],"zone":[2],"slab":[24,30],"plan_compartment":"B-C","zone_note":null},
+    {"id":"O-007","kind":"store","name":"Specie room (for bullion and specie)","plan":"SPECIE ROOM","x":["92F","95F"],"y":[-8,0],"doors":[{"to":"O-010","at":"aft","width_ft":2.25,"width":"default"}],"source":"ET, orlop, frames 92F to 95F, starboard of the centreline","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[83.681,86.358],"y_m":[-2.438,0],"poly_m":[[83.68,-2.44],[86.36,-2.44],[86.36,0],[83.68,0]],"area_m2":6.53,"pieces":[{"zone":3,"side":1,"slab":44,"area":6.526,"key":"3:S:below G"}],"zone":[3],"slab":[44],"plan_compartment":"C-D","zone_note":null},
+    {"id":"O-008","kind":"hatch","name":"Bunker hatch","plan":"BUNKER HATCH","x":["89F","92F"],"y":[-8,8],"doors":[],"source":"ET, orlop, frames 89F to 92F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[81.005,83.681],"y_m":[-2.438,2.438],"poly_m":[[81,-2.44],[83.68,-2.44],[83.68,2.44],[81,2.44]],"area_m2":13.05,"pieces":[{"zone":3,"side":0,"slab":36,"area":6.526,"key":"3:P:below G"},{"zone":3,"side":1,"slab":44,"area":6.526,"key":"3:S:below G"}],"zone":[3],"slab":[36,44],"plan_compartment":"C-D","zone_note":null},
+    {"id":"O-009","kind":"store","name":"Parcel room","plan":"PARCEL ROOM*","x":["86F","89F"],"y":[-8,0],"doors":[{"to":"O-010","at":"starboard side","width_ft":2.25,"width":"default"}],"source":"ET, orlop, frames 86F to 89F, starboard of the centreline","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[78.329,81.005],"y_m":[-2.438,0],"poly_m":[[78.33,-2.44],[81,-2.44],[81,0],[78.33,0]],"area_m2":6.53,"pieces":[{"zone":3,"side":1,"slab":44,"area":6.526,"key":"3:S:below G"}],"zone":[3],"slab":[44],"plan_compartment":"C-D","zone_note":null},
+    {"id":"O-010","kind":"store","name":"Mail room (the sorting room's store, under the post office on G deck), with its tables and stairs","plan":"MAIL ROOM*; TABLE (several); UP (stair); CS","x":["78F","95F"],"y":["shell-",-8],"doors":[{"to":"G deck (the post office)","at":"the stair (about 82F to 86F)","width_ft":null,"width":"a stair"}],"source":"ET, orlop, frames 78F (W.T.B. \"D\") to 95F (W.T.B. \"C\"), starboard","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[71.058,86.358],"y_m":[-10.795,-2.438],"poly_m":[[71.06,-11.71],[72.01,-11.61],[72.97,-11.5],[73.93,-11.39],[74.88,-11.28],[75.84,-11.16],[76.8,-11.04],[77.75,-10.92],[78.71,-10.8],[79.66,-10.67],[80.62,-10.54],[81.58,-10.41],[82.53,-10.27],[83.49,-10.13],[84.45,-9.99],[85.4,-9.85],[86.36,-9.7],[86.36,-2.44],[85.4,-2.44],[84.45,-2.44],[83.49,-2.44],[82.53,-2.44],[81.58,-2.44],[80.62,-2.44],[79.66,-2.44],[78.71,-2.44],[77.75,-2.44],[76.8,-2.44],[75.84,-2.44],[74.88,-2.44],[73.93,-2.44],[72.97,-2.44],[72.01,-2.44],[71.06,-2.44]],"area_m2":127.4,"pieces":[{"zone":3,"side":1,"slab":44,"area":127.4,"key":"3:S:below G"}],"zone":[3],"slab":[44],"plan_compartment":"C-D","zone_note":null},
+    {"id":"O-011","kind":"store","name":"First and second class baggage rooms, port, with a stair up","plan":"1ST AND 2ND CLASS BAGGAGE; UP (stair); CS","x":["78F","95F"],"y":[8,"shell+"],"doors":[{"to":"G deck","at":"the stair (about 88F to 91F)","width_ft":null,"width":"a stair"}],"source":"ET, orlop, frames 78F to 95F, port","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[71.058,86.358],"y_m":[2.438,10.795],"poly_m":[[71.06,2.44],[72.01,2.44],[72.97,2.44],[73.93,2.44],[74.88,2.44],[75.84,2.44],[76.8,2.44],[77.75,2.44],[78.71,2.44],[79.66,2.44],[80.62,2.44],[81.58,2.44],[82.53,2.44],[83.49,2.44],[84.45,2.44],[85.4,2.44],[86.36,2.44],[86.36,9.7],[85.4,9.85],[84.45,9.99],[83.49,10.13],[82.53,10.27],[81.58,10.41],[80.62,10.54],[79.66,10.67],[78.71,10.8],[77.75,10.92],[76.8,11.04],[75.84,11.16],[74.88,11.28],[73.93,11.39],[72.97,11.5],[72.01,11.61],[71.06,11.71]],"area_m2":127.4,"pieces":[{"zone":3,"side":0,"slab":36,"area":127.4,"key":"3:P:below G"}],"zone":[3],"slab":[36],"plan_compartment":"C-D","zone_note":null},
+    {"id":"O-012","kind":"service","name":"Centre between bulkheads D and the parcel room: hoist, motor, a small room","plan":"TE; HOIST; MOTOR","x":["78F","86F"],"y":[-8,8],"doors":[],"source":"ET, orlop, frames 78F to 86F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","bet: contents","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[71.058,78.329],"y_m":[-2.438,2.438],"poly_m":[[71.06,-2.44],[78.33,-2.44],[78.33,2.44],[71.06,2.44]],"area_m2":35.46,"pieces":[{"zone":3,"side":0,"slab":36,"area":17.729,"key":"3:P:below G"},{"zone":3,"side":1,"slab":44,"area":17.729,"key":"3:S:below G"}],"zone":[3],"slab":[36,44],"plan_compartment":"C-D","zone_note":null},
+    {"id":"O-013","kind":"machinery","name":"Boiler room 6 (no orlop deck: the room rises through it), with its side coal","plan":"NO 6 BOILER ROOM; COAL; BUNKER; TE","x":["62F","78F"],"y":["shell-","shell+"],"doors":[],"source":"ET, orlop, frames 62F to 78F (W.T.B. \"D\")","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[56.375,71.058],"y_m":[-12.442,12.442],"poly_m":[[56.38,-13.03],[57.35,-12.96],[58.33,-12.89],[59.31,-12.81],[60.29,-12.73],[61.27,-12.65],[62.25,-12.57],[63.23,-12.49],[64.21,-12.4],[65.18,-12.31],[66.16,-12.22],[67.14,-12.12],[68.12,-12.02],[69.1,-11.92],[70.08,-11.82],[71.06,-11.71],[71.06,11.71],[70.08,11.82],[69.1,11.92],[68.12,12.02],[67.14,12.12],[66.16,12.22],[65.18,12.31],[64.21,12.4],[63.23,12.49],[62.25,12.57],[61.27,12.65],[60.29,12.73],[59.31,12.81],[58.33,12.89],[57.35,12.96],[56.38,13.03]],"area_m2":364.68,"pieces":[{"zone":4,"side":0,"slab":52,"area":182.339,"key":"4:P:below G"},{"zone":4,"side":1,"slab":61,"area":182.339,"key":"4:S:below G"}],"zone":[4],"slab":[52,61],"plan_compartment":"D-N","zone_note":null},
+    {"id":"O-014","kind":"bunker","name":"Cross bunker at bulkhead E, with the steam pipe passage through it","plan":"COAL; BUNKER; STEAM PIPE PASSAGE","x":["56F","62F"],"y":["shell-","shell+"],"doors":[],"source":"ET, orlop, frames 56F to 62F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[50.859,56.375],"y_m":[-13.218,13.218],"poly_m":[[50.86,-13.39],[51.78,-13.33],[52.7,-13.28],[53.62,-13.22],[54.54,-13.16],[55.46,-13.1],[56.38,-13.03],[56.38,13.03],[55.46,13.1],[54.54,13.16],[53.62,13.22],[52.7,13.28],[51.78,13.33],[50.86,13.39]],"area_m2":145.8,"pieces":[{"zone":4,"side":0,"slab":52,"area":27.795,"key":"4:P:below G"},{"zone":4,"side":1,"slab":61,"area":27.795,"key":"4:S:below G"},{"zone":5,"side":0,"slab":70,"area":45.105,"key":"5:P:below G"},{"zone":5,"side":1,"slab":79,"area":45.105,"key":"5:S:below G"}],"zone":[4,5],"slab":[52,61,70,79],"plan_compartment":"D-N","zone_note":null},
+    {"id":"O-015","kind":"machinery","name":"Boiler room 5","plan":"NO 5 BOILER ROOM","x":["44.5F","56F"],"y":["shell-","shell+"],"doors":[],"source":"ET, orlop, frames 44.5F to 56F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[40.343,50.859],"y_m":[-13.659,13.659],"poly_m":[[40.34,-13.87],[41.3,-13.83],[42.26,-13.8],[43.21,-13.76],[44.17,-13.72],[45.12,-13.68],[46.08,-13.64],[47.03,-13.59],[47.99,-13.54],[48.95,-13.49],[49.9,-13.44],[50.86,-13.39],[50.86,13.39],[49.9,13.44],[48.95,13.49],[47.99,13.54],[47.03,13.59],[46.08,13.64],[45.12,13.68],[44.17,13.72],[43.21,13.76],[42.26,13.8],[41.3,13.83],[40.34,13.87]],"area_m2":287.04,"pieces":[{"zone":5,"side":0,"slab":70,"area":143.519,"key":"5:P:below G"},{"zone":5,"side":1,"slab":79,"area":143.519,"key":"5:S:below G"}],"zone":[5],"slab":[70,79],"plan_compartment":"D-N","zone_note":null},
+    {"id":"O-016","kind":"bunker","name":"Cross bunker at bulkhead F, with the steam pipe passage","plan":"COAL; BUNKER; STEAM PIPE PASSAGE","x":["37F","44.5F"],"y":["shell-","shell+"],"doors":[],"source":"ET, orlop, frames 37F to 44.5F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[33.538,40.343],"y_m":[-13.965,13.965],"poly_m":[[33.54,-14.04],[34.51,-14.02],[35.48,-14],[36.45,-13.98],[37.43,-13.95],[38.4,-13.93],[39.37,-13.9],[40.34,-13.87],[40.34,13.87],[39.37,13.9],[38.4,13.93],[37.43,13.95],[36.45,13.98],[35.48,14],[34.51,14.02],[33.54,14.04]],"area_m2":190.01,"pieces":[{"zone":5,"side":0,"slab":70,"area":48.188,"key":"5:P:below G"},{"zone":5,"side":1,"slab":79,"area":48.188,"key":"5:S:below G"},{"zone":6,"side":0,"slab":88,"area":46.817,"key":"6:P:below G"},{"zone":6,"side":1,"slab":97,"area":46.817,"key":"6:S:below G"}],"zone":[5,6],"slab":[70,79,88,97],"plan_compartment":"D-N","zone_note":null},
+    {"id":"O-017","kind":"machinery","name":"Boiler room 4","plan":"NO 4 BOILER ROOM","x":["25F","37F"],"y":["shell-","shell+"],"doors":[],"source":"ET, orlop, frames 25F to 37F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[22.403,33.538],"y_m":[-14.095,14.095],"poly_m":[[22.4,-14.1],[23.33,-14.1],[24.26,-14.1],[25.19,-14.1],[26.11,-14.1],[27.04,-14.1],[27.97,-14.09],[28.9,-14.09],[29.83,-14.08],[30.75,-14.08],[31.68,-14.06],[32.61,-14.05],[33.54,-14.04],[33.54,14.04],[32.61,14.05],[31.68,14.06],[30.75,14.08],[29.83,14.08],[28.9,14.09],[27.97,14.09],[27.04,14.1],[26.11,14.1],[25.19,14.1],[24.26,14.1],[23.33,14.1],[22.4,14.1]],"area_m2":313.65,"pieces":[{"zone":6,"side":0,"slab":88,"area":156.827,"key":"6:P:below G"},{"zone":6,"side":1,"slab":97,"area":156.827,"key":"6:S:below G"}],"zone":[6],"slab":[88,97],"plan_compartment":"D-N","zone_note":null},
+    {"id":"O-018","kind":"bunker","name":"Cross bunker at bulkhead G, with the steam pipe passage","plan":"COAL; BUNKER; STEAM PIPE PASSAGE","x":["18.5F","25F"],"y":["shell-","shell+"],"doors":[],"source":"ET, orlop, frames 18.5F to 25F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[16.459,22.403],"y_m":[-14.097,14.097],"poly_m":[[16.46,-14.1],[17.45,-14.1],[18.44,-14.1],[19.43,-14.1],[20.42,-14.1],[21.41,-14.1],[22.4,-14.1],[22.4,14.1],[21.41,14.1],[20.42,14.1],[19.43,14.1],[18.44,14.1],[17.45,14.1],[16.46,14.1]],"area_m2":167.57,"pieces":[{"zone":6,"side":0,"slab":88,"area":40.819,"key":"6:P:below G"},{"zone":6,"side":1,"slab":97,"area":40.819,"key":"6:S:below G"},{"zone":7,"side":0,"slab":106,"area":42.968,"key":"7:P:below G"},{"zone":7,"side":1,"slab":115,"area":42.968,"key":"7:S:below G"}],"zone":[6,7],"slab":[88,97,106,115],"plan_compartment":"D-N","zone_note":null},
+    {"id":"O-019","kind":"machinery","name":"Boiler room 3","plan":"NO 3 BOILER ROOM","x":["6F","18.5F"],"y":["shell-","shell+"],"doors":[],"source":"ET, orlop, frames 6F to 18.5F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[5.029,16.459],"y_m":[-14.097,14.097],"poly_m":[[5.03,-14.1],[5.98,-14.1],[6.93,-14.1],[7.89,-14.1],[8.84,-14.1],[9.79,-14.1],[10.74,-14.1],[11.7,-14.1],[12.65,-14.1],[13.6,-14.1],[14.55,-14.1],[15.51,-14.1],[16.46,-14.1],[16.46,14.1],[15.51,14.1],[14.55,14.1],[13.6,14.1],[12.65,14.1],[11.7,14.1],[10.74,14.1],[9.79,14.1],[8.84,14.1],[7.89,14.1],[6.93,14.1],[5.98,14.1],[5.03,14.1]],"area_m2":322.26,"pieces":[{"zone":7,"side":0,"slab":106,"area":161.129,"key":"7:P:below G"},{"zone":7,"side":1,"slab":115,"area":161.129,"key":"7:S:below G"}],"zone":[7],"slab":[106,115],"plan_compartment":"D-N","zone_note":null},
+    {"id":"O-020","kind":"bunker","name":"Cross bunker at bulkhead H, with the steam pipe passage","plan":"COAL; BUNKER; STEAM PIPE PASSAGE","x":["3A","6F"],"y":["shell-","shell+"],"doors":[],"source":"ET, orlop, frames 3A to 6F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[-2.296,5.029],"y_m":[-14.097,14.097],"poly_m":[[-2.3,-14.1],[-1.38,-14.1],[-0.47,-14.1],[0.45,-14.1],[1.37,-14.1],[2.28,-14.1],[3.2,-14.1],[4.11,-14.1],[5.03,-14.1],[5.03,14.1],[4.11,14.1],[3.2,14.1],[2.28,14.1],[1.37,14.1],[0.45,14.1],[-0.47,14.1],[-1.38,14.1],[-2.3,14.1]],"area_m2":206.54,"pieces":[{"zone":7,"side":0,"slab":106,"area":40.819,"key":"7:P:below G"},{"zone":7,"side":1,"slab":115,"area":40.819,"key":"7:S:below G"},{"zone":8,"side":0,"slab":124,"area":62.45,"key":"8:P:below G"},{"zone":8,"side":1,"slab":133,"area":62.45,"key":"8:S:below G"}],"zone":[7,8],"slab":[106,115,124,133],"plan_compartment":"D-N","zone_note":null},
+    {"id":"O-021","kind":"machinery","name":"Boiler room 2","plan":"NO 2 BOILER ROOM","x":["15A","3A"],"y":["shell-","shell+"],"doors":[],"source":"ET, orlop, frames 15A to 3A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[-13.295,-2.296],"y_m":[-14.097,14.097],"poly_m":[[-13.3,-14.1],[-12.3,-14.1],[-11.3,-14.1],[-10.3,-14.1],[-9.3,-14.1],[-8.3,-14.1],[-7.3,-14.1],[-6.3,-14.1],[-5.3,-14.1],[-4.3,-14.1],[-3.3,-14.1],[-2.3,-14.1],[-2.3,14.1],[-3.3,14.1],[-4.3,14.1],[-5.3,14.1],[-6.3,14.1],[-7.3,14.1],[-8.3,14.1],[-9.3,14.1],[-10.3,14.1],[-11.3,14.1],[-12.3,14.1],[-13.3,14.1]],"area_m2":310.1,"pieces":[{"zone":8,"side":0,"slab":124,"area":155.052,"key":"8:P:below G"},{"zone":8,"side":1,"slab":133,"area":155.052,"key":"8:S:below G"}],"zone":[8],"slab":[124,133],"plan_compartment":"D-N","zone_note":null},
+    {"id":"O-022","kind":"bunker","name":"Cross bunker at bulkhead J, with the steam pipe passage","plan":"COAL; BUNKER; STEAM PIPE PASSAGE","x":["21.7A","15A"],"y":["shell-","shell+"],"doors":[],"source":"ET, orlop, frames 21.7A to 15A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[-19.465,-13.295],"y_m":[-14.097,14.097],"poly_m":[[-19.47,-14.1],[-18.58,-14.1],[-17.7,-14.1],[-16.82,-14.1],[-15.94,-14.1],[-15.06,-14.1],[-14.18,-14.1],[-13.3,-14.1],[-13.3,14.1],[-14.18,14.1],[-15.06,14.1],[-15.94,14.1],[-16.82,14.1],[-17.7,14.1],[-18.58,14.1],[-19.47,14.1]],"area_m2":173.95,"pieces":[{"zone":8,"side":0,"slab":124,"area":40.304,"key":"8:P:below G"},{"zone":8,"side":1,"slab":133,"area":40.304,"key":"8:S:below G"},{"zone":9,"side":0,"slab":142,"area":46.674,"key":"9:P:below G"},{"zone":9,"side":1,"slab":150,"area":46.674,"key":"9:S:below G"}],"zone":[8,9],"slab":[124,133,142,150],"plan_compartment":"D-N","zone_note":null},
+    {"id":"O-023","kind":"machinery","name":"Boiler room 1","plan":"NO 1 BOILER ROOM","x":["30A","21.7A"],"y":["shell-","shell+"],"doors":[],"source":"ET, orlop, frames 30A (K) to 21.7A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[-27.088,-19.465],"y_m":[-14.097,14.097],"poly_m":[[-27.09,-14.1],[-26.13,-14.1],[-25.18,-14.1],[-24.23,-14.1],[-23.28,-14.1],[-22.32,-14.1],[-21.37,-14.1],[-20.42,-14.1],[-19.47,-14.1],[-19.47,14.1],[-20.42,14.1],[-21.37,14.1],[-22.32,14.1],[-23.28,14.1],[-24.23,14.1],[-25.18,14.1],[-26.13,14.1],[-27.09,14.1]],"area_m2":214.9,"pieces":[{"zone":9,"side":0,"slab":142,"area":107.451,"key":"9:P:below G"},{"zone":9,"side":1,"slab":150,"area":107.451,"key":"9:S:below G"}],"zone":[9],"slab":[142,150],"plan_compartment":"D-N","zone_note":null},
+    {"id":"O-024","kind":"machinery","name":"Reciprocating engine room (no orlop deck), with its platforms","plan":"(the reciprocating engines' room; platforms)","x":["53A","30A"],"y":["shell-","shell+"],"doors":[],"source":"ET, orlop, frames 53A (L) to 30A (K)","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[-48.155,-27.088],"y_m":[-14.097,14.097],"poly_m":[[-48.16,-14.06],[-47.2,-14.07],[-46.24,-14.08],[-45.28,-14.09],[-44.32,-14.1],[-43.37,-14.1],[-42.41,-14.1],[-41.45,-14.1],[-40.49,-14.1],[-39.54,-14.1],[-38.58,-14.1],[-37.62,-14.1],[-36.66,-14.1],[-35.71,-14.1],[-34.75,-14.1],[-33.79,-14.1],[-32.83,-14.1],[-31.88,-14.1],[-30.92,-14.1],[-29.96,-14.1],[-29,-14.1],[-28.05,-14.1],[-27.09,-14.1],[-27.09,14.1],[-28.05,14.1],[-29,14.1],[-29.96,14.1],[-30.92,14.1],[-31.88,14.1],[-32.83,14.1],[-33.79,14.1],[-34.75,14.1],[-35.71,14.1],[-36.66,14.1],[-37.62,14.1],[-38.58,14.1],[-39.54,14.1],[-40.49,14.1],[-41.45,14.1],[-42.41,14.1],[-43.37,14.1],[-44.32,14.1],[-45.28,14.09],[-46.24,14.08],[-47.2,14.07],[-48.16,14.06]],"area_m2":593.85,"pieces":[{"zone":10,"side":0,"slab":158,"area":296.926,"key":"10:P:below G"},{"zone":10,"side":1,"slab":167,"area":296.926,"key":"10:S:below G"}],"zone":[10],"slab":[158,167],"plan_compartment":"D-N","zone_note":null},
+    {"id":"O-025","kind":"machinery","name":"Turbine engine room and its side rooms: switchboard platform, the air space over the dynamos, the evaporator and refrigerating engine rooms","plan":"TURBINE ENGINE CASING; SWITCHBOARD PLATFORM; AIR SPACE OVER DYNAMOS; EVAPORATOR ROOM; CO2 ENGINE ROOM; RAISED DECK","x":["71A","53A"],"y":["shell-","shell+"],"minus":["O-026","O-027"],"doors":[],"source":"ET, orlop, frames 71A (M) to 53A (L)","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","bet: where M stands on the orlop (read at about 71A)","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[-64.725,-48.155],"y_m":[-13.798,13.798],"poly_m":[[-64.73,-13.31],[-63.75,-13.38],[-62.78,-13.44],[-61.8,-13.51],[-60.83,-13.57],[-59.85,-13.62],[-58.88,-13.68],[-57.9,-13.73],[-56.93,-13.78],[-55.95,-13.82],[-54.98,-13.86],[-54,-13.9],[-53.03,-13.93],[-52.05,-13.96],[-51.08,-13.99],[-50.1,-14.02],[-49.13,-14.04],[-48.16,-14.06],[-48.16,14.06],[-49.13,14.04],[-50.1,14.02],[-51.08,13.99],[-52.05,13.96],[-53.03,13.93],[-54,13.9],[-54.98,13.86],[-55.95,13.82],[-56.93,13.78],[-57.9,13.73],[-58.88,13.68],[-59.85,13.62],[-60.83,13.57],[-61.8,13.51],[-62.78,13.44],[-63.75,13.38],[-64.73,13.31]],"area_m2":318.95,"pieces":[{"zone":11,"side":0,"slab":176,"area":227.982,"key":"11:P:below G"},{"zone":11,"side":1,"slab":185,"area":227.982,"key":"11:S:below G"}],"zone":[11],"slab":[176,185],"plan_compartment":"D-N","zone_note":null},
+    {"id":"O-026","kind":"store","name":"Wine and spirits, champagne, dried fruit, tobacco and cigars, a hoist: stores, port, forward of M","plan":"CHAMPAGNE; WINES & SPIRITS; DRIED FRUIT; HOIST; TOBACCO & CIGARS; UP (stair)","x":["71A","62A"],"y":[14,"shell+"],"doors":[{"to":"G deck","at":"the stair","width_ft":null,"width":"a stair"}],"source":"ET, orlop, frames 71A to 62A, port","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[-64.725,-56.425],"y_m":[4.267,13.582],"poly_m":[[-64.73,4.27],[-63.8,4.27],[-62.88,4.27],[-61.96,4.27],[-61.04,4.27],[-60.11,4.27],[-59.19,4.27],[-58.27,4.27],[-57.35,4.27],[-56.43,4.27],[-56.43,13.8],[-57.35,13.76],[-58.27,13.71],[-59.19,13.66],[-60.11,13.61],[-61.04,13.55],[-61.96,13.5],[-62.88,13.44],[-63.8,13.37],[-64.73,13.31]],"area_m2":77.23,"pieces":[{"zone":11,"side":0,"slab":176,"area":77.227,"key":"11:P:below G"}],"zone":[11],"slab":[176],"plan_compartment":"D-N","zone_note":null},
+    {"id":"O-027","kind":"store","name":"West-bound beef and shelves, starboard, forward of M","plan":"WEST BOUND BEEF*; G.I. SPARRED SHELVES","x":["71A","64A"],"y":["shell-",-14],"doors":[],"source":"ET, orlop, frames 71A to 64A, starboard","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[-64.725,-58.263],"y_m":[-13.526,-4.267],"poly_m":[[-64.73,-13.31],[-63.8,-13.37],[-62.88,-13.44],[-61.96,-13.5],[-61.03,-13.55],[-60.11,-13.61],[-59.19,-13.66],[-58.26,-13.71],[-58.26,-4.27],[-59.19,-4.27],[-60.11,-4.27],[-61.03,-4.27],[-61.96,-4.27],[-62.88,-4.27],[-63.8,-4.27],[-64.73,-4.27]],"area_m2":59.79,"pieces":[{"zone":11,"side":1,"slab":185,"area":59.791,"key":"11:S:below G"}],"zone":[11],"slab":[185],"plan_compartment":"D-N","zone_note":null},
+    {"id":"O-028","kind":"store","name":"Provision stores between bulkheads M and N","plan":"GROCERIES*; TOBACCO & CIGARS; DRESSER SHELVES OVER; 2 SHELVES; STEWARDS WORKING SPACE; MINERAL WATERS; EMPTIES; THAWING ROOM**; EAST BOUND BEEF*; BULK STORE; CHOPPING BLOCK; MEAT RAILS; SECTION 13'; PORTABLE PLATE FOR SHIPPING ARMATURES","x":["93A","71A"],"y":["shell-","shell+"],"minus":["O-029","O-030"],"doors":[{"to":"O-031","kind":"watertight door","at":"bulkhead N (93A), near the centreline","width_ft":3,"width":"default [bet]"}],"source":"ET, orlop, frames 93A (W.T.B. \"N\") to 71A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","bet: the passages between the stores are inside the block","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[-84.808,-64.725],"y_m":[-12.39,12.39],"poly_m":[[-84.81,-11.11],[-83.85,-11.25],[-82.89,-11.38],[-81.94,-11.51],[-80.98,-11.64],[-80.03,-11.77],[-79.07,-11.89],[-78.11,-12],[-77.16,-12.12],[-76.2,-12.23],[-75.24,-12.34],[-74.29,-12.44],[-73.33,-12.54],[-72.38,-12.64],[-71.42,-12.73],[-70.46,-12.83],[-69.51,-12.91],[-68.55,-13],[-67.59,-13.08],[-66.64,-13.16],[-65.68,-13.23],[-64.73,-13.31],[-64.73,13.31],[-65.68,13.23],[-66.64,13.16],[-67.59,13.08],[-68.55,13],[-69.51,12.91],[-70.46,12.83],[-71.42,12.73],[-72.38,12.64],[-73.33,12.54],[-74.29,12.44],[-75.24,12.34],[-76.2,12.23],[-77.16,12.12],[-78.11,12],[-79.07,11.89],[-80.03,11.77],[-80.98,11.64],[-81.94,11.51],[-82.89,11.38],[-83.85,11.25],[-84.81,11.11]],"area_m2":481.78,"pieces":[{"zone":11,"side":0,"slab":176,"area":10.713,"key":"11:P:below G"},{"zone":11,"side":1,"slab":185,"area":10.713,"key":"11:S:below G"},{"zone":12,"side":0,"slab":194,"area":236.878,"key":"12:P:below G"},{"zone":12,"side":1,"slab":203,"area":236.878,"key":"12:S:below G"}],"zone":[11,12],"slab":[176,185,194,203],"plan_compartment":"D-N","zone_note":null},
+    {"id":"O-029","kind":"hatch","name":"No. 4 hatch (over), port","plan":"NO 4 HATCH OVER","x":["93A","90A"],"y":[24,32],"doors":[],"source":"ET, orlop, frames 93A to 90A, port","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[-84.808,-82.059],"y_m":[7.315,9.754],"poly_m":[[-84.81,7.32],[-82.06,7.32],[-82.06,9.75],[-84.81,9.75]],"area_m2":6.7,"pieces":[{"zone":12,"side":0,"slab":194,"area":6.702,"key":"12:P:below G"}],"zone":[12],"slab":[194],"plan_compartment":"D-N","zone_note":null},
+    {"id":"O-030","kind":"hatch","name":"No. 4 hatch (over), starboard","plan":"NO 4 HATCH OVER","x":["93A","90A"],"y":[-32,-24],"doors":[],"source":"ET, orlop, frames 93A to 90A, starboard","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[-84.808,-82.059],"y_m":[-9.754,-7.315],"poly_m":[[-84.81,-9.75],[-82.06,-9.75],[-82.06,-7.32],[-84.81,-7.32]],"area_m2":6.7,"pieces":[{"zone":12,"side":1,"slab":203,"area":6.702,"key":"12:S:below G"}],"zone":[12],"slab":[203],"plan_compartment":"D-N","zone_note":null},
+    {"id":"O-031","kind":"hold","name":"Refrigerated cargo, and the refrigerated space for provisions or cargo, between bulkheads N and O","plan":"REFRIGERATED CARGO* (port and starboard); REFRIGERATED SPACE FOR PROVISIONS OR CARGO*; TE (two); W.T.D.","x":["111A","93A"],"y":["shell-","shell+"],"minus":["O-032"],"doors":[{"to":"O-028","kind":"watertight door","at":"bulkhead N (93A)","width_ft":3,"width":"default [bet]"}],"source":"ET, orlop, frames 111A (W.T.B. \"O\") to 93A (W.T.B. \"N\")","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[-101.337,-84.808],"y_m":[-9.756,9.756],"poly_m":[[-101.34,-8.11],[-100.36,-8.32],[-99.39,-8.53],[-98.42,-8.73],[-97.45,-8.92],[-96.48,-9.12],[-95.5,-9.3],[-94.53,-9.49],[-93.56,-9.67],[-92.59,-9.84],[-91.61,-10.01],[-90.64,-10.18],[-89.67,-10.35],[-88.7,-10.51],[-87.72,-10.66],[-86.75,-10.81],[-85.78,-10.96],[-84.81,-11.11],[-84.81,11.11],[-85.78,10.96],[-86.75,10.81],[-87.72,10.66],[-88.7,10.51],[-89.67,10.35],[-90.64,10.18],[-91.61,10.01],[-92.59,9.84],[-93.56,9.67],[-94.53,9.49],[-95.5,9.3],[-96.48,9.12],[-97.45,8.92],[-98.42,8.73],[-99.39,8.53],[-100.36,8.32],[-101.34,8.11]],"area_m2":302.85,"pieces":[{"zone":13,"side":0,"slab":212,"area":160.452,"key":"13:P:below G"},{"zone":13,"side":1,"slab":219,"area":160.452,"key":"13:S:below G"}],"zone":[13],"slab":[212,219],"plan_compartment":"N-O","zone_note":null},
+    {"id":"O-032","kind":"hatch","name":"No. 5 hatch (over)","plan":"NO 5 HATCH OVER","x":["107A","103A"],"y":[-8,8],"doors":[],"source":"ET, orlop, frames 107A to 103A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[-97.738,-94.037],"y_m":[-2.438,2.438],"poly_m":[[-97.74,-2.44],[-94.04,-2.44],[-94.04,2.44],[-97.74,2.44]],"area_m2":18.05,"pieces":[{"zone":13,"side":0,"slab":212,"area":9.026,"key":"13:P:below G"},{"zone":13,"side":1,"slab":219,"area":9.026,"key":"13:S:below G"}],"zone":[13],"slab":[212,219],"plan_compartment":"N-O","zone_note":null},
+    {"id":"O-033","kind":"hold","name":"The hold between bulkheads O and P, its orlop (cargo), with No. 6 hatch over","plan":"NO 6 HATCH OVER; (cargo)","x":["139A","111A"],"y":["shell-","shell+"],"doors":[],"source":"ET, orlop, frames 139A (W.T.B. \"P\") to 111A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[-123.06,-101.337],"y_m":[-5.475,5.475],"poly_m":[[-123.06,-2.24],[-122.07,-2.56],[-121.09,-2.87],[-120.1,-3.18],[-119.11,-3.49],[-118.12,-3.79],[-117.14,-4.08],[-116.15,-4.37],[-115.16,-4.65],[-114.17,-4.93],[-113.19,-5.21],[-112.2,-5.48],[-111.21,-5.74],[-110.22,-6],[-109.24,-6.25],[-108.25,-6.5],[-107.26,-6.75],[-106.27,-6.99],[-105.29,-7.22],[-104.3,-7.45],[-103.31,-7.68],[-102.32,-7.9],[-101.34,-8.11],[-101.34,8.11],[-102.32,7.9],[-103.31,7.68],[-104.3,7.45],[-105.29,7.22],[-106.27,6.99],[-107.26,6.75],[-108.25,6.5],[-109.24,6.25],[-110.22,6],[-111.21,5.74],[-112.2,5.48],[-113.19,5.21],[-114.17,4.93],[-115.16,4.65],[-116.15,4.37],[-117.14,4.08],[-118.12,3.79],[-119.11,3.49],[-120.1,3.18],[-121.09,2.87],[-122.07,2.56],[-123.06,2.24]],"area_m2":233.52,"pieces":[{"zone":14,"side":0,"slab":226,"area":103.492,"key":"14:P:below G"},{"zone":14,"side":1,"slab":232,"area":103.492,"key":"14:S:below G"},{"zone":15,"side":0,"slab":238,"area":13.268,"key":"15:P:below G"},{"zone":15,"side":1,"slab":244,"area":13.268,"key":"15:S:below G"}],"zone":[14,15],"slab":[226,232,238,244],"plan_compartment":"O-P","zone_note":"the plan puts it in zone 14 (between O and P); the model, in zone 14 and 15"},
+    {"id":"O-034","kind":"tank","name":"After peak tank","plan":"PEAK TANK; (a vent or trunk at 138A)","x":["stern","139A"],"y":["shell-","shell+"],"doors":[],"source":"ET, orlop, the stern to frame 139A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by the frame numbers printed beside them (the pane hidden, its screenshots at changing scales); offsets by eye"],"x_m":[-129.54,-123.06],"y_m":[-1.147,1.147],"poly_m":[[-129.54,0],[-128.61,-0.33],[-127.69,-0.66],[-126.76,-0.99],[-125.84,-1.31],[-124.91,-1.62],[-123.99,-1.93],[-123.06,-2.24],[-123.06,2.24],[-123.99,1.93],[-124.91,1.62],[-125.84,1.31],[-126.76,0.99],[-127.69,0.66],[-128.61,0.33],[-129.54,0]],"area_m2":14.74,"pieces":[{"zone":15,"side":0,"slab":238,"area":7.37,"key":"15:P:below G"},{"zone":15,"side":1,"slab":244,"area":7.37,"key":"15:S:below G"}],"zone":[15],"slab":[238,244],"plan_compartment":"P-stern","zone_note":null}
+  ]
+}

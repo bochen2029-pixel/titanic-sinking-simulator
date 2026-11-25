@@ -1,0 +1,25 @@
+#### wt/g7 part 1 (on join 6 core 17712b2), the flow numbers as calibrated in join 6
+e91 (G7) on C:\temp\titanic-wt-g7, flow numbers {}
+== the 1912 damage preset: founders at T 164.22 with the tank, T 157.33 without (peakTank 0)
+   the tank: 323 m3, full at T 22.2; water first up its vent at T 22.4, 13.40 m3 by T 30, 324.5 m3 in all
+   the forepeak's own space (from the orlop up) in the first ten minutes: at most 0.00 m3 (the Report: not flooded above the Orlop deck)
+   T: the tank, the space above the orlop with the tank | the forepeak below E deck without it
+     T  10:   158,     0 m3 |   150 m3
+     T  30:   327,    13 m3 |   393 m3
+     T  45:   329,    48 m3 |   541 m3
+     T  60:   331,    91 m3 |   666 m3
+     T  75:   332,   139 m3 |   692 m3
+     T  90:   333,   196 m3 |   694 m3
+     T 120:   336,   393 m3 |   698 m3
+== the 1912 watch: founders at T 164.52 with the tank, T 157.03 without (peakTank 0)
+   the tank: 323 m3, full at T 23.2; water first up its vent at T 23.4, 11.95 m3 by T 30, 320.8 m3 in all
+   the forepeak's own space (from the orlop up) in the first ten minutes: at most 0.00 m3 (the Report: not flooded above the Orlop deck)
+   T: the tank, the space above the orlop with the tank | the forepeak below E deck without it
+     T  10:   150,     0 m3 |   143 m3
+     T  30:   327,    12 m3 |   381 m3
+     T  45:   329,    47 m3 |   531 m3
+     T  60:   331,    91 m3 |   659 m3
+     T  75:   332,   139 m3 |   692 m3
+     T  90:   333,   224 m3 |   694 m3
+     T 120:   336,   393 m3 |   697 m3
+

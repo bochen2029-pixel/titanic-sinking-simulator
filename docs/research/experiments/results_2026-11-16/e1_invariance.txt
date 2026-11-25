@@ -1,0 +1,3 @@
+titanic    steps compared 37762 ALL BIT-IDENTICAL  end t 9440.5 foundered true 157.34 min
+britannic  steps compared 12199 ALL BIT-IDENTICAL  end t 3049.75 foundered true 50.83 min
+hawke      steps compared 57600 ALL BIT-IDENTICAL  end t 14400 foundered false 

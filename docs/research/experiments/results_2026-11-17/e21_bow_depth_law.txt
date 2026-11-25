@@ -1,0 +1,13 @@
+e21: the stem strike head-on, crush in metres (the model; the note's fixed-face figures in brackets)
+  knots   face    constant 120 MN        B: 84 + 2.5 s MN       section laws (rate)   FE (Paik et al.)
+    6.2   fixed   2.2 m [2.2]            3.0 m                  2.3-5.0               14.8
+    6.2   free    1.6 m                  2.2 m                  
+   10.0   fixed   5.7 m [5.7]            7.3 m [7.3]            5.5-11.5              24.7
+   10.0   free    4.2 m                  5.6 m                  
+   15.0   fixed   13.3 m [12.8]          15.5 m                 11.7-19.9             33.3
+   15.0   free    9.9 m                  12.1 m                 
+   22.5   fixed   29.1 m [28.7]          29.0 m [28.8]          Wilding 24-30         52.5 (22 kn)
+   22.5   free    21.6 m                 23.0 m                 
+
+Against the free berg (the game's case): at 10 knots B crushes 5.6 m (constant 4.2);
+at 22.5 knots 23.0 m (constant 21.6; the note: 22.8 and 21.4 m).

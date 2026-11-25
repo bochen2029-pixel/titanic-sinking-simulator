@@ -1,0 +1,27 @@
+dynamic head U^2/2g: 5 kn 0.337 m; 8 kn 0.863 m; 10 kn 1.349 m; 22.5 kn 6.829 m
+case                                                       founder  d(min)  in@1min  water20  water40  trim30  overF
+baseline: at rest from the collision                        157.34   +0.00      324     5978    10921    1.65   76.2
+crash stop from 22.5 kn, Cp +0.10                           157.29   -0.05      331     5993    10933    1.65   76.0
+crash stop from 22.5 kn, Cp -0.10                           157.41   +0.07      316     5964    10909    1.65   76.2
+crash stop from 22.5 kn, bow Cp profile                     157.37   +0.03      321     5973    10917    1.65   76.2
+crash stop from 22.5 kn, bow profile + grazing loss         157.58   +0.24      288     5914    10869    1.64   76.3
+coast from 22.5 kn (no astern), bow Cp profile              157.47   +0.13      319     5955    10900    1.65   76.2
+coast from 22.5 kn, Cp +0.10                                157.02   -0.32      335     6040    10982    1.66   75.9
+coast from 22.5 kn, Cp -0.10                                157.67   +0.33      312     5916    10860    1.64   76.4
+coast from 22.5 kn, bow profile + grazing loss              158.60   +1.25      274     5707    10666    1.59   77.5
+stop, then 8 kn ahead from +10 to +20 min, Cp +0.10         157.21   -0.13      331     6013    10951    1.66   76.1
+stop, then 8 kn ahead from +10 to +20 min, bow profile      157.39   +0.05      321     5966    10911    1.65   76.3
+stop, then 8 kn ahead from +10 to +20 min, RAM (Cp 1)       156.13   -1.22      393     6305    11201    1.72   74.9
+stop, then 8 kn ahead from +10 to +30 min, Cp +0.10         157.13   -0.22      331     6013    10973    1.66   76.1
+stop, then 8 kn ahead from +10 to +30 min, bow profile      157.43   +0.08      321     5966    10903    1.65   76.3
+stop, then 8 kn ahead from +10 to +30 min, RAM (Cp 1)       155.22   -2.12      393     6305    11413    1.76   73.9
+hold 22.5 kn for 10 min, bow Cp profile                     157.55   +0.21      318     5918    10873    1.64   76.4
+hold 22.5 kn for 30 min, bow Cp profile                     158.03   +0.68      318     5861    10758    1.62   77.1
+hold 22.5 kn to the end, bow Cp profile                     165.15   +7.80      318     5861    10687    1.62   81.6
+hold 22.5 kn to the end, Cp +0.10                           141.47  -15.87      339     6286    11545    1.75   68.2
+hold 22.5 kn to the end, Cp -0.10                           182.01  +24.67      307     5656    10268    1.54   89.4
+hold 22.5 kn to the end, RAM (Cp 1): upper bound             88.62  -68.72      456     8604    16162    2.51   42.4
+hold 22.5 kn to the end, bow profile + grazing loss         197.50  +40.16      260     4889     9060    1.33   99.8
+hold 10 kn to the end, bow Cp profile                       158.76   +1.42      323     5956    10876    1.64   77.2
+hold 10 kn to the end, RAM (Cp 1)                           130.13  -27.21      354     6573    12127    1.84   62.7
+hold 5 kn to the end, RAM (Cp 1)                            148.79   -8.55      332     6132    11233    1.70   71.8

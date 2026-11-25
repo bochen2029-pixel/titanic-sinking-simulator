@@ -1,0 +1,29 @@
+{
+ "made": "2026-11-21T17:24:03.778Z",
+ "node": "v26.13.0",
+ "platform": "win32-x64",
+ "routine": "git ef60334 with 2da3c47's tools/seams.js, its Math.pow replaced by the model's own C.pow (fdlibm's e_pow.c) through tools/pow_preload.js: the calibration epoch's B1, a change of arithmetic, not of physics (docs/research/experiments/e107)",
+ "scenarios": {
+  "titanic": {
+   "steps": 37758,
+   "t": 9439.5,
+   "foundered": true,
+   "founderT": 9439.5,
+   "sha256": "a37b2b7af7dc8b014587d2dacf448131388785b84cbfe0b040d6acc4c8ba42f8"
+  },
+  "britannic": {
+   "steps": 12199,
+   "t": 3049.75,
+   "foundered": true,
+   "founderT": 3049.75,
+   "sha256": "99a1b158d1de1ab870a95f5522445e4c8549c6555975e5da41ad55bbea39444c"
+  },
+  "hawke": {
+   "steps": 57600,
+   "t": 14400,
+   "foundered": false,
+   "founderT": -1,
+   "sha256": "51a162c7a0cd184db9f5400217162d1f3b74654b4e418d9222f07cf28f8f1e7d"
+  }
+ }
+}

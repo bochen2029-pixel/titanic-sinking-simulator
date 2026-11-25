@@ -1,0 +1,4 @@
+docs/evidence/walk/walk_night.png
+  the 1912 watch walked in the Night look, her lights on: E deck amidships looking forward, her deck, the deck over it, her sides and the bulkheads faintly lit [appearance]
+docs/evidence/walk/walk_night_dark.png
+  the 1912 preset walked in the Night look with her lights out (2:17 am, 23 degrees by the head, 36 to port): D deck 75 m abaft amidships, looking aft, the walker's lamp lighting the lines about it and the far deck dark, the sea's horizon tilted by her list [appearance]

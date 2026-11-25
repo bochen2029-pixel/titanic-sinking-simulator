@@ -1,0 +1,15 @@
+e69: Z6's level at any attitude: the core's column segments as boxes, each below a plane by the CDF of a sum of three uniforms
+
+1. 200 boxes and planes (one in five with the world's up along a box's own axis) against integration, exact along one axis and a 1000 x 1000 midpoint grid over the others: the worst difference 3.02e-7 of the box (the grid's own error is of order 1e-6)
+2. space 24 (boiler room 6, port, below E deck): 168 boxes, 2514.8 m3 (the core's nodeVmax 2514.8); the level holding half of it, 0 to 90 deg by 0.1
+   pitch                    the level moves at most 0.0511 m a step; Newton at most 3 iterations
+   roll                     the level moves at most 0.0136 m a step; Newton at most 3 iterations
+   both (roll 0.6 x pitch)  the level moves at most 0.0474 m a step; Newton at most 2 iterations
+3. pitch  0, roll 0: at this rule's level for half the space the core's rule holds 1257.400 m3 against 1257.400 (5.3e-15)
+3. pitch  2, roll 1: at this rule's level for half the space the core's rule holds 1257.400 m3 against 1257.400 (5.6e-14)
+3. pitch  5, roll 3: at this rule's level for half the space the core's rule holds 1257.400 m3 against 1257.400 (-4.1e-15)
+3. pitch 10, roll 5: at this rule's level for half the space the core's rule holds 1257.400 m3 against 1257.400 (9.3e-15)
+4. one pass over the space's 168 boxes: 1.80 us; a level from scratch: 52.1 us (3.4 iterations). Wall clock, this machine and its load
+   so a piece's spaces, about 30 cut by their levels, one or two passes each from the last sub-step's level: of the order of 50 to 100 us a sub-step (v1, section 6, sized Z6 at 50 to 80)
+
+The design's three column sets (v1, sections 2 and 9: "about half" of Z6) are not needed: the core's own boxes, by this rule, give the volume, the level and the free surface's area at any attitude, exactly, with nothing to switch.

@@ -1,0 +1,4 @@
+TITANIC_ROOT = a clean worktree of a97a6bd; modes: none = the gauge never called; every = every step from T 140; from0 = every step
+{"mode":"none","founderT":"156.938","sha":"aee12c291bbe","calls":0,"ms":2208}
+{"mode":"every","founderT":"156.938","sha":"aee12c291bbe","calls":4066,"ms":2874}
+{"mode":"from0","founderT":"156.938","sha":"aee12c291bbe","calls":37665,"ms":7634}

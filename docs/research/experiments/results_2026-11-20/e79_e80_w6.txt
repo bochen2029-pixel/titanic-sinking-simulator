@@ -1,0 +1,73 @@
+e79 and e80 (W6, Part B: the late port list), run 2026-11-20 18:06 to 18:09 CST on wt/w6 (1563f01 + a68e02b: the bunker of the fire in, the flow numbers before any refit).
+
+#### e79: what could carry the late port list
+e79 on C:\temp\titanic-wt-w6
+variant                                                    T10   T60   T85  T100  T110  T120  T130  T140  T145  T150  T155   GM130  GM145  founds  the door under at
+the bets (Part A)                                         -0.7  -1.6  -3.5  -5.4  -6.7  -6.5  -2.6  -3.1  -3.5  -4.2  -5.4   0.56   0.43   167.03   
++ port gangway door at x 100, 2.2 m2, open from T 55      -0.7  -4.0 -50.2   -     -     -     -     -     -     -     -       -       -     86.88   T 55.0
++ port gangway door at x 85, 2.2 m2, open from T 55       -0.7  -4.3 -80.2   -     -     -     -     -     -     -     -       -       -     86.10   T 55.0
++ port gangway door at x 85, 1.1 m2 (half), from T 55     -0.7  -3.4 -18.9 -23.2   -     -     -     -     -     -     -       -       -     102.95   T 55.0
++ port gangway door at x 65, 2.2 m2, open from T 55       -0.7  -5.1 -80.2   -     -     -     -     -     -     -     -       -       -     86.10   T 55.0
+without her tiers (tiers 0, stairs 0)                     -0.7  -1.6  -3.5  -5.4  -6.7  -6.5  -2.6  -3.1  -3.5  -4.2  -5.4   0.56   0.43   164.04   
+coal list 3 degrees                                       -1.8  -1.5  -4.8  -7.6  -8.9  -8.7  -6.0  -4.0  -4.5  -5.3  -6.5   0.64   0.54   166.32   
+
+Reading: a port gangway door at E deck is under the sea when Lightoller's men opened it (T 55) wherever it stands from x 65 to 100, and she capsizes by T 86 to 103: if that door let the sea in late, it stood higher (D deck, as HANDOFF 4b has it; the research note puts the port side's one gangway door on E deck: the sources disagree). Her tiers do not hold her upright (without them the list is the same to T 155). A 3-degree coal list deepens the port list by 1 to 3 degrees.
+
+#### e80: what rights her from T 123 to T 131 (no event in the window)
+T 112  list  -6.77  trim 4.14  water 20917 m3  moment across 15172 m4
+T 113  list  -6.79  trim 4.16  water 21077 m3  moment across 15385 m4
+T 114  list  -6.81  trim 4.18  water 21238 m3  moment across 15495 m4
+T 115  list  -6.85  trim 4.21  water 21400 m3  moment across 15742 m4
+T 116  list  -6.76  trim 4.23  water 21563 m3  moment across 15636 m4
+T 117  list  -6.79  trim 4.25  water 21727 m3  moment across 15847 m4
+T 118  list  -6.65  trim 4.28  water 21892 m3  moment across 15623 m4
+T 119  list  -6.64  trim 4.30  water 22057 m3  moment across 15691 m4
+T 120  list  -6.53  trim 4.32  water 22224 m3  moment across 15524 m4
+T 121  list  -6.49  trim 4.35  water 22391 m3  moment across 15515 m4
+T 122  list  -6.38  trim 4.37  water 22559 m3  moment across 15298 m4
+T 123  list  -6.38  trim 4.40  water 22728 m3  moment across 15393 m4
+T 124  list  -6.14  trim 4.42  water 22898 m3  moment across 14859 m4
+T 125  list  -5.98  trim 4.45  water 23069 m3  moment across 14517 m4
+T 126  list  -5.51  trim 4.48  water 23241 m3  moment across 13374 m4
+T 127  list  -5.04  trim 4.50  water 23414 m3  moment across 12164 m4
+T 128  list  -4.35  trim 4.53  water 23587 m3  moment across 10378 m4
+T 129  list  -3.64  trim 4.56  water 23761 m3  moment across 8488 m4
+T 130  list  -2.58  trim 4.59  water 23936 m3  moment across 5704 m4
+T 131  list  -1.99  trim 4.62  water 24110 m3  moment across 4127 m4
+T 132  list  -2.06  trim 4.65  water 24282 m3  moment across 4304 m4
+T 133  list  -2.18  trim 4.68  water 24454 m3  moment across 4605 m4
+T 134  list  -2.21  trim 4.71  water 24627 m3  moment across 4691 m4
+T 135  list  -2.43  trim 4.75  water 24799 m3  moment across 5232 m4
+T 136  list  -2.53  trim 4.78  water 24972 m3  moment across 5488 m4
+the spaces whose moment across the beam changed most from T 112 to T 136 (m4, + to port):
+   BR5 stbd lower            -7370   (vol 2461 m3, cy -6.60 m)
+   BR5 port lower             4302   (vol 2461 m3, cy 6.60 m)
+   BR4 stbd lower            -2690   (vol 460 m3, cy -6.15 m)
+   BR6 stbd upper            -1969   (vol 439 m3, cy -6.19 m)
+   BR4 port lower             1711   (vol 582 m3, cy 6.77 m)
+   H3 stbd upper             -1533   (vol 507 m3, cy -5.52 m)
+   BR5 stbd upper            -1529   (vol 261 m3, cy -6.28 m)
+   H2 stbd upper             -1021   (vol 499 m3, cy -4.45 m)
+   H2 port upper               452   (vol 556 m3, cy 4.63 m)
+   H3 port upper               443   (vol 592 m3, cy 5.83 m)
+
+#### boiler room 5's lower space filling (vol / its capacity, port and starboard), its upper space's water (m3, port/stbd), her list and GM (C.gmNow on a restored copy):
+vmax BR5 lower P/S, upper P/S: 2458 2458 3552 3552
+T 110 list -6.66  BR5 lower 0.691/0.557  upper 346/41 m3  GM 0.656
+T 112 list -6.77  BR5 lower 0.726/0.590  upper 356/43 m3  GM 0.642
+T 114 list -6.81  BR5 lower 0.760/0.624  upper 366/47 m3  GM 0.625
+T 116 list -6.76  BR5 lower 0.795/0.659  upper 373/51 m3  GM 0.602
+T 118 list -6.65  BR5 lower 0.829/0.695  upper 379/57 m3  GM 0.566
+T 120 list -6.53  BR5 lower 0.864/0.732  upper 386/63 m3  GM 0.527
+T 122 list -6.38  BR5 lower 0.898/0.769  upper 388/70 m3  GM 0.484
+T 124 list -6.14  BR5 lower 0.932/0.809  upper 392/79 m3  GM 0.463
+T 126 list -5.51  BR5 lower 0.963/0.856  upper 384/95 m3  GM 0.493
+T 128 list -4.35  BR5 lower 0.987/0.914  upper 363/127 m3  GM 0.522
+T 130 list -2.58  BR5 lower 1.000/0.982  upper 327/184 m3  GM 0.560
+T 132 list -2.06  BR5 lower 1.001/1.001  upper 339/225 m3  GM 0.539
+T 134 list -2.21  BR5 lower 1.001/1.001  upper 367/246 m3  GM 0.491
+T 136 list -2.53  BR5 lower 1.001/1.001  upper 401/261 m3  GM 0.458
+T 138 list -2.89  BR5 lower 1.001/1.001  upper 434/273 m3  GM 0.451
+T 140 list -3.13  BR5 lower 1.001/1.001  upper 463/289 m3  GM 0.448
+
+Reading: heeled 6 degrees to port, boiler room 5's port half fills to its deckhead (E deck) first (T 130), its starboard half at T 132; after that the water it takes can only go to starboard, and she rights from -6.1 (T 124) to -2.1 (T 132) while her GM moves only 0.46 to 0.56 m. The space above fills through the calibrated stairways and hatches through E deck (aDown, 0.28 m2 a side), slowly. In the ship the water would rise on into E deck's spaces and the boiler casings: how it passed E deck over the boiler rooms is Part B's next question, from the plans.

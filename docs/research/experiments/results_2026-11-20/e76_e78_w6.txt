@@ -1,0 +1,106 @@
+e76 to e78 (W6), run 2026-11-20 on wt/w6 (the core with the bunker of the fire; the burst law of its own head unless said).
+docs/DESIGN_W6_the_lists_v1_1_2026-11-20.md reads them.
+
+#### e76 --never --every 5 (18:00 CST): the head on its wall with the bunker held for good
+the pocket: the bunker of the fire (boiler room 5, forward, starboard); x 51.51 to 54.25, z 1.60 to 9.41 m; capacity 259.9 m3; its water's centre -6.11 m to starboard of... (y); node 22; strength 1000000000 m
+   T    pocket m3  state  head across its wall m   stokehold m3 (its pair)   list deg   inflow into it m3/s   door m3/s
+    0        0.1      0      0.01                      0.0              -1.99       0.3239              0.0000
+    5       90.8      0      2.71                      3.3               1.63       0.2957              0.0198
+   10      164.8      0      4.94                     10.6              -0.74       0.2454              0.0280
+   15      223.8      0      6.63                      5.1               0.03       0.2093              0.0331
+   20      262.2      0     10.09                      0.1               0.37       0.0428              0.0413
+   25      262.7      0     10.56                      2.2               0.37       0.0437              0.0423
+   30      263.1      0     10.98                      0.6               0.33       0.0444              0.0432
+   35      263.5      0     11.37                      0.1               0.31       0.0452              0.0440
+   40      263.9      0     11.78                      0.9               0.31       0.0459              0.0447
+   45      264.3      0     12.14                      1.2               0.30       0.0465              0.0454
+   50      264.6      0     12.44                      0.6               0.29       0.0471              0.0460
+   55      264.9      0     12.75                      0.8               0.28       0.0476              0.0466
+   60      265.2      0     13.08                      1.6               0.28       0.0479              0.0472
+   65      265.5      0     13.34                      1.9               0.29       0.0486              0.0476
+   70      265.7      0     13.53                      1.5               0.25       0.0488              0.0481
+   75      265.9      0     13.72                      9.1               0.37       0.0490              0.0485
+   80      266.1      0     13.34                     96.7               0.34       0.0492              0.0485
+   85      266.3      0     12.97                    263.5               0.11       0.0483              0.0479
+   90      266.4      0     12.46                    497.9              -0.42       0.0473              0.0469
+   95      266.5      0     11.83                    782.0              -1.17       0.0464              0.0457
+  100      266.6      0     11.15                   1097.1              -2.10       0.0447              0.0444
+  105      266.6      0     10.43                   1432.5              -3.62       0.0427              0.0429
+  110      266.7      0      9.77                   1758.2              -5.02       0.0417              0.0415
+  115      266.7      0      9.10                   2086.9              -6.50       0.0404              0.0401
+  120      266.8      0      8.45                   2418.3              -7.51       0.0386              0.0386
+  125      266.9      0      7.80                   2756.1              -7.99       0.0382              0.0371
+  130      267.1      0      7.16                   3106.2              -8.08       0.0362              0.0356
+  135      267.4      0      6.50                   3474.5              -7.32       0.0346              0.0339
+  140      267.8      0      5.77                   3874.3              -6.33       0.0325              0.0319
+  145      268.2      0      4.94                   4319.6              -5.53       0.0303              0.0295
+  150      268.7      0      3.91                   4791.6              -3.25       0.0281              0.0263
+  155      269.1      0      2.60                   4922.0              -2.23       0.0223              0.0214
+  160      269.5      0      2.66                   4924.7              -2.45       0.0224              0.0217
+  165      269.9      0      2.77                   4928.2              -2.46       0.0239              0.0221
+  170      270.5      0      3.05                   4931.3              -2.77       0.0270              0.0232
+  175      272.6      0      3.95                   4946.0              -1.74       0.0343              0.0264
+  180      278.3      0      3.60                   5019.8              -2.66       0.1037              0.0252
+gave way: never; the greatest head across its wall while it held: 13.72 m at T 73.0; founders at T 181.85
+
+#### e76 --every 10 (18:00 CST): as set (13.0 m)
+the pocket: the bunker of the fire (boiler room 5, forward, starboard); x 51.51 to 54.25, z 1.60 to 9.41 m; capacity 259.9 m3; its water's centre -6.11 m to starboard of... (y); node 22; strength 13 m
+   T    pocket m3  state  head across its wall m   stokehold m3 (its pair)   list deg   inflow into it m3/s   door m3/s
+    0        0.1      0      0.01                      0.0              -1.99       0.3239              0.0000
+   10      164.8      0      4.94                     10.6              -0.74       0.2454              0.0280
+   20      262.2      0     10.09                      0.1               0.37       0.0428              0.0413
+   30      263.1      0     10.98                      0.6               0.33       0.0444              0.0432
+   40      263.9      0     11.78                      0.9               0.31       0.0459              0.0447
+   50      264.6      0     12.44                      0.6               0.29       0.0471              0.0460
+   60        0.0      1         -                    301.9              -1.62       0.0000              0.0000
+   70        0.0      1         -                    509.1              -1.62       0.0000              0.0000
+   80        0.0      1         -                    886.4              -2.99       0.0000              0.0000
+   90        0.0      1         -                   1502.8              -3.97       0.0000              0.0000
+  100        0.0      1         -                   2253.8              -5.39       0.0000              0.0000
+  110        0.0      1         -                   3066.2              -6.66       0.0000              0.0000
+  120        0.0      1         -                   3920.7              -6.53       0.0000              0.0000
+  130        0.0      1         -                   4871.8              -2.58       0.0000              0.0000
+  140        0.0      1         -                   4921.7              -3.13       0.0000              0.0000
+  150        0.0      1         -                   4924.8              -4.17       0.0000              0.0000
+  160        0.0      1         -                   4944.8              -2.74       0.0000              0.0000
+gave way: at T 58.27; the greatest head across its wall while it held: 13.00 m at T 58.2; founders at T 167.03
+
+#### e77 (17:58 CST): the variants against the bands, the burst law of its own head
+e77 on C:\temp\titanic-wt-w6
+variant                                       run      T5-10max  T10    T30    T60    T85    T100   T120   T130   T145  side   burst  founds  bands A B C
+before W6 (bunker 0)                          watch      +0.6   -2.5   -2.4   -1.6   -2.2   -3.8   -2.4   -4.1   -7.6   +20    -    157.74   - - -
+before W6 (bunker 0)                          preset     +0.9   -3.1   -2.3   -1.4   -3.3   -4.8   -2.3   -3.8   -6.9   +20    -    157.20   - - -
+the bets: strength 13.0 m (T 60), tunnel 4.6 mwatch      +1.1   -1.8   -1.0   -0.6   -2.2   -4.2   -2.1   -3.4   -5.5   +20    +68  159.58   - - -
+the bets: strength 13.0 m (T 60), tunnel 4.6 mpreset     +1.7   -0.5   +0.3   -1.7   -3.6   -5.5   -6.5   -2.0   -3.6   +58    +58  167.03   - - -
+strength 13.7 m (the head's peak, T 73)       watch      +1.1   -1.8   -1.0   -0.6   -2.2   -4.3   -2.1   -3.2   -5.2   +20    +81  160.09   - - -
+strength 13.7 m (the head's peak, T 73)       preset     +1.7   -0.5   +0.3   +0.3   -3.8   -5.9   -7.0   -5.1   -3.3   +72    +72  170.20   - - -
+never gives way                               watch      +1.1   -1.8   -1.0   -0.6   -1.4   -4.2   -4.2   -2.4   -3.3   +20    -    160.84   - - -
+never gives way                               preset     +1.7   -0.5   +0.3   +0.3   +0.0   -2.5   -7.7   -7.9   -5.4   +94    -    181.85   - - -
+tunnel 3.4 m                                  watch      -2.2   -2.3   -1.0   -0.6   -2.2   -4.2   -2.1   -3.4   -5.4   +20    +68  159.62   - - -
+tunnel 3.4 m                                  preset     -0.5   -0.5   +0.3   -1.7   -3.7   -5.6   -6.5   -2.0   -3.6   +58    +58  166.80   - - -
+tunnel 6.0 m                                  watch      +3.2   +3.2   -1.0   -0.6   -2.2   -4.1   -2.1   -3.3   -5.4   +20    +68  159.76   - - -
+tunnel 6.0 m                                  preset     +3.7   +3.1   +0.3   -1.7   -3.6   -5.5   -6.5   -1.9   -3.6   +59    +59  167.35   - - -
+tunnel 6.0 m, never gives way                 watch      +3.2   +3.2   -1.0   -0.6   -1.3   -4.2   -4.3   -2.4   -3.3   +20    -    160.98   - - -
+tunnel 6.0 m, never gives way                 preset     +3.7   +3.1   +0.3   +0.3   +0.1   -2.4   -7.6   -8.0   -5.5   +94    -    182.17   y - -
+
+#### e77 (17:42 to 17:45 CST), the first build's law (the head across its wall): only the watch differs (there the bunker never gave way)
+e77 on C:\temp\titanic-wt-w6
+variant                                       run      T5-10max  T10    T30    T60    T85    T100   T120   T130   T145  side   burst  founds  bands A B C
+before W6 (bunker 0)                          watch      +0.6   -2.5   -2.4   -1.6   -2.2   -3.8   -2.4   -4.1   -7.6   +20    -    157.74   - - -
+before W6 (bunker 0)                          preset     +0.9   -3.1   -2.3   -1.4   -3.3   -4.8   -2.3   -3.8   -6.9   +20    -    157.20   - - -
+the bets: strength 13.0 m (T 60), tunnel 4.6 mwatch      +1.1   -1.8   -1.0   -0.6   -1.4   -4.2   -4.2   -2.4   -3.3   +20    -    160.84   - - -
+the bets: strength 13.0 m (T 60), tunnel 4.6 mpreset     +1.7   -0.5   +0.3   -1.7   -3.6   -5.5   -6.6   -2.0   -3.7   +60    +60  167.35   - - -
+strength 13.7 m (the head's peak, T 73)       watch      +1.1   -1.8   -1.0   -0.6   -1.4   -4.2   -4.2   -2.4   -3.3   +20    -    160.84   - - -
+strength 13.7 m (the head's peak, T 73)       preset     +1.7   -0.5   +0.3   +0.3   -3.8   -5.9   -7.0   -5.1   -3.3   +72    +72  170.20   - - -
+never gives way                               watch      +1.1   -1.8   -1.0   -0.6   -1.4   -4.2   -4.2   -2.4   -3.3   +20    -    160.84   - - -
+never gives way                               preset     +1.7   -0.5   +0.3   +0.3   +0.0   -2.5   -7.7   -7.9   -5.4   +94    -    181.85   - - -
+tunnel 3.4 m                                  watch      -2.2   -2.3   -1.0   -0.6   -1.4   -4.3   -4.2   -2.4   -3.3   +20    -    160.86   - - -
+tunnel 3.4 m                                  preset     -0.5   -0.5   +0.3   -1.7   -3.7   -5.6   -6.6   -2.0   -3.7   +59    +59  167.03   - - -
+tunnel 6.0 m                                  watch      +3.2   +3.2   -1.0   -0.6   -1.3   -4.2   -4.3   -2.4   -3.3   +20    -    160.98   - - -
+tunnel 6.0 m                                  preset     +3.7   +3.1   +0.3   -1.5   -3.7   -5.6   -6.6   -2.3   -3.6   +60    +60  167.62   - - -
+tunnel 6.0 m, never gives way                 watch      +3.2   +3.2   -1.0   -0.6   -1.3   -4.2   -4.3   -2.4   -3.3   +20    -    160.98   - - -
+tunnel 6.0 m, never gives way                 preset     +3.7   +3.1   +0.3   +0.3   +0.1   -2.4   -7.6   -8.0   -5.5   +94    -    182.17   y - -
+
+#### e78 (17:55 CST): the pumps and the burst, the law of its own head
+with her pumps as worked  : the bunker gives way at T 58.27 (the stokehold at most 10.6 m3 while it held); founders at T 167.03; 512 t pumped
+without pumps             : the bunker gives way at T 57.55 (the stokehold at most 130.6 m3 while it held); founders at T 162.98; 0 t pumped

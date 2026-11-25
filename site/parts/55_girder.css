@@ -1,0 +1,22 @@
+/* The hull girder's gauge (site/parts/55_girder.js): a line in the readouts, under the trim, list and water. The bar runs
+   from 0 to 6 GN m with the studies' range, 4.0 to 5.4 GN m, marked on it; teal below it, amber within, red past its top. */
+.girder { display: flex; align-items: center; gap: 8px; margin-top: 8px; min-width: 0; font-size: 12.5px; color: var(--ink-2); }
+.girder-k { flex: none; font: 500 10.5px/1.2 var(--f-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); }
+.girder-v { flex: none; text-align: right; font: 500 14px/1.3 var(--f-num); font-variant-numeric: tabular-nums; color: var(--teal); white-space: nowrap; }
+.girder-bar { position: relative; flex: 0 0 72px; height: 7px; border-radius: 3px; background: var(--line-2); overflow: hidden; }
+.girder-range { position: absolute; top: 0; bottom: 0; box-sizing: border-box; background: rgba(255, 181, 71, 0.28); border-left: 1px solid var(--warn); border-right: 1px solid var(--crit); }
+.girder-bar i { position: absolute; left: 0; top: 2px; bottom: 2px; width: 0; border-radius: 2px; background: var(--teal); }
+.girder-t { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.girder.within .girder-v, .girder.within .girder-t { color: var(--warn); }
+.girder.within .girder-bar i { background: var(--warn); }
+.girder.above .girder-v, .girder.above .girder-t { color: var(--crit); }
+.girder.above .girder-bar i { background: var(--crit); }
+/* The onset's mark (stage B2, core/readers/onset.js): a line under the gauge once her moment somewhere along her has reached
+   what her hull could bear there: "She would break here, now", with the station and the clock. Hidden until then. */
+.girder-onset { margin-top: 4px; min-width: 0; font: 500 12px/1.3 var(--f-ui); color: var(--crit); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.girder-onset::before { content: ''; display: inline-block; width: 6px; height: 6px; margin: 0 7px 1px 1px; background: var(--crit); transform: rotate(45deg); }
+html[data-device="phone"] .girder-onset { margin-top: 3px; font-size: 11px; }
+html[data-device="phone"] .girder { margin-top: 5px; gap: 6px; font-size: 11.5px; }
+html[data-device="phone"] .girder-k { font-size: 10px; }
+html[data-device="phone"] .girder-v { font-size: 13px; }
+html[data-device="phone"] .girder-bar { flex-basis: 52px; }

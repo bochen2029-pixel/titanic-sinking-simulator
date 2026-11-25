@@ -9,10 +9,24 @@ sinksim/
 v8math/
 third_party/
 
+# the desktop app, its runtime and its zip (tools/package_app.js): made again from dist/ and the runtime on this machine
+release/
+# this machine's own paths, read by tools/package_app.js when present ({ "electronDist": "DIR" }): never in the repository
+tools/local_paths.json
+
 # local tooling and screenshot scratch
 node_modules/
 out/titanic_local.html
 out/*.png
+out/gate/
+# U0's exports for Blender and Unreal (tools/export_ship.js, tools/record_night.js): made again in seconds; their sizes
+# and hashes are tracked in out/export_tests.txt
+out/titanic_ship.json
+out/titanic_night_*.json
+# U2's expectations and what Unreal found (tools/u2_expect.js, tools/unreal/u2_sea.py): made again in seconds
+out/u2_*.json
+# U3's timelines (tools/u3_lights.js): made again in seconds
+out/u3_*.json
 .wrangler/
 .vs/
 .vscode/
@@ -24,3 +38,11 @@ docs/site/*
 !docs/site/v2-iphone-damage.png
 !docs/site/v2-desktop-run.png
 !docs/site/v2-ipad-run.png
+!docs/site/v3-watch-bells.png
+!docs/site/v3-watch-bridge.png
+!docs/site/v3-watch-holed.png
+!docs/site/v3-watch-phone.png
+!docs/site/v3-screws.png
+!docs/site/v3-wake.png
+!docs/site/v3-lights-ahead.png
+!docs/site/v3-engines.png

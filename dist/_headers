@@ -1,4 +1,7 @@
 # Cloudflare Pages headers. Hashed assets are immutable; the page itself is always revalidated.
+# Each rule but /* is written twice: for the page at a domain's root, and for the page under /titanic/, its public
+# address (package.json's homepage). /* already covers every path, the root's and /titanic/'s alike. The app
+# (app/main.js) answers titanic://app/ with these rules; its paths never begin with /titanic/.
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
@@ -9,20 +12,41 @@
 /index.html
   Cache-Control: no-cache
 
+/titanic/index.html
+  Cache-Control: no-cache
+
 /
+  Cache-Control: no-cache
+
+/titanic/
   Cache-Control: no-cache
 
 /version.json
   Cache-Control: no-cache
 
+/titanic/version.json
+  Cache-Control: no-cache
+
 /manifest.webmanifest
+  Cache-Control: public, max-age=3600
+
+/titanic/manifest.webmanifest
   Cache-Control: public, max-age=3600
 
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
+/titanic/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
 
+/titanic/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
 /icons/*
+  Cache-Control: public, max-age=86400
+
+/titanic/icons/*
   Cache-Control: public, max-age=86400

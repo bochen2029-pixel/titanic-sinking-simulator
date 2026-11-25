@@ -1,0 +1,8 @@
+The 1912 berg, the 1912 drill (helm hard over away from the ice, reversed at the touch, engines stopped a minute later), the order given so many seconds after the bells:
+    order  0.5 s after the bells (ice 489 m ahead)  Clear of the ice: it passed 86 m off her starboard side
+    order  5.5 s after the bells (ice 431 m ahead)  Clear of the ice: it passed 52 m off her starboard side
+    order 10.5 s after the bells (ice 373 m ahead)  Clear of the ice: it passed 22 m off her starboard side
+    order 15.5 s after the bells (ice 315 m ahead)  Holed: 0.23 m2 of seams open along the starboard side, electric engine room to shaft tunnel / refrigerated cargo
+    order 20.5 s after the bells (ice 257 m ahead)  Holed: 0.98 m2 of seams open along the starboard side, the forepeak to boiler room 5
+    order 25.5 s after the bells (ice 199 m ahead)  Stem into the ice: bow crushed in 13 m, 0.06 m2 of seams open along the starboard side. Open to the sea: the forepeak to No. 1 hold
+    order 30.5 s after the bells (ice 141 m ahead)  Stem into the ice: bow crushed in 20 m, 0.06 m2 of seams open along the starboard side. Open to the sea: the forepeak to No. 1 hold

@@ -1,0 +1,69 @@
+e67: the core's spaces at T 155.50, the cut at x -23
+tree: this repository
+FP   x   115.5 to   130.3 below E port  V    345  water    369  air      0  bow
+FP   x   115.5 to   130.3 below E stbd  V    345  water    369  air      0  bow
+FP   x   115.5 to   130.3 above E port  V    277  water    295  air      0  bow
+FP   x   115.5 to   130.3 above E stbd  V    277  water    295  air      0  bow
+H1   x   101.8 to   115.5 below E port  V    940  water    992  air      0  bow
+H1   x   101.8 to   115.5 below E stbd  V    940  water    992  air      0  bow
+H1   x   101.8 to   115.5 above E port  V    695  water    731  air      0  bow
+H1   x   101.8 to   115.5 above E stbd  V    695  water    731  air      0  bow
+H2   x    86.3 to   101.8 below E port  V   1602  water   1680  air      0  bow
+H2   x    86.3 to   101.8 below E stbd  V   1602  water   1680  air      0  bow
+H2   x    86.3 to   101.8 above E port  V   1039  water   1092  air      0  bow
+H2   x    86.3 to   101.8 above E stbd  V   1039  water   1092  air      0  bow
+H3   x    70.7 to    86.3 below E port  V   1904  water   1990  air      0  bow
+H3   x    70.7 to    86.3 below E stbd  V   1904  water   1990  air      0  bow
+H3   x    70.7 to    86.3 above E port  V   1426  water   1440  air      0  bow
+H3   x    70.7 to    86.3 above E stbd  V   1426  water   1440  air      0  bow
+BR6  x    54.3 to    70.7 below E port  V   2167  water   2241  air      0  bow
+BR6  x    54.3 to    70.7 below E stbd  V   2167  water   2241  air      0  bow
+BR6  x    54.3 to    70.7 above E port  V   3123  water   2983  air    140  bow
+BR6  x    54.3 to    70.7 above E stbd  V   3123  water   2850  air    274  bow
+BR5  x    36.9 to    54.3 below E port  V   2458  water   2512  air      0  bow
+BR5  x    36.9 to    54.3 below E stbd  V   2458  water   2512  air      0  bow
+BR5  x    36.9 to    54.3 above E port  V   3552  water   2660  air    893  bow
+BR5  x    36.9 to    54.3 above E stbd  V   3552  water   2303  air   1250  bow
+BR4  x    19.5 to    36.9 below E port  V   2515  water   1751  air    764  bow
+BR4  x    19.5 to    36.9 below E stbd  V   2515  water   1427  air   1088  bow
+BR4  x    19.5 to    36.9 above E port  V   3767  water   1770  air   1997  bow
+BR4  x    19.5 to    36.9 above E stbd  V   3767  water   1403  air   2364  bow
+BR3  x     2.1 to    19.5 below E port  V   2517  water    418  air   2099  bow
+BR3  x     2.1 to    19.5 below E stbd  V   2517  water    150  air   2367  bow
+BR3  x     2.1 to    19.5 above E port  V   3330  water    905  air   2425  bow
+BR3  x     2.1 to    19.5 above E stbd  V   3330  water    544  air   2786  bow
+BR2  x   -16.2 to     2.1 below E port  V   2647  water      9  air   2638  bow
+BR2  x   -16.2 to     2.1 below E stbd  V   2647  water      0  air   2647  bow
+BR2  x   -16.2 to     2.1 above E port  V   3392  water    147  air   3245  bow
+BR2  x   -16.2 to     2.1 above E stbd  V   3392  water     14  air   3378  bow
+BR1  x   -27.1 to   -16.2 below E port  V   1594  water      0  air   1594  CUT: 62 % bow
+BR1  x   -27.1 to   -16.2 below E stbd  V   1594  water      0  air   1594  CUT: 62 % bow
+BR1  x   -27.1 to   -16.2 above E port  V   1955  water      0  air   1955  CUT: 62 % bow
+BR1  x   -27.1 to   -16.2 above E stbd  V   1955  water      0  air   1955  CUT: 62 % bow
+RE   x   -48.2 to   -27.1 below E port  V   3034  water      0  air   3034  stern
+RE   x   -48.2 to   -27.1 below E stbd  V   3034  water      0  air   3034  stern
+RE   x   -48.2 to   -27.1 above E port  V   3931  water      0  air   3931  stern
+RE   x   -48.2 to   -27.1 above E stbd  V   3931  water      0  air   3931  stern
+TE   x   -65.5 to   -48.2 below E port  V   2410  water      0  air   2410  stern
+TE   x   -65.5 to   -48.2 below E stbd  V   2410  water      0  air   2410  stern
+TE   x   -65.5 to   -48.2 above E port  V   3235  water      0  air   3235  stern
+TE   x   -65.5 to   -48.2 above E stbd  V   3235  water      0  air   3235  stern
+EL   x   -84.7 to   -65.5 below E port  V   2380  water      0  air   2380  stern
+EL   x   -84.7 to   -65.5 below E stbd  V   2380  water      0  air   2380  stern
+EL   x   -84.7 to   -65.5 above E port  V   3125  water      0  air   3125  stern
+EL   x   -84.7 to   -65.5 above E stbd  V   3125  water      0  air   3125  stern
+T1   x  -101.2 to   -84.7 below E port  V   1742  water      0  air   1742  stern
+T1   x  -101.2 to   -84.7 below E stbd  V   1742  water      0  air   1742  stern
+T1   x  -101.2 to   -84.7 above E port  V   1453  water      0  air   1453  stern
+T1   x  -101.2 to   -84.7 above E stbd  V   1453  water      0  air   1453  stern
+T2   x  -118.6 to  -101.2 below E port  V   1211  water      0  air   1211  stern
+T2   x  -118.6 to  -101.2 below E stbd  V   1211  water      0  air   1211  stern
+T2   x  -118.6 to  -101.2 above E port  V   1126  water      0  air   1126  stern
+T2   x  -118.6 to  -101.2 above E stbd  V   1126  water      0  air   1126  stern
+AP   x  -139.0 to  -118.6 below E port  V    403  water      0  air    403  stern
+AP   x  -139.0 to  -118.6 below E stbd  V    403  water      0  air    403  stern
+AP   x  -139.0 to  -118.6 above E port  V    627  water      0  air    627  stern
+AP   x  -139.0 to  -118.6 above E stbd  V    627  water      0  air    627  stern
+bow: 40 spaces (the cut's counted in both), floodable 79820 m3, water 46016, air 34782
+stern: 28 spaces (the cut's counted in both), floodable 52022 m3, water 0, air 52022
+connections by kind (bow / stern, by their x): over 36/24, door (shut) 26/26, down 38/26, top 58/38, xlow 2/0, xmerge 2/0, breach 14/0, stair (shut) 45/36, stair 21/0

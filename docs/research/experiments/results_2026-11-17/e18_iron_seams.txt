@@ -1,0 +1,13 @@
+e18: the 1912 encounter at GEOM_1912 {"ahead":257,"port":47}, dTear 0.2 m, committed alpha 0.20714452400484218; record 157-160 min, Hackett and Bedford 4/13/21/24/32/6/0
+uniform (as committed)             area 0.7506 m2 at the committed alpha; tears x 123.125..42.125 (649) | split 10/19/19/22/22/9/0 (error 29) | alpha 0.20714 | founders 158.6 min after the touch
+forward 20 % (x > 77.7) x 0.75     area 1.2393 m2 at the committed alpha; tears x 123.75..40.875 (664) | split 13/23/24/20/13/6/0 (error 45) | alpha 0.12534 | founders 175.3 min after the touch
+forward 20 % (x > 77.7) x 0.5      area 1.7191 m2 at the committed alpha; tears x 124.5..41 (669) | split 14/25/27/20/10/4/0 (error 56) | alpha 0.09069 | founders 194.8 min after the touch
+forward 20 % (x > 77.7) x 0.35     area 2.0093 m2 at the committed alpha; tears x 124.875..41 (672) | split 15/25/28/20/8/4/0 (error 61) | alpha 0.07747 | founders 204.3 min after the touch
+forward 25 % (x > 64.8) x 0.75     area 1.3722 m2 at the committed alpha; tears x 123.75..40.875 (664) | split 11/21/22/23/17/6/0 (error 32) | alpha 0.11440 | founders 167.6 min after the touch
+forward 25 % (x > 64.8) x 0.5      area 1.9855 m2 at the committed alpha; tears x 124.5..40.875 (670) | split 12/21/23/24/15/4/0 (error 39) | alpha 0.07818 | founders 179.6 min after the touch
+forward 25 % (x > 64.8) x 0.35     area 2.3564 m2 at the committed alpha; tears x 124.875..40.875 (673) | split 13/22/24/25/14/3/0 (error 42) | alpha 0.06586 | founders 183.8 min after the touch
+forward 30 % (x > 51.8) x 0.75     area 1.5067 m2 at the committed alpha; tears x 123.75..42.125 (654) | split 11/19/20/22/22/6/0 (error 25) | alpha 0.10405 | founders 165.0 min after the touch
+forward 30 % (x > 51.8) x 0.5      area 2.2547 m2 at the committed alpha; tears x 124.5..42.125 (660) | split 11/19/21/22/23/5/0 (error 26) | alpha 0.06931 | founders 168.1 min after the touch
+forward 30 % (x > 51.8) x 0.35     area 2.7064 m2 at the committed alpha; tears x 124.875..42.125 (663) | split 11/19/21/22/23/5/0 (error 26) | alpha 0.05766 | founders 169.3 min after the touch
+
+(166 s; 2026-11-17T09:45:49.058Z)

@@ -1,0 +1,15 @@
+e107 (the epoch, M3): C.pow against this engine's Math.pow; v26.13.0, plain node (std::pow, the C runtime's)
+Part 1: ten million inputs in the four forms of core/core.js
+  the hull form u^n: u in [0, 1), n in [0.9, 3.1) (nBlend 0.947 to 3.0)    247362 of 2,500,000 differ (9.89 %, at most 1 ulp); C.pow's results hash eee16cafbce43d91
+  the submerged weir r^1.5: r in [0, 1)                                    247213 of 2,500,000 differ (9.89 %, at most 1 ulp); C.pow's results hash c6ffe9e07683c240
+  the submerged weir (1 - r^1.5)^0.385: in [0, 1)                          244088 of 2,500,000 differ (9.76 %, at most 1 ulp); C.pow's results hash 9d1878b008db8538
+  the damping x^4: x in [0, 300)                                           248140 of 2,500,000 differ (9.93 %, at most 1 ulp); C.pow's results hash 341603db62047e7c
+Part 2: every Math.pow call the model makes, recorded as it runs, against C.pow
+  ef60334, the seams scenario titanic  : 37762 steps, digest d30255cb4d8db32c                             88946 of 1,280,421 calls differ (6.95 %, at most 1 ulp)
+  ef60334, the seams scenario britannic: 12199 steps, digest 560e45167a634fe8                             42688 of 524,745 calls differ (8.13 %, at most 1 ulp)
+  ef60334, the seams scenario hawke    : 57600 steps, digest 51a162c7a0cd184d                             24164 of 250,313 calls differ (9.65 %, at most 1 ulp)
+  the code before B1, the 1912 preset: founders at 9496.75 s (158.2792 min)                               89465 of 1,311,592 calls differ (6.82 %, at most 1 ulp)
+  the code before B1, the 1912 watch: fingerprint 1a1bd179 at step 38389, founders at 9597.25 s           92900 of 1,336,317 calls differ (6.95 %, at most 1 ulp)
+Total: part 1 986803 of 10,000,000 differ; part 2 338163 of 4,703,388 of the model's own calls differ
+(14.4 s; ef60334 from C:\temp\titanic-b1-ef60334, the code before B1 from C:\temp\titanic-wt-epoch-c3)
+(2026-11-21T18:10:59.036Z)

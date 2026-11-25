@@ -1,0 +1,12 @@
+case                                                             founder(min)
+Britannic preset, at rest                                          50.83  list at end of turn   0.00  first porthole inflow   8.0 min  water 68528
+Britannic, 15 min turn, moment for 2 deg to starboard              50.74  list at end of turn   1.98  first porthole inflow   5.8 min  water 68564
+Britannic, 15 min turn, moment for 4 deg to starboard              50.60  list at end of turn   3.68  first porthole inflow   3.6 min  water 68513
+Britannic, 15 min turn, moment for 4 deg to port                   50.69  list at end of turn  -3.68  first porthole inflow   3.9 min  water 68517
+Britannic, 30 min turn, moment for 4 deg to starboard              46.26  list at end of turn   8.73  first porthole inflow   3.6 min  water 69246
+Britannic, 15 min at 15 kn, ports see +0.2 U^2/2g, no heel         50.36  list at end of turn   0.02  first porthole inflow   6.1 min  water 68493
+Britannic, 15 min at 15 kn, +0.2 at ports, breach Cp +0.1, 4 deg stbd   49.35  list at end of turn   4.56  first porthole inflow   1.0 min  water 68559
+Britannic, 30 min at 15 kn, +0.2 at ports, breach Cp +0.1, 4 deg stbd   41.16  list at end of turn  17.64  first porthole inflow   1.0 min  water 70065
+Titanic 1912, at rest                                             157.34  list at end of turn   0.00  first porthole inflow     never  water 67887
+Titanic 1912, 15 min, moment for 4 deg to starboard               157.21  list at end of turn   3.02  first porthole inflow     never  water 67828
+Titanic 1912, 15 min, moment for 4 deg to port                    157.63  list at end of turn  -7.82  first porthole inflow     never  water 67915

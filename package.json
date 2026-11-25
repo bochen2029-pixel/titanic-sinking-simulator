@@ -1,14 +1,27 @@
 {
   "name": "titanic-sinking-simulator",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Flooding and sinking simulator of RMS Titanic: a deterministic column-based hydrostatics core in plain JavaScript, calibrated to the 1912 eyewitness timeline, with a three.js viewer",
+  "homepage": "https://bochen.xyz/titanic/",
   "license": "MIT",
   "private": true,
   "engines": {
     "node": ">=18"
   },
   "scripts": {
+    "gate": "node tools/gate.js",
+    "guide": "node tools/build_guide.js",
+    "guide:shots": "node tools/guide_shots.js",
+    "guide:check": "node tools/guide_check.js",
     "titanic": "node tools/titanic.js",
+    "seams": "node tools/seams.js",
+    "trials": "node tools/trials.js",
+    "night": "node tools/night_run.js",
+    "test:encounter": "node tools/encounter_tests.js",
+    "test:night": "node tools/night_tests.js",
+    "test:watch": "node tools/night_site_test.js dist",
+    "test:visuals": "node tools/visuals_tests.js",
+    "test:visuals-site": "node tools/visuals_site_test.js dist",
     "validate": "node tools/validate.js",
     "cases": "node tools/cases.js",
     "smoke": "node tools/smoke.js",
@@ -34,5 +47,8 @@
     "playwright": "^1.64.0",
     "three": "^0.128.0",
     "wrangler": "^4.149.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "1.13.0"
   }
 }

@@ -1,0 +1,146 @@
+The stage's layout: the faults tools/layout_check.js finds, size by size and state by state (QC C-4; MUST
+since its step 2, D78: none), and the notes, which are not faults. No pixel counts here: the printed rows give them.
+Sizes: phone 390x780 (touch), phone-side 844x390 (touch), tablet 820x1180 (touch), narrow 1024x700, desktop 1400x860, wide 1920x1080.
+
+phone / preset running
+  note: scrolls views
+phone / preset foundered
+  note: scrolls card
+  note: scrolls views
+  note: small targets deep
+phone / preset at rest
+  note: scrolls card
+  note: scrolls views
+  note: small targets deep
+phone / watch on the bridge
+  note: scrolls views
+  note: small targets bridge
+phone / watch, the bridge's view
+  note: scrolls views
+  note: small targets bridge
+phone / watch, the Night look
+  note: scrolls views
+  note: small targets bridge
+phone / watch, on a walk
+  note: scrolls views
+phone / watch after the ice
+  note: scrolls views
+  note: small targets bridge
+phone / watch at the break
+  note: scrolls card
+  note: scrolls views
+phone / watch at rest
+  note: scrolls card
+  note: scrolls views
+  note: small targets deep
+phone-side / preset running
+  note: scrolls views
+phone-side / preset foundered
+  note: hidden caption
+  note: scrolls card
+  note: scrolls views
+  note: small targets deep
+phone-side / preset at rest
+  note: hidden caption
+  note: scrolls card
+  note: scrolls views
+  note: small targets deep
+phone-side / watch on the bridge
+  note: hidden caption
+  note: scrolls views
+  note: small targets bridge
+phone-side / watch, the bridge's view
+  note: scrolls views
+  note: small targets bridge
+phone-side / watch, the Night look
+  note: hidden caption
+  note: scrolls views
+  note: small targets bridge
+phone-side / watch, on a walk
+  note: scrolls views
+phone-side / watch after the ice
+  note: hidden caption
+  note: scrolls views
+  note: small targets bridge
+phone-side / watch at the break
+  note: scrolls card
+  note: scrolls views
+phone-side / watch at rest
+  note: scrolls card
+  note: scrolls views
+  note: small targets deep
+tablet / preset running
+  note: small targets views
+tablet / preset foundered
+  note: scrolls card
+  note: small targets card
+  note: small targets deep
+  note: small targets views
+tablet / preset at rest
+  note: scrolls card
+  note: small targets card
+  note: small targets deep
+  note: small targets views
+tablet / watch on the bridge
+  note: small targets bridge
+  note: small targets views
+tablet / watch, the bridge's view
+  note: small targets bridge
+  note: small targets views
+tablet / watch, the Night look
+  note: small targets bridge
+  note: small targets views
+tablet / watch, on a walk
+  note: small targets views
+tablet / watch after the ice
+  note: small targets bridge
+  note: small targets views
+tablet / watch at the break
+  note: scrolls card
+  note: small targets card
+  note: small targets views
+tablet / watch at rest
+  note: scrolls card
+  note: small targets card
+  note: small targets deep
+  note: small targets views
+narrow / preset running
+narrow / preset foundered
+  note: scrolls card
+narrow / preset at rest
+  note: scrolls card
+narrow / watch on the bridge
+  note: hidden caption
+narrow / watch, the bridge's view
+narrow / watch, the Night look
+  note: hidden caption
+narrow / watch, on a walk
+narrow / watch after the ice
+  note: hidden caption
+narrow / watch at the break
+  note: scrolls card
+narrow / watch at rest
+  note: hidden caption
+  note: scrolls card
+desktop / preset running
+desktop / preset foundered
+desktop / preset at rest
+desktop / watch on the bridge
+desktop / watch, the bridge's view
+desktop / watch, the Night look
+desktop / watch, on a walk
+desktop / watch after the ice
+desktop / watch at the break
+  note: scrolls card
+desktop / watch at rest
+  note: scrolls card
+wide / preset running
+wide / preset foundered
+wide / preset at rest
+wide / watch on the bridge
+wide / watch, the bridge's view
+wide / watch, the Night look
+wide / watch, on a walk
+wide / watch after the ice
+wide / watch at the break
+wide / watch at rest

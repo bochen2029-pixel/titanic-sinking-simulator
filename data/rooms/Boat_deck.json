@@ -1,0 +1,188 @@
+{
+  "deck": "Boat",
+  "title": "Her rooms on the Boat deck (its houses): R3, a sourced table of facts",
+  "format": 1,
+  "written": "2026-11-20, by the R3 session (Claude Opus 5.5), under docs/research/RESEARCH_rooms_plans_licence_v1_1_2026-11-20.md, on the coordinator's word after D deck and the orlop",
+  "rules": "Facts only: which room, where, how big, which door to which. No image or drawing of any plan is kept. Every row cites the reference read and the original checked, or says it was not checked. Bets are tagged as bets.",
+  "reference": "ET: Encyclopedia Titanica's free deck plans, the Boat deck (https://www.encyclopedia-titanica.org/titanic-deckplans/boat-deck.html; drawn by Bruce Beveridge for Titanic The Ship Magnificent, The History Press 2008), read on the page in the built-in browser on 2026-11-20, nothing saved",
+  "original": "Shipbuilder 1911: The Shipbuilder, Midsummer 1911 (the Olympic and Titanic number), its plate of the Boat deck, as reproduced by GG Archives (https://www.ggarchives.com/OT/Titanic/25-ImageLibrary/TheShipbuilder-10-Design-SpecialPlates.html); too small to read room by room, not opened this time.",
+  "how": [
+    "Walls by her frames, as on C, B and A decks: the plan's scale from its own frame ticks (30.8 px a frame: 0.0975 ft a pixel), the midship section placed by its printed 2, 4, 6, 8 and 10 aft and 6, 8 and 10 forward, a ruler of her frames drawn over the page. Walls read against the ruler at 1:2, to about a frame; the houses' sides to about a foot.",
+    "Frames to feet: E deck's anchors (data/rooms/E_deck.json).",
+    "y: feet from the centreline, port positive, at 0.0979 ft a pixel. No row stands on her side: every row is a house, and its walls are numbers.",
+    "Rows: the enclosed houses and their rooms. The raised roofs over the smoke room and the lounge (about a metre over the deck), the domes over the two staircases, the compass platform and the open navigating bridge are not rooms and have no rows; the model counts the two raised roofs as houses 1.0 m high (TIER.houses).",
+    "No watertight bulkhead reaches the Boat deck; the table's bulkheads is empty.",
+    "Doors: 2 ft 3 in by default [bet]; the plan writes none on this deck. Stairs are listed among the doors with no width.",
+    "Derived fields (x_m, y_m, poly_m, area_m2, zone, slab, plan_compartment) are written by: node tools/rooms_table.js --write data/rooms/Boat_deck.json"
+  ],
+  "frames": {
+    "note": "E deck's anchors (her frames, feet forward of amidships).",
+    "anchors": [
+      [
+        "148A",
+        -423.99
+      ],
+      [
+        "140A",
+        -406.04
+      ],
+      [
+        "139A",
+        -403.74
+      ],
+      [
+        "130A",
+        -383.11
+      ],
+      [
+        "128A",
+        -377.85
+      ],
+      [
+        "122A",
+        -362.72
+      ],
+      [
+        "111A",
+        -332.47
+      ],
+      [
+        "110A",
+        -329.55
+      ],
+      [
+        "108A",
+        -323.7
+      ],
+      [
+        "100A",
+        -299.41
+      ],
+      [
+        "93A",
+        -278.24
+      ],
+      [
+        "88A",
+        -263.21
+      ],
+      [
+        "72A",
+        -215.4
+      ],
+      [
+        "68A",
+        -203.21
+      ],
+      [
+        "53A",
+        -157.99
+      ],
+      [
+        "46A",
+        -137.06
+      ],
+      [
+        "30A",
+        -88.87
+      ],
+      [
+        "26A",
+        -76.87
+      ],
+      [
+        "16A",
+        -46.62
+      ],
+      [
+        "8A",
+        -22.62
+      ],
+      [
+        "1A",
+        -1.5
+      ],
+      [
+        "1F",
+        1.5
+      ],
+      [
+        "4F",
+        10.5
+      ],
+      [
+        "14F",
+        40.5
+      ],
+      [
+        "26F",
+        76.5
+      ],
+      [
+        "38F",
+        113.08
+      ],
+      [
+        "48F",
+        142.74
+      ],
+      [
+        "58F",
+        172.89
+      ],
+      [
+        "72F",
+        215.13
+      ],
+      [
+        "84F",
+        251.13
+      ],
+      [
+        "100F",
+        297.96
+      ],
+      [
+        "110F",
+        324.79
+      ],
+      [
+        "122F",
+        354.06
+      ],
+      [
+        "130F",
+        372.21
+      ],
+      [
+        "140F",
+        393.28
+      ],
+      [
+        "154F",
+        421.47
+      ],
+      [
+        "stem",
+        425.33
+      ]
+    ]
+  },
+  "bulkheads": {
+    "note": "None: no watertight bulkhead reaches the Boat deck, and the reference marks none."
+  },
+  "rows": [
+    {"id":"Bt-01","kind":"stair","name":"Second-class entrance house, with the second-class lift (elevator), stairs down and two vents","plan":"2ND CLASS ENT.; ELEVATOR; D; VENT (two); 2nd CL. ENTRANCE 7 PATTERN 'E' TEAK FRAMED 5' 4\" X 30\"","x":["81.5A","72.5A"],"y":[-9.8,10.8],"doors":[{"width_ft":2.25,"width":"default","to":"the Boat deck (open)","n":2,"at":"72.5A"},{"to":"A deck (stairs down)","kind":"stair","width_ft":null,"width":"a stair, no door"}],"source":"ET, the Boat deck, frames 81.5A to 72.5A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 2 to 10 either side of amidships fall on it), at 1:2"],"x_m":[-74.306,-66.109],"y_m":[-2.987,3.292],"poly_m":[[-74.31,-2.99],[-66.11,-2.99],[-66.11,3.29],[-74.31,3.29]],"area_m2":51.47,"pieces":[{"zone":12,"side":0,"slab":202,"area":26.983,"key":"12:P:Boat"},{"zone":12,"side":1,"slab":211,"area":24.485,"key":"12:S:Boat"}],"zone":[12],"slab":[202,211],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"Bt-02","kind":"service","name":"A house over the smoke room's raised roof: a deck store, the fan room, a store for deck games, and the turbine engine casing with light and air trunks","plan":"DECK STORE; FAN ROOM*; DECK GAMES; TURBINE ENGINE CASING; L & A TO ... (two); 2ND ... (a label not read)","x":["66.5A","48.5A"],"y":[-10.8,11.8],"doors":[{"width_ft":2.25,"width":"default","to":"the Boat deck (open)","n":3,"at":"66.5A"}],"source":"ET, the Boat deck, frames 66.5A to 48.5A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 2 to 10 either side of amidships fall on it), at 1:2"],"x_m":[-60.56,-44.054],"y_m":[-3.292,3.597],"poly_m":[[-60.56,-3.29],[-44.05,-3.29],[-44.05,3.6],[-60.56,3.6]],"area_m2":113.7,"pieces":[{"zone":10,"side":0,"slab":166,"area":14.761,"key":"10:P:Boat"},{"zone":10,"side":1,"slab":175,"area":13.51,"key":"10:S:Boat"},{"zone":11,"side":0,"slab":184,"area":44.604,"key":"11:P:Boat"},{"zone":11,"side":1,"slab":193,"area":40.824,"key":"11:S:Boat"}],"zone":[10,11],"slab":[166,175,184,193],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"Bt-03","kind":"service","name":"The engine casing's house: the tank rooms (fresh water tanks, hot salt water), the reciprocating engine casing with light and air, and the engineers' smoke room","plan":"TANK ROOM (two); FRESH WATER TANKS; HOT SALT WATER; RECIPROCATING ENGINE CASING; LIGHT & AIR; ENG.RS SMOKE ROOM; S (three)","x":["39.5A","30.5A"],"y":[-22.6,22.6],"doors":[{"width_ft":2.25,"width":"default","to":"the engineers' promenade (open)","n":2,"at":"39.5A to 30.5A"}],"source":"ET, the Boat deck, frames 39.5A to 30.5A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 2 to 10 either side of amidships fall on it), at 1:2"],"x_m":[-35.809,-27.547],"y_m":[-6.888,6.888],"poly_m":[[-35.81,-6.89],[-27.55,-6.89],[-27.55,6.89],[-35.81,6.89]],"area_m2":113.83,"pieces":[{"zone":10,"side":0,"slab":166,"area":56.914,"key":"10:P:Boat"},{"zone":10,"side":1,"slab":175,"area":56.914,"key":"10:S:Boat"}],"zone":[10],"slab":[166,175],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"Bt-04","kind":"crew","name":"The officers' mess house: the officers' mess, pantry and tank rooms, a store for deck chairs, stairs down, and the boiler casing of Nos 1 and 2 with its fidley, fan, vents and trunk","plan":"OFFICERS' MESS, TANK ROOMS, PANTRY 9 OFF PATTERN 'H' TEAK FRAMED 3' 6\" X 24\"; OFC. MESS*; PANTRY; DECK CHAIRS; HOIST GEAR(?); D (two); VENT; FAN; TRUNK; FIDLEY; NOS 1 & 2 BOILER CASING","x":["28.5A","15A"],"y":[-19.6,18.6],"doors":[{"width_ft":2.25,"width":"default","to":"the Boat deck (open)","n":2,"at":"28.5A to 15A"},{"to":"A deck (stairs down)","kind":"stair","width_ft":null,"width":"a stair, no door"}],"source":"ET, the Boat deck, frames 28.5A to 15A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","beyond the model","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 2 to 10 either side of amidships fall on it), at 1:2"],"x_m":[-25.716,-13.295],"y_m":[-5.974,5.669],"poly_m":[[-25.72,-5.97],[-13.3,-5.97],[-13.3,5.67],[-25.72,5.67]],"area_m2":144.62,"pieces":[{"zone":8,"side":0,"slab":132,"area":16.209,"key":"8:P:Boat"},{"zone":8,"side":1,"slab":141,"area":17.08,"key":"8:S:Boat"},{"zone":9,"side":0,"slab":-1,"area":54.207,"key":null},{"zone":9,"side":1,"slab":-1,"area":57.122,"key":null}],"zone":[8,9],"slab":[132,141,-1],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"Bt-05","kind":"casing","name":"Fan, vents and trunk and a fidley at the forward end of the casing of Nos 1 and 2, under the lounge's raised roof","plan":"VENT; FAN; TRUNK; FIDLEY","x":["15A","10.5A"],"y":[-9.8,9.8],"doors":[],"source":"ET, the Boat deck, frames 15A to 10.5A","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 2 to 10 either side of amidships fall on it), at 1:2"],"x_m":[-13.295,-9.181],"y_m":[-2.987,2.987],"poly_m":[[-13.3,-2.99],[-9.18,-2.99],[-9.18,2.99],[-13.3,2.99]],"area_m2":24.58,"pieces":[{"zone":8,"side":0,"slab":132,"area":12.291,"key":"8:P:Boat"},{"zone":8,"side":1,"slab":141,"area":12.291,"key":"8:S:Boat"}],"zone":[8],"slab":[132,141],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"Bt-06","kind":"casing","name":"The second funnel's house: fans, vents and trunks, the fidleys and the boiler casing of Nos 3 and 4","plan":"VENT; FAN; TRUNK; FIDLEY; NOS 3 & 4 BOILER CASING","x":["13F","29F"],"y":[-9.8,9.8],"doors":[],"source":"ET, the Boat deck, frames 13F to 29F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 2 to 10 either side of amidships fall on it), at 1:2"],"x_m":[11.43,26.105],"y_m":[-2.987,2.987],"poly_m":[[11.43,-2.99],[26.1,-2.99],[26.1,2.99],[11.43,2.99]],"area_m2":87.67,"pieces":[{"zone":6,"side":0,"slab":96,"area":19.707,"key":"6:P:Boat"},{"zone":6,"side":1,"slab":105,"area":19.707,"key":"6:S:Boat"},{"zone":7,"side":0,"slab":114,"area":24.127,"key":"7:P:Boat"},{"zone":7,"side":1,"slab":123,"area":24.127,"key":"7:S:Boat"}],"zone":[6,7],"slab":[96,105,114,123],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"Bt-07","kind":"service","name":"Gymnasium, starboard of the second funnel's casing","plan":"GYMNASIUM; GYMNASIUM & 1st CLASS ENTRANCE 18 OFF PATTERN 'E' TEAK FRAMED 5' 4\" X 30\"","x":["13F","29.5F"],"y":[-28.4,-10.8],"doors":[{"width_ft":2.25,"width":"default","to":"the Boat deck (open)","at":"13F to 29.5F"}],"source":"ET, the Boat deck, frames 13F to 29.5F, starboard","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","beyond the model","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 2 to 10 either side of amidships fall on it), at 1:2"],"x_m":[11.43,26.569],"y_m":[-8.656,-3.292],"poly_m":[[11.43,-8.66],[26.57,-8.66],[26.57,-3.29],[11.43,-3.29]],"area_m2":81.21,"pieces":[{"zone":6,"side":1,"slab":105,"area":37.884,"key":"6:S:Boat"},{"zone":7,"side":1,"slab":123,"area":43.33,"key":"7:S:Boat"}],"zone":[6,7],"slab":[105,123],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"Bt-08","kind":"stair","name":"First-class forward entrance: the head of the grand staircase, under its dome (19 ft by 26 ft)","plan":"1ST CLASS ENTRANCE; DOME 19' X 26'; D","x":["29.5F","39.5F"],"y":[-27.4,29.4],"doors":[{"width_ft":2.25,"width":"default","to":"the Boat deck (open)","n":2,"at":"29.5F to 39.5F"},{"to":"A deck (the grand staircase down)","kind":"stair","width_ft":null,"width":"a stair, no door"}],"source":"ET, the Boat deck, frames 29.5F to 39.5F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 2 to 10 either side of amidships fall on it), at 1:2"],"x_m":[26.569,35.823],"y_m":[-8.352,8.961],"poly_m":[[26.57,-8.35],[35.82,-8.35],[35.82,8.96],[26.57,8.96]],"area_m2":160.21,"pieces":[{"zone":6,"side":0,"slab":96,"area":82.923,"key":"6:P:Boat"},{"zone":6,"side":1,"slab":105,"area":77.282,"key":"6:S:Boat"}],"zone":[6],"slab":[96,105],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"Bt-09","kind":"crew","name":"The officers' house, port: the cabins SR Z, SR Y and SR X, the sixth, fifth, third, second, first and chief officers' cabins, with baths","plan":"SR Z; SR Y; SR X; 6TH OFC.; 5TH OFC.; 3RD OFC.; 2ND OFC.; 1ST OFC.; CHIEF OFC.; BATH; W; BED & DRS; OFFICERS' DECKHOUSE WINDOWS 26 OFF 22\" X 37\" H&W BRASS FRAMED","x":["39.5F","70.9F"],"y":[9.8,22.6],"doors":[{"width_ft":2.25,"width":"default","to":"the officers' promenade (open)","n":9,"at":"22.6 ft"}],"source":"ET, the Boat deck, frames 39.5F to 70.9F, port","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 2 to 10 either side of amidships fall on it), at 1:2"],"x_m":[35.823,64.56],"y_m":[2.987,6.888],"poly_m":[[35.82,2.99],[64.56,2.99],[64.56,6.89],[35.82,6.89]],"area_m2":112.12,"pieces":[{"zone":4,"side":0,"slab":60,"area":40.207,"key":"4:P:Boat"},{"zone":5,"side":0,"slab":78,"area":67.782,"key":"5:P:Boat"},{"zone":6,"side":0,"slab":96,"area":4.128,"key":"6:P:Boat"}],"zone":[4,5,6],"slab":[60,78,96],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"Bt-10","kind":"casing","name":"The officers' house, middle: the lift's gear, the silent room and the Marconi room, the officers' lavatory, oil skins, a bath and the stewards' room, the boiler casing of Nos 5 and 6 with its fidley, fans, vents and trunks, and the chart room","plan":"ELEVATOR GEAR; DECK RAISED; SILENT ROOM; MARCONI ROOM*; OFF. LAV.; OIL SKINS; BATH; STEWARDS; VENT; FAN; TRUNK; FIDLEY; NOS 5 & 6 BOILER CASING; CHART ROOM*","x":["39.5F","70.9F"],"y":[-9.8,9.8],"doors":[{"width_ft":2.25,"width":"default","to":"Bt-09","n":2,"at":"9.8 ft"},{"width_ft":2.25,"width":"default","to":"Bt-11","n":2,"at":"-9.8 ft"}],"source":"ET, the Boat deck, frames 39.5F to 70.9F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 2 to 10 either side of amidships fall on it), at 1:2"],"x_m":[35.823,64.56],"y_m":[-2.987,2.987],"poly_m":[[35.82,-2.99],[64.56,-2.99],[64.56,2.99],[35.82,2.99]],"area_m2":171.68,"pieces":[{"zone":4,"side":0,"slab":60,"area":30.783,"key":"4:P:Boat"},{"zone":4,"side":1,"slab":69,"area":30.783,"key":"4:S:Boat"},{"zone":5,"side":0,"slab":78,"area":51.896,"key":"5:P:Boat"},{"zone":5,"side":1,"slab":87,"area":51.896,"key":"5:S:Boat"},{"zone":6,"side":0,"slab":96,"area":3.16,"key":"6:P:Boat"},{"zone":6,"side":1,"slab":105,"area":3.16,"key":"6:S:Boat"}],"zone":[4,5,6],"slab":[60,69,78,87,96,105],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"Bt-11","kind":"crew","name":"The officers' house, starboard: the cabins SR W, SR U and SR T, the officers' smoke room, the fourth officer's cabin, the captain's bedroom, lavatory and sitting room, a pantry and the navigating room","plan":"SR W; SR U; SR T; OFF'S SMOKE ROOM*; 4TH OFC.; CAPT. BEDROOM; CAPT. LAV.; CAPT. SITTING ROOM*; PANTRY; NAVIGATING ROOM*; OFFICERS' DECKHOUSE WINDOWS 26 OFF 22\" X 37\" H&W BRASS FRAMED","x":["39.5F","70.9F"],"y":[-19.6,-9.8],"doors":[{"width_ft":2.25,"width":"default","to":"the officers' promenade (open)","n":6,"at":"-19.6 ft"}],"source":"ET, the Boat deck, frames 39.5F to 70.9F, starboard","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","block","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 2 to 10 either side of amidships fall on it), at 1:2"],"x_m":[35.823,64.56],"y_m":[-5.974,-2.987],"poly_m":[[35.82,-5.97],[64.56,-5.97],[64.56,-2.99],[35.82,-2.99]],"area_m2":85.84,"pieces":[{"zone":4,"side":1,"slab":69,"area":30.783,"key":"4:S:Boat"},{"zone":5,"side":1,"slab":87,"area":51.896,"key":"5:S:Boat"},{"zone":6,"side":1,"slab":105,"area":3.16,"key":"6:S:Boat"}],"zone":[4,5,6],"slab":[69,87,105],"plan_compartment":"stem-stern","zone_note":null},
+    {"id":"Bt-12","kind":"service","name":"Wheelhouse, with the flag and signal lockers","plan":"WHEEL HOUSE*; FLAG LK.; SIGNAL LK.; BRIDGE & WHEEL HOUSE WINDOWS - 16 OFF TEAK FRAMED 30\" X 37\" FRONT TO SIDES","x":["70.9F","73.5F"],"y":[-8,8],"doors":[{"width_ft":2.25,"width":"default","to":"the navigating bridge (open)","n":2,"at":"73.5F"},{"width_ft":2.25,"width":"default","to":"Bt-10","at":"70.9F"}],"source":"ET, the Boat deck, frames 70.9F to 73.5F","check":"not checked against an original (too small at 1000 px)","tags":["read","approx","placed: walls by a frame ruler drawn over the page at the plan's own scale (its printed frames 2 to 10 either side of amidships fall on it), at 1:2"],"x_m":[64.56,66.943],"y_m":[-2.438,2.438],"poly_m":[[64.56,-2.44],[66.94,-2.44],[66.94,2.44],[64.56,2.44]],"area_m2":11.62,"pieces":[{"zone":4,"side":0,"slab":60,"area":5.811,"key":"4:P:Boat"},{"zone":4,"side":1,"slab":69,"area":5.811,"key":"4:S:Boat"}],"zone":[4],"slab":[60,69],"plan_compartment":"stem-stern","zone_note":null}
+  ]
+}

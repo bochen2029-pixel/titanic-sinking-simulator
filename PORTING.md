@@ -1,5 +1,10 @@
 # Porting the core to C++/CUDA
 
+> This plan describes the core as it stood in October 2026, and is kept as a dated record. The core has moved on far
+> since: the tiers above B deck, her restored ends, the calibration epoch (the history match of stage D), the plant, the
+> readers and her fall to the bed. Its sizes are October's: N = 4,408 columns then, 4,852 now by `C.buildShip()`. See
+> README, "The port, and the oracle".
+
 The JS core was written to map directly onto a GPU. This file lists what to keep identical, how the arrays map to threads, and how to batch it for MCTS rollouts.
 
 ## Data (all flat arrays, as in `core/core.js`)

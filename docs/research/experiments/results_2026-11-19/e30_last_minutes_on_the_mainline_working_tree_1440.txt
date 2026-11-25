@@ -1,0 +1,262 @@
+Run 2026-11-19 14:40 CST on the main checkout's WORKING TREE (the mainline's S1: the tiers above B deck, their windows and the grand staircases in the core, refitted; uncommitted), NOT on a97a6bd. The script labels its first block "HEAD a97a6bd": that label is its own, for the tracked run beside this file. Compare e30_last_minutes_and_the_flag.txt.
+
+== STATIC (HEAD a97a6bd, the 1912 damage preset)
+mass ms t 49021  g0 (xG, yG, KG) m -3.195, 0.028, 10.799
+hull envelope m3 150540  floodable m3 131841  solids (envelope - floodable) m3 18698
+weight in water, wholly flooded, by the model's permeabilities t 29855
+whole                  x -139.0 to 130.3  L 269.3  plan m2 6090 (centroid x -6.4)  side m2 7171 (centroid x -1.5)  envelope m3 150540  largest section m2 844
+bow (x > -23)          x -21.6 to 130.3  L 152.0  plan m2 3463 (centroid x 42.0)  side m2 4204 (centroid x 50.2)  envelope m3 90297  largest section m2 844
+stern (x < -23)        x -139.0 to -21.6  L 117.3  plan m2 2627 (centroid x -70.3)  side m2 2967 (centroid x -74.7)  envelope m3 60243  largest section m2 792
+structure and load (the girder's weight curve): bow t 29421  centre x 38.9  | stern t 19599  centre x -66.4
+floodable: bow m3 79820  stern m3 52022
+weight in water wholly flooded (permeabilities): bow t 18682  stern t 11173
+weight layers (t):
+   Boilers, boiler room 6                                   569  x 54.3 to 70.7  centre 62.5
+   Boilers, boiler room 5                                   711  x 36.9 to 54.3  centre 45.6
+   Boilers, boiler room 4                                   711  x 19.5 to 36.9  centre 28.2
+   Boilers, boiler room 3                                   711  x 2.1 to 19.5  centre 10.8
+   Boilers, boiler room 2                                   711  x -16.2 to 2.1  centre -7.0
+   Boilers, boiler room 1 (single-ended)                    420  x -27.1 to -16.2  centre -21.6
+   Reciprocating engines and their room                    2312  x -45.0 to -30.0  centre -37.5
+   Turbine room                                             727  x -65.5 to -48.2  centre -56.8
+   Electric engine room                                     200  x -84.7 to -65.5  centre -75.1
+   Shafts                                                   250  x -118.0 to -50.0  centre -84.0
+   Stern castings and screws                                287  x -130.0 to -118.0  centre -124.0
+   Coal                                                    3050  x -27.1 to 70.7  centre 21.8
+   Cargo, holds 1 to 3                                      550  x 70.7 to 115.5  centre 93.1
+   Cargo aft                                                360  x -113.0 to -84.7  centre -98.9
+   People and luggage                                       260  x -100.0 to 100.0  centre 0.0
+   Hull, structure and outfit                             31773  x -139.0 to 130.3  centre -5.1
+   Remainder (water, stores, double-bottom liquids)        5419  x -100.0 to 115.0  centre 7.5
+-- at the damage: t 0.00 min | trim -0.20 deg, list -1.99 deg (+ = starboard down) | zO 0.96 m, vz 0.000 m/s, trim rate 0.000 deg/s, roll rate 0.000 deg/s
+   hull top undefined m, stem head 17.0 m, taffrail 14.1 m, keel at AP -10.3 m, centre screw -3.8 m; the sea on the boat deck's centre line reaches x 130.0
+   displaced undefined m3 of 150540 (NaN %); water aboard 0 t as fits, 0 t pressed over; air 131841 m3 (bow 79820, stern 52022)
+   girder: 0.88 GN m at x -16.2 (below)
+   cut at x -23: bow displaces 29421 t, weighs 29421 + 0 water: net -0 t (+ floats) | stern displaces 19600 t, weighs 19599 + 0: net 0 t; stern's reserve if wholly under 42149 t
+
+== THE LAST MINUTES (every 30 s from T 144 min, and each mark as it is passed)
+  t min   trim    list     zO      vz    hullTop  displaced%  M GN m
+-- list reaches 5 deg: t 103.54 min | trim 4.21 deg, list -5.00 deg (+ = starboard down) | zO -2.62 m, vz -0.000 m/s, trim rate 0.000 deg/s, roll rate -0.010 deg/s
+   hull top 22.5 m, stem head 3.1 m, taffrail 20.8 m, keel at AP -4.1 m, centre screw 2.2 m; the sea on the boat deck's centre line reaches x 130.0
+   displaced 69014 m3 of 150540 (45.8 %); water aboard 21667 t as fits, 55 t pressed over; air 110703 m3 (bow 58681, stern 52022)
+   girder: 3.18 GN m at x -16.2 (below)
+   cut at x -23: bow displaces 53680 t, weighs 29421 + 21667 water: net 2591 t (+ floats) | stern displaces 17061 t, weighs 19599 + 0: net -2539 t; stern's reserve if wholly under 42149 t
+-- trim reaches 5 deg: t 132.39 min | trim 5.00 deg, list -3.94 deg (+ = starboard down) | zO -3.45 m, vz -0.001 m/s, trim rate 0.001 deg/s, roll rate -0.005 deg/s
+   hull top 22.6 m, stem head 0.4 m, taffrail 21.9 m, keel at AP -3.2 m, centre screw 3.1 m; the sea on the boat deck's centre line reaches x 130.0
+   displaced 73883 m3 of 150540 (49.1 %); water aboard 26586 t as fits, 128 t pressed over; air 105903 m3 (bow 53882, stern 52022)
+   girder: 3.34 GN m at x -16.2 (below)
+   cut at x -23: bow displaces 58635 t, weighs 29421 + 26586 water: net 2627 t (+ floats) | stern displaces 17096 t, weighs 19599 + 0: net -2504 t; stern's reserve if wholly under 42149 t
+  144.00   5.52   -6.79   -3.96  -0.001    22.7     50.8      3.48
+  144.50   5.57   -6.88   -3.99  -0.001    22.7     50.9      3.50
+  145.00   5.62   -6.95   -4.04  -0.001    22.8     51.0      3.52
+  145.50   5.68   -6.98   -4.08  -0.002    22.9     51.2      3.54
+  146.00   5.74   -6.96   -4.13  -0.002    23.0     51.3      3.57
+  146.50   5.82   -6.90   -4.19  -0.002    23.1     51.5      3.61
+  147.00   5.91   -6.75   -4.25  -0.002    23.3     51.6      3.65
+  147.50   6.01   -6.46   -4.33  -0.003    23.4     51.8      3.70
+  148.00   6.14   -6.01   -4.41  -0.003    23.6     52.0      3.76
+  148.50   6.28   -5.33   -4.51  -0.003    23.9     52.3      3.83
+  149.00   6.43   -4.65   -4.62  -0.004    24.1     52.5      3.90
+  149.50   6.58   -3.94   -4.73  -0.004    24.4     52.8      3.97
+-- girder moment reaches 4 GN m: t 149.72 min | trim 6.65 deg, list -3.64 deg (+ = starboard down) | zO -4.78 m, vz -0.004 m/s, trim rate 0.005 deg/s, roll rate 0.024 deg/s
+   hull top 24.5 m, stem head -4.8 m, taffrail 24.4 m, keel at AP -0.9 m, centre screw 5.3 m; the sea on the boat deck's centre line reaches x 130.0
+   displaced 79656 m3 of 150540 (52.9 %); water aboard 32398 t as fits, 264 t pressed over; air 100233 m3 (bow 48212, stern 52022)
+   girder: 4.00 GN m at x -16.2 (within)
+   cut at x -23: bow displaces 65289 t, weighs 29421 + 32398 water: net 3469 t (+ floats) | stern displaces 16363 t, weighs 19599 + 0: net -3237 t; stern's reserve if wholly under 42149 t
+  150.00   6.73   -3.39   -4.84  -0.004    24.6     53.1      4.03
+  150.50   6.87   -3.16   -4.95  -0.004    24.8     53.4      4.08
+  151.00   7.00   -2.71   -5.06  -0.003    25.0     53.6      4.13
+  151.50   7.10   -2.80   -5.16  -0.003    25.2     53.9      4.15
+  152.00   7.20   -2.84   -5.25  -0.003    25.3     54.2      4.18
+  152.50   7.36   -2.83   -5.39  -0.005    25.5     54.5      4.22
+  153.00   7.53   -3.03   -5.54  -0.005    25.8     55.0      4.26
+  153.50   7.78   -3.18   -5.77  -0.008    26.1     55.5      4.33
+-- trim reaches 8 deg: t 153.83 min | trim 8.00 deg, list -3.07 deg (+ = starboard down) | zO -5.96 m, vz -0.012 m/s, trim rate 0.014 deg/s, roll rate 0.002 deg/s
+   hull top 26.4 m, stem head -9.1 m, taffrail 26.4 m, keel at AP 1.0 m, centre screw 7.0 m; the sea on the boat deck's centre line reaches x 90.5
+   displaced 84399 m3 of 150540 (56.1 %); water aboard 37062 t as fits, 537 t pressed over; air 95684 m3 (bow 43662, stern 52022)
+   girder: 4.39 GN m at x -16.2 (within)
+   cut at x -23: bow displaces 70478 t, weighs 29421 + 37062 water: net 3995 t (+ floats) | stern displaces 16044 t, weighs 19599 + 0: net -3556 t; stern's reserve if wholly under 42149 t
+  154.00   8.14   -3.09   -6.08  -0.012    26.6     56.4      4.43
+  154.50   8.66   -2.68   -6.53  -0.018    27.3     57.6      4.56
+-- girder moment reaches 4.6 GN m: t 154.65 min | trim 8.85 deg, list -2.47 deg (+ = starboard down) | zO -6.70 m, vz -0.019 m/s, trim rate 0.023 deg/s, roll rate 0.011 deg/s
+   hull top 27.6 m, stem head -11.9 m, taffrail 27.6 m, keel at AP 2.1 m, centre screw 8.1 m; the sea on the boat deck's centre line reaches x 72.0
+   displaced 87316 m3 of 150540 (58.0 %); water aboard 39965 t as fits, 689 t pressed over; air 92851 m3 (bow 40830, stern 52022)
+   girder: 4.60 GN m at x -16.2 (within)
+   cut at x -23: bow displaces 73643 t, weighs 29421 + 39965 water: net 4256 t (+ floats) | stern displaces 15875 t, weighs 19599 + 0: net -3724 t; stern's reserve if wholly under 42149 t
+  155.00   9.43   -3.52   -7.19  -0.031    28.4     59.2      4.74
+-- trim reaches 10 deg: t 155.22 min | trim 10.00 deg, list -4.81 deg (+ = starboard down) | zO -7.65 m, vz -0.039 m/s, trim rate 0.048 deg/s, roll rate -0.084 deg/s
+   hull top 29.3 m, stem head -15.5 m, taffrail 29.3 m, keel at AP 3.7 m, centre screw 9.6 m; the sea on the boat deck's centre line reaches x 54.5
+   displaced 90728 m3 of 150540 (60.3 %); water aboard 43484 t as fits, 855 t pressed over; air 89418 m3 (bow 37397, stern 52022)
+   girder: 4.88 GN m at x -16.2 (within)
+   cut at x -23: bow displaces 77394 t, weighs 29421 + 43484 water: net 4489 t (+ floats) | stern displaces 15636 t, weighs 19599 + 0: net -3963 t; stern's reserve if wholly under 42149 t
+-- girder moment reaches 5 GN m: t 155.40 min | trim 10.57 deg, list -5.83 deg (+ = starboard down) | zO -8.11 m, vz -0.051 m/s, trim rate 0.062 deg/s, roll rate -0.104 deg/s
+   hull top 30.1 m, stem head -17.4 m, taffrail 30.1 m, keel at AP 4.5 m, centre screw 10.4 m; the sea on the boat deck's centre line reaches x 47.5
+   displaced 92207 m3 of 150540 (61.3 %); water aboard 45049 t as fits, 940 t pressed over; air 87892 m3 (bow 35870, stern 52022)
+   girder: 5.01 GN m at x -16.2 (within)
+   cut at x -23: bow displaces 79029 t, weighs 29421 + 45049 water: net 4560 t (+ floats) | stern displaces 15523 t, weighs 19599 + 0: net -4076 t; stern's reserve if wholly under 42149 t
+-- trim reaches 11 deg: t 155.50 min | trim 11.01 deg, list -6.40 deg (+ = starboard down) | zO -8.46 m, vz -0.065 m/s, trim rate 0.082 deg/s, roll rate -0.077 deg/s
+   hull top 30.7 m, stem head -18.7 m, taffrail 30.7 m, keel at AP 5.1 m, centre screw 11.0 m; the sea on the boat deck's centre line reaches x 43.0
+   displaced 93232 m3 of 150540 (61.9 %); water aboard 46164 t as fits, 1003 t pressed over; air 86803 m3 (bow 34782, stern 52022)
+   girder: 5.11 GN m at x -16.2 (within)
+   cut at x -23: bow displaces 80159 t, weighs 29421 + 46164 water: net 4574 t (+ floats) | stern displaces 15450 t, weighs 19599 + 0: net -4149 t; stern's reserve if wholly under 42149 t
+  155.50  11.01   -6.40   -8.46  -0.065    30.7     61.9      5.11
+-- girder moment reaches 5.2 GN m: t 155.58 min | trim 11.46 deg, list -6.67 deg (+ = starboard down) | zO -8.82 m, vz -0.078 m/s, trim rate 0.100 deg/s, roll rate -0.038 deg/s
+   hull top 31.3 m, stem head -20.2 m, taffrail 31.4 m, keel at AP 5.8 m, centre screw 11.6 m; the sea on the boat deck's centre line reaches x 39.0
+   displaced 94159 m3 of 150540 (62.5 %); water aboard 47176 t as fits, 1068 t pressed over; air 85817 m3 (bow 33795, stern 52022)
+   girder: 5.21 GN m at x -16.2 (within)
+   cut at x -23: bow displaces 81202 t, weighs 29421 + 47176 water: net 4605 t (+ floats) | stern displaces 15360 t, weighs 19599 + 0: net -4239 t; stern's reserve if wholly under 42149 t
+-- girder moment reaches 5.3 GN m: t 155.67 min | trim 12.02 deg, list -6.87 deg (+ = starboard down) | zO -9.25 m, vz -0.093 m/s, trim rate 0.120 deg/s, roll rate -0.045 deg/s
+   hull top 32.1 m, stem head -21.9 m, taffrail 32.2 m, keel at AP 6.6 m, centre screw 12.4 m; the sea on the boat deck's centre line reaches x 34.0
+   displaced 95183 m3 of 150540 (63.2 %); water aboard 48232 t as fits, 1153 t pressed over; air 84786 m3 (bow 32765, stern 52022)
+   girder: 5.32 GN m at x -16.2 (within)
+   cut at x -23: bow displaces 82352 t, weighs 29421 + 48232 water: net 4699 t (+ floats) | stern displaces 15264 t, weighs 19599 + 0: net -4335 t; stern's reserve if wholly under 42149 t
+-- trim reaches 12 deg: t 155.67 min | trim 12.02 deg, list -6.87 deg (+ = starboard down) | zO -9.25 m, vz -0.093 m/s, trim rate 0.120 deg/s, roll rate -0.045 deg/s
+   hull top 32.1 m, stem head -21.9 m, taffrail 32.2 m, keel at AP 6.6 m, centre screw 12.4 m; the sea on the boat deck's centre line reaches x 34.0
+   displaced 95183 m3 of 150540 (63.2 %); water aboard 48232 t as fits, 1153 t pressed over; air 84786 m3 (bow 32765, stern 52022)
+   girder: 5.32 GN m at x -16.2 (within)
+   cut at x -23: bow displaces 82352 t, weighs 29421 + 48232 water: net 4699 t (+ floats) | stern displaces 15264 t, weighs 19599 + 0: net -4335 t; stern's reserve if wholly under 42149 t
+-- girder moment reaches 5.4 GN m: t 155.73 min | trim 12.51 deg, list -7.08 deg (+ = starboard down) | zO -9.62 m, vz -0.092 m/s, trim rate 0.125 deg/s, roll rate -0.060 deg/s
+   hull top 32.9 m, stem head -23.4 m, taffrail 32.9 m, keel at AP 7.3 m, centre screw 13.0 m; the sea on the boat deck's centre line reaches x 30.5
+   displaced 95959 m3 of 150540 (63.7 %); water aboard 48957 t as fits, 1237 t pressed over; air 84079 m3 (bow 32057, stern 52022)
+   girder: 5.40 GN m at x -16.2 (above)
+   cut at x -23: bow displaces 83241 t, weighs 29421 + 48957 water: net 4863 t (+ floats) | stern displaces 15165 t, weighs 19599 + 0: net -4435 t; stern's reserve if wholly under 42149 t
+-- trim reaches 14.4 deg: t 155.94 min | trim 14.41 deg, list -8.56 deg (+ = starboard down) | zO -11.10 m, vz -0.154 m/s, trim rate 0.193 deg/s, roll rate -0.198 deg/s
+   hull top 35.5 m, stem head -29.4 m, taffrail 35.7 m, keel at AP 10.0 m, centre screw 15.6 m; the sea on the boat deck's centre line reaches x 19.0
+   displaced 98640 m3 of 150540 (65.5 %); water aboard 52037 t as fits, 1549 t pressed over; air 81073 m3 (bow 29052, stern 52022)
+   girder: 5.66 GN m at x -16.2 (above)
+   cut at x -23: bow displaces 86181 t, weighs 29421 + 52037 water: net 4723 t (+ floats) | stern displaces 14992 t, weighs 19599 + 0: net -4608 t; stern's reserve if wholly under 42149 t
+-- trim reaches 15 deg: t 155.99 min | trim 15.02 deg, list -9.26 deg (+ = starboard down) | zO -11.59 m, vz -0.168 m/s, trim rate 0.216 deg/s, roll rate -0.267 deg/s
+   hull top 36.4 m, stem head -31.3 m, taffrail 36.5 m, keel at AP 10.9 m, centre screw 16.4 m; the sea on the boat deck's centre line reaches x 16.0
+   displaced 99422 m3 of 150540 (66.0 %); water aboard 52765 t as fits, 1662 t pressed over; air 80363 m3 (bow 28342, stern 52022)
+   girder: 5.74 GN m at x -16.2 (above)
+   cut at x -23: bow displaces 86993 t, weighs 29421 + 52765 water: net 4807 t (+ floats) | stern displaces 14979 t, weighs 19599 + 0: net -4621 t; stern's reserve if wholly under 42149 t
+  156.00  15.13   -9.40  -11.67  -0.168    36.5     66.1      5.75
+-- list reaches 10 deg: t 156.03 min | trim 15.58 deg, list -10.04 deg (+ = starboard down) | zO -12.01 m, vz -0.170 m/s, trim rate 0.227 deg/s, roll rate -0.346 deg/s
+   hull top 37.1 m, stem head -33.1 m, taffrail 37.3 m, keel at AP 11.7 m, centre screw 17.2 m; the sea on the boat deck's centre line reaches x 13.0
+   displaced 100004 m3 of 150540 (66.4 %); water aboard 53312 t as fits, 1764 t pressed over; air 79830 m3 (bow 27808, stern 52022)
+   girder: 5.79 GN m at x -16.2 (above)
+   cut at x -23: bow displaces 87610 t, weighs 29421 + 53312 water: net 4877 t (+ floats) | stern displaces 14950 t, weighs 19599 + 0: net -4650 t; stern's reserve if wholly under 42149 t
+-- trim reaches 17 deg: t 156.13 min | trim 17.06 deg, list -12.99 deg (+ = starboard down) | zO -13.17 m, vz -0.228 m/s, trim rate 0.276 deg/s, roll rate -0.655 deg/s
+   hull top 39.1 m, stem head -37.8 m, taffrail 39.3 m, keel at AP 13.9 m, centre screw 19.2 m; the sea on the boat deck's centre line reaches x 6.5
+   displaced 101329 m3 of 150540 (67.3 %); water aboard 55131 t as fits, 2023 t pressed over; air 78055 m3 (bow 26033, stern 52022)
+   girder: 5.87 GN m at x -16.2 (above)
+   cut at x -23: bow displaces 88937 t, weighs 29421 + 55131 water: net 4385 t (+ floats) | stern displaces 14990 t, weighs 19599 + 0: net -4610 t; stern's reserve if wholly under 42149 t
+-- trim reaches 17.7 deg: t 156.17 min | trim 17.73 deg, list -14.66 deg (+ = starboard down) | zO -13.73 m, vz -0.269 m/s, trim rate 0.312 deg/s, roll rate -0.815 deg/s
+   hull top 39.9 m, stem head -40.0 m, taffrail 40.1 m, keel at AP 14.8 m, centre screw 20.0 m; the sea on the boat deck's centre line reaches x 4.0
+   displaced 101928 m3 of 150540 (67.7 %); water aboard 56050 t as fits, 2134 t pressed over; air 77159 m3 (bow 25137, stern 52021)
+   girder: 5.88 GN m at x -16.2 (above)
+   cut at x -23: bow displaces 89436 t, weighs 29421 + 56050 water: net 3965 t (+ floats) | stern displaces 15113 t, weighs 19599 + 0: net -4486 t; stern's reserve if wholly under 42149 t
+-- list reaches 15 deg: t 156.18 min | trim 17.89 deg, list -15.08 deg (+ = starboard down) | zO -13.87 m, vz -0.278 m/s, trim rate 0.321 deg/s, roll rate -0.854 deg/s
+   hull top 40.1 m, stem head -40.5 m, taffrail 40.3 m, keel at AP 15.0 m, centre screw 20.2 m; the sea on the boat deck's centre line reaches x 3.0
+   displaced 102071 m3 of 150540 (67.8 %); water aboard 56266 t as fits, 2160 t pressed over; air 76948 m3 (bow 24927, stern 52021)
+   girder: 5.89 GN m at x -16.2 (above)
+   cut at x -23: bow displaces 89547 t, weighs 29421 + 56265 water: net 3860 t (+ floats) | stern displaces 15151 t, weighs 19599 + 1: net -4449 t; stern's reserve if wholly under 42149 t
+-- list reaches 20 deg: t 156.26 min | trim 19.64 deg, list -20.11 deg (+ = starboard down) | zO -15.40 m, vz -0.349 m/s, trim rate 0.412 deg/s, roll rate -1.235 deg/s
+   hull top 42.0 m, stem head -46.5 m, taffrail 42.3 m, keel at AP 17.5 m, centre screw 22.4 m; the sea on the boat deck's centre line reaches x -3.5
+   displaced 103579 m3 of 150540 (68.8 %); water aboard 57914 t as fits, 2480 t pressed over; air 75340 m3 (bow 23329, stern 52012)
+   girder: 5.94 GN m at x -16.2 (above)
+   cut at x -23: bow displaces 90585 t, weighs 29421 + 57904 water: net 3260 t (+ floats) | stern displaces 15665 t, weighs 19599 + 10: net -3945 t; stern's reserve if wholly under 42139 t
+-- trim reaches 20 deg: t 156.28 min | trim 20.07 deg, list -21.39 deg (+ = starboard down) | zO -15.75 m, vz -0.350 m/s, trim rate 0.426 deg/s, roll rate -1.306 deg/s
+   hull top 42.4 m, stem head -47.9 m, taffrail 42.7 m, keel at AP 18.2 m, centre screw 23.0 m; the sea on the boat deck's centre line reaches x -5.0
+   displaced 103887 m3 of 150540 (69.0 %); water aboard 58157 t as fits, 2552 t pressed over; air 75103 m3 (bow 23096, stern 52008)
+   girder: 5.96 GN m at x -16.2 (above)
+   cut at x -23: bow displaces 90782 t, weighs 29421 + 58142 water: net 3219 t (+ floats) | stern displaces 15778 t, weighs 19599 + 14: net -3835 t; stern's reserve if wholly under 42135 t
+-- list reaches 30 deg: t 156.37 min | trim 22.74 deg, list -30.02 deg (+ = starboard down) | zO -17.85 m, vz -0.391 m/s, trim rate 0.501 deg/s, roll rate -1.681 deg/s
+   hull top 45.1 m, stem head -57.0 m, taffrail 45.5 m, keel at AP 22.4 m, centre screw 26.6 m; the sea on the boat deck's centre line reaches x -14.0
+   displaced 105440 m3 of 150540 (70.0 %); water aboard 59856 t as fits, 3001 t pressed over; air 73445 m3 (bow 21497, stern 51948)
+   girder: 5.94 GN m at x -16.2 (above)
+   cut at x -23: bow displaces 91693 t, weighs 29421 + 59780 water: net 2491 t (+ floats) | stern displaces 16452 t, weighs 19599 + 76: net -3223 t; stern's reserve if wholly under 42074 t
+-- trim reaches 25 deg: t 156.44 min | trim 25.01 deg, list -37.85 deg (+ = starboard down) | zO -19.67 m, vz -0.467 m/s, trim rate 0.567 deg/s, roll rate -1.992 deg/s
+   hull top 47.1 m, stem head -64.9 m, taffrail 47.5 m, keel at AP 26.0 m, centre screw 29.6 m; the sea on the boat deck's centre line reaches x -20.5
+   displaced 106668 m3 of 150540 (70.9 %); water aboard 61513 t as fits, 3418 t pressed over; air 71829 m3 (bow 20003, stern 51826)
+   girder: 5.83 GN m at x -16.2 (above)
+   cut at x -23: bow displaces 92146 t, weighs 29421 + 61312 water: net 1413 t (+ floats) | stern displaces 17271 t, weighs 19599 + 201: net -2529 t; stern's reserve if wholly under 41948 t
+-- list reaches 45 deg: t 156.50 min | trim 27.12 deg, list -45.36 deg (+ = starboard down) | zO -21.45 m, vz -0.542 m/s, trim rate 0.634 deg/s, roll rate -2.282 deg/s
+   hull top 48.5 m, stem head -72.5 m, taffrail 48.9 m, keel at AP 29.4 m, centre screw 32.3 m; the sea on the boat deck's centre line reaches x -26.5
+   displaced 107899 m3 of 150540 (71.7 %); water aboard 63098 t as fits, 3814 t pressed over; air 70282 m3 (bow 18662, stern 51620)
+   girder: 5.68 GN m at x -16.2 (above)
+   cut at x -23: bow displaces 92401 t, weighs 29421 + 62687 water: net 292 t (+ floats) | stern displaces 18295 t, weighs 19599 + 412: net -1716 t; stern's reserve if wholly under 41738 t
+  156.50  27.12  -45.36  -21.45  -0.542    48.5     71.7      5.68
+-- trim reaches 30 deg: t 156.57 min | trim 30.01 deg, list -55.91 deg (+ = starboard down) | zO -23.92 m, vz -0.614 m/s, trim rate 0.718 deg/s, roll rate -2.668 deg/s
+   hull top 50.1 m, stem head -83.1 m, taffrail 50.6 m, keel at AP 34.0 m, centre screw 35.9 m; the sea on the boat deck's centre line reaches x -34.5
+   displaced 109612 m3 of 150540 (72.8 %); water aboard 64797 t as fits, 4484 t pressed over; air 68625 m3 (bow 17418, stern 51207)
+   girder: 5.46 GN m at x -16.2 (above)
+   cut at x -23: bow displaces 92542 t, weighs 29421 + 63962 water: net -841 t (+ floats) | stern displaces 19916 t, weighs 19599 + 835: net -518 t; stern's reserve if wholly under 41315 t
+-- list reaches 60 deg: t 156.60 min | trim 31.11 deg, list -60.04 deg (+ = starboard down) | zO -24.87 m, vz -0.641 m/s, trim rate 0.747 deg/s, roll rate -2.816 deg/s
+   hull top 50.6 m, stem head -87.1 m, taffrail 51.1 m, keel at AP 35.8 m, centre screw 37.3 m; the sea on the boat deck's centre line reaches x -37.0
+   displaced 110243 m3 of 150540 (73.2 %); water aboard 65504 t as fits, 4734 t pressed over; air 67935 m3 (bow 16924, stern 51011)
+   girder: 5.35 GN m at x -16.2 (within)
+   cut at x -23: bow displaces 92553 t, weighs 29421 + 64469 water: net -1336 t (+ floats) | stern displaces 20556 t, weighs 19599 + 1036: net -79 t; stern's reserve if wholly under 41114 t
+-- list reaches 80 deg: t 156.70 min | trim 36.39 deg, list -80.21 deg (+ = starboard down) | zO -29.64 m, vz -0.849 m/s, trim rate 0.867 deg/s, roll rate 0.000 deg/s
+   hull top 52.0 m, stem head -106.7 m, taffrail 52.8 m, keel at AP 43.9 m, centre screw 43.2 m; the sea on the boat deck's centre line reaches x -49.5
+   displaced 113334 m3 of 150540 (75.3 %); water aboard 69726 t as fits, 6079 t pressed over; air 63816 m3 (bow 14455, stern 49361)
+   girder: 4.63 GN m at x -17.5 (within)
+   cut at x -23: bow displaces 92554 t, weighs 29421 + 66999 water: net -3865 t (+ floats) | stern displaces 23716 t, weighs 19599 + 2727: net 1389 t; stern's reserve if wholly under 39422 t
+-- trim reaches 45 deg: t 156.86 min | trim 45.09 deg, list -80.21 deg (+ = starboard down) | zO -40.04 m, vz -1.291 m/s, trim rate 0.968 deg/s, roll rate 0.000 deg/s
+   hull top 56.9 m, stem head -132.7 m, taffrail 57.7 m, keel at AP 48.2 m, centre screw 47.1 m; the sea on the boat deck's centre line reaches x -57.0
+   displaced 118379 m3 of 150540 (78.6 %); water aboard 76817 t as fits, 8379 t pressed over; air 56898 m3 (bow 12437, stern 44461)
+   girder: 3.45 GN m at x -21.5 (below)
+   cut at x -23: bow displaces 92554 t, weighs 29421 + 69068 water: net -5934 t (+ floats) | stern displaces 28955 t, weighs 19599 + 7750: net 1606 t; stern's reserve if wholly under 34400 t
+  157.00  53.58  -80.21  -51.46  -1.415    58.2     82.3      2.57
+-- trim reaches 60 deg: t 157.10 min | trim 60.24 deg, list -80.21 deg (+ = starboard down) | zO -59.81 m, vz -1.377 m/s, trim rate 1.117 deg/s, roll rate 0.000 deg/s
+   hull top 58.1 m, stem head -174.3 m, taffrail 59.2 m, keel at AP 49.0 m, centre screw 47.3 m; the sea on the boat deck's centre line reaches x -70.5
+   displaced 127612 m3 of 150540 (84.8 %); water aboard 82144 t as fits, 12723 t pressed over; air 51701 m3 (bow 11884, stern 39816)
+   girder: 2.02 GN m at x -27.1 (below)
+   cut at x -23: bow displaces 92554 t, weighs 29421 + 69634 water: net -6501 t (+ floats) | stern displaces 38403 t, weighs 19599 + 12510: net 6294 t; stern's reserve if wholly under 29639 t
+-- trim reaches 68.75 deg: t 157.23 min | trim 68.89 deg, list -80.21 deg (+ = starboard down) | zO -70.93 m, vz -1.418 m/s, trim rate 1.025 deg/s, roll rate 0.000 deg/s
+   hull top 55.5 m, stem head -194.5 m, taffrail 56.5 m, keel at AP 46.3 m, centre screw 44.3 m; the sea on the boat deck's centre line reaches x -78.5
+   displaced 132412 m3 of 150540 (88.0 %); water aboard 85262 t as fits, 15203 t pressed over; air 48659 m3 (bow 11527, stern 37132)
+   girder: 1.27 GN m at x -27.1 (below)
+   cut at x -23: bow displaces 92554 t, weighs 29421 + 70000 water: net -6867 t (+ floats) | stern displaces 43333 t, weighs 19599 + 15262: net 8472 t; stern's reserve if wholly under 26887 t
+-- FOUNDERED flag: t 157.23 min | trim 68.89 deg, list -80.21 deg (+ = starboard down) | zO -70.93 m, vz -1.418 m/s, trim rate 1.025 deg/s, roll rate 0.000 deg/s
+   hull top 55.5 m, stem head -194.5 m, taffrail 56.5 m, keel at AP 46.3 m, centre screw 44.3 m; the sea on the boat deck's centre line reaches x -78.5
+   displaced 132412 m3 of 150540 (88.0 %); water aboard 85262 t as fits, 15203 t pressed over; air 48659 m3 (bow 11527, stern 37132)
+   girder: 1.27 GN m at x -27.1 (below)
+   cut at x -23: bow displaces 92554 t, weighs 29421 + 70000 water: net -6867 t (+ floats) | stern displaces 43333 t, weighs 19599 + 15262: net 8472 t; stern's reserve if wholly under 26887 t
+
+== AT THE FOUNDER FLAG, by compartment (m3): floodable, water as fits, pressed over, air; x of its middle
+    0 FP      1243    1243     720       0  x   122.9   upper layer air 0
+    1 H1      3270    3270    1455       0  x   108.7   upper layer air 0
+    2 H2      5282    5282    2087       0  x    94.0   upper layer air 0
+    3 H3      6661    6661    2266       0  x    78.5   upper layer air 0
+    4 BR6    10580   10580    2377       0  x    62.5   upper layer air 0
+    5 BR5    12020   12020    2127       0  x    45.6   upper layer air 0
+    6 BR4    12564   11530    1245    1034  x    28.2   upper layer air 0
+    7 BR3    11694    7900    1010    3794  x    10.8   upper layer air 0
+    8 BR2    12078    7212     799    4866  x    -7.0   upper layer air 0
+    9 BR1     7097    4160     383    2938  x   -21.6   upper layer air 0
+   10 RE     13929    8026     364    5903  x   -37.6   upper layer air 0
+   11 TE     11290    4798       0    6492  x   -56.8   upper layer air 1694
+   12 EL     11010     501       0   10509  x   -75.1   upper layer air 5750
+   13 T1      6389       0       0    6389  x   -93.0   upper layer air 2906
+   14 T2      4674       0       0    4674  x  -109.9   upper layer air 2253
+   15 AP      2060       0       0    2060  x  -128.8   upper layer air 1254
+   total: water as fits 83182 m3 = 85262 t; pressed over 15203 t; air 48659 m3
+   net buoyancy to spare at the flag (envelope wholly under, water as fits): t 20021
+events:
+     48.48 Centre propeller breaks the surface
+     64.72 Water flows over bulkhead C at E deck
+     67.82 Water flows over bulkhead D at E deck
+     68.12 Water flows over bulkhead E at E deck
+     76.38 Water flows over bulkhead F at E deck
+     85.98 Water flows over bulkhead B at D deck
+     87.29 Water flows over bulkhead A at D deck
+     90.26 Second row of ports under the forecastle submerges
+    109.08 Water flows over bulkhead G at E deck
+    125.72 Forward well deck awash
+    137.26 Forecastle head goes under
+    152.09 The sea breaks in at the windows of B deck
+    153.80 Water flows over bulkhead H at E deck
+    154.66 Water reaches the bridge
+    154.69 The sea breaks in at the windows of A deck
+    155.34 The sea breaks in at the windows of the Boat deck's houses
+    155.74 The sea breaks in at the forward grand staircase's Boat-deck entrance (port door)
+    155.82 The dome over the forward grand staircase gives way
+    155.92 The sea breaks in at the forward grand staircase's Boat-deck entrance (starboard door)
+    156.14 Water flows over bulkhead J at E deck
+    156.48 The sea breaks in at the aft grand staircase's A-deck entrance (port door)
+    156.49 The dome over the aft grand staircase gives way
+    156.77 The sea breaks in at the aft grand staircase's A-deck entrance (starboard door)
+    156.87 Water flows over bulkhead K at D deck
+    156.89 Water flows over bulkhead L at D deck
+    157.23 Foundered

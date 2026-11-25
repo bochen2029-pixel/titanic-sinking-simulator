@@ -1,0 +1,36 @@
+e51: her wake as a wave field in time (run from a scratch folder)
+grid 512 x 512 of 8 m (4096 m square, waves of 18.8 m and longer); her three footprints computed in 3.2 s
+
+1. STRAIGHT AT 22.5 kn FOR 300 s (heading north; nothing is told the field about wakes)
+   1200 steps in 4.6 s (3.9 ms a step of the field here)
+   energy left on the sea between 150 and 300 s: 11.90 MW, a wave resistance of 1027.7 kN
+   Michell's integral over the same waves (longer than 18.8 m): 1028.2 kN (all waves: 1100.0 kN): the field gives 100.0 % of it
+   transverse waves on her track 250 to 1,500 m astern: 15 crests, 85.77 m apart (2 pi U^2 / g = 85.81 m)
+   their height (crest to trough) 300 m astern: 2.28 m (stationary phase from Michell's |A| ahead: 1.73 m)
+   their height (crest to trough) 600 m astern: 1.47 m (stationary phase from Michell's |A| ahead: 1.32 m)
+   their height (crest to trough) 1000 m astern: 1.12 m (stationary phase from Michell's |A| ahead: 1.06 m)
+   600 m astern of amidships the highest waves stand 128 m to port and 128 m to starboard (2.70 and 2.70 m high, 10.0 deg from her stem); the waves reach out to 286 m, 21.4 deg (Kelvin's wedge: 19.47)
+   1000 m astern of amidships the highest waves stand 296 m to port and 296 m to starboard (2.03 and 2.03 m high, 14.7 deg from her stem); the waves reach out to 432 m, 20.9 deg (Kelvin's wedge: 19.47)
+   1400 m astern of amidships the highest waves stand 424 m to port and 424 m to starboard (2.16 and 2.16 m high, 15.5 deg from her stem); the waves reach out to 564 m, 20.2 deg (Kelvin's wedge: 19.47)
+   of her wave resistance at 22.5 kn, waves longer than 60 m carry 51 %; 40 m carry 78 %; 30 m carry 86 %; 20 m carry 93 %; 10 m carry 98 %; 5 m carry 99 %; 2 m carry 100 %;
+   the sea's height over the whole square: rms 0.142 m; at her stem 1.55 m, amidships -0.77 m, at her stern 0.64 m
+
+2. HARD-A-STARBOARD (her head to port) AT 40 s, HELD TO 300 s
+   t  40 s: 22.5 kn, heading    0 deg, turning 0.00 deg/s, drift amidships 0.0 deg; the water meets her stem at 0.0 and her stern at 0.0 deg; no sideways motion anywhere
+   t  60 s: 21.0 kn, heading  -10 deg, turning -0.87 deg/s, drift amidships 4.8 deg; the water meets her stem at -5.6 and her stern at 14.8 deg; no sideways motion 60 m forward of amidships
+   t  80 s: 19.0 kn, heading  -29 deg, turning -0.95 deg/s, drift amidships 6.3 deg; the water meets her stem at -6.3 and her stern at 18.3 deg; no sideways motion 65 m forward of amidships
+   t 120 s: 16.9 kn, heading  -65 deg, turning -0.86 deg/s, drift amidships 6.4 deg; the water meets her stem at -6.3 and her stern at 18.6 deg; no sideways motion 65 m forward of amidships
+   t 180 s: 15.9 kn, heading -114 deg, turning -0.80 deg/s, drift amidships 6.3 deg; the water meets her stem at -6.3 and her stern at 18.4 deg; no sideways motion 65 m forward of amidships
+   t 240 s: 15.7 kn, heading -161 deg, turning -0.78 deg/s, drift amidships 6.3 deg; the water meets her stem at -6.2 and her stern at 18.3 deg; no sideways motion 65 m forward of amidships
+   t 300 s: 15.6 kn, heading -208 deg, turning -0.78 deg/s, drift amidships 6.3 deg; the water meets her stem at -6.2 and her stern at 18.3 deg; no sideways motion 65 m forward of amidships
+   60 to 260 m either side of her track, 300 to 700 m back: rms height 0.337 m outside the turn, 0.134 m inside it
+   the wave energy on the sea at 300 s: 2.20 GJ; with her sideways motion left out of the forcing (the same track): 1.32 GJ
+
+3. BOTH ENGINES FULL ASTERN AT 60 s, HELM AMIDSHIPS
+   her speed ahead (astern negative): t 60 s 22.5 kn; t 120 s 15.5 kn; t 180 s 7.8 kn; t 240 s 1.4 kn; t 300 s -4.6 kn; t 360 s -9.1 kn; t 420 s -12.4 kn; 
+   she has lost her way at t 255 s, 1097 m past the order
+   the sea at her stern / at her stem (m): t -60 s -0.25 / 0.16; t -45 s 0.32 / 0.11; t -30 s -0.24 / -0.03; t -15 s 0.06 / -0.07; t +0 s -0.33 / -0.42; t +15 s -0.25 / -0.20; t +30 s -0.13 / -0.32; t +45 s -0.08 / -0.15; t +60 s 0.03 / 0.10; 
+
+4. THE COST, HERE (one thread of Node; a browser's engine is of the same kind)
+   one 256 x 256 transform: 1.9 ms
+   one 512 x 512 transform: 11.3 ms

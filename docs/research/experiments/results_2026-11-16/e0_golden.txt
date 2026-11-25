@@ -1,0 +1,8 @@
+node v26.13.0  run ms 1782
+samples: this run 158  golden 158
+founder: this run 9440.5 s = 157.342 min; golden 9440.5 s
+bit-identical samples: 72 of 158  first differing sample index: 72 (t = 4320 s)
+max |pose diff| (m or rad): 0.042938027343979  max |vol diff| (m3): 8.449649204244906
+columns 4408 connections 290 ms(kg) 49020667.15840144 KG 10.798718746827225
+mass t 49020.7  XO -3.233482189989647  g0 -3.1954,0.0279,10.7987  pose0 {"zO":0.9562232938515985,"pitch":-0.0035272941098547497,"roll":-0.034778725441082056}
+hyd at mean draft: V 47765.2 Awp 5626.8 KB 5.296 BM 6.302 BML 444.40 LCF -2.988 LCB -1.646

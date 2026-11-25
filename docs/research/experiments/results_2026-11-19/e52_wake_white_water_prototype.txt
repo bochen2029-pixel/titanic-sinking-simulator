@@ -1,0 +1,12 @@
+e52: the wake near her, with its white water (run from a scratch folder)
+grid 512 x 512 of 2 m, moving with her (waves of 4.7 m and longer); her footprint in 3.6 s; heights scaled by 0.572 (the model's wave resistance over thin-ship theory's)
+   t 20 s: steepest slope 0.348; sea white from breaking 3944 m2, from the race 5368 m2
+   t 40 s: steepest slope 0.343; sea white from breaking 18800 m2, from the race 12352 m2
+   t 60 s: steepest slope 0.345; sea white from breaking 20784 m2, from the race 18348 m2
+   t 80 s: steepest slope 0.345; sea white from breaking 22308 m2, from the race 19636 m2
+   t 100 s: steepest slope 0.345; sea white from breaking 25860 m2, from the race 20068 m2
+100 s in 31.2 s here
+the sea along her side (2 m off her plating), from the stem aft every 20 m, m: 0.55 1.06 0.06 -1.31 0.36 0.18 -0.29 -0.54 -0.08 0.15 -0.24 -0.47 -0.23 0.64
+the steepest water: slope 0.345 at -140 m forward of amidships, 2 m off her centre line; steeper than 0.05, 0.1, 0.2, 0.3: 113236 m2, 15812 m2, 504 m2, 52 m2; breaking by the bet (over 0.1): 15812 m2
+white water at 100 s: 25860 m2 from breaking, 20068 m2 from the race; its width across her track at -150 m: 46 m, -250 m: 60 m, -400 m: 168 m, -600 m: 254 m
+foam 3 m off her plating (1 = white), from 10 m abaft the stem every 20 m: 0.34 1.50 1.17 0.44 1.20 1.29 0.67 0.14 0.15 0.62 0.35 0.40 0.27

@@ -1,0 +1,41 @@
+{
+ "broadside_night": {
+  "all": {
+   "calls": 39,
+   "tris": 83930,
+   "lines": 2028,
+   "points": 15240
+  },
+  "off": {
+   "calls": 23,
+   "tris": 68260,
+   "lines": 0
+  }
+ },
+ "bowq_night": {
+  "all": {
+   "calls": 39,
+   "tris": 83930,
+   "lines": 2028,
+   "points": 15240
+  },
+  "off": {
+   "calls": 23,
+   "tris": 68260,
+   "lines": 0
+  }
+ },
+ "boatdeck_night": {
+  "all": {
+   "calls": 36,
+   "tris": 83862,
+   "lines": 2028,
+   "points": 15240
+  },
+  "off": {
+   "calls": 20,
+   "tris": 68192,
+   "lines": 0
+  }
+ }
+}

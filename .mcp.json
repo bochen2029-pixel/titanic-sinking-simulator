@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "abacus": {
+      "command": "C:/code/abacus/dist/bin/abacus.exe",
+      "args": [
+        "mcp",
+        "--journal", "C:/code/titanic-sinking-simulator-main/docs/research/abacus/journal/receipts.db",
+        "--store", "C:/code/titanic-sinking-simulator-main/docs/research/abacus/journal/store"
+      ]
+    }
+  }
+}

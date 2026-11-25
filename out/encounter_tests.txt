@@ -1,0 +1,36 @@
+PASS far from the ice, Encounter.step is exactly Motion.step (10 min turning)       aa6915839efc                           aa6915839efc
+PASS 1912 geometry: tears begin at the stem, starboard side only                    starboard x 123.125 to 51.625, port tears 0 forepeak (x 117-129) aft; nothing to port
+PASS 1912 geometry: total opening [alpha fitted]                                    0.9773 m2                              0.9773 m2, the core's calibrated area (10.52 sq ft; 0.7506 before join 6)
+PASS dents without water exist, and only torn metres of hull are openings (one each, band and side) 276 dents, 573 torn stations in 73 metres, 73 openings openings = torn metres
+in   1912 geometry: tears end                                                       x 51.625 (BR5)                         boiler room 5, x 54 to 37 (Hackett and Bedford)
+in   1912 split FP/H1/H2/H3/BR6/BR5/BR4 %                                           5/12/25/27/23/8/0                      5/12/25/26/22/10/0 (Hackett and Bedford's areas, JOM 1998 Table I; G6b shares the opening so); error 5 points
+in   1912 contact                                                                   10.0 s, peak 45.0 MN                   a grinding felt by few; about 10 s (Halpern) [soft]
+PASS the switch for G6's tear rule is neutral: the 1912 encounter with the rule given as landed is the encounter, to the bit 0.977300000 m2, tears to x 51.625      the same: 0.977300000 m2, to x 51.625
+in     ... and off (a what-if): the 1912 tear without G6's rule                     tears x 123.125..42.875, 1.0241 m2     into boiler room 5's stokehold side, aft of the bunker, as before G6
+PASS the bunker's own opening (C6): absent, the 1912 encounter is the encounter, and the landed opening given (0.07609 m2) the same to the bit, every opening; null gives boiler room 5 its region's share 0.977300000 m2, 73 openings, boiler room 5 0.076090000; null: boiler room 5 0.092657 the same: 0.977300000 m2, 73 openings, 0.076090000; null another share
+PASS   ... and given (0.0425 m2): the torn stations along the bunker open it between them; every other compartment opens as it does boiler room 5 0.042500000 m2 (it was 0.076090); the others moved at most 0.0e+0 m2 0.042500000 m2; the others within 1e-9 m2
+in     ... of which in the bunker's pocket (a metre of hull is one opening: the metres at the bunker's ends carry part to the stokehold and to boiler room 6) 0.030937 of 0.0425 m2 (73 %); as landed 0.055388 of 0.076090 (73 %) the same share either way; the preset's holes are all in the pocket
+in   helm order before the impact                                                   25.9 s                                 20-25 s from the order (Halpern's reconstruction); "about half a minute" from the bells (Hichens)
+in   1912 encounter, then sunk by the unmodified core (no pumps)                    157.7 min                              157.2 min with the hand-made damage and its pumps, 154.6 without (S1; 156.9 and 154.5 after Y3); 160 min observed
+PASS the same night twice gives the same damage, bit for bit                        27.123752015044                        27.123752015044
+PASS the helm 15 s sooner: a miss, and no water aboard                              miss, clearance 52.4 m                 no openings, no flood water
+PASS stem square into the ice at 22.5 knots: the bow crushes, the force is the bow's at its depth (S1b) bow crushed 23.0 m, peak 141.3 MN      between 15 and 28.8 m (28.8 m against a fixed face, the bow note's option B; this berg gives way); 84 + 2.5 MN a metre
+PASS stem strikes against a fixed face: 10 and 22.5 knots (S1b)                     7.30 m, 28.97 m                        7.3 m and 28.8 m (the bow note, section 6, option B), within 5 %
+in   a slow stem strike: 10 knots into the 100,000-t berg                           bow crushed 5.6 m                      section-based laws with rate effects 5.5-11.5 m against a fixed face; the one FE study 24.7 m (the bow note, 3.6)
+in   stem square into the ice, then the core                                        afloat, FP H1 open                     afloat with the bow crushed 80 to 100 ft (Wilding, British inquiry)
+PASS the contact passes over only stations that cannot count: 8 nights both ways, hashed at every step (X2) 00e57f 8811e2 a47fc5 174bb1 1bb311 b496b2 0f7ffb 6cee2e with every station looked at: 00e57f 8811e2 a47fc5 174bb1 1bb311 b496b2 0f7ffb 6cee2e
+
+WHAT IF: the same berg and the same physics, another watch (engines stopped 60 s after the first touch; the core then sinks her or not)
+  as reconstructed                      holed           stbd x 123.125..51.625                            0.98 m2 seams   276 dents FP H1 H2 H3 BR6 BR5                 founders at 158 min
+  helm 5 s sooner                       holed           stbd x -82.25..-101                               0.23 m2 seams   244 dents EL T1                               afloat at 8 h
+  helm 10 s sooner                      miss by 21.7 m                                                    0.00 m2 seams   0 dents                                       no damage
+  helm 5 s later                        holed           bow crushed 13 m, stbd x 125.75..115.5            0.06 m2 seams   16 dents  FP H1                               afloat at 8 h
+  helm 10 s later                       holed           bow crushed 20 m, stbd x 120..108.25              0.06 m2 seams   60 dents  FP H1                               afloat at 8 h
+  no helm order: straight on            holed           bow crushed 22 m, port x 123.5..107               0.10 m2 seams   40 dents  FP H1                               afloat at 8 h
+  helm held, no port-around             holed           stbd x 123.125..-33.375                           1.05 m2 seams   410 dents FP H1 H2 H3 BR6 BR5 BR2 BR1 RE      founders at 154 min
+  engines stopped with the helm order   holed           stbd x 125.625..71                                0.19 m2 seams   585 dents FP H1 H3                            afloat at 8 h
+  turned to starboard instead           holed           port x 5.875..-33.5                               0.57 m2 seams   55 dents  BR3 BR2 BR1 RE                      afloat at 8 h
+  15 knots, same distance               holed           stbd x 93.375..75.5                               0.26 m2 seams   436 dents H2 H3                               afloat at 8 h
+  10 knots, same distance               holed           stbd x 85.25..77.25                               0.11 m2 seams   202 dents H3                                  afloat at 8 h
+
+PASS: every MUST row (12); CHECK rows in range: 9 of 9

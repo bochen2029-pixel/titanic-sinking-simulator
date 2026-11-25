@@ -1,0 +1,83 @@
+# e123_z1_handover_consistency.js, run 2026-11-24 05:35 to 05:39 CST (the clock), one thread at BelowNormal beside the
+# K.weather suites and join 21's gate, Node v26.13.0, on claude/z1-yield-circle 3cadca6 (b5e6341, join 21's sha, with
+# K.section; the working tree's K.weather present and off, unused here). Part C's timings are a loaded machine's.
+#
+e123: member C at its onset, step 37792 (T+156.46 min), x -10.929, hogging, trim 6.930, list -3.803 deg; the onset's M 4.8772 GN m, V 18.885 MN, Mu 4.9390, Vu 119.66
+
+A. THE JOINT AT THE HAND-OVER against the onset's M and V; its margin to its yield there; 90 s followed
+  the pocket at 'flag':
+    none (the fall as it is)  M0 4.7571 (-2.464 %)  |V0| 18.149 (-3.90 %)  the yield 1.0000 Mu, the margin +3.683 %  parts at +22.688 s by shear at 0.163 deg
+    the circle                M0 4.7571 (-2.464 %)  |V0| 18.149 (-3.90 %)  the yield 0.9884 Mu, the margin +2.555 %  parts at +21.031 s by shear at 0.276 deg
+    the tank weighed          M0 4.8588 (-0.378 %)  |V0| 19.079 (+1.03 %)  the yield 1.0000 Mu, the margin +1.623 %  parts at +20.469 s by shear at 0.246 deg
+    the section full          M0 4.7739 (-2.118 %)  |V0| 17.921 (-5.10 %)  the yield 1.0000 Mu, the margin +3.342 %  parts at +22.656 s by shear at 0.176 deg
+    the three together        M0 4.8755 (-0.034 %)  |V0| 18.850 (-0.19 %)  the yield 0.9875 Mu, the margin +0.036 %  parts at +19.063 s by shear at 0.352 deg
+  the pocket at 'centre':
+    none (the fall as it is)  M0 4.8242 (-1.086 %)  |V0| 19.020 (+0.72 %)  the yield 1.0000 Mu, the margin +2.323 %  parts at +24.438 s by shear at 0.550 deg
+    the circle                M0 4.8242 (-1.086 %)  |V0| 19.020 (+0.72 %)  the yield 0.9873 Mu, the margin +1.065 %  parts at +23.313 s by shear at 0.457 deg
+    the tank weighed          M0 4.9254 (+0.989 %)  |V0| 19.944 (+5.61 %)  the yield 1.0000 Mu, the margin +0.274 %  parts at +21.531 s by shear at 0.664 deg
+    the section full          M0 4.8411 (-0.741 %)  |V0| 18.792 (-0.49 %)  the yield 1.0000 Mu, the margin +1.982 %  parts at +24.344 s by shear at 0.521 deg
+    the three together        M0 4.9422 (+1.332 %)  |V0| 19.715 (+4.40 %)  the yield 0.9863 Mu, the margin -1.452 %  parts at +1.063 s by shear at 0.669 deg
+  the spaces:
+    none (the fall as it is)  M0 4.7580 (-2.444 %)  |V0| 18.162 (-3.83 %)  the yield 1.0000 Mu, the margin +3.663 %  holds 90 s
+    the circle                M0 4.7580 (-2.444 %)  |V0| 18.162 (-3.83 %)  the yield 0.9884 Mu, the margin +2.534 %  holds 90 s
+    the tank weighed          M0 4.8597 (-0.358 %)  |V0| 19.091 (+1.09 %)  the yield 1.0000 Mu, the margin +1.604 %  holds 90 s
+    the section full          M0 4.7749 (-2.099 %)  |V0| 17.933 (-5.04 %)  the yield 1.0000 Mu, the margin +3.322 %  holds 90 s
+    the three together        M0 4.8765 (-0.015 %)  |V0| 18.862 (-0.12 %)  the yield 0.9875 Mu, the margin +0.014 %  parts at +1.625 s by shear at 0.890 deg
+
+B. THE STATIC LOADS AT THE HAND-OVER (the spaces, the tank weighed), about the joint's pin about her y, GN m, hogging +: across her / along her; the gauge's (B1+B2, the columns cut at the station, 1025 kg/m3)
+  the section decimated: M0 4.8597 GN m, |V0| 19.091 MN (the pin at x -10.929, z 8.770)
+    bow: static 4.8290 (the engine's loads() 4.8290, closure to 1e-9); her inertia from it +0.0307
+      structure (with the tank's water) +15.5908 / +0.0533
+      buoyancy                          -39.1234 / -0.2152   the gauge -39.0208 / -0.2134 (-0.1026 across her)
+      water counted full less the air   +28.3749 / +0.1486
+    stern: static 4.9060 (the engine's loads() 4.9060, closure to 1e-9); her inertia from it -0.0463
+      structure (with the tank's water) +11.4866 / -0.0639
+      buoyancy                          -6.4439 / -0.0728   the gauge -6.4896 / -0.0722 (+0.0457 across her)
+      water counted full less the air   -0.0000 / +0.0000
+  the section full: M0 4.8765 GN m, |V0| 18.862 MN (the pin at x -10.929, z 8.770)
+    bow: static 4.8756 (the engine's loads() 4.8756, closure to 1e-9); her inertia from it +0.0009
+      structure (with the tank's water) +15.5908 / +0.0533
+      buoyancy                          -39.0782 / -0.2138   the gauge -39.0208 / -0.2134 (-0.0574 across her)
+      water counted full less the air   +28.3749 / +0.1486
+    stern: static 4.8608 (the engine's loads() 4.8608, closure to 1e-9); her inertia from it +0.0157
+      structure (with the tank's water) +11.4866 / -0.0639
+      buoyancy                          -6.4897 / -0.0722   the gauge -6.4896 / -0.0722 (-0.0001 across her)
+      water counted full less the air   -0.0000 / +0.0000
+  (the bow's structure with the tank's 330.7 t is the gauge's structure 15.1704 and the tank's 0.4212 across her; its water less the air, the tank moved to it, against the gauge's 28.7540; the stern dry, its water and air cancelling)
+
+C. THE COST of the section at full resolution (the three consistencies otherwise on): a fall step
+  the pocket at 'flag', to rest: decimated 0.934 ms a step (2011 steps), full 1.588 (2011): +70.0 %
+  the spaces, 120 s: decimated 75.881 ms a step (480 steps), full 82.410 (480): +8.6 %
+
+D. THE LIST'S AXIS: the gauge's moment from the stern (about the horizontal axis across her) against the fall's (about her own y), the three on, the pocket at 'flag'
+  landed list  -3.80 deg: the gauge from the stern 4.8746, the fall 4.8608 GN m: 0.9972 against cos(list) 0.9978; the joint's margin at t0 +0.04 % (1 - cos(list) 0.22 %)
+  #6     list  -7.04 deg: the gauge from the stern 4.8692, the fall 4.8305 GN m: 0.9921 against cos(list) 0.9925; the joint's margin at t0 +0.53 % (1 - cos(list) 0.75 %)
+  #4     list  -8.20 deg: the gauge from the stern 4.8782, the fall 4.8264 GN m: 0.9894 against cos(list) 0.9898; the joint's margin at t0 +0.81 % (1 - cos(list) 1.02 %)
+  #24    list -11.38 deg: the gauge from the stern 4.8748, the fall 4.7771 GN m: 0.9800 against cos(list) 0.9803; the joint's margin at t0 +1.70 % (1 - cos(list) 1.97 %)
+
+e123 done in 230 s
+
+READING (Z1, 2026-11-24 05:4x CST; with B1+B2's split at the gauge's side; D114, D115)
+1. The fall as it was began 3.6 % below its yield (A, the spaces: margin +3.66 %). It held for 90 s under D113's judge
+   because its hand-over did not take the loads and the check the onset takes. Three consistencies close the gap, each
+   the core's or the onset's own:
+   a. the hinge's yield on the onset's M-V circle (hinge.yieldOn 'circle'): 1.1 to 1.3 % of the margin;
+   b. G7's peak tank weighed as the core weighs it (K.peakTank 'weighed'): 2.1 %. The fall counted its room solid, and
+      the air's cap dropped its 330.7 t at x 119.89;
+   c. the section at full resolution (K.section 'full'): the last 0.33 % and the 1 % in the shear. The decimated polygon
+      put the bow's centre of buoyancy 0.62 m forward and the stern 70 t short where the waterline crosses her slices.
+   With the three, member C's joint starts 0.014 % inside its yield under the spaces and parts at +1.63 s by shear.
+2. B: the statics agree with the gauge term by term about her y at the pin. Structure to 0.001 GN m. The stern's
+   buoyancy to 0.0001 at full resolution. The bow's buoyancy and water are 0.14 and 0.15 % above the gauge's, both the
+   fall's in-situ density against the core's uniform 1025, and they cancel to -0.015 GN m. That density is a modelling
+   difference, kept and named.
+3. The placement of the lumped pocket's lift matters too: at 'centre' the three overshoot (M0 +1.33 %) and she parts at
+   +1.06 s. Under D113 the spaces are the judge.
+4. C: the cost of the full section is +23 to +70 % a step under the pocket (about 1 to 1.6 ms; two timings on a loaded
+   machine) and +9 % or less under the spaces, where the spaces' own solve (75 to 82 ms) dominates.
+5. D: the kept set's remaining spread is the list's axis. The gauge, and B2's onset with it, take the moment about the
+   world's horizontal axis across her. The hinge and her capacity Mu bend about her own y. The fall's statics are the
+   gauge's about her y (the ratio is cos(list) to 4 digits), and each member's margin at t0 is about (1 - cos(list))
+   less 0.2 %. The 0.2 % is the relief's model: the fall's Kirchhoff mass slice by slice against the gauge's rigid kA
+   with the water once. Taking the onset's check onto her own axes is B1+B2's change (biaxial: M cos(list) about her y
+   and M sin(list) about her z, each against her strength). It moves the onset and goes with its own pins.

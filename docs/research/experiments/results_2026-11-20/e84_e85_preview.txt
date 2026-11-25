@@ -1,0 +1,101 @@
+e84 and e85, run 2026-11-20 on main (0f3f4d1, at C:\temp\titanic-wt-c3) and on the preview wt/g6w6-preview with the held-area refit's flow numbers (e83).
+
+#### e84, main
+e84 on C:\temp\titanic-wt-c3, flow numbers {}
+== the 1912 watch: founders at T 157.74; her last hour from T 97.0: 78089 m3 gained
+   compartment   an hour before   at the end    gained   share of the hour
+   FP                   879          1966      1087         1.4 %
+   H1                  2332          4743      2411         3.1 %
+   H2                  3872          7366      3493         4.5 %
+   H3                  4484          8914      4430         5.7 %
+   BR6                 4892         12919      8028        10.3 %
+   BR5                 3520         14161     10641        13.6 %
+   BR4                   77         12719     12642        16.2 %
+   BR3                    0          8958      8958        11.5 %
+   BR2                    0          8018      8018        10.3 %
+   BR1                    0          4549      4549         5.8 %
+   RE                     0          8399      8399        10.8 %
+   TE                     0          4914      4914         6.3 %
+   EL                     0           520       520         0.7 %
+== the 1912 damage preset: founders at T 157.20; her last hour from T 97.0: 77787 m3 gained
+   compartment   an hour before   at the end    gained   share of the hour
+   FP                   885          1962      1077         1.4 %
+   H1                  2348          4724      2376         3.1 %
+   H2                  3905          7367      3463         4.5 %
+   H3                  4524          8925      4401         5.7 %
+   BR6                 4937         12954      8017        10.3 %
+   BR5                 3429         14145     10716        13.8 %
+   BR4                  152         12779     12627        16.2 %
+   BR3                    0          8904      8904        11.4 %
+   BR2                    0          8009      8009        10.3 %
+   BR1                    0          4541      4541         5.8 %
+   RE                     0          8388      8388        10.8 %
+   TE                     0          4770      4770         6.1 %
+   EL                     0           497       497         0.6 %
+
+#### e84, the preview, {"wMul":3,"aDown":0.5107,"fOpen":0.06045}
+e84 on C:\temp\titanic-wt-preview, flow numbers {"wMul":3,"aDown":0.5107,"fOpen":0.06045}
+== the 1912 watch: founders at T 168.36; her last hour from T 108.0: 80560 m3 gained
+   compartment   an hour before   at the end    gained   share of the hour
+   FP                   850          1959      1109         1.4 %
+   H1                  2262          4791      2529         3.1 %
+   H2                  3766          7488      3722         4.6 %
+   H3                  4370          9069      4699         5.8 %
+   BR6                 4781         13093      8312        10.3 %
+   BR5                 2383         14337     11954        14.8 %
+   BR4                  330         14196     13866        17.2 %
+   BR3                    0          9106      9106        11.3 %
+   BR2                    0          8236      8236        10.2 %
+   BR1                    0          4631      4631         5.7 %
+   RE                     0          8385      8385        10.4 %
+   TE                     0          3705      3705         4.6 %
+   EL                     0           307       307         0.4 %
+== the 1912 damage preset: founders at T 156.88; her last hour from T 96.0: 81526 m3 gained
+   compartment   an hour before   at the end    gained   share of the hour
+   FP                   854          1963      1109         1.4 %
+   H1                  2276          4796      2520         3.1 %
+   H2                  3767          7498      3732         4.6 %
+   H3                  4372          9084      4711         5.8 %
+   BR6                 4779         13122      8344        10.2 %
+   BR5                 2621         14355     11733        14.4 %
+   BR4                   28         14024     13996        17.2 %
+   BR3                    0          9223      9223        11.3 %
+   BR2                    0          8267      8267        10.1 %
+   BR1                    0          4659      4659         5.7 %
+   RE                     0          8432      8432        10.3 %
+   TE                     0          4414      4414         5.4 %
+   EL                     0           386       386         0.5 %
+
+#### e85, main
+e85 on C:\temp\titanic-wt-c3, flow numbers {}: the 1912 watch founders at T 157.74
+   compartment   any water   0.3 m over the floor   8 ft over it   water above E deck   (minutes after the touch)
+   FP             0.0           0.1                 1.2            51.3
+   H1             0.0           0.4                 3.6            53.4
+   H2             0.1           0.3                 4.0            67.3
+   H3             0.1           0.3                 5.1            68.3
+   BR6            0.1           1.4                10.0            72.2
+   BR5            0.1           3.9                34.2            78.5
+   BR4           91.3         108.4               132.0            86.7
+   BR3          130.9         148.3                 -             123.0
+   BR2          155.5           -                   -             154.3
+   BR1          156.9           -                   -             156.7
+   RE           157.1           -                   -             156.8
+   TE           157.4           -                   -             157.0
+   the record (the research notes): BR6 8 ft at T 10 (Barrett); the mail room (hold 3) within a couple of feet of G deck at T 14 to 20 (Boxhall); BR5 dry over its plates until the rush, T 60 (the Report) or T 90 (Barrett); BR4 water from under the floor, about a foot by T 100; water on E deck amidships to port at T 95 to 110 (Joughin)
+
+#### e85, the preview, {"wMul":3,"aDown":0.5107,"fOpen":0.06045}
+e85 on C:\temp\titanic-wt-preview, flow numbers {"wMul":3,"aDown":0.5107,"fOpen":0.06045}: the 1912 watch founders at T 168.36
+   compartment   any water   0.3 m over the floor   8 ft over it   water above E deck   (minutes after the touch)
+   FP             0.0           0.1                 1.2            52.9
+   H1             0.0           0.4                 3.4            54.5
+   H2             0.1           0.3                 3.8            67.4
+   H3             0.1           0.3                 4.8            68.4
+   BR6            0.1           1.3                 9.3            73.4
+   BR5            1.0          77.1                92.1            77.3
+   BR4           93.6         105.1               138.1            86.9
+   BR3          163.0         166.0                 -             149.1
+   BR2          166.5           -                   -             166.0
+   BR1          167.7           -                   -             167.5
+   RE           167.9           -                   -             167.7
+   TE           168.2           -                   -             168.0
+   the record (the research notes): BR6 8 ft at T 10 (Barrett); the mail room (hold 3) within a couple of feet of G deck at T 14 to 20 (Boxhall); BR5 dry over its plates until the rush, T 60 (the Report) or T 90 (Barrett); BR4 water from under the floor, about a foot by T 100; water on E deck amidships to port at T 95 to 110 (Joughin)

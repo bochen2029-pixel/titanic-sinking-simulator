@@ -1,0 +1,210 @@
+seed    spur m  off m  seen m  lead s  top m | no order         order +0 s       order +5 s       order +10 s      order +15 s      order +20.5 s   
+     1      94   77.8     458   26.75   6.50 | clear 17 m       clear >114 m     clear >100 m     clear 76 m       clear 54 m       clear 35 m      
+     2     101    6.4     546   20.00   6.25 | STEM 25 m +0.11  clear >111 m     clear 92 m       clear 58 m       clear 27 m       seams 0.16 m2   
+     3     100  -71.6     468   24.75   6.00 | clear 7 m        clear >113 m     clear >100 m     clear 73 m       clear 50 m       clear 29 m      
+     4     115  -76.4     549   18.25   5.00 | clear 5 m        clear >186 m     clear >128 m     clear >100 m     clear 84 m       clear 57 m      
+     5      98   20.5     669   18.25   4.75 | STEM 19 m +0.16  clear >239 m     clear >198 m     clear >128 m     clear >100 m     clear 71 m      
+     6      87  -46.1     458   30.50   5.50 | seams 0.33 m2    clear >100 m     clear 78 m       clear 51 m       clear 28 m       clear 8 m       
+     7      51   23.6     474   39.25   5.50 | seams 0.25 m2    clear >100 m     clear 76 m       clear 49 m       clear 25 m       clear 4 m       
+     8      61   25.3     629   20.50   5.75 | STEM 2 m +0.35   clear >219 m     clear >161 m     clear >113 m     clear 96 m       clear 63 m      
+     9      64   42.5     691   16.00   6.00 | seams 0.19 m2    clear >274 m     clear >233 m     clear >195 m     clear >130 m     clear >100 m    
+    10      85   46.3     709   31.25   5.50 | seams 0.31 m2    clear >286 m     clear >245 m     clear >206 m     clear >142 m     clear >100 m    
+    11      86   13.9     603   29.00   6.25 | STEM 20 m +0.15  clear >177 m     clear >119 m     clear >100 m     clear 67 m       clear 34 m      
+    12      70   61.0     478   28.25   4.75 | clear 12 m       clear >118 m     clear >100 m     clear 77 m       clear 54 m       clear 33 m      
+    13      90  -71.2     556   14.00   4.50 | clear 12 m       clear >199 m     clear >136 m     clear >101 m     clear 90 m       clear 63 m      
+    14      81  -21.8     574   26.25   5.00 | STEM 15 m +0.13  clear >153 m     clear >108 m     clear 90 m       clear 59 m       clear 29 m      
+    15      67   -7.2     568   23.25   5.00 | STEM 18 m +0.11  clear >136 m     clear >100 m     clear 78 m       clear 47 m       clear 18 m      
+    16      94  -18.1     497   33.00   5.25 | STEM 20 m +0.15  clear >100 m     clear 74 m       clear 43 m       clear 16 m       seams 0.20 m2   
+    17      97  -55.3     510   27.00   4.75 | seams 0.26 m2    clear >127 m     clear >100 m     clear 80 m       clear 54 m       clear 29 m      
+    18      78  -43.9     623   26.75   6.00 | seams 0.29 m2    clear >225 m     clear >173 m     clear >120 m     clear >100 m     clear 72 m      
+    19      54   31.3     547   24.75   6.50 | seams 0.22 m2    clear >146 m     clear >104 m     clear 90 m       clear 61 m       clear 35 m      
+    20     103  -36.3     563   28.75   5.25 | STEM 12 m +0.10  clear >152 m     clear >108 m     clear 91 m       clear 61 m       clear 31 m      
+    21      80  -17.4     580   20.00   5.50 | STEM 17 m +0.14  clear >155 m     clear >108 m     clear 91 m       clear 59 m       clear 28 m      
+    22      94  -47.6     522   18.25   5.25 | seams 0.40 m2    clear >130 m     clear >100 m     clear 81 m       clear 53 m       clear 27 m      
+    23      56  -24.2     476   29.75   5.25 | seams 0.31 m2    clear >100 m     clear 76 m       clear 49 m       clear 25 m       clear 3 m       
+    24      73  -58.2     722   20.25   5.50 | clear 8 m        clear >305 m     clear >264 m     clear >225 m     clear >176 m     clear >119 m    
+    25      92   38.9     685   28.00   5.00 | STEM 2 m +0.48   clear >263 m     clear >222 m     clear >167 m     clear >116 m     clear 96 m      
+    26      86  -76.6     661   26.25   6.25 | clear 20 m       clear >272 m     clear >233 m     clear >197 m     clear >134 m     clear >100 m    
+    27      78  -48.4     464   12.50   6.25 | seams 0.23 m2    clear >100 m     clear 85 m       clear 58 m       clear 35 m       clear 15 m      
+    28      80   36.6     651   32.75   5.00 | seams 0.37 m2    clear >239 m     clear >200 m     clear >134 m     clear >100 m     clear 79 m      
+    29      65  -33.3     498   20.75   5.25 | seams 0.29 m2    clear >109 m     clear 94 m       clear 64 m       clear 39 m       clear 15 m      
+    30     110  -56.8     696   24.00   4.75 | seams 0.34 m2    clear >280 m     clear >239 m     clear >201 m     clear >135 m     clear >100 m    
+    31      97  -74.4     687   33.00   5.25 | clear 12 m       clear >287 m     clear >247 m     clear >210 m     clear >150 m     clear >107 m    
+    32      77   52.7     675   19.25   5.50 | clear 0 m        clear >267 m     clear >228 m     clear >179 m     clear >124 m     clear >100 m    
+    33      89  -75.7     660   29.25   5.50 | clear 17 m       clear >270 m     clear >232 m     clear >195 m     clear >132 m     clear >100 m    
+    34      92  -20.4     683   15.25   4.75 | STEM 18 m +0.15  clear >249 m     clear >208 m     clear >142 m     clear >100 m     clear 80 m      
+    35      51   45.2     596   32.25   5.25 | clear 6 m        clear >213 m     clear >155 m     clear >111 m     clear 98 m       clear 68 m      
+    36     117  -62.4     716   19.25   6.25 | seams 0.45 m2    clear >297 m     clear >256 m     clear >217 m     clear >158 m     clear >109 m    
+    37      86   36.9     731   12.75   5.00 | STEM 2 m +0.47   clear >296 m     clear >254 m     clear >214 m     clear >153 m     clear >105 m    
+    38     100   50.3     690   13.75   6.25 | seams 0.66 m2    clear >273 m     clear >232 m     clear >187 m     clear >127 m     clear >100 m    
+    39      55  -57.0     664   27.25   6.25 | clear 15 m       clear >266 m     clear >227 m     clear >180 m     clear >127 m     clear >100 m    
+    40      95   31.4     681   12.75   5.25 | STEM 13 m +0.11  clear >255 m     clear >214 m     clear >151 m     clear >107 m     clear 87 m      
+    41     110    7.3     597   29.75   6.25 | STEM 25 m +0.12  clear >153 m     clear >106 m     clear 87 m       clear 53 m       clear 19 m      
+    42      92   27.2     580   35.75   4.75 | STEM 15 m +0.13  clear >164 m     clear >113 m     clear 96 m       clear 64 m       clear 33 m      
+    43     120  -82.9     533   26.75   4.75 | clear 9 m        clear >172 m     clear >122 m     clear >100 m     clear 81 m       clear 55 m      
+    44     109   53.1     501   14.25   5.75 | seams 0.62 m2    clear >117 m     clear >100 m     clear 71 m       clear 45 m       clear 20 m      
+    45      53  -15.1     708   34.00   5.50 | STEM 10 m +0.08  clear >270 m     clear >228 m     clear >176 m     clear >120 m     clear 98 m      
+    46      54   36.0     708   24.50   5.00 | seams 0.18 m2    clear >283 m     clear >242 m     clear >203 m     clear >140 m     clear >100 m    
+    47      94    7.2     484   25.25   5.50 | STEM 24 m +0.13  clear 91 m       clear 58 m       clear 28 m       clear 1 m        seams 0.82 m2   
+    48     109  -76.2     604   19.00   5.50 | clear 8 m        clear >229 m     clear >184 m     clear >128 m     clear >100 m     clear 82 m      
+    49      76  -55.7     623   33.75   5.50 | clear 4 m        clear >234 m     clear >196 m     clear >132 m     clear >100 m     clear 82 m      
+    50      88  -66.5     487   21.50   4.75 | clear 8 m        clear >123 m     clear >100 m     clear 81 m       clear 57 m       clear 35 m      
+    51      60  -52.8     477   23.50   5.00 | clear 9 m        clear >113 m     clear 100 m      clear 73 m       clear 49 m       clear 29 m      
+    52      65   43.7     458   24.25   5.50 | seams 0.18 m2    clear >100 m     clear 82 m       clear 55 m       clear 33 m       clear 13 m      
+    53      55   57.1     682   13.75   4.75 | clear 16 m       clear >278 m     clear >239 m     clear >202 m     clear >141 m     clear >101 m    
+    54      68   -1.1     640   21.00   5.00 | STEM 20 m +0.00  clear >209 m     clear >142 m     clear >100 m     clear 81 m       clear 46 m      
+    55      81   37.2     697   31.75   4.50 | seams 0.32 m2    clear >272 m     clear >231 m     clear >184 m     clear >125 m     clear >100 m    
+    56      61  -26.0     585   32.25   5.50 | STEM 1 m +0.38   clear >179 m     clear >122 m     clear >100 m     clear 73 m       clear 43 m      
+    57     102   22.1     513   16.00   5.50 | STEM 19 m +0.16  clear >102 m     clear 85 m       clear 53 m       clear 25 m       seams 0.13 m2   
+    58      85  -75.6     635   32.00   6.25 | clear 19 m       clear >254 m     clear >216 m     clear >162 m     clear >117 m     clear >100 m    
+    59      78  -49.8     626   19.50   4.75 | seams 0.19 m2    clear >231 m     clear >186 m     clear >127 m     clear >100 m     clear 78 m      
+    60      72   17.2     511   18.75   5.75 | STEM 15 m +0.12  clear >103 m     clear 86 m       clear 55 m       clear 28 m       clear 3 m       
+    61      88   36.2     651   36.75   4.50 | STEM 4 m +0.37   clear >238 m     clear >198 m     clear >131 m     clear >100 m     clear 77 m      
+    62     102  -13.8     511   17.00   4.50 | STEM 23 m +0.18  clear >100 m     clear 77 m       clear 45 m       clear 16 m       seams 0.22 m2   
+    63      67  -60.4     480   20.00   5.25 | clear 13 m       clear >119 m     clear >100 m     clear 79 m       clear 55 m       clear 34 m      
+    64     109  -34.2     574   30.50   6.25 | STEM 15 m +0.12  clear >159 m     clear >112 m     clear 94 m       clear 63 m       clear 32 m      
+    65      58   28.9     562   28.75   5.25 | seams 0.27 m2    clear >157 m     clear >111 m     clear 95 m       clear 65 m       clear 37 m      
+    66      60   29.9     458   18.25   5.75 | seams 0.35 m2    clear >100 m     clear 71 m       clear 45 m       clear 22 m       clear 2 m       
+    67     119   -8.1     575   28.00   5.25 | STEM 26 m +0.15  clear >130 m     clear >100 m     clear 72 m       clear 39 m       clear 7 m       
+    68      75   67.7     535   15.75   4.75 | clear 16 m       clear >171 m     clear >122 m     clear >100 m     clear 81 m       clear 56 m      
+    69     106   57.0     542   34.00   6.25 | seams 0.42 m2    clear >154 m     clear >110 m     clear 96 m       clear 67 m       clear 40 m      
+    70     104   -2.4     533   21.00   6.50 | STEM 26 m +0.01  clear >100 m     clear 80 m       clear 47 m       clear 16 m       seams 0.21 m2   
+    71     103   30.6     501   29.00   5.50 | STEM 15 m +0.13  clear >101 m     clear 84 m       clear 54 m       clear 26 m       clear 1 m       
+    72      65  -50.2     499   19.50   4.75 | clear 4 m        clear >123 m     clear >100 m     clear 79 m       clear 54 m       clear 31 m      
+    73     102  -52.6     701   39.75   6.25 | seams 0.58 m2    clear >282 m     clear >241 m     clear >202 m     clear >137 m     clear >100 m    
+    74      60    0.2     655   39.75   5.75 | STEM 18 m +0.00  clear >220 m     clear >159 m     clear >110 m     clear 91 m       clear 55 m      
+    75      67  -67.5     469   36.25   5.25 | clear 20 m       clear >119 m     clear >100 m     clear 80 m       clear 58 m       clear 38 m      
+    76      81  -45.5     654   34.75   6.50 | seams 0.33 m2    clear >247 m     clear >208 m     clear >145 m     clear >105 m     clear 87 m      
+    77      80   -2.1     469   31.50   4.75 | STEM 23 m +0.02  clear 81 m       clear 49 m       clear 20 m       seams 0.16 m2    seams 0.92 m2   
+    78      88   18.4     540   23.00   6.50 | STEM 18 m +0.14  clear >119 m     clear >100 m     clear 67 m       clear 38 m       clear 10 m      
+    79      52  -12.8     730   33.00   6.25 | STEM 11 m +0.07  clear >284 m     clear >242 m     clear >201 m     clear >135 m     clear >100 m    
+    80     105  -68.9     652   32.75   6.00 | clear 2 m        clear >258 m     clear >219 m     clear >164 m     clear >117 m     clear 100 m     
+    81     109    9.7     543   22.50   4.50 | STEM 25 m +0.16  clear >111 m     clear 91 m       clear 57 m       clear 27 m       seams 0.13 m2   
+    82     103   23.8     686   26.75   5.50 | STEM 19 m +0.15  clear >252 m     clear >211 m     clear >145 m     clear >103 m     clear 82 m      
+    83      99   14.5     528   28.00   5.75 | STEM 22 m +0.16  clear >106 m     clear 88 m       clear 55 m       clear 26 m       seams 0.15 m2   
+    84      82    9.9     614   36.00   6.00 | STEM 21 m +0.15  clear >195 m     clear >125 m     clear >100 m     clear 71 m       clear 37 m      
+    85      81  -43.6     564   32.00   5.75 | seams 0.34 m2    clear >170 m     clear >118 m     clear >100 m     clear 73 m       clear 44 m      
+    86      52   38.4     717   33.75   5.50 | seams 0.14 m2    clear >291 m     clear >250 m     clear >211 m     clear >151 m     clear >105 m    
+    87      53   20.1     567   23.50   4.50 | STEM 6 m +0.09   clear >153 m     clear >108 m     clear 91 m       clear 61 m       clear 33 m      
+    88     109  -22.6     645   23.00   5.25 | STEM 20 m +0.16  clear >221 m     clear >161 m     clear >111 m     clear 93 m       clear 57 m      
+    89     115   45.9     508   36.25   5.00 | STEM 6 m +0.20   clear >114 m     clear 98 m       clear 67 m       clear 40 m       clear 14 m      
+    90      53  -17.2     516   19.75   6.00 | STEM 9 m +0.07   clear >110 m     clear 93 m       clear 62 m       clear 36 m       clear 11 m      
+    91      97  -11.2     465   39.25   5.00 | STEM 23 m +0.17  clear 83 m       clear 50 m       clear 21 m       seams 0.14 m2    seams 0.88 m2   
+    92      80   14.7     628   37.25   4.50 | STEM 18 m +0.15  clear >208 m     clear >142 m     clear >100 m     clear 83 m       clear 49 m      
+    93      68   43.0     579   28.00   6.00 | seams 0.21 m2    clear >197 m     clear >132 m     clear >100 m     clear 83 m       clear 54 m      
+    94      65   15.6     487   36.25   6.25 | STEM 14 m +0.10  clear >100 m     clear 73 m       clear 44 m       clear 18 m       seams 0.16 m2   
+    95      92   75.2     648   20.25   5.00 | clear 15 m       clear >261 m     clear >223 m     clear >173 m     clear >123 m     clear >100 m    
+    96      54   39.8     483   19.75   6.00 | seams 0.13 m2    clear >107 m     clear 93 m       clear 66 m       clear 42 m       clear 20 m      
+    97      90    6.2     517   35.25   5.25 | STEM 23 m +0.14  clear >100 m     clear 77 m       clear 45 m       clear 16 m       seams 0.21 m2   
+    98      85  -53.1     457   21.25   4.75 | seams 0.20 m2    clear >100 m     clear 84 m       clear 57 m       clear 35 m       clear 15 m      
+    99      68   25.9     678   27.25   4.50 | STEM 7 m +0.12   clear >253 m     clear >212 m     clear >150 m     clear >106 m     clear 87 m      
+   100      64   51.4     544   27.00   5.50 | clear 5 m        clear >164 m     clear >116 m     clear >100 m     clear 74 m       clear 48 m      
+   101      59   18.2     667   27.25   5.25 | STEM 10 m +0.09  clear >241 m     clear >201 m     clear >134 m     clear >100 m     clear 77 m      
+   102      98   80.9     606   33.25   6.25 | clear 18 m       clear >236 m     clear >199 m     clear >137 m     clear >103 m     clear 90 m      
+   103      70   52.9     717   15.75   5.25 | clear 4 m        clear >298 m     clear >257 m     clear >218 m     clear >163 m     clear >113 m    
+   104     120  -50.7     721   32.50   5.25 | STEM 3 m +0.54   clear >293 m     clear >251 m     clear >211 m     clear >148 m     clear >103 m    
+   105      59   32.5     542   38.25   5.75 | seams 0.26 m2    clear >141 m     clear >101 m     clear 87 m       clear 59 m       clear 32 m      
+   106      65   39.3     637   15.25   5.00 | seams 0.22 m2    clear >234 m     clear >195 m     clear >129 m     clear >100 m     clear 78 m      
+   107     117    0.9     555   31.50   6.50 | STEM 27 m +0.00  clear >111 m     clear 90 m       clear 55 m       clear 23 m       seams 0.21 m2   
+   108      80   48.9     557   33.00   5.50 | seams 0.23 m2    clear >170 m     clear >119 m     clear >100 m     clear 74 m       clear 46 m      
+   109     115  -63.6     681   29.00   5.25 | seams 0.28 m2    clear >273 m     clear >233 m     clear >195 m     clear >128 m     clear >100 m    
+   110      59   32.6     668   35.25   5.00 | seams 0.23 m2    clear >252 m     clear >212 m     clear >151 m     clear >107 m     clear 89 m      
+   111     119   -4.0     678   14.75   6.50 | STEM 27 m +0.06  clear >231 m     clear >177 m     clear >117 m     clear 97 m       clear 58 m      
+   112      93  -29.2     641   27.50   4.75 | STEM 14 m +0.12  clear >225 m     clear >170 m     clear >117 m     clear 99 m       clear 64 m      
+   113     100  -26.5     652   25.25   5.50 | STEM 17 m +0.14  clear >230 m     clear >178 m     clear >121 m     clear >100 m     clear 66 m      
+   114      81   48.1     594   34.00   5.50 | seams 0.25 m2    clear >208 m     clear >146 m     clear >106 m     clear 92 m       clear 61 m      
+   115      69  -31.8     724   38.00   5.75 | seams 0.43 m2    clear >290 m     clear >248 m     clear >208 m     clear >145 m     clear >100 m    
+   116     117   42.0     698   21.25   6.50 | STEM 12 m +0.10  clear >271 m     clear >230 m     clear >179 m     clear >122 m     clear >100 m    
+   117      69  -45.8     654   37.50   5.75 | seams 0.19 m2    clear >249 m     clear >210 m     clear >149 m     clear >108 m     clear 91 m      
+   118      54   46.7     551   12.00   4.75 | clear 5 m        clear >169 m     clear >119 m     clear >100 m     clear 76 m       clear 50 m      
+   119     109   85.0     658   20.50   5.25 | clear 16 m       clear >272 m     clear >233 m     clear >197 m     clear >134 m     clear >100 m    
+   120     116  -58.8     460   24.75   6.50 | seams 0.70 m2    clear >100 m     clear 82 m       clear 55 m       clear 31 m       clear 9 m       
+   121      53  -24.0     720   33.75   5.00 | seams 0.23 m2    clear >284 m     clear >242 m     clear >203 m     clear >137 m     clear >100 m    
+   122     100    3.4     571   33.25   6.00 | STEM 25 m +0.05  clear >127 m     clear >100 m     clear 70 m       clear 38 m       clear 6 m       
+   123     105  -46.5     506   25.75   5.25 | seams 0.72 m2    clear >115 m     clear 99 m       clear 69 m       clear 42 m       clear 17 m      
+   124     103   27.5     528   22.25   5.50 | STEM 17 m +0.15  clear >115 m     clear 97 m       clear 65 m       clear 36 m       clear 9 m       
+   125     109  -60.5     699   26.75   6.00 | seams 0.31 m2    clear >285 m     clear >244 m     clear >205 m     clear >141 m     clear >100 m    
+   126      85  -75.3     679   21.25   5.25 | clear 19 m       clear >284 m     clear >244 m     clear >207 m     clear >148 m     clear >107 m    
+   127      67    0.5     729   36.75   6.00 | STEM 20 m +0.00  clear >274 m     clear >231 m     clear >178 m     clear >119 m     clear 96 m      
+   128      81  -20.2     463   35.00   4.75 | STEM 16 m +0.14  clear 92 m       clear 60 m       clear 32 m       clear 8 m        seams 0.31 m2   
+   129      63    4.6     531   26.25   5.50 | STEM 18 m +0.08  clear >107 m     clear 89 m       clear 57 m       clear 28 m       clear 1 m       
+   130      64  -55.8     729   31.00   5.25 | clear 10 m       clear >310 m     clear >269 m     clear >230 m     clear >185 m     clear >124 m    
+   131      64  -57.8     726   14.75   5.00 | clear 12 m       clear >309 m     clear >268 m     clear >229 m     clear >184 m     clear >124 m    
+   132      74   43.1     584   31.25   6.00 | seams 0.27 m2    clear >199 m     clear >134 m     clear >100 m     clear 84 m       clear 54 m      
+   133      90   54.1     709   33.50   6.25 | seams 0.25 m2    clear >291 m     clear >250 m     clear >211 m     clear >150 m     clear >105 m    
+   134      94   52.5     644   32.25   4.50 | seams 0.26 m2    clear >243 m     clear >204 m     clear >140 m     clear >102 m     clear 85 m      
+   135      58   -6.3     655   34.50   4.50 | STEM 16 m +0.10  clear >224 m     clear >168 m     clear >115 m     clear 96 m       clear 61 m      
+   136      76  -13.1     658   26.00   6.50 | STEM 18 m +0.13  clear >229 m     clear >175 m     clear >119 m     clear 100 m      clear 64 m      
+   137     101  -57.6     550   14.00   5.75 | seams 0.28 m2    clear >165 m     clear >117 m     clear >100 m     clear 72 m       clear 45 m      
+   138      60    8.8     675   34.75   6.50 | STEM 16 m +0.11  clear >240 m     clear >199 m     clear >131 m     clear >100 m     clear 73 m      
+   139      82  -42.1     533   34.00   5.75 | seams 0.44 m2    clear >136 m     clear >100 m     clear 85 m       clear 57 m       clear 30 m      
+   140      66   49.9     504   19.00   5.50 | clear 3 m        clear >126 m     clear >100 m     clear 81 m       clear 56 m       clear 32 m      
+   141     105    5.0     503   19.75   6.00 | STEM 25 m +0.11  clear 99 m       clear 64 m       clear 32 m       clear 4 m        seams 0.70 m2   
+   142      96   50.8     624   24.25   6.25 | seams 0.46 m2    clear >228 m     clear >178 m     clear >123 m     clear >100 m     clear 73 m      
+   143     111   11.1     586   23.50   5.25 | STEM 24 m +0.17  clear >145 m     clear >101 m     clear 83 m       clear 50 m       clear 17 m      
+   144      54  -41.2     599   23.50   6.25 | dented           clear >211 m     clear >152 m     clear >109 m     clear 95 m       clear 65 m      
+   145      92   76.7     620   35.00   5.50 | clear 17 m       clear >243 m     clear >206 m     clear >146 m     clear >108 m     clear 94 m      
+   146      53   54.6     482   16.00   6.50 | clear 14 m       clear >119 m     clear >100 m     clear 78 m       clear 55 m       clear 35 m      
+   147      77   -4.4     508   19.25   6.25 | STEM 22 m +0.08  clear >100 m     clear 73 m       clear 41 m       clear 14 m       seams 0.18 m2   
+   148      87  -75.6     699   29.00   4.75 | clear 18 m       clear >298 m     clear >258 m     clear >220 m     clear >168 m     clear >117 m    
+   149      83   59.6     586   35.00   5.50 | clear 4 m        clear >211 m     clear >151 m     clear >110 m     clear 96 m       clear 67 m      
+   150      99   47.3     551   37.25   5.25 | seams 0.50 m2    clear >153 m     clear >110 m     clear 94 m       clear 65 m       clear 37 m      
+   151      70  -12.4     498   18.75   6.25 | STEM 17 m +0.12  clear >100 m     clear 75 m       clear 45 m       clear 19 m       seams 0.17 m2   
+   152      84  -50.7     496   23.75   5.75 | seams 0.24 m2    clear >117 m     clear >100 m     clear 73 m       clear 48 m       clear 24 m      
+   153      55  -49.3     694   21.25   5.75 | clear 8 m        clear >282 m     clear >242 m     clear >204 m     clear >141 m     clear >101 m    
+   154      87  -68.1     712   19.00   5.25 | clear 11 m       clear >302 m     clear >262 m     clear >223 m     clear >172 m     clear >118 m    
+   155      76   44.8     512   36.25   4.75 | seams 0.24 m2    clear >124 m     clear >100 m     clear 78 m       clear 52 m       clear 27 m      
+   156      86   70.0     650   38.25   4.75 | clear 13 m       clear >260 m     clear >222 m     clear >171 m     clear >121 m     clear >100 m    
+   157      66   56.6     704   34.25   5.25 | clear 9 m        clear >292 m     clear >252 m     clear >213 m     clear >156 m     clear >109 m    
+   158      56   10.0     467   35.75   6.25 | STEM 14 m +0.09  clear 91 m       clear 60 m       clear 32 m       clear 8 m        seams 0.21 m2   
+   159      71    7.3     512   14.25   6.25 | STEM 20 m +0.12  clear >100 m     clear 79 m       clear 47 m       clear 20 m       seams 0.18 m2   
+   160     115   90.5     509   39.00   6.25 | clear 19 m       clear >158 m     clear >116 m     clear >100 m     clear 78 m       clear 54 m      
+   161      70    5.2     524   33.50   6.00 | STEM 20 m +0.10  clear >102 m     clear 84 m       clear 52 m       clear 24 m       seams 0.15 m2   
+   162     108   -2.6     707   18.50   4.75 | STEM 26 m +0.03  clear >254 m     clear >211 m     clear >142 m     clear >100 m     clear 76 m      
+   163      84   21.1     676   21.75   4.75 | STEM 16 m +0.14  clear >246 m     clear >205 m     clear >138 m     clear >100 m     clear 78 m      
+   164      67   13.3     726   20.75   5.75 | STEM 16 m +0.12  clear >280 m     clear >237 m     clear >197 m     clear >129 m     clear >100 m    
+   165      90   25.5     567   15.75   5.75 | STEM 15 m +0.13  clear >148 m     clear >105 m     clear 88 m       clear 57 m       clear 27 m      
+   166     102  -70.2     469   26.00   6.00 | clear 5 m        clear >113 m     clear 99 m       clear 72 m       clear 49 m       clear 28 m      
+   167     116   32.6     728   19.75   4.75 | STEM 17 m +0.15  clear >288 m     clear >245 m     clear >204 m     clear >136 m     clear >100 m    
+   168      64    6.7     626   30.50   5.50 | STEM 18 m +0.11  clear >203 m     clear >136 m     clear >100 m     clear 79 m       clear 45 m      
+   169      72  -53.5     479   29.00   6.25 | clear 3 m        clear >112 m     clear 98 m       clear 71 m       clear 47 m       clear 26 m      
+   170     119   84.1     607   16.50   6.00 | clear 10 m       clear >235 m     clear >198 m     clear >135 m     clear >101 m     clear 87 m      
+   171      94   10.8     608   12.75   6.50 | STEM 23 m +0.14  clear >177 m     clear >119 m     clear 99 m       clear 65 m       clear 32 m      
+   172      53   -3.3     459   36.00   4.75 | STEM 15 m +0.06  clear 82 m       clear 51 m       clear 23 m       dented           seams 0.28 m2   
+   173      54   23.9     702   17.75   4.75 | seams 0.27 m2    clear >271 m     clear >230 m     clear >181 m     clear >123 m     clear >100 m    
+   174      94  -51.3     648   34.50   6.50 | seams 0.40 m2    clear >245 m     clear >206 m     clear >142 m     clear >103 m     clear 86 m      
+   175      94  -63.1     724   23.25   4.50 | clear 2 m        clear >307 m     clear >266 m     clear >226 m     clear >177 m     clear >120 m    
+   176      57  -56.4     663   16.25   5.75 | clear 14 m       clear >264 m     clear >226 m     clear >177 m     clear >125 m     clear >100 m    
+   177      92   31.3     501   27.75   6.25 | STEM 12 m +0.10  clear >103 m     clear 87 m       clear 57 m       clear 30 m       clear 6 m       
+   178     115   82.0     553   39.50   5.50 | clear 10 m       clear >200 m     clear >136 m     clear >102 m     clear 91 m       clear 63 m      
+   179      92   29.4     717   30.25   5.25 | STEM 13 m +0.12  clear >280 m     clear >238 m     clear >198 m     clear >130 m     clear >100 m    
+   180     115   19.1     612   26.50   5.50 | STEM 22 m +0.17  clear >195 m     clear >124 m     clear >100 m     clear 70 m       clear 36 m      
+   181      78    3.9     606   36.00   4.50 | STEM 22 m +0.08  clear >170 m     clear >115 m     clear 96 m       clear 62 m       clear 29 m      
+   182     118   25.5     466   30.75   6.00 | STEM 20 m +0.16  clear 90 m       clear 58 m       clear 29 m       clear 3 m        seams 0.57 m2   
+   183      52   16.6     609   28.50   6.50 | STEM 9 m +0.06   clear >201 m     clear >134 m     clear >100 m     clear 80 m       clear 48 m      
+   184      62  -63.4     693   36.00   5.75 | clear 19 m       clear >289 m     clear >250 m     clear >212 m     clear >156 m     clear >110 m    
+   185     105   19.3     502   33.50   4.50 | STEM 21 m +0.18  clear >100 m     clear 75 m       clear 44 m       clear 16 m       seams 0.21 m2   
+   186      93  -67.6     578   36.25   5.50 | clear 7 m        clear >209 m     clear >149 m     clear >109 m     clear 96 m       clear 67 m      
+   187     110  -66.7     536   34.00   5.75 | seams 0.20 m2    clear >158 m     clear >114 m     clear 99 m       clear 71 m       clear 45 m      
+   188      92   -7.4     567   32.00   5.75 | STEM 23 m +0.13  clear >129 m     clear >100 m     clear 73 m       clear 41 m       clear 10 m      
+   189      55  -26.7     544   36.25   6.50 | seams 0.41 m2    clear >137 m     clear >100 m     clear 84 m       clear 56 m       clear 29 m      
+   190      85  -19.7     618   26.25   4.75 | STEM 17 m +0.15  clear >204 m     clear >136 m     clear >100 m     clear 80 m       clear 47 m      
+   191      53   16.8     654   27.75   5.50 | STEM 9 m +0.07   clear >232 m     clear >184 m     clear >124 m     clear >100 m     clear 70 m      
+   192      56   44.9     582   29.50   6.25 | clear 3 m        clear >203 m     clear >139 m     clear >102 m     clear 89 m       clear 60 m      
+   193     101   82.6     458   29.50   5.50 | clear 18 m       clear >116 m     clear >100 m     clear 78 m       clear 56 m       clear 36 m      
+   194     106   76.0     554   32.25   4.50 | clear 9 m        clear >198 m     clear >134 m     clear >100 m     clear 88 m       clear 61 m      
+   195     109   80.8     628   20.25   6.00 | clear 12 m       clear >248 m     clear >211 m     clear >152 m     clear >112 m     clear 97 m      
+   196      98   30.5     582   32.50   5.25 | STEM 14 m +0.12  clear >169 m     clear >116 m     clear 98 m       clear 67 m       clear 36 m      
+   197      66   61.5     532   35.50   6.50 | clear 14 m       clear >164 m     clear >117 m     clear >100 m     clear 77 m       clear 52 m      
+   198     116  -37.7     621   13.75   5.75 | STEM 14 m +0.12  clear >214 m     clear >150 m     clear >106 m     clear 90 m       clear 56 m      
+   199     114  -40.8     598   29.25   6.25 | STEM 12 m +0.10  clear >200 m     clear >133 m     clear >100 m     clear 80 m       clear 48 m      
+   200      71   21.1     624   25.75   6.00 | STEM 13 m +0.10  clear >211 m     clear >147 m     clear >104 m     clear 88 m       clear 54 m      
+
+Of 200 nights (generator 1, level early: Seen early):
+  no order                       clear  28 %   dented only   1 %   seams opened  28 %   stem into the ice  44 %
+  order 0 s after the bells      clear 100 %   dented only   0 %   seams opened   0 %   stem into the ice   0 %
+  order 5 s after the bells      clear 100 %   dented only   0 %   seams opened   0 %   stem into the ice   0 %
+  order 10 s after the bells     clear 100 %   dented only   0 %   seams opened   0 %   stem into the ice   0 %
+  order 15 s after the bells     clear  99 %   dented only   1 %   seams opened   1 %   stem into the ice   0 %
+  order 20.5 s after the bells   clear  89 %   dented only   0 %   seams opened  12 %   stem into the ice   0 %
+(1120 s)

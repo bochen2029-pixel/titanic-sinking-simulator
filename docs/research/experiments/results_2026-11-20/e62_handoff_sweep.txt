@@ -1,0 +1,143 @@
+e62: the hand-off sweep, cut at x -23, the tiers' share 0, untuned
+tree: this repository
+the flag (T 157.23, trim 68.9, list 80.2) bow    falling  top  -46.6 m | under +0.0 s    | bed +4.89 min, pitch 0.4, roll -0.5, 1446 m (along 1230, across 760)
+the flag (T 157.23, trim 68.9, list 80.2) stern  afloat   top   56.8 m | under +39.5 s   | bed +8.39 min, pitch -2.1, roll -179.4, 148 m (along 140, across -49)
+                                          bow to stern 1357 m
+  the bow, every 10 s to the bed:
+    0s falling pitch 69 roll -80 yaw 0 Z -124 along 28 across 0
+    10s under pitch 82 roll -118 yaw -4 Z -174 along 23 across 0
+    20s under pitch 85 roll -127 yaw 14 Z -308 along 24 across 1
+    30s falling pitch 82 roll -150 yaw 37 Z -529 along 36 across 11
+    40s falling pitch 79 roll 153 yaw 47 Z -817 along 60 across 37
+    50s falling pitch 73 roll 132 yaw 36 Z -1141 along 106 across 80
+    60s falling pitch 63 roll -135 yaw 26 Z -1470 along 201 across 133
+    70s falling pitch 49 roll 173 yaw 34 Z -1770 along 342 across 214
+    80s falling pitch 32 roll 177 yaw 30 Z -2008 along 521 across 329
+    90s falling pitch 14 roll 175 yaw 33 Z -2162 along 722 across 448
+    100s falling pitch -4 roll -162 yaw 30 Z -2235 along 900 across 558
+    110s falling pitch -19 roll 158 yaw 33 Z -2265 along 1028 across 640
+    120s falling pitch -30 roll -161 yaw 31 Z -2297 along 1099 across 680
+    130s falling pitch -27 roll 172 yaw 33 Z -2369 along 1114 across 691
+    140s falling pitch -8 roll 142 yaw 28 Z -2459 along 1099 across 683
+    150s falling pitch -1 roll 102 yaw 27 Z -2544 along 1076 across 673
+    160s falling pitch 2 roll 70 yaw 33 Z -2636 along 1057 across 663
+    170s falling pitch 8 roll -15 yaw 34 Z -2726 along 1050 across 654
+    180s falling pitch 7 roll 14 yaw 31 Z -2810 along 1057 across 660
+    190s falling pitch 4 roll -12 yaw 31 Z -2892 along 1079 across 671
+    200s falling pitch -0 roll 7 yaw 31 Z -2973 along 1102 across 686
+    210s falling pitch -2 roll -4 yaw 30 Z -3056 along 1124 across 698
+    220s falling pitch -2 roll -2 yaw 31 Z -3140 along 1138 across 707
+    230s falling pitch -1 roll 2 yaw 30 Z -3228 along 1149 across 713
+    240s falling pitch 0 roll -4 yaw 30 Z -3316 along 1158 across 718
+    250s falling pitch 1 roll 1 yaw 30 Z -3405 along 1168 across 724
+    260s falling pitch 1 roll -1 yaw 30 Z -3493 along 1180 across 731
+    270s falling pitch 1 roll -1 yaw 30 Z -3580 along 1194 across 740
+    280s falling pitch 0 roll 0 yaw 30 Z -3668 along 1209 across 748
+    290s falling pitch -0 roll -1 yaw 30 Z -3755 along 1224 across 757
+T 157.00 (T 157.00, trim 53.6, list 80.2) bow    falling  top  -25.9 m | under +0.0 s    | bed +5.76 min, pitch 0.4, roll -0.7, 1520 m (along 1345, across 708)
+T 157.00 (T 157.00, trim 53.6, list 80.2) stern  afloat   top   59.5 m | under +17.3 s   | bed +8.09 min, pitch -2.2, roll -179.4, 152 m (along 152, across -1)
+                                          bow to stern 1388 m
+T 156.75 (T 156.75, trim 38.8, list 80.2) bow    falling  top   -7.1 m | under +0.0 s    | bed +5.82 min, pitch 0.5, roll -0.8, 1562 m (along 1484, across 485)
+T 156.75 (T 156.75, trim 38.8, list 80.2) stern  afloat   top   55.2 m | under +37.0 s   | bed +7.82 min, pitch 1.9, roll -0.8, 95 m (along 94, across 13)
+                                          bow to stern 1468 m
+T 156.50 (T 156.50, trim 27.1, list 45.4) bow    afloat   top    5.5 m | under +46.3 s   | bed +7.26 min, pitch -0.1, roll -0.8, 1385 m (along -393, across 1328)
+T 156.50 (T 156.50, trim 27.1, list 45.4) stern  afloat   top   49.4 m | under +46.5 s   | bed +7.96 min, pitch 1.9, roll -0.9, 82 m (along -82, across 1)
+                                          bow to stern 1362 m
+T 156.25 (T 156.25, trim 19.4, list 19.5) bow    afloat   top    9.7 m | under +42.0 s   | bed +7.35 min, pitch -0.2, roll -0.9, 1290 m (along -629, across 1127)
+T 156.25 (T 156.25, trim 19.4, list 19.5) stern  afloat   top   42.4 m | under +46.8 s   | bed +7.99 min, pitch 1.9, roll -0.8, 83 m (along -83, across 2)
+                                          bow to stern 1250 m
+T 156.00 (T 156.00, trim 15.1, list 9.4)  bow    afloat   top   11.5 m | under +19.3 s   | bed +6.79 min, pitch -0.2, roll -0.9, 1279 m (along -1131, across 598)
+T 156.00 (T 156.00, trim 15.1, list 9.4)  stern  afloat   top   37.0 m | under +45.3 s   | bed +8.00 min, pitch 1.9, roll -0.9, 82 m (along -82, across 1)
+                                          bow to stern 1207 m
+  the bow, every 10 s to the bed:
+    0s afloat pitch 15 roll -9 yaw 0 Z -27 along 74 across 0
+    10s afloat pitch 89 roll -179 yaw -156 Z -31 along 68 across -3
+    20s under pitch 64 roll 159 yaw 176 Z -79 along 66 across -3
+    30s falling pitch 71 roll 125 yaw 166 Z -185 along 53 across 0
+    40s falling pitch 62 roll 116 yaw 156 Z -377 along 7 across 18
+    50s falling pitch 48 roll -129 yaw 150 Z -605 along -93 across 76
+    60s falling pitch 31 roll 139 yaw 155 Z -806 along -253 across 154
+    70s falling pitch 13 roll -141 yaw 152 Z -942 along -436 across 251
+    80s falling pitch -5 roll 147 yaw 153 Z -1011 along -606 across 333
+    90s falling pitch -19 roll -155 yaw 154 Z -1044 along -726 across 398
+    100s falling pitch -29 roll 164 yaw 152 Z -1084 along -790 across 427
+    110s falling pitch -24 roll -159 yaw 155 Z -1161 along -800 across 434
+    120s falling pitch -8 roll -126 yaw 159 Z -1250 along -779 across 427
+    130s falling pitch 2 roll -65 yaw 153 Z -1342 along -751 across 417
+    140s falling pitch 10 roll 1 yaw 150 Z -1429 along -739 across 407
+    150s falling pitch 10 roll -11 yaw 154 Z -1515 along -750 across 413
+    160s falling pitch 4 roll 9 yaw 154 Z -1598 along -778 across 425
+    170s falling pitch -1 roll -8 yaw 154 Z -1679 along -809 across 441
+    180s falling pitch -4 roll 2 yaw 155 Z -1760 along -834 across 453
+    190s falling pitch -4 roll -0 yaw 154 Z -1845 along -850 across 461
+    200s falling pitch -2 roll -3 yaw 154 Z -1934 along -859 across 465
+    210s falling pitch 0 roll 2 yaw 154 Z -2023 along -866 across 468
+    220s falling pitch 1 roll -2 yaw 154 Z -2113 along -875 across 473
+    230s falling pitch 1 roll -0 yaw 154 Z -2202 along -888 across 479
+    240s falling pitch 1 roll -0 yaw 154 Z -2290 along -903 across 486
+    250s falling pitch 0 roll -2 yaw 154 Z -2378 along -918 across 493
+    260s falling pitch -0 roll -0 yaw 154 Z -2466 along -933 across 501
+    270s falling pitch -0 roll -1 yaw 154 Z -2554 along -947 across 507
+    280s falling pitch -0 roll -1 yaw 154 Z -2643 along -959 across 513
+    290s falling pitch 0 roll -0 yaw 154 Z -2731 along -972 across 520
+    300s falling pitch 0 roll -1 yaw 154 Z -2820 along -985 across 526
+    310s falling pitch 0 roll -1 yaw 154 Z -2909 along -998 across 532
+    320s falling pitch 0 roll -1 yaw 154 Z -2997 along -1011 across 539
+    330s falling pitch 0 roll -1 yaw 154 Z -3085 along -1025 across 545
+    340s falling pitch 0 roll -1 yaw 154 Z -3174 along -1039 across 552
+    350s falling pitch 0 roll -1 yaw 154 Z -3262 along -1052 across 559
+    360s falling pitch 0 roll -1 yaw 154 Z -3350 along -1065 across 565
+    370s falling pitch 0 roll -1 yaw 154 Z -3438 along -1079 across 572
+    380s falling pitch 0 roll -1 yaw 154 Z -3527 along -1092 across 579
+    390s falling pitch 0 roll -1 yaw 154 Z -3615 along -1106 across 585
+    400s falling pitch 0 roll -1 yaw 154 Z -3703 along -1119 across 592
+T 155.75 (T 155.75, trim 12.6, list 7.1)  bow    afloat   top   12.6 m | under +17.3 s   | bed +6.43 min, pitch -0.2, roll -0.9, 1369 m (along -1118, across 790)
+T 155.75 (T 155.75, trim 12.6, list 7.1)  stern  afloat   top   33.4 m | under +47.5 s   | bed +8.01 min, pitch 1.9, roll -0.9, 118 m (along -118, across -0)
+                                          bow to stern 1274 m
+T 155.50 (T 155.50, trim 11.0, list 6.4)  bow    afloat   top   13.3 m | under +17.0 s   | bed +6.61 min, pitch 2.6, roll -178.9, 1474 m (along 1381, across 515)
+T 155.50 (T 155.50, trim 11.0, list 6.4)  stern  afloat   top   31.0 m | under +50.8 s   | bed +8.03 min, pitch 1.9, roll -0.8, 143 m (along -143, across -1)
+                                          bow to stern 1609 m
+  the bow, every 10 s to the bed:
+    0s afloat pitch 11 roll -6 yaw -0 Z -20 along 75 across -0
+    10s afloat pitch 63 roll -17 yaw -2 Z -34 along 74 across -1
+    20s under pitch 82 roll -3 yaw 4 Z -108 along 84 across -1
+    30s falling pitch 82 roll 18 yaw 14 Z -261 along 97 across 2
+    40s falling pitch 75 roll 30 yaw 15 Z -502 along 133 across 10
+    50s falling pitch 61 roll 70 yaw 22 Z -789 along 216 across 35
+    60s falling pitch 41 roll -131 yaw 20 Z -1050 along 370 across 87
+    70s falling pitch 20 roll 135 yaw 24 Z -1232 along 567 across 171
+    80s falling pitch 1 roll -139 yaw 23 Z -1327 along 764 across 250
+    90s falling pitch -16 roll 147 yaw 23 Z -1365 along 913 across 318
+    100s falling pitch -28 roll -156 yaw 25 Z -1394 along 1001 across 353
+    110s falling pitch -30 roll 162 yaw 22 Z -1458 along 1027 across 366
+    120s falling pitch -11 roll 162 yaw 19 Z -1548 along 1013 across 361
+    130s falling pitch 1 roll 129 yaw 17 Z -1631 along 990 across 355
+    140s falling pitch 5 roll 159 yaw 15 Z -1708 along 975 across 349
+    150s falling pitch 8 roll -177 yaw 21 Z -1788 along 975 across 349
+    160s falling pitch 7 roll 178 yaw 20 Z -1867 along 992 across 356
+    170s falling pitch 3 roll 179 yaw 22 Z -1945 along 1022 across 368
+    180s falling pitch -0 roll -176 yaw 21 Z -2022 along 1054 across 381
+    190s falling pitch -3 roll 177 yaw 22 Z -2098 along 1082 across 392
+    200s falling pitch -4 roll -176 yaw 22 Z -2176 along 1102 across 400
+    210s falling pitch -3 roll 179 yaw 22 Z -2257 along 1112 across 404
+    220s falling pitch -1 roll -178 yaw 22 Z -2340 along 1119 across 407
+    230s falling pitch 1 roll -180 yaw 22 Z -2424 along 1126 across 410
+    240s falling pitch 2 roll -179 yaw 22 Z -2506 along 1136 across 414
+    250s falling pitch 2 roll -179 yaw 22 Z -2588 along 1152 across 420
+    260s falling pitch 1 roll -180 yaw 22 Z -2669 along 1170 across 428
+    270s falling pitch 0 roll -179 yaw 22 Z -2749 along 1189 across 435
+    280s falling pitch -1 roll -180 yaw 22 Z -2830 along 1207 across 443
+    290s falling pitch -1 roll -179 yaw 22 Z -2911 along 1223 across 449
+    300s falling pitch -1 roll -179 yaw 22 Z -2992 along 1237 across 455
+    310s falling pitch -0 roll -179 yaw 22 Z -3074 along 1250 across 460
+    320s falling pitch 0 roll -179 yaw 22 Z -3155 along 1263 across 465
+    330s falling pitch 1 roll -179 yaw 22 Z -3237 along 1276 across 471
+    340s falling pitch 1 roll -179 yaw 23 Z -3318 along 1291 across 477
+    350s falling pitch 0 roll -179 yaw 23 Z -3399 along 1307 across 484
+    360s falling pitch 0 roll -179 yaw 23 Z -3480 along 1323 across 490
+    370s falling pitch -0 roll -179 yaw 23 Z -3561 along 1339 across 497
+    380s falling pitch -0 roll -179 yaw 23 Z -3642 along 1355 across 503
+    390s falling pitch -0 roll -179 yaw 23 Z -3723 along 1369 across 510
+T 155.25 (T 155.25, trim 10.1, list 5.0)  bow    afloat   top   13.6 m | under +17.0 s   | bed +6.79 min, pitch 0.7, roll -0.8, 1482 m (along 1481, across -40)
+T 155.25 (T 155.25, trim 10.1, list 5.0)  stern  afloat   top   29.7 m | under +52.0 s   | bed +8.03 min, pitch 1.9, roll -0.8, 146 m (along -146, across -0)
+                                          bow to stern 1628 m

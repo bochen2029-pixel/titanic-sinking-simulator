@@ -1,0 +1,37 @@
+/* The order line and the bridge's talk (site/parts/86_crew.js): a section of the Run tab, below the watch's own. */
+.crew [hidden] { display: none !important; }   /* the section's own pieces hidden off a watch (.kv and .seg set a display) */
+.crew-line { display: flex; gap: 8px; align-items: center; }
+.crew-input { flex: 1; min-width: 0; min-height: 36px; background: var(--panel-2); border: 1px solid var(--line-2); border-radius: 6px; padding: 6px 10px; }
+.crew-input::placeholder { color: var(--muted); }
+.crew-input:disabled { opacity: 0.5; cursor: not-allowed; }
+.crew-give { min-height: 36px; padding: 3px 14px; }
+.crew .crew-why { margin-top: 6px; }
+.crew .crew-convline { margin-top: 4px; }
+.crew .crew-convrow { align-items: center; }
+.crew-cap { margin-top: 10px; font: 600 10.5px/1.2 var(--f-ui); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.crew-talk { list-style: none; margin: 4px 0 6px; padding: 0; font-size: 12.5px; color: var(--ink-2); }
+.crew-talk:empty { display: none; }
+.crew-talk li { padding: 3px 0; border-top: 1px solid var(--line); }
+.crew-talk li:first-child { border-top: 0; }
+.crew-talk .crew-t { font: 500 11.5px/1.3 var(--f-num); color: var(--muted); margin-right: 6px; }
+.crew-talk .crew-who { font-weight: 600; color: var(--ink); margin-right: 2px; }
+.crew-talk li.crew-you .crew-who, .crew-talk li.crew-wheel .crew-who { color: var(--brass); }
+.crew-talk li.crew-script .crew-who { color: var(--teal); }
+.crew-talk li.crew-no { color: var(--warn); }
+.crew-talk li.crew-note { color: var(--muted); font-style: italic; }
+.crew .crew-hint { margin-top: 4px; }
+/* what a newcomer reads first; three orders to try (a chip writes into the line and gives nothing) */
+.crew .crew-intro { margin: 0 0 8px; }
+.crew-try { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 6px; }
+.crew-try .chip { padding: 2px 10px; }
+/* while nothing has been said the talk says where the answers will come: shown only while the list is empty */
+.crew .crew-empty { margin: 4px 0 6px; }
+.crew-talk:not(:empty) ~ .crew-empty { display: none; }   /* (any later sibling: another part may stand between the two) */
+/* [appearance] the newest line shows itself for a moment, so that an answer is seen as it comes */
+@keyframes crew-new { from { background: color-mix(in srgb, var(--brass) 26%, transparent); } to { background: transparent; } }
+.crew-talk li:last-child { animation: crew-new 1.8s ease-out 1; }
+@media (prefers-reduced-motion: reduce) { .crew-talk li:last-child { animation: none; } }
+html[data-device="phone"] .crew-try .chip { min-height: 36px; }
+/* 16 px on a phone: a smaller field makes the browser zoom the page when it takes the focus */
+html[data-device="phone"] .crew-input { min-height: 44px; font-size: 16px; }
+html[data-device="phone"] .crew-give { min-height: 44px; }

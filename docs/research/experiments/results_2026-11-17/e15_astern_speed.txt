@@ -1,0 +1,30 @@
+e15: astern thrust against speed (M4), on core/motion.js as it stands: fit {"uRk":1.8225,"cd":2.4774,"fA":0.6501,"kap":0.0552}, centre Cdw 0.1, resistance shape [1.0822,-0.691,0.4839,0.1249]
+Each row: fA refitted so that the trial's crash stop from 60 rpm is 914.4 m. Targets (consensus): trial 180-210 s; usual 60 rpm 820-930 m (8.4);
+75 rpm, prompt reversal <= 945 m (best 884); 30/60 0.75-0.90; the 37 s turn is refitted afterwards (MUST within 1.5 s). The series' astern bollard over
+ahead bollard at equal rpm is 0.66-0.96 (B4-70 P/D 1.4: 0.81, the Titanic estimate 0.71): a fitted fA far below about 0.6 points at the engine, not the screw
+
+A. THE TRIAL WITH THE USUAL HANDLING (as before M4)
+                                 fA    trial time  usual 60  usual 75  prompt 75  30/60  37 s turn   pull at -75 rpm 0/9/18 kn; held at 18 kn (MN, one screw)
+before M4: 1 + J / 1.48        0.5587      181 s     914 m    1163 m     1000 m  0.347    36.71 s   1.42 / 1.84 / 2.26; 0.00
+B4-70 P/D 1.4, held (M4)       0.5890      190 s     914 m    1139 m     1006 m  0.359    36.97 s   1.50 / 1.44 / 2.50; 0.62
+B4-70 P/D 1.4, not held        0.6001      188 s     914 m    1140 m     1000 m  0.358    36.83 s   1.53 / 1.46 / 2.55; 0.00
+1 + 0.85 J^2 (drop-in), held   0.5150      193 s     914 m    1141 m     1014 m  0.364    37.06 s   1.31 / 1.53 / 2.18; 0.86
+Titanic estimate (EAR 0.37)    0.5872      191 s     914 m    1136 m      999 m  0.363    36.88 s   1.49 / 1.41 / 2.60; 0.39
+B4-70 P/D 1.2                  0.5991      190 s     914 m    1136 m     1008 m  0.358    37.04 s   1.52 / 1.36 / 2.59; 0.79
+B4-70 P/D 1.0                  0.5621      195 s     914 m    1130 m     1005 m  0.365    37.12 s   1.43 / 1.29 / 2.66; 0.98
+B3-65 P/D 1.0                  0.6393      189 s     914 m    1135 m     1014 m  0.355    37.06 s   1.63 / 1.28 / 2.56; 0.83
+
+B. THE TRIAL "REVERSED MORE SLOWLY THAN USUAL" (TRIAL_1912 {"dead":15}); OLYMPIC PROMPT ({"down":10,"dead":2.5,"astern":2.5})
+                                 fA    trial time  usual 60  usual 75  prompt 75  30/60  37 s turn   pull at -75 rpm 0/9/18 kn; held at 18 kn (MN, one screw)
+before M4: 1 + J / 1.48        0.6583      170 s     844 m    1076 m      907 m  0.349    36.71 s   1.67 / 2.17 / 2.66; 0.00
+B4-70 P/D 1.4, held (M4)       0.6501      183 s     864 m    1077 m      942 m  0.362    37.00 s   1.65 / 1.59 / 2.76; 0.69
+B4-70 P/D 1.4, not held        0.6934      178 s     843 m    1053 m      909 m  0.362    36.85 s   1.76 / 1.69 / 2.94; 0.00
+1 + 0.85 J^2 (drop-in), held   0.5607      187 s     871 m    1087 m      957 m  0.366    37.10 s   1.43 / 1.67 / 2.37; 0.94
+Titanic estimate (EAR 0.37)    0.6602      183 s     855 m    1064 m      924 m  0.366    36.90 s   1.68 / 1.58 / 2.92; 0.43
+B4-70 P/D 1.2                  0.6528      185 s     868 m    1081 m      951 m  0.361    37.07 s   1.66 / 1.48 / 2.82; 0.86
+B4-70 P/D 1.0                  0.6065      190 s     873 m    1080 m      954 m  0.367    37.16 s   1.54 / 1.40 / 2.87; 1.06
+B3-65 P/D 1.0                  0.6937      184 s     870 m    1082 m      958 m  0.358    37.09 s   1.76 / 1.39 / 2.78; 0.90
+
+the largest ratio of the stop from 30 rpm to the stop from 60 rpm (usual handling) over every row: 0.367 (the record's other ship: 0.80-0.85)
+
+(0 s; 2026-11-17T06:51:07.653Z)

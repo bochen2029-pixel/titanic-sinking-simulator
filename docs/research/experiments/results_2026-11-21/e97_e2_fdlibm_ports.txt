@@ -1,0 +1,59 @@
+e97: fdlibm's ports against v26.13.0 (V8 14.6.202.34-node.40), 1,000,000 inputs a function and the edges
+PASS CHECK exp: against Math.exp on 1,000,028 inputs (the edges with them)          0 differ                                     0 differ: Node's bits, unmoved
+PASS MUST    ... exp's results hash as when frozen                                  91224d24696d71ed                             91224d24696d71ed
+PASS CHECK log: against Math.log on 1,000,028 inputs (the edges with them)          0 differ                                     0 differ: Node's bits, unmoved
+PASS MUST    ... log's results hash as when frozen                                  aa8fd8bd4909d816                             aa8fd8bd4909d816
+PASS CHECK log10: against Math.log10 on 1,000,028 inputs (the edges with them)      0 differ                                     0 differ: Node's bits, unmoved
+PASS MUST    ... log10's results hash as when frozen                                1bcd061106e20681                             1bcd061106e20681
+CHECK CHECK log10Fbsd: against Math.log10 on 1,000,028 inputs (the edges with them)  99826 differ, the most 2 ulp                 0 differ: Node's bits, unmoved
+       (3.141592653589793) 0x400921fb54442d18: port 0.49714987269413385, Math.log10 0.4971498726941338 (1 ulp)
+       (1.6211020902264863) 0x3ff9f008bed00000: port 0.20981036575900452, Math.log10 0.2098103657590045 (1 ulp)
+       (1.0004219033080153) 0x3ff001ba65ce8f5c: port 0.00018319163670580736, Math.log10 0.00018319163670580733 (1 ulp)
+       (369443.9686279297) 0x41168c8fdfe00000: port 5.567548580860978, Math.log10 5.5675485808609775 (1 ulp)
+       (1.0085494849062524) 0x3ff02304c8e11eb8: port 0.003697211913664031, Math.log10 0.0036972119136640304 (1 ulp)
+       (60.490862883627415) 0x404e3ed498500000: port 1.781689779629273, Math.log10 1.7816897796292732 (1 ulp)
+PASS MUST    ... log10Fbsd's results hash as when frozen                            6f7c616f38dbd58e                             6f7c616f38dbd58e
+PASS CHECK tan: against Math.tan on 1,000,028 inputs (the edges with them)          0 differ                                     0 differ: Node's bits, unmoved
+PASS MUST    ... tan's results hash as when frozen                                  dca7e95d47d314a7                             dca7e95d47d314a7
+PASS CHECK atan2: against Math.atan2 on 1,000,289 inputs (the edges with them)      0 differ                                     0 differ: Node's bits, unmoved
+PASS MUST    ... atan2's results hash as when frozen                                12035e7819693537                             12035e7819693537
+CHECK CHECK pow: against Math.pow on 1,000,289 inputs (the edges with them)          69596 differ, the most 1 ulp                 0 differ: Node's bits, unmoved
+       (2, -0.5) 0x4000000000000000 0xbfe0000000000000: port 0.7071067811865475, Math.pow 0.7071067811865476 (1 ulp)
+       (2, 1.5) 0x4000000000000000 0x3ff8000000000000: port 2.82842712474619, Math.pow 2.8284271247461903 (1 ulp)
+       (0.5, -0.5) 0x3fe0000000000000 0xbfe0000000000000: port 1.414213562373095, Math.pow 1.4142135623730951 (1 ulp)
+       (0.5, 1.5) 0x3fe0000000000000 0x3ff8000000000000: port 0.35355339059327373, Math.pow 0.3535533905932738 (1 ulp)
+       (0.385, -0.5) 0x3fd8a3d70a3d70a4 0xbfe0000000000000: port 1.6116459280507605, Math.pow 1.6116459280507607 (1 ulp)
+       (0.020991333294659853, 2.2076840969268234) 0x3f957ec088000000 0x4001a95647a1999a: port 0.00019751243645360059, Math.pow 0.00019751243645360056 (1 ulp)
+PASS MUST    ... pow's results hash as when frozen                                  d57f7b8a8fb00e58                             d57f7b8a8fb00e58
+CHECK CHECK hypot: against Math.hypot on 1,000,289 inputs (the edges with them)      384800 differ, the most 2 ulp                0 differ: Node's bits, unmoved
+       (1, 1.5) 0x3ff0000000000000 0x3ff8000000000000: port 1.8027756377319946, Math.hypot 1.8027756377319948 (1 ulp)
+       (-1, 1.5) 0xbff0000000000000 0x3ff8000000000000: port 1.8027756377319946, Math.hypot 1.8027756377319948 (1 ulp)
+       (2, 3) 0x4000000000000000 0x4008000000000000: port 3.605551275463989, Math.hypot 3.6055512754639896 (1 ulp)
+       (2, -3) 0x4000000000000000 0xc008000000000000: port 3.605551275463989, Math.hypot 3.6055512754639896 (1 ulp)
+       (0.5, 3) 0x3fe0000000000000 0x4008000000000000: port 3.0413812651491097, Math.hypot 3.0413812651491092 (1 ulp)
+       (0.5, -3) 0x3fe0000000000000 0xc008000000000000: port 3.0413812651491097, Math.hypot 3.0413812651491092 (1 ulp)
+PASS MUST    ... hypot's results hash as when frozen                                9a271bf952f9b181                             9a271bf952f9b181
+PASS CHECK hypotV8: against Math.hypot on 1,000,289 inputs (the edges with them)    0 differ                                     0 differ: Node's bits, unmoved
+PASS MUST    ... hypotV8's results hash as when frozen                              89cd24a778cb69f5                             89cd24a778cb69f5
+PASS MUST  Math.pow: the port to take (pow, fdlibm's) within one ulp of Node's (the C runtime's) everywhere here 69596 differ, the most 1 ulp                 at most 1 ulp
+PASS MUST  Math.exp: the port to take (exp) equals Node's on every input here       0 differ                                     0
+PASS MUST  Math.log: the port to take (log) equals Node's on every input here       0 differ                                     0
+PASS MUST  Math.log10: the port to take (log10) equals Node's on every input here   0 differ                                     0
+PASS MUST  Math.tan: the port to take (tan) equals Node's on every input here       0 differ                                     0
+PASS MUST  Math.atan2: the port to take (atan2) equals Node's on every input here   0 differ                                     0
+PASS MUST  Math.hypot: the port to take (hypotV8) equals Node's on every input here 0 differ                                     0
+fdlibm's own results: E97REF_OK java 25.0.3
+PASS MUST  exp: the port equals fdlibm's own (Java's StrictMath) on every input, but exp(1) 1 differ (x = 1: V8's e)                     none but those
+       (1): port 2.718281828459045, StrictMath 2.7182818284590455 (1 ulp)
+PASS MUST  log: the port equals fdlibm's own (Java's StrictMath) on every input     0 differ                                     0 differ
+PASS MUST  log10: the port equals fdlibm's own (Java's StrictMath) on every input   0 differ                                     0 differ
+PASS MUST  tan: the port equals fdlibm's own (Java's StrictMath) on every input     0 differ                                     0 differ
+PASS MUST  atan2: the port equals fdlibm's own (Java's StrictMath) on every input, but where |y/x| > 2^60 and x < 0 14560 differ, each |y/x| > 2^60 with x < 0   none but those
+       (1e+300, -1): port 1.5707963267948966, StrictMath 1.5707963267948968 (1 ulp)
+       (1e+300, -0.5): port 1.5707963267948966, StrictMath 1.5707963267948968 (1 ulp)
+       (1e+300, -3): port 1.5707963267948966, StrictMath 1.5707963267948968 (1 ulp)
+       (-7360621.5087890625, -1.400316319642342e-18): port -1.5707963267948966, StrictMath -1.5707963267948968 (1 ulp)
+PASS MUST  pow: the port equals fdlibm's own (Java's StrictMath) on every input     0 differ                                     0 differ
+PASS MUST  hypot: the port equals fdlibm's own (Java's StrictMath) on every input   0 differ                                     0 differ
+
+PASS: all MUST rows. Every port is fdlibm's own; all but pow equal Node's Math on every input; the hashes are as frozen

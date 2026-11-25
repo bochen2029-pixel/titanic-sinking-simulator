@@ -1,5 +1,5 @@
 // Golden trace of the calibrated 1912 run, sampled every 60 s, for checking a port.
-// Run: node tools/golden.js   -> out/golden_titanic.json
+// Run: node tools/golden.js   -> out/golden_titanic.json (under tools/gate.js: out/gate/, compared with the tracked one)
 const fs = require('fs');
 const path = require('path');
 const C = require('../core/core.js');
@@ -22,5 +22,5 @@ const out = {
   dt: sim.params.dt, columns: ship.cols.N, entries: ship.entCol.length, connections: sim.conn.n,
   ms: sim.ms, KG: sim.KG, foundered: sim.foundered, founderT: sim.founderT, events: sim.events, trace: rec,
 };
-fs.writeFileSync(path.join(__dirname, '..', 'out', 'golden_titanic.json'), JSON.stringify(out));
-console.log('wrote out/golden_titanic.json:', rec.length, 'samples, founder at', (sim.founderT / 60).toFixed(2), 'min');
+fs.writeFileSync(require('./outdir')('golden_titanic.json'), JSON.stringify(out));
+console.log('the golden trace (golden_titanic.json):', rec.length, 'samples, founder at', (sim.founderT / 60).toFixed(2), 'min');

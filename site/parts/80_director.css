@@ -1,0 +1,11 @@
+/* The director (site/parts/80_director.js): its switch is the first of the display toggles beside the view buttons; its
+   caption is a small plain line in the stage's aside (C-4: at the right above the Bridge, or above the damage diagram),
+   the last of the overlays: it gives way where the others need its room. It keeps its place while it fades. [appearance] */
+#bDirector[aria-pressed="true"] { color: var(--brass); }
+.dir-cap { flex: none; z-index: 3; box-sizing: border-box; max-width: 380px; background: rgba(6, 12, 20, 0.86); border: 1px solid var(--line); border-left: 2px solid var(--brass); border-radius: 6px; padding: 6px 10px 5px; font-size: 13px; line-height: 1.35; color: var(--ink); pointer-events: none; opacity: 0; transition: opacity .35s; }
+.dir-cap.on { opacity: 1; }
+.dir-cap[hidden] { display: none; }
+.dir-cap .dir-t { font: 600 12.5px/1.35 var(--f-num); color: var(--brass); margin-right: 6px; }
+.dir-cap .dir-t[hidden] { display: none; }
+.dir-cap .dir-v { display: block; font: 500 10.5px/1.3 var(--f-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+html[data-device="phone"] .dir-cap { font-size: 12.5px; padding: 5px 9px 4px; }

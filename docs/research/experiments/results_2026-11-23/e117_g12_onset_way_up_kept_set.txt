@@ -1,0 +1,66 @@
+e117: the way up from the onset across the kept set (64e65defdc46, 30 members; configuration {"massPockets":1,"leadRule":1,"weighOverfill":0,"g11Doors":0,"sideOpenings":1,"hullEnds":1})
+each member as tools/history_match.js runs its watch, handed over at its own onset; trial 14's five ways (as she is; heave x0.85, x1.18; roll 3 deg to port, to starboard); up: roll within 45 deg, DOWN beyond 135, SIDE between; * not at rest
+m00     area 1.0534, split 0.20, GM0 0.971, aDown 0.225, bunkerOpen 0.0380: onset T 154.99, x -10.93, trim 6.9, list -1.0
+      centre: bow up up up up up (1479-1492 m), stern up up up up up (15-20 m);  flag: bow up up up up up (1211-1215 m), stern up up up up up (15-20 m)
+      check: the fixed point 0.330009753840064 in 6 turns against the kept 0.33000975386161013 (-0.065e-9 apart); the watch to its flag T 163.4554 against the kept 163.4471
+m01     area 1.0141, split 0.72, GM0 0.605, aDown 0.261, bunkerOpen 0.0338: onset T 154.81, x -10.93, trim 7.2, list -2.7
+      centre: bow up up up up up (1509-1528 m), stern up up up up up (33-36 m);  flag: bow up up up up up (1201-1206 m), stern up up up up up (33-36 m)
+m02     area 0.9617, split 0.03, GM0 0.668, aDown 0.326, bunkerOpen 0.0373: onset T 158.61, x -10.93, trim 7.3, list -2.0
+      centre: bow up up up DOWN up (1489-1596 m), stern up up up up up (116-123 m)  <-;  flag: bow up up up up up (1237-1245 m), stern up up up up up (116-123 m)
+m03     area 0.9354, split 0.27, GM0 0.651, aDown 0.202, bunkerOpen 0.0576: onset T 163.20, x -10.93, trim 7.1, list -8.2
+      centre: bow up up up up up (1535-1536 m), stern up up up up up (44-50 m);  flag: bow up up up up up (1225-1230 m), stern up up up up up (44-50 m)
+m04     area 0.9664, split 0.74, GM0 0.978, aDown 0.322, bunkerOpen 0.0670: onset T 152.36, x -10.93, trim 7.2, list -3.0
+      centre: bow up up up up up (1436-1452 m), stern up up up up up (27-27 m);  flag: bow up up up up up (1170-1174 m), stern up up up up up (27-27 m)
+m05     area 1.0379, split 0.05, GM0 0.734, aDown 0.164, bunkerOpen 0.0717: onset T 156.86, x -10.93, trim 6.9, list -6.9
+      centre: bow up up up up up (1556-1559 m), stern up up up up up (18-19 m);  flag: bow up up up up up (1259-1267 m), stern up up up up up (18-19 m)
+m06     area 0.9603, split 0.24, GM0 0.729, aDown 0.401, bunkerOpen 0.0528: onset T 158.57, x -10.93, trim 7.6, list -2.4
+      centre: bow SIDE SIDE SIDE DOWN SIDE (329-1466 m), stern up up up up up (14-19 m)  <-;  flag: bow up up up up up (1271-1281 m), stern up up up up up (14-19 m)
+m07     area 0.9777, split 0.53, GM0 0.608, aDown 0.193, bunkerOpen 0.0326: onset T 161.54, x -10.93, trim 7.4, list -4.1
+      centre: bow up up up up up (1345-1593 m), stern up up up up up (33-36 m);  flag: bow up up up up up (1226-1234 m), stern up up up up up (33-36 m)
+m08     area 1.0500, split 0.69, GM0 0.743, aDown 0.249, bunkerOpen 0.0616: onset T 152.48, x -10.93, trim 7.1, list -1.4
+      centre: bow up up up up up (1501-1593 m), stern up up up up up (19-21 m);  flag: bow up up up up up (1252-1258 m), stern up up up up up (19-21 m)
+m09     area 1.0115, split 0.04, GM0 0.858, aDown 0.283, bunkerOpen 0.0457: onset T 154.75, x -10.93, trim 7.1, list -2.1
+      centre: bow up up up up up (1445-1457 m), stern up up up up up (25-26 m);  flag: bow up up up up up (1177-1181 m), stern up up up up up (25-26 m)
+m10     area 1.0312, split 0.46, GM0 0.879, aDown 0.349, bunkerOpen 0.0794: onset T 147.01, x -10.93, trim 7.4, list -3.2
+      centre: bow up up up up up (1544-1549 m), stern up up up up up (54-54 m);  flag: bow up up up up up (1207-1214 m), stern up up up up up (54-54 m)
+m11     area 0.9539, split 0.22, GM0 0.699, aDown 0.303, bunkerOpen 0.0705: onset T 156.72, x -10.93, trim 7.3, list -1.1
+      centre: bow up up up up up (1511-1523 m), stern up up up up up (36-37 m);  flag: bow up up up up up (1199-1203 m), stern up up up up up (36-37 m)
+m12     area 0.9096, split 0.25, GM0 0.937, aDown 0.401, bunkerOpen 0.0612: onset T 163.17, x -10.93, trim 7.5, list -1.7
+      centre: bow up up up up up (1542-1547 m), stern up up up up up (57-57 m);  flag: bow up up up up up (1203-1208 m), stern up up up up up (57-57 m)
+m13     area 1.0270, split 0.75, GM0 0.850, aDown 0.180, bunkerOpen 0.0779: onset T 152.15, x -10.93, trim 6.8, list -3.3
+      centre: bow up up up up up (1427-1447 m), stern up up up up up (38-39 m);  flag: bow up up up up up (1193-1199 m), stern up up up up up (38-39 m)
+m14     area 0.9972, split 0.78, GM0 0.959, aDown 0.278, bunkerOpen 0.0338: onset T 159.64, x -10.93, trim 7.2, list -1.7
+      centre: bow up up up up up (1546-1549 m), stern up up up up up (127-127 m);  flag: bow up up up up up (1221-1228 m), stern up up up up up (127-127 m)
+m15     area 1.0054, split 0.72, GM0 0.801, aDown 0.238, bunkerOpen 0.0719: onset T 150.68, x -10.93, trim 6.9, list -2.8
+      centre: bow up up up up up (1417-1435 m), stern up up up up up (23-24 m);  flag: bow up up up up up (1178-1182 m), stern up up up up up (23-24 m)
+m16     area 0.9898, split 0.15, GM0 0.632, aDown 0.326, bunkerOpen 0.0476: onset T 160.90, x -10.93, trim 7.5, list -1.1
+      centre: bow DOWN DOWN DOWN SIDE SIDE (1270-1581 m), stern up up up up up (72-77 m)  <-;  flag: bow up up up up up (1280-1287 m), stern up up up up up (72-77 m)
+m17     area 1.0418, split 0.65, GM0 0.779, aDown 0.200, bunkerOpen 0.0678: onset T 147.78, x -10.93, trim 7.0, list -4.7
+      centre: bow up up up up up (1425-1443 m), stern up up up up up (23-25 m);  flag: bow up up up up up (1180-1184 m), stern up up up up up (23-25 m)
+m18     area 1.0550, split 0.29, GM0 0.651, aDown 0.363, bunkerOpen 0.0411: onset T 147.42, x -10.93, trim 7.3, list -0.9
+      centre: bow up up up up up (1494-1507 m), stern up up up up up (20-21 m);  flag: bow up up up up up (1187-1190 m), stern up up up up up (20-21 m)
+m19 (C) area 0.9773, split 0.08, GM0 0.784, aDown 0.209, bunkerOpen 0.0761: onset T 156.13, x -10.93, trim 6.9, list -3.7
+      centre: bow up up up up up (1471-1489 m), stern up up up up up (44-45 m);  flag: bow up up up up up (1205-1211 m), stern up up up up up (44-45 m)
+m20     area 1.0005, split 0.21, GM0 0.895, aDown 0.201, bunkerOpen 0.0677: onset T 156.33, x -10.93, trim 6.9, list -1.6
+      centre: bow up up up up up (1440-1451 m), stern up up up up up (39-39 m);  flag: bow up up up up up (1189-1194 m), stern up up up up up (39-39 m)
+m21     area 0.9369, split 0.05, GM0 0.741, aDown 0.366, bunkerOpen 0.0336: onset T 163.85, x -10.93, trim 7.4, list -2.3
+      centre: bow up up up up up (1497-1510 m), stern up up up up up (25-27 m);  flag: bow up up up up up (1185-1189 m), stern up up up up up (25-27 m)
+m22     area 0.9952, split 0.44, GM0 0.860, aDown 0.196, bunkerOpen 0.0736: onset T 156.85, x -10.93, trim 6.9, list -2.5
+      centre: bow up up up up up (1553-1557 m), stern up up up up up (3-7 m);  flag: bow up up up up up (1250-1259 m), stern up up up up up (3-7 m)
+m23     area 0.9680, split 0.56, GM0 0.629, aDown 0.182, bunkerOpen 0.0696: onset T 155.40, x -10.93, trim 7.1, list -11.4
+      centre: bow up up up up up (1496-1500 m), stern up up up up up (37-46 m);  flag: bow up up up up up (1213-1217 m), stern up up up up up (37-46 m)
+m24     area 0.9124, split 0.13, GM0 0.704, aDown 0.357, bunkerOpen 0.0635: onset T 159.66, x -10.93, trim 7.4, list -2.5
+      centre: bow up up up up up (1494-1511 m), stern up up up up up (22-25 m);  flag: bow up up up up up (1185-1190 m), stern up up up up up (22-25 m)
+m25     area 0.9159, split 0.22, GM0 0.637, aDown 0.254, bunkerOpen 0.0727: onset T 160.16, x -10.93, trim 7.1, list -5.4
+      centre: bow up up up up up (1516-1525 m), stern up up up up up (42-47 m);  flag: bow up up up up up (1216-1222 m), stern up up up up up (42-47 m)
+m26     area 0.9317, split 0.79, GM0 0.829, aDown 0.292, bunkerOpen 0.0809: onset T 159.67, x -10.93, trim 7.3, list -3.1
+      centre: bow up up up up up (1566-1574 m), stern up up up up up (140-141 m);  flag: bow up up up up up (1225-1233 m), stern up up up up up (140-141 m)
+m27     area 0.9452, split 0.08, GM0 0.787, aDown 0.399, bunkerOpen 0.0766: onset T 158.78, x -10.93, trim 7.4, list -1.0
+      centre: bow DOWN DOWN DOWN DOWN up (1495-1582 m), stern up up up up up (15-16 m)  <-;  flag: bow up up up up up (1245-1250 m), stern up up up up up (15-16 m)
+m28     area 0.9524, split 0.68, GM0 0.876, aDown 0.395, bunkerOpen 0.0485: onset T 159.74, x -10.93, trim 7.4, list -2.5
+      centre: bow up up up up up (1560-1573 m), stern up up up up up (23-26 m);  flag: bow up up up up up (1216-1222 m), stern up up up up up (23-26 m)
+m29     area 1.0104, split 0.55, GM0 0.639, aDown 0.287, bunkerOpen 0.0565: onset T 151.74, x -10.93, trim 7.1, list -1.3
+      centre: bow up up up up up (1563-1570 m), stern up up up up up (66-98 m);  flag: bow up up up up up (1230-1235 m), stern up up up up up (66-98 m)
+
+BOTH PIECES UPRIGHT IN ALL FIVE WAYS, handed over at the onset: 26 of 30 with the air through each slice's floodable centre (the default); 30 of 30 with it where it lay at the hand-over ('flag'); 26 of 30 with both
+(300 s on 6 job(s))

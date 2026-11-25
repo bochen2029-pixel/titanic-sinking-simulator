@@ -60,9 +60,42 @@ button, input, select { font: inherit; color: inherit; }
 .nogl b { color: var(--ink); }
 noscript .nogl { position: fixed; top: 40%; }
 
-/* HUD */
-.hud { position: absolute; left: calc(12px + var(--sal)); top: calc(12px + var(--sat)); right: calc(12px + var(--sar)); display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; pointer-events: none; }
-.hud > * { pointer-events: auto; }
+/* HUD: the stage's one layout (C-4, docs/DESIGN_page_layout_authority_v1_1_2026-11-21.md). One layer over the stage, a
+   grid of areas named by role, each a flex column; the page's overlays and the parts' (TitanicApp.slot) stand in them,
+   none placed by hand. A template for each shape of stage, chosen by the stage's own size (container queries), not the
+   window's. Drags on its empty parts reach the canvas, and so do drags on an overlay that lets them through by its own
+   rule (the notices, the boats' count, the director's caption, the deep's strip but its buttons).
+   The areas: readouts (the readouts, every part's lines in them); views (the view bar); stack (the boats' count, then the
+   end card); rail (the deep's strip, the height of the stage); notice (the notices, beside the aside); aside (the walk's
+   pad, then the director's caption, which gives way first: 'last'); helm (the Bridge); diagram (the damage diagram) */
+#stage { container: stage / size; }
+.hud-grid { position: absolute; inset: 0; pointer-events: none; display: grid; gap: 8px 12px; box-sizing: border-box;
+  padding: calc(12px + var(--sat)) calc(12px + var(--sar)) calc(12px + var(--sab)) calc(12px + var(--sal));
+  --ro-floor: 300px;
+  grid-template-columns: minmax(auto, 1fr) minmax(0, max-content) auto;   /* the readouts' column at least their content's least width (the floor is theirs: below), the bar's what is left */
+  grid-template-rows: auto minmax(0, 1fr) auto auto auto;
+  grid-template-areas:
+    "readouts views   rail"
+    "readouts stack   rail"
+    "notice   aside   rail"
+    "helm     helm    rail"
+    "diagram  diagram diagram"; }
+.hud-grid > .slot { display: flex; flex-direction: column; gap: 8px; min-width: 0; min-height: 0; pointer-events: none; }
+:where(.hud-grid > .slot > *) { pointer-events: auto; }   /* no weight: an overlay's own pointer-events stands */
+/* the readouts' column at least their content's least width and their floor (D78: the bar yields). Their slot keeps the
+   minimum of its content (the other slots' 0 would also zero the column's 'auto', and the bar's column would take its
+   whole width first: turn 8b, the narrow desktop), and the floor is a length, not a share of the column (a percentage
+   there is a cycle, and counts as nothing when the column is sized) */
+.slot[data-area="readouts"] { grid-area: readouts; align-items: flex-start; min-width: auto; }
+.slot[data-area="readouts"] > .readout { min-width: var(--ro-floor); }
+.slot[data-area="views"] { grid-area: views; align-items: flex-end; }
+/* the stack takes the room the rows leave it and never asks for more (its size contained): the end card scrolls in it */
+.slot[data-area="stack"] { grid-area: stack; align-items: flex-end; contain: size; }
+.slot[data-area="rail"] { grid-area: rail; }
+.slot[data-area="notice"] { grid-area: notice; align-items: flex-start; justify-content: flex-end; }
+.slot[data-area="aside"] { grid-area: aside; align-items: flex-end; justify-content: flex-end; }
+.slot[data-area="helm"] { grid-area: helm; align-items: flex-start; justify-content: flex-end; }
+.slot[data-area="diagram"] { grid-area: diagram; }
 .readout { background: rgba(6, 12, 20, 0.78); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px 10px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); min-width: 0; max-width: 520px; }
 .ship-name { font: italic 600 20px/1 var(--f-display); letter-spacing: 0.02em; color: var(--ink); display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
 .ship-name small { font: 500 11px/1 var(--f-ui); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
@@ -78,21 +111,79 @@ noscript .nogl { position: fixed; top: 40%; }
 .stat .v { font: 500 14px/1.3 var(--f-num); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .forecast-line { margin-top: 8px; font-size: 12.5px; color: var(--ink-2); }
 .forecast-line b { color: var(--ink); font-weight: 600; }
-.views { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
+/* the readouts on a desktop: each label and each value on one line, whatever the numbers. With the inflow in four figures
+   "Draft fwd/aft" broke over two lines, and in the plunge ("10,035 t/min", her stern clear: "48.4 / -17.9 m") values ran
+   past the readouts' edge: beside the view buttons the HUD leaves them 458 px at 1400 x 860, where the five longest values
+   need 518 at 14 px. So the values a pixel smaller and the columns closer; where even that does not fit (the plunge's last
+   minutes at that size), a value moves to a second row whole. A phone shows three readouts and is left as it was */
+html:not([data-device="phone"]) .readout .stat .k { white-space: nowrap; }
+@media (min-width: 901px) {
+  html:not([data-device="phone"]) .readout .stats { display: flex; flex-wrap: wrap; gap: 4px 10px; }
+  html:not([data-device="phone"]) .readout .stats > .stat { flex: none; }
+  html:not([data-device="phone"]) .readout .stat .v { font-size: 13px; }
+}
+.views { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; max-width: 100%; }
+.views .seg { flex-wrap: wrap; justify-content: flex-end; }   /* the bar's rows wrap in a narrow column: the bar yields, the readouts keep a floor (D78) */
 .seg { display: inline-flex; background: rgba(6, 12, 20, 0.78); border: 1px solid var(--line); border-radius: 6px; padding: 2px; gap: 2px; }
 .seg button { border: 0; background: transparent; padding: 6px 9px; border-radius: 4px; cursor: pointer; font-size: 12.5px; color: var(--ink-2); white-space: nowrap; }
 .seg button[aria-pressed="true"] { background: var(--line-2); color: var(--ink); }
 .seg button:hover { color: var(--ink); }
 .seg button:focus-visible, .btn:focus-visible, .tab:focus-visible, .tab-close:focus-visible, .card:focus-visible, input:focus-visible, .chip:focus-visible { outline: 2px solid var(--water); outline-offset: 2px; }
 
-.strip { position: absolute; left: calc(12px + var(--sal)); right: calc(12px + var(--sar)); bottom: calc(12px + var(--sab)); background: rgba(6, 12, 20, 0.82); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px 4px; }
+/* the damage diagram is the containing block of what a part lays over it (the reports' compartments as reported:
+   site/parts/60_reports.css): placed in the grid, not absolutely, it must say so itself */
+.strip { position: relative; background: rgba(6, 12, 20, 0.82); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px 4px; }
 .strip canvas { display: block; width: 100%; height: 96px; }
 .strip .cap { display: flex; justify-content: space-between; gap: 8px; font-size: 11px; color: var(--muted); letter-spacing: 0.04em; }
-.toast { position: absolute; left: 50%; bottom: calc(140px + var(--sab)); transform: translateX(-50%); background: rgba(6, 12, 20, 0.92); border: 1px solid var(--line-2); border-radius: 6px; padding: 8px 12px; font-size: 13px; max-width: min(520px, calc(100% - 32px)); text-align: center; opacity: 0; transition: opacity .25s; pointer-events: none; }
+/* the notices (the page's, and the bridge's view's own: site/parts/60_reports.js) stand in the notice area (C-4): at the
+   left just above the Bridge, or above the damage diagram, beside the aside. One takes room only while it shows: it
+   fades in, and when its time is up it gives its room back to the stack's row at once (never to the readouts or the
+   bar, which do not move). Off, it is out of the flow and clipped to a pixel, but still in the page: a live region must
+   stay there for a screen reader to hear the next notice */
+.toast { box-sizing: border-box; max-width: min(580px, 100%); background: rgba(6, 12, 20, 0.92); border: 1px solid var(--line-2); border-radius: 6px; padding: 8px 12px; font-size: 13px; text-align: left; opacity: 0; transition: opacity .25s; pointer-events: none; }
 .toast.on { opacity: 1; }
+.slot[data-area="notice"] > .toast:not(.on) { position: absolute; width: 1px; height: 1px; margin: 0; padding: 0; border: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.toast.big { font-size: 17px; font-weight: 600; letter-spacing: 0.02em; border-color: var(--warn); padding: 12px 18px; }
+
+/* The bridge: instruments, wheel and engine-order telegraph, over the stage while a watch is on */
+.bridge { width: min(580px, 100%); box-sizing: border-box; background: rgba(6, 12, 20, 0.84); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; display: grid; gap: 8px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.bridge[hidden] { display: none; }
+.gauges { display: grid; grid-template-columns: auto auto auto auto minmax(0, 1fr); gap: 4px 16px; align-items: start; }
+.gauges .ice .v { white-space: normal; font-family: var(--f-ui); font-size: 13.5px; color: var(--ink-2); }
+.gauges .sub { font: 11.5px/1.3 var(--f-num); color: var(--muted); white-space: nowrap; }
+.gauges .sub.warn { color: var(--warn); } .gauges .sub.crit { color: var(--crit); }
+/* the Systems tab: each system with a state dot and what it is doing now */
+.chain { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.chain li { display: grid; grid-template-columns: 8px 62px minmax(0, 1fr); gap: 8px; align-items: baseline; font-size: 13px; }
+.chain li i { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); }
+.chain li.ok i { background: var(--ok); } .chain li.warn i { background: var(--warn); } .chain li.crit i { background: var(--crit); }
+.chain li b { font-weight: 600; color: var(--ink); }
+.chain li span { color: var(--ink-2); }
+.chain li.warn span { color: var(--warn); } .chain li.crit span { color: var(--crit); }
+.helm-ind { display: block; color: var(--ink-2); margin-top: 2px; overflow: visible; }
+html[data-device="phone"] .helm-ind { width: 70px; height: 37px; }
+.gauges .ice.alarm .v { color: var(--warn); font-weight: 600; }
+.gauges .ice.struck .v { color: var(--crit); font-weight: 600; }
+.wheel { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 8px; align-items: stretch; }
+.btn.helm { display: grid; gap: 1px; padding: 5px 10px; text-align: center; min-width: 124px; align-content: center; }
+.btn.helm b { font-weight: 600; font-size: 13.5px; }
+.btn.helm small { color: var(--muted); font-size: 10.5px; }
+.btn.helm[aria-pressed="true"] { background: #123a55; border-color: #1f6a96; }
+.wheel-mid { display: grid; align-content: center; gap: 2px; min-width: 0; }
+.wheel-cap { display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+.tel-cap { display: flex; justify-content: space-between; font: 500 10.5px/1.2 var(--f-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+.tel .seg button { padding: 6px 4px; }
+.tel .seg button[data-order="stop"] { font-weight: 600; }
+.bridge .hint { font-size: 11.5px; }
+.seedbox input { width: 9ch; background: var(--panel-2); border: 1px solid var(--line-2); border-radius: 4px; padding: 3px 6px; font-family: var(--f-num); }
+.mt12 { margin-top: 12px; }
+#speedSeg.locked button { opacity: 0.45; pointer-events: none; }
+tr.mine td { background: rgba(60, 195, 255, 0.10); }
+.btn[disabled], .chip[disabled] { opacity: 0.45; cursor: default; }
+.btn[disabled]:hover { border-color: var(--line-2); }
 
 /* Panel */
-.tabs { position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: repeat(4, 1fr); background: var(--panel); border-bottom: 1px solid var(--line); }
+.tabs { position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: repeat(5, 1fr); background: var(--panel); border-bottom: 1px solid var(--line); }
 .tab { border: 0; background: transparent; padding: 13px 4px 11px; cursor: pointer; color: var(--muted); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 12px; border-bottom: 2px solid transparent; }
 .tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--water); }
 .tab-close { display: none; border: 0; background: transparent; color: var(--muted); font-size: 20px; line-height: 1; padding: 0 14px; cursor: pointer; }
@@ -129,6 +220,22 @@ th.num { text-align: right; }
 .tablewrap { overflow-x: auto; }
 .chip { border: 1px solid var(--line-2); background: transparent; border-radius: 999px; padding: 3px 9px; cursor: pointer; font-size: 12px; min-height: 28px; }
 .chip[aria-pressed="true"] { background: #123a55; border-color: #1f6a96; }
+/* the Systems tab's pumps (Y6): one block per room with water or with pumps on it */
+.prooms { display: grid; gap: 8px; }
+.proom { border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; display: grid; gap: 6px; }
+.proom .kv { flex-wrap: wrap; }
+.proom .kv b { font-weight: 600; color: var(--ink); white-space: nowrap; }
+.proom .kv .v { color: var(--ink-2); text-align: right; margin-left: auto; }
+.proom ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 12.5px; color: var(--ink-2); }
+.proom li { display: flex; gap: 8px; align-items: center; justify-content: space-between; }
+.proom details summary { cursor: pointer; font-size: 12.5px; color: var(--ink-2); line-height: 28px; }
+.proom .opts .chip { border-radius: 6px; text-align: left; }
+/* a room with suctions and no water yet (on a watch): listed so that pumps can be put on it before the water comes, quieter
+   than a room that is making water */
+.proom.dry { border-style: dashed; padding: 5px 9px; gap: 4px; }
+.proom.dry .kv b { font-weight: 500; color: var(--ink-2); }
+.proom.dry .kv .v { color: var(--muted); }
+#pumpSec .row > .hint { flex: 1 1 200px; }
 .x { border: 0; background: transparent; color: var(--muted); cursor: pointer; font-size: 16px; line-height: 1; padding: 2px 6px; min-width: 28px; min-height: 28px; }
 .x:hover { color: var(--signal); }
 .tag { font: 500 11px/1 var(--f-num); padding: 2px 5px; border-radius: 3px; border: 1px solid var(--line-2); color: var(--ink-2); }
@@ -148,6 +255,8 @@ th.num { text-align: right; }
 .foot { padding: 14px 16px 22px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); margin-top: auto; }
 .foot a { color: var(--ink-2); }
 .foot-meta { margin-top: 8px; }
+.foot-early { color: #e0b15a; font-weight: 600; }   /* RC1: the early access mark, its one place on the page [appearance] */
+.start-here h3 { color: #e0b15a; }                   /* RC1: the first minute's "Start here" on the Run tab [appearance] */
 
 /* ---- narrow windows (any pointer): stage above, panel below */
 @media (max-width: 900px) {
@@ -159,17 +268,110 @@ th.num { text-align: right; }
   .readout { padding: 8px 10px; }
   .strip canvas { height: 64px; }
   #stripNote, .strip .cap .long { display: none; }
-  .toast { bottom: calc(100px + var(--sab)); }
   .views .seg button { padding: 5px 7px; font-size: 12px; }
   .kbd-hint { display: none; }
+  .bridge { padding: 7px 9px; gap: 6px; }
+  .gauges { grid-template-columns: auto auto auto minmax(0, 1fr); gap: 2px 12px; }
+  .btn.helm { min-width: 0; padding: 4px 8px; }
+  .btn.helm small { display: none; }
 }
 @media (max-width: 520px) {
   #app { grid-template-rows: calc(var(--app-h) * 0.66) auto; }
-  .hud { flex-direction: column; align-items: stretch; gap: 8px; }
-  .views { flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: center; gap: 6px; overflow-x: auto; }
   .views .seg button { padding: 5px 6px; font-size: 11.5px; }
   .forecast-line { display: none; }
   .ship-name { font-size: 17px; }
+}
+/* a narrow stage (900 px and under: a phone upright, a tablet, a narrow desktop): the bands stack. Beside the readouts
+   the bar would have too little: their least width is the fall's lines' after the flag (about 430 px), and the deep's
+   strip takes a column of its own (turn 8b: on the narrow desktop the readouts lay over the bar). The bar's rows wrap
+   under the readouts, at the left */
+@container stage (max-width: 900px) {
+  .hud-grid { grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto minmax(0, 1fr) auto auto auto auto;
+    grid-template-areas:
+      "readouts readouts"
+      "views    views"
+      "stack    rail"
+      "notice   rail"
+      "aside    rail"
+      "helm     helm"
+      "diagram  diagram"; }
+  .slot[data-area="readouts"], .slot[data-area="views"] { align-items: stretch; }
+  .readout { max-width: none; }
+  .views { flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 6px; }
+  .views .seg { justify-content: flex-start; }
+  /* and the compact Bridge and diagram a narrow window already has (900 px and under), now by the stage's own width: a
+     narrow stage beside a wide window's panel had the full ones (turn 8d, the narrow desktop: its Bridge about 240 px,
+     its key hints and the 1912 words on the wheel's buttons showing), and the readouts' and the bar's closer sizes */
+  .kbd-hint { display: none; }
+  .readout { padding: 8px 10px; }
+  .clock .ship-time { font-size: 21px; }
+  .views .seg button { padding: 5px 7px; font-size: 12px; }
+  .bridge { padding: 7px 9px; gap: 6px; }
+  .gauges { grid-template-columns: auto auto auto minmax(0, 1fr); gap: 2px 12px; }
+  .btn.helm { min-width: 0; padding: 4px 8px; }
+  .btn.helm small { display: none; }
+  .strip canvas { height: 64px; }
+  #stripNote, .strip .cap .long { display: none; }
+}
+/* the narrowest (520 px and under, a phone upright): the view bar one row that scrolls */
+@container stage (max-width: 520px) {
+  .views { flex-wrap: nowrap; overflow-x: auto; }
+  .views .seg { flex-wrap: nowrap; }
+  .views .seg button { padding: 5px 6px; font-size: 11.5px; }   /* a phone's own, as its window's rule has it */
+}
+/* a short stage (780 px and under: a phone either way, a tablet, a narrow desktop): while the end card is up (the watch
+   is over: she has foundered, lies afloat or has passed the ice) the Bridge gives way to it. With the readouts and the
+   fall's lines, the bar, the diagram and a notice there is no room for both (C-4's step 2, as D5 for a phone on its side;
+   reversible). The card used to lie over the Bridge on every size; the card's Close gives the Bridge back */
+@container stage (max-height: 780px) {
+  #hud:has(#endCard:not([hidden])) .slot[data-area="helm"] { display: none; }
+  /* and while walking, it gives way to the walk's pad, which takes its keys: the bar, a notice, the pad, the Bridge and
+     the diagram are more than such a stage's height (the narrow desktop's: about 754 px of 700). Leaving the walk gives
+     it back */
+  #stage.walk-on .slot[data-area="helm"] { display: none; }
+}
+/* a phone on its side (a short, wide stage: 336 px on 844 x 390): two columns that cannot share their rows' heights, so
+   the readouts run down the left one, the whole height they may take, beside the other column's rows. On a damage preset
+   the right column holds the bar, the stack, the notice and the aside, and the diagram lies under both. On a watch the
+   Bridge stands at the right and the diagram gives way while it shows (D78, its fifth decision: reversible); the
+   readouts run down beside the bar, the notice, the aside and the Bridge's head, and the stack has the Bridge's foot,
+   as tall as what is in it and no more than 38 % (fit-content: an empty stack takes nothing; turn 8d, the walk's pad
+   squeezed by an empty stack's 38 %). Once the end card is up the Bridge has given way (a short stage), and the watch
+   takes the preset's columns, the card beside the readouts (turn 8d: under the readouts it fell 5 px short). The bar is
+   one row that scrolls, as on a phone upright, and the gaps are closer */
+@container stage (orientation: landscape) and (max-height: 420px) {
+  .hud-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+    grid-template-rows: auto minmax(0, 1fr) auto auto auto;
+    grid-template-areas:
+      "readouts views   rail"
+      "readouts stack   rail"
+      "readouts notice  rail"
+      "readouts aside   rail"
+      "diagram  diagram diagram"; }
+  html[data-device="phone"] #stage .hud-grid { row-gap: 4px; padding-top: calc(6px + var(--sat)); padding-bottom: 6px; }
+  #stage.watch .hud-grid { grid-template-rows: auto minmax(0, 1fr) auto auto auto fit-content(38%);
+    grid-template-areas:
+      "readouts views   rail"
+      "readouts .       rail"
+      "readouts notice  rail"
+      "readouts aside   rail"
+      "readouts helm    rail"
+      "stack    helm    rail"; }
+  #stage.watch .slot[data-area="stack"] { align-items: flex-start; contain: none; }
+  #stage.watch #hud:has(#endCard:not([hidden])) { grid-template-rows: auto minmax(0, 1fr) auto auto;
+    grid-template-areas:
+      "readouts views   rail"
+      "readouts stack   rail"
+      "readouts notice  rail"
+      "readouts aside   rail"; }
+  #stage.watch #hud:has(#endCard:not([hidden])) .slot[data-area="stack"] { contain: size; }
+  /* each template names only the areas it shows: the other is out of the grid (a preset's helm holds only the hidden
+     Bridge) */
+  #stage.watch .slot[data-area="diagram"], #stage:not(.watch) .slot[data-area="helm"] { display: none; }
+  .slot[data-area="views"] { align-items: stretch; }
+  .views { flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: center; gap: 6px; overflow-x: auto; }
+  .views .seg { flex-wrap: nowrap; }
 }
 
 /* ---- phones (coarse pointer, short side under 600 px): full-height stage, the panel as a bottom sheet */
@@ -177,14 +379,26 @@ html[data-device="phone"] #app { display: block; height: var(--app-h); min-heigh
 html[data-device="phone"] #stage { position: absolute; left: 0; right: 0; top: 0; bottom: calc(var(--bar) + var(--sab)); }
 html[data-device="phone"] #panel { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; height: calc(var(--bar) + var(--sab)); overflow: hidden; border-top: 1px solid var(--line-2); border-left: 0; transition: height .22s ease; padding-bottom: var(--sab); box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.45); }
 html[data-device="phone"] #panel.open { height: calc(var(--app-h) * 0.74); overflow-y: auto; }
-html[data-device="phone"] .tabs { grid-template-columns: repeat(4, 1fr) auto; min-height: var(--bar); align-items: stretch; }
+html[data-device="phone"] .tabs { grid-template-columns: repeat(5, 1fr) auto; min-height: var(--bar); align-items: stretch; }
+html[data-device="phone"] .tab { letter-spacing: 0.02em; padding-left: 2px; padding-right: 2px; }
 html[data-device="phone"] .tab { padding: 0 2px; font-size: 11.5px; }
 html[data-device="phone"] .tab-close { display: block; }
+/* RC2 (the first ten minutes): on a phone's first screen, until it is first opened or a watch is, the Run tab reads
+   "Start" and beckons (site/app.js, beckon) [appearance]; no size changes, so the layout stands as it was */
+html[data-device="phone"] .tab.beckon { color: var(--brass); border-bottom-color: var(--brass); animation: tab-beckon 1.8s ease-in-out infinite; }
+@keyframes tab-beckon { 0%, 100% { text-shadow: none; } 50% { text-shadow: 0 0 8px rgba(224, 177, 90, 0.85); } }
+@media (prefers-reduced-motion: reduce) { html[data-device="phone"] .tab.beckon { animation: none; } }
 html[data-device="phone"] #panel:not(.open) .pane, html[data-device="phone"] #panel:not(.open) .foot { display: none; }
-html[data-device="phone"] .strip { bottom: 8px; left: calc(8px + var(--sal)); right: calc(8px + var(--sar)); }
+/* a phone's grid: closer to the edges; its stage already ends above the sheet and its safe area, so its foot adds none
+   (the notice once added --sab twice: D78) */
+html[data-device="phone"] .hud-grid { gap: 6px 8px; padding: calc(8px + var(--sat)) calc(8px + var(--sar)) 8px calc(8px + var(--sal)); }
 html[data-device="phone"] .strip canvas { height: 56px; }
-html[data-device="phone"] .hud { left: calc(8px + var(--sal)); right: calc(8px + var(--sar)); top: calc(8px + var(--sat)); }
-html[data-device="phone"] .toast { bottom: calc(96px + var(--sab)); }
+html[data-device="phone"] .bridge { width: 100%; }
+html[data-device="phone"] .toast.big { font-size: 14.5px; padding: 8px 12px; }
+html[data-device="phone"] .btn.helm { min-height: 40px; }
+html[data-device="phone"] .btn.helm b { font-size: 12.5px; }
+html[data-device="phone"] .tel .seg button { padding: 0 2px; font-size: 12px; }
+html[data-device="phone"] #stage.watch .forecast-line { display: none; }
 html[data-device="phone"] .seg button, html[data-device="phone"] .tab { min-height: 40px; }
 html[data-device="phone"] .forecast-line { display: block; font-size: 12px; margin-top: 6px; }
 html[data-device="phone"] .readout { padding: 7px 10px; }

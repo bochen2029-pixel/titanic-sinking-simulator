@@ -1,0 +1,15 @@
+e24: flooding at speed (P5, Tier 0): founders after the touch, without the sea's pressure at the openings and with it
+  the watch                                                          without          with  change
+  1912, the reconstructed orders (the engines stopped)            157.42 min    157.11 min  -0.30
+  1912, then Full ahead 30 s after the touch, held                157.33 min    153.60 min  -3.73
+  1912, then Half ahead 30 s after the touch, held                157.33 min    155.18 min  -2.15
+  1912, then Slow ahead 30 s after the touch, held                157.34 min    156.65 min  -0.69
+
+  a 0.2 m2 hole in the forepeak's side, 4 m above the keel: water in 10 min     without          with
+  stopped                                                              312 t         312 t  x1.00
+  10 knots held                                                        312 t         317 t  x1.02
+  15 knots held                                                        312 t         343 t  x1.10
+  22.5 knots held                                                      312 t         419 t  x1.34
+
+The brainstorm measured the same law on the 1912 hand-made damage (section 5.4): the night as it happened moves by
+seconds to two minutes; a ship that holds her speed is where the pressure at the openings decides the outcome.

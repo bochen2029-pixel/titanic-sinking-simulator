@@ -1,0 +1,43 @@
+e25, part 1: the 1912 damage (pumps as worked; wMul 1.036, aDown 0.2815, fOpen 0.02068). Minutes after the collision; the record: the bridge under at 155, gone at 160.
+  case                                                                   B windows  bridge  fwd dome  aft dome  founders  list at bridge  stairs peak t/min  stairs, t  windows, t
+  the model before S1: the hull to B deck, no staircase                          -  151.26         -         -    154.02           -27.9                  0          0           0
+  S1 as in force (door 1 m, window 1.5 m, dome 0.5 m, air 0.05 m, Cd 0.6)    152.09  154.66    155.82    156.49    157.23            -2.5              17214       5791       44021
+    the tiers with their sides whole, no staircase                               -  158.05         -         -    166.93            -2.3                  0          0           0
+    the tiers and their windows, no staircase                               152.09  154.66         -         -    157.26            -2.5                  0          0       47440
+    the tiers and the staircases, the windows never breaking                     -  158.05    164.62    166.15    166.49            -2.3              22219      10665           0
+    the hull to B deck with the staircases (no tiers)                            -  151.26    151.72    152.51    153.78           -27.9              16956      11284           0
+  a window breaks at 0.5 m of sea                                           149.96  153.38    154.41    155.04    155.83            -2.6              16420       5719       45834
+  a window breaks at 1.0 m                                                  151.08  154.00    155.09    155.73    156.50            -2.5              16787       5752       45042
+  a window breaks at 2.5 m                                                  153.91  155.90    157.29    158.01    158.70            -2.3              18292       5856       41935
+  a window breaks at 3.5 m                                                  155.61  157.08    158.87    159.65    160.27            -2.4              19667       5931       38930
+  the windows half the area                                                 152.09  155.60    157.42    158.33    158.98            -2.5              21146       7893       35031
+  the windows twice the area                                                152.09  153.84    154.60    155.10    155.89            -2.4              13876       3787       52931
+  a wooden door gives way at 0.7 m                                          152.09  154.66    155.82    156.49    157.23            -2.5              17207       5786       44042
+  a wooden door gives way at 1.5 m                                          152.09  154.66    155.82    156.50    157.23            -2.5              17238       5778       44025
+  a dome's cover gives way at 0.2 m of sea on it                            152.09  154.66    155.82    156.49    157.23            -2.5              17214       5791       44021
+  a dome's cover gives way at 1.2 m                                         152.09  154.66    155.82    156.49    157.23            -2.5              17214       5791       44021
+  no air path: a dome goes by the sea on it alone                           152.09  154.66    156.07    156.63    157.23            -2.5              17200       5777       44074
+  the domes never give way                                                  152.09  154.66         -         -    157.25            -2.5               2299       1524       46454
+  discharge coefficient 0.5                                                 152.09  154.90    156.21    156.94    157.66            -2.5              15622       5850       41752
+  discharge coefficient 0.7                                                 152.09  154.46    155.52    156.14    156.90            -2.4              18678       5668       46062
+  the wells 24 m2 free                                                      152.09  154.66    155.82    156.49    157.23            -2.5              15274       5502       44142
+  the wells 34 m2 free                                                      152.09  154.66    155.82    156.49    157.23            -2.5              19640       6085       43885
+  the D-deck gangway doors leaking by a gap of a millimetre (0.002)         151.89  154.44    155.60    156.28    157.02            -2.4              17215       5863       44099
+  the D-deck gangway doors leaking as fire doors do (0.03)                  148.93  151.43    152.57    153.23    154.00            -2.6              16869       7131       43903
+  the forward staircase alone                                               152.09  154.66    155.82         -    157.24            -2.5               7919       1597       46027
+  the after staircase alone                                                 152.09  154.66         -    156.51    157.25            -2.5              16792       4181       45445
+
+e25, part 2: the validation cases before S1 (the hull to B deck, no staircase) and with it (the same flow parameters), and with S1 and the D-deck gangway doors leaking by a millimetre's gap (leakShell 0.002)
+  case                                          before S1                         with S1                                                   with S1, the gangway doors leaking
+  Titanic 1912, pumps as worked                 founders 154.0 min                founders 157.2 min (95 of 100 openings gave way)          founders 157.0 min (95 of 100 openings gave way)
+  Titanic 1912, no pumps                        founders 151.6 min                founders 154.6 min (95 of 100 openings gave way)          founders 154.3 min (95 of 100 openings gave way)
+  Four forward compartments (Wilding: floats)   afloat, trim 2.0 deg              afloat, trim 2.0 deg (0 of 100 openings gave way)         afloat, trim 2.0 deg (0 of 100 openings gave way)
+  Five forward compartments (Wilding: sinks)    founders 131.1 min                founders 133.5 min (88 of 100 openings gave way)          founders 133.2 min (88 of 100 openings gave way)
+  Olympic-Hawke 1911 (returned to port)         afloat, trim -0.7 deg             afloat, trim -0.7 deg (0 of 100 openings gave way)        afloat, trim -0.7 deg (0 of 100 openings gave way)
+  Britannic 1916 (sank in about 55 min)         founders 49.7 min                 founders 49.2 min (95 of 100 openings gave way)           founders 49.1 min (95 of 100 openings gave way)
+  Britannic, portholes shut                     afloat, trim 8.8 deg              afloat, trim 8.5 deg (0 of 100 openings gave way)         founders 123.0 min (88 of 100 openings gave way)
+  Titanic damage without the BR5 seam           founders 186.3 min                founders 188.7 min (92 of 100 openings gave way)          founders 188.3 min (92 of 100 openings gave way)
+  Titanic damage stopping at hold 3             afloat, trim 2.0 deg              afloat, trim 2.0 deg (0 of 100 openings gave way)         afloat, trim 2.0 deg (0 of 100 openings gave way)
+  Titanic damage, bulkheads to D deck           founders 165.6 min                founders 169.2 min (95 of 100 openings gave way)          founders 169.1 min (95 of 100 openings gave way)
+  Titanic damage, bulkheads to B deck           afloat, trim 8.8 deg              afloat, trim 8.5 deg (0 of 100 openings gave way)         founders 459.9 min (91 of 100 openings gave way)
+  Titanic damage, doors left open               founders 175.9 min                founders 178.0 min (98 of 100 openings gave way)          founders 174.6 min (98 of 100 openings gave way)

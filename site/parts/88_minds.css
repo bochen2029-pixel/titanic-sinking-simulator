@@ -1,0 +1,31 @@
+/* The crew's own words (site/parts/88_minds.js): the row of names under the order line, an offered order under the talk,
+   the imagined lines and the notices in the talk, and "The crew's minds" folded at the end of the section. */
+.minds-who { margin-top: 8px; }
+.minds-names { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.minds-name.minds-out { opacity: 0.5; border-style: dashed; }
+.minds-name.minds-asked { border-color: var(--brass); }
+.crew .minds-where { margin-top: 4px; }
+.minds-offer { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 4px 0 6px; font-size: 12.5px; color: var(--ink-2); }
+.minds-offer-text { flex: 1 1 100%; }
+.minds-give { border-color: var(--brass); }
+.crew-talk li.crew-mind .crew-who { color: var(--ink); }
+.crew-talk li.crew-imagined { font-style: italic; }
+.crew-talk .crew-mark { margin-left: 6px; font: 500 10.5px/1.2 var(--f-ui); letter-spacing: 0.06em; text-transform: uppercase; font-style: normal; color: var(--muted);
+  border: 1px solid var(--line-2); border-radius: 3px; padding: 0 4px; }
+.crew-talk li.crew-floor { text-decoration: underline dotted var(--line-2); text-underline-offset: 3px; cursor: help; }
+.crew-talk li.crew-wait { color: var(--muted); font-style: italic; }
+.crew-talk li.crew-notice { color: var(--warn); font-style: normal; }
+.minds-fold summary { cursor: pointer; font-size: 12.5px; color: var(--ink-2); line-height: 28px; }
+/* A row is its label and its fields. The fields take what room the label leaves and never more: a provider's long name
+   is cut in its box, not laid wider than the panel (the first look at the page showed the panel scrolling sideways). */
+.minds-fold, .minds-ctl { min-width: 0; }
+.minds-ctl .minds-row { align-items: center; }
+.minds-ctl .minds-row > span:first-child { flex: none; }
+.minds-ctl .minds-val { display: flex; flex: 1 1 0; min-width: 0; flex-wrap: wrap; gap: 6px; align-items: center; justify-content: flex-end; }
+.minds-in, .minds-sel, .minds-num { min-width: 0; min-height: 28px; background: var(--panel-2); border: 1px solid var(--line-2); border-radius: 6px; padding: 3px 8px; color: var(--ink); }
+.minds-sel { flex: 1 1 0; width: 100%; max-width: 100%; text-overflow: ellipsis; }
+.minds-in { flex: 1 1 8em; width: 8em; max-width: 100%; }
+.minds-num { width: 5.5em; }
+.minds-pair { display: inline-flex; gap: 6px; align-items: center; white-space: nowrap; }   /* a number and its unit stay together */
+.minds-msg:empty { display: none; }
+html[data-device="phone"] .minds-in, html[data-device="phone"] .minds-sel, html[data-device="phone"] .minds-num { min-height: 44px; font-size: 16px; }

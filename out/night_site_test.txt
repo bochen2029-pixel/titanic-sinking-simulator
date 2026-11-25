@@ -1,0 +1,23 @@
+PASS #night=1912 opens the 1912 watch with the Bridge on the stage                        bridge true, panel true, WebGL true, view astern bridge, panel and WebGL true; the view from astern
+PASS before the bells nothing is in sight, and the clock is locked to real time           "Nothing in sight", locked true                "Nothing in sight", locked
+PASS wheel hard to port 6.5 s after the bells (a mouse click on that step): she clears the 1912 berg miss, 46.0 m, order 6.50 s after the bells     a miss by 38 to 56 m, the order at 6.50 s (the headless window since P3c: 51 m at 5.5 s, 15 m at 10.5 s)
+PASS   the page and Node agree on that watch, replayed from the page's order log          page a8a083b4, Node a8a083b4                   the same outcome; the same fingerprint when the two engines' maths agree
+PASS the 1912 drill by hand (the order on the step 20.5 s after the bells, the wheel reversed on the step of the touch): the night's own damage holed, 0.977300 m2, order 20.50 s              holed, 0.977300 m2, as the 1912 orders give (0.7506 calibrated)
+PASS   the page and Node agree on that watch                                              page 3f8e968a, Node 3f8e968a; 0.977300000 against 0.977300000 m2 the same outcome
+PASS   with the clock on the step of the touch, the Bridge's lookout box says so          "On the ice"                                   "On the ice" (it went on giving the range through the contact until 2026-11-17)
+PASS after the ice: the core forecasts the sinking, the clock is free, the other watches are listed "Forecast: Breaks at 2:19 am, 2 h 39 min after the touch"; 7 rows; locked false a forecast that she breaks (the default hand-over, G12's cascade) or founders; 7 rows; unlocked
+PASS "Replay my watch" gives the same night again                                         0.977300000 m2, 73 openings                    0.977300000 m2, 73 openings
+PASS "Watch the 1912 orders": the reconstructed night                                     holed, 0.977300 m2, touch 60.18 s              holed, 0.977300 m2 (0.7506 calibrated), touch 60 s
+PASS   the viewer adds nothing to the physics: its watch and the model alone, in the page, have one fingerprint viewer 3f8e968a, model alone 3f8e968a          equal, bit for bit
+PASS the Run tab's watch id is the one stamped on the step the encounter ended, with that step (G5): two watches of the 1912 orders, at 1x and at 60x after the ice, read once the table of other watches is in 3f8e968a, step 389; 3f8e968a, step 389 (the second read on step 1200) 3f8e968a, step 389, both: the watch on the step it cleared the ice
+PASS on the 1912 orders, a wheel order after the ice (a real click on step 600) enables "Replay my watch"; the replay is the same night mode auto -> you, Replay off -> on; at step 1200: the watch b939fa02, the replay b939fa02 auto -> you, off -> on; one fingerprint at step 1200
+PASS night 16 from the seed box, no order: the page and Node agree                        holed, bow 19.61 m, 19.7234 m2                 holed, bow 19.61 m, 19.7234 m2
+PASS the keyboard: D puts the wheel hard to starboard, the down arrow rings Half ahead; before the bells it is hindsight rudder order 40, shafts 50 rpm, hindsight true 40, 50, true
+PASS a drawn night's level (G1, real clicks): "Like 1912", then night 16: the page and Node agree; the address carries it Night 16 · like 1912; seen at 425 m; holed, 21.9917 m2; #night=16&level=night1912 Night 16 · like 1912; seen at 425 m; holed, 21.9917 m2; #night=16&level=night1912
+PASS the 1912 damage preset is as it was: no bridge, the forecast from the core           "Forecast: Founders at 2:25 am, 2 h 46 min after the damage", 16 openings Founders at 2:25 am, 2 h 46 min after the damage (2:18 before D4, the calibration epoch landed with member C; 2:17 before G7, the forepeak held to its tank, and its refit; 2:16 before S1, the tiers above B deck and the staircases; 2:17 before the refit with the pumps, Y3)
+PASS on a phone (390 x 780, touch) the Bridge sits between the readouts and the damage diagram, controls 40 px tall phone; bridge y 421 to 628; readouts end 152, diagram from 634; helm 50 px, telegraph 46 px phone; no overlap; at least 40 px
+PASS no error in the page's console through all of it                                     none                                           none
+
+across engines: the 1912 night to step 389: this browser 3f8e968a, this Node 3f8e968a: the same bits
+  (a night replays bit for bit on one engine; two JavaScript engines differ in the last bit of some library functions, as the README says of Math.pow)
+PASS: all 19 rows

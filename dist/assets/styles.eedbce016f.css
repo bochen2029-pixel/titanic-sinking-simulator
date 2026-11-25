@@ -1,0 +1,808 @@
+/* Titanic Sinking Simulator, site v2.
+   One-screen instrument: 3D stage with HUD and a damage-diagram strip; controls docked right on desktop,
+   stacked below on narrow windows, and a bottom sheet on phones (html[data-device="phone"], set by the app).
+   Deliberately dark: a night sea and a forensic reconstruction. */
+
+/* ---- vendored fonts (SIL Open Font License; files under fonts/) */
+@font-face { font-family: "IBM Plex Sans Condensed"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/ibm-plex-sans-condensed-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans Condensed"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/ibm-plex-sans-condensed-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans Condensed"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/ibm-plex-sans-condensed-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 600; font-display: swap; src: url("../fonts/cormorant-garamond-latin-600-italic.woff2") format("woff2"); }
+
+:root {
+  color-scheme: dark;
+  --abyss: #05090f;
+  --deep: #08111b;
+  --panel: #0b1520;
+  --panel-2: #0f1c2a;
+  --line: #1a2a3b;
+  --line-2: #27405a;
+  --ink: #dbe6ef;
+  --ink-2: #a8bbcb;
+  --muted: #7187a0;
+  --water: #3cc3ff;
+  --brass: #e0b15a;
+  --teal: #8fd3c9;
+  --signal: #ff5d3d;
+  --ok: #5fd39a;
+  --warn: #ffb547;
+  --crit: #ff6b6b;
+  --chart-model: #2196d2;
+  --chart-obs: #bd8a30;
+  --chart-surface: #0c1622;
+  --f-display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --f-ui: "IBM Plex Sans Condensed", "Roboto Condensed", "Arial Narrow", system-ui, sans-serif;
+  --f-num: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+  --bar: 54px;   /* collapsed sheet height on phones */
+  /* the visible viewport height: svh where supported, and the app overwrites it with the measured
+     innerHeight in pixels, because on Android the address bar makes 100vh taller than what is visible */
+  --app-h: 100vh;
+}
+@supports (height: 100svh) { :root { --app-h: 100svh; } }
+html, body { height: 100%; }
+html { overscroll-behavior: none; }
+body { margin: 0; background: var(--abyss); color: var(--ink); font: 14px/1.45 var(--f-ui); -webkit-font-smoothing: antialiased; touch-action: manipulation; }
+button, input, select { font: inherit; color: inherit; }
+.brass { color: var(--brass); } .teal { color: var(--teal); }
+.mb6 { margin-bottom: 6px; } .mb8 { margin-bottom: 8px; } .mt6 { margin-top: 6px; } .mt8 { margin-top: 8px; }
+#app { height: 100%; display: grid; grid-template-columns: minmax(0, 1fr) 384px; }
+#stage { position: relative; min-width: 0; min-height: 0; overflow: hidden; background: radial-gradient(ellipse at 50% 40%, #0c1826 0%, var(--abyss) 70%); }
+#gl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; cursor: grab; }
+#gl.tool-hole, #gl.tool-scrape { cursor: crosshair; }
+#panel { min-width: 0; height: 100%; overflow-y: auto; background: var(--panel); border-left: 1px solid var(--line); display: flex; flex-direction: column; }
+.nogl { position: absolute; left: 50%; top: 42%; transform: translate(-50%, -50%); max-width: min(520px, calc(100% - 32px)); background: rgba(6, 12, 20, 0.92); border: 1px solid var(--line-2); border-radius: 6px; padding: 14px 16px; color: var(--ink-2); font-size: 14px; line-height: 1.5; z-index: 3; }
+.nogl b { color: var(--ink); }
+noscript .nogl { position: fixed; top: 40%; }
+
+/* HUD: the stage's one layout (C-4, docs/DESIGN_page_layout_authority_v1_1_2026-11-21.md). One layer over the stage, a
+   grid of areas named by role, each a flex column; the page's overlays and the parts' (TitanicApp.slot) stand in them,
+   none placed by hand. A template for each shape of stage, chosen by the stage's own size (container queries), not the
+   window's. Drags on its empty parts reach the canvas, and so do drags on an overlay that lets them through by its own
+   rule (the notices, the boats' count, the director's caption, the deep's strip but its buttons).
+   The areas: readouts (the readouts, every part's lines in them); views (the view bar); stack (the boats' count, then the
+   end card); rail (the deep's strip, the height of the stage); notice (the notices, beside the aside); aside (the walk's
+   pad, then the director's caption, which gives way first: 'last'); helm (the Bridge); diagram (the damage diagram) */
+#stage { container: stage / size; }
+.hud-grid { position: absolute; inset: 0; pointer-events: none; display: grid; gap: 8px 12px; box-sizing: border-box;
+  padding: calc(12px + var(--sat)) calc(12px + var(--sar)) calc(12px + var(--sab)) calc(12px + var(--sal));
+  --ro-floor: 300px;
+  grid-template-columns: minmax(auto, 1fr) minmax(0, max-content) auto;   /* the readouts' column at least their content's least width (the floor is theirs: below), the bar's what is left */
+  grid-template-rows: auto minmax(0, 1fr) auto auto auto;
+  grid-template-areas:
+    "readouts views   rail"
+    "readouts stack   rail"
+    "notice   aside   rail"
+    "helm     helm    rail"
+    "diagram  diagram diagram"; }
+.hud-grid > .slot { display: flex; flex-direction: column; gap: 8px; min-width: 0; min-height: 0; pointer-events: none; }
+:where(.hud-grid > .slot > *) { pointer-events: auto; }   /* no weight: an overlay's own pointer-events stands */
+/* the readouts' column at least their content's least width and their floor (D78: the bar yields). Their slot keeps the
+   minimum of its content (the other slots' 0 would also zero the column's 'auto', and the bar's column would take its
+   whole width first: turn 8b, the narrow desktop), and the floor is a length, not a share of the column (a percentage
+   there is a cycle, and counts as nothing when the column is sized) */
+.slot[data-area="readouts"] { grid-area: readouts; align-items: flex-start; min-width: auto; }
+.slot[data-area="readouts"] > .readout { min-width: var(--ro-floor); }
+.slot[data-area="views"] { grid-area: views; align-items: flex-end; }
+/* the stack takes the room the rows leave it and never asks for more (its size contained): the end card scrolls in it */
+.slot[data-area="stack"] { grid-area: stack; align-items: flex-end; contain: size; }
+.slot[data-area="rail"] { grid-area: rail; }
+.slot[data-area="notice"] { grid-area: notice; align-items: flex-start; justify-content: flex-end; }
+.slot[data-area="aside"] { grid-area: aside; align-items: flex-end; justify-content: flex-end; }
+.slot[data-area="helm"] { grid-area: helm; align-items: flex-start; justify-content: flex-end; }
+.slot[data-area="diagram"] { grid-area: diagram; }
+.readout { background: rgba(6, 12, 20, 0.78); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px 10px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); min-width: 0; max-width: 520px; }
+.ship-name { font: italic 600 20px/1 var(--f-display); letter-spacing: 0.02em; color: var(--ink); display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.ship-name small { font: 500 11px/1 var(--f-ui); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.clock { display: flex; align-items: baseline; gap: 10px; margin-top: 8px; flex-wrap: wrap; }
+.clock .ship-time { font: 500 26px/1 var(--f-num); letter-spacing: -0.01em; }
+.clock .elapsed { font: 400 13px/1 var(--f-num); color: var(--ink-2); }
+.pill { display: inline-flex; align-items: center; gap: 6px; font: 600 11px/1 var(--f-ui); letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 8px; border-radius: 999px; border: 1px solid currentColor; }
+.pill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.pill.ok { color: var(--ok); } .pill.warn { color: var(--warn); } .pill.crit { color: var(--crit); } .pill.idle { color: var(--muted); }
+.stats { display: grid; grid-template-columns: repeat(5, auto); gap: 4px 16px; margin-top: 10px; }
+.stat { min-width: 0; }
+.stat .k { font: 500 10.5px/1.2 var(--f-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); }
+.stat .v { font: 500 14px/1.3 var(--f-num); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.forecast-line { margin-top: 8px; font-size: 12.5px; color: var(--ink-2); }
+.forecast-line b { color: var(--ink); font-weight: 600; }
+/* the readouts on a desktop: each label and each value on one line, whatever the numbers. With the inflow in four figures
+   "Draft fwd/aft" broke over two lines, and in the plunge ("10,035 t/min", her stern clear: "48.4 / -17.9 m") values ran
+   past the readouts' edge: beside the view buttons the HUD leaves them 458 px at 1400 x 860, where the five longest values
+   need 518 at 14 px. So the values a pixel smaller and the columns closer; where even that does not fit (the plunge's last
+   minutes at that size), a value moves to a second row whole. A phone shows three readouts and is left as it was */
+html:not([data-device="phone"]) .readout .stat .k { white-space: nowrap; }
+@media (min-width: 901px) {
+  html:not([data-device="phone"]) .readout .stats { display: flex; flex-wrap: wrap; gap: 4px 10px; }
+  html:not([data-device="phone"]) .readout .stats > .stat { flex: none; }
+  html:not([data-device="phone"]) .readout .stat .v { font-size: 13px; }
+}
+.views { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; max-width: 100%; }
+.views .seg { flex-wrap: wrap; justify-content: flex-end; }   /* the bar's rows wrap in a narrow column: the bar yields, the readouts keep a floor (D78) */
+.seg { display: inline-flex; background: rgba(6, 12, 20, 0.78); border: 1px solid var(--line); border-radius: 6px; padding: 2px; gap: 2px; }
+.seg button { border: 0; background: transparent; padding: 6px 9px; border-radius: 4px; cursor: pointer; font-size: 12.5px; color: var(--ink-2); white-space: nowrap; }
+.seg button[aria-pressed="true"] { background: var(--line-2); color: var(--ink); }
+.seg button:hover { color: var(--ink); }
+.seg button:focus-visible, .btn:focus-visible, .tab:focus-visible, .tab-close:focus-visible, .card:focus-visible, input:focus-visible, .chip:focus-visible { outline: 2px solid var(--water); outline-offset: 2px; }
+
+/* the damage diagram is the containing block of what a part lays over it (the reports' compartments as reported:
+   site/parts/60_reports.css): placed in the grid, not absolutely, it must say so itself */
+.strip { position: relative; background: rgba(6, 12, 20, 0.82); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px 4px; }
+.strip canvas { display: block; width: 100%; height: 96px; }
+.strip .cap { display: flex; justify-content: space-between; gap: 8px; font-size: 11px; color: var(--muted); letter-spacing: 0.04em; }
+/* the notices (the page's, and the bridge's view's own: site/parts/60_reports.js) stand in the notice area (C-4): at the
+   left just above the Bridge, or above the damage diagram, beside the aside. One takes room only while it shows: it
+   fades in, and when its time is up it gives its room back to the stack's row at once (never to the readouts or the
+   bar, which do not move). Off, it is out of the flow and clipped to a pixel, but still in the page: a live region must
+   stay there for a screen reader to hear the next notice */
+.toast { box-sizing: border-box; max-width: min(580px, 100%); background: rgba(6, 12, 20, 0.92); border: 1px solid var(--line-2); border-radius: 6px; padding: 8px 12px; font-size: 13px; text-align: left; opacity: 0; transition: opacity .25s; pointer-events: none; }
+.toast.on { opacity: 1; }
+.slot[data-area="notice"] > .toast:not(.on) { position: absolute; width: 1px; height: 1px; margin: 0; padding: 0; border: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.toast.big { font-size: 17px; font-weight: 600; letter-spacing: 0.02em; border-color: var(--warn); padding: 12px 18px; }
+
+/* The bridge: instruments, wheel and engine-order telegraph, over the stage while a watch is on */
+.bridge { width: min(580px, 100%); box-sizing: border-box; background: rgba(6, 12, 20, 0.84); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; display: grid; gap: 8px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.bridge[hidden] { display: none; }
+.gauges { display: grid; grid-template-columns: auto auto auto auto minmax(0, 1fr); gap: 4px 16px; align-items: start; }
+.gauges .ice .v { white-space: normal; font-family: var(--f-ui); font-size: 13.5px; color: var(--ink-2); }
+.gauges .sub { font: 11.5px/1.3 var(--f-num); color: var(--muted); white-space: nowrap; }
+.gauges .sub.warn { color: var(--warn); } .gauges .sub.crit { color: var(--crit); }
+/* the Systems tab: each system with a state dot and what it is doing now */
+.chain { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.chain li { display: grid; grid-template-columns: 8px 62px minmax(0, 1fr); gap: 8px; align-items: baseline; font-size: 13px; }
+.chain li i { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); }
+.chain li.ok i { background: var(--ok); } .chain li.warn i { background: var(--warn); } .chain li.crit i { background: var(--crit); }
+.chain li b { font-weight: 600; color: var(--ink); }
+.chain li span { color: var(--ink-2); }
+.chain li.warn span { color: var(--warn); } .chain li.crit span { color: var(--crit); }
+.helm-ind { display: block; color: var(--ink-2); margin-top: 2px; overflow: visible; }
+html[data-device="phone"] .helm-ind { width: 70px; height: 37px; }
+.gauges .ice.alarm .v { color: var(--warn); font-weight: 600; }
+.gauges .ice.struck .v { color: var(--crit); font-weight: 600; }
+.wheel { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 8px; align-items: stretch; }
+.btn.helm { display: grid; gap: 1px; padding: 5px 10px; text-align: center; min-width: 124px; align-content: center; }
+.btn.helm b { font-weight: 600; font-size: 13.5px; }
+.btn.helm small { color: var(--muted); font-size: 10.5px; }
+.btn.helm[aria-pressed="true"] { background: #123a55; border-color: #1f6a96; }
+.wheel-mid { display: grid; align-content: center; gap: 2px; min-width: 0; }
+.wheel-cap { display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+.tel-cap { display: flex; justify-content: space-between; font: 500 10.5px/1.2 var(--f-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+.tel .seg button { padding: 6px 4px; }
+.tel .seg button[data-order="stop"] { font-weight: 600; }
+.bridge .hint { font-size: 11.5px; }
+.seedbox input { width: 9ch; background: var(--panel-2); border: 1px solid var(--line-2); border-radius: 4px; padding: 3px 6px; font-family: var(--f-num); }
+.mt12 { margin-top: 12px; }
+#speedSeg.locked button { opacity: 0.45; pointer-events: none; }
+tr.mine td { background: rgba(60, 195, 255, 0.10); }
+.btn[disabled], .chip[disabled] { opacity: 0.45; cursor: default; }
+.btn[disabled]:hover { border-color: var(--line-2); }
+
+/* Panel */
+.tabs { position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: repeat(5, 1fr); background: var(--panel); border-bottom: 1px solid var(--line); }
+.tab { border: 0; background: transparent; padding: 13px 4px 11px; cursor: pointer; color: var(--muted); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 12px; border-bottom: 2px solid transparent; }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--water); }
+.tab-close { display: none; border: 0; background: transparent; color: var(--muted); font-size: 20px; line-height: 1; padding: 0 14px; cursor: pointer; }
+.pane { padding: 16px; display: flex; flex-direction: column; gap: 18px; }
+.pane[hidden] { display: none !important; }
+.sec h3 { margin: 0 0 8px; font: 600 11.5px/1.2 var(--f-ui); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.sec p { margin: 0; color: var(--ink-2); max-width: 62ch; }
+.cards { display: grid; gap: 6px; }
+.card { text-align: left; border: 1px solid var(--line); background: var(--panel-2); border-radius: 6px; padding: 9px 11px; cursor: pointer; display: grid; gap: 3px; }
+.card:hover { border-color: var(--line-2); }
+.card[aria-checked="true"] { border-color: var(--water); box-shadow: inset 3px 0 0 var(--water); }
+.card b { font-weight: 600; font-size: 14px; }
+.card span { color: var(--ink-2); font-size: 12.5px; }
+.row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.btn { border: 1px solid var(--line-2); background: var(--panel-2); border-radius: 6px; padding: 8px 12px; cursor: pointer; font-weight: 500; min-height: 36px; }
+.btn:hover { border-color: var(--water); }
+.btn.primary { background: #123a55; border-color: #1f6a96; }
+.btn.danger:hover { border-color: var(--signal); }
+.seg.wide { width: 100%; }
+.seg.wide button { flex: 1; }
+.hint { font-size: 12.5px; color: var(--muted); }
+.kbd-hint { display: inline; }
+.check { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; color: var(--ink-2); }
+.check input { margin-top: 3px; accent-color: var(--water); flex: none; }
+.check span { min-width: 0; }
+.slider { width: 100%; accent-color: var(--water); }
+.kv { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; }
+.kv .v { font-family: var(--f-num); font-variant-numeric: tabular-nums; }
+table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+th { text-align: left; font: 600 10.5px/1.2 var(--f-ui); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding: 6px 4px; border-bottom: 1px solid var(--line); }
+td { padding: 6px 4px; border-bottom: 1px solid var(--line); vertical-align: top; }
+td.num { font-family: var(--f-num); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+th.num { text-align: right; }
+.tablewrap { overflow-x: auto; }
+.chip { border: 1px solid var(--line-2); background: transparent; border-radius: 999px; padding: 3px 9px; cursor: pointer; font-size: 12px; min-height: 28px; }
+.chip[aria-pressed="true"] { background: #123a55; border-color: #1f6a96; }
+/* the Systems tab's pumps (Y6): one block per room with water or with pumps on it */
+.prooms { display: grid; gap: 8px; }
+.proom { border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; display: grid; gap: 6px; }
+.proom .kv { flex-wrap: wrap; }
+.proom .kv b { font-weight: 600; color: var(--ink); white-space: nowrap; }
+.proom .kv .v { color: var(--ink-2); text-align: right; margin-left: auto; }
+.proom ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 12.5px; color: var(--ink-2); }
+.proom li { display: flex; gap: 8px; align-items: center; justify-content: space-between; }
+.proom details summary { cursor: pointer; font-size: 12.5px; color: var(--ink-2); line-height: 28px; }
+.proom .opts .chip { border-radius: 6px; text-align: left; }
+/* a room with suctions and no water yet (on a watch): listed so that pumps can be put on it before the water comes, quieter
+   than a room that is making water */
+.proom.dry { border-style: dashed; padding: 5px 9px; gap: 4px; }
+.proom.dry .kv b { font-weight: 500; color: var(--ink-2); }
+.proom.dry .kv .v { color: var(--muted); }
+#pumpSec .row > .hint { flex: 1 1 200px; }
+.x { border: 0; background: transparent; color: var(--muted); cursor: pointer; font-size: 16px; line-height: 1; padding: 2px 6px; min-width: 28px; min-height: 28px; }
+.x:hover { color: var(--signal); }
+.tag { font: 500 11px/1 var(--f-num); padding: 2px 5px; border-radius: 3px; border: 1px solid var(--line-2); color: var(--ink-2); }
+.tag.e { color: var(--brass); border-color: #6a5326; } .tag.d { color: var(--teal); border-color: #2c5a55; } .tag.b { color: var(--ink); border-color: var(--line-2); }
+.chart { position: relative; }
+.chart canvas { width: 100%; height: 170px; display: block; touch-action: pan-y; }
+.chart .tip { position: absolute; pointer-events: none; background: rgba(6, 12, 20, 0.95); border: 1px solid var(--line-2); border-radius: 5px; padding: 6px 8px; font-size: 12px; min-width: 120px; display: none; }
+.chart .tip .val { font: 500 13px/1.3 var(--f-num); }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--ink-2); margin: 2px 0 6px; }
+.legend i { display: inline-block; vertical-align: middle; margin-right: 6px; }
+.legend i.line { width: 16px; height: 2px; border-radius: 2px; }
+.legend i.dash { width: 16px; height: 0; border-top: 2px dashed; }
+.legend i.dot { width: 8px; height: 8px; border-radius: 50%; }
+.legend i.model { background: var(--chart-model); border-color: var(--chart-model); }
+.legend i.dash.model { background: transparent; }
+.legend i.obs { background: var(--chart-obs); }
+.foot { padding: 14px 16px 22px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); margin-top: auto; }
+.foot a { color: var(--ink-2); }
+.foot-meta { margin-top: 8px; }
+.foot-early { color: #e0b15a; font-weight: 600; }   /* RC1: the early access mark, its one place on the page [appearance] */
+.start-here h3 { color: #e0b15a; }                   /* RC1: the first minute's "Start here" on the Run tab [appearance] */
+
+/* ---- narrow windows (any pointer): stage above, panel below */
+@media (max-width: 900px) {
+  #app { grid-template-columns: 1fr; grid-template-rows: calc(var(--app-h) * 0.6) auto; height: auto; min-height: 100%; }
+  #panel { height: auto; overflow: visible; border-left: 0; border-top: 1px solid var(--line); }
+  .stats { grid-template-columns: repeat(3, auto); gap: 2px 12px; }
+  .stat.opt { display: none; }
+  .clock .ship-time { font-size: 21px; }
+  .readout { padding: 8px 10px; }
+  .strip canvas { height: 64px; }
+  #stripNote, .strip .cap .long { display: none; }
+  .views .seg button { padding: 5px 7px; font-size: 12px; }
+  .kbd-hint { display: none; }
+  .bridge { padding: 7px 9px; gap: 6px; }
+  .gauges { grid-template-columns: auto auto auto minmax(0, 1fr); gap: 2px 12px; }
+  .btn.helm { min-width: 0; padding: 4px 8px; }
+  .btn.helm small { display: none; }
+}
+@media (max-width: 520px) {
+  #app { grid-template-rows: calc(var(--app-h) * 0.66) auto; }
+  .views .seg button { padding: 5px 6px; font-size: 11.5px; }
+  .forecast-line { display: none; }
+  .ship-name { font-size: 17px; }
+}
+/* a narrow stage (900 px and under: a phone upright, a tablet, a narrow desktop): the bands stack. Beside the readouts
+   the bar would have too little: their least width is the fall's lines' after the flag (about 430 px), and the deep's
+   strip takes a column of its own (turn 8b: on the narrow desktop the readouts lay over the bar). The bar's rows wrap
+   under the readouts, at the left */
+@container stage (max-width: 900px) {
+  .hud-grid { grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto minmax(0, 1fr) auto auto auto auto;
+    grid-template-areas:
+      "readouts readouts"
+      "views    views"
+      "stack    rail"
+      "notice   rail"
+      "aside    rail"
+      "helm     helm"
+      "diagram  diagram"; }
+  .slot[data-area="readouts"], .slot[data-area="views"] { align-items: stretch; }
+  .readout { max-width: none; }
+  .views { flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 6px; }
+  .views .seg { justify-content: flex-start; }
+  /* and the compact Bridge and diagram a narrow window already has (900 px and under), now by the stage's own width: a
+     narrow stage beside a wide window's panel had the full ones (turn 8d, the narrow desktop: its Bridge about 240 px,
+     its key hints and the 1912 words on the wheel's buttons showing), and the readouts' and the bar's closer sizes */
+  .kbd-hint { display: none; }
+  .readout { padding: 8px 10px; }
+  .clock .ship-time { font-size: 21px; }
+  .views .seg button { padding: 5px 7px; font-size: 12px; }
+  .bridge { padding: 7px 9px; gap: 6px; }
+  .gauges { grid-template-columns: auto auto auto minmax(0, 1fr); gap: 2px 12px; }
+  .btn.helm { min-width: 0; padding: 4px 8px; }
+  .btn.helm small { display: none; }
+  .strip canvas { height: 64px; }
+  #stripNote, .strip .cap .long { display: none; }
+}
+/* the narrowest (520 px and under, a phone upright): the view bar one row that scrolls */
+@container stage (max-width: 520px) {
+  .views { flex-wrap: nowrap; overflow-x: auto; }
+  .views .seg { flex-wrap: nowrap; }
+  .views .seg button { padding: 5px 6px; font-size: 11.5px; }   /* a phone's own, as its window's rule has it */
+}
+/* a short stage (780 px and under: a phone either way, a tablet, a narrow desktop): while the end card is up (the watch
+   is over: she has foundered, lies afloat or has passed the ice) the Bridge gives way to it. With the readouts and the
+   fall's lines, the bar, the diagram and a notice there is no room for both (C-4's step 2, as D5 for a phone on its side;
+   reversible). The card used to lie over the Bridge on every size; the card's Close gives the Bridge back */
+@container stage (max-height: 780px) {
+  #hud:has(#endCard:not([hidden])) .slot[data-area="helm"] { display: none; }
+  /* and while walking, it gives way to the walk's pad, which takes its keys: the bar, a notice, the pad, the Bridge and
+     the diagram are more than such a stage's height (the narrow desktop's: about 754 px of 700). Leaving the walk gives
+     it back */
+  #stage.walk-on .slot[data-area="helm"] { display: none; }
+}
+/* a phone on its side (a short, wide stage: 336 px on 844 x 390): two columns that cannot share their rows' heights, so
+   the readouts run down the left one, the whole height they may take, beside the other column's rows. On a damage preset
+   the right column holds the bar, the stack, the notice and the aside, and the diagram lies under both. On a watch the
+   Bridge stands at the right and the diagram gives way while it shows (D78, its fifth decision: reversible); the
+   readouts run down beside the bar, the notice, the aside and the Bridge's head, and the stack has the Bridge's foot,
+   as tall as what is in it and no more than 38 % (fit-content: an empty stack takes nothing; turn 8d, the walk's pad
+   squeezed by an empty stack's 38 %). Once the end card is up the Bridge has given way (a short stage), and the watch
+   takes the preset's columns, the card beside the readouts (turn 8d: under the readouts it fell 5 px short). The bar is
+   one row that scrolls, as on a phone upright, and the gaps are closer */
+@container stage (orientation: landscape) and (max-height: 420px) {
+  .hud-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+    grid-template-rows: auto minmax(0, 1fr) auto auto auto;
+    grid-template-areas:
+      "readouts views   rail"
+      "readouts stack   rail"
+      "readouts notice  rail"
+      "readouts aside   rail"
+      "diagram  diagram diagram"; }
+  html[data-device="phone"] #stage .hud-grid { row-gap: 4px; padding-top: calc(6px + var(--sat)); padding-bottom: 6px; }
+  #stage.watch .hud-grid { grid-template-rows: auto minmax(0, 1fr) auto auto auto fit-content(38%);
+    grid-template-areas:
+      "readouts views   rail"
+      "readouts .       rail"
+      "readouts notice  rail"
+      "readouts aside   rail"
+      "readouts helm    rail"
+      "stack    helm    rail"; }
+  #stage.watch .slot[data-area="stack"] { align-items: flex-start; contain: none; }
+  #stage.watch #hud:has(#endCard:not([hidden])) { grid-template-rows: auto minmax(0, 1fr) auto auto;
+    grid-template-areas:
+      "readouts views   rail"
+      "readouts stack   rail"
+      "readouts notice  rail"
+      "readouts aside   rail"; }
+  #stage.watch #hud:has(#endCard:not([hidden])) .slot[data-area="stack"] { contain: size; }
+  /* each template names only the areas it shows: the other is out of the grid (a preset's helm holds only the hidden
+     Bridge) */
+  #stage.watch .slot[data-area="diagram"], #stage:not(.watch) .slot[data-area="helm"] { display: none; }
+  .slot[data-area="views"] { align-items: stretch; }
+  .views { flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: center; gap: 6px; overflow-x: auto; }
+  .views .seg { flex-wrap: nowrap; }
+}
+
+/* ---- phones (coarse pointer, short side under 600 px): full-height stage, the panel as a bottom sheet */
+html[data-device="phone"] #app { display: block; height: var(--app-h); min-height: 0; }
+html[data-device="phone"] #stage { position: absolute; left: 0; right: 0; top: 0; bottom: calc(var(--bar) + var(--sab)); }
+html[data-device="phone"] #panel { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; height: calc(var(--bar) + var(--sab)); overflow: hidden; border-top: 1px solid var(--line-2); border-left: 0; transition: height .22s ease; padding-bottom: var(--sab); box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.45); }
+html[data-device="phone"] #panel.open { height: calc(var(--app-h) * 0.74); overflow-y: auto; }
+html[data-device="phone"] .tabs { grid-template-columns: repeat(5, 1fr) auto; min-height: var(--bar); align-items: stretch; }
+html[data-device="phone"] .tab { letter-spacing: 0.02em; padding-left: 2px; padding-right: 2px; }
+html[data-device="phone"] .tab { padding: 0 2px; font-size: 11.5px; }
+html[data-device="phone"] .tab-close { display: block; }
+/* RC2 (the first ten minutes): on a phone's first screen, until it is first opened or a watch is, the Run tab reads
+   "Start" and beckons (site/app.js, beckon) [appearance]; no size changes, so the layout stands as it was */
+html[data-device="phone"] .tab.beckon { color: var(--brass); border-bottom-color: var(--brass); animation: tab-beckon 1.8s ease-in-out infinite; }
+@keyframes tab-beckon { 0%, 100% { text-shadow: none; } 50% { text-shadow: 0 0 8px rgba(224, 177, 90, 0.85); } }
+@media (prefers-reduced-motion: reduce) { html[data-device="phone"] .tab.beckon { animation: none; } }
+html[data-device="phone"] #panel:not(.open) .pane, html[data-device="phone"] #panel:not(.open) .foot { display: none; }
+/* a phone's grid: closer to the edges; its stage already ends above the sheet and its safe area, so its foot adds none
+   (the notice once added --sab twice: D78) */
+html[data-device="phone"] .hud-grid { gap: 6px 8px; padding: calc(8px + var(--sat)) calc(8px + var(--sar)) 8px calc(8px + var(--sal)); }
+html[data-device="phone"] .strip canvas { height: 56px; }
+html[data-device="phone"] .bridge { width: 100%; }
+html[data-device="phone"] .toast.big { font-size: 14.5px; padding: 8px 12px; }
+html[data-device="phone"] .btn.helm { min-height: 40px; }
+html[data-device="phone"] .btn.helm b { font-size: 12.5px; }
+html[data-device="phone"] .tel .seg button { padding: 0 2px; font-size: 12px; }
+html[data-device="phone"] #stage.watch .forecast-line { display: none; }
+html[data-device="phone"] .seg button, html[data-device="phone"] .tab { min-height: 40px; }
+html[data-device="phone"] .forecast-line { display: block; font-size: 12px; margin-top: 6px; }
+html[data-device="phone"] .readout { padding: 7px 10px; }
+html[data-device="phone"] .ship-name { font-size: 16px; }
+html[data-device="phone"] .clock { margin-top: 5px; }
+html[data-device="phone"] .clock .ship-time { font-size: 19px; }
+html[data-device="phone"] .stats { margin-top: 6px; gap: 2px 10px; }
+html[data-device="phone"] .stat .v { font-size: 13px; }
+html[data-device="phone"] .stat .k { font-size: 10px; }
+@media (prefers-reduced-motion: reduce) { .toast { transition: none; } html[data-device="phone"] #panel { transition: none; } }
+
+/* The end of a watch (site/parts/40_night_end.js): a card in the stage's stack (C-4), under the boats' count: at the right
+   under the view buttons on a desktop, beside the readouts and left of the deep's strip; under the bar on a phone. It
+   takes the room the stack has and scrolls in it, down to a floor (its title and first line): with less than that the
+   layout gives it the director's caption's room, and the layout's check says so where even that is not enough. */
+.endcard { flex: 0 1 auto; z-index: 4; box-sizing: border-box; width: 440px; max-width: 100%; min-height: 96px; overflow-y: auto; background: rgba(6, 12, 20, 0.94); border: 1px solid var(--brass); border-radius: 6px; padding: 12px 16px 12px; color: var(--ink-2); }
+.endcard[hidden] { display: none; }
+.endcard-title { display: block; font: italic 600 26px/1.15 var(--f-display); color: var(--ink); margin-bottom: 6px; }
+.endcard-body p { margin: 0 0 5px; font-size: 14px; line-height: 1.45; }
+.endcard-body p:first-child { color: var(--ink); font-size: 15px; }
+.endcard-body p:last-child { color: var(--muted); font: 12px/1.4 var(--f-num); margin-top: 8px; }
+.endcard-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+/* RC2: shown only where the Bridge gives way to the card (a short stage, as site/styles.css's own rule), and only while
+   the watch goes on (after a miss, or while she floats: the class 'on') [appearance] */
+.endcard-bridge { display: none; margin: 6px 0 0; font-size: 13px; color: var(--brass); }
+@container stage (max-height: 780px) { #endCard .endcard-bridge.on { display: block; } }
+.endcard-link { margin-top: 8px; width: 100%; box-sizing: border-box; background: var(--panel-2); border: 1px solid var(--line-2); border-radius: 6px; padding: 8px 10px; font: 12px/1.3 var(--f-num); }
+html[data-device="phone"] .endcard { width: 100%; min-height: 84px; padding: 10px 12px; }
+html[data-device="phone"] .endcard-title { font-size: 21px; }
+html[data-device="phone"] .endcard-body p { font-size: 13px; }
+html[data-device="phone"] .endcard-actions .btn { min-height: 40px; flex: 1 1 auto; }
+
+/* The boats (site/parts/50_boats.js): a one-line count on the stage, and a section of the Run tab with the count and the
+   three orders. Sized like the page's other controls: 40 px on a phone. The count stands first in the stage's stack (C-4:
+   under the view buttons on a desktop, beside the readouts; under the bar on a phone), the end card under it; the stack
+   keeps it clear of the readouts, the deep's strip and the Bridge, so it has no place of its own. */
+.boats-chip { flex: none; z-index: 2; max-width: 360px; box-sizing: border-box; background: rgba(6, 12, 20, 0.78); border: 1px solid var(--line); border-radius: 6px; padding: 5px 9px; font: 12px/1.35 var(--f-num); color: var(--ink-2); pointer-events: none; }
+.boats-chip[hidden] { display: none; }
+.boats-chip b { font: 600 10.5px/1.2 var(--f-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); }
+/* on a desktop the count is one line: "Boats 18 of 20 away · 664 in them · 420 places empty" (it broke over two at 360 px);
+   at most as wide as the stack's column, the view buttons', so it stays clear of the readouts; past that (the people in
+   the water, after she founders) it breaks only between its segments */
+html:not([data-device="phone"]) .boats-chip { max-width: 480px; }
+html:not([data-device="phone"]) .boats-chip span { white-space: nowrap; }
+.boats-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px 10px; }
+.boats-now { margin-top: 8px !important; font-size: 12.5px; }
+.boats-ctl { display: grid; gap: 4px; }
+.boats-k { font: 500 10.5px/1.2 var(--f-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); }
+.boats .seg button { white-space: normal; line-height: 1.2; padding: 6px 6px; }
+.boats details summary { cursor: pointer; color: var(--ink-2); font-size: 12.5px; }
+.boats td.num, .boats th.num { text-align: right; }
+html[data-device="phone"] .boats-chip { font-size: 11px; }
+html[data-device="phone"] .boats .btn { min-height: 40px; }
+html[data-device="phone"] .boats .seg button { min-height: 40px; }
+
+/* The hull girder's gauge (site/parts/55_girder.js): a line in the readouts, under the trim, list and water. The bar runs
+   from 0 to 6 GN m with the studies' range, 4.0 to 5.4 GN m, marked on it; teal below it, amber within, red past its top. */
+.girder { display: flex; align-items: center; gap: 8px; margin-top: 8px; min-width: 0; font-size: 12.5px; color: var(--ink-2); }
+.girder-k { flex: none; font: 500 10.5px/1.2 var(--f-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); }
+.girder-v { flex: none; text-align: right; font: 500 14px/1.3 var(--f-num); font-variant-numeric: tabular-nums; color: var(--teal); white-space: nowrap; }
+.girder-bar { position: relative; flex: 0 0 72px; height: 7px; border-radius: 3px; background: var(--line-2); overflow: hidden; }
+.girder-range { position: absolute; top: 0; bottom: 0; box-sizing: border-box; background: rgba(255, 181, 71, 0.28); border-left: 1px solid var(--warn); border-right: 1px solid var(--crit); }
+.girder-bar i { position: absolute; left: 0; top: 2px; bottom: 2px; width: 0; border-radius: 2px; background: var(--teal); }
+.girder-t { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.girder.within .girder-v, .girder.within .girder-t { color: var(--warn); }
+.girder.within .girder-bar i { background: var(--warn); }
+.girder.above .girder-v, .girder.above .girder-t { color: var(--crit); }
+.girder.above .girder-bar i { background: var(--crit); }
+/* The onset's mark (stage B2, core/readers/onset.js): a line under the gauge once her moment somewhere along her has reached
+   what her hull could bear there: "She would break here, now", with the station and the clock. Hidden until then. */
+.girder-onset { margin-top: 4px; min-width: 0; font: 500 12px/1.3 var(--f-ui); color: var(--crit); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.girder-onset::before { content: ''; display: inline-block; width: 6px; height: 6px; margin: 0 7px 1px 1px; background: var(--crit); transform: rotate(45deg); }
+html[data-device="phone"] .girder-onset { margin-top: 3px; font-size: 11px; }
+html[data-device="phone"] .girder { margin-top: 5px; gap: 6px; font-size: 11.5px; }
+html[data-device="phone"] .girder-k { font-size: 10px; }
+html[data-device="phone"] .girder-v { font-size: 13px; }
+html[data-device="phone"] .girder-bar { flex-basis: 52px; }
+
+/* Reports to the bridge (site/parts/60_reports.js): the feed and the orders on the Run tab; the bridge's view, which
+   covers the readouts nobody on the bridge had and shows what was reported in their place (html.rp-bridge). */
+.rp-orders { display: grid; gap: 6px; margin-top: 10px; }
+.rp-cap { font: 600 10.5px/1.2 var(--f-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); }
+.rp-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.rp-row .btn { padding: 6px 10px; }
+.rp-out { min-height: 1.3em; margin: 0; }
+.rp-feed { list-style: none; margin: 10px 0 0; padding: 0; max-height: 360px; overflow-y: auto; border-top: 1px solid var(--line); }
+.rp-feed li { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 1px 8px; padding: 6px 2px; border-bottom: 1px solid var(--line); font-size: 12.5px; line-height: 1.4; }
+.rp-feed .rp-t { font: 500 12px/1.45 var(--f-num); color: var(--ink-2); grid-row: span 2; white-space: nowrap; }
+.rp-feed .rp-who { color: var(--muted); font-size: 11.5px; }
+.rp-feed .rp-w { color: var(--ink); }
+.rp-feed li.rp-routine .rp-w, .rp-feed li.rp-routine .rp-t { color: var(--muted); }
+
+/* the bridge's view: its own pieces hidden until it is on; then the page's readouts covered */
+.rp-k, .rp-pill, .rp-strip, #rpCap, .rp-wtext, .rp-toast, #readout .rp-line { display: none; }
+html.rp-bridge .stats > .stat:not(.rp-k), html.rp-bridge #status, html.rp-bridge #fcLine, html.rp-bridge .strip > .cap:not(#rpCap),
+html.rp-bridge #watchText, html.rp-bridge #debrief, html.rp-bridge .rp-cover, html.rp-bridge #toast { display: none !important; }
+html.rp-bridge #profile { visibility: hidden; }
+html.rp-bridge .rp-k, html.rp-bridge #readout .rp-line, html.rp-bridge .rp-wtext, html.rp-bridge .rp-toast { display: block; }
+html[data-device="phone"] #stage.watch #readout .rp-line { display: none; }   /* a phone's watch has no room for it (styles.css) */
+html.rp-bridge .rp-pill { display: inline-flex; }
+html.rp-bridge .rp-strip, html.rp-bridge #rpCap { display: flex; }
+.rp-k .v { font: 500 13px/1.25 var(--f-ui); white-space: normal; max-width: 14em; }
+.rp-wtext { margin: 0; color: var(--ink-2); max-width: 62ch; }
+/* the compartments as reported, over the damage diagram (stern to bow, each as long as the compartment) [appearance] */
+.rp-strip { position: absolute; left: 8px; right: 8px; top: 6px; height: 96px; gap: 2px; }
+.rp-cell { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 3px; border: 1px solid var(--line-2); border-radius: 3px; background: rgba(15, 28, 42, 0.92); overflow: hidden; }
+.rp-cell b { font: 600 10px/1 var(--f-ui); color: var(--ink-2); }
+.rp-cell span { font: 500 9.5px/1 var(--f-num); color: var(--muted); }
+.rp-cell[data-state="dry"] { border-color: #2f6b52; }
+.rp-cell[data-state="dry"] span { color: var(--ok); }
+.rp-cell[data-state="water"] { border-color: var(--warn); background: rgba(255, 181, 71, 0.16); }
+.rp-cell[data-state="water"] span { color: var(--warn); }
+.rp-cell[data-state="lost"] { border-color: var(--crit); background: rgba(255, 107, 107, 0.24); }
+.rp-cell[data-state="lost"] span, .rp-cell[data-state="lost"] b { color: var(--crit); }
+#rpCap { justify-content: space-between; gap: 8px; }
+.rp-legend { display: inline-flex; align-items: center; gap: 4px; }
+.rp-legend i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; border: 1px solid var(--line-2); margin-left: 6px; }
+.rp-legend i[data-state="dry"] { border-color: var(--ok); }
+.rp-legend i[data-state="water"] { border-color: var(--warn); background: rgba(255, 181, 71, 0.4); }
+.rp-legend i[data-state="lost"] { border-color: var(--crit); background: rgba(255, 107, 107, 0.5); }
+/* as the damage diagram under it: compact on a narrow stage (C-4: by the stage's own width, not the window's) */
+@container stage (max-width: 900px) { .rp-strip { height: 64px; } .rp-cell b { font-size: 9px; } .rp-legend { display: none; } }
+html[data-device="phone"] .rp-strip { height: 56px; left: 8px; right: 8px; }
+html[data-device="phone"] .rp-cell span { font-size: 8.5px; }
+html[data-device="phone"] .rp-row .btn { min-height: 40px; flex: 1 1 auto; }
+html[data-device="phone"] .rp-k .v { font-size: 12px; }
+
+/* The calls for help (site/parts/70_help.js): a section of the Run tab, below the watch's own. */
+.help .help-set { margin: 0 0 6px; font-size: 13px; color: var(--ink-2); }
+.help .help-set.ok::before, .help .help-set.crit::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 7px; vertical-align: 1px; background: var(--ok); }
+.help .help-set.crit::before { background: var(--crit); }
+.help-ships { list-style: none; margin: 0 0 6px; padding: 0; font-size: 13px; }
+.help-ships li { padding: 3px 0; border-top: 1px solid var(--line); color: var(--ink); }
+.help-ships li:first-child { border-top: 0; }
+.help-ships li.help-none { color: var(--muted); }
+.help-rockets { margin: 0 0 8px; font-size: 13px; color: var(--ink-2); }
+.help-orders { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.help-orders .btn { min-height: 44px; padding: 6px 8px; line-height: 1.15; white-space: normal; }
+.help-lines { list-style: none; margin: 10px 0 6px; padding: 0; font-size: 12px; color: var(--ink-2); max-height: 9.5em; overflow-y: auto; }
+.help-lines li { padding: 2px 0; }
+.help-lines li b { font: 500 11.5px/1.3 var(--f-num); color: var(--muted); margin-right: 4px; }
+.help-lines li.hl-in { color: var(--ink); }
+.help-lines li.hl-set { color: var(--warn); }
+.help .help-hint { margin-top: 4px; }
+html[data-device="phone"] .help-orders .btn { min-height: 48px; font-size: 13px; }
+
+/* The deep (site/parts/75_deep.js): her fall to the bed. A strip down the right edge of the stage, in its rail (C-4): from
+   the top to the damage diagram on a desktop, beside the Bridge; between the bar and the Bridge on a phone. The views of
+   her fall at its head, then the sea to scale with its depths at the left of a column and her pieces' marks at its right
+   (their places inside the strip are the part's). A block in the readouts, a line a piece. The readouts, the bar, the
+   boats' count, the end card and the aside stand to its left by the layout's columns. Every colour and size here is
+   appearance. */
+.deep-strip { position: relative; flex: 1 1 auto; min-height: 0; z-index: 2; box-sizing: border-box; width: 100px; background: rgba(6, 12, 20, 0.80); border: 1px solid var(--line); border-radius: 6px; font: 500 10px/1 var(--f-num); color: var(--muted); pointer-events: none; }
+html[data-device="phone"] .deep-strip { width: 80px; }
+.deep-strip[hidden], .deep-ro[hidden] { display: none; }
+.deep-views { position: absolute; left: 4px; right: 4px; top: 4px; display: grid; grid-template-columns: 1fr 1fr; gap: 3px; pointer-events: auto; }
+.deep-views button { border: 1px solid var(--line); background: rgba(6, 12, 20, 0.6); color: var(--ink-2); border-radius: 4px; padding: 3px 0; font: 500 11px/1.2 var(--f-ui); cursor: pointer; white-space: nowrap; overflow: hidden; }
+.deep-views button[aria-pressed="true"] { background: var(--line-2); color: var(--ink); }
+.deep-views button:hover { color: var(--ink); }
+.deep-views button:focus-visible, .deep-mark:focus-visible { outline: 2px solid var(--water); outline-offset: 1px; }
+.deep-col { position: absolute; left: 52px; width: 7px; border-radius: 2px; background: #05090e; box-shadow: inset 0 0 0 1px rgba(143, 211, 201, 0.18); }
+.deep-lab { position: absolute; left: 3px; width: 44px; transform: translateY(-50%); text-align: right; white-space: nowrap; color: var(--ink-2); }
+.deep-lab.deep-surf { color: var(--water); }
+.deep-lab.deep-bed { color: var(--brass); }
+.deep-tick { position: absolute; left: 48px; width: 15px; height: 0; border-top: 1px solid rgba(219, 230, 239, 0.35); }
+.deep-tick.deep-bedtick { border-top-color: var(--brass); }
+.deep-at { position: absolute; left: 50px; width: 11px; height: 0; margin-top: -1px; border-top: 2px solid currentColor; }
+.deep-mark { position: absolute; left: 64px; right: 3px; transform: translateY(-50%); box-sizing: border-box; padding: 2px 1px; border: 1px solid currentColor; border-radius: 4px; background: rgba(6, 12, 20, 0.94); color: var(--ink); cursor: pointer; pointer-events: auto; text-align: center; }
+.deep-mark b { display: block; font: 600 10px/1.15 var(--f-ui); letter-spacing: 0.04em; }
+.deep-mark span { display: block; font: 500 10px/1.15 var(--f-num); }
+.deep-mark[aria-pressed="true"] { background: rgba(39, 64, 90, 0.95); }
+.deep-mark.bow, .deep-at.bow, .deep-ro .n.bow { color: var(--brass); }
+.deep-mark.stern, .deep-at.stern, .deep-ro .n.stern { color: var(--teal); }
+.deep-ro { display: grid; grid-template-columns: repeat(6, auto); justify-content: start; gap: 1px 10px; margin-top: 8px; align-items: baseline; font: 500 12.5px/1.35 var(--f-num); font-variant-numeric: tabular-nums; color: var(--ink); white-space: nowrap; }
+.deep-ro .k { font: 500 10px/1.2 var(--f-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); }
+.deep-ro .n { font: 600 11px/1.35 var(--f-ui); letter-spacing: 0.06em; text-transform: uppercase; }
+.endcard-body p.deep-line { color: var(--ink); }
+.endcard-body p.deep-note { color: var(--muted); font-style: italic; }   /* D98: the model's word about the bow at rest [appearance] */
+html[data-device="phone"] .deep-views button { font-size: 10px; padding: 4px 0; }
+html[data-device="phone"] .deep-col { left: 37px; }
+html[data-device="phone"] .deep-lab { width: 31px; font-size: 9.5px; }
+html[data-device="phone"] .deep-tick { left: 34px; width: 12px; }
+html[data-device="phone"] .deep-at { left: 35px; width: 10px; }
+html[data-device="phone"] .deep-mark { left: 48px; right: 2px; }
+html[data-device="phone"] .deep-mark b, html[data-device="phone"] .deep-mark span { font-size: 9.5px; }
+html[data-device="phone"] .deep-ro { gap: 0 6px; font-size: 11px; margin-top: 5px; }
+html[data-device="phone"] .deep-ro .k { font-size: 9px; }
+html[data-device="phone"] .deep-ro .n { font-size: 10px; }
+html[data-device="phone"] .deep-ro .kn { display: none; }   /* a phone gives the speed in m/s alone: the widest line the fall can print ("3,804.3 m", "99.9 m/s", "95.3 atm", "-1.9 °C", "afloat") is about 312 px of the readouts' 352 */
+
+/* The walk (site/parts/76_walk.js): while walking, a pad in the stage's aside (C-4: at the right above the Bridge or the
+   damage diagram, the whole width on a phone), with the line saying where the walker is and the buttons that walk, turn,
+   go up and down a deck and leave; and a veil over the stage when the walker's eye is under the core's water. Every
+   colour, size and place here is appearance. */
+.walk-pad { flex: none; z-index: 5; box-sizing: border-box; max-width: 380px; background: rgba(6, 12, 20, 0.88); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; color: var(--ink-2); font: 12px/1.35 var(--f-ui); }
+.walk-pad[hidden], .walk-veil[hidden] { display: none; }
+.walk-where { margin-bottom: 7px; color: var(--ink); }
+.walk-btns { display: flex; flex-wrap: wrap; gap: 6px; }
+.walk-b { min-width: 44px; min-height: 40px; box-sizing: border-box; border: 1px solid var(--line); background: rgba(6, 12, 20, 0.6); color: var(--ink); border-radius: 5px; padding: 0 10px; font: 600 13px/1 var(--f-ui); cursor: pointer; touch-action: none; user-select: none; }
+.walk-b:hover { background: var(--line-2); }
+.walk-b:focus-visible { outline: 2px solid var(--water); outline-offset: 1px; }
+.walk-veil { position: absolute; inset: 0; z-index: 3; background: rgba(18, 64, 104, 0.45); pointer-events: none; }
+html[data-device="phone"] .walk-pad { align-self: stretch; max-width: none; padding: 6px 8px; }
+html[data-device="phone"] .walk-b { font-size: 12px; padding: 0 8px; }
+
+/* NH15, the nervous-system view (site/parts/77_nerves.js) in the Systems tab [appearance] */
+.nv-sec .nv-lead { margin: 0 0 6px; max-width: 62ch; }
+.nv-graph { display: block; width: 100%; height: auto; margin: 2px 0 4px; }
+.nv-edge { stroke: var(--line-2); stroke-width: 1.2; }
+.nv-edge[data-state="green"] { stroke: rgba(95, 211, 154, 0.45); }
+.nv-edge[data-state="amber"] { stroke: rgba(255, 181, 71, 0.7); }
+.nv-edge[data-state="red"] { stroke: rgba(255, 107, 107, 0.8); stroke-dasharray: 4 3; }
+.nv-edge.nv-changed { stroke-width: 2.6; }
+.nv-node { cursor: pointer; outline: none; }
+.nv-node .nv-dot { fill: var(--muted); stroke: rgba(6, 12, 20, 0.9); stroke-width: 1.5; }
+.nv-node .nv-ring { fill: none; stroke: transparent; stroke-width: 2; }
+.nv-node[data-state="green"] .nv-dot { fill: var(--ok); }
+.nv-node[data-state="amber"] .nv-dot { fill: var(--warn); }
+.nv-node[data-state="red"] .nv-dot { fill: var(--crit); }
+.nv-node.nv-changed .nv-ring { stroke: var(--ink); }
+.nv-node.nv-pointed .nv-ring, .nv-node:focus .nv-ring { stroke: var(--ink-2); }
+.nv-label { fill: var(--ink-2); font: 9.5px var(--f-ui); pointer-events: none; }
+.nv-node[data-state="grey"] .nv-label { fill: var(--muted); }
+.nv-cap { margin: 0 0 6px; min-height: 2.6em; font-size: 12.5px; color: var(--ink-2); }
+.nv-listcap { margin: 4px 0 2px; }
+.nv-list { list-style: none; margin: 0; padding: 0; }
+.nv-item { display: grid; grid-template-columns: 8px minmax(0, 1fr) auto; gap: 2px 8px; align-items: baseline; padding: 4px 0; border-bottom: 1px solid var(--line); font-size: 12.5px; }
+.nv-item i { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); align-self: center; }
+.nv-item[data-state="green"] i { background: var(--ok); } .nv-item[data-state="amber"] i { background: var(--warn); } .nv-item[data-state="red"] i { background: var(--crit); }
+.nv-item .nv-name { font-weight: 600; color: var(--ink); grid-column: 2; }
+.nv-item .nv-t { grid-column: 3; grid-row: 1; font: 11.5px var(--f-num); color: var(--ink-2); white-space: nowrap; }
+.nv-item .nv-why { grid-column: 2 / 4; color: var(--ink-2); }
+/* desktop first: the graph, and under it only the systems not working; a phone: every system as a list */
+html:not([data-device="phone"]) .nv-item[data-state="green"], html:not([data-device="phone"]) .nv-item[data-state="grey"] { display: none; }
+html[data-device="phone"] .nv-graph, html[data-device="phone"] .nv-cap { display: none; }
+html[data-device="phone"] .nv-listcap { display: none; }
+
+/* NH1, the witness timeline (site/parts/78_ledger.js): the ledger in the Evidence tab [appearance] */
+.ld-sec .ld-lead { margin: 0 0 6px; max-width: 62ch; }
+.ld-sum { margin: 0 0 8px; font-size: 12.5px; color: var(--ink-2); }
+.ld-strip { display: block; width: 100%; height: 214px; margin: 2px 0 10px; }
+.ld-strip .ld-grid { stroke: var(--line); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.ld-strip .ld-tick { fill: var(--muted); font: 9px var(--f-num); }
+.ld-strip .ld-win { stroke-width: 3; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.ld-strip .ld-mt { stroke: var(--ink); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.ld-strip .ld-now { stroke: var(--ink-2); stroke-width: 1; stroke-dasharray: 3 3; vector-effect: non-scaling-stroke; }
+.ld-strip .ld-lane.wait .ld-win { stroke: var(--line-2); } .ld-strip .ld-lane.wait .ld-dot { fill: var(--line-2); }
+.ld-strip .ld-lane.in .ld-win { stroke: var(--ok); } .ld-strip .ld-lane.in .ld-dot { fill: var(--ok); }
+.ld-strip .ld-lane.out .ld-win { stroke: var(--warn); } .ld-strip .ld-lane.out .ld-dot { fill: var(--warn); }
+.ld-list { list-style: none; margin: 0; padding: 0; }
+.ld-row { padding: 7px 0 8px; border-bottom: 1px solid var(--line); }
+.ld-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.ld-when { font: 12px/1.3 var(--f-num); color: var(--ink-2); }
+.ld-verdict { font: 600 10.5px/1.2 var(--f-ui); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.ld-row[data-state="in"] .ld-verdict { color: var(--ok); }
+.ld-row[data-state="out"] .ld-verdict { color: var(--warn); }
+.ld-who { margin-top: 2px; color: var(--ink); font-weight: 600; font-size: 13px; }
+.ld-what { color: var(--ink-2); font-size: 12.5px; }
+.ld-nums { display: flex; flex-wrap: wrap; gap: 2px 12px; margin-top: 3px; }
+.ld-f { white-space: nowrap; }
+.ld-k { font: 500 10px/1.2 var(--f-ui); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
+.ld-record, .ld-model, .ld-miss, .ld-reaches, .ld-late { font: 12px/1.3 var(--f-num); font-variant-numeric: tabular-nums; color: var(--ink); }
+.ld-note { margin-top: 2px; font-size: 12px; color: var(--muted); }
+.ld-src { margin-top: 3px; font-size: 12px; color: var(--muted); }
+.ld-src summary { cursor: pointer; color: var(--muted); }
+.ld-src p { margin: 3px 0 0; max-width: 62ch; color: var(--ink-2); }
+
+/* NH2, her rooms and when the water came (site/parts/79_cabins.js), in the Damage tab [appearance] */
+.cb-sec .cb-lead { margin: 0 0 6px; max-width: 62ch; }
+.cb-q { box-sizing: border-box; width: 100%; padding: 7px 9px; border: 1px solid var(--line-2); border-radius: 5px; background: rgba(6, 12, 20, 0.6); color: var(--ink); font: 13px var(--f-ui); }
+.cb-q:focus { outline: none; border-color: var(--ink-2); }
+.cb-hits { list-style: none; margin: 4px 0 0; padding: 0; }
+.cb-hit { display: block; width: 100%; text-align: left; padding: 5px 6px; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--ink-2); font: 12.5px var(--f-ui); cursor: pointer; }
+.cb-hit:hover, .cb-hit:focus { color: var(--ink); background: rgba(39, 64, 90, 0.35); outline: none; }
+.cb-status { margin: 4px 0 0; }
+.cb-sec .cb-credit { margin: 10px 0 0; font-size: 11px; line-height: 1.45; max-width: 62ch; }   /* RC2: the rooms' credit [appearance] */
+.cb-card { margin-top: 8px; padding: 8px 10px; border: 1px solid var(--line-2); border-radius: 6px; background: rgba(6, 12, 20, 0.45); }
+.cb-title { font-weight: 600; color: var(--ink); font-size: 13.5px; }
+.cb-sub { margin-top: 2px; font-size: 12px; color: var(--muted); }
+.cb-hit.cb-who { color: var(--ink); }
+.cb-people { margin-top: 6px; }
+.cb-folk-head { font-size: 12px; color: var(--muted); }
+.cb-folk { list-style: none; margin: 2px 0 0; padding: 0; }
+.cb-folk li { padding: 2px 0; font-size: 12.5px; color: var(--ink-2); }
+.cb-folk .cb-more { color: var(--muted); }
+.cb-people .cb-caveat { margin: 3px 0 0; font-size: 11.5px; max-width: 62ch; }
+.cb-pieces { list-style: none; margin: 6px 0 0; padding: 0; }
+.cb-piece { padding: 4px 0; border-bottom: 1px solid var(--line); font-size: 12.5px; color: var(--ink-2); }
+.cb-piece[data-state="wet"] .cb-words { color: #8fd3ff; }
+.cb-piece .cb-depth { display: block; font: 11.5px var(--f-num); color: var(--muted); }
+html[data-device="phone"] .cb-actions .btn { min-height: 40px; }
+
+/* The director (site/parts/80_director.js): its switch is the first of the display toggles beside the view buttons; its
+   caption is a small plain line in the stage's aside (C-4: at the right above the Bridge, or above the damage diagram),
+   the last of the overlays: it gives way where the others need its room. It keeps its place while it fades. [appearance] */
+#bDirector[aria-pressed="true"] { color: var(--brass); }
+.dir-cap { flex: none; z-index: 3; box-sizing: border-box; max-width: 380px; background: rgba(6, 12, 20, 0.86); border: 1px solid var(--line); border-left: 2px solid var(--brass); border-radius: 6px; padding: 6px 10px 5px; font-size: 13px; line-height: 1.35; color: var(--ink); pointer-events: none; opacity: 0; transition: opacity .35s; }
+.dir-cap.on { opacity: 1; }
+.dir-cap[hidden] { display: none; }
+.dir-cap .dir-t { font: 600 12.5px/1.35 var(--f-num); color: var(--brass); margin-right: 6px; }
+.dir-cap .dir-t[hidden] { display: none; }
+.dir-cap .dir-v { display: block; font: 500 10.5px/1.3 var(--f-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+html[data-device="phone"] .dir-cap { font-size: 12.5px; padding: 5px 9px 4px; }
+
+/* NH5, the counterfactual gallery (site/parts/81_gallery.js) in the Evidence tab [appearance] */
+.gl-sec .gl-lead, .gl-sec .gl-rule { margin: 0 0 6px; max-width: 62ch; }
+.gl-cards { display: grid; gap: 8px; }
+.gl-card { padding: 8px 10px; border: 1px solid var(--line-2); border-radius: 6px; background: rgba(6, 12, 20, 0.45); }
+.gl-card[data-id="baseline"] { border-color: var(--line); }
+.gl-title { margin: 0; font-size: 13.5px; font-weight: 600; color: var(--ink); }
+.gl-q { margin: 2px 0 0; font-size: 12.5px; color: var(--muted); font-style: italic; }
+.gl-say { margin: 5px 0 0; font-size: 12.5px; color: var(--ink-2); }
+.gl-nums { margin: 4px 0 0; font: 11.5px/1.4 var(--f-num); color: var(--ink-2); }
+.gl-how { margin-top: 4px; font-size: 12px; color: var(--muted); }
+.gl-how summary { cursor: pointer; }
+.gl-how p { margin: 3px 0 0; color: var(--ink-2); max-width: 62ch; }
+.fc-kept { color: var(--ink-2); }
+
+/* NH4, the scrubber (site/parts/82_scrub.js): its bar in the Run tab's Time section [appearance] */
+.scrub { display: flex; flex-direction: column; gap: 4px; }
+.scrub-head { display: flex; gap: 8px; align-items: baseline; font: 500 12px/1.3 var(--f-num); color: var(--ink-2); }
+.scrub-k { font: 500 10px/1.2 var(--f-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); }
+.scrub-at { font-variant-numeric: tabular-nums; }
+.scrub input[type="range"] { width: 100%; margin: 0; accent-color: var(--brass); }
+.scrub input[type="range"]:disabled { opacity: 0.45; }
+.scrub-hint { margin: 0; }
+html[data-device="phone"] .scrub input[type="range"] { min-height: 44px; }
+
+/* The order line and the bridge's talk (site/parts/86_crew.js): a section of the Run tab, below the watch's own. */
+.crew [hidden] { display: none !important; }   /* the section's own pieces hidden off a watch (.kv and .seg set a display) */
+.crew-line { display: flex; gap: 8px; align-items: center; }
+.crew-input { flex: 1; min-width: 0; min-height: 36px; background: var(--panel-2); border: 1px solid var(--line-2); border-radius: 6px; padding: 6px 10px; }
+.crew-input::placeholder { color: var(--muted); }
+.crew-input:disabled { opacity: 0.5; cursor: not-allowed; }
+.crew-give { min-height: 36px; padding: 3px 14px; }
+.crew .crew-why { margin-top: 6px; }
+.crew .crew-convline { margin-top: 4px; }
+.crew .crew-convrow { align-items: center; }
+.crew-cap { margin-top: 10px; font: 600 10.5px/1.2 var(--f-ui); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.crew-talk { list-style: none; margin: 4px 0 6px; padding: 0; font-size: 12.5px; color: var(--ink-2); }
+.crew-talk:empty { display: none; }
+.crew-talk li { padding: 3px 0; border-top: 1px solid var(--line); }
+.crew-talk li:first-child { border-top: 0; }
+.crew-talk .crew-t { font: 500 11.5px/1.3 var(--f-num); color: var(--muted); margin-right: 6px; }
+.crew-talk .crew-who { font-weight: 600; color: var(--ink); margin-right: 2px; }
+.crew-talk li.crew-you .crew-who, .crew-talk li.crew-wheel .crew-who { color: var(--brass); }
+.crew-talk li.crew-script .crew-who { color: var(--teal); }
+.crew-talk li.crew-no { color: var(--warn); }
+.crew-talk li.crew-note { color: var(--muted); font-style: italic; }
+.crew .crew-hint { margin-top: 4px; }
+/* what a newcomer reads first; three orders to try (a chip writes into the line and gives nothing) */
+.crew .crew-intro { margin: 0 0 8px; }
+.crew-try { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 6px; }
+.crew-try .chip { padding: 2px 10px; }
+/* while nothing has been said the talk says where the answers will come: shown only while the list is empty */
+.crew .crew-empty { margin: 4px 0 6px; }
+.crew-talk:not(:empty) ~ .crew-empty { display: none; }   /* (any later sibling: another part may stand between the two) */
+/* [appearance] the newest line shows itself for a moment, so that an answer is seen as it comes */
+@keyframes crew-new { from { background: color-mix(in srgb, var(--brass) 26%, transparent); } to { background: transparent; } }
+.crew-talk li:last-child { animation: crew-new 1.8s ease-out 1; }
+@media (prefers-reduced-motion: reduce) { .crew-talk li:last-child { animation: none; } }
+html[data-device="phone"] .crew-try .chip { min-height: 36px; }
+/* 16 px on a phone: a smaller field makes the browser zoom the page when it takes the focus */
+html[data-device="phone"] .crew-input { min-height: 44px; font-size: 16px; }
+html[data-device="phone"] .crew-give { min-height: 44px; }
+
+/* The crew's own words (site/parts/88_minds.js): the row of names under the order line, an offered order under the talk,
+   the imagined lines and the notices in the talk, and "The crew's minds" folded at the end of the section. */
+.minds-who { margin-top: 8px; }
+.minds-names { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.minds-name.minds-out { opacity: 0.5; border-style: dashed; }
+.minds-name.minds-asked { border-color: var(--brass); }
+.crew .minds-where { margin-top: 4px; }
+.minds-offer { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 4px 0 6px; font-size: 12.5px; color: var(--ink-2); }
+.minds-offer-text { flex: 1 1 100%; }
+.minds-give { border-color: var(--brass); }
+.crew-talk li.crew-mind .crew-who { color: var(--ink); }
+.crew-talk li.crew-imagined { font-style: italic; }
+.crew-talk .crew-mark { margin-left: 6px; font: 500 10.5px/1.2 var(--f-ui); letter-spacing: 0.06em; text-transform: uppercase; font-style: normal; color: var(--muted);
+  border: 1px solid var(--line-2); border-radius: 3px; padding: 0 4px; }
+.crew-talk li.crew-floor { text-decoration: underline dotted var(--line-2); text-underline-offset: 3px; cursor: help; }
+.crew-talk li.crew-wait { color: var(--muted); font-style: italic; }
+.crew-talk li.crew-notice { color: var(--warn); font-style: normal; }
+.minds-fold summary { cursor: pointer; font-size: 12.5px; color: var(--ink-2); line-height: 28px; }
+/* A row is its label and its fields. The fields take what room the label leaves and never more: a provider's long name
+   is cut in its box, not laid wider than the panel (the first look at the page showed the panel scrolling sideways). */
+.minds-fold, .minds-ctl { min-width: 0; }
+.minds-ctl .minds-row { align-items: center; }
+.minds-ctl .minds-row > span:first-child { flex: none; }
+.minds-ctl .minds-val { display: flex; flex: 1 1 0; min-width: 0; flex-wrap: wrap; gap: 6px; align-items: center; justify-content: flex-end; }
+.minds-in, .minds-sel, .minds-num { min-width: 0; min-height: 28px; background: var(--panel-2); border: 1px solid var(--line-2); border-radius: 6px; padding: 3px 8px; color: var(--ink); }
+.minds-sel { flex: 1 1 0; width: 100%; max-width: 100%; text-overflow: ellipsis; }
+.minds-in { flex: 1 1 8em; width: 8em; max-width: 100%; }
+.minds-num { width: 5.5em; }
+.minds-pair { display: inline-flex; gap: 6px; align-items: center; white-space: nowrap; }   /* a number and its unit stay together */
+.minds-msg:empty { display: none; }
+html[data-device="phone"] .minds-in, html[data-device="phone"] .minds-sel, html[data-device="phone"] .minds-num { min-height: 44px; font-size: 16px; }
+
+/* The bridge heard (site/parts/89_voice.js): its switch and its note, in the order line's section. */
+.crew .voice-note { margin-top: 4px; }
+.crew .voice-note:empty { display: none; }
+/* The ears: the button held beside the order line (no scrolling or selecting may take the pointer from it while held),
+   the words heard so far, greyed, under the line. */
+.crew-line .voice-mic { min-height: 36px; padding: 3px 12px; white-space: nowrap; touch-action: none; user-select: none; -webkit-user-select: none; }
+.crew-line .voice-mic.voice-mic-on { border-color: var(--brass); color: var(--brass); }
+.crew .voice-heard { margin-top: 4px; font-style: italic; color: var(--muted); }
+html[data-device="phone"] .crew-line .voice-mic { min-height: 44px; }

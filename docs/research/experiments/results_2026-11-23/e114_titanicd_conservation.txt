@@ -1,0 +1,18 @@
+e114: titanicD conservation; 69 sets with cases in runs_02508de24d5a.jsonl, 16 above 1e-5 m3 (the worst -2.80e-5)
+the worst set: {"area":0.8985123141803761,"bunkerBurst":6.352012786044726,"bunkerOpen":0.004189881647057481,"aDown":0.3749037711014924,"fOpen":0.025125459164969926,"split":0.8040914026892279,"GM0":0.927357204920426,"zMergeHold":5.1683010200749155,"peakVent":0.00821322187740542,"sideStrength":0.10849358721463942,"coalListDeg":0.5303647624984928}
+the case as the harness ran it, then one thing put back at a time:
+  as the harness ran it (--d4)                               worst   -2.80e-5 m3;  largest step   -9.55e-7 at T  148.48;  afloat at T 480
+  weighOverfill 1                                            worst   -1.42e-5 m3;  largest step   -7.99e-7 at T   81.83;  founders at T 461.5
+  g11Doors 1                                                 worst   -2.80e-5 m3;  largest step   -9.55e-7 at T  148.48;  afloat at T 480
+  sideOpenings 0                                             worst   -2.80e-5 m3;  largest step   -9.55e-7 at T  148.48;  afloat at T 480
+  hullEnds 0                                                 worst   -2.79e-5 m3;  largest step   -9.67e-7 at T  347.48;  afloat at T 480
+  bunker 0 (no bunker pocket)                                worst  -6.80e-10 m3;  largest step  -1.46e-11 at T   89.53;  afloat at T 480
+  peakTank 0 (no tank pocket)                                worst   -2.61e-5 m3;  largest step   -9.09e-7 at T  138.51;  afloat at T 480
+  windows 0 and stairs 0                                     worst   -2.80e-5 m3;  largest step   -9.55e-7 at T  148.48;  afloat at T 480
+  conserve 0 (the cut off)                                   worst    3.08e-1 m3;  largest step    1.72e-2 at T  103.10;  afloat at T 480
+Part 2: where the water goes (the bunker gave way at T 411.75):
+  the bunker filling, the stokehold dry      2103 steps; error made   1.46e-11; steps over 1e-9 m3: 0
+  the bunker filling, the stokehold wet     96716 steps; error made   -2.80e-5; steps over 1e-9 m3: 65 (the first at T 74.98)
+  the bunker given way, the stokehold wet   16381 steps; error made   6.55e-10; steps over 1e-9 m3: 0
+So: a fault in the step's flows of the bunker of the fire (W6) while it fills with water on both sides of its door; not the landing's switches, not C3's cut (with the cut off the step makes 0.31 m3, as before C3).
+(2026-11-23T14:23:21.804Z)

@@ -1,0 +1,14 @@
+/* The walk (site/parts/76_walk.js): while walking, a pad in the stage's aside (C-4: at the right above the Bridge or the
+   damage diagram, the whole width on a phone), with the line saying where the walker is and the buttons that walk, turn,
+   go up and down a deck and leave; and a veil over the stage when the walker's eye is under the core's water. Every
+   colour, size and place here is appearance. */
+.walk-pad { flex: none; z-index: 5; box-sizing: border-box; max-width: 380px; background: rgba(6, 12, 20, 0.88); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; color: var(--ink-2); font: 12px/1.35 var(--f-ui); }
+.walk-pad[hidden], .walk-veil[hidden] { display: none; }
+.walk-where { margin-bottom: 7px; color: var(--ink); }
+.walk-btns { display: flex; flex-wrap: wrap; gap: 6px; }
+.walk-b { min-width: 44px; min-height: 40px; box-sizing: border-box; border: 1px solid var(--line); background: rgba(6, 12, 20, 0.6); color: var(--ink); border-radius: 5px; padding: 0 10px; font: 600 13px/1 var(--f-ui); cursor: pointer; touch-action: none; user-select: none; }
+.walk-b:hover { background: var(--line-2); }
+.walk-b:focus-visible { outline: 2px solid var(--water); outline-offset: 1px; }
+.walk-veil { position: absolute; inset: 0; z-index: 3; background: rgba(18, 64, 104, 0.45); pointer-events: none; }
+html[data-device="phone"] .walk-pad { align-self: stretch; max-width: none; padding: 6px 8px; }
+html[data-device="phone"] .walk-b { font-size: 12px; padding: 0 8px; }

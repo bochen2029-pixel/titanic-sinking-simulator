@@ -1,0 +1,435 @@
+e89 (G6b), run 2026-11-20 on wt/split (G6 and W6 on main 4bf604e, G6b's openAlong uncommitted), one process at a time at BelowNormal while the coordinator's join 5 gate ran. The times are the clock's at each run's start and end, read in the session. D70 took A-kept.
+
+#### A with e83's bounds and steps (a scratch wrapper around e83 with candidate A's split; e89 without --d69 starts with smaller steps), start [0.77,1.217,0.362,0.01881], 19:18 to 19:26 CST
+G6b candidate A: the split 4.78/11.87/24.59/26.22/22.20/10.33; the watch's 4.80/11.92/24.73/26.32/22.13/10.10; openAlong [[115.5192,200,0.4544],[101.8032,115.5192,0.6002],[86.2584,101.8032,1.2224],[70.7136,86.2584,1.1508],[54.2544,70.7136,0.9487],[51.5112,54.2544,3.0466]]; alpha 0.22021725042742005
+e83: the opening held at 0.77; start [0.77,1.217,0.362,0.01881]
+#1 J=12.62 (preset 12.55, watch 161.0 min) area=0.7700 wMul=1.22 aDown=0.362 fOpen=0.0188 Tf=160.4
+#3 J=12.54 (preset 12.47, watch 161.0 min) area=0.7700 wMul=2.22 aDown=0.362 fOpen=0.0188 Tf=160.3
+#20 J=9.80 (preset 9.41, watch 157.5 min) area=0.7893 wMul=1.46 aDown=0.435 fOpen=0.0182 Tf=156.7
+#24 J=9.55 (preset 9.16, watch 157.5 min) area=0.7868 wMul=1.45 aDown=0.430 fOpen=0.0193 Tf=156.8
+#26 J=9.44 (preset 9.26, watch 158.3 min) area=0.7881 wMul=1.96 aDown=0.237 fOpen=0.0187 Tf=158.6
+#39 J=9.29 (preset 8.85, watch 157.3 min) area=0.7845 wMul=1.66 aDown=0.356 fOpen=0.0188 Tf=157.7
+#41 J=8.79 (preset 8.48, watch 157.8 min) area=0.7876 wMul=1.56 aDown=0.383 fOpen=0.0186 Tf=157.2
+#44 J=8.38 (preset 7.77, watch 156.9 min) area=0.7895 wMul=1.76 aDown=0.309 fOpen=0.0188 Tf=157.1
+#49 J=8.18 (preset 7.66, watch 157.1 min) area=0.7914 wMul=1.83 aDown=0.279 fOpen=0.0184 Tf=157.2
+#62 J=8.17 (preset 7.68, watch 157.2 min) area=0.7929 wMul=1.92 aDown=0.255 fOpen=0.0185 Tf=157.4
+#65 J=8.16 (preset 7.59, watch 157.0 min) area=0.7921 wMul=1.86 aDown=0.275 fOpen=0.0186 Tf=157.1
+#68 J=8.12 (preset 7.61, watch 157.1 min) area=0.7930 wMul=1.93 aDown=0.261 fOpen=0.0184 Tf=157.3
+#70 J=8.11 (preset 7.56, watch 157.0 min) area=0.7941 wMul=1.94 aDown=0.255 fOpen=0.0184 Tf=157.2
+#71 J=8.10 (preset 7.55, watch 157.0 min) area=0.7954 wMul=1.99 aDown=0.244 fOpen=0.0184 Tf=157.3
+#77 J=8.09 (preset 7.53, watch 157.0 min) area=0.7929 wMul=1.89 aDown=0.266 fOpen=0.0185 Tf=157.2
+#79 J=8.08 (preset 7.55, watch 157.1 min) area=0.7933 wMul=1.92 aDown=0.260 fOpen=0.0184 Tf=157.2
+#85 J=8.07 (preset 7.52, watch 157.0 min) area=0.7936 wMul=1.92 aDown=0.259 fOpen=0.0184 Tf=157.1
+
+BEST {"area":0.7936393113075204,"params":{"wMul":1.919,"aDown":0.2595,"fOpen":0.01842}}
+trim            15 obs    0.8 model    0.83
+trim            30 obs    1.8 model    1.65
+trim            45 obs    2.6 model    2.33
+trim            75 obs    3.2 model    3.41
+trim           100 obs      4 model    4.08
+trim           130 obs    5.5 model    4.93
+trim           155 obs     10 model    9.62
+founder          - obs    160 model  157.15
+list            10 obs      5 model    0.40
+list            85 obs      2 model   -3.14
+list           100 obs      0 model   -4.72
+list           130 obs    -10 model   -3.91
+list           145 obs    -15 model   -7.71
+event:well       - obs    130 model  125.77
+event:bridge     - obs    155 model  154.57
+event:overF      - obs     75 model   78.15
+preset J 7.521; the watch founders at 157.03 min (its term 0.551); J 8.073; evals 87
+
+#### node docs/research/experiments/e89_g6b_refit.js A 45 [0.7936,1.5,0.2595,0.01842] --d69 (19:26 to 19:33 CST)
+e89 (G6b) candidate A on C:\temp\titanic-wt-split: the split 4.78/11.87/24.59/26.22/22.20/10.33 (the watch's 4.80/11.92/24.73/26.32/22.13/10.10); openAlong [[115.5192,200,0.4544],[101.8032,115.5192,0.6002],[86.2584,101.8032,1.2224],[70.7136,86.2584,1.1508],[54.2544,70.7136,0.9487],[51.5112,54.2544,3.0466]]; alpha 0.22021725042742005
+e89: inside D69's bounds {"lo":[0.7506,0.518,0.14075,0.01034],"hi":[1.115,1.554,0.42224999999999996,0.03102]}; start [0.7936,1.5,0.2595,0.01842]
+#1 J=8.10 (preset 7.55, watch 157.0 min) area=0.7936 wMul=1.50 aDown=0.259 fOpen=0.0184 Tf=157.2
+#29 J=8.07 (preset 7.42, watch 156.8 min) area=0.7993 wMul=1.55 aDown=0.242 fOpen=0.0175 Tf=157.0
+#32 J=8.07 (preset 7.51, watch 157.0 min) area=0.7970 wMul=1.55 aDown=0.261 fOpen=0.0170 Tf=157.2
+#33 J=8.06 (preset 7.53, watch 157.1 min) area=0.7984 wMul=1.55 aDown=0.269 fOpen=0.0160 Tf=157.2
+#34 J=8.00 (preset 7.42, watch 157.0 min) area=0.8000 wMul=1.54 aDown=0.250 fOpen=0.0164 Tf=157.2
+#35 J=7.97 (preset 7.38, watch 156.9 min) area=0.8032 wMul=1.45 aDown=0.246 fOpen=0.0155 Tf=157.1
+#41 J=7.88 (preset 7.27, watch 156.9 min) area=0.8052 wMul=1.55 aDown=0.226 fOpen=0.0160 Tf=157.2
+#42 J=7.74 (preset 7.24, watch 157.2 min) area=0.8086 wMul=1.51 aDown=0.207 fOpen=0.0160 Tf=157.3
+#45 J=7.67 (preset 7.23, watch 157.3 min) area=0.8114 wMul=1.25 aDown=0.203 fOpen=0.0152 Tf=157.4
+#46 J=7.44 (preset 7.21, watch 158.1 min) area=0.8148 wMul=1.05 aDown=0.185 fOpen=0.0153 Tf=157.7
+#47 J=7.21 (preset 7.21, watch 159.8 min) area=0.8189 wMul=1.29 aDown=0.174 fOpen=0.0147 Tf=157.9
+#49 J=7.14 (preset 7.13, watch 160.2 min) area=0.8205 wMul=1.14 aDown=0.166 fOpen=0.0150 Tf=158.0
+#61 J=7.10 (preset 7.10, watch 159.7 min) area=0.8200 wMul=1.35 aDown=0.176 fOpen=0.0144 Tf=157.8
+#62 J=7.05 (preset 7.03, watch 159.5 min) area=0.8212 wMul=1.49 aDown=0.180 fOpen=0.0137 Tf=157.6
+#66 J=6.99 (preset 6.97, watch 159.5 min) area=0.8206 wMul=1.29 aDown=0.178 fOpen=0.0141 Tf=157.6
+#67 J=6.97 (preset 6.95, watch 159.4 min) area=0.8215 wMul=1.29 aDown=0.181 fOpen=0.0138 Tf=157.5
+#71 J=6.89 (preset 6.88, watch 160.1 min) area=0.8237 wMul=1.39 aDown=0.175 fOpen=0.0136 Tf=157.6
+#72 J=6.88 (preset 6.88, watch 160.2 min) area=0.8259 wMul=1.44 aDown=0.172 fOpen=0.0133 Tf=157.7
+#74 J=6.78 (preset 6.75, watch 159.4 min) area=0.8270 wMul=1.37 aDown=0.180 fOpen=0.0127 Tf=157.3
+#75 J=6.74 (preset 6.71, watch 159.3 min) area=0.8299 wMul=1.31 aDown=0.179 fOpen=0.0122 Tf=157.2
+#76 J=6.62 (preset 6.60, watch 159.5 min) area=0.8281 wMul=1.41 aDown=0.176 fOpen=0.0128 Tf=157.3
+#77 J=6.58 (preset 6.57, watch 159.5 min) area=0.8305 wMul=1.41 aDown=0.173 fOpen=0.0126 Tf=157.3
+#79 J=6.54 (preset 6.53, watch 159.8 min) area=0.8347 wMul=1.29 aDown=0.164 fOpen=0.0123 Tf=157.3
+#80 J=6.41 (preset 6.40, watch 160.3 min) area=0.8392 wMul=1.16 aDown=0.155 fOpen=0.0122 Tf=157.3
+
+BEST {"area":0.83916,"params":{"wMul":1.164,"aDown":0.1552,"fOpen":0.01224}}; evals 84
+trim            15 obs    0.8 model    0.88
+trim            30 obs    1.8 model    1.73
+trim            45 obs    2.6 model    2.43
+trim            75 obs    3.2 model    3.52
+trim           100 obs      4 model    4.16
+trim           130 obs    5.5 model    5.00
+trim           155 obs     10 model    9.28
+founder          - obs    160 model  157.32
+list            10 obs      5 model    0.48
+list            85 obs      2 model   -3.80
+list           100 obs      0 model   -6.11
+list           130 obs    -10 model   -6.56
+list           145 obs    -15 model  -11.15
+event:well       - obs    130 model  123.28
+event:bridge     - obs    155 model  154.74
+event:overF      - obs     75 model   75.28
+preset J 6.403, founders at 157.32; the watch founders at 160.27 (its term 0.005); J 6.407
+
+#### node docs/research/experiments/e89_g6b_refit.js A 45 [0.83916,1.164,0.1552,0.01224] --d69 --band (19:34 to 19:41 CST)
+e89 (G6b) candidate A on C:\temp\titanic-wt-split: the split 4.78/11.87/24.59/26.22/22.20/10.33 (the watch's 4.80/11.92/24.73/26.32/22.13/10.10); openAlong [[115.5192,200,0.4544],[101.8032,115.5192,0.6002],[86.2584,101.8032,1.2224],[70.7136,86.2584,1.1508],[54.2544,70.7136,0.9487],[51.5112,54.2544,3.0466]]; alpha 0.22021725042742005
+e89: inside D69's bounds {"lo":[0.7506,0.518,0.14075,0.01034],"hi":[1.115,1.554,0.42224999999999996,0.03102]}; both founders held to 157 to 160 min; start [0.83916,1.164,0.1552,0.01224]
+#1 J=12.76 (preset 6.44, watch 160.3 min) area=0.8392 wMul=1.16 aDown=0.155 fOpen=0.0122 Tf=157.4
+#3 J=11.92 (preset 6.42, watch 160.2 min) area=0.8392 wMul=1.55 aDown=0.155 fOpen=0.0122 Tf=157.4
+#17 J=7.09 (preset 6.66, watch 159.2 min) area=0.8352 wMul=1.41 aDown=0.171 fOpen=0.0121 Tf=156.9
+#24 J=6.59 (preset 6.52, watch 159.6 min) area=0.8406 wMul=1.46 aDown=0.162 fOpen=0.0117 Tf=157.0
+#29 J=6.44 (preset 6.44, watch 159.8 min) area=0.8382 wMul=1.52 aDown=0.161 fOpen=0.0120 Tf=157.3
+#36 J=6.42 (preset 6.42, watch 159.9 min) area=0.8400 wMul=1.55 aDown=0.160 fOpen=0.0116 Tf=157.2
+#44 J=6.42 (preset 6.42, watch 159.8 min) area=0.8401 wMul=1.55 aDown=0.160 fOpen=0.0118 Tf=157.1
+#47 J=6.40 (preset 6.40, watch 160.0 min) area=0.8410 wMul=1.47 aDown=0.157 fOpen=0.0118 Tf=157.2
+#52 J=6.40 (preset 6.40, watch 160.0 min) area=0.8403 wMul=1.54 aDown=0.158 fOpen=0.0118 Tf=157.2
+#54 J=6.38 (preset 6.38, watch 159.9 min) area=0.8414 wMul=1.50 aDown=0.157 fOpen=0.0119 Tf=157.0
+#58 J=6.35 (preset 6.35, watch 159.9 min) area=0.8402 wMul=1.50 aDown=0.158 fOpen=0.0120 Tf=157.2
+#59 J=6.33 (preset 6.33, watch 160.0 min) area=0.8396 wMul=1.48 aDown=0.157 fOpen=0.0122 Tf=157.2
+#62 J=6.28 (preset 6.27, watch 159.9 min) area=0.8402 wMul=1.48 aDown=0.156 fOpen=0.0123 Tf=157.0
+#70 J=6.28 (preset 6.28, watch 159.9 min) area=0.8392 wMul=1.46 aDown=0.156 fOpen=0.0127 Tf=157.1
+#71 J=6.24 (preset 6.23, watch 159.9 min) area=0.8389 wMul=1.42 aDown=0.155 fOpen=0.0129 Tf=157.0
+#77 J=6.23 (preset 6.23, watch 159.9 min) area=0.8398 wMul=1.40 aDown=0.154 fOpen=0.0128 Tf=157.0
+
+BEST {"area":0.83983,"params":{"wMul":1.397,"aDown":0.1545,"fOpen":0.01278}}; evals 86
+trim            15 obs    0.8 model    0.88
+trim            30 obs    1.8 model    1.73
+trim            45 obs    2.6 model    2.43
+trim            75 obs    3.2 model    3.52
+trim           100 obs      4 model    4.16
+trim           130 obs    5.5 model    5.00
+trim           155 obs     10 model   10.01
+founder          - obs    160 model  157.00
+list            10 obs      5 model    0.48
+list            85 obs      2 model   -3.66
+list           100 obs      0 model   -6.10
+list           130 obs    -10 model   -6.57
+list           145 obs    -15 model  -11.23
+event:well       - obs    130 model  123.26
+event:bridge     - obs    155 model  154.43
+event:overF      - obs     75 model   75.13
+preset J 6.232, founders at 157.00; the watch founders at 159.86 (its term 0.001); J 6.233
+
+#### node docs/research/experiments/e89_g6b_refit.js B 45 [0.85,1.397,0.1545,0.01278] --d69 --band (19:42 to 19:50 CST)
+e89 (G6b) candidate B on C:\temp\titanic-wt-split: the split 5.15/12.79/26.50/28.25/23.92/3.39 (the watch's 5.17/12.83/26.62/28.33/23.77/3.29); openAlong [[115.5192,200,0.4896],[101.8032,115.5192,0.6466],[86.2584,101.8032,1.3171],[70.7136,86.2584,1.2399],[54.2544,70.7136,1.0221],[51.5112,54.2544,1]]; alpha 0.22000756464206853
+e89: inside D69's bounds {"lo":[0.7506,0.518,0.14075,0.01034],"hi":[1.115,1.554,0.42224999999999996,0.03102]}; both founders held to 157 to 160 min; start [0.85,1.397,0.1545,0.01278]
+#1 J=16845.14 (preset 26.61, watch 171.1 min) area=0.8500 wMul=1.40 aDown=0.155 fOpen=0.0128 Tf=166.7
+#2 J=1089.31 (preset 423.53, watch 156.6 min) area=0.9394 wMul=1.40 aDown=0.155 fOpen=0.0128 Tf=154.5
+#6 J=362.57 (preset 189.19, watch 159.5 min) area=0.8936 wMul=1.03 aDown=0.180 fOpen=0.0148 Tf=155.7
+#16 J=271.05 (preset 15.82, watch 161.6 min) area=0.8748 wMul=1.32 aDown=0.188 fOpen=0.0136 Tf=157.7
+#18 J=235.34 (preset 16.04, watch 161.5 min) area=0.8873 wMul=1.28 aDown=0.172 fOpen=0.0147 Tf=157.5
+#23 J=80.64 (preset 26.68, watch 160.1 min) area=0.8875 wMul=1.22 aDown=0.182 fOpen=0.0145 Tf=156.3
+#34 J=51.90 (preset 16.84, watch 160.5 min) area=0.8870 wMul=1.25 aDown=0.180 fOpen=0.0141 Tf=156.7
+#41 J=49.74 (preset 19.01, watch 160.3 min) area=0.8870 wMul=1.22 aDown=0.181 fOpen=0.0145 Tf=156.5
+#43 J=46.02 (preset 17.87, watch 160.3 min) area=0.8875 wMul=1.20 aDown=0.180 fOpen=0.0144 Tf=156.6
+#45 J=43.42 (preset 16.62, watch 160.4 min) area=0.8843 wMul=1.19 aDown=0.182 fOpen=0.0146 Tf=156.7
+#46 J=42.66 (preset 17.26, watch 160.3 min) area=0.8833 wMul=1.19 aDown=0.185 fOpen=0.0145 Tf=156.6
+#49 J=42.15 (preset 16.75, watch 160.4 min) area=0.8863 wMul=1.22 aDown=0.181 fOpen=0.0143 Tf=156.7
+#57 J=38.31 (preset 16.49, watch 160.4 min) area=0.8853 wMul=1.21 aDown=0.182 fOpen=0.0144 Tf=156.7
+
+BEST {"area":0.88528,"params":{"wMul":1.209,"aDown":0.1816,"fOpen":0.01445}}; evals 104
+trim            15 obs    0.8 model    0.98
+trim            30 obs    1.8 model    1.93
+trim            45 obs    2.6 model    2.67
+trim            75 obs    3.2 model    3.60
+trim           100 obs      4 model    4.03
+trim           130 obs    5.5 model    4.72
+trim           155 obs     10 model   11.01
+founder          - obs    160 model  156.73
+list            10 obs      5 model   -1.03
+list            85 obs      2 model   -8.06
+list           100 obs      0 model  -12.98
+list           130 obs    -10 model  -15.90
+list           145 obs    -15 model   -7.91
+event:well       - obs    130 model  125.14
+event:bridge     - obs    155 model  154.17
+event:overF      - obs     75 model   66.09
+preset J 16.492, founders at 156.73; the watch founders at 160.38 (its term 0.009); J 16.501
+
+#### node docs/research/experiments/e89_g6b_refit.js C 45 [0.88,1.397,0.1545,0.01278] --d69 --band (19:50 to 19:56 CST)
+e89 (G6b) candidate C on C:\temp\titanic-wt-split: the split 10.52/19.78/20.12/22.78/23.40/3.39 (the watch's 10.52/19.78/20.12/22.78/23.40/3.39); openAlong null; alpha 0.21936823159935526
+e89: inside D69's bounds {"lo":[0.7506,0.518,0.14075,0.01034],"hi":[1.115,1.554,0.42224999999999996,0.03102]}; both founders held to 157 to 160 min; start [0.88,1.397,0.1545,0.01278]
+#1 J=7325.33 (preset 23.22, watch 166.8 min) area=0.8800 wMul=1.40 aDown=0.155 fOpen=0.0128 Tf=165.2
+#3 J=7249.94 (preset 23.20, watch 166.7 min) area=0.8800 wMul=1.55 aDown=0.155 fOpen=0.0128 Tf=165.2
+#4 J=186.38 (preset 14.77, watch 161.3 min) area=0.8800 wMul=1.40 aDown=0.209 fOpen=0.0128 Tf=159.6
+#7 J=15.43 (preset 15.43, watch 160.0 min) area=0.9251 wMul=1.45 aDown=0.160 fOpen=0.0133 Tf=157.7
+#8 J=13.46 (preset 13.46, watch 159.9 min) area=0.9023 wMul=1.55 aDown=0.183 fOpen=0.0151 Tf=157.3
+#28 J=12.81 (preset 12.80, watch 159.5 min) area=0.8817 wMul=1.55 aDown=0.215 fOpen=0.0151 Tf=157.9
+#38 J=12.63 (preset 12.56, watch 159.0 min) area=0.8856 wMul=1.52 aDown=0.212 fOpen=0.0153 Tf=157.4
+#39 J=12.19 (preset 12.14, watch 159.1 min) area=0.8824 wMul=1.49 aDown=0.220 fOpen=0.0154 Tf=157.4
+#40 J=12.05 (preset 12.03, watch 159.4 min) area=0.8771 wMul=1.55 aDown=0.223 fOpen=0.0162 Tf=157.7
+#41 J=11.90 (preset 11.89, watch 159.7 min) area=0.8685 wMul=1.55 aDown=0.237 fOpen=0.0170 Tf=158.0
+#45 J=11.35 (preset 11.29, watch 159.1 min) area=0.8735 wMul=1.55 aDown=0.235 fOpen=0.0168 Tf=157.4
+#46 J=10.84 (preset 10.77, watch 158.9 min) area=0.8695 wMul=1.55 aDown=0.246 fOpen=0.0177 Tf=157.2
+#53 J=10.65 (preset 10.57, watch 158.8 min) area=0.8671 wMul=1.55 aDown=0.251 fOpen=0.0186 Tf=157.1
+#55 J=10.36 (preset 10.34, watch 159.5 min) area=0.8579 wMul=1.55 aDown=0.267 fOpen=0.0202 Tf=157.4
+#62 J=10.14 (preset 10.10, watch 159.2 min) area=0.8580 wMul=1.55 aDown=0.266 fOpen=0.0209 Tf=157.2
+#64 J=10.06 (preset 10.00, watch 159.0 min) area=0.8596 wMul=1.55 aDown=0.268 fOpen=0.0206 Tf=157.0
+#72 J=10.01 (preset 9.94, watch 158.9 min) area=0.8541 wMul=1.55 aDown=0.278 fOpen=0.0222 Tf=157.1
+#82 J=10.00 (preset 9.94, watch 159.0 min) area=0.8579 wMul=1.55 aDown=0.271 fOpen=0.0212 Tf=157.0
+
+BEST {"area":0.85785,"params":{"wMul":1.554,"aDown":0.2709,"fOpen":0.0212}}; evals 86
+trim            15 obs    0.8 model    0.95
+trim            30 obs    1.8 model    1.83
+trim            45 obs    2.6 model    2.51
+trim            75 obs    3.2 model    3.47
+trim           100 obs      4 model    3.94
+trim           130 obs    5.5 model    4.69
+trim           155 obs     10 model    9.87
+founder          - obs    160 model  157.00
+list            10 obs      5 model   -1.04
+list            85 obs      2 model   -5.35
+list           100 obs      0 model   -9.78
+list           130 obs    -10 model  -10.30
+list           145 obs    -15 model   -6.43
+event:well       - obs    130 model  129.40
+event:bridge     - obs    155 model  154.50
+event:overF      - obs     75 model   75.15
+preset J 9.935, founders at 157.00; the watch founders at 158.98 (its term 0.064); J 10.000
+
+#### node docs/research/experiments/e89_g6b_refit.js A --check [0.83983,1.397,0.1545,0.01278] (A, the best J; 19:57 CST)
+e89 (G6b) candidate A on C:\temp\titanic-wt-split: the split 4.78/11.87/24.59/26.22/22.20/10.33 (the watch's 4.80/11.92/24.73/26.32/22.13/10.10); openAlong [[115.5192,200,0.4544],[101.8032,115.5192,0.6002],[86.2584,101.8032,1.2224],[70.7136,86.2584,1.1508],[54.2544,70.7136,0.9487],[51.5112,54.2544,3.0466]]; alpha 0.22021725042742005
+
+at area 0.83983 m2 (9.04 sq ft), {"wMul":1.397,"aDown":0.1545,"fOpen":0.01278}:
+  (2) the preset founders at T 157.01, the watch at T 159.88 (157 to 160)
+  (3) the moves: wMul 35 %, aDown -45 %, fOpen -38 % (no more than 50 %); the area 11.9 %, toward the sources' 12 to 12.6 sq ft
+  (4) J (the preset) 6.30 (no more than 11.27); the watch's term 0.00
+  (5) the watch's last hour, from T 99.0 to T 159.88: 76106 m3 gained
+      compartment   an hour before   at the end    gained   share    | 0.3 m over the floor, 8 ft, above E deck (T)
+      FP                   898          1937      1039    1.4 %  |   0.2   2.2  60.1
+      H1                  2381          4640      2260    3.0 %  |   0.6   5.0  60.3
+      H2                  3959          7285      3326    4.4 %  |   0.3   2.7  53.2
+      H3                  4585          8812      4227    5.6 %  |   0.3   3.8  53.9
+      BR6                 5002         12784      7782   10.2 %  |   1.3   8.5  55.9
+      BR5                 3145         13990     10846   14.3 %  |  29.0  65.4  62.5
+      BR4                  455         11816     11360   14.9 %  |  98.9 126.3  73.6
+      BR3                   43          8397      8354   11.0 %  | 156.1    -  89.7
+      BR2                    0          7868      7868   10.3 %  |    -    - 155.5
+      BR1                    0          4471      4471    5.9 %  |    -    - 158.4
+      RE                     0          8354      8354   11.0 %  |    -    - 158.8
+      TE                     0          5682      5682    7.5 %  |    -    - 159.0
+      EL                     0           538       538    0.7 %  |    -    -    -
+  W6's band A (D62) on the watch: her list (+ starboard) T 10 -0.40, T 20 0.39, T 30 0.29, T 45 0.20, T 60 -1.76, T 75 -2.84, T 85 -4.75, T 100 -8.50, T 110 -10.26, T 120 -11.28, T 130 -6.01, T 145 -7.08, T 155 -3.30
+      changes of side (past 0.5 degrees): T 0.3 to port, T 0.5 to starboard, T 0.6 to port, T 2.9 to starboard, T 8.7 to port (band A: Hichens +3 to +7 early; the change of side between T 85 and T 110; Rowe -3 to -9 at T 120)
+  (1) the validation table with these numbers:
+Titanic 1912 (calibrated)                    FOUNDERS at 2h37m  trim 68.92°  list -80.21°  water 99679 t
+   floodwater reaches Wilding's 16,000 tons at 70.0 min (Wilding assumed 40)
+      45.7 min Centre propeller breaks the surface
+      52.5 min The bunker of the fire gives way: its water rushes into boiler room 5
+      55.0 min Water flows over bulkhead C at E deck
+      57.2 min Water flows over bulkhead D at E deck
+      62.3 min Water flows over bulkhead E at E deck
+      75.2 min Water flows over bulkhead F at E deck
+      79.5 min Water flows over bulkhead A at D deck
+      82.0 min Water flows over bulkhead B at D deck
+      88.4 min Second row of ports under the forecastle submerges
+      94.8 min Water flows over bulkhead G at E deck
+     123.2 min Forward well deck awash
+     134.6 min Forecastle head goes under
+     138.8 min Water flows over bulkhead H at E deck
+     151.0 min The sea breaks in at the windows of B deck
+     154.1 min The sea breaks in at the windows of A deck
+     154.4 min Water reaches the bridge
+     155.0 min The sea breaks in at the windows of the Boat deck's houses
+     155.1 min Water flows over bulkhead J at E deck
+     155.3 min The sea breaks in at the forward grand staircase's Boat-deck entrance (port door)
+     155.4 min The dome over the forward grand staircase gives way
+     155.7 min The sea breaks in at the forward grand staircase's Boat-deck entrance (starboard door)
+     156.0 min The sea breaks in at the aft grand staircase's A-deck entrance (port door)
+     156.0 min Water flows over bulkhead K at D deck
+     156.0 min The dome over the aft grand staircase gives way
+     156.4 min The sea breaks in at the aft grand staircase's A-deck entrance (starboard door)
+     156.5 min Water flows over bulkhead L at D deck
+     157.0 min Foundered
+Four forward compartments (Wilding: floats)  afloat (checked to 8h00m)  trim 2.04°  list 0.00°  water 8979 t
+Five forward compartments (Wilding: sinks)   FOUNDERS at 2h12m  trim 68.84°  list 80.21°  water 102048 t
+Olympic-Hawke 1911 (returned to port)        afloat (checked to 8h00m)  trim -0.74°  list -0.00°  water 1907 t
+Britannic 1916, approx. (sank in ~55 min)    FOUNDERS at 0h54m  trim 68.86°  list 80.21°  water 100441 t
+Britannic, same damage, portholes shut       afloat (checked to 8h00m)  trim 8.53°  list 0.00°  water 36545 t
+Titanic damage without the BR5 seam          FOUNDERS at 3h15m  trim 68.90°  list -80.21°  water 99507 t
+Titanic damage stopping at hold 3            afloat (checked to 8h00m)  trim 2.05°  list -1.61°  water 8988 t
+Titanic damage, all bulkheads to D deck      FOUNDERS at 2h45m  trim 68.85°  list -80.21°  water 98259 t
+Titanic damage, all bulkheads to B deck      FOUNDERS at 6h00m  trim 68.76°  list -80.21°  water 94951 t
+Titanic damage, watertight doors left open   FOUNDERS at 2h43m  trim 68.95°  list -11.07°  water 123486 t
+
+#### node docs/research/experiments/e89_g6b_refit.js A --check [0.78,1.036,0.25,0.02068] (A', a hand point; 20:04 CST)
+e89 (G6b) candidate A on C:\temp\titanic-wt-split: the split 4.78/11.87/24.59/26.22/22.20/10.33 (the watch's 4.80/11.92/24.73/26.32/22.13/10.10); openAlong [[115.5192,200,0.4544],[101.8032,115.5192,0.6002],[86.2584,101.8032,1.2224],[70.7136,86.2584,1.1508],[54.2544,70.7136,0.9487],[51.5112,54.2544,3.0466]]; alpha 0.22021725042742005
+
+at area 0.78 m2 (8.40 sq ft), {"wMul":1.036,"aDown":0.25,"fOpen":0.02068}:
+  (2) the preset founders at T 159.10, the watch at T 158.78 (157 to 160)
+  (3) the moves: wMul 0 %, aDown -11 %, fOpen 0 % (no more than 50 %); the area 3.9 %, toward the sources' 12 to 12.6 sq ft
+  (4) J (the preset) 10.17 (no more than 11.27); the watch's term 0.09
+  (5) the watch's last hour, from T 98.0 to T 158.78: 77617 m3 gained
+      compartment   an hour before   at the end    gained   share    | 0.3 m over the floor, 8 ft, above E deck (T)
+      FP                   875          1958      1083    1.4 %  |   0.2   2.4  64.5
+      H1                  2325          4705      2380    3.1 %  |   0.6   5.4  64.6
+      H2                  3872          7364      3491    4.5 %  |   0.3   2.9  57.1
+      H3                  4489          8907      4418    5.7 %  |   0.3   4.1  57.7
+      BR6                 4902         12894      7992   10.3 %  |   1.3   9.0  60.0
+      BR5                 2955         14125     11170   14.4 %  |  30.1  69.5  66.7
+      BR4                  252         12746     12494   16.1 %  | 100.1 126.0  78.1
+      BR3                    0          8598      8598   11.1 %  | 155.8    - 100.4
+      BR2                    0          7965      7965   10.3 %  |    -    - 155.5
+      BR1                    0          4512      4512    5.8 %  |    -    - 157.7
+      RE                     0          8364      8364   10.8 %  |    -    - 157.9
+      TE                     0          4687      4687    6.0 %  |    -    - 158.1
+      EL                     0           464       464    0.6 %  |    -    -    -
+  W6's band A (D62) on the watch: her list (+ starboard) T 10 -0.50, T 20 0.42, T 30 0.30, T 45 0.21, T 60 -1.92, T 75 -2.23, T 85 -3.44, T 100 -5.91, T 110 -6.76, T 120 -5.43, T 130 -2.92, T 145 -4.41, T 155 -2.57
+      changes of side (past 0.5 degrees): T 0.3 to port, T 0.5 to starboard, T 0.6 to port, T 3.2 to starboard, T 9.4 to port (band A: Hichens +3 to +7 early; the change of side between T 85 and T 110; Rowe -3 to -9 at T 120)
+  (1) the validation table with these numbers:
+Titanic 1912 (calibrated)                    FOUNDERS at 2h39m  trim 68.89°  list -80.21°  water 100467 t
+   floodwater reaches Wilding's 16,000 tons at 74.5 min (Wilding assumed 40)
+      49.2 min Centre propeller breaks the surface
+      56.6 min The bunker of the fire gives way: its water rushes into boiler room 5
+      59.1 min Water flows over bulkhead C at E deck
+      61.6 min Water flows over bulkhead D at E deck
+      66.9 min Water flows over bulkhead E at E deck
+      79.8 min Water flows over bulkhead F at E deck
+      85.4 min Water flows over bulkhead A at D deck
+      88.2 min Water flows over bulkhead B at D deck
+      94.3 min Second row of ports under the forecastle submerges
+     109.8 min Water flows over bulkhead G at E deck
+     128.2 min Forward well deck awash
+     139.3 min Forecastle head goes under
+     153.8 min The sea breaks in at the windows of B deck
+     155.2 min Water flows over bulkhead H at E deck
+     156.5 min Water reaches the bridge
+     156.5 min The sea breaks in at the windows of A deck
+     157.2 min The sea breaks in at the windows of the Boat deck's houses
+     157.5 min The sea breaks in at the forward grand staircase's Boat-deck entrance (port door)
+     157.6 min The dome over the forward grand staircase gives way
+     157.8 min The sea breaks in at the forward grand staircase's Boat-deck entrance (starboard door)
+     157.8 min Water flows over bulkhead J at E deck
+     158.3 min The sea breaks in at the aft grand staircase's A-deck entrance (port door)
+     158.3 min The dome over the aft grand staircase gives way
+     158.6 min The sea breaks in at the aft grand staircase's A-deck entrance (starboard door)
+     158.7 min Water flows over bulkhead K at D deck
+     158.7 min Water flows over bulkhead L at D deck
+     159.1 min Foundered
+Four forward compartments (Wilding: floats)  afloat (checked to 8h00m)  trim 2.04°  list 0.00°  water 8979 t
+Five forward compartments (Wilding: sinks)   FOUNDERS at 2h15m  trim 68.84°  list 3.37°  water 95797 t
+Olympic-Hawke 1911 (returned to port)        afloat (checked to 8h00m)  trim -0.74°  list -0.00°  water 1907 t
+Britannic 1916, approx. (sank in ~55 min)    FOUNDERS at 0h49m  trim 68.94°  list 80.21°  water 101984 t
+Britannic, same damage, portholes shut       afloat (checked to 8h00m)  trim 8.53°  list 0.00°  water 36556 t
+Titanic damage without the BR5 seam          FOUNDERS at 3h11m  trim 68.76°  list -80.21°  water 99124 t
+Titanic damage stopping at hold 3            afloat (checked to 8h00m)  trim 2.05°  list -1.61°  water 8982 t
+Titanic damage, all bulkheads to D deck      FOUNDERS at 2h48m  trim 68.92°  list -80.21°  water 99631 t
+Titanic damage, all bulkheads to B deck      afloat (checked to 8h00m)  trim 8.53°  list -1.07°  water 36580 t
+Titanic damage, watertight doors left open   FOUNDERS at 2h53m  trim 68.99°  list -10.39°  water 125837 t
+
+#### node docs/research/experiments/e89_g6b_refit.js A 45 [0.78,1.036,0.25,0.02068] --band --bounds [[0.7506,0.518,0.24,0.01034],[1.115,1.1,0.42225,0.03102]] (A-kept; 20:04 to 20:13 CST)
+e89 (G6b) candidate A on C:\temp\titanic-wt-split: the split 4.78/11.87/24.59/26.22/22.20/10.33 (the watch's 4.80/11.92/24.73/26.32/22.13/10.10); openAlong [[115.5192,200,0.4544],[101.8032,115.5192,0.6002],[86.2584,101.8032,1.2224],[70.7136,86.2584,1.1508],[54.2544,70.7136,0.9487],[51.5112,54.2544,3.0466]]; alpha 0.22021725042742005
+e89: e83's bounds; both founders held to 157 to 160 min; start [0.78,1.036,0.25,0.02068]
+#1 J=10.26 (preset 10.17, watch 158.8 min) area=0.7800 wMul=1.04 aDown=0.250 fOpen=0.0207 Tf=159.1
+#3 J=10.18 (preset 10.09, watch 158.8 min) area=0.7800 wMul=1.10 aDown=0.250 fOpen=0.0207 Tf=159.1
+#4 J=9.50 (preset 9.15, watch 157.6 min) area=0.7800 wMul=1.04 aDown=0.337 fOpen=0.0207 Tf=158.0
+#14 J=9.09 (preset 8.73, watch 157.6 min) area=0.7788 wMul=1.09 aDown=0.262 fOpen=0.0243 Tf=157.8
+#17 J=8.65 (preset 8.24, watch 157.5 min) area=0.7844 wMul=1.10 aDown=0.273 fOpen=0.0211 Tf=157.6
+#26 J=8.38 (preset 7.85, watch 157.1 min) area=0.7868 wMul=1.10 aDown=0.261 fOpen=0.0214 Tf=157.3
+#33 J=8.29 (preset 7.76, watch 157.1 min) area=0.7885 wMul=1.10 aDown=0.252 fOpen=0.0210 Tf=157.3
+#34 J=8.11 (preset 7.55, watch 157.0 min) area=0.7921 wMul=1.10 aDown=0.240 fOpen=0.0205 Tf=157.2
+#40 J=8.06 (preset 7.50, watch 157.0 min) area=0.7927 wMul=1.10 aDown=0.244 fOpen=0.0199 Tf=157.2
+#44 J=8.03 (preset 7.46, watch 157.0 min) area=0.7956 wMul=1.10 aDown=0.240 fOpen=0.0188 Tf=157.2
+#67 J=8.03 (preset 7.48, watch 157.0 min) area=0.7955 wMul=1.10 aDown=0.240 fOpen=0.0188 Tf=157.2
+#70 J=7.99 (preset 7.44, watch 157.0 min) area=0.7955 wMul=1.10 aDown=0.240 fOpen=0.0188 Tf=157.2
+
+BEST {"area":0.79554,"params":{"wMul":1.1,"aDown":0.24,"fOpen":0.01879}}; evals 104
+trim            15 obs    0.8 model    0.83
+trim            30 obs    1.8 model    1.65
+trim            45 obs    2.6 model    2.33
+trim            75 obs    3.2 model    3.41
+trim           100 obs      4 model    4.08
+trim           130 obs    5.5 model    4.93
+trim           155 obs     10 model    9.54
+founder          - obs    160 model  157.22
+list            10 obs      5 model    0.41
+list            85 obs      2 model   -3.19
+list           100 obs      0 model   -4.82
+list           130 obs    -10 model   -3.95
+list           145 obs    -15 model   -7.94
+event:well       - obs    130 model  125.92
+event:bridge     - obs    155 model  154.61
+event:overF      - obs     75 model   78.29
+preset J 7.437, founders at 157.22; the watch founders at 157.01 (its term 0.557); J 7.994
+
+#### node docs/research/experiments/e89_g6b_refit.js A --check [0.79554,1.1,0.24,0.01879] (A-kept, D70; 20:14 CST)
+e89 (G6b) candidate A on C:\temp\titanic-wt-split: the split 4.78/11.87/24.59/26.22/22.20/10.33 (the watch's 4.80/11.92/24.73/26.32/22.13/10.10); openAlong [[115.5192,200,0.4544],[101.8032,115.5192,0.6002],[86.2584,101.8032,1.2224],[70.7136,86.2584,1.1508],[54.2544,70.7136,0.9487],[51.5112,54.2544,3.0466]]; alpha 0.22021725042742005
+
+at area 0.79554 m2 (8.56 sq ft), {"wMul":1.1,"aDown":0.24,"fOpen":0.01879}:
+  (2) the preset founders at T 157.27, the watch at T 157.00 (157 to 160)
+  (3) the moves: wMul 6 %, aDown -15 %, fOpen -9 % (no more than 50 %); the area 6.0 %, toward the sources' 12 to 12.6 sq ft
+  (4) J (the preset) 7.44 (no more than 11.27); the watch's term 0.56
+  (5) the watch's last hour, from T 97.0 to T 157.00: 77413 m3 gained
+      compartment   an hour before   at the end    gained   share    | 0.3 m over the floor, 8 ft, above E deck (T)
+      FP                   879          1957      1078    1.4 %  |   0.2   2.4  63.3
+      H1                  2333          4700      2367    3.1 %  |   0.6   5.3  63.4
+      H2                  3885          7359      3474    4.5 %  |   0.3   2.9  56.0
+      H3                  4503          8901      4398    5.7 %  |   0.3   4.0  56.6
+      BR6                 4914         12887      7973   10.3 %  |   1.3   8.9  58.8
+      BR5                 3003         14115     11112   14.4 %  |  29.2  68.1  65.5
+      BR4                  281         12683     12402   16.0 %  |  98.6 123.7  76.5
+      BR3                    1          8583      8582   11.1 %  | 153.9    -  97.3
+      BR2                    0          7955      7955   10.3 %  |    -    - 153.7
+      BR1                    0          4507      4507    5.8 %  |    -    - 155.9
+      RE                     0          8363      8363   10.8 %  |    -    - 156.1
+      TE                     0          4738      4738    6.1 %  |    -    - 156.3
+      EL                     0           465       465    0.6 %  |    -    -    -
+  W6's band A (D62) on the watch: her list (+ starboard) T 10 -0.39, T 20 0.41, T 30 0.29, T 45 0.20, T 60 -1.98, T 75 -2.40, T 85 -3.62, T 100 -6.61, T 110 -7.14, T 120 -4.95, T 130 -3.21, T 145 -4.92, T 155 -4.57
+      changes of side (past 0.5 degrees): T 0.3 to port, T 0.5 to starboard, T 0.6 to port, T 3.2 to starboard, T 9.2 to port (band A: Hichens +3 to +7 early; the change of side between T 85 and T 110; Rowe -3 to -9 at T 120)
+  (1) the validation table with these numbers:
+Titanic 1912 (calibrated)                    FOUNDERS at 2h37m  trim 68.99°  list -80.21°  water 100425 t
+   floodwater reaches Wilding's 16,000 tons at 73.5 min (Wilding assumed 40)
+      48.3 min Centre propeller breaks the surface
+      55.4 min The bunker of the fire gives way: its water rushes into boiler room 5
+      58.1 min Water flows over bulkhead C at E deck
+      60.4 min Water flows over bulkhead D at E deck
+      65.6 min Water flows over bulkhead E at E deck
+      78.3 min Water flows over bulkhead F at E deck
+      83.7 min Water flows over bulkhead A at D deck
+      86.4 min Water flows over bulkhead B at D deck
+      92.4 min Second row of ports under the forecastle submerges
+     105.2 min Water flows over bulkhead G at E deck
+     126.0 min Forward well deck awash
+     137.0 min Forecastle head goes under
+     151.9 min The sea breaks in at the windows of B deck
+     153.2 min Water flows over bulkhead H at E deck
+     154.7 min The sea breaks in at the windows of A deck
+     154.7 min Water reaches the bridge
+     155.3 min The sea breaks in at the windows of the Boat deck's houses
+     155.7 min The sea breaks in at the forward grand staircase's Boat-deck entrance (port door)
+     155.8 min The dome over the forward grand staircase gives way
+     156.0 min The sea breaks in at the forward grand staircase's Boat-deck entrance (starboard door)
+     156.0 min Water flows over bulkhead J at E deck
+     156.4 min The sea breaks in at the aft grand staircase's A-deck entrance (port door)
+     156.4 min The dome over the aft grand staircase gives way
+     156.8 min The sea breaks in at the aft grand staircase's A-deck entrance (starboard door)
+     156.9 min Water flows over bulkhead K at D deck
+     156.9 min Water flows over bulkhead L at D deck
+     157.3 min Foundered
+Four forward compartments (Wilding: floats)  afloat (checked to 8h00m)  trim 2.04°  list 0.00°  water 8979 t
+Five forward compartments (Wilding: sinks)   FOUNDERS at 2h16m  trim 68.95°  list 2.25°  water 95789 t
+Olympic-Hawke 1911 (returned to port)        afloat (checked to 8h00m)  trim -0.74°  list -0.00°  water 1907 t
+Britannic 1916, approx. (sank in ~55 min)    FOUNDERS at 0h50m  trim 68.93°  list 80.21°  water 101762 t
+Britannic, same damage, portholes shut       afloat (checked to 8h00m)  trim 8.53°  list 0.00°  water 36545 t
+Titanic damage without the BR5 seam          FOUNDERS at 3h09m  trim 68.91°  list -80.21°  water 99233 t
+Titanic damage stopping at hold 3            afloat (checked to 8h00m)  trim 2.04°  list -1.61°  water 8977 t
+Titanic damage, all bulkheads to D deck      FOUNDERS at 2h45m  trim 68.92°  list -80.21°  water 99511 t
+Titanic damage, all bulkheads to B deck      afloat (checked to 8h00m)  trim 8.53°  list -1.05°  water 36574 t
+Titanic damage, watertight doors left open   FOUNDERS at 2h50m  trim 68.94°  list -10.46°  water 125312 t
+
