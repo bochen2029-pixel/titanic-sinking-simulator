@@ -11,8 +11,8 @@ loop, unfinished, and still changing. What someone meets:
   set of thirty versions that the record allows. It carries her to the moment her hull's loads reach its strength and
   hands her to her fall there: on the recorded orders at about 2:16 am, at about 7 degrees of trim, over boiler room
   2. That is the model's break, not the record's. Accounts of the night and later reconstructions have her break at a
-  steeper angle, and the wreck shows that she parted a few metres further aft. The page gives the record's times
-  beside the model's.
+  steeper angle, and the wreck shows that she parted further aft, over boiler room 1, which begins about 5 metres
+  from the model's break. The page gives the record's times beside the model's.
 - **Her fall to the bed, as a first model.** Her two pieces fall as free bodies, with nothing fitted to the wreck's
   places: the bow comes to rest about 1.6 km from the point under the break, where the wreck's lies 772 m from it.
   The stern does not yet behave as the witnesses saw it: on the page it settles back and is under within a minute of
@@ -51,8 +51,16 @@ her windows, her side's openings and the grand staircases' doors and domes, whic
   October's viewer, whose card still said "about 8 sq ft in all".
 - User Guide 1.14.1 is edition 1.14 with the two counts put right. No picture was retaken: the page they were taken
   from is the same build.
+- The README says that five men answer the captain. It had counted Mr Bell, who cannot be spoken to yet: the engine
+  room's telephone is not in the model. It also says where boiler room 1 begins and where the research note centres her
+  break, in place of "about 5 metres farther aft". Both were found by a fact check of the public page.
 - BACKLOG: NH13's R2 and R3, and section 3, say what was published.
-- Left for the next build: a comment in `site/parts/55_girder.js` still says 4,408 columns. It is in the app's bundle.
+- Left for the next build:
+  - the guide's reports table prints "11:60 pm" (`clockAt` in `tools/build_guide.js` rounds the minutes after it has
+    taken the hour; the one in `site/app.js` does the same);
+  - the boats section's "Still aboard" leaves out the people sitting in boats not yet lowered, 120 of them at 1:05 am on
+    the 1912 orders, so its figures sum to 2,081 of her 2,201;
+  - a comment in `site/parts/55_girder.js` still says 4,408 columns.
 
 ### Join 24 (candidate 2 of 0.3.0: the public words checked, a newcomer's first ten minutes, the bridge's fixes), 2026-11-24
 

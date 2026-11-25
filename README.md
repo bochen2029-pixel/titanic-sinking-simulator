@@ -8,9 +8,10 @@ her; the model decides how she sinks, where she breaks and how her pieces fall t
 a sinking computed alone has nobody in it. Here the witnesses check the model: it is calibrated against what they saw,
 and the Evidence tab sets the 1912 night beside them, row by row. The model checks the men: every order goes through
 the watch's own log and the ship then does only what she can (no one turns her tighter than she turns), and a man
-played by a language model knows only what has reached him. Today that is six men who answer the captain (Murdoch,
-Moody, Boxhall, Hichens, Andrews and Bell), in the desktop app with a key of your own. Where a man can be as the water
-rises is not built yet, and everyone else aboard is counted, not followed.
+played by a language model knows only what has reached him. Today that is five men who answer the captain (Murdoch,
+Moody, Boxhall, Hichens and Andrews), in the desktop app with a key of your own. Mr Bell, the chief engineer, stands in
+their row but cannot be spoken to yet. Where a man can be as the water rises is not built yet, and everyone else aboard
+is counted, not followed.
 
 **Early access, a work in progress.** The core loop is playable: stand the watch, meet the ice, follow her to her
 end, then go back and try another way. Expect rough edges, and expect things to change.
@@ -141,8 +142,9 @@ What it does not do, or does only roughly:
   pieces that bends and tears before it lets go, but it is a what-if, and no default run uses it.
 - **Where and when she breaks.** She breaks where her own loads first reach what her hull can bear: in the model
   that is at about 7 degrees of trim, over boiler room 2, at 2:16 am on the 1912 orders. The wreck parted over boiler
-  room 1, about 5 metres farther aft; the published analyses put her angle then at 10 to 17 degrees or more; and
-  nothing was tuned to close the gap.
+  room 1, which begins about 5 metres farther aft (the research note centres her break about 12 metres aft of the
+  model's); the published analyses put her angle then at 10 to 17 degrees or more; and nothing was tuned to close the
+  gap.
 - **The fall is a first model.** Each piece carries its air as one pocket; the air in her space by space is still to
   come. On the 1912 orders both pieces land upright, as the wreck's do, but the bow lands farther from the break than
   the wreck's bow lies. Handed over at the founder flag instead (a damage preset, or a watch's what-if), she goes
@@ -333,9 +335,11 @@ Each is in [`BACKLOG.md`](BACKLOG.md) or a design note, with its test.
 
 - **Where and when she breaks, and how.** She breaks where her own loads first reach what her hull can bear: in the
   model that is at about 7 degrees of trim, over boiler room 2, at 2:16 am on the 1912 orders (x -10.93 m:
-  `out/strength_tests.txt`). The wreck parted over boiler room 1, about 5 metres farther aft; the published analyses
-  put her angle then at 10 to 17 degrees or more (`docs/research/RESEARCH_breakup_hull_girder_v1_2026-11-17.md`; no
-  witness gave one); and nothing was tuned to close the gap. There the watch hands her to her fall, cut in two. How
+  `out/strength_tests.txt`). The wreck parted over boiler room 1, which runs from x -16.2 to -27.1 m and so
+  begins about 5 metres farther aft; the research note centres her break at x -23 m, about 12 metres aft of the
+  model's. The published analyses put her angle then at 10 to 17 degrees or more
+  (`docs/research/RESEARCH_breakup_hull_girder_v1_2026-11-17.md`; no witness gave one); and nothing was tuned to close
+  the gap. There the watch hands her to her fall, cut in two. How
   her hull tore is a what-if, a joint that bends and tears before it lets go (`K0.jointOnset`, off by default); with
   it all 30 kept members part at the surface, 1.25 to 4.69 s after the onset (`out/joint_kept_1912.json`).
 - **Air trapped while she floats.** Only the air shut in under a grand staircase's dome is modelled. Air in every
